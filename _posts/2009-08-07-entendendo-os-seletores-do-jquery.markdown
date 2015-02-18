@@ -17,37 +17,37 @@ tags:
 <p>Através dos seletores você escolhe com qual elemento do HTML irá trabalhar e/ou interagir.</p>
 <p>Os seletores do jQuery são muito parecidos com os seletores do CSS onde você identifica cada elemento usando uma sintaxe em particular... Pra quem entende de CSS vai ser bem simples.</p>
 <p>Suponhamos que você tenha três DIVs em seqüência e queira colocar uma borda apenas na div com classe "carros", exemplo:</p>
-<p>[code language="html"]&lt;div&gt;Olá mundo!&lt;/div&gt;<br />
-&lt;div class=&quot;carros&quot;&gt;Olá mundo!&lt;/div&gt;<br />
-&lt;div class=&quot;naves&quot;&gt;Olá mundo!&lt;/div&gt;[/code]</p>
+<p>[code language="html"]<div>Olá mundo!</div><br />
+<div class="carros">Olá mundo!</div><br />
+<div class="naves">Olá mundo!</div>[/code]</p>
 <p>Nossa linha do jQuery que coloca uma borda ficaria assim:<br />
 [code language="javascript"]// Assim:<br />
-$(&quot;div.carros&quot;).css('border', '1px solid red');</p>
+$("div.carros").css('border', '1px solid red');</p>
 <p>// Ou assim:<br />
-$(&quot;.carros&quot;).css('border', '1px solid red');<br />
+$(".carros").css('border', '1px solid red');<br />
 [/code]</p>
 <p>Percebam que a segunda regra vai afetar TODOS os elementos que tenham a class "carros". :)</p>
 <p>Agora vamos mudar a linha de ação um pouco e afetar todas as DIVs exceto a que tenha a classe "naves"... Para isso vamos usar o seletor "div" e excluir o elemento que tenha class "naves", assim:<br />
 [code language="javascript"]<br />
-$(&quot;div[class!='naves']&quot;).css('border', '1px solid red');[/code]</p>
+$("div[class!='naves']").css('border', '1px solid red');[/code]</p>
 <p>Agora suponhamos que você queira fazer três ações sobre o mesmo elemento, você pode fazer isso de três formas:<br />
 [code language="javascript"]// Assim:<br />
-$(&quot;div.carros&quot;).css('border', '1px solid red');<br />
-$(&quot;div.carros&quot;).css('color', 'blue');</p>
+$("div.carros").css('border', '1px solid red');<br />
+$("div.carros").css('color', 'blue');</p>
 <p>// Ou assim:<br />
-$(&quot;div.carros&quot;).css('border', '1px solid red').css('color', 'blue');</p>
+$("div.carros").css('border', '1px solid red').css('color', 'blue');</p>
 <p>// Ou assim:<br />
-var elemento = $(&quot;div.carros&quot;);<br />
+var elemento = $("div.carros");<br />
 elemento.css('border', '1px solid red');<br />
 elemento.css('color', 'blue');</p>
 <p>// E até assim:<br />
-var elemento = $(&quot;div.carros&quot;);<br />
+var elemento = $("div.carros");<br />
 elemento.css('border', '1px solid red').css('color', 'blue');<br />
 [/code]</p>
 <p>Existem várias outras formas e atalhos legais para se usar nos seletores... Para selecionar dois (ou mais) elementos você poderia fazer assim:<br />
-[code language="javascript"]$(&quot;div.carros, div.naves, div#topo&quot;).css('border', '1px solid red');[/code]<br />
+[code language="javascript"]$("div.carros, div.naves, div#topo").css('border', '1px solid red');[/code]<br />
 Sabe aquele efeito legal de zebra nas tabelas? O famoso "cor sim, cor não, cor sim, cor não"? Você pode ter esse efeito usando apenas uma linha de jQuery sem definir nenhuma classe ou rodar nenhum codigo dentro da criação da sua tabela, assim:<br />
-[code language="javascript"]$(&quot;tr:odd td&quot;).css('background', '#008800');[/code]<br />
-Isso vai afetar todos os &lt;td&gt; que estão dentro dos <strong>&lt;tr&gt; ímpares</strong> (por causa do <strong>odd</strong>), ou seja: 1°, 3°, 5° e por aí vai! Legal não? :)</p>
+[code language="javascript"]$("tr:odd td").css('background', '#008800');[/code]<br />
+Isso vai afetar todos os <td> que estão dentro dos <strong><tr> ímpares</strong> (por causa do <strong>odd</strong>), ou seja: 1°, 3°, 5° e por aí vai! Legal não? :)</p>
 <p>Percebam que o único exemplo de função/método que eu usei foi o css(), mas existem dezenas e dezenas de outras funções legais no jQuery e a maioria deve estar associada a um seletor.</p>
 <p>Espero que tenham gostado e não deixem de ler a <a href="http://api.jquery.com/category/selectors/" target="_blank">documentação oficial sobre os seletores</a>!</p>

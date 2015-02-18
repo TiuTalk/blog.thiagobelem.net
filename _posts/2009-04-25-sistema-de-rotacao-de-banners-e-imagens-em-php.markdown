@@ -13,15 +13,15 @@ tags: []
 <p>Bom, existem dezenas de formas de fazer isso, mas eu vou tentar fazer da forma mais simples possível.</p>
 <p>Vamos criar um arquivo chamado <span style="color: #ff6600;"><strong>banner_superior.php</strong></span> com o seguinte conteúdo:</p>
 <p>[code language="php"]<br />
-&lt;?php<br />
+<?php<br />
 unset($_ELEMENTOS);</p>
-<p>$_ELEMENTOS[] = '&lt;a href=&quot;http://site.com/&quot;&gt;&lt;img src=&quot;site.jpg&quot; alt=&quot;&quot; width=&quot;10&quot; height=&quot;10&quot; /&gt;&lt;/a&gt;';<br />
-$_ELEMENTOS[] = '&lt;a href=&quot;http://orkut.com/&quot;&gt;&lt;img src=&quot;orkut.jpg&quot; alt=&quot;&quot; width=&quot;10&quot; height=&quot;10&quot; /&gt;&lt;/a&gt;';<br />
-$_ELEMENTOS[] = '&lt;a href=&quot;http://forum.com/&quot;&gt;&lt;img src=&quot;forum.jpg&quot; alt=&quot;&quot; width=&quot;10&quot; height=&quot;10&quot; /&gt;&lt;/a&gt;';</p>
+<p>$_ELEMENTOS[] = '<a href="http://site.com/"><img src="site.jpg" alt="" width="10" height="10" /></a>';<br />
+$_ELEMENTOS[] = '<a href="http://orkut.com/"><img src="orkut.jpg" alt="" width="10" height="10" /></a>';<br />
+$_ELEMENTOS[] = '<a href="http://forum.com/"><img src="forum.jpg" alt="" width="10" height="10" /></a>';</p>
 <p>$total = count($_ELEMENTOS); // Calcula o total de elementos<br />
 $escolhido = rand(0, $total - 1); // Define um número aleatório</p>
 <p>echo $_ELEMENTOS[$escolhido]; // Exibe o elemento</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Depois é só incluir (com <strong>include()</strong>) o arquivo aonde você quer que o banner apareça.</p>
 <p>--</p>

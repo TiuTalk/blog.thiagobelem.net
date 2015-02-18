@@ -31,7 +31,7 @@ titulo: 'Thiago Belem / Blog',<br />
 url: 'http://blog.thiagobelem.net/'<br />
 }[/code]</p>
 <p>Caso você queira exibir algum desses valores, usando JavaScript, poderia fazer:</p>
-<p>[code language="javascript"]alert(&quot;Titulo do blog: &quot; + meuBlog.titulo);[/code]</p>
+<p>[code language="javascript"]alert("Titulo do blog: " + meuBlog.titulo);[/code]</p>
 <p>Para incrementar, vamos colocar um array?</p>
 <p>[code language="javascript"]var meuBlog = {<br />
 titulo: 'Thiago Belem / Blog',<br />
@@ -43,25 +43,25 @@ assuntos: ['PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB']<br />
 <h3>Tá... E o PHP nisso?</h3>
 <p>Bom... Como eu disse antes, o PHP 5.2+ tem suporte nativo a escrita e leitura de formatação JSON... Isso significa que você não precista instalar/ativar nada, é só começar a usar.</p>
 <p>Vejamos um exemplo de escrita:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>$meuBlog = array(<br />
-'titulo' =&gt; 'Thiago Belem / Blog',<br />
-'url' =&gt; 'http://blog.thiagobelem.net/',<br />
-'assuntos' =&gt; array('PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB')<br />
+'titulo' => 'Thiago Belem / Blog',<br />
+'url' => 'http://blog.thiagobelem.net/',<br />
+'assuntos' => array('PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB')<br />
 );</p>
 <p>$json = json_encode($meuBlog);</p>
 <p>echo $json;<br />
 // Resultado: { titulo: 'Thiago Belem / Blog', url: 'http://blog.thiagobelem.net/', assuntos: ['PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB'] }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>É isso mesmo.. Primeiro você cria um array com a formatação correta e todos os valores que serão passados para JSON, depois é só rodar a função json_enconde() no array todo e cabou-se. ;)</p>
 <p>Agora a leitura:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>// Recebe uma string no formato JSON<br />
-$usuario = &quot;{ nome: 'Fulano da Silva', ativo: true, nascimento: '2009/05/12' }&quot;;</p>
+$usuario = "{ nome: 'Fulano da Silva', ativo: true, nascimento: '2009/05/12' }";</p>
 <p>$meuUsuario = json_decode($usuario, true);</p>
 <p>echo $meuUsuario['nome']; // Fulano da Silva<br />
 echo $meuUsuario['nascimento']; // 2009/05/12</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>No segundo argumento da função json_decode() do PHP você define se quer (true) ou não (false) que o objeto JSON recebido seja convertido em array. Caso não especifique o 2º argumento ou defina-o como falso, o objeto criado será outro objeto, só que agora do PHP.</p>
 <h3>Webservice? Quem? Como? Quando?</h3>
 <p>Já dizia a Wikipédia: <em>"Web service é uma solução utilizada na integração de sistemas e na comunicação entre aplicações diferentes."</em></p>

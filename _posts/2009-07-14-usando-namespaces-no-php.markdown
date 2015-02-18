@@ -20,34 +20,34 @@ tags:
 <p>Agora, com os namespaces, temos uma terceira (e muito melhor) opção para solucionar esse problema!</p>
 <h3>O que faz esse tal de <em>namespace</em>?</h3>
 <p>Imagine que você fez uma função nova para usar no seu site só que ela usa nomes e constantes com nomes genéricos (por exemplo: "user" e "database")... Ela normalmente seria assim:<br />
-[code language="php"]&lt;?php</p>
+[code language="php"]<?php</p>
 <p>function connect() {<br />
 	// Faz a sua conexão com o banco de dados<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>Só que se você usar alguma outra biblioteca/classe/função pronta, pode haver uma colisão de nomes e você vai precisar mudar o nome da sua função pra algo maior... Só que você não quer isso.</p>
 <p>Aí, usando a maravilha do namespace, você faz assim:<br />
-[code language="php" highlight="3"]&lt;?php</p>
+[code language="php" highlight="3"]<?php</p>
 <p>namespace MeuProjeto;</p>
 <p>function connect() {<br />
 	// Faz a sua conexão com o banco de dados<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>E quando você precisar chamar a função do MeuProjeto é só fazer assim:<br />
-[code language="php"]&lt;?php<br />
+[code language="php"]<?php<br />
 	// Inclui o arquivo com a função<br />
-	include(&quot;conexao-MySQL.php&quot;);</p>
+	include("conexao-MySQL.php");</p>
 <p>	// Chama a função dentro do namespace<br />
 	MeuProjeto/connect();<br />
-?&gt;[/code]</p>
+?>[/code]</p>
 <h3>Sintaxe alternativa</h3>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>namespace MeuProjeto {</p>
 <p>	function connect() {<br />
 		// Faz a sua conexão com o banco de dados<br />
 	}</p>
 <p>}</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>--</p>
 <p>Eu usei apenas exemplo com funções, mas os namespaces funcionam muito bem com classes e constantes também! Vale a pena experimentar.</p>
 <p>Um grande abraço. ;)</p>

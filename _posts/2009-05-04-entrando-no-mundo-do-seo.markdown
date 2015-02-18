@@ -29,7 +29,7 @@ tags: []
 <p>Sabendo disso, é fácil tentar enganar os <em><abbr title="rastreadores dos sistemas de busca">spiders</abbr></em> e com isso conseguir um bom posicionamento... Foi aí que surgiu a<strong> busca orgânica </strong>do Google.</p>
 <h2>Busca Orgânica</h2>
 <p>O Google iniciou um novo conceito de rastreamento de sites baseado na avaliação (automática) de cada site, criando assim um <a title="PageRank" href="http://pt.wikipedia.org/wiki/PageRank" target="_blank">PageRank</a>. O PR funciona, basicamente, da seguinte forma: Para cada link, que um site externo aponta para o seu site, você ganha mais pontos..  E quanto mais famoso for esse site, mais pontos você ganha. É simples e indiscutível.</p>
-<p>Esse novo conceito permitiu que usuários não tão avançados conseguissem que seus sites fossem indexados de forma justa... Pois não é todo mundo que sabe a diferença de <strong>&lt;b&gt;</strong> e <strong>&lt;strong&gt;</strong> ou <strong>&lt;i&gt;</strong> e <strong>&lt;em&gt;</strong>. :)</p>
+<p>Esse novo conceito permitiu que usuários não tão avançados conseguissem que seus sites fossem indexados de forma justa... Pois não é todo mundo que sabe a diferença de <strong><b></strong> e <strong><strong></strong> ou <strong><i></strong> e <strong><em></strong>. :)</p>
 <h2>Conseguindo o seu lugar ao Sol</h2>
 <p>Hoje em dia, se você quer que seu site apareça nos resultados de busca, você ainda precisa enviar ele para os buscadores, é o "básico do SEO"... Mas você também precisa que algum outro site (já indexado pelo sistema de busca) aponte um link para o seu site que ele vai começar a vasculhar suas páginas atras de conteúdos e imagens.</p>
 <p>Você pode usar um recurso, comum a todos os sistemas de busca, chamado <a title="robots.txt" href="http://pt.wikipedia.org/wiki/Robots.txt" target="_blank">robots.txt</a> que diz o que o sistema de busca pode ou não ver no seu site.</p>
@@ -37,13 +37,13 @@ tags: []
 <ul>
 <li><a title="Google Webmasters Tools" rel="external" href="http://www.google.com/webmasters/">Google Webmasters Tools</a></li>
 <li><a title="Yahoo! Search Content Quality Guidelines" rel="external" href="http://help.yahoo.com/l/us/yahoo/search/basics/basics-18.html">Yahoo! Search Content Quality Guidelines</a></li>
-<li><span class="removed_link" title="http://help.live.com/help.aspx?mkt=pt-br&amp;project=wl_webmasters">MSN</span></li>
+<li><span class="removed_link" title="http://help.live.com/help.aspx?mkt=pt-br&project=wl_webmasters">MSN</span></li>
 </ul>
 <p>Outros endereços que podem te ajudar:</p>
 <ul>
 <li><a title="http://www.google.com/webmasters/seo.html" rel="external" href="http://www.google.com/support/webmasters/bin/answer.py?answer=35291">Práticas Recomendadas pelo Google em SEO</a></li>
 <li><a title="http://www.google.com/webmasters/guidelines.html" rel="external" href="http://www.google.com/support/webmasters/bin/answer.py?answer=35769">Práticas Recomendadas pelo Google em Site Design</a></li>
-<li><span class="removed_link" title="http://help.live.com:80/help.aspx?mkt=en-us&amp;project=wl_webmasters">Práticas Recomendadas pela MSN Search para Indexação de Sites</span></li>
+<li><span class="removed_link" title="http://help.live.com:80/help.aspx?mkt=en-us&project=wl_webmasters">Práticas Recomendadas pela MSN Search para Indexação de Sites</span></li>
 <li>Práticas Recomendadas pelo Yahoo! Search para Criação de Conteúdo</li>
 <li><a href="http://pt.wikipedia.org/wiki/Otimiza%C3%A7%C3%A3o_para_Sistemas_de_Busca" target="_blank">Otimização para mecanismos de busca</a> e <a href="http://pt.wikipedia.org/wiki/Motor_de_busca" target="_blank">motores de busca</a></li>
 </ul>

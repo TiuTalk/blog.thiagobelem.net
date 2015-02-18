@@ -23,136 +23,136 @@ tags: []
 <p>Vamos ao que interessa... A classe <a href="http://www.php.net/manual/pt_BR/book.simplexml.php" target="_blank">SimpleXMLElement</a> já foi compilada junto com as versões atuais do PHP, então você não precisa instalar nada.. É só chamar a classe e sair brincando.</p>
 <p>Primeiro chamamos a classe:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>// Intanciamos/chamamos a classe<br />
-$rss = new SimpleXMLElement('&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rss&gt;&lt;/rss&gt;');</p>
-<p>?&gt;<br />
+$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');</p>
+<p>?><br />
 [/code]</p>
 <p>Com isso iremos começar a criar uma estrutura XML com o formato que está sendo passado para a classe.</p>
-<p>Agora iremos dizer que será um RSS versão 2.0, e para isso precisamos definir um atributo <strong>version</strong> do item &lt;rss&gt;, dessa forma:</p>
+<p>Agora iremos dizer que será um RSS versão 2.0, e para isso precisamos definir um atributo <strong>version</strong> do item <rss>, dessa forma:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>// Intanciamos/chamamos a classe<br />
-$rss = new SimpleXMLElement('&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rss&gt;&lt;/rss&gt;');</p>
-<p>$rss-&gt;addAttribute('version', '2.0');</p>
-<p>?&gt;<br />
+$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');</p>
+<p>$rss->addAttribute('version', '2.0');</p>
+<p>?><br />
 [/code]</p>
 <p>Até agora o nosso RSS tem um formato parecido com esse:</p>
 <p>[code language="xml"]<br />
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />
-&lt;rss version=&quot;2.0&quot;&gt;</p>
-<p>&lt;/rss&gt;<br />
+<?xml version="1.0" encoding="UTF-8"?><br />
+<rss version="2.0"></p>
+<p></rss><br />
 [/code]</p>
-<p>O próximo passo é definir o elemento <strong>&lt;channel&gt;</strong> (canal) que contem todos os dados do RSS e cada um dos itens/notícias... Dentro dele iremos colocar mais três elementos, que são o <strong>&lt;title&gt;</strong> (titulo do RSS), o <strong>&lt;link&gt;</strong> (do site ao qual o RSS pertence) e a <strong>&lt;description&gt;</strong> (descrição do conteúdo RSS):</p>
-<p>[code language="php"]&lt;?php<br />
+<p>O próximo passo é definir o elemento <strong><channel></strong> (canal) que contem todos os dados do RSS e cada um dos itens/notícias... Dentro dele iremos colocar mais três elementos, que são o <strong><title></strong> (titulo do RSS), o <strong><link></strong> (do site ao qual o RSS pertence) e a <strong><description></strong> (descrição do conteúdo RSS):</p>
+<p>[code language="php"]<?php<br />
 // Intanciamos/chamamos a classe<br />
-$rss = new SimpleXMLElement('&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rss&gt;&lt;/rss&gt;');<br />
-$rss-&gt;addAttribute('version', '2.0');</p>
-<p>// Cria o elemento &lt;channel&gt; dentro de &lt;rss&gt;<br />
-$canal = $rss-&gt;addChild('channel');<br />
-// Adiciona sub-elementos ao elemento &lt;channel&gt;<br />
-$canal-&gt;addChild('title', 'Meu primeiro RSS');<br />
-$canal-&gt;addChild('link', 'http://www.meusite.com/');<br />
-$canal-&gt;addChild('description', 'Este é o meu primeiro RSS, uha!');</p>
-<p>?&gt;[/code]</p>
+$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');<br />
+$rss->addAttribute('version', '2.0');</p>
+<p>// Cria o elemento <channel> dentro de <rss><br />
+$canal = $rss->addChild('channel');<br />
+// Adiciona sub-elementos ao elemento <channel><br />
+$canal->addChild('title', 'Meu primeiro RSS');<br />
+$canal->addChild('link', 'http://www.meusite.com/');<br />
+$canal->addChild('description', 'Este é o meu primeiro RSS, uha!');</p>
+<p>?>[/code]</p>
 <p>Existem outros sub-elementos de channel, mas são todos opcionais... Veja a lista completa deles <a href="http://cyber.law.harvard.edu/rss/rss.html#optionalChannelElements" target="_blank">aqui</a>.</p>
 <p>E com isso, o nosso RSS ficará com um formato assim:</p>
-<p>[code language="xml"]&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />
-&lt;rss version=&quot;2.0&quot;&gt;<br />
-&lt;channel&gt;<br />
-&lt;title&gt;Meu primeiro RSS&lt;/title&gt;<br />
-&lt;link&gt;http://www.meusite.com/&lt;/link&gt;<br />
-&lt;description&gt;Este é o meu primeiro RSS, cheio de coisas legais!&lt;/description&gt;</p>
-<p>&lt;/channel&gt;<br />
-&lt;/rss&gt;[/code]</p>
+<p>[code language="xml"]<?xml version="1.0" encoding="UTF-8"?><br />
+<rss version="2.0"><br />
+<channel><br />
+<title>Meu primeiro RSS</title><br />
+<link>http://www.meusite.com/</link><br />
+<description>Este é o meu primeiro RSS, cheio de coisas legais!</description></p>
+<p></channel><br />
+</rss>[/code]</p>
 <p>Estão percebendo a mágica do SimpleXMLElement? Ele vai criando um formato de XML perfeito pra você usar com quase qualquer coisa! :D</p>
 <p>Bom... Já temos o formato básico do RSS.. Agora é só adicionar dois itens de exemplo e o nosso RSS estará quase pronto:</p>
-<p>[code language="php"]&lt;?php<br />
+<p>[code language="php"]<?php<br />
 // Intanciamos/chamamos a classe<br />
-$rss = new SimpleXMLElement('&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rss&gt;&lt;/rss&gt;');<br />
-$rss-&gt;addAttribute('version', '2.0');</p>
-<p>// Cria o elemento &lt;channel&gt; dentro de &lt;rss&gt;<br />
-$canal = $rss-&gt;addChild('channel');<br />
-// Adiciona sub-elementos ao elemento &lt;channel&gt;<br />
-$canal-&gt;addChild('title', 'Meu primeiro RSS');<br />
-$canal-&gt;addChild('link', 'http://www.meusite.com/');<br />
-$canal-&gt;addChild('description', 'Este é o meu primeiro RSS, uha!');</p>
-<p>// Cria um elemento &lt;item&gt; dentro de &lt;channel&gt;<br />
-$item = $canal-&gt;addChild('item');<br />
-// Adiciona sub-elementos ao elemento &lt;item&gt;<br />
-$item-&gt;addChild('title', 'Meu segundo artigo');<br />
-$item-&gt;addChild('link', 'http://www.meusite.com/artigos.php?id=2');<br />
-$item-&gt;addChild('description', 'Esse é um resumo do meu segundo artigo.');</p>
-<p>// Cria outro elemento &lt;item&gt; dentro de &lt;channel&gt;<br />
-$item = $canal-&gt;addChild('item');<br />
-// Adiciona sub-elementos ao elemento &lt;item&gt;<br />
-$item-&gt;addChild('title', 'Meu primeiro artigo');<br />
-$item-&gt;addChild('link', 'http://www.meusite.com/artigos.php?id=1');<br />
-$item-&gt;addChild('description', 'Esse é um resumo do meu primeiro artigo.');<br />
-$item-&gt;addChild('pubDate', date('r'));</p>
-<p>?&gt;[/code]</p>
-<p>Cada <strong>&lt;item&gt;</strong> representa uma entrada do RSS, seria cada uma das notícias de um site de notícias, ou cada um dos artigos de um blog ou cada um dos apartamentos do site de uma imobiliária. A ordem dos <strong>&lt;item&gt;s</strong> deve ser é do mais recente para o mais antigo.</p>
-<p>Os três sub-elementos obrigatórios dos <strong>&lt;item&gt;s</strong> são: o <strong>&lt;title&gt;</strong>, o <strong>&lt;link&gt;</strong>e o <strong>&lt;description&gt;</strong>... Existem vários outros sub-elemtos (<a href="http://cyber.law.harvard.edu/rss/rss.html#hrelementsOfLtitemgt" target="_blank">lista</a>), um exemplo comum é o <strong>&lt;pubDate&gt;</strong> (coloquei ele no 2º item) que representa a data de publicação do &lt;item&gt; em questão, e segue o formato <strong>RFC 733</strong>, por exemplo: <em>Thu, 21 Dec 2000 16:01:07 +0200</em>. Esse formato pode ser obtido pelo parâmetro <span style="color: #0000ff;"><strong>r</strong></span> passado para a função date() do PHP.</p>
+$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');<br />
+$rss->addAttribute('version', '2.0');</p>
+<p>// Cria o elemento <channel> dentro de <rss><br />
+$canal = $rss->addChild('channel');<br />
+// Adiciona sub-elementos ao elemento <channel><br />
+$canal->addChild('title', 'Meu primeiro RSS');<br />
+$canal->addChild('link', 'http://www.meusite.com/');<br />
+$canal->addChild('description', 'Este é o meu primeiro RSS, uha!');</p>
+<p>// Cria um elemento <item> dentro de <channel><br />
+$item = $canal->addChild('item');<br />
+// Adiciona sub-elementos ao elemento <item><br />
+$item->addChild('title', 'Meu segundo artigo');<br />
+$item->addChild('link', 'http://www.meusite.com/artigos.php?id=2');<br />
+$item->addChild('description', 'Esse é um resumo do meu segundo artigo.');</p>
+<p>// Cria outro elemento <item> dentro de <channel><br />
+$item = $canal->addChild('item');<br />
+// Adiciona sub-elementos ao elemento <item><br />
+$item->addChild('title', 'Meu primeiro artigo');<br />
+$item->addChild('link', 'http://www.meusite.com/artigos.php?id=1');<br />
+$item->addChild('description', 'Esse é um resumo do meu primeiro artigo.');<br />
+$item->addChild('pubDate', date('r'));</p>
+<p>?>[/code]</p>
+<p>Cada <strong><item></strong> representa uma entrada do RSS, seria cada uma das notícias de um site de notícias, ou cada um dos artigos de um blog ou cada um dos apartamentos do site de uma imobiliária. A ordem dos <strong><item>s</strong> deve ser é do mais recente para o mais antigo.</p>
+<p>Os três sub-elementos obrigatórios dos <strong><item>s</strong> são: o <strong><title></strong>, o <strong><link></strong>e o <strong><description></strong>... Existem vários outros sub-elemtos (<a href="http://cyber.law.harvard.edu/rss/rss.html#hrelementsOfLtitemgt" target="_blank">lista</a>), um exemplo comum é o <strong><pubDate></strong> (coloquei ele no 2º item) que representa a data de publicação do <item> em questão, e segue o formato <strong>RFC 733</strong>, por exemplo: <em>Thu, 21 Dec 2000 16:01:07 +0200</em>. Esse formato pode ser obtido pelo parâmetro <span style="color: #0000ff;"><strong>r</strong></span> passado para a função date() do PHP.</p>
 <p>Depois de inserir os dois itens o formato do nosso RSS está concluído, ficando assim:</p>
-<p>[code language="xml"]&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />
-&lt;rss version=&quot;2.0&quot;&gt;<br />
-&lt;channel&gt;<br />
-&lt;title&gt;Meu primeiro RSS&lt;/title&gt;<br />
-&lt;link&gt;http://www.meusite.com/&lt;/link&gt;<br />
-&lt;description&gt;Este é o meu primeiro RSS, cheio de coisas legais!&lt;/description&gt;</p>
-<p>&lt;item&gt;<br />
-&lt;title&gt;Meu segundo artigo&lt;/title&gt;<br />
-&lt;link&gt;http://www.meusite.com/artigos.php?id=2&lt;/link&gt;<br />
-&lt;description&gt;Esse é um resumo do meu segundo artigo.&lt;/description&gt;<br />
-&lt;/item&gt;</p>
-<p>&lt;item&gt;<br />
-&lt;title&gt;Meu primeiro artigo&lt;/title&gt;<br />
-&lt;link&gt;http://www.meusite.com/artigos.php?id=1&lt;/link&gt;<br />
-&lt;description&gt;Esse é um resumo do meu primeiro artigo.&lt;/description&gt;<br />
-&lt;pubDate&gt;Thu, 21 Dec 2000 16:01:07 +0200&lt;/pubDate&gt;<br />
-&lt;/item&gt;</p>
-<p>&lt;/channel&gt;<br />
-&lt;/rss&gt;[/code]</p>
-<p>Agora, para concluir, precisamos apenas passar todo o conteúdo do RSS para o navegador (depois de definir qual será o tipo de conteúdo que ele irá receber), colocando isso depois de definir o <strong>último &lt;item&gt;</strong>:</p>
+<p>[code language="xml"]<?xml version="1.0" encoding="UTF-8"?><br />
+<rss version="2.0"><br />
+<channel><br />
+<title>Meu primeiro RSS</title><br />
+<link>http://www.meusite.com/</link><br />
+<description>Este é o meu primeiro RSS, cheio de coisas legais!</description></p>
+<p><item><br />
+<title>Meu segundo artigo</title><br />
+<link>http://www.meusite.com/artigos.php?id=2</link><br />
+<description>Esse é um resumo do meu segundo artigo.</description><br />
+</item></p>
+<p><item><br />
+<title>Meu primeiro artigo</title><br />
+<link>http://www.meusite.com/artigos.php?id=1</link><br />
+<description>Esse é um resumo do meu primeiro artigo.</description><br />
+<pubDate>Thu, 21 Dec 2000 16:01:07 +0200</pubDate><br />
+</item></p>
+<p></channel><br />
+</rss>[/code]</p>
+<p>Agora, para concluir, precisamos apenas passar todo o conteúdo do RSS para o navegador (depois de definir qual será o tipo de conteúdo que ele irá receber), colocando isso depois de definir o <strong>último <item></strong>:</p>
 <p>[code language="php"]<br />
 // Define o tipo de conteúdo e o charset<br />
-header(&quot;content-type: application/rss+xml; charset=utf-8&quot;);</p>
+header("content-type: application/rss+xml; charset=utf-8");</p>
 <p>// Entrega o conteúdo do RSS completo:<br />
-echo $rss-&gt;asXML();<br />
+echo $rss->asXML();<br />
 exit;<br />
 [/code]</p>
 <p>--</p>
 <p>Pode ser que você encontre problemas de <acronym title="Tipo de codificação"><em>charset</em></acronym> (UTF-8 x ISO-8859-1)... Procure sobre as funções <strong>utf8_encode()</strong> e <strong>utf8_decode()</strong> do PHP que elas irão te ajudar.</p>
-<p>Se você quiser também pode criar um RSS baseado em uma consulta MySQL, inserindo vários &lt;items&gt; de uma vez... Veja um exemplo:</p>
+<p>Se você quiser também pode criar um RSS baseado em uma consulta MySQL, inserindo vários <items> de uma vez... Veja um exemplo:</p>
 <p>[code language="php"]<br />
 // Intanciamos/chamamos a classe<br />
-$rss = new SimpleXMLElement('&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rss&gt;&lt;/rss&gt;');<br />
-$rss-&gt;addAttribute('version', '2.0');</p>
-<p>// Cria o elemento &lt;channel&gt; dentro de &lt;rss&gt;<br />
-$canal = $rss-&gt;addChild('channel');<br />
-// Adiciona sub-elementos ao elemento &lt;channel&gt;<br />
-$canal-&gt;addChild('title', 'Meu primeiro RSS');<br />
-$canal-&gt;addChild('link', 'http://www.meusite.com/');<br />
-$canal-&gt;addChild('description', 'Este é o meu primeiro RSS, uha!');</p>
+$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');<br />
+$rss->addAttribute('version', '2.0');</p>
+<p>// Cria o elemento <channel> dentro de <rss><br />
+$canal = $rss->addChild('channel');<br />
+// Adiciona sub-elementos ao elemento <channel><br />
+$canal->addChild('title', 'Meu primeiro RSS');<br />
+$canal->addChild('link', 'http://www.meusite.com/');<br />
+$canal->addChild('description', 'Este é o meu primeiro RSS, uha!');</p>
 <p>// Define a consulta MySQL<br />
-$sql = &quot;SELECT * FROM `noticias` WHERE (`ativa` = 1) ORDER BY `cadastro` DESC&quot;;<br />
+$sql = "SELECT * FROM `noticias` WHERE (`ativa` = 1) ORDER BY `cadastro` DESC";<br />
 $query = mysql_query($sql) OR die(mysql_error());</p>
-<p>// Inclui um &lt;item&gt; para cada resultado encontrado<br />
+<p>// Inclui um <item> para cada resultado encontrado<br />
 while ($dados = mysql_fetch_assoc($query)) {<br />
 $id = $dados['id'];<br />
 $titulo = $dados['titulo'];<br />
 $texto = $dados['texto'];</p>
-<p>// Cria um elemento &lt;item&gt; dentro de &lt;channel&gt;<br />
-$item = $canal-&gt;addChild('item');<br />
-// Adiciona sub-elementos ao elemento &lt;item&gt;<br />
-$item-&gt;addChild('title', $titulo);<br />
-$item-&gt;addChild('link', 'http://www.meusite.com/artigos.php?id='.$id);<br />
-$item-&gt;addChild('description', $texto);<br />
+<p>// Cria um elemento <item> dentro de <channel><br />
+$item = $canal->addChild('item');<br />
+// Adiciona sub-elementos ao elemento <item><br />
+$item->addChild('title', $titulo);<br />
+$item->addChild('link', 'http://www.meusite.com/artigos.php?id='.$id);<br />
+$item->addChild('description', $texto);<br />
 }</p>
 <p>// Define o tipo de conteúdo e o charset<br />
-header(&quot;content-type: application/rss+xml; charset=utf-8&quot;);</p>
+header("content-type: application/rss+xml; charset=utf-8");</p>
 <p>// Entrega o conteúdo do RSS completo:<br />
-echo $rss-&gt;asXML();<br />
+echo $rss->asXML();<br />
 exit;[/code]</p>
 <p>--</p>
 <p><img style="margin: 0px; float: right;" src="http://validator.w3.org/feed/images/valid-rss.png" alt="" />Ahh, e pra quem for interessado e sistemático: <a href="http://validator.w3.org/feed/" target="_blank">validador de RSS do W3C</a>.</p>

@@ -29,8 +29,8 @@ Com isso você cria uma nova "ação" no apache e diz que os arquivos .phps ser�
 <br />
 <h3>Passo 2</h3>
 <p>Ainda na raiz do seu site, crie um arquivo chamado "<strong>php-source.php</strong>" e coloque o seguinte conteúdo nele:</p>
-<p>[code language="php"]&lt;?php<br />
-highlight_file($_SERVER[&quot;DOCUMENT_ROOT&quot;] . $_SERVER[&quot;PATH_INFO&quot;]);<br />
-?&gt; [/code]</p>
+<p>[code language="php"]<?php<br />
+highlight_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["PATH_INFO"]);<br />
+?> [/code]</p>
 <p>Isso fará com que esse arquivo criado pegue o caminho do arquvo requisitado (com extensão .phps) e use a função <a href="http://www.php.net/manual/pt_BR/function.highlight-file.php" title="highlight_file()" target="_blank">highlight_file()</a> do PHP para exibir o seu código-fonte com sintaxe coloria.</p>
 <p>Pronto! :D</p>

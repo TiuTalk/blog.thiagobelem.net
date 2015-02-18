@@ -29,19 +29,19 @@ tags:
 <li>var $var; (uma variável declarada, sem valor, dentro de uma classe)</li>
 </ul>
 <p>Agora vamos ver um exemplo prático de uso do empty():<br />
-[code language="php"]&lt;?php</p>
+[code language="php"]<?php</p>
 <p>// Recebe um campo de um formulário<br />
 $nome = $_POST['nome'];</p>
 <p>// Verifica se o usuário digitou o seu nome<br />
 if (empty($nome)) {<br />
-	echo &quot;Por favor, preencha o seu nome.&quot;;<br />
+	echo "Por favor, preencha o seu nome.";<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>
 <h3>A função <span style="color: orange;">isset()</span></h3>
 <p>Ela serve para saber se uma variável existe... Ela retornará true (verdadeiro) quando uma variável existir e false (falso) quando uma variável não existir... Mas ai você se pergunta: quando uma variável existe?</p>
 <p>Veja os exemplos de variáveis vazias no item anterior... Todos eles fazem com que a variável ($var) passe a existir... Para uma variável "não existir" ela não pode ter sido usada/definida em nenhum momento [anterior] do script... Veja um exemplo onde usamos o isset() em conjunto com o empty() e melhoramos o exemplo do item anterior:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>// Verifica se a variável $_POST não é vazia...<br />
 // ou seja: houve um submit no formulário<br />
 if (!empty($_POST)) {</p>
@@ -52,13 +52,13 @@ if (!empty($_POST)) {</p>
 			$nome = $_POST['nome'];<br />
 			echo 'Seja bem-vindo(a) ' . $nome . '!';<br />
 		} else {<br />
-			echo &quot;Por favor, preencha o seu nome&quot;;<br />
+			echo "Por favor, preencha o seu nome";<br />
 		}</p>
 <p>	} else {<br />
-		echo &quot;O campo 'nome' não existe na variável $_POST&quot;;<br />
+		echo "O campo 'nome' não existe na variável $_POST";<br />
 	}</p>
 <p>} else {<br />
-	echo &quot;Não houve submit no formulário&quot;;<br />
+	echo "Não houve submit no formulário";<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>Espero que tenham gostado! :)</p>

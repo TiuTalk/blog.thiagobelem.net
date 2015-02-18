@@ -21,7 +21,7 @@ function calcula_dobro($numero) {<br />
 // O dobro de 3 é: 6<br />
 [/code]</p>
 <p>Essa função recebe número por argumento ($numero) e retorna o dobro desse número, é bem simples.</p>
-<p>Você pode criar funções para as mais variadas tarefas, como por exemplo, exibir um texto entre &lt;p&gt; e &lt;/p&gt;, ficaria assim:</p>
+<p>Você pode criar funções para as mais variadas tarefas, como por exemplo, exibir um texto entre <p> e </p>, ficaria assim:</p>
 <p>[code='php']<br />
 function paragrafos($texto) {<br />
     $resultado = '

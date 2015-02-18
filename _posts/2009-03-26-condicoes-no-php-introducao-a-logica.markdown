@@ -35,7 +35,7 @@ echo "2 é menor ou igual a 3";<br />
 }<br />
 ?><br />
 [/code]</p>
-<p>Ou seja: O primeiro echo só será executado se (<strong><em>if</em></strong>) a afirmação (2 &gt; 3) seja verdadeira. Tudo que está entre as chaves { ... } representa o grupo de ações que serão executados dependendo do resultado da afirmação. O <em><strong>else </strong></em>(que significa "se não") precede o grupo de comandos que serão executados caso a afirmação seja falsa.</p>
+<p>Ou seja: O primeiro echo só será executado se (<strong><em>if</em></strong>) a afirmação (2 > 3) seja verdadeira. Tudo que está entre as chaves { ... } representa o grupo de ações que serão executados dependendo do resultado da afirmação. O <em><strong>else </strong></em>(que significa "se não") precede o grupo de comandos que serão executados caso a afirmação seja falsa.</p>
 <p>Podemos fazer uma condição um pouco mais útil, usando variáveis:</p>
 <p>[code='php']<br />
 <?php<br />
@@ -49,7 +49,7 @@ echo "Você foi reprovado!";<br />
 [/code]</p>
 <p>Com isso, dependendo do valor da variável <strong>$nota</strong> a afirmação é verdadeira ou não.</p>
 <p>Os operadores de comparação que podemos usar nessas afirmações são:</p>
-<p style="padding-left: 30px;"><span style="color: #ff6600;"><strong>==</strong></span> (igual), <span style="color: #ff6600;"><strong>!=</strong></span> (diferente), <span style="color: #ff6600;"><strong>&gt;</strong></span> (maior), <span style="color: #ff6600;"><strong>&gt;=</strong></span> (maior ou igual), <span style="color: #ff6600;"><strong>&lt;</strong></span> (menor), <span style="color: #ff6600;"><strong>&lt;=</strong></span> (menor ou igual), <span style="color: #ff6600;"><strong>===</strong></span> (idêntico), <strong><span style="color: #ff6600;">!==</span></strong> (não idêntico).</p>
+<p style="padding-left: 30px;"><span style="color: #ff6600;"><strong>==</strong></span> (igual), <span style="color: #ff6600;"><strong>!=</strong></span> (diferente), <span style="color: #ff6600;"><strong>></strong></span> (maior), <span style="color: #ff6600;"><strong>>=</strong></span> (maior ou igual), <span style="color: #ff6600;"><strong><</strong></span> (menor), <span style="color: #ff6600;"><strong><=</strong></span> (menor ou igual), <span style="color: #ff6600;"><strong>===</strong></span> (idêntico), <strong><span style="color: #ff6600;">!==</span></strong> (não idêntico).</p>
 <p>Vejamos alguns outros exemplos:</p>
 <p>[code='php']<br />
 <?php<br />

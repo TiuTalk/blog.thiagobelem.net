@@ -27,18 +27,18 @@ tags:
 <p>Se você já possui um repositório local, pule para o pŕoximo passo.</p>
 <p>Tudo começa com a criação de um repositório Git simples:</p>
 <p>[code language="bash"]<br />
-$ mkdir website &amp;&amp; cd website<br />
+$ mkdir website && cd website<br />
 $ git init<br />
 Initialized empty Git repository in /home/thiagobelem/website/.git/<br />
-$ echo 'Olá, mundo!' &gt; index.html<br />
+$ echo 'Olá, mundo!' > index.html<br />
 $ git add index.html<br />
-$ git commit -q -m &quot;Iniciando o repositório&quot;<br />
+$ git commit -q -m "Iniciando o repositório"<br />
 [/code]</p>
 <p>Agora que seu repositório local está pronto, o index.html foi criado e o primeiro commit feito, vamos criar o repositório remoto no ambiente de produção (servidor onde o site está/vai rodar).</p>
 <h3>Repositório remoto</h3>
 <p>Partindo do princípio que o seu site vai rodar em um servidor que você possui <a href="http://blog.thiagobelem.net/login-automatico-no-ssh-no-linux/" target="_blank">acesso SSH facilitado</a>, vamos criar o repositório lá que será uma cópia do servidor local:</p>
 <p>[code language="bash"]<br />
-$ mkdir website.git &amp;&amp; cd website.git<br />
+$ mkdir website.git && cd website.git<br />
 $ git init --bare<br />
 Initialized empty Git repository in /home/thiagobelem/website.git/<br />
 [/code]</p>
@@ -46,7 +46,7 @@ Initialized empty Git repository in /home/thiagobelem/website.git/<br />
 <p>Um repositório bare é um repositório que tem <strong>apenas os arquivos versionados</strong>, mas não inclui a pasta .git e todos os arquivos de informações e configurações do repositório. Não é um <em>working copy directory</em>.</p>
 <p>Agora vamos começar a criar o git-hook que será responsável por copiar todos os arquivos - do repositório bare - para a pasta onde o site vai rodar, no ambiente de produção:</p>
 <p>[code language="bash"]<br />
-$ cat &gt; hooks/post-receive<br />
+$ cat > hooks/post-receive<br />
 #!/bin/sh<br />
 GIT_WORK_TREE=/var/www/meusite.com.br git checkout -f<br />
 $ chmod +x hooks/post-receive<br />

@@ -32,7 +32,7 @@ echo "Você não passou!";<br />
 <p>?><br />
 [/code]</p>
 <p>A sintaxe do operador ternário é a seguinte:</p>
-<p><span style="color: #000000;">(</span><span style="color: #ff6600;">&lt;condição&gt;</span><span style="color: #000000;">) ? </span><span style="color: #0000ff;">&lt;instruções para <strong>verdadeiro</strong>&gt;</span><span style="color: #000000;"> : </span><span style="color: #ff0000;">&lt;instruções para <strong>falso</strong>&gt;</span><span style="color: #000000;">;</span></p>
+<p><span style="color: #000000;">(</span><span style="color: #ff6600;"><condição></span><span style="color: #000000;">) ? </span><span style="color: #0000ff;"><instruções para <strong>verdadeiro</strong>></span><span style="color: #000000;"> : </span><span style="color: #ff0000;"><instruções para <strong>falso</strong>></span><span style="color: #000000;">;</span></p>
 <p>Veja outro exemplo de uso do operador ternário:</p>
 <p>[code='php']<br />
 <?php</p>

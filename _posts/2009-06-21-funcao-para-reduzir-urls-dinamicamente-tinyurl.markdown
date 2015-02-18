@@ -19,11 +19,11 @@ tags:
 <p>Ela é bem simples e a única coisa que você precisa fazer é passar a sua URL pra ela que ela vai te retornar a URL reduzida.</p>
 <p>A vantagem de usar essa função (e não as que eu achei por aí, buscando no Google) é que ela identifica qual é o melhor método pra fazer a requisição à essa API, usando a biblioteca <strong>cURL</strong>, <strong>file_get_contents()</strong> ou <strong>fopen()</strong>+<strong>fgets()</strong>. ;D</p>
 <h3>Código da Função</h3>
-<p>[code lang="php"]&lt;?php</p>
+<p>[code lang="php"]<?php</p>
 <p>/**<br />
 * Função para criar versões reduzidas das URLs<br />
 *<br />
-* @author    Thiago Belem &lt;contato@thiagobelem.net&gt;<br />
+* @author    Thiago Belem <contato@thiagobelem.net><br />
 *<br />
 * @param string $url O endereço a ser reduzido<br />
 * @return string A nova URL (usando o TinyURL)<br />
@@ -49,7 +49,7 @@ function tinyURL($url)<br />
 		$resultado = file_get_contents($requestURL);<br />
 		// Se algo der errado, tenta com o fopen<br />
 		if (!$resultado) {<br />
-			$handle = @fopen($requestURL, &quot;r&quot;);<br />
+			$handle = @fopen($requestURL, "r");<br />
 			$resultado = '';<br />
 			if ($handle) while (!feof($handle)) $resultado .= fgets($handle, 4096);<br />
 		}<br />
@@ -61,12 +61,12 @@ function tinyURL($url)<br />
 	// Retorna o resultado sem espaços adicionais ou a URL original caso algo tenha dado errado<br />
 	return ((isset($resultado) AND !empty($resultado)) ? trim($resultado) : $url);<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <h3>Exemplo de uso <span style="color: #c0c0c0;">(se é que precisa..)</span></h3>
 <p>[code lang="php"]<br />
-&lt;?php<br />
+<?php<br />
 	echo tinyURL('http://blog.thiagobelem.net/');<br />
 	// http://tinyurl.com/kwzg4w<br />
-?&gt;<br />
+?><br />
 [/code]</p>
 <p>Espero que tenham gostado! :)</p>

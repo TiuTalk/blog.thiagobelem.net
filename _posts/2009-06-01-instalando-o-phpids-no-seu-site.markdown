@@ -21,16 +21,16 @@ tags: []
 <p>[code language="php"]// Inclui o arquivo do PHPIDS<br />
 require_once 'IDS/Init.php';<br />
 $request = array(<br />
-'REQUEST' =&amp;amp;gt; $_REQUEST,<br />
-'GET' =&amp;amp;gt; $_GET,<br />
-'POST' =&amp;amp;gt; $_POST,<br />
-'COOKIE' =&amp;amp;gt; $_COOKIE<br />
+'REQUEST' =&amp;gt; $_REQUEST,<br />
+'GET' =&amp;gt; $_GET,<br />
+'POST' =&amp;gt; $_POST,<br />
+'COOKIE' =&amp;gt; $_COOKIE<br />
 );<br />
 // Inicia o PHPIDS<br />
 $init = IDS_Init::init('IDS/Config/Config.ini');<br />
 $ids = new IDS_Monitor($request, $init);<br />
-$result = $ids-&amp;amp;gt;run();</p>
-<p>if (!$result-&amp;amp;gt;isEmpty()) {<br />
+$result = $ids-&amp;gt;run();</p>
+<p>if (!$result-&amp;gt;isEmpty()) {<br />
 // Exibe resultados caso sejam encontrados<br />
 echo $result;<br />
 }[/code]</p>

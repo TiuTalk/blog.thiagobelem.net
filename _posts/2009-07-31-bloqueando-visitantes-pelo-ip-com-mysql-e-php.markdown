@@ -30,38 +30,38 @@ tags:
 <p>Já a parte em PHP do sistema vai funcionar da seguinte maneira... Quando o visitante tentar acessar o seu site é incluído um arquivo que busca no MySQL se esse IP está na lista de banidos, caso esteja o visitante é redirecionado para outro site/endereço.</p>
 <p>Não vou falar como fazer uma conexão ao MySQL porque isso já foi dito N vezes aqui no blog e ocupa um espaço desnecessário na aula. ;)</p>
 <p>Antes de verificar se um visitante está "banido" precisamos limpar da tabela os registros que já expiraram... Esse passo é opcional pois quando formos verificar se um usuário está banido vamos verificar também se o período é valido... Vamos lá:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>// Inclui o arquivo que faz a conexão com o banco de dados<br />
 require_once('mysql.php');</p>
 <p>// IP do visitante para uso futuro<br />
 $ip_visitante = $_SERVER['REMOTE_ADDR'];</p>
 <p>// Deleta os registros que já expiraram, esse passo é opcional!<br />
-$sql = &quot;DELETE FROM `banidos` WHERE ( `fim` &lt;= NOW() )&quot;;<br />
+$sql = "DELETE FROM `banidos` WHERE ( `fim` <= NOW() )";<br />
 mysql_query($sql);</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>Agora nós vamos verificar se o IP do visitante consta na lista dos que ainda estão banidos:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>// Inclui o arquivo que faz a conexão com o banco de dados<br />
 require_once('mysql.php');</p>
 <p>// IP do visitante para uso futuro<br />
 $ip_visitante = $_SERVER['REMOTE_ADDR'];</p>
 <p>// Deleta os registros que já expiraram, esse passo é opcional!<br />
-$sql = &quot;DELETE FROM `banidos` WHERE ( `fim` &lt;= NOW() )&quot;;<br />
+$sql = "DELETE FROM `banidos` WHERE ( `fim` <= NOW() )";<br />
 mysql_query($sql);</p>
 <p>// Verifica se o visitante está banido<br />
-$sql = &quot;SELECT * FROM `banidos` WHERE ( `ip` = '&quot;. $ip_visitante .&quot;' ) AND ( NOW() BETWEEN `inicio` AND `fim` )&quot;;<br />
+$sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip_visitante ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";<br />
 $query = mysql_query($sql);<br />
-if (mysql_num_rows($query) &gt; 0) {<br />
+if (mysql_num_rows($query) > 0) {<br />
 	// Pelo menos um resultado foi encontrado, o usuário está banido<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>Agora é só redirecionar o visitante para outra página/endereço:</p>
 <p>[code language="php" firstline="13" highlight="18"]// Verifica se o visitante está banido<br />
-$sql = &quot;SELECT * FROM `banidos` WHERE ( `ip` = '&quot;. $ip_visitante .&quot;' ) AND ( NOW() BETWEEN `inicio` AND `fim` )&quot;;<br />
+$sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip_visitante ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";<br />
 $query = mysql_query($sql);<br />
-if (mysql_num_rows($query) &gt; 0) {<br />
+if (mysql_num_rows($query) > 0) {<br />
 	// Redireciona o visitante<br />
-	header(&quot;Location: http://www.pudim.com.br/&quot;);<br />
+	header("Location: http://www.pudim.com.br/");<br />
 	exit;<br />
 }[/code]</p>
 <p>--</p>
@@ -70,20 +70,20 @@ if (mysql_num_rows($query) &gt; 0) {<br />
 	// Define o IP que será banido<br />
 	$ip = (is_null($ip)) ? $_SERVER['REMOTE_ADDR'] : $ip;</p>
 <p>	// Verifica se o usuário já está banido<br />
-	$sql = &quot;SELECT * FROM `banidos` WHERE ( `ip` = '&quot;. $ip .&quot;' ) AND ( NOW() BETWEEN `inicio` AND `fim` )&quot;;<br />
+	$sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";<br />
 	$query = mysql_query($sql);<br />
-	if (mysql_num_rows($query) &gt; 0) {<br />
+	if (mysql_num_rows($query) > 0) {<br />
 		// Cria uma consulta que atualizará o registro do visitante<br />
-		$sql = &quot;UPDATE `banidos` SET `fim` = DATE_ADD(NOW(), INTERVAL &quot;.$minutos.&quot; MINUTE) WHERE  ( `ip` = '&quot;. $ip .&quot;' ) AND ( NOW() BETWEEN `inicio` AND `fim` )&quot;;<br />
+		$sql = "UPDATE `banidos` SET `fim` = DATE_ADD(NOW(), INTERVAL ".$minutos." MINUTE) WHERE  ( `ip` = '". $ip ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";<br />
 	} else {<br />
 		// Cria uma consulta que insere o registro na tabela<br />
-		$sql = &quot;INSERT INTO `banidos` VALUES ( NULL, '&quot;. $ip .&quot;', NOW(), DATE_ADD(NOW(), INTERVAL &quot;.$minutos.&quot; MINUTE) )&quot;;<br />
+		$sql = "INSERT INTO `banidos` VALUES ( NULL, '". $ip ."', NOW(), DATE_ADD(NOW(), INTERVAL ".$minutos." MINUTE) )";<br />
 	}<br />
 	// Executa a consulta criada dentro do IF/ELSE<br />
 	mysql_query($sql);</p>
 <p>	// Redireciona o visitante<br />
 	if ($_SERVER['REMOTE_ADDR'] == $ip) {<br />
-		header(&quot;Location: http://www.pudim.com.br/&quot;);<br />
+		header("Location: http://www.pudim.com.br/");<br />
 		exit;<br />
 	}<br />
 }[/code]</p>

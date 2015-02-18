@@ -44,22 +44,22 @@ INSERT INTO `produtos` VALUES(3, 2, 'Caneca Grande', 12.00);[/code]</p>
 <p>Esse campo responsável pela relação é normalmente chamado de "<em>foreing key</em>" (fk) ou "chave estrangeira".</p>
 <h3>Mas qual a utilidade dessa tal "relação"?</h3>
 <p>Sem usar o relacionamento você poderia pegar todos os produtos e depois pegar as informações das categorias com uma segunda consulta, assim:<br />
-[code language="php"]&lt;?php</p>
+[code language="php"]<?php</p>
 <p>// Consulta que pega todos os produtos<br />
-$sql = &quot;SELECT * FROM `produtos` ORDER BY `nome` ASC&quot;;<br />
+$sql = "SELECT * FROM `produtos` ORDER BY `nome` ASC";<br />
 $query = mysql_query($sql);<br />
 while ($produto = mysql_fetch_assoc($query)) {<br />
 	// Aqui temos o array $produto com todos os valores do produto</p>
 <p>	// Consulta para pegar os dados da categoria:<br />
-	$sqlC = &quot;SELECT * FROM `categorias` WHERE `id` = &quot; . $produto['categoria_id'];<br />
+	$sqlC = "SELECT * FROM `categorias` WHERE `id` = " . $produto['categoria_id'];<br />
 	$queryC = mysql_query($sqlC);<br />
 	$categoria = mysql_fetch_assoc($queryC);</p>
-<p>	echo 'Titulo: ' . $produto['nome'] . '&lt;br /&gt;';<br />
-	echo 'Preço: ' . $produto['preco'] . '&lt;br /&gt;';<br />
-	echo 'Categoria: ' . $categoria['nome']. '&lt;br /&gt;';<br />
-	echo '&lt;hr /&gt;';<br />
+<p>	echo 'Titulo: ' . $produto['nome'] . '<br />';<br />
+	echo 'Preço: ' . $produto['preco'] . '<br />';<br />
+	echo 'Categoria: ' . $categoria['nome']. '<br />';<br />
+	echo '<hr />';<br />
 }</p>
-<p>?&gt;[/code]<br />
+<p>?>[/code]<br />
 Até aí tudo bem... Não tem nenhum pecado nisso... Mas imagine que você tem uma loja com 1000 produtos (o que não é muito), seria executada 1 consulta para todos os produtos e, dentro do loop (while) seriam executadas outras 1000 consultas para pegar o nome da categoria a qual o produto pertence... Ou seja, 1001 consultas, o que é um absurdo.</p>
 <h3>A mágica da relação</h3>
 <p>Agora vamos montar uma consulta que <strong>DE UMA SÓ VEZ</strong> irá pegar os dados de cada produto e também o nome da categoria... Com isso reduziremos nossas 1001 consultas pra... uma só! Sem mistérios, sem sub-consultas, nem consultas dentro do <strong>while()</strong>! :D</p>
@@ -89,18 +89,18 @@ Nesse caso <strong>p</strong> representará a tabela "produtos" e <strong>c</str
 <center><img src="http://blog.thiagobelem.net/arquivos/2009/08/relacionamento3.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center></p>
 <p>Sei que parece uma consulta maior e mais complicada... Mas você fará o MySQL trabalhar <u>muito menos</u> se fizer assim, com JOINS, do que fazer uma 2ª consulta dentro do while... Essa é a forma mais correta de fazer consultas quando precisamos de informações vindas de mais de uma tabela.</p>
 <p>Agora vamos ao nosso novo script de PHP que, sem dúvidas, é bem mais prático e eficiente:<br />
-[code language="php" highlight="4,10"]&lt;?php</p>
+[code language="php" highlight="4,10"]<?php</p>
 <p>// Consulta que pega todos os produtos e o nome da categoria de cada um<br />
-$sql = &quot;SELECT p.*, c.`nome` AS categoria FROM `produtos` AS p INNER JOIN `categorias` AS c ON p.`categoria_id` = c.`id` ORDER BY p.`nome` ASC&quot;;<br />
+$sql = "SELECT p.*, c.`nome` AS categoria FROM `produtos` AS p INNER JOIN `categorias` AS c ON p.`categoria_id` = c.`id` ORDER BY p.`nome` ASC";<br />
 $query = mysql_query($sql);<br />
 while ($produto = mysql_fetch_assoc($query)) {<br />
 	// Aqui temos o array $produto com todos os dados encontrados<br />
-	echo 'Titulo: ' . $produto['nome'] . '&lt;br /&gt;';<br />
-	echo 'Preço: ' . $produto['preco'] . '&lt;br /&gt;';<br />
-	echo 'Categoria: ' . $produto['categoria']. '&lt;br /&gt;';<br />
-	echo '&lt;hr /&gt;';<br />
+	echo 'Titulo: ' . $produto['nome'] . '<br />';<br />
+	echo 'Preço: ' . $produto['preco'] . '<br />';<br />
+	echo 'Categoria: ' . $produto['categoria']. '<br />';<br />
+	echo '<hr />';<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <h3>Os outros tipos de JOINs</h3>
 <p>Existem também outros dois tipos de JOIN: o <strong>LEFT JOIN</strong> e o <strong>RIGHT JOIN</strong>:</p>
 <p>Se usássemos o <strong>LEFT JOIN</strong> seriam retornados todos os produtos, independente se eles estão ligados a uma categoria (na tabela categorias) existente ou não.</p>

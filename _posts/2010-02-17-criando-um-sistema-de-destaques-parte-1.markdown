@@ -25,57 +25,57 @@ tags:
 <h3>A marcação XHTML</h3>
 <p>Antes de mais nada, precisamos criar o HTML do nosso bloco de destaque... Começamos com uma div e dentro dela criaremos uma lista (UL) com três itens (LI):</p>
 <p>[code language="html"]<br />
-&lt;!-- destaques --&gt;<br />
-&lt;div id=&quot;blocoDestaques&quot;&gt;<br />
-	&lt;ul&gt;<br />
-		&lt;li&gt;...&lt;/li&gt;<br />
-		&lt;li&gt;...&lt;/li&gt;<br />
-		&lt;li&gt;...&lt;/li&gt;<br />
-	&lt;/ul&gt;<br />
-&lt;/div&gt;<br />
-&lt;!-- /destaques --&gt;<br />
+<!-- destaques --><br />
+<div id="blocoDestaques"><br />
+	<ul><br />
+		<li>...</li><br />
+		<li>...</li><br />
+		<li>...</li><br />
+	</ul><br />
+</div><br />
+<!-- /destaques --><br />
 [/code]</p>
 <p>Agora, dentro de cada item, vamos adicionar uma imagem (IMG) com um link (A):</p>
 <p>[code language="html" firstline="4"]<br />
-		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 1&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque1.jpg&quot; alt=&quot;Destaque 1&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-		&lt;/li&gt;</p>
-<p>		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 2&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque2.jpg&quot; alt=&quot;Destaque 2&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-		&lt;/li&gt;</p>
-<p>		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 3&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque3.jpg&quot; alt=&quot;Destaque 3&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-		&lt;/li&gt;<br />
+		<li><br />
+			<a href="#" title="Destaque 1"><br />
+				<img src="img/destaque1.jpg" alt="Destaque 1" /><br />
+			</a><br />
+		</li></p>
+<p>		<li><br />
+			<a href="#" title="Destaque 2"><br />
+				<img src="img/destaque2.jpg" alt="Destaque 2" /><br />
+			</a><br />
+		</li></p>
+<p>		<li><br />
+			<a href="#" title="Destaque 3"><br />
+				<img src="img/destaque3.jpg" alt="Destaque 3" /><br />
+			</a><br />
+		</li><br />
 [/code]</p>
 <p>Agora vamos inserir, após as imagens com links, parágrafos (P) contendo a descrição (ou titulo) do destaque e que também estão com link (A) para o destaque:</p>
 <p>[code language="html" firstline="4"]<br />
-		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 1&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque1.jpg&quot; alt=&quot;Destaque 1&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 1&quot;&gt;Destaque 1 - Muita coisa boa!&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;</p>
-<p>		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 2&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque2.jpg&quot; alt=&quot;Destaque 2&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 2&quot;&gt;Destaque 2 - Nem tão bom assim...&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;</p>
-<p>		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 3&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque3.jpg&quot; alt=&quot;Destaque 3&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 3&quot;&gt;Destaque 3 - Agora sim... bem melhor!&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;<br />
+		<li><br />
+			<a href="#" title="Destaque 1"><br />
+				<img src="img/destaque1.jpg" alt="Destaque 1" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 1">Destaque 1 - Muita coisa boa!</a></p><br />
+		</li></p>
+<p>		<li><br />
+			<a href="#" title="Destaque 2"><br />
+				<img src="img/destaque2.jpg" alt="Destaque 2" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 2">Destaque 2 - Nem tão bom assim...</a></p><br />
+		</li></p>
+<p>		<li><br />
+			<a href="#" title="Destaque 3"><br />
+				<img src="img/destaque3.jpg" alt="Destaque 3" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 3">Destaque 3 - Agora sim... bem melhor!</a></p><br />
+		</li><br />
 [/code]</p>
 <p>Algumas pessoas podem ter pensado que errei ao criar dois links ao invés de inserir o parágrafo (P) dentro do primeiro link, após a imagem... Mas isso seria errado pois o link é um elemento de linha (<em>in-line</em>) e o parágrafo é um elemento de bloco (<em>block</em>) e nunca devemos inserir um elemento <em>block</em> dentro de um <em>in-line</em>.</p>
 <p>Criamos também, antes de cada parágrafo, uma <strong>div.fundo</strong> vazia que será o fundo preto transparente da descrição/titulo de cada item.</p>
@@ -83,34 +83,34 @@ tags:
 <a href="http://blog.thiagobelem.net/arquivos/2010/02/destaque1.jpg"><img src="http://blog.thiagobelem.net/arquivos/2010/02/destaque1-230x300.jpg" alt="" title="Sistema de Destaques - 1ª Prévia" width="230" height="300" class="aligncenter size-medium wp-image-710" /></a></p>
 <p>Por fim, nós vamos inserir mais um link, dessa vez vazio, antes da lista (UL)... Esse link será a faixa [Destaques] que teremos sobre a imagem e a nossa marcação HTML está pronta:</p>
 <p>[code language="html"]<br />
-&lt;!-- destaques --&gt;<br />
-&lt;div id=&quot;blocoDestaques&quot;&gt;</p>
-<p>	&lt;a class=&quot;faixa&quot; href=&quot;#&quot; title=&quot;&quot;&gt;&lt;!-- --&gt;&lt;/a&gt;</p>
-<p>	&lt;ul&gt;<br />
-		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 1&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque1.jpg&quot; alt=&quot;Destaque 1&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 1&quot;&gt;Destaque 1 - Muita coisa boa!&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;</p>
-<p>		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 2&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque2.jpg&quot; alt=&quot;Destaque 2&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 2&quot;&gt;Destaque 2 - Nem tão bom assim...&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;</p>
-<p>		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 3&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque3.jpg&quot; alt=&quot;Destaque 3&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 3&quot;&gt;Destaque 3 - Agora sim... bem melhor!&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;<br />
-	&lt;/ul&gt;<br />
-&lt;/div&gt;<br />
-&lt;!-- /destaques --&gt;<br />
+<!-- destaques --><br />
+<div id="blocoDestaques"></p>
+<p>	<a class="faixa" href="#" title=""><!-- --></a></p>
+<p>	<ul><br />
+		<li><br />
+			<a href="#" title="Destaque 1"><br />
+				<img src="img/destaque1.jpg" alt="Destaque 1" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 1">Destaque 1 - Muita coisa boa!</a></p><br />
+		</li></p>
+<p>		<li><br />
+			<a href="#" title="Destaque 2"><br />
+				<img src="img/destaque2.jpg" alt="Destaque 2" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 2">Destaque 2 - Nem tão bom assim...</a></p><br />
+		</li></p>
+<p>		<li><br />
+			<a href="#" title="Destaque 3"><br />
+				<img src="img/destaque3.jpg" alt="Destaque 3" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 3">Destaque 3 - Agora sim... bem melhor!</a></p><br />
+		</li><br />
+	</ul><br />
+</div><br />
+<!-- /destaques --><br />
 [/code]</p>
 <h3>Melhorando a aparência (CSS)</h3>
 <p>Começaremos criando um arquivo CSS e nele definiremos que a lista (UL), os seus itens (LI) e as imagens não terão estilo, margem ou espaçamento:</p>

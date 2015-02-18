@@ -23,7 +23,7 @@ tags:
 <p>Mas quando eu olhasse os relatórios do GA, apareceria apenas "twitter.com" como site de referência, sem saber se foi no meu perfil ou não.</p>
 <p style="text-align: center;"><a href="http://blog.thiagobelem.net/arquivos/2009/06/phpc3ezlypm.jpg"><img class="size-full wp-image-536 aligncenter" title="phpc3ezlypm" src="http://blog.thiagobelem.net/arquivos/2009/06/phpc3ezlypm.jpg" alt="phpc3ezlypm" width="501" height="188" /></a></p>
 <p>Então, pra fazer isso funcionar, adicionamos alguns parâmetros no fim da URL:</p>
-<p style="padding-left: 30px;"><span style="color: #0000ff;">http://blog.thiagobelem.net/<span style="color: #ff6600;">?utm_campaign=<span style="color: #ff00ff;">blog</span>&amp;utm_source=<span style="color: #ff00ff;">twitter</span>&amp;utm_medium=<span style="color: #ff00ff;">micro-blog</span></span></span></p>
+<p style="padding-left: 30px;"><span style="color: #0000ff;">http://blog.thiagobelem.net/<span style="color: #ff6600;">?utm_campaign=<span style="color: #ff00ff;">blog</span>&utm_source=<span style="color: #ff00ff;">twitter</span>&utm_medium=<span style="color: #ff00ff;">micro-blog</span></span></span></p>
 <p>E pra quem ficou preocupado com o limite de 140 caracteres: é só reduzir a sua nova URL em um sistema que reduz URLs, recomendo o <a href="http://tinyurl.com/" target="_blank">TinyURL</a>.</p>
 <p>Se você ficar com dúvida, pode usar o <a href="http://www.google.com/support/analytics/bin/answer.py?answer=55578" target="_blank">criador de URLs para o Google Analytics.</a></p>
 <p>Com esses parâmetros o Google começará a separar as visitas que vieram do seu perfil, mostrando dessa forma:</p>

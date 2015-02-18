@@ -14,7 +14,7 @@ tags: []
 <p>Hoje vou falar um pouco sobre as funções para manipulação (no PHP) do protocolo FTP, que permite o envio de arquivos entre servidores.</p>
 <p>Falarei sobre quatro cinco tarefas básicas: abrir a conexão, fazer o login, enviar um arquivo, receber um arquivo e desconectar o FTP.</p>
 <p>Faremos um arquivo que conterá todas essas tarefas, então vai ficar fácil entender como tudo funciona.</p>
-<h2>&gt; Conectando-se ao FTP</h2>
+<h2>> Conectando-se ao FTP</h2>
 <p>Para se conectar a um servidor FTP você deve usar a função <strong>ftp_connect()</strong>, que tem três possíveis argumentos:</p>
 <ol>
 <li>O servidor ao qual estamos tentando conexão (geralmente um ip ou domínio)</li>
@@ -37,7 +37,7 @@ $ftp = ftp_connect($servidor); // Retorno: true ou false<br />
 [/code]</p>
 <p>Até aqui, nada de misterioso... Vamos continuar.</p>
 <p>» <strong>Veja também:</strong> <a href="http://br2.php.net/manual/pt_BR/function.ftp-connect.php" target="_blank">Documentação da função ftp_connect()</a></p>
-<h2>&gt; Fazendo login no FTP</h2>
+<h2>> Fazendo login no FTP</h2>
 <p>Para fazer o login você vai usar a função <strong>ftp_login()</strong>, que tem três argumentos obrigatórios:</p>
 <ol>
 <li>O identificador da conexão, definido no uso do ftp_connect()</li>
@@ -65,7 +65,7 @@ $login = ftp_login($ftp, $usuario, $senha); // Retorno: true ou false<br />
 <p>Vale lembrar que não estou criando nenhuma rotina de debug ou de manipulação de erros, estou partindo da premissa que os dados estão corretos e o servidor FTP está rodando, no ar.</p>
 <p>A partir deste ponto já estamos conectados e logados no servidor FTP e podemos começar a pegar e enviar arquivos.</p>
 <p>» <strong>Veja também:</strong> <a href="http://br2.php.net/manual/pt_BR/function.ftp-login.php" target="_blank">Documentação da função ftp_login()</a></p>
-<h2>&gt; Enviando arquivos para o FTP (upload)</h2>
+<h2>> Enviando arquivos para o FTP (upload)</h2>
 <p>Para fazer upload de arquivos você vai usar a função <strong>ftp_put()</strong>, que tem quatro argumentos obrigatórios:</p>
 <ol>
 <li>O identificador da conexão, definido no uso do ftp_connect()</li>
@@ -99,7 +99,7 @@ $envio = ftp_put($ftp, $ftp_pasta.$ftp_arquivo, $local_arquivo, FTP_ASCII); // R
 [/code]</p>
 <p>Com isso você já vai poder conectar-se a um FTP e enviar arquivos dinamicamente, o que é muito útil.</p>
 <p>» <strong>Veja também:</strong> <a href="http://br2.php.net/manual/pt_BR/function.ftp-put.php" target="_blank">Documentação da função ftp_put()</a></p>
-<h2>&gt; Recebendo arquivos pelo FTP (download)</h2>
+<h2>> Recebendo arquivos pelo FTP (download)</h2>
 <p>Para fazer download de arquivos você vai usar a função <strong>ftp_get()</strong>, que tem quatro argumentos obrigatórios, os mesmos do <strong>ftp_put()</strong>:</p>
 <ol>
 <li>O identificador da conexão, definido no uso do ftp_connect()</li>
@@ -140,7 +140,7 @@ $recebe = ftp_get($ftp, $ftp_pasta.$ftp_arquivo, $local_arquivo, FTP_ASCII); // 
 <p>?><br />
 [/code]</p>
 <p>» <strong>Veja também:</strong> <a href="http://br2.php.net/manual/pt_BR/function.ftp-get.php" target="_blank">Documentação da função ftp_get()</a></p>
-<h2>&gt; Desconectando-se do FTP</h2>
+<h2>> Desconectando-se do FTP</h2>
 <p>Para se desconectar (faça isso, sempre) você vai usar a função <strong>ftp_close()</strong>, que tem apenas um argumento: o identificador da conexão.</p>
 <p>Então, finalizando o no nosso arquivo:</p>
 <p>[code='php']<br />

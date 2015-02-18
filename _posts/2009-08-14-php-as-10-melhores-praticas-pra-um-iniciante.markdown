@@ -21,7 +21,7 @@ tags:
 <p>Na <a href="http://php.net/" target="_blank">documentação do PHP</a> você encontra explicações, exemplos e dezenas (quiçá centenas) de comentários sobre caaada função, cada variável de sistema, cada configuração... Tem de tudo lá e você precisa se acostumar a usá-la. Sempre procure por lá antes de sair perguntando nos fóruns ou para os seus amigos no fórum.. Quando você procura a solução e chega a algum lugar você sempre cresce mais e descobre mais coisas do que perguntando pros outros.</p>
 <p><strong>Leia mais:</strong> <a href="http://blog.thiagobelem.net/php/manual-do-php-net-nas-suas-maos/" target="_blank">Manual do PHP.net nas suas mãos!</a></p>
 <h3>2. Dê atenção aos erros do PHP</h3>
-<p>O PHP é uma das poucas linguagens de programação que os erros te ajudam a resolver o problema... Sempre haverá um nome de arquivo e um número de linha te informando onde as coisas deram errado, é só ir lá e começar a procurar...&nbsp; Não se esqueça, claro, de levar em consideração a mensagem de erro que te foi passada.</p>
+<p>O PHP é uma das poucas linguagens de programação que os erros te ajudam a resolver o problema... Sempre haverá um nome de arquivo e um número de linha te informando onde as coisas deram errado, é só ir lá e começar a procurar...  Não se esqueça, claro, de levar em consideração a mensagem de erro que te foi passada.</p>
 <p>Se você <a href="http://www.php.net/manual/pt_BR/function.error-reporting.php" target="_blank">ativar as mensagens de erro</a> ao nível máximo (<strong>E_ALL</strong>) provavelmente vai começar a perceber pequenos erros e bugs no seu código que antes não existiam e que, depois de ajustados, deixam o site muito mais estável e rápido.</p>
 <p>Não se esqueça de desligar as mensagens de erro quando colocar o site em modo de produção, ou seja, quando ele for para o ar... Ao contrário os visitantes vão poder ver mensagens de erro e isso vai deixar de ser uma ajuda pra você, se tornando uma falha de segurança e uma possível dor de cabeça.</p>
 <p><strong>Leia mais:</strong> <a href="http://blog.thiagobelem.net/php/seguranca-manipulando-erros-no-php/" target="_blank">Segurança – Manipulando erros no PHP</a></p>
@@ -49,16 +49,16 @@ tags:
 <p>Pra quem ainda não sacou, "indentação" é aquele espaço em branco a esquerda das linhas, criados usando a tecla [TAB] ou espaços em branco, por exemplo:</p>
 <p>[code language="php"]<br />
 if ($nota == 10) {<br />
-    echo &quot;Parabéns, você passou!&quot;;<br />
+    echo "Parabéns, você passou!";<br />
     exit;<br />
 }<br />
 [/code]</p>
 <p>No exemplo acima as linhas 2 e 3 estão indentadas pois pertencem ao bloco condicional.</p>
 <h3>6. Organize seus arquivos</h3>
 <p>Essa também é simples: comece a organizar seus arquivos, separe cada tipo de arquivo em pastas especificas: CSS na pasta css, imagens na pasta img ou imanges, JavaScript na pasta JS... Isso ajuda a não misturar as coisas e permite que você encontre o arquivo que procura de forma mais rápida.</p>
-<h3>7. Sempre... <span style="text-decoration: underline;">SEMPRE</span> use &lt;?php ... ?&gt;</h3>
-<p>Deixe o código PHP entre as tags &lt;?php e ?&gt;... Não há o que discutir aqui. :P</p>
-<p>Antigamente era possível usar &lt;? ... ?&gt;, &lt;% ... %&gt; e até &lt;script language="php"&gt;...&lt;/script&gt; mas isso não é nada recomendado e não segue os padrões de hoje em dia... Sem contar que na próxima versão do PHP, o PHP 6, não serão mais aceitas outras tags além da &lt;?php ... ?&gt;.</p>
+<h3>7. Sempre... <span style="text-decoration: underline;">SEMPRE</span> use <?php ... ?></h3>
+<p>Deixe o código PHP entre as tags <?php e ?>... Não há o que discutir aqui. :P</p>
+<p>Antigamente era possível usar <? ... ?>, <% ... %> e até <script language="php">...</script> mas isso não é nada recomendado e não segue os padrões de hoje em dia... Sem contar que na próxima versão do PHP, o PHP 6, não serão mais aceitas outras tags além da <?php ... ?>.</p>
 <h3>8. Use nomes consistentes e lógicos para variáveis, funções, métodos e classes</h3>
 <p>Uma vez o <a href="http://gc.blog.br/" target="_blank">Guilherme Chapiewski</a> falou sobre um exemplo de código que ele viu que era algo como "$mano = $lano + $pano + $dano;", eram variáveis que representavam valores financeiros como "Lucro do Ano", "Débitos do Ano" e "Média do Ano"... Mas fica praticamente impossível perceber isso de primeira... Por isso nomes lógicos e consistentes... Poderia ser $lucroAno, $debitoAno e por aí vai.</p>
 <h3>9. Use uma ferramenta de design de Banco de Dados</h3>

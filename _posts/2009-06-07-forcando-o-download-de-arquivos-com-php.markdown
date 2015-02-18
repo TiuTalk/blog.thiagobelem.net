@@ -17,7 +17,7 @@ tags:
 <p>Essa é uma dúvida um pouco comum quando temos um sistema que envia arquivos para download e você não quer que o arquivo seja aberto pelo navegador (Ex: JPG, PDF, TXT e etc).</p>
 <p>Vou mostrar aqui como criar um script simples que vai, além de forçar o download, permitir que você faça um contador de downloads do arquivo, proteger o nome real do arquivo ou protegê-lo por uma sessão (apenas usuários logados).</p>
 <p>Veja o script:</p>
-<p>[code language="php"]&lt;?php<br />
+<p>[code language="php"]<?php<br />
 // Define o tempo máximo de execução em 0 para as conexões lentas<br />
 set_time_limit(0);</p>
 <p>// Arqui você faz as validações e/ou pega os dados do banco de dados</p>
@@ -33,7 +33,7 @@ exit;<br />
 $novoNome = 'imagem_nova.jpg';</p>
 <p>// Configuramos os headers que serão enviados para o browser<br />
 header('Content-Description: File Transfer');<br />
-header('Content-Disposition: attachment; filename=&quot;'.$novoNome.'&quot;');<br />
+header('Content-Disposition: attachment; filename="'.$novoNome.'"');<br />
 header('Content-Type: application/octet-stream');<br />
 header('Content-Transfer-Encoding: binary');<br />
 header('Content-Length: ' . filesize($aquivoNome));<br />
@@ -42,7 +42,7 @@ header('Pragma: public');<br />
 header('Expires: 0');</p>
 <p>// Envia o arquivo para o cliente<br />
 readfile($aquivoNome);<br />
-?&gt;[/code]</p>
+?>[/code]</p>
 <p>Viram que simples?</p>
 <p>Esse script foi testado no Firefox 2 e 3, Internet Explorer 6 e 7, Google Chrome e Safari e funcionou perfeitamente.</p>
 <p>Espero que tenham gostado :)</p>

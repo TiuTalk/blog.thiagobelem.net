@@ -35,7 +35,7 @@ tags:
 <p>Agora você pode acessar o índice diretamente na chamada da função:</p>
 <div data-gist-id="3970245" data-gist-show-loading="false"></div>
 <p>Isso vale pra qualquer método ou função que retorne arrays!</p>
-<h2>&lt;?="Sempre disponível"?&gt;</h2>
+<h2><?="Sempre disponível"?></h2>
 <p>Se você não conhece, essa é a uma forma encurtada de imprimir algo em PHP:</p>
 <div data-gist-id="3970264" data-gist-show-loading="false"></div>
 <p>Porém essa sintaxe só funcionava (até antes da versão 5.4) caso a opção <a href="http://www.php.net/manual/en/ini.core.php#ini.short-open-tag" target="_blank">short_open_tags</a> estivesse habilitada no php.ini, agora essa sintaxe estará disponível independente das suas configurações no php.ini.</p>

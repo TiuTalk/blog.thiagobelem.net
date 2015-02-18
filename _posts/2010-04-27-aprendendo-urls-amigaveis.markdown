@@ -40,7 +40,7 @@ tags:
 <code>http://meusite.com/<span style="background: yellow;">contato</span>/</code> (A nova URL)</p>
 <p><code>http://meusite.com/<span style="background: yellow;">produtos</span>.php?id=<span style="background: lime;">2</span></code> (A URL atual)<br />
 <code>http://meusite.com/<span style="background: yellow;">produtos</span>/camiseta-rosa/<span style="background: lime;">2</span>/</code> (A nova URL)</p>
-<p><code>http://meusite.com/<span style="background: yellow;">livros</span>.php?categoria=<span style="background: lime;">suspense</span>&amp;pagina=<span style="background: orange;">3</span></code> (A URL atual)<br />
+<p><code>http://meusite.com/<span style="background: yellow;">livros</span>.php?categoria=<span style="background: lime;">suspense</span>&pagina=<span style="background: orange;">3</span></code> (A URL atual)<br />
 <code>http://meusite.com/<span style="background: yellow;">livros</span>/<span style="background: lime;">suspense</span>/pagina-<span style="background: orange;">3</span>/</code> (A nova URL)</p>
 <p>Perceba que em todos os novos formatos temos as mesmas informações que possuíamos no formato anterior, e em alguns casos adicionamos novas informações que, para o servidor, poderão ou não fazer diferença...</p>
 <p>Todos esses formatos são definidos por você, mas você vai perceber que é preciso seguir um padrão para que uma regra não acabe atrapalhando a outra.</p>
@@ -51,10 +51,10 @@ tags:
 <p>Vamos começar com o exemplo da página de contato que atualmente você acessa pelo endereço <code>http://www.meusite.com.br/contato.php</code>.</p>
 <p>Vá até a raiz do seu site e edite (ou crie) um arquivo chamado .htaccess (<a title=".htaccess - Wikipédia" href="http://en.wikipedia.org/wiki/Htaccess" target="_blank">leia mais aqui</a>), e dentro dele coloque as seguintes linhas que explicarei mais a diante:</p>
 <p>[code language="plain"]<br />
-&lt;IfModule mod_rewrite.c&gt;<br />
+<IfModule mod_rewrite.c><br />
 	RewriteEngine On</p>
 <p>	RewriteRule ^contato/?$ /contato.php [NC,L]<br />
-&lt;/IfModule&gt;<br />
+</IfModule><br />
 [/code]</p>
 <p>Agora vamos as explicações...</p>
 <h4>O que é um arquivo .htaccess?</h4>

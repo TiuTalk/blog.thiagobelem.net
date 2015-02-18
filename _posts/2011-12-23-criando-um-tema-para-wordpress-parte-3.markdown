@@ -30,7 +30,7 @@ tags:
 <h3>Montando o topo do site</h3>
 <p>Não vou fazer nada mirabolante nem inserir um menu ainda, vamos só colocar o título e o subtítulo do site... Além disso, usaremos a função <a href="http://codex.wordpress.org/Function_Reference/body_class" target="_blank">body_class()</a> na tab body para inserir algumas classes que o WordPress gera automaticamente.</p>
 <div data-gist-id="1514349" data-gist-show-loading="false"></div>
-<p>Se você estiver acessando a home do blog, a função <a href="http://codex.wordpress.org/Function_Reference/body_class" target="_blank">body_class()</a> irá gerar as seguintes classes: <code>&lt;body class="home blog"&gt;</code>, mas se você estiver visualizando um post ela trará muito mais informações como o ID do post ou nome da categoria: <code>&lt;body class="page page-id-2 page-template page-template-default logged-in"&gt;</code>. Você pode usar essas classes para estilizar (CSS) as diferentes áreas/páginas/posts do seu blog.</p>
+<p>Se você estiver acessando a home do blog, a função <a href="http://codex.wordpress.org/Function_Reference/body_class" target="_blank">body_class()</a> irá gerar as seguintes classes: <code><body class="home blog"></code>, mas se você estiver visualizando um post ela trará muito mais informações como o ID do post ou nome da categoria: <code><body class="page page-id-2 page-template page-template-default logged-in"></code>. Você pode usar essas classes para estilizar (CSS) as diferentes áreas/páginas/posts do seu blog.</p>
 <h3>Listando os posts</h3>
 <p>Para listar os posts usaremos as seguintes funções que são chamadas de "<a href="http://codex.wordpress.org/The_Loop" target="_blank">The Loop</a>":</p>
 <ul>

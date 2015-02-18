@@ -21,13 +21,13 @@ tags:
 <a id="more"></a><a id="more-991"></a></p>
 <p>O código da classe é bem simples:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>/**<br />
  * Goo.gl API<br />
  *<br />
  * Classe para encurtamento de URL utilizando a API do serviço goo.gl<br />
  *<br />
- * @author Thiago Belem &lt;contato@thiagobelem.net&gt;<br />
+ * @author Thiago Belem <contato@thiagobelem.net><br />
  * @link http://blog.thiagobelem.net/<br />
  * @version 1.0<br />
  */<br />
@@ -98,35 +98,35 @@ class Googl {</p>
 	public function shorten($url) {<br />
 		// Se for um array de URLs age recursivamente<br />
 		if (is_array($url)) {<br />
-			foreach ($url AS &amp;$u)<br />
-				$u = $this-&gt;shorten($u);</p>
+			foreach ($url AS &$u)<br />
+				$u = $this->shorten($u);</p>
 <p>			return $url;<br />
 		}</p>
 <p>		// Se for uma URL válida<br />
 		if (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED)) {</p>
 <p>			// Monta a lista de parâmetros usados pela API<br />
 			$fields = array(<br />
-				'user' =&gt; Googl::$user,<br />
-				'url' =&gt; urlencode($url));</p>
+				'user' => Googl::$user,<br />
+				'url' => urlencode($url));</p>
 <p>			// Converte o array de parâemtros em uma string GET<br />
-			$fields = urldecode(http_build_query($fields, '', '&amp;'));</p>
+			$fields = urldecode(http_build_query($fields, '', '&'));</p>
 <p>			// Se tudo der certo com a chamada à API...<br />
-			if ($result = $this-&gt;requestURL(Googl::$api_url, $fields)) {<br />
+			if ($result = $this->requestURL(Googl::$api_url, $fields)) {<br />
 				// Decodifica o resultado em jSON<br />
 				$result = json_decode($result);</p>
 <p>				// Se recebeu alguma mensagem de erro, lança um erro<br />
-				if (isset($result-&gt;error_message))<br />
-					trigger_error('[goo.gl] ' . $result-&gt;error_message);</p>
+				if (isset($result->error_message))<br />
+					trigger_error('[goo.gl] ' . $result->error_message);</p>
 <p>				// Ou retorna a URL encurtada<br />
 				else<br />
-					return $result-&gt;short_url;</p>
+					return $result->short_url;</p>
 <p>			// ...caso contrário, retorna a URL original<br />
 			} else<br />
 				return $url;<br />
 		}<br />
 	}<br />
 }</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Essa classe bem simples possui dois métodos: um para fazer uma requisição HTTP utilizando a biblioteca cURL e outro para encurtar a URL (que utiliza o método de requisição).</p>
 <p>O retorno do método <code>Googl::shorten()</code> vai ser a URL encurtada ou um array de URLs encurtadas (caso você passe um array como parâmetro).</p>
@@ -136,10 +136,10 @@ class Googl {</p>
 <p>[code language="php"]<br />
 $Googl = new Googl();</p>
 <p>$url = 'http://blog.thiagobelem.net/vida-pessoal/freelancear-ou-nao-freelancear-eis-a-questao-parte-3/';<br />
-$url_encurtada = $Googl-&gt;shorten($url);</p>
-<p>echo &quot;&lt;p&gt;URL original: &lt;strong&gt;&quot;. $url .&quot;&lt;/strong&gt;&lt;/p&gt;&quot;;<br />
-echo &quot;&lt;p&gt;URL encurtada: &lt;strong&gt;&quot;. $url_encurtada .&quot;&lt;/strong&gt;&lt;/p&gt;&quot;;<br />
-echo &quot;&lt;p&gt;Diferença: &lt;strong&gt;&quot;. (strlen($url) - strlen($url_encurtada)) .&quot;&lt;/strong&gt; caracteres&lt;/p&gt;&quot;;<br />
+$url_encurtada = $Googl->shorten($url);</p>
+<p>echo "<p>URL original: <strong>". $url ."</strong></p>";<br />
+echo "<p>URL encurtada: <strong>". $url_encurtada ."</strong></p>";<br />
+echo "<p>Diferença: <strong>". (strlen($url) - strlen($url_encurtada)) ."</strong> caracteres</p>";<br />
 [/code]</p>
 <p>Como resultado desse exemplo você teria uma URL encurtada economizando 75 caracteres!</p>
 <h3>Usando uma função pra facilitar as coisas</h3>
@@ -154,7 +154,7 @@ echo &quot;&lt;p&gt;Diferença: &lt;strong&gt;&quot;. (strlen($url) - strlen($ur
  */<br />
 function googl($url) {<br />
 	$Googl = new Googl();<br />
-	return $Googl-&gt;shorten($url);<br />
+	return $Googl->shorten($url);<br />
 }<br />
 [/code]</p>
 <p>Com isso seria só usar:</p>

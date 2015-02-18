@@ -15,7 +15,7 @@ tags:
 - Programador
 - Desenvolvedor
 ---
-<p>Reparei que muita gente aprovou o <a title="&quot;Freelancear ou não freelancear?&quot;, eis a questão" href="http://blog.thiagobelem.net/vida-pessoal/freelancear-ou-nao-freelancear-eis-a-questao/">artigo anterior</a> mas, depois de lê-lo algumas vezes, percebi que deixei alguns pontos de fora.</p>
+<p>Reparei que muita gente aprovou o <a title=""Freelancear ou não freelancear?", eis a questão" href="http://blog.thiagobelem.net/vida-pessoal/freelancear-ou-nao-freelancear-eis-a-questao/">artigo anterior</a> mas, depois de lê-lo algumas vezes, percebi que deixei alguns pontos de fora.</p>
 <h3>Nem tudo são flores...</h3>
 <p>Vida de freelancer é duzera... Por ser sócio de um coletivo e coordenador de uma equipe, o meus últimos dias (de umas duas semanas pra cá) se resumiram em resolver problemas [dos outros]. Passo o dia respondendo e-mails, tirando dúvidas (não sei por que os programadores são os GURUS da informática, mas isso é assunto pra outro artigo) e principalmente: apontando erros e correções no trabalho dos outros.</p>
 <p>Não quero dar uma de <em>estrelinha</em> e mostrar como sou importante.. Estou tentando mostrar a carga de responsabilidade que se acumula sendo freelancer por tanto tempo: as pessoas passam a depender de você e você é a única opção que elas têm. Se eu não fosse quem eu sou, uma pessoa que preza pelo correto e pelo justo, eu facilmente seria mais um daqueles profissionais que, quanto mais o cliente/parceiro depende de você, mais caro você cobra.</p>

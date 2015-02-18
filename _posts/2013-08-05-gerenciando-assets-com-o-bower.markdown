@@ -25,7 +25,7 @@ tags:
 <h3>Instalando pacotes com o Bower</h3>
 <p>Agora você pode instalar pacotes de três formas diferentes:</p>
 <div data-gist-id="6155762" data-gist-show-loading="false"></div>
-<p>Onde <code>&lt;package&gt;</code> pode ser um dos seguintes itens:</p>
+<p>Onde <code><package></code> pode ser um dos seguintes itens:</p>
 <ul>
 <li>O nome de um pacote registrado no Bower, por exemplo <code>jquery</code></li>
 <li>Um repositório Git remoto, por exemplo <code>git://github.com/someone/some-package.git </code>(público ou privado)</li>

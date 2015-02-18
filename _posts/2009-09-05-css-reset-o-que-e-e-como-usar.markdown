@@ -141,7 +141,7 @@ body {<br />
 ol, ul {<br />
 	list-style: none;<br />
 }<br />
-/* tables still need 'cellspacing=&quot;0&quot;' in the markup */<br />
+/* tables still need 'cellspacing="0"' in the markup */<br />
 table {<br />
 	border-collapse: separate;<br />
 	border-spacing: 0;<br />
@@ -152,9 +152,9 @@ caption, th, td {<br />
 }<br />
 blockquote:before, blockquote:after,<br />
 q:before, q:after {<br />
-	content: &quot;&quot;;<br />
+	content: "";<br />
 }<br />
 blockquote, q {<br />
-	quotes: &quot;&quot; &quot;&quot;;<br />
+	quotes: "" "";<br />
 }[/code]</p>
 <p>Espero que tenham gostado! :)</p>

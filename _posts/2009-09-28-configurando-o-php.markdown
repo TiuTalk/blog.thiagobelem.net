@@ -31,7 +31,7 @@ tags:
 <h3>session.gc_maxlifetime = <span style="color: blue;">28800</span></h3>
 <p>Essa configuração determina quanto tempo (em segundos) uma sessão irá durar no seu sistema. O valor padrão é 1140, o que dá cerca de 24 minutos e é muito pouco caso o seu usuário esteja lendo um artigo/notícia grande. 28800 segundos equivale a 8 horas.</p>
 <h3>upload_max_filesize = <span style="color: blue;">10M</span><br />post_max_size = <span style="color: blue;">11M</span></h3>
-<p>Essas configurações tratam do tamanho das requisições POST que você faz ao php... A primeira determina o tamanho máximo de UPLOAD e a segunda determina o tamanho máximo da requisição... É sempre bom deixar esses valores um pouco maiores do que são por padrão (2M &amp; 8M) pois normalmente você precisa de um upload maior que 2Mb.</p>
+<p>Essas configurações tratam do tamanho das requisições POST que você faz ao php... A primeira determina o tamanho máximo de UPLOAD e a segunda determina o tamanho máximo da requisição... É sempre bom deixar esses valores um pouco maiores do que são por padrão (2M & 8M) pois normalmente você precisa de um upload maior que 2Mb.</p>
 <p>--</p>
 <h3>Mudando uma configuração do PHP via arquivos .htaccess</h3>
 <p>Normalmente você vai estar rodando seu site/sistema em um servidor compartilhado, o que não te dará permissão de acesso ao arquivo <strong>php.ini</strong>, por isso o PHP permite que você altere essas opções direto pelo Apache, ou seja: usando arquivos .htaccess.</p>

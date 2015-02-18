@@ -21,8 +21,8 @@ tags:
 <p>Veja alguns exemplos:</p>
 <p>[code language="javascript" light="true"]<br />
 $('p'); // Retorna uma lista de todos os parágrafos na página<br />
-$('a.azul'); // Retorna uma lista de todos os links com classe &quot;azul&quot;<br />
-$('form input[type=&quot;text&quot;]'); // Retorna uma lista de todos os inputs (que sejam type=&quot;text&quot;) e estejam dentro de um formulário<br />
+$('a.azul'); // Retorna uma lista de todos os links com classe "azul"<br />
+$('form input[type="text"]'); // Retorna uma lista de todos os inputs (que sejam type="text") e estejam dentro de um formulário<br />
 [/code]</p>
 <p>Como vocês podem ver, os seletores de jQuery se assemelham muito aos seletores de CSS, e existem formas de você selecionar praticamente qualquer elemento de seu HTML... Lembra que eu disse que jQuery é como uma conversa? Suponhamos que você precise selecionar todos os <code>p</code>, que estão dentro e uma <code>div</code> com classe a "links", e que não possuam um link dentro desse <code>p</code>... O seletor ficaria assim:</p>
 <p>[code language="javascript" light="true"]<br />
@@ -39,15 +39,15 @@ $('div.links p:not(:has(a))');<br />
 <p>Vamos supor que vocês queiram criar aquele efeito legal de abrir e fechar um elemento com um <code>+</code> no cantinho. O nome desse efeito, em inglês, é <em>collapse</em>.</p>
 <p>Vamos criar o seguinte HTML de exemplo:</p>
 <p>[code language="html" light="true"]<br />
-&lt;div class=&quot;box&quot;&gt;<br />
-	&lt;h2&gt;Meus links&lt;/h2&gt;<br />
-	&lt;a href=&quot;#&quot; title=&quot;Abrir ou fechar&quot; class=&quot;trocar&quot;&gt;abrir/fechar&lt;/a&gt;<br />
-	&lt;ul class=&quot;conteudo&quot;&gt;<br />
-		&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Primeiro link&quot;&gt;Primeiro link&lt;/a&gt;&lt;/li&gt;<br />
-		&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Segundo link&quot;&gt;Segundo link&lt;/a&gt;&lt;/li&gt;<br />
-		&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Terceiro link&quot;&gt;Terceiro link&lt;/a&gt;&lt;/li&gt;<br />
-	&lt;/ul&gt;<br />
-&lt;/div&gt;<br />
+<div class="box"><br />
+	<h2>Meus links</h2><br />
+	<a href="#" title="Abrir ou fechar" class="trocar">abrir/fechar</a><br />
+	<ul class="conteudo"><br />
+		<li><a href="#" title="Primeiro link">Primeiro link</a></li><br />
+		<li><a href="#" title="Segundo link">Segundo link</a></li><br />
+		<li><a href="#" title="Terceiro link">Terceiro link</a></li><br />
+	</ul><br />
+</div><br />
 [/code]</p>
 <p>O efeito que nós queremos é: ao clicar no link com classe "trocar" (<code>a.trocar</code>) que estiver dentro de uma div com classe "box" (<code>div.box a.trocar</code>), a lista desordenada com classe "conteudo" (<code>ul.conteudo</code>) que estiver logo após esse link (que recebeu o clique) irá deslizar, fechando e abrindo a cada clique.</p>
 <p>Uma das primeiras coisas que se aprende no jQuery é que ele trabalha com os elementos HTML da página, e para poder acessar esses elementos ele precisa ser executado depois que a página carregou. Isso não é obrigatório, mas por motivos didáticos, vamos seguir essa regra.</p>

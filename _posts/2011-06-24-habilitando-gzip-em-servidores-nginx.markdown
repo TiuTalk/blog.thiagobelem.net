@@ -41,7 +41,7 @@ gzip_types		text/html text/plain text/css application/json application/x-javascr
 <p># http://blog.leetsoft.com/2007/7/25/nginx-gzip-ssl<br />
 gzip_buffers	16	8k;</p>
 <p># Desabilita o gzip para alguns navegadores<br />
-gzip_disable	&quot;MSIE [1-6].(?!.*SV1)&quot;;[/code]</p>
+gzip_disable	"MSIE [1-6].(?!.*SV1)";[/code]</p>
 <p>Gist: <a href="https://gist.github.com/1045708" target="_blank">https://gist.github.com/1045708</a></p>
 <p>Depois é só reiniciar o seu servidor:</p>
 <p>[code language="shell"]sudo /etc/init.d/nginx restart[/code]</p>

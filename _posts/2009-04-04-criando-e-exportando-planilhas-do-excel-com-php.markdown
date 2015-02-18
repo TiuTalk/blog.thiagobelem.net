@@ -9,7 +9,7 @@ categories:
 tags: []
 ---
 <p>Hoje vou ensinar como criar uma planilha do Excel (.xls) e enviá-la para Download com um script bem simples.</p>
-<p>[code language="php"]&lt;?php<br />
+<p>[code language="php"]<?php<br />
 /*<br />
 * Criando e exportando planilhas do Excel<br />
 * http://blog.thiagobelem.net/<br />
@@ -18,38 +18,38 @@ tags: []
 $arquivo = 'planilha.xls';</p>
 <p>// Criamos uma tabela HTML com o formato da planilha<br />
 $html = '';<br />
-$html .= '&lt;table&gt;';<br />
-$html .= '&lt;tr&gt;';<br />
-$html .= '&lt;td colspan=&quot;3&quot;&gt;Planilha teste&lt;/tr&gt;';<br />
-$html .= '&lt;/tr&gt;';<br />
-$html .= '&lt;tr&gt;';<br />
-$html .= '&lt;td&gt;&lt;b&gt;Coluna 1&lt;/b&gt;&lt;/td&gt;';<br />
-$html .= '&lt;td&gt;&lt;b&gt;Coluna 2&lt;/b&gt;&lt;/td&gt;';<br />
-$html .= '&lt;td&gt;&lt;b&gt;Coluna 3&lt;/b&gt;&lt;/td&gt;';<br />
-$html .= '&lt;/tr&gt;';<br />
-$html .= '&lt;tr&gt;';<br />
-$html .= '&lt;td&gt;L1C1&lt;/td&gt;';<br />
-$html .= '&lt;td&gt;L1C2&lt;/td&gt;';<br />
-$html .= '&lt;td&gt;L1C3&lt;/td&gt;';<br />
-$html .= '&lt;/tr&gt;';<br />
-$html .= '&lt;tr&gt;';<br />
-$html .= '&lt;td&gt;L2C1&lt;/td&gt;';<br />
-$html .= '&lt;td&gt;L2C2&lt;/td&gt;';<br />
-$html .= '&lt;td&gt;L2C3&lt;/td&gt;';<br />
-$html .= '&lt;/tr&gt;';<br />
-$html .= '&lt;/table&gt;';</p>
+$html .= '<table>';<br />
+$html .= '<tr>';<br />
+$html .= '<td colspan="3">Planilha teste</tr>';<br />
+$html .= '</tr>';<br />
+$html .= '<tr>';<br />
+$html .= '<td><b>Coluna 1</b></td>';<br />
+$html .= '<td><b>Coluna 2</b></td>';<br />
+$html .= '<td><b>Coluna 3</b></td>';<br />
+$html .= '</tr>';<br />
+$html .= '<tr>';<br />
+$html .= '<td>L1C1</td>';<br />
+$html .= '<td>L1C2</td>';<br />
+$html .= '<td>L1C3</td>';<br />
+$html .= '</tr>';<br />
+$html .= '<tr>';<br />
+$html .= '<td>L2C1</td>';<br />
+$html .= '<td>L2C2</td>';<br />
+$html .= '<td>L2C3</td>';<br />
+$html .= '</tr>';<br />
+$html .= '</table>';</p>
 <p>// Configurações header para forçar o download<br />
-header (&quot;Expires: Mon, 26 Jul 1997 05:00:00 GMT&quot;);<br />
-header (&quot;Last-Modified: &quot; . gmdate(&quot;D,d M YH:i:s&quot;) . &quot; GMT&quot;);<br />
-header (&quot;Cache-Control: no-cache, must-revalidate&quot;);<br />
-header (&quot;Pragma: no-cache&quot;);<br />
-header (&quot;Content-type: application/x-msexcel&quot;);<br />
-header (&quot;Content-Disposition: attachment; filename=\&quot;{$arquivo}\&quot;&quot; );<br />
-header (&quot;Content-Description: PHP Generated Data&quot; );</p>
+header ("Expires: Mon, 26 Jul 1997 05:00:00 GMT");<br />
+header ("Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT");<br />
+header ("Cache-Control: no-cache, must-revalidate");<br />
+header ("Pragma: no-cache");<br />
+header ("Content-type: application/x-msexcel");<br />
+header ("Content-Disposition: attachment; filename=\"{$arquivo}\"" );<br />
+header ("Content-Description: PHP Generated Data" );</p>
 <p>// Envia o conteúdo do arquivo<br />
 echo $html;<br />
 exit;</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p>Você pode repara que o script foi separado em duas partes: primeiro definimos uma tabela html que será o formato da planilha e depois, usando várias configurações header(), enviamos o conteúdo do arquivo para download.</p>
 <p>Com um pouquinho mais de criatividade você pode fazer uma conexão ao banco de dados e preencher a tabela com registros.</p>
 <p>Simples não? =)</p>

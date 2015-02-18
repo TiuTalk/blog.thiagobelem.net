@@ -24,7 +24,7 @@ tags:
 <p>Quando você abrir o PoEdit pela primeira vez ele pedirá o seu nome e e-mail, esses dados serão inseridos nos arquivos gerados por ele no final do processo.</p>
 <h3>Carregando um arquivo POT</h3>
 <ol>
-<li>Clique em <strong>Arquivo &gt; Novo catálogo de arquvo POT</strong> e escolha um arquivo pot para ser traduzido.</li>
+<li>Clique em <strong>Arquivo > Novo catálogo de arquvo POT</strong> e escolha um arquivo pot para ser traduzido.</li>
 <li>Preencha apenas os três campos mais importantes: <strong>Nome do projeto</strong>, <strong>Linguagem</strong> e <strong>País</strong>
 <ul>
 <li>Se você vai traduzir o seu site/sistema para francês, no campo linguagem escolha "French" e no campo país escolha "France".. Esses dados são sempre referentes ao idioma da nova tradução, não o idioma de origem.</li>

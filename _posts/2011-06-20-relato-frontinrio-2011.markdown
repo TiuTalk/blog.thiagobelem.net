@@ -51,7 +51,7 @@ tags:
 <p>[code language="javascript"]<br />
 // Só vamos carregar o plugin quando for necessário!<br />
 yepnope({<br />
-        // Teste: Existe um elemento com a classe &quot;datepicker&quot;?<br />
+        // Teste: Existe um elemento com a classe "datepicker"?<br />
         test: $('.datepicker').length,</p>
 <p>        // Carrega o CSS e o JS do plugin de datepicker<br />
         yep: ['js/datepicker/style.css', 'js/datepicker/datepicker.js'],</p>

@@ -42,7 +42,7 @@ tags:
 <p>É uma prática muito comum (e recomendada) que você separe - pelo menos - o topo e o rodapé do seu template em arquivos separados, assim podemos reutilizar esses "blocos" em todos os templates (páginas) do blog.</p>
 <p>Vamos começar separar o <strong>header.php</strong> que contém todo o código desde o <strong>DOCTYPE</strong> até o <strong>fim do topo</strong> do seu site:</p>
 <div data-gist-id="2353722" data-gist-show-loading="false"></div>
-<p>Depois precisamos separar o <strong>footer.php</strong>, fazendo a mesma coisa: partindo do <strong>fim do conteúdo</strong> (começo do rodapé) até o <strong>&lt;/body&gt;</strong>:</p>
+<p>Depois precisamos separar o <strong>footer.php</strong>, fazendo a mesma coisa: partindo do <strong>fim do conteúdo</strong> (começo do rodapé) até o <strong></body></strong>:</p>
 <div data-gist-id="2353728" data-gist-show-loading="false"></div>
 <p>Depois de salvar esses dois arquivos, é só fazer o "include" dentro do nosso <strong>index.php</strong>, deixando-o muito mais limpo:</p>
 <div data-gist-id="2353735" data-gist-show-loading="false"></div>

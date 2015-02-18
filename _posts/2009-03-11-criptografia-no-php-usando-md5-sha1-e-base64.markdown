@@ -22,7 +22,7 @@ tags: []
 <p>[code language="php"]<br />
 $string = 'O rato reu a ropa do rei de Roma';<br />
 $codificada = md5($string);<br />
-echo &quot;Resultado da codificação usando md5: &quot; . $codificada;<br />
+echo "Resultado da codificação usando md5: " . $codificada;<br />
 // 54cf74d1acdb4037ab956c269b63c8ac<br />
 [/code]</p>
 <h3>SHA1</h3>
@@ -31,7 +31,7 @@ echo &quot;Resultado da codificação usando md5: &quot; . $codificada;<br />
 <p>[code language="php"]<br />
 $string = 'O rato reu a ropa do rei de Roma';<br />
 $codificada = sha1($string);<br />
-echo &quot;Resultado da codificação usando sha1: &quot; . $codificada;<br />
+echo "Resultado da codificação usando sha1: " . $codificada;<br />
 // b186b709f7cf5a1d98d413379a66e511df8d59a4<br />
 [/code]</p>
 <h3>BASE64</h3>
@@ -40,12 +40,12 @@ echo &quot;Resultado da codificação usando sha1: &quot; . $codificada;<br />
 <p>[code language="php"]<br />
 $string = 'O rato reu a ropa do rei de Roma';</p>
 <p>$codificada = base64_encode($string);</p>
-<p>echo &quot;Resultado da codificação usando base64: &quot; . $codificada;<br />
+<p>echo "Resultado da codificação usando base64: " . $codificada;<br />
 // TyByYXRvIHJldSBhIHJvcGEgZG8gcmVpIGRlIFJvbWE=</p>
-<p>echo &quot;</p>
-<p>&quot;;</p>
+<p>echo "</p>
+<p>";</p>
 <p>$original = base64_decode($codificada);</p>
-<p>echo &quot;Resultado da decodificação usando base64: &quot; . $original;<br />
+<p>echo "Resultado da decodificação usando base64: " . $original;<br />
 // O rato reu a ropa do rei de Roma</p>
 <p>// Note que $original vai ser idêntica a $string<br />
 [/code]</p>

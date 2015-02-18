@@ -19,50 +19,50 @@ tags:
 <p>Aquela parte no fim onde tem "<strong>?q=</strong>" significa que o parâmetro "<strong>q</strong>" está sendo passado por método GET, caso contrário você não veria nada na URL.</p>
 <p>O que realmente importa é se o que foi buscado <strong>aparece na URL</strong> da pagina que mostra os resultados de busca, não importa como ou em qual posição... Faça uma busca aqui no blog e você verá que, o que você buscou, aparece na URL.</p>
 <p>Sem mais baboseiras, vamos direto ao ponto:</p>
-<p>Primeiro você precisa inserir um código HTML dentro do &lt;head&gt; do seu site que irá avisar os outros sites, sistemas e navegadores que o seu site tem um Open Search:</p>
-<p>[code language="html" light="true"]&lt;link rel=&quot;search&quot; type=&quot;application/opensearchdescription+xml&quot; href=&quot;http://www.meusite.com.br/opensearch.php&quot; title=&quot;Meu Site&quot; /&gt;[/code]</p>
+<p>Primeiro você precisa inserir um código HTML dentro do <head> do seu site que irá avisar os outros sites, sistemas e navegadores que o seu site tem um Open Search:</p>
+<p>[code language="html" light="true"]<link rel="search" type="application/opensearchdescription+xml" href="http://www.meusite.com.br/opensearch.php" title="Meu Site" />[/code]</p>
 <p>Perceba que o código está apontando pra um arquivo <strong>opensearch.php</strong>, o nome do arquivo não importa, mas o seu conteúdo sim:</p>
-<p>[code language="php"]&lt;?php<br />
+<p>[code language="php"]<?php<br />
 /**<br />
  * Gerador de busca 'open search' para sites<br />
  *<br />
- * @author Thiago Belem &lt;contato@thiagobelem.net&gt;<br />
+ * @author Thiago Belem <contato@thiagobelem.net><br />
  * @version 1.0<br />
  * @require PHP 5.1.3+<br />
  */</p>
 <p>$_CONFIG = array(<br />
-	'site_nome' =&gt;			'Meu Site',<br />
-	'site_nome_longo' =&gt;		'Meu Site Legal',<br />
-	'busca_descricao' =&gt;		'Busque no Meu Site',</p>
-<p>	'email_contato' =&gt;		'contato@meusite.com.br',</p>
-<p>	'endereco_busca' =&gt;		'http://meusite.com.br/busca.php?q={searchTerms}',</p>
-<p>	'imagem_icone' =&gt;		'http://meusite.com.br/open_search.jpg',<br />
-	'imagem_tamanho' =&gt;		array(16, 16),<br />
-	'imagem_mimetype' =&gt;		'image/jpg',</p>
-<p>	'conteudo_adulto' =&gt;		false,<br />
-	'linguagem' =&gt;			'pt-br'<br />
+	'site_nome' =>			'Meu Site',<br />
+	'site_nome_longo' =>		'Meu Site Legal',<br />
+	'busca_descricao' =>		'Busque no Meu Site',</p>
+<p>	'email_contato' =>		'contato@meusite.com.br',</p>
+<p>	'endereco_busca' =>		'http://meusite.com.br/busca.php?q={searchTerms}',</p>
+<p>	'imagem_icone' =>		'http://meusite.com.br/open_search.jpg',<br />
+	'imagem_tamanho' =>		array(16, 16),<br />
+	'imagem_mimetype' =>		'image/jpg',</p>
+<p>	'conteudo_adulto' =>		false,<br />
+	'linguagem' =>			'pt-br'<br />
 );</p>
 <p>// --------- Aqui você pode parar de editar :] ---------</p>
 <p>header('Content-Type: text/xml; charset=UTF-8');</p>
-<p>$xml = new SimpleXMLElement('&lt;OpenSearchDescription&gt;&lt;/OpenSearchDescription&gt;');<br />
-$xml-&gt;addAttribute('xmlns', 'http://a9.com/-/spec/opensearch/1.1/');</p>
-<p>$xml-&gt;addChild('ShortName', $_CONFIG['site_nome']);<br />
-$xml-&gt;addChild('LongName', $_CONFIG['site_nome_longo']);<br />
-$xml-&gt;addChild('Description', $_CONFIG['busca_descricao']);</p>
-<p>$xml-&gt;addChild('Contact', $_CONFIG['email_contato']);</p>
-<p>$url = $xml-&gt;addChild('Url');<br />
-$url-&gt;addAttribute('type', 'text/html');<br />
-$url-&gt;addAttribute('template', $_CONFIG['endereco_busca']);</p>
-<p>$imagem = $xml-&gt;addChild('Image', $_CONFIG['imagem_icone']);<br />
-$imagem-&gt;addAttribute('width', $_CONFIG['imagem_tamanho'][0]);<br />
-$imagem-&gt;addAttribute('height', $_CONFIG['imagem_tamanho'][1]);<br />
-$imagem-&gt;addAttribute('type', $_CONFIG['imagem_mimetype']);</p>
-<p>$xml-&gt;addChild('AdultContent', ($_CONFIG['conteudo_adulto'] ? 'true' : 'false'));<br />
-$xml-&gt;addChild('Language', $_CONFIG['linguagem']);</p>
-<p>$xml-&gt;addChild('SyndicationRight', 'open');</p>
-<p>echo $xml-&gt;asXml();<br />
+<p>$xml = new SimpleXMLElement('<OpenSearchDescription></OpenSearchDescription>');<br />
+$xml->addAttribute('xmlns', 'http://a9.com/-/spec/opensearch/1.1/');</p>
+<p>$xml->addChild('ShortName', $_CONFIG['site_nome']);<br />
+$xml->addChild('LongName', $_CONFIG['site_nome_longo']);<br />
+$xml->addChild('Description', $_CONFIG['busca_descricao']);</p>
+<p>$xml->addChild('Contact', $_CONFIG['email_contato']);</p>
+<p>$url = $xml->addChild('Url');<br />
+$url->addAttribute('type', 'text/html');<br />
+$url->addAttribute('template', $_CONFIG['endereco_busca']);</p>
+<p>$imagem = $xml->addChild('Image', $_CONFIG['imagem_icone']);<br />
+$imagem->addAttribute('width', $_CONFIG['imagem_tamanho'][0]);<br />
+$imagem->addAttribute('height', $_CONFIG['imagem_tamanho'][1]);<br />
+$imagem->addAttribute('type', $_CONFIG['imagem_mimetype']);</p>
+<p>$xml->addChild('AdultContent', ($_CONFIG['conteudo_adulto'] ? 'true' : 'false'));<br />
+$xml->addChild('Language', $_CONFIG['linguagem']);</p>
+<p>$xml->addChild('SyndicationRight', 'open');</p>
+<p>echo $xml->asXml();<br />
 exit;<br />
-?&gt;[/code]</p>
+?>[/code]</p>
 <p>Agora preste atenção no bloco de configuração no começo do arquivo!</p>
 <p>Dê atenção a parte que tem "endereco_busca"... É ali que você precisa colocar a URL da sua página de busca (resultado de busca) e colocar <strong>{searchTerms}</strong> no lugar que irão os parâmetros de busca... Vamos voltar ao exemplo da busca do Google:</p>
 <p>Se eu buscar por "Thiago Belem" a url de resultado vai ficar mais ou menos assim:<br />

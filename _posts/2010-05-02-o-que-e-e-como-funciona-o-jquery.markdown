@@ -24,21 +24,21 @@ tags:
 <h3>E onde eu uso isso?</h3>
 <p>Você pode usar o jQuery para fazer praticamente qualquer efeito legal, ou requisições em AJAX ou até mudanças na página após o seu carregamento.</p>
 <p>Para poder utlizar o jQuery você precisa sempre inserí-lo no seu HTML, você pode fazer o <a title="download do arquivo .js no site oficial" href="http://code.jquery.com/jquery-1.4.2.min.js">download do arquivo .js no site oficial</a> e chama-lo no seu HTML ou usar uma <a href="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">versão hospedada pelo Google</a>.</p>
-<p>Em ambos os casos você precisa inserir o script dentro do <code>&lt;head&gt;</code> do seu site ou logo antes do <strong>&lt;/body&gt;</strong>, veja a seguir a linha que insere o script pra cada um dos casos:</p>
+<p>Em ambos os casos você precisa inserir o script dentro do <code><head></code> do seu site ou logo antes do <strong></body></strong>, veja a seguir a linha que insere o script pra cada um dos casos:</p>
 <h4>Inserindo o jQuery local (salvo no seu site)</h4>
-<p>[code language="html" light="true"]&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.4.2.min.js&quot;&gt;&lt;/script&gt;[/code]</p>
+<p>[code language="html" light="true"]<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>[/code]</p>
 <h4>Inserindo o jQuery hospedado no Google</h4>
-<p>[code language="html" light="true"]&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;[/code]</p>
+<p>[code language="html" light="true"]<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>[/code]</p>
 <p>Vamos ver alguns exemplos básicos de como é fácil e simples usar essa ferramenta:</p>
 <h4>Efeito de foco em uma lista de imagens</h4>
 <p>Suponhamos que você tenha uma lista de imagens com o seguinte HTML:</p>
 <p>[code language="html"]<br />
-&lt;ul class=&quot;lista-imagens&quot;&gt;<br />
-	&lt;li&gt;&lt;img src=&quot;img/imagem1.jpg&quot; alt=&quot;Imagem 1&quot; width=&quot;200&quot; height=&quot;200&quot; /&gt;&lt;/li&gt;<br />
-	&lt;li&gt;&lt;img src=&quot;img/imagem2.jpg&quot; alt=&quot;Imagem 2&quot; width=&quot;200&quot; height=&quot;200&quot; /&gt;&lt;/li&gt;<br />
-	&lt;li&gt;&lt;img src=&quot;img/imagem3.jpg&quot; alt=&quot;Imagem 3&quot; width=&quot;200&quot; height=&quot;200&quot; /&gt;&lt;/li&gt;<br />
-	&lt;li&gt;&lt;img src=&quot;img/imagem4.jpg&quot; alt=&quot;Imagem 4&quot; width=&quot;200&quot; height=&quot;200&quot; /&gt;&lt;/li&gt;<br />
-&lt;/ul&gt;<br />
+<ul class="lista-imagens"><br />
+	<li><img src="img/imagem1.jpg" alt="Imagem 1" width="200" height="200" /></li><br />
+	<li><img src="img/imagem2.jpg" alt="Imagem 2" width="200" height="200" /></li><br />
+	<li><img src="img/imagem3.jpg" alt="Imagem 3" width="200" height="200" /></li><br />
+	<li><img src="img/imagem4.jpg" alt="Imagem 4" width="200" height="200" /></li><br />
+</ul><br />
 [/code]</p>
 <p>E você queira fazer com que, ao passar o mouse sobre uma das imagens, as outras se apagem um pouco, deixando apenas a que está com o cursor em cima, acesa.</p>
 <p>Antes de começar o seu script, você precisa criar um passo-a-passo de como o seu efeito irá funcionar, isso te ajuda a entender o jQuery de forma mais fácil:</p>
@@ -51,8 +51,8 @@ tags:
 <p>O jQuery funciona todo baseado em eventos, você determina um evento e, assim que ele for lançado, um certo script é executado.</p>
 <p>A maioria dos scripts de jQuery são executados após o carregamento do site, o que também é um evento. De forma geral, após o carregamento do site nós criamos gatilhos em alguns elementos (HTML) da página e assim que esses eventos forem ativados os efeitos vão acontecendo em paralo.</p>
 <p>Crie um arquivo <code>jquery.init.js</code> (o nome do arquivo não é obrigatório) e insira-o no seu site logo após o jQuery:</p>
-<p>[code language="html" light="true"]&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.4.2.min.js&quot;&gt;&lt;/script&gt;<br />
-&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.init.js&quot;&gt;&lt;/script&gt;[/code]</p>
+<p>[code language="html" light="true"]<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><br />
+<script type="text/javascript" src="js/jquery.init.js"></script>[/code]</p>
 <p>Agora dentro dele coloque o seguinte código:</p>
 <p>[code language="javascript"]<br />
 (function($) {</p>
@@ -67,7 +67,7 @@ tags:
 <p>	});</p>
 <p>})(jQuery);<br />
 [/code]</p>
-<p>Este evento é quase sempre necessário pois o jQuery trabalha com os elementos HTML da página, e se você inserir o script no <code>&lt;head&gt;</code> e sair rodando jQuery nos elementos, receberá mensagens de erro pois o jQuery não irá encontrar os elementos que ainda não foram carregados.</p>
+<p>Este evento é quase sempre necessário pois o jQuery trabalha com os elementos HTML da página, e se você inserir o script no <code><head></code> e sair rodando jQuery nos elementos, receberá mensagens de erro pois o jQuery não irá encontrar os elementos que ainda não foram carregados.</p>
 <p>Criado o nosso evento, podemos começar a desenvolver o nosso efeito de foco na lista de imagens, voltando a nossa lista de passos, começaremos pelo começo:</p>
 <blockquote><p>Ao passar o mouse em cima de uma imagem (evento que irá disparar o efeito)</p></blockquote>
 <p>Precisamos então, criar um um evento de hover nas imagens:</p>

@@ -8,7 +8,7 @@ categories:
 - Artigos
 tags: []
 ---
-<p>Não são apenas os designers que precisam de um programa bom (PS?) para trabalhar.. Nós programadores também gostamos de uma ferramenta eficiente que ajude na hora de escrever na unha aquele arquivo de 700 linhas cheios de ; { ( } . , &gt; e por ai vai...</p>
+<p>Não são apenas os designers que precisam de um programa bom (PS?) para trabalhar.. Nós programadores também gostamos de uma ferramenta eficiente que ajude na hora de escrever na unha aquele arquivo de 700 linhas cheios de ; { ( } . , > e por ai vai...</p>
 <p>Já usei vários editores gráficos (os famosos <acronym title="O acrônimo GUI, (do inglês Graphical User Interface) é um tipo de interface do utilizador que permite a interação com dispositivos digitais através de elementos gráficos como ícones e outros indicadores visuais, em contraste a interface de linha de comando.">GUIs</acronym>) e recentemente "descobri" um novo... Eu já conhecia ele mas nunca tinha usado para o PHP.</p>
 <p><a href="http://netbeans.org/" target="_blank"><img class="alignright size-full wp-image-370" title="NetBeans" src="http://blog.thiagobelem.net/arquivos/2009/03/netbeans_logo_ok-300x150.jpg" alt="NetBeans" width="191" height="90" /></a>Estamos falando do <strong>NetBeans</strong>... O famoso editor Java que briga (feio) com o Eclipse (outro editor que também tem suporte a PHP).</p>
 <p>Ele é um editor feito em Java, portanto é <em>cross-plataform</em>, ou seja: roda em qualquer sistema operacional com suporte a Java (leia-se<strong> todos</strong>).</p>

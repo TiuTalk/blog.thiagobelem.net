@@ -60,16 +60,16 @@ class cFileType {</p>
 <p>	public $image = array('jpg', 'png', 'gif');</p>
 <p>	public $doc = array('doc', 'docx');</p>
 <p>	function fImage($type) {<br />
-		return in_array($type, $this-&gt;image);<br />
+		return in_array($type, $this->image);<br />
 	}</p>
 <p>	function fDoc($type) {<br />
-		return in_array($type, $this-&gt;doc);<br />
+		return in_array($type, $this->doc);<br />
 	}</p>
 <p>}[/code]</p>
 <h3>Atributos e métodos estáticos</h3>
 <p>Agora sim está parecendo uma classe normal, com atributos e métodos... Aí percebi que de orientada à OBJETOS essa classe não tem nada! Não estamos trabalhando com objetos.. O uso atual dessa classe seria assim:</p>
 <p>[code language="php"]$cFileType = new cFileType();<br />
-if ($cFileType-&gt;fImage('jpg')) {<br />
+if ($cFileType->fImage('jpg')) {<br />
 	// É uma imagem válida<br />
 }[/code]</p>
 <p>Eu não trabalho o objeto <code>$cFileType</code>, apenas instancio e utilizo um único modo... então vamos economizar um pouco de memória, transformando os métodos em métodos estáticos:</p>

@@ -29,19 +29,19 @@ INDEX ( `ativa` )<br />
 <p>Esta é uma estrutura simples de uma tabela de notícias, e você vai precisar adaptar o script para a sua tabela caso queira usar uma pronta.</p>
 <p>Vamos ao formulário de busca:</p>
 <p>[code language="html"]<br />
-&lt;form method=&quot;GET&quot; action=&quot;http://www.meusite.com.br/busca.php&quot;&gt;<br />
-&lt;fieldset&gt;<br />
-&lt;label for=&quot;consulta&quot;&gt;Buscar:&lt;/label&gt;<br />
-&lt;input type=&quot;text&quot; id=&quot;consulta&quot; name=&quot;consulta&quot; maxlength=&quot;255&quot; /&gt;<br />
-&lt;input type=&quot;submit&quot; value=&quot;OK&quot; /&gt;<br />
-&lt;/fieldset&gt;<br />
-&lt;/form&gt;<br />
+<form method="GET" action="http://www.meusite.com.br/busca.php"><br />
+<fieldset><br />
+<label for="consulta">Buscar:</label><br />
+<input type="text" id="consulta" name="consulta" maxlength="255" /><br />
+<input type="submit" value="OK" /><br />
+</fieldset><br />
+</form><br />
 [/code]</p>
 <p>Não se esqueça de alterar o action para o endereço certo do seu site... Se você preferir, pode definir o action usando caminho relativo, não há diferença.</p>
 <p>Passaremos a busca por método GET para ficar mais parecido com o Google. :)</p>
 <p>E agora o arquivo (<span style="color: #ff6600;"><strong>busca.php</strong></span>) que recebe os dados do formulário, faz a conexão ao banco de dados, processa a busca e exibe o resultado (sem paginação):</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>// Conexão com o MySQL<br />
 // ========================<br />
 $_BS['MySQL']['servidor'] = 'localhost';<br />
@@ -54,7 +54,7 @@ mysql_select_db($_BS['MySQL']['banco']);<br />
 <p>// Verifica se foi feita alguma busca<br />
 // Caso contrario, redireciona o visitante<br />
 if (!isset($_GET['consulta'])) {<br />
-header(&quot;Location: http://www.meusite.com.br/&quot;);<br />
+header("Location: http://www.meusite.com.br/");<br />
 exit;<br />
 }<br />
 // Se houve busca, continue o script:</p>
@@ -64,31 +64,31 @@ $busca = $_GET['consulta'];<br />
 $busca = mysql_real_escape_string($busca);</p>
 <p>// ============================================</p>
 <p>// Monta outra consulta MySQL para a busca<br />
-$sql = &quot;SELECT * FROM `noticias` WHERE (`ativa` = 1) AND ((`titulo` LIKE '%&quot;.$busca.&quot;%') OR ('%&quot;.$busca.&quot;%')) ORDER BY `cadastro` DESC&quot;;<br />
+$sql = "SELECT * FROM `noticias` WHERE (`ativa` = 1) AND ((`titulo` LIKE '%".$busca."%') OR ('%".$busca."%')) ORDER BY `cadastro` DESC";<br />
 // Executa a consulta<br />
 $query = mysql_query($sql);</p>
 <p>// ============================================</p>
 <p>// Começa a exibição dos resultados<br />
-echo &quot;&lt;ul&gt;&quot;;<br />
+echo "<ul>";<br />
 while ($resultado = mysql_fetch_assoc($query)) {<br />
 $titulo = $resultado['titulo'];<br />
 $texto = $resultado['texto'];<br />
 $link = 'http://www.meusite.com.br/noticia.php?id=' . $resultado['id'];<br />
-echo &quot;&lt;li&gt;&quot;;<br />
-echo '&lt;a href=&quot;'.$link.'&quot; title=&quot;'.$titulo.'&quot;&gt;'.$titulo.'&lt;/a&gt;&lt;br /&gt;';<br />
+echo "<li>";<br />
+echo '<a href="'.$link.'" title="'.$titulo.'">'.$titulo.'</a><br />';<br />
 echo date('d/m/Y H:i', strtotime($resultado['cadastro']));<br />
-echo '&lt;p&gt;'.$texto.'&lt;/p&gt;';<br />
-echo '&lt;a href=&quot;'.$link.'&quot; title=&quot;'.$titulo.'&quot;&gt;'.$link.'&lt;/a&gt;';<br />
-echo &quot;&lt;/li&gt;&quot;;<br />
+echo '<p>'.$texto.'</p>';<br />
+echo '<a href="'.$link.'" title="'.$titulo.'">'.$link.'</a>';<br />
+echo "</li>";<br />
 }<br />
-echo &quot;&lt;/ul&gt;&quot;;<br />
-?&gt;<br />
+echo "</ul>";<br />
+?><br />
 [/code]</p>
 <p>Não se esqueça de mudar, dentro da exibição dos resultados, como é definida a variável $link para o formato que o seu site usa ;)</p>
 <p><strong>-----</strong></p>
 <p>E pra quem quiser o mesmo script com paginação:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>// Configuração do script<br />
 // ========================<br />
 $_BS['PorPagina'] = 20; // Número de registros por página</p>
@@ -104,7 +104,7 @@ mysql_select_db($_BS['MySQL']['banco']);<br />
 <p>// Verifica se foi feita alguma busca<br />
 // Caso contrario, redireciona o visitante<br />
 if (!isset($_GET['consulta'])) {<br />
-header(&quot;Location: http://www.meusite.com.br/&quot;);<br />
+header("Location: http://www.meusite.com.br/");<br />
 exit;<br />
 }<br />
 // Se houve busca, continue o script:</p>
@@ -114,13 +114,13 @@ $busca = $_GET['consulta'];<br />
 $busca = mysql_real_escape_string($busca);</p>
 <p>// ============================================</p>
 <p>// Monta a consulta MySQL para saber quantos registros serão encontrados<br />
-$sql = &quot;SELECT COUNT(*) AS total FROM `noticias` WHERE (`ativa` = 1) AND ((`titulo` LIKE '%&quot;.$busca.&quot;%') OR ('%&quot;.$busca.&quot;%'))&quot;;<br />
+$sql = "SELECT COUNT(*) AS total FROM `noticias` WHERE (`ativa` = 1) AND ((`titulo` LIKE '%".$busca."%') OR ('%".$busca."%'))";<br />
 // Executa a consulta<br />
 $query = mysql_query($sql);<br />
 // Salva o valor da coluna 'total', do primeiro registro encontrado pela consulta<br />
 $total = mysql_result($query, 0, 'total');<br />
 // Calcula o máximo de paginas<br />
-$paginas =  (($total % $_BS['PorPagina']) &gt; 0) ? (int)($total / $_BS['PorPagina']) + 1 : ($total / $_BS['PorPagina']);</p>
+$paginas =  (($total % $_BS['PorPagina']) > 0) ? (int)($total / $_BS['PorPagina']) + 1 : ($total / $_BS['PorPagina']);</p>
 <p>// ============================================</p>
 <p>// Sistema simples de paginação, verifica se há algum argumento 'pagina' na URL<br />
 if (isset($_GET['pagina'])) {<br />
@@ -132,34 +132,34 @@ $pagina = max(min($paginas, $pagina), 1);<br />
 $inicio = ($pagina - 1) * $_BS['PorPagina'];</p>
 <p>// ============================================</p>
 <p>// Monta outra consulta MySQL, agora a que fará a busca com paginação<br />
-$sql = &quot;SELECT * FROM `noticias` WHERE (`ativa` = 1) AND ((`titulo` LIKE '%&quot;.$busca.&quot;%') OR ('%&quot;.$busca.&quot;%')) ORDER BY `cadastro` DESC LIMIT &quot;.$inicio.&quot;, &quot;.$_BS['PorPagina'];<br />
+$sql = "SELECT * FROM `noticias` WHERE (`ativa` = 1) AND ((`titulo` LIKE '%".$busca."%') OR ('%".$busca."%')) ORDER BY `cadastro` DESC LIMIT ".$inicio.", ".$_BS['PorPagina'];<br />
 // Executa a consulta<br />
 $query = mysql_query($sql);</p>
 <p>// ============================================</p>
 <p>// Começa a exibição dos resultados<br />
-echo &quot;&lt;p&gt;Resultados &quot;.min($total, ($inicio + 1)).&quot; - &quot;.min($total, ($inicio + $_BS['PorPagina'])).&quot; de &quot;.$total.&quot; resultados encontrados para '&quot;.$_GET['consulta'].&quot;'&lt;/p&gt;&quot;;<br />
-// &lt;p&gt;Resultados 1 - 20 de 138 resultados encontrados para 'minha busca'&lt;/p&gt;</p>
-<p>echo &quot;&lt;ul&gt;&quot;;<br />
+echo "<p>Resultados ".min($total, ($inicio + 1))." - ".min($total, ($inicio + $_BS['PorPagina']))." de ".$total." resultados encontrados para '".$_GET['consulta']."'</p>";<br />
+// <p>Resultados 1 - 20 de 138 resultados encontrados para 'minha busca'</p></p>
+<p>echo "<ul>";<br />
 while ($resultado = mysql_fetch_assoc($query)) {<br />
 $titulo = $resultado['titulo'];<br />
 $texto = $resultado['texto'];<br />
 $link = 'http://www.meusite.com.br/noticia.php?id=' . $resultado['id'];<br />
-echo &quot;&lt;li&gt;&quot;;<br />
-echo '&lt;a href=&quot;'.$link.'&quot; title=&quot;'.$titulo.'&quot;&gt;'.$titulo.'&lt;/a&gt;&lt;br /&gt;';<br />
+echo "<li>";<br />
+echo '<a href="'.$link.'" title="'.$titulo.'">'.$titulo.'</a><br />';<br />
 echo date('d/m/Y H:i', strtotime($resultado['cadastro']));<br />
-echo '&lt;p&gt;'.$texto.'&lt;/p&gt;';<br />
-echo '&lt;a href=&quot;'.$link.'&quot; title=&quot;'.$titulo.'&quot;&gt;'.$link.'&lt;/a&gt;';<br />
-echo &quot;&lt;/li&gt;&quot;;<br />
+echo '<p>'.$texto.'</p>';<br />
+echo '<a href="'.$link.'" title="'.$titulo.'">'.$link.'</a>';<br />
+echo "</li>";<br />
 }<br />
-echo &quot;&lt;/ul&gt;&quot;;</p>
+echo "</ul>";</p>
 <p>// ============================================</p>
 <p>// Começa a exibição dos paginadores<br />
-if ($total &gt; 0) {<br />
-for($n = 1; $n &lt;= $paginas; $n++) {<br />
-echo '&lt;a href=&quot;?consulta='.$_GET['consulta'].'&amp;pagina='.$n.'&quot;&gt;'.$n.'&lt;/a&gt;&amp;nbsp;&amp;nbsp;';<br />
+if ($total > 0) {<br />
+for($n = 1; $n <= $paginas; $n++) {<br />
+echo '<a href="?consulta='.$_GET['consulta'].'&pagina='.$n.'">'.$n.'</a>&nbsp;&nbsp;';<br />
 }<br />
 }</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Reconheço que o script poderia ser mais simples, mas seu uso ficaria muito limitado (e o código ficaria enorme)... E com paginação fica muito mais legal, além de ser o que todo mundo acaba procurando.</p>
 <p>---</p>

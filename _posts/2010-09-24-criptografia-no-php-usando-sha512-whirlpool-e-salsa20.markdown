@@ -24,11 +24,11 @@ tags:
 <h3>SHA-512</h3>
 <p>O <a href="http://en.wikipedia.org/wiki/SHA-2">SHA-512</a> é a versão melhorada do SHA-265, que por sua vez é uma versão muito melhor do SHA-1.</p>
 <p>Para encriptar uma string usando <strong>SHA-512</strong>, no PHP, você pode fazer assim:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>$string = 'O rato reu a ropa do rei de Roma';<br />
 $codificada = hash('sha512', $string);</p>
-<p>echo &quot;Resultado da codificação usando sha512: &quot; . $codificada;</p>
-<p>?&gt;[/code]</p>
+<p>echo "Resultado da codificação usando sha512: " . $codificada;</p>
+<p>?>[/code]</p>
 <p>Ao executar o código acima você verá uma string de 128 caracteres, é essa string que você deve salvar no banco de dados para manter a senha realmente segura.</p>
 <p>O resultado dessa encriptação com SHA-512 é algo assim (quebrei em três linhas para ficar "legível):</p>
 <blockquote><p>3b1efb1934a56460904a2ae4782490d06057985a1524<br />
@@ -37,11 +37,11 @@ $codificada = hash('sha512', $string);</p>
 <h3>Whirlpool</h3>
 <p>O <a href="http://en.wikipedia.org/wiki/Whirlpool_(cryptography)">Whirlpool</a> é um pouco mais lento que o SHA-512 e, conseqüentemente, mais "entrópico", ou seja: mais seguro.</p>
 <p>Para encriptar uma string usando <strong>Whirlpool</strong>, no PHP, você pode fazer assim:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>$string = 'O rato reu a ropa do rei de Roma';<br />
 $codificada = hash('whirlpool', $string);</p>
-<p>echo &quot;Resultado da codificação usando whirlpool: &quot; . $codificada;</p>
-<p>?&gt;[/code]</p>
+<p>echo "Resultado da codificação usando whirlpool: " . $codificada;</p>
+<p>?>[/code]</p>
 <p>O resultado desse <strong>Whirlpool</strong> será algo assim:</p>
 <blockquote><p>f13697ecb3e10789449ed839f224376b633eadbe3739<br />
 c07c7843bf91a86f4374d3697924e3c396cfeb777b56<br />
@@ -49,11 +49,11 @@ d38700c41e032c21c4fce52d5f59024969536c74</p></blockquote>
 <h3>Salsa20</h3>
 <p>E por fim, mas tão poderoso quanto, o <a href="http://en.wikipedia.org/wiki/Salsa20">Salsa20</a> é outro algoritmo de encriptação que irá gerar uma string de 128 caracteres. O Salsa20 foi criado para encriptação de stremings/transmissões, mas pode ser usado com strings simples também.</p>
 <p>Para encriptar uma string usando <strong>Salsa20</strong>, no PHP, você pode fazer assim:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>$string = 'O rato reu a ropa do rei de Roma';<br />
 $codificada = hash('salsa20', $string);</p>
-<p>echo &quot;Resultado da codificação usando salsa20: &quot; . $codificada;</p>
-<p>?&gt;[/code]</p>
+<p>echo "Resultado da codificação usando salsa20: " . $codificada;</p>
+<p>?>[/code]</p>
 <p>O resultado desse <strong>Salsa20</strong> será algo assim:</p>
 <blockquote><p>56a296fad140971d0fcd1577bd0c66348e69a835e9f4<br />
 56857a0e9f43e8fe540ad4488099875daaf8741df89f9<br />
@@ -63,12 +63,12 @@ $codificada = hash('salsa20', $string);</p>
 <h3>Encontrando registros criptografados no banco de dados</h3>
 <p>Suponhamos que você queira encontrar um usuário no seu banco de dados comparando a senha digitada (no formulário de login) com a senha armazenada utilizando o método <strong>Whirlpool</strong>.</p>
 <p>O código PHP para montar a consulta SQL seria mais ou menos assim:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>$usuario = 'thiago'; // Nome do usuario (digitado pelo usuario)<br />
 $senha = '12345'; // Senha (digitada pelo usuario)</p>
 <p>// Encripta a senha utilizando Whirlpool<br />
 $whirlpool = hash('whirlpool', $senha);</p>
-<p>$sql = &quot;SELECT * FROM `usuarios` WHERE `usuario` = '{$usuario}' AND BINARY `senha` = '{$whirlpool}'&quot;;</p>
-<p>?&gt;[/code]</p>
+<p>$sql = "SELECT * FROM `usuarios` WHERE `usuario` = '{$usuario}' AND BINARY `senha` = '{$whirlpool}'";</p>
+<p>?>[/code]</p>
 <p>--</p>
 <p>Espero que tenha gostado! :)</p>

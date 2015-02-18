@@ -36,10 +36,10 @@ ENGINE = MyISAM;<br />
 <p>Vamos ao que interessa!</p>
 <p>Antes de tudo, precisamos criar o nosso arquivo, vamos seguir algumas boas páticas de programação e vamos dar o nome de "<strong style="background: gray; color: orange">usuario.class.php</strong>". Criado o arquivo vazio, vamos começar a construir nossa classe:</p>
 <p>[code language="php"]<br />
-&lt;?php<br />
+<?php<br />
 class Usuario {</p>
 <p>}<br />
-?&gt;<br />
+?><br />
 [/code]</p>
 <p>Agora vamos começar a inserir algumas propriedades (variáveis) que serão usadas pela classe ao longo do projeto...</p>
 <p>[code language="php" firstline="4"]<br />
@@ -53,11 +53,11 @@ class Usuario {</p>
 	var $tabelaUsuarios = 'usuarios';</p>
 <p>	/**<br />
 	 * Nomes dos campos onde ficam o usuário e a senha de cada usuário<br />
-	 * Formato: tipo =&gt; nome_do_campo<br />
+	 * Formato: tipo => nome_do_campo<br />
 	 */<br />
 	var $campos = array(<br />
-		'usuario' =&gt; 'usuario',<br />
-		'senha' =&gt; 'senha'<br />
+		'usuario' => 'usuario',<br />
+		'senha' => 'senha'<br />
 	);<br />
 [/code]</p>
 <p>São com essas propriedades da classe que você vai poder customizar a classe para ela funcionar no seu site.. Cada uma esta devidamente comentada e explicada, é só alterar da forma que você necessitar.</p>
@@ -92,14 +92,14 @@ Caso você use outro tipo de encriptação, você vai precisar modificar esse m�
 	 * @return boolean - Se o usuário existe ou não<br />
 	 */<br />
 	function validaUsuario($usuario, $senha) {<br />
-		$senha = $this-&gt;__codificaSenha($senha);</p>
+		$senha = $this->__codificaSenha($senha);</p>
 <p>		// Procura por usuários com o mesmo usuário e senha<br />
-		$sql = &quot;SELECT COUNT(*)<br />
-				FROM `{$this-&gt;bancoDeDados}`.`{$this-&gt;tabelaUsuarios}`<br />
+		$sql = "SELECT COUNT(*)<br />
+				FROM `{$this->bancoDeDados}`.`{$this->tabelaUsuarios}`<br />
 				WHERE<br />
-					`{$this-&gt;campos['usuario']}` = '{$usuario}'<br />
+					`{$this->campos['usuario']}` = '{$usuario}'<br />
 					AND<br />
-					`{$this-&gt;campos['senha']}` = '{$senha}'&quot;;<br />
+					`{$this->campos['senha']}` = '{$senha}'";<br />
 		$query = mysql_query($sql);<br />
 		if ($query) {<br />
 			$total = mysql_result($query, 0);<br />

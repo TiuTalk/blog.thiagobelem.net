@@ -18,10 +18,10 @@ tags: []
 <p>Usarei como exemplo um formulário de contato que é o mais comum por ai... Vamos ao passo-a-passo:</p>
 <p>Faça o download da última versão do <strong>jQuery </strong>no site: <a href="http://jquery.com/" target="_blank">http://jquery.com/<br />
 </a>Faça o download do plugin <strong>Validation </strong>no site: <a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" target="_blank">http://bassistance.de/jquery-plugins/jquery-plugin-validation/</a></p>
-<p>Insira-os dentro do &lt;head&gt; do seu site, da seguinte forma:</p>
+<p>Insira-os dentro do <head> do seu site, da seguinte forma:</p>
 <p>[code language="html"]<br />
-&lt;script src=&quot;jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;<br />
- &lt;script src=&quot;jquery.validate.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;<br />
+<script src="jquery.js" type="text/javascript"></script><br />
+ <script src="jquery.validate.js" type="text/javascript"></script><br />
 [/code]</p>
 <p>Após isso, criamos um pequeno bloco de CSS para estilizar as mensagens de erro:</p>
 <p>[code language="css"]<br />
@@ -35,7 +35,7 @@ em { font-weight: bold; padding-right: 1em; vertical-align: top; }<br />
 <p>Ainda dentro do <em><strong>head</strong></em>, depois de inserir o <strong>jQuery</strong> e o estilo das mensagens de erro, precisaremos adicionar um bloco de JavaScript contendo instruções para a validação:</p>
 <p>[code language="javascript"]<br />
 $(document).ready( function() {<br />
-	$(&quot;#formularioContato&quot;).validate({<br />
+	$("#formularioContato").validate({<br />
 		// Define as regras<br />
 		rules:{<br />
 			campoNome:{<br />
@@ -54,16 +54,16 @@ $(document).ready( function() {<br />
 		// Define as mensagens de erro para cada regra<br />
 		messages:{<br />
 			campoNome:{<br />
-				required: &quot;Digite o seu nome&quot;,<br />
-				minLength: &quot;O seu nome deve conter, no mínimo, 2 caracteres&quot;<br />
+				required: "Digite o seu nome",<br />
+				minLength: "O seu nome deve conter, no mínimo, 2 caracteres"<br />
 			},<br />
 			campoEmail:{<br />
-				required: &quot;Digite o seu e-mail para contato&quot;,<br />
-				email: &quot;Digite um e-mail válido&quot;<br />
+				required: "Digite o seu e-mail para contato",<br />
+				email: "Digite um e-mail válido"<br />
 			},<br />
 			campoMensagem:{<br />
-				required: &quot;Digite a sua mensagem&quot;,<br />
-				minLength: &quot;A sua mensagem deve conter, no mínimo, 2 caracteres&quot;<br />
+				required: "Digite a sua mensagem",<br />
+				minLength: "A sua mensagem deve conter, no mínimo, 2 caracteres"<br />
 			}<br />
 		}<br />
 	});<br />
@@ -71,17 +71,17 @@ $(document).ready( function() {<br />
 [/code]</p>
 <p>Por fim, inserimos o HTML do formulário na pagina:</p>
 <p>[code language="html"]<br />
-&lt;form id=&quot;formularioContato&quot; method=&quot;post&quot;&gt;</p>
-<p>	&lt;label for=&quot;nome&quot;&gt;Nome&lt;/label&gt;<br />
-	&lt;input id=&quot;nome&quot; name=&quot;campoNome&quot; type=&quot;text&quot; /&gt;</p>
-<p>	&lt;label for=&quot;email&quot;&gt;E-mail&lt;/label&gt;<br />
-	&lt;input id=&quot;email&quot; name=&quot;campoEmail&quot; type=&quot;text&quot; /&gt;</p>
-<p>	&lt;label for=&quot;mensagem&quot;&gt;Mensagem&lt;/label&gt;<br />
-	&lt;textarea id=&quot;mensagem&quot; name=&quot;campoMensagem&quot;&gt;&lt;/textarea&gt;</p>
-<p>	&lt;input class=&quot;submit&quot; type=&quot;submit&quot; value=&quot;Enviar&quot; /&gt;</p>
-<p>&lt;/form&gt;<br />
+<form id="formularioContato" method="post"></p>
+<p>	<label for="nome">Nome</label><br />
+	<input id="nome" name="campoNome" type="text" /></p>
+<p>	<label for="email">E-mail</label><br />
+	<input id="email" name="campoEmail" type="text" /></p>
+<p>	<label for="mensagem">Mensagem</label><br />
+	<textarea id="mensagem" name="campoMensagem"></textarea></p>
+<p>	<input class="submit" type="submit" value="Enviar" /></p>
+<p></form><br />
 [/code]</p>
-<p>Viram como é fácil? O arquivo final ficou <a href="http://blog.thiagobelem.net/exemplo2/" target="_blank">desta</a> forma. Se você preferir pode copiar todo esse código JavaScript para um arquivo .js e incluí-lo no &lt;head&gt; do seu site da mesma forma que fizemos no começo da aula.</p>
+<p>Viram como é fácil? O arquivo final ficou <a href="http://blog.thiagobelem.net/exemplo2/" target="_blank">desta</a> forma. Se você preferir pode copiar todo esse código JavaScript para um arquivo .js e incluí-lo no <head> do seu site da mesma forma que fizemos no começo da aula.</p>
 <p>Coloquei alguns comentários na parte das instruções de validação para facilitar o entendimento.</p>
 <p>Com isso você faz uma validação <em>client-side</em> que ajuda a evitar dados inválidos e campos vazios. Mas preciso lembrar que, por ser <em>client-side</em>, essa validação acontece apenas no computador do visitante e o mesmo pode desativar o JavaScript e a validação toda não irá funcionar. Então não se esqueça de fazer a mesma validação dentro do PHP quando receber os dados.</p>
 <p>Veja o exemplo desta aula funcionando:<br />

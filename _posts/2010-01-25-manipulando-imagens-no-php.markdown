@@ -55,12 +55,12 @@ $img = WideImage::loadFromFile('imagens/minha_foto.jpg');<br />
 </ul>
 <p>[code language="php"]<br />
 // Redimensiona a imagem para caber em um quadrado de 200x200px<br />
-$img = $img-&gt;resize(200, 200, 'inside');<br />
+$img = $img->resize(200, 200, 'inside');<br />
 [/code]</p>
 <p>Isso fará com que a imagem seja redimensionada para caber dentro de um quadrado de 200x200 píxels... A imagem final poderá ter 200x200, 100x200 ou 200x100 pois todos esses tamanhos estão menores ou iguais a 200x200 píxels.</p>
 <p>[code language="php"]<br />
 // Redimensiona a imagem para preencher um quadrado de 350x200px<br />
-$img = $img-&gt;resize(350, 200, 'outside');<br />
+$img = $img->resize(350, 200, 'outside');<br />
 [/code]</p>
 <p>Isso fará com que a imagem seja redimensionada para preencher um quadrado de 350x200 píxels... Se as proporcões da imagem forem maiores que essa proporção de 350x200 a imagem final será maior que o 350x200.<br />
 Suponhamos que imagem fosse um quadrado de 500x500, depois de redimensionada ela terá 350x350, pois ela está preenchendo o quadrado de 350x200 mas precisa manter a sua proporção original de 1:1... Se o tipo de redimensionamento fosse "<strong>fill</strong>" a imagem final teria sempre 350x200, mesmo que ela fosse menor antes, pois o <strong>fill</strong> distorce a imagem quando necessário.</p>
@@ -77,46 +77,46 @@ Suponhamos que imagem fosse um quadrado de 500x500, depois de redimensionada ela
 <p>Vamos a alguns exemplos de crop:</p>
 <p>[code language="php"]<br />
 // Corta um quadrado de 150x150px no canto superior direito da imagem<br />
-$img = $img-&gt;crop(0, 0, 150, 150);<br />
+$img = $img->crop(0, 0, 150, 150);<br />
 [/code]</p>
 <p>Mas ninguém quer cortar um pedaço do canto superior direito da imagem... Geralmente precisamos fazer um corte no meio da imagem... É aí que o crop() mostra seu poder:</p>
 <p>[code language="php"]<br />
 // Corta um quadrado de 100x80px no meio da imagem<br />
-$img = $img-&gt;crop('50% - 50', '50% - 40', 100, 80);<br />
+$img = $img->crop('50% - 50', '50% - 40', 100, 80);<br />
 [/code]</p>
 <p>Veja que interessante: nos dois primeiros parâmetros usamos um posicionamento diferente... dizemos que o crop irá para a metade da imagem (50%) e voltará 50px para lagura e 40px para a altura e depois irá fazer um corte de 100x80... Genial não é? Isso fará um corte de 100x80 no meio da imagem.</p>
 <p>E se a imagem for muito grande? Você pode acabar pegando um pedaço da imagem que não serve de nada... É aí que você aprende a usar o resize() em conjunto com o crop():</p>
 <p>[code language="php"]<br />
 // Redimensiona a imagem para preencher uma area de 100x80<br />
-$img = $img-&gt;resize(100, 80, 'outside');<br />
+$img = $img->resize(100, 80, 'outside');<br />
 // Corta um quadrado de 100x80px no meio da imagem<br />
-$img = $img-&gt;crop('50% - 50', '50% - 40', 100, 80);<br />
+$img = $img->crop('50% - 50', '50% - 40', 100, 80);<br />
 [/code]</p>
 <p>Se você gostar, também pode fazer tudo de uma vez, o que é bem mais interessante:<br />
 [code language="php"]<br />
 // Redimensiona e corta a imagem<br />
-$img = $img-&gt;resize(100, 80, 'outside')-&gt;crop('50% - 50', '50% - 40', 100, 80);<br />
+$img = $img->resize(100, 80, 'outside')->crop('50% - 50', '50% - 40', 100, 80);<br />
 [/code]</p>
 <p>
 <h4>Salvando Imagens</h4>
 <p>Você já carregou sua imagem, redimensionou e cropou ela.. Agora só falta tirar ela da memória e salvar ela em um arquivo, substituindo (ou não) o anterior... E é assim que você faz isso:<br />
 [code language="php"]<br />
 // Salva a imagem em um novo arquivo<br />
-$img-&gt;saveToFile('/imagens/minha_foto_menor.jpg');<br />
+$img->saveToFile('/imagens/minha_foto_menor.jpg');<br />
 [/code]<br />
 Quando a imagem for salva em JPG você também pode definir a qualidade da imagem, diminuindo assim o tamanho do arquivo:<br />
 [code language="php"]<br />
 // Salva a imagem em um novo arquivo com 80% de qualidade<br />
-$img-&gt;saveToFile('/imagens/minha_foto_menor.jpg', null, 80);<br />
+$img->saveToFile('/imagens/minha_foto_menor.jpg', null, 80);<br />
 [/code]<br />
 <br />
 <h4>Enviando Imagens para o Navegador</h4>
 <p>Você também pode enviar imagens diretamente para o navegador, isso funciona bem quando você quer manipular uma imagem e exibí-la sem precisar salvá-la em um arquivo novo... É só tirar ela da memória e jogar para o navegador, assim:<br />
 [code language="php"]<br />
 // Define o tipo de cabeçalho para exibir a imagem corretamente<br />
-header(&quot;Content-type: image/jpeg&quot;);</p>
+header("Content-type: image/jpeg");</p>
 <p>// Envia a imagem para o navegador com 80% de qualidade<br />
-$img-&gt;asString('jpg', 80);<br />
+$img->asString('jpg', 80);<br />
 [/code]<br />
 <br />
 <h4>Outros Exemplos</h4>
@@ -126,15 +126,15 @@ $arquivo = '/imagens/fotos/tiutalk.jpg';</p>
 <p>// Carrega a imagem<br />
 $img = WideImage::load($arquivo);</p>
 <p>// Redimensiona a imagem para um quadrado de 100x100<br />
-$img = $img-&gt;resize(100, 100, 'outside');</p>
+$img = $img->resize(100, 100, 'outside');</p>
 <p>// Corta um quadrado de 100x100 no centro da imagem<br />
-$img = $img-&gt;crop('50% - 50', '50% - 50', 100, 100);</p>
+$img = $img->crop('50% - 50', '50% - 50', 100, 100);</p>
 <p>// Salva a imagem substituindo a antiga<br />
-$img-&gt;saveToFile($arquivo);</p>
+$img->saveToFile($arquivo);</p>
 <p>// Limpa a imagem da memória<br />
-$img-&gt;destroy();<br />
+$img->destroy();<br />
 [/code]</p>
 <p>E veja uma versão onde fazemos isso tudo numa linha:</p>
 <p>[code language="php"]$arquivo = '/imagens/fotos/tiutalk.jpg';</p>
-<p>WideImage::load($arquivo)-&gt;resize(100, 100, 'outside')-&gt;crop('50% - 50', '50% - 50', 100, 100)-&gt;saveToFile($arquivo)-&gt;destroy();[/code]</p>
+<p>WideImage::load($arquivo)->resize(100, 100, 'outside')->crop('50% - 50', '50% - 50', 100, 100)->saveToFile($arquivo)->destroy();[/code]</p>
 <p>E aí? Gostaram? :)</p>

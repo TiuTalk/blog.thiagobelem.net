@@ -18,10 +18,10 @@ tags:
 <p>Para poder usar o cURL no seu site/sistema você precisa que a biblioteca esteja instalada e habilitada, então vamos a um tutorial rápido de como fazer isso.. Se você já sabe que tem o cURL instalado no seu servidor, é só pular para o capitulo "Uso básico do cURL".</p>
 <h3>Verificando se o cURL está instalado</h3>
 <p>Recomendo que antes de sair tentando instalar a cURL, verifique se ela já não está habilitada no seu servidor... Crie um arquivo .php com o seguinte conteúdo:<br />
-[code lang="php"]&lt;?php<br />
+[code lang="php"]<?php<br />
 	// Exibe informações relativas ao PHP e suas extensões<br />
 	phpinfo();<br />
-?&gt;[/code]<br />
+?>[/code]<br />
 Acesse esse arquivo pelo seu navegador e procure por "cURl support" se encontrar algo significa que você tem o cURL instalado e pode pular o próximo capitulo.</p>
 <h3>Instalando o cURL</h3>
 <p>Para instalá-lo é bem simples, basta acessar o seu arquivo php.ini que geralmente fica dentro da pasta php do seu servidor (sim, você precisa ter acesso a esse arquivo) e procure por essa linha:<br />
@@ -29,7 +29,7 @@ Acesse esse arquivo pelo seu navegador e procure por "cURl support" se encontrar
 Agora remova o ponto-e-vírgula (;) do começo da linha, reinicie o seu servidor e voila! Você acabou de instalar o cURL no seu sistema. ;)</p>
 <h3>Uso básico do cURL</h3>
 <p>Bom, primeiro de tudo, vamos o script mais simples que você pode usar para pegar a resposta de um site (que nesse caso, é o arquivo robots.txt aqui do blog):<br />
-[code lang="php"]&lt;?php<br />
+[code lang="php"]<?php<br />
 	// Inicia o cURL acessando uma URL<br />
 	$cURL = curl_init('http://blog.thiagobelem.net/robots.txt');<br />
 	// Define a opção que diz que você quer receber o resultado encontrado<br />
@@ -38,12 +38,12 @@ Agora remova o ponto-e-vírgula (;) do começo da linha, reinicie o seu servidor
 	$resultado = curl_exec($cURL);<br />
 	// Encerra a conexão com o site<br />
 	curl_close($cURL);<br />
-?&gt;[/code]<br />
+?>[/code]<br />
 Depois de executar esse script, o conteúdo da variável $resultado será exatamente o conteúdo do meu arquivo robots.txt. Você pode usar esse método para pegar o HTML resultado de qualquer site e etc.</p>
 <p>A função <strong>curl_setopt()</strong> permite que você defina uma série de opções MUITO úteis para o uso do cURL, recomendo que vocês vejam a <a href="http://br2.php.net/manual/pt_BR/function.curl-setopt.php" target="_blank">documentação</a> dela para dar uma olhada na lista completa.</p>
 <h3>Verificando se um site está no ar e acessível</h3>
 <p>Com o script que vou mostrar agora você vai poder acessar qualquer endereço ou URL pública e descobrir se ele retorna erro 404 (página não encontrada) ou não, baseando-se no código HTTP de resposta:<br />
-[code lang="php"]&lt;?php<br />
+[code lang="php"]<?php<br />
 	$cURL = curl_init('http://www.sitequenaoexiste.net.br');<br />
 	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);</p>
 <p>	// Seguir qualquer redirecionamento que houver na URL<br />
@@ -57,20 +57,20 @@ Depois de executar esse script, o conteúdo da variável $resultado será exatam
 	} else {<br />
 		echo 'Parece que está tudo bem...';<br />
 	}<br />
-?&gt;[/code]<br />
+?>[/code]<br />
 Adicionei também uma opção nova (CURLOPT_FOLLOWLOCATION) que vai permitir que o cURL siga todos os redirects que houverem na URL. Por exemplo, se estivermos usando o TintURL é preciso seguir o redirecionamento depois de acessar a url reduzida para chegar na URL final.</p>
 <h3>Enviando dados para formulários (via método POST)</h3>
 <p>Suponhamos que você queira testar o cURL enviando dados para um formulário, como se você tivesse digitando os dados e dando submit no formulário. Você vai precisar de duas coisas: a lista dos nomes (names) dos campos e o action do formulário (que é pra onde os dados são enviados)... Depois é só montar um script parecido com esse:<br />
-[code lang="php"]&lt;?php<br />
+[code lang="php"]<?php<br />
 	// Aqui entra o action do formulário - pra onde os dados serão enviados<br />
 	$cURL = curl_init('http://www.meusite.com.br/envia.php');<br />
 	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);</p>
 <p>	// Definimos um array seguindo o padrão:<br />
-	//  '&lt;name do input&gt;' =&gt; '&lt;valor inserido&gt;'<br />
+	//  '<name do input>' => '<valor inserido>'<br />
 	$dados = array(<br />
-		'nome' =&gt; 'Thiago Belem',<br />
-		'email' =&gt; 'contato@thiagobelem.net',<br />
-		'mensagem' =&gt; 'Testando o cURL!'<br />
+		'nome' => 'Thiago Belem',<br />
+		'email' => 'contato@thiagobelem.net',<br />
+		'mensagem' => 'Testando o cURL!'<br />
 	);</p>
 <p>	// Iremos usar o método POST<br />
 	curl_setopt($cURL, CURLOPT_POST, true);<br />
@@ -78,15 +78,15 @@ Adicionei também uma opção nova (CURLOPT_FOLLOWLOCATION) que vai permitir que
 	curl_setopt($cURL, CURLOPT_POSTFIELDS, $dados);</p>
 <p>	$resultado = curl_exec($cURL);<br />
 	curl_close($cURL);<br />
-?&gt;[/code]<br />
+?>[/code]<br />
 Mas suponhamos que você testou o script e reparou que algo deu errado.. E depois de fazer o seu trabalho de casa, descobriu que o site permite apenas dados vindos do próprio site (ou seja, ele verifica o <strong>REFERER</strong> que é o endereço da página na qual os dados foram inseridos). Então, você ajusta o seu script da seguinte maneira:<br />
-[code language="php"]&lt;?php<br />
+[code language="php"]<?php<br />
 	$cURL = curl_init('http://www.meusite.com.br/envia.php');<br />
 	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);</p>
 <p>	$dados = array(<br />
-		'nome' =&gt; 'Thiago Belem',<br />
-		'email' =&gt; 'contato@thiagobelem.net',<br />
-		'mensagem' =&gt; 'Testando o cURL!'<br />
+		'nome' => 'Thiago Belem',<br />
+		'email' => 'contato@thiagobelem.net',<br />
+		'mensagem' => 'Testando o cURL!'<br />
 	);</p>
 <p>	curl_setopt($cURL, CURLOPT_POST, true);<br />
 	curl_setopt($cURL, CURLOPT_POSTFIELDS, $dados);</p>
@@ -95,7 +95,7 @@ Mas suponhamos que você testou o script e reparou que algo deu errado.. E depoi
 	curl_setopt($cURL, CURLOPT_REFERER, 'http://www.meusite.com.br/contato.php');</p>
 <p>	$resultado = curl_exec($cURL);<br />
 	curl_close($cURL);<br />
-?&gt;[/code]</p>
+?>[/code]</p>
 <p>--</p>
 <p>Vou parar por aqui... Sei que existem vários outros usos e possíveis exemplos do cURL, mas a minha intenção era apenas mostrar como é simples e rápido usar todos os recursos do cURL... Se você misturar os comandos certos com as funções certas, vai poder fazer um sistema bem legal.</p>
 <p>Espero que tenham gostado! :D</p>

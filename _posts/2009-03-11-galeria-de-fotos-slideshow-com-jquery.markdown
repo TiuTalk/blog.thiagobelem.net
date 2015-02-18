@@ -20,29 +20,29 @@ tags: []
 </ol>
 <p>Depois de ter feito o download dos dois arquivos .js é só incluí-los no seu site assim:</p>
 <p>[code language="html"]<br />
-&lt;head&gt;<br />
-&lt;script src=&quot;_pasta_/jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;<br />
-&lt;script src=&quot;_pasta_/jcycle.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;<br />
-&lt;/head&gt;<br />
+<head><br />
+<script src="_pasta_/jquery.js" type="text/javascript"></script><br />
+<script src="_pasta_/jcycle.js" type="text/javascript"></script><br />
+</head><br />
 [/code]</p>
-<p>Lembrando que esse código deve ir entre as TAGs &lt;head&gt; e &lt;/head&gt; do seu site.</p>
+<p>Lembrando que esse código deve ir entre as TAGs <head> e </head> do seu site.</p>
 <p>Depois disso, você cria uma div com o id que quiser (vamos usar #slideshow como exemplo) e dentro dela coloca as fotos do seu slideshow, por exemplo:</p>
 <p>[code language="html"]<br />
-&lt;div id=&quot;slideShow&quot;&gt;<br />
-&lt;img src=&quot;imagens/foto1.jpg&quot; alt=&quot;Primeira Foto&quot; width=&quot;300&quot; height=&quot;200&quot; /&gt;<br />
-&lt;img src=&quot;imagens/foto2.jpg&quot; alt=&quot;Segunda Foto&quot; width=&quot;300&quot; height=&quot;200&quot; /&gt;<br />
-&lt;img src=&quot;imagens/foto3.jpg&quot; alt=&quot;Terceira Foto&quot; width=&quot;300&quot; height=&quot;200&quot; /&gt;<br />
-&lt;/div&gt;<br />
+<div id="slideShow"><br />
+<img src="imagens/foto1.jpg" alt="Primeira Foto" width="300" height="200" /><br />
+<img src="imagens/foto2.jpg" alt="Segunda Foto" width="300" height="200" /><br />
+<img src="imagens/foto3.jpg" alt="Terceira Foto" width="300" height="200" /><br />
+</div><br />
 [/code]</p>
-<p>Depois é só voltar lá dentro do &lt;head&gt; do seu site e colocar o seguinte bloco de javascript:</p>
+<p>Depois é só voltar lá dentro do <head> do seu site e colocar o seguinte bloco de javascript:</p>
 <p>[code language="html"]<br />
-&lt;script type=&quot;text/javascript&quot;&gt;<br />
-&lt;!--<br />
+<script type="text/javascript"><br />
+<!--<br />
 $(function() {<br />
 $('#slideShow').cycle({ fx: 'fade' });<br />
 });<br />
-// --&gt;<br />
-&lt;/script&gt;<br />
+// --><br />
+</script><br />
 [/code]</p>
 <p>Com isso você definiu qual a div que contem o slideshow (repare que o ID da div vai ali no começo da terceira linha) e o jQuery inicia o efeito sozinho.</p>
 <p>Mas só isso? Sim. Você já tem um slideshow, automático, com efeito de transição <em>fade</em> pronto pra ser usado!</p>

@@ -14,7 +14,7 @@ tags: []
 [code language="php"]function limita_caracteres($texto, $limite, $quebra = true) {<br />
     $tamanho = strlen($texto);</p>
 <p>    // Verifica se o tamanho do texto é menor ou igual ao limite<br />
-    if ($tamanho &lt;= $limite) {<br />
+    if ($tamanho <= $limite) {<br />
         $novo_texto = $texto;<br />
     // Se o tamanho do texto for maior que o limite<br />
     } else {<br />
@@ -34,12 +34,12 @@ tags: []
 }[/code]<br />
 E aí? O que me dizem? Bem legal né?</p>
 <p>Pra usar essa função é bem simples, você só precisa definir dois dos três argumentos dela:<br />
-[code language="php"]echo limita_caracteres(&quot;Esta é uma frase muito longa!&quot;, 10);<br />
+[code language="php"]echo limita_caracteres("Esta é uma frase muito longa!", 10);<br />
 // Irá exibir apenas os 10 primeiros caracteres da frase, cortando<br />
 //    qualquer palavra no meio se necessário<br />
 // Resultado: Esta é uma fras...</p>
 <p>// Você tambem pode setar a terceira opção em 'false':<br />
-echo limita_caracteres(&quot;Esta é uma frase muito longa!&quot;, 10, false);<br />
+echo limita_caracteres("Esta é uma frase muito longa!", 10, false);<br />
 // Irá até a última palavra completa antes de estourar o limite de 10<br />
 // Resultado: Esta é uma...[/code]<br />
 O código está todo comentado, quem tiver alguma dúvida é só comentar e responderei assim que possível.</p>

@@ -19,7 +19,7 @@ tags:
 <p>Hoje estava eu aqui, sem nada pra fazer, e resolvi mostrar pra vocês como é fácil usar a API de buscas do Google (<em>Google Search API</em>).</p>
 <p>Fiz uma classe que vocês vão poder usar para pegar o resultado de busca do Google e exibir no seu site, na formatação que preferir.</p>
 <h3>A Classe - Versão 1.1</h3>
-<p>[code language="php" wraplines="false"]&lt;?php</p>
+<p>[code language="php" wraplines="false"]<?php</p>
 <p>/**<br />
  * API de busca do Google<br />
  *<br />
@@ -28,7 +28,7 @@ tags:
  * @version			1.1<br />
  */<br />
 class googleSearchAPI {<br />
-	protected $url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&amp;rsz=large&amp;start=%s&amp;q=%s';<br />
+	protected $url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=large&start=%s&q=%s';<br />
 	var $resultado, $pagina, $keywords;</p>
 <p>	function __construct() {<br />
 		if (!function_exists('curl_init')) {<br />
@@ -56,60 +56,60 @@ class googleSearchAPI {<br />
 	 * Executa a busca<br />
 	 */<br />
 	function busca($keywords = null, $pagina = 1, $site = null) {<br />
-		$keywords = (is_null($keywords)) ? $this-&gt;keywords : $keywords;<br />
+		$keywords = (is_null($keywords)) ? $this->keywords : $keywords;<br />
 		$start = (is_null($pagina)) ? 0 : (($pagina - 1) * 8);</p>
 <p>		$bkeywords = (!is_null($site)) ? ($keywords . ' site:' . $site) : $keywords;</p>
-<p>		$url = sprintf($this-&gt;url, (int)$start, urlencode($bkeywords));<br />
-		$resultado = $this-&gt;httpRequest($url);<br />
+<p>		$url = sprintf($this->url, (int)$start, urlencode($bkeywords));<br />
+		$resultado = $this->httpRequest($url);<br />
 		if (!$resultado) {<br />
-			trigger_error('Não foi possível acessar a URL de busca:&lt;br /&gt;' . $url);<br />
+			trigger_error('Não foi possível acessar a URL de busca:<br />' . $url);<br />
 			return false;<br />
 		}<br />
 		$resultado = json_decode($resultado, true);</p>
-<p>		$this-&gt;resultado = $resultado['responseData'];<br />
-		$this-&gt;keywords = $keywords;<br />
-		$this-&gt;pagina = $pagina;<br />
+<p>		$this->resultado = $resultado['responseData'];<br />
+		$this->keywords = $keywords;<br />
+		$this->pagina = $pagina;<br />
 	}</p>
 <p>	/**<br />
 	 * Pega os resultados encontrados<br />
 	 */<br />
 	function resultadoSites() {<br />
-		return $this-&gt;resultado['results'];<br />
+		return $this->resultado['results'];<br />
 	}</p>
 <p>	/**<br />
 	 * Pega o total de sites encontrados<br />
 	 */<br />
 	function resultadoTotal() {<br />
-		return $this-&gt;resultado['cursor']['estimatedResultCount'];<br />
+		return $this->resultado['cursor']['estimatedResultCount'];<br />
 	}<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p></p>
 <h3>Exemplo de Uso</h3>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>$keywords = 'Thiago Belem';<br />
 $pagina = (isset($_GET['p'])) ? (int)$_GET['p'] : 1;</p>
 <p>$gs = new googleSearchAPI();<br />
-//$gs-&gt;busca($keywords, $pagina); // Busca normal<br />
-$gs-&gt;busca($keywords, $pagina, 'thiagobelem.net'); // Busca em um site específico</p>
-<p>$total = $gs-&gt;resultadoTotal();</p>
-<p>echo &quot;Total estimado de resultados: &quot; . $total;<br />
-echo &quot;&lt;br /&gt;&quot;;<br />
-echo &quot;&lt;h2&gt;Pagina: &quot; . $gs-&gt;pagina . &quot;&lt;/h2&gt;&quot;;</p>
-<p>foreach ($gs-&gt;resultadoSites() as $item) {<br />
-	echo &quot;&lt;h3&gt;&quot; . $item['title'] . &quot;&lt;/h3&gt;&quot;;<br />
-	echo &quot;&lt;p&gt;&quot; . $item['content'] . &quot;&lt;/p&gt;&quot;;<br />
-	echo '&lt;a href=&quot;' . $item['unescapedUrl'] . '&quot;&gt;' . $item['visibleUrl'] . &quot;&lt;/a&gt;&quot;;<br />
+//$gs->busca($keywords, $pagina); // Busca normal<br />
+$gs->busca($keywords, $pagina, 'thiagobelem.net'); // Busca em um site específico</p>
+<p>$total = $gs->resultadoTotal();</p>
+<p>echo "Total estimado de resultados: " . $total;<br />
+echo "<br />";<br />
+echo "<h2>Pagina: " . $gs->pagina . "</h2>";</p>
+<p>foreach ($gs->resultadoSites() as $item) {<br />
+	echo "<h3>" . $item['title'] . "</h3>";<br />
+	echo "<p>" . $item['content'] . "</p>";<br />
+	echo '<a href="' . $item['unescapedUrl'] . '">' . $item['visibleUrl'] . "</a>";<br />
 }</p>
-<p>echo &quot;&lt;hr /&gt;&quot;;</p>
+<p>echo "<hr />";</p>
 <p>// Paginadores:</p>
-<p>if (($pagina - 5) &gt; 1) echo '...&amp;nbsp;';</p>
-<p>for ($n = 1; $n &lt;= ceil($total / 8); $n++) {<br />
-	if (($n &lt; ($pagina - 5)) OR ($n &gt; ($pagina + 5))) continue;<br />
-	echo '&lt;a href=&quot;?q='.$keywords.'&amp;p='.$n.'&quot;&gt;'.$n.'&lt;/a&gt;&amp;nbsp;';<br />
+<p>if (($pagina - 5) > 1) echo '...&nbsp;';</p>
+<p>for ($n = 1; $n <= ceil($total / 8); $n++) {<br />
+	if (($n < ($pagina - 5)) OR ($n > ($pagina + 5))) continue;<br />
+	echo '<a href="?q='.$keywords.'&p='.$n.'">'.$n.'</a>&nbsp;';<br />
 }</p>
-<p>if (($pagina + 5) &lt; $total) echo '...';</p>
-<p>?&gt;[/code]</p>
+<p>if (($pagina + 5) < $total) echo '...';</p>
+<p>?>[/code]</p>
 <p>--</p>
 <p>Infelizmente essa API de busca do Google só retorna 8 resultados por vez (uma limitação do Google mesmo)... mas você tem acesso a todas as páginas que precisar.. É só mudar o valor da variável <strong>$pagina</strong> (do exemplo).</p>
 <p><strong style="background: black; color: white">[15.07.09] Atualização:</strong> Atualizei pra v1.1: Busca em um site específico</p>

@@ -23,21 +23,21 @@ tags:
 <p><a href="http://blog.thiagobelem.net/exemplo3/" target="_blank">Veja aqui um exemplo de como vai ficar o menu.</a></p>
 <p>Bom... vamos lá!</p>
 <h3>Código (X)HTML do menu</h3>
-<p>[code lang="html"]&lt;ul id=&quot;menu&quot;&gt;<br />
-	&lt;li class=&quot;header&quot;&gt;Menu&lt;/li&gt;<br />
-	&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;Página inicial&lt;/a&gt;&lt;/li&gt;<br />
-	&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;Notícias&lt;/a&gt;&lt;/li&gt;<br />
-	&lt;li class=&quot;parent&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;Produtos&lt;/a&gt;<br />
-		&lt;ul class=&quot;sub-menu&quot;&gt;<br />
-			&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;Camisetas&lt;/a&gt;&lt;/li&gt;<br />
-			&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;Calças&lt;/a&gt;&lt;/li&gt;<br />
-			&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;Livros&lt;/a&gt;&lt;/li&gt;<br />
-		&lt;/ul&gt;<br />
-	&lt;/li&gt;<br />
-	&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;Quem somos nós&lt;/a&gt;&lt;/li&gt;<br />
-	&lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;<br />
-&lt;/ul&gt;[/code]</p>
-<p>Vejam que o sub-menu (que irá aparecer) fica dentro do &lt;li&gt; e fora do &lt;a&gt;.</p>
+<p>[code lang="html"]<ul id="menu"><br />
+	<li class="header">Menu</li><br />
+	<li><a href="#" title="">Página inicial</a></li><br />
+	<li><a href="#" title="">Notícias</a></li><br />
+	<li class="parent"><a href="#" title="">Produtos</a><br />
+		<ul class="sub-menu"><br />
+			<li><a href="#" title="">Camisetas</a></li><br />
+			<li><a href="#" title="">Calças</a></li><br />
+			<li><a href="#" title="">Livros</a></li><br />
+		</ul><br />
+	</li><br />
+	<li><a href="#" title="">Quem somos nós</a></li><br />
+	<li><a href="#" title="">Contato</a></li><br />
+</ul>[/code]</p>
+<p>Vejam que o sub-menu (que irá aparecer) fica dentro do <li> e fora do <a>.</p>
 <h3>Código CSS do menu</h3>
 <p>[code lang="css"]* {<br />
 	margin: 0px;<br />
@@ -74,10 +74,10 @@ tags:
 	padding: 0px 3px;<br />
 	outline: none;<br />
 }</p>
-<p>ul#menu li.parent &gt; a {<br />
+<p>ul#menu li.parent > a {<br />
 	background: transparent url('../img/down.gif') right center no-repeat;<br />
 }</p>
-<p>ul#menu li.aberto &gt; a {<br />
+<p>ul#menu li.aberto > a {<br />
 	background: transparent url('../img/up.gif') right center no-repeat;<br />
 }</p>
 <p>ul#menu li a:hover {<br />
@@ -92,11 +92,11 @@ tags:
 }[/code]</p>
 <h3>Bloco de código do efeito (jQuery)</h3>
 <p>[code lang="javascript"]$(function() {<br />
-	// Evento de clique do elemento: ul#menu li.parent &gt; a<br />
-	$('ul#menu li.parent &gt; a').click(function() {<br />
+	// Evento de clique do elemento: ul#menu li.parent > a<br />
+	$('ul#menu li.parent > a').click(function() {<br />
 		// Expande ou retrai o elemento ul.sub-menu dentro do elemento pai (ul#menu li.parent)<br />
 		$('ul.sub-menu', $(this).parent()).slideToggle('fast', function() {<br />
-			// Depois de expandir ou retrair, troca a classe 'aberto' do &lt;a&gt; clicado<br />
+			// Depois de expandir ou retrair, troca a classe 'aberto' do <a> clicado<br />
 			$(this).parent().toggleClass('aberto');<br />
 		});<br />
 		return false;<br />

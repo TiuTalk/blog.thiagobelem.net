@@ -30,19 +30,19 @@ UNIQUE KEY `usuario` (`usuario`)<br />
 <p>Execute esse bloco SQL no seu banco de dados para criar a tabela usada pelo sistema.</p>
 <p>Depois disso, vamos ao formulário de login que você colocará dentro de um arquivo chamado <span style="color: #3366ff;">login.php</span>:</p>
 <p>[code language="html"]<br />
-&lt;form method=&quot;post&quot; action=&quot;valida.php&quot;&gt;<br />
-&lt;label&gt;Usuário&lt;/label&gt;<br />
-&lt;input type=&quot;text&quot; name=&quot;usuario&quot; maxlength=&quot;50&quot; /&gt;</p>
-<p>&lt;label&gt;Senha&lt;/label&gt;<br />
-&lt;input type=&quot;password&quot; name=&quot;senha&quot; maxlength=&quot;50&quot; /&gt;</p>
-<p>&lt;input type=&quot;submit&quot; value=&quot;Entrar&quot; /&gt;<br />
-&lt;/form&gt;<br />
+<form method="post" action="valida.php"><br />
+<label>Usuário</label><br />
+<input type="text" name="usuario" maxlength="50" /></p>
+<p><label>Senha</label><br />
+<input type="password" name="senha" maxlength="50" /></p>
+<p><input type="submit" value="Entrar" /><br />
+</form><br />
 [/code]</p>
 <p>Esse formulário, com apenas dois campos, manda pra página <span style="color: #3366ff;">valida.php</span>, que é um pequeno PHP que receberá os dados enviados pelo formulário, fará a validação deles e mandará o visitante ou pra página interna (<span style="color: #3366ff;">index.php</span>) ou de volta pra página de login (<span style="color: #3366ff;">login.php</span>).</p>
 <p>Esse é o codigo fonte do arquivo <span style="color: #3366ff;">valida.php</span>:</p>
 <p>[code language="php"]<br />
 // Inclui o arquivo com o sistema de segurança<br />
-include(&quot;seguranca.php&quot;);</p>
+include("seguranca.php");</p>
 <p>// Verifica se um formulário foi enviado<br />
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {<br />
 // Salva duas variáveis com o que foi digitado no formulário<br />
@@ -52,7 +52,7 @@ $senha = (isset($_POST['senha'])) ? $_POST['senha'] : '';</p>
 <p>// Utiliza uma função criada no seguranca.php pra validar os dados digitados<br />
 if (validaUsuario($usuario, $senha) == true) {<br />
 // O usuário e a senha digitados foram validados, manda pra página interna<br />
-header(&quot;Location: index.php&quot;);<br />
+header("Location: index.php");<br />
 } else {<br />
 // O usuário e/ou a senha são inválidos, manda de volta pro form de login<br />
 // Para alterar o endereço da página de login, verifique o arquivo seguranca.php<br />
@@ -71,7 +71,7 @@ expulsaVisitante();<br />
 *<br />
 * Usado para restringir o acesso de certas páginas do seu site<br />
 *<br />
-* @author Thiago Belem &lt;contato@thiagobelem.net&gt;<br />
+* @author Thiago Belem <contato@thiagobelem.net><br />
 * @link http://thiagobelem.net/<br />
 *<br />
 * @version 1.0<br />
@@ -96,8 +96,8 @@ $_SG['banco'] = 'test';            // Banco de dados MySQL</p>
 // ======================================</p>
 <p>// Verifica se precisa fazer a conexão com o MySQL<br />
 if ($_SG['conectaServidor'] == true) {<br />
-$_SG['link'] = mysql_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha']) or die(&quot;MySQL: Não foi possível conectar-se ao servidor [&quot;.$_SG['servidor'].&quot;].&quot;);<br />
-mysql_select_db($_SG['banco'], $_SG['link']) or die(&quot;MySQL: Não foi possível conectar-se ao banco de dados [&quot;.$_SG['banco'].&quot;].&quot;);<br />
+$_SG['link'] = mysql_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha']) or die("MySQL: Não foi possível conectar-se ao servidor [".$_SG['servidor']."].");<br />
+mysql_select_db($_SG['banco'], $_SG['link']) or die("MySQL: Não foi possível conectar-se ao banco de dados [".$_SG['banco']."].");<br />
 }</p>
 <p>// Verifica se precisa iniciar a sessão<br />
 if ($_SG['abreSessao'] == true) {<br />
@@ -118,15 +118,15 @@ global $_SG;</p>
 $nusuario = addslashes($usuario);<br />
 $nsenha = addslashes($senha);</p>
 <p>// Monta uma consulta SQL (query) para procurar um usuário<br />
-$sql = &quot;SELECT `id`, `nome` FROM `&quot;.$_SG['tabela'].&quot;` WHERE &quot;.$cS.&quot; `usuario` = '&quot;.$nusuario.&quot;' AND &quot;.$cS.&quot; `senha` = '&quot;.$nsenha.&quot;' LIMIT 1&quot;;<br />
+$sql = "SELECT `id`, `nome` FROM `".$_SG['tabela']."` WHERE ".$cS." `usuario` = '".$nusuario."' AND ".$cS." `senha` = '".$nsenha."' LIMIT 1";<br />
 $query = mysql_query($sql);<br />
 $resultado = mysql_fetch_assoc($query);</p>
 <p>// Verifica se encontrou algum registro<br />
 if (empty($resultado)) {<br />
-// Nenhum registro foi encontrado =&gt; o usuário é inválido<br />
+// Nenhum registro foi encontrado => o usuário é inválido<br />
 return false;</p>
 <p>} else {<br />
-// O registro foi encontrado =&gt; o usuário é valido</p>
+// O registro foi encontrado => o usuário é valido</p>
 <p>// Definimos dois valores na sessão com os dados do usuário<br />
 $_SESSION['usuarioID'] = $resultado['id']; // Pega o valor da coluna 'id do registro encontrado no MySQL<br />
 $_SESSION['usuarioNome'] = $resultado['nome']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL</p>
@@ -166,19 +166,19 @@ global $_SG;</p>
 <p>// Remove as variáveis da sessão (caso elas existam)<br />
 unset($_SESSION['usuarioID'], $_SESSION['usuarioNome'], $_SESSION['usuarioLogin'], $_SESSION['usuarioSenha']);</p>
 <p>// Manda pra tela de login<br />
-header(&quot;Location: &quot;.$_SG['paginaLogin']);<br />
+header("Location: ".$_SG['paginaLogin']);<br />
 }<br />
 [/code]</p>
 <p>Não vou poder explicar todas as funções do arquivo pq é muita coisa.. Mas todas elas estão devidamente comentadas e documentadas... É só olhar.</p>
 <p>Com esse arquivos nós já nos conectamos automaticamente ao servidor MySQL, então se você usar outra forma pra fazer a conexão, vá na parte de configurações do <span style="color: #ff0000;">seguranca.php</span> e defina a variável <span style="color: #ff6600;">$_SG['conectaServidor']</span> pra falso (<em>false</em>). O mesmo acontece pra sessão com a variável <span style="color: #ff6600;">$_SG['abreSessao']</span>.</p>
 <p>Agora é só incluir essas linhas no topo de cada arquivo que deverá ter o acesso restrito:</p>
 <p>[code language="php"]<br />
-include(&quot;seguranca.php&quot;); // Inclui o arquivo com o sistema de segurança<br />
+include("seguranca.php"); // Inclui o arquivo com o sistema de segurança<br />
 protegePagina(); // Chama a função que protege a página<br />
 [/code]</p>
 <p>Quando vocês quiserem exibir o nome do usuário logado, é só fazer isso:</p>
 <p>[code language="php"]<br />
-echo &quot;Olá, &quot; . $_SESSION['usuarioNome'];<br />
+echo "Olá, " . $_SESSION['usuarioNome'];<br />
 [/code]</p>
 <p>Veja mais sobre escrever e pegar valores da sessão (coisa que acontece muito nesse sistema de login) no tópico <a href="http://blog.thiagobelem.net/php/aprendendo-a-usar-sessoes-no-php/" target="_blank">Aprendendo a usar sessões no PHP</a>.</p>
 <p>Viram como é fácil?</p>

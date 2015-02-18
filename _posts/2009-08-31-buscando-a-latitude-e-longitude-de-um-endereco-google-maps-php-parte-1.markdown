@@ -27,7 +27,7 @@ tags:
  *<br />
  * Pega as informações de latitude, longitude e zoom de um endereço usando a API do Google Maps<br />
  *<br />
- * @author Thiago Belem &lt;contato@thiagobelem.net&gt;<br />
+ * @author Thiago Belem <contato@thiagobelem.net><br />
  */<br />
 class gMaps {<br />
 	// Host do GoogleMaps<br />
@@ -36,7 +36,7 @@ class gMaps {<br />
 	public $mapsKey = '';</p>
 <p>	function __construct($key = null) {<br />
 		if (!is_null($key)) {<br />
-			$this-&gt;mapsKey = $key;<br />
+			$this->mapsKey = $key;<br />
 		}<br />
 	}</p>
 <p>	function carregaUrl($url) {<br />
@@ -51,32 +51,32 @@ class gMaps {<br />
 		}</p>
 <p>		if (!$resultado) {<br />
 			return false;<br />
-			//trigger_error('Não foi possível carregar o endereço: &lt;strong&gt;' . $url . '&lt;/strong&gt;');<br />
+			//trigger_error('Não foi possível carregar o endereço: <strong>' . $url . '</strong>');<br />
 		} else {<br />
 			return $resultado;<br />
 		}<br />
 	}</p>
 <p>	function geoLocal($endereco) {<br />
-		$url = 'http://'. $this-&gt;mapsHost .'/maps/geo?output=csv&amp;key='. $this-&gt;mapsKey .'&amp;q='. urlencode($endereco);<br />
-		$dados = $this-&gt;carregaUrl($url);<br />
+		$url = 'http://'. $this->mapsHost .'/maps/geo?output=csv&key='. $this->mapsKey .'&q='. urlencode($endereco);<br />
+		$dados = $this->carregaUrl($url);<br />
 		list($status, $zoom, $latitude, $longitude) = explode(',', $dados);<br />
 		if ($status != 200) {<br />
 			return false;<br />
-			//trigger_error('Não foi possível carregar o endereço &lt;strong&gt;&quot;'.$endereco.'&quot;&lt;/strong&gt;, código de resposta: ' . $status);<br />
+			//trigger_error('Não foi possível carregar o endereço <strong>"'.$endereco.'"</strong>, código de resposta: ' . $status);<br />
 		}<br />
-		return array('lat' =&gt; $latitude, 'lon' =&gt; $longitude, 'zoom' =&gt; $zoom, 'endereco' =&gt; $endereco);<br />
+		return array('lat' => $latitude, 'lon' => $longitude, 'zoom' => $zoom, 'endereco' => $endereco);<br />
 	}<br />
 }[/code]</p>
 <p>O uso dela é ridiculamente simples:</p>
-<p>[code language="php"]&lt;?php<br />
+<p>[code language="php"]<?php<br />
 // Instancia a classe<br />
 $gmaps = new gMaps('SUA GMAK AQUI');</p>
 <p>// Pega os dados (latitude, longitude e zoom) do endereço:<br />
 $endereco = 'Av. Brasil, 1453, Rio de Janeiro, RJ';<br />
-$dados = $gmaps-&gt;geolocal($endereco);</p>
+$dados = $gmaps->geolocal($endereco);</p>
 <p>// Exibe os dados encontrados:<br />
 print_r($dados);<br />
-?&gt;[/code]</p>
+?>[/code]</p>
 <p>Com isso já temos todas as informações necessárias para exibir um mapinha do GoogleMaps com o endereço marcado, o que faremos no <a href="http://blog.thiagobelem.net/html/exibindo-mapas-no-seu-site-google-maps-php-parte-2/" target="_blank">próximo tutorial</a>. :)</p>
 <p><strong style="color: blue">Parte 2:</strong> <a href="http://blog.thiagobelem.net/html/exibindo-mapas-no-seu-site-google-maps-php-parte-2/" target="_blank">Exibindo mapas no seu site – Google Maps + PHP – Parte 2</a></p>
 <p>Um grande abraço a todos!</p>

@@ -24,32 +24,32 @@ tags:
 <p><strong>Linux</strong></p>
 <p>[code language="shell"]<br />
 # Todo o servidor<br />
-&lt;Directory /&gt;<br />
+<Directory /><br />
 	Order deny,allow<br />
 	Deny from all<br />
 	AllowOverride None<br />
 	Options None<br />
-&lt;/Directory&gt;</p>
+</Directory></p>
 <p># Raíz do servidor (opcional)<br />
-&lt;Directory /var/www/&gt;<br />
+<Directory /var/www/><br />
 	Order allow,deny<br />
 	Allow from all<br />
-&lt;/Directory&gt;<br />
+</Directory><br />
 [/code]</p>
 <p><strong>Windows</strong></p>
 <p>[code language="shell"]<br />
 # Todo o servidor<br />
-&lt;Directory C:/&gt;<br />
+<Directory C:/><br />
 	Order deny,allow<br />
 	Deny from all<br />
 	AllowOverride None<br />
 	Options None<br />
-&lt;/Directory&gt;</p>
+</Directory></p>
 <p># Raíz do servidor (opcional)<br />
-&lt;Directory C:/webroot/&gt;<br />
+<Directory C:/webroot/><br />
 	Order allow,deny<br />
 	Allow from all<br />
-&lt;/Directory&gt;<br />
+</Directory><br />
 [/code]</p>
 <p>A segunda parte (raíz do servidor) é opcional... As chances de já existir um bloco desses no arquivo <code>httpd.conf</code> é muito grande. Coloquei-a ali em cima apenas para vocês poderem testar. E não se esqueça de mudar a letra do drive e o caminho da raíz do servidor se necessário.</p>
 <h3>Saiba mais (documentação)</h3>

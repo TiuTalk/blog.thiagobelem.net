@@ -20,7 +20,7 @@ tags:
 <p>A alguns meses fiz um artigo sobre <a href="http://blog.thiagobelem.net/css/otimizando-o-seu-site-carregamento/" target="_blank">como otimizar o carregamento do seu site</a> no qual eu falava sobre headers, compactação de resposta HTTP dentre outros.</p>
 <p>Hoje vou falar sobre algumas outras dicas que fazem muito efeito tanto no carregamento do site quanto do bandwidth mensal que você vai usar.</p>
 <p>Alguns sites por ai dizem que o tempo ideal de carregamento de um site é quatro segundos, mas isso depende muito da Internet da pessoa e, claro, do tipo de conteúdo que estamos falando. Eu acredito que um site que carregue em até 10 segundos seja de ótimo tamanho e, se for por volta disso, não vai prejudicar o número de visitantes.</p>
-<h3>1. Tag &lt;style&gt; e style-in-line</h3>
+<h3>1. Tag <style> e style-in-line</h3>
 <p>Muita gente ainda usa o CSS todo dentro de uma tag style ou - não menos errado - usa <em>style-in-line</em>, que significa usar a propriedade <strong>style=""</strong> do elemento para mudar o estilo dele. O CSS foi lançado na década de 90 gente! Ele foi feito pra ser usado!</p>
 <p>Além de deixar o seu código fonte muito mais limpo, o uso de CSS em folhas de estilos separadas otimiza o carregamento do site e permite uma melhor separação entre a estrutura (HTML) e a aparência (CSS) do mesmo.</p>
 <p>Imagine que você vai fazer o papel de uma peça de teatro e lá pela terceira página, entre uma linha e outra, você encontra uma observação que diz que o seu personagem tem cabelo vermelho... Não seria melhor que isso viesse logo depois da capa, pra você já se preparar?</p>
@@ -40,7 +40,7 @@ tags:
 <h3>7. Meu site é HD!</h3>
 <p>Bom... Você já diviu seu site em páginas, sua galeria de fotos usa thumbnails e.. peraí... As fotos (grandes) estão com 100% de qualidade?! Pra que? O cérebro humano quase nunca conseguiu reparar a diferença entre uma imagem com 80% e outra com 100% de qualidade. Reduza a qualidade das suas fotos, vale a pena.</p>
 <h3>8. E o tamanho da minha imagem é...</h3>
-<p>Quando você usar o atributo &lt;img ... /&gt; defina a largura e altura da imagem, isso vai economizar trabalho pro navegador do visitante que não vai ter que carregar toda a imagem antes pra descobrir o tamanho de exibição.</p>
+<p>Quando você usar o atributo <img ... /> defina a largura e altura da imagem, isso vai economizar trabalho pro navegador do visitante que não vai ter que carregar toda a imagem antes pra descobrir o tamanho de exibição.</p>
 <h3>9. O que você vê é o que você tem, mas não é o que você precisa!</h3>
 <p>Sabe aquele seu editor de sites com suporte ao <strong>WYSIWYG</strong> (<em>What You See Is What You Get</em>)? Acha legal ele fazer todo o trabalho pra você de criar o HTML e o CSS sem que você precise se preocupar? Pois vá até o código fonte criado por ele e comece a fazer uma limpeza geral. Na maioria dos casos eles acabam criando códigos além do necessário, seja no HTML, seja no CSS.</p>
 <p>Aprenda a criar sites usando um editor de texto que não te mostra uma representação visual, como o Notepad++, EditPlus, NetBeans e vários outros... Até o próprio Notepad serve!</p>

@@ -18,13 +18,13 @@ tags:
 <p>A função <strong>func_num_args()</strong> (quando usada dentro de uma outra função) retorna o número de argumentos que foram passados para essa função. E a função <strong>func_get_args()</strong> retorna uma lista (array) com os argumentos que foram passados para essa função.</p>
 <p>Vamos criar uma função para calcular a média de uma quantiade qualquer de números:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>/**<br />
  * Função que calcula a média de N números<br />
  */<br />
 function media() {</p>
 <p>}</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Perceba que, na definição da função, não colocamos nada no lugar dos parâmetros/argumentos que ela necessita... Exatamente por que <strong>a quantidade de argumentos será variável</strong>.</p>
 <p>Agora vamos pegar o total e a lista de argumentos passados para a função:</p>
@@ -37,7 +37,7 @@ function media() {</p>
 <p>Feito isso, vamos precisar fazer uma verificação, só por segurança, da quantidade de argumentos passados... Não há lógica em tentar calcular a média de 0 numeros, não é mesmo?</p>
 <p>[code language="php" firstline="12"]<br />
 	// Verifica se foi passado pelo menos 1 número<br />
-	if ($total &lt; 1) {<br />
+	if ($total < 1) {<br />
 		trigger_error('Não é possível calcular a média de menos de 1 número!');<br />
 		return 0;<br />
 	}<br />
@@ -53,10 +53,10 @@ function media() {</p>
 [/code]</p>
 <p>No final das contas, nossa função ficou assim:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>/**<br />
  * Função que calcula a média de N números<br />
- * @author Thiago Belem &lt;contato@thiagobelem.net&gt;<br />
+ * @author Thiago Belem <contato@thiagobelem.net><br />
  */<br />
 function media() {<br />
 	// Total de argumentos passados<br />
@@ -64,7 +64,7 @@ function media() {<br />
 	// Array com cada um dos argumentos passados<br />
 	$numeros = func_get_args();</p>
 <p>	// Verifica se foi passado pelo menos 1 número<br />
-	if ($total &lt; 1) {<br />
+	if ($total < 1) {<br />
 		trigger_error('Não é possível calcular a média de menos de 1 número!');<br />
 		return 0;<br />
 	} else {<br />
@@ -74,17 +74,17 @@ function media() {<br />
 		return ($soma / $total);<br />
 	}<br />
 }</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>O uso dela é bem simples:<br />
 [code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>echo media(2, 6, 10);<br />
 // 6</p>
 <p>echo media(1);<br />
 // 1</p>
 <p>echo media(1, 7, 2.1, 5.3214, 9, 10000);<br />
 // 1670.7369</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Espero que tenham gostado! Até a próxima! :]</p>

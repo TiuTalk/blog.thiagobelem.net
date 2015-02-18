@@ -23,15 +23,15 @@ tags:
 <p>Se você já tem jQuery 1.4.2 (ou superior) inserido no seu site, pule essa parte... Caso você não tenha o jQuery ou seja uma versão antiga, recomendo que continue lendo.</p>
 <p>Vá ao site do <a href="http://jquery.com/">jQuery</a> e baixe a última versão (até agora é a <a title="jQuery v1.4.2" href="http://code.jquery.com/jquery-1.4.2.min.js">1.4.2</a>) e coloque o arquivo com o nome de <strong>jquery-1.4.2.min.js</strong> em uma pasta no seu site.</p>
 <p>Feito isso nós podemos inserir o jQuery no site utilizando a seguinte linha:</p>
-<p>[code language="html"]&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.4.2.min.js&quot;&gt;&lt;/script&gt;[/code]</p>
-<p>Essa linha deve ser inserida dentro da tag <strong>&lt;head&gt;</strong> do seu site e o nome do arquivo ou a sua pasta não fazem a mínima diferença... Contanto que você acerte o arquivo, tá tudo certo.</p>
+<p>[code language="html"]<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>[/code]</p>
+<p>Essa linha deve ser inserida dentro da tag <strong><head></strong> do seu site e o nome do arquivo ou a sua pasta não fazem a mínima diferença... Contanto que você acerte o arquivo, tá tudo certo.</p>
 <h3>2. Inserindo o jQuery Cycle</h3>
 <p>Agora nós iremos inserir o plugin de jQuery mais útil que existe, o <a title="jQuery Cycle" href="http://www.malsup.com/jquery/cycle/">jQuery Cycle</a>, que serve para realizar um efeito de transição entre elementos dentro de um mesmo container... Em outras palavras: você faz <em>slideshows</em> com ele. Já falei um pouco sobre ele em um outro tutorial sobre <a title="Galeria de fotos (slideshow) com jQuery" href="http://blog.thiagobelem.net/jquery/galeria-de-fotos-slideshow-com-jquery/">galerias de fotos (slideshow) com jQuery</a>).</p>
 <p>Vá até o site do jQuery Cycle, baixe a última versão (até agora é a <a href="http://www.malsup.com/jquery/cycle/release/jquery.cycle.zip?v2.80">2.80</a>) e insira-a no seu da mesma forma que você fez com o jQuery, apenas mudando o nome do arquivo e, se necessário, a pasta.</p>
-<p>Quando você fizer o download encontrará vários arquivos, mas você só precisa do <strong>jquery.cycle.all.min.js</strong>... Insira-o no <strong>&lt;head&gt;</strong> do seu site <strong style="color: red">APÓS o código do jQuery</strong>:</p>
+<p>Quando você fizer o download encontrará vários arquivos, mas você só precisa do <strong>jquery.cycle.all.min.js</strong>... Insira-o no <strong><head></strong> do seu site <strong style="color: red">APÓS o código do jQuery</strong>:</p>
 <p>[code language="html"]<br />
-&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.4.2.min.js&quot;&gt;&lt;/script&gt;<br />
-&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.cycle.all.min.js&quot;&gt;&lt;/script&gt;<br />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><br />
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script><br />
 [/code]</p>
 <h3>3. Criando o seu jQuery de Destaques</h3>
 <p>Agora vamos criar um arquivo chamado <strong>jquery.destaques.js</strong> que conterá o código para "rodar" o jQuery Cycle no bloco de destaques e fazer o efeito de transição entre os slides dele... Mais uma vez, o nome e a localização do arquivo, contanto que vocês saibam o que estão fazendo e insiram-o de forma correta no site, tá tudo bem.</p>
@@ -64,7 +64,7 @@ Rode o seu site e veja a mágica acontecer... Já está 99% pronto! :D</p>
 <p>Para inserir os paginadores precisaremos antes criar um container para recebê-los, fazemos isso com esse código:</p>
 <p>[code language="javascript" firstline="8"]<br />
 	// Cria uma div.paginas que receberá os paginadores<br />
-	var div = $('&lt;div&gt;&lt;/div&gt;').addClass('paginas');<br />
+	var div = $('<div></div>').addClass('paginas');<br />
 	// Insere a div criada antes da lista de destaques<br />
 	$('#blocoDestaques ul').before(div);<br />
 [/code]</p>
@@ -73,7 +73,7 @@ Rode o seu site e veja a mágica acontecer... Já está 99% pronto! :D</p>
 <p>[code language="javascript" firstline="6"]<br />
 	$(document).ready(function() {</p>
 <p>		// Cria uma div.paginas que receberá os paginadores<br />
-		var div = $('&lt;div&gt;&lt;/div&gt;').addClass('paginas');<br />
+		var div = $('<div></div>').addClass('paginas');<br />
 		// Insere a div criada antes da lista de destaques<br />
 		$('#blocoDestaques ul').before(div);</p>
 <p>		/**<br />

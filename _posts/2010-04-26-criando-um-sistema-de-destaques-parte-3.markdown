@@ -37,7 +37,7 @@ ENGINE = MyISAM;<br />
 <p>[code language="css"]<br />
 #blocoDestaques ul li div.fundo {<br />
 	opacity: 0.80;<br />
-	-ms-filter: &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=80)&quot;;<br />
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";<br />
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);<br />
 }<br />
 [/code]</p>
@@ -45,8 +45,8 @@ ENGINE = MyISAM;<br />
 <h3>1. Configurações</h3>
 <p>Vamos começar com um arquivo chamado <strong>mysql_destaques.php</strong> e nele colocar um bloco PHP vazio:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
-<p>?&gt;<br />
+<?php</p>
+<p>?><br />
 [/code]</p>
 <p>Agora nós iremos definir algumas variáveis de configuração:</p>
 <p>[code language="php" firstline="3"]<br />
@@ -55,15 +55,15 @@ ENGINE = MyISAM;<br />
  */<br />
 $destaques = array(<br />
 	// Dados de conexão ao MySQL<br />
-	'mysql' =&gt; array(<br />
-		'servidor' =&gt; 'localhost',<br />
-		'usuario' =&gt; 'root',<br />
-		'senha' =&gt; '12345',<br />
-		'banco' =&gt; 'meu_site'),</p>
+	'mysql' => array(<br />
+		'servidor' => 'localhost',<br />
+		'usuario' => 'root',<br />
+		'senha' => '12345',<br />
+		'banco' => 'meu_site'),</p>
 <p>	// Nome da tabela com os destaques<br />
-	'tabela' =&gt; 'destaques',</p>
+	'tabela' => 'destaques',</p>
 <p>	// Limite máximo de destaques que serão exibidos<br />
-	'limite' =&gt; 5<br />
+	'limite' => 5<br />
 );[/code]</p>
 <h3>2. Conexão com o MySQL</h3>
 <p>Se o seu site já se conecta ao banco de dados MySQL automaticamente, você pode apagar a parte da conexão ao MySQL e pular para o item três...</p>
@@ -84,11 +84,11 @@ mysql_select_db($destaques['mysql']['banco']) OR trigger_error('ERRO: ' . mysql_
 /*<br />
  * Busca os dados na tabela de destaques<br />
  */<br />
-$sql = &quot;SELECT `titulo`, `link`, `imagem`<br />
+$sql = "SELECT `titulo`, `link`, `imagem`<br />
 		FROM `{$destaques['tabela']}`<br />
 		WHERE `ativo` = 1<br />
 		ORDER BY `id` DESC<br />
-		LIMIT {$destaques['limite']}&quot;;<br />
+		LIMIT {$destaques['limite']}";<br />
 $query = mysql_query($sql) OR trigger_error('ERRO: ' . mysql_error());<br />
 [/code]</p>
 <p>Nós já executamos a consulta e já temos o <em>Resource MySQL</em> (ou resultado)... Precisamos apenas rodar um loop e passar esses dados para um array que será usado mais a diante para montar o nosso HTML.</p>
@@ -104,94 +104,94 @@ while ($registro = mysql_fetch_object($query)) {<br />
 <p>Pronto... Nosso arquivo está pronto! Veja <a href="http://blog.thiagobelem.net/exemplos/destaque/mysql_destaques.phps">aqui</a> como ele ficou.</p>
 <p>Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está assim:</p>
 <p>[code language="html"]<br />
-&lt;!-- destaques --&gt;<br />
-&lt;div id=&quot;blocoDestaques&quot;&gt;</p>
-<p>	&lt;a class=&quot;faixa&quot; href=&quot;#&quot; title=&quot;&quot;&gt;&lt;!-- --&gt;&lt;/a&gt;</p>
-<p>	&lt;ul&gt;<br />
-		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 1&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque1.jpg&quot; alt=&quot;Destaque 1&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 1&quot;&gt;Destaque 1 - Muita coisa boa!&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;</p>
-<p>		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 2&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque2.jpg&quot; alt=&quot;Destaque 2&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 2&quot;&gt;Destaque 2 - Nem tão bom assim...&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;</p>
-<p>		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 3&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque3.jpg&quot; alt=&quot;Destaque 3&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 3&quot;&gt;Destaque 3 - Agora sim... bem melhor!&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;<br />
-	&lt;/ul&gt;<br />
-&lt;/div&gt;<br />
-&lt;!-- /destaques --&gt;<br />
+<!-- destaques --><br />
+<div id="blocoDestaques"></p>
+<p>	<a class="faixa" href="#" title=""><!-- --></a></p>
+<p>	<ul><br />
+		<li><br />
+			<a href="#" title="Destaque 1"><br />
+				<img src="img/destaque1.jpg" alt="Destaque 1" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 1">Destaque 1 - Muita coisa boa!</a></p><br />
+		</li></p>
+<p>		<li><br />
+			<a href="#" title="Destaque 2"><br />
+				<img src="img/destaque2.jpg" alt="Destaque 2" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 2">Destaque 2 - Nem tão bom assim...</a></p><br />
+		</li></p>
+<p>		<li><br />
+			<a href="#" title="Destaque 3"><br />
+				<img src="img/destaque3.jpg" alt="Destaque 3" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 3">Destaque 3 - Agora sim... bem melhor!</a></p><br />
+		</li><br />
+	</ul><br />
+</div><br />
+<!-- /destaques --><br />
 [/code]</p>
 <p>Vamos fazer algumas modificações no nosso HTML... Vamos começar incluindo o arquivo PHP que acabamos de criar logo antes da div#blocoDestaques e remover os LIs deixando apenas um:</p>
 <p>[code language="php"]<br />
-&lt;!-- destaques --&gt;<br />
-&lt;?php require_once('mysql_destaques.php'); ?&gt;<br />
-&lt;div id=&quot;blocoDestaques&quot;&gt;</p>
-<p>	&lt;a class=&quot;faixa&quot; href=&quot;#&quot; title=&quot;&quot;&gt;&lt;!-- --&gt;&lt;/a&gt;</p>
-<p>	&lt;ul&gt;<br />
-		&lt;li&gt;<br />
-			&lt;a href=&quot;#&quot; title=&quot;Destaque 1&quot;&gt;<br />
-				&lt;img src=&quot;img/destaque1.jpg&quot; alt=&quot;Destaque 1&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;#&quot; title=&quot;Destaque 1&quot;&gt;Destaque 1 - Muita coisa boa!&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;<br />
-	&lt;/ul&gt;<br />
-&lt;/div&gt;<br />
-&lt;!-- /destaques --&gt;<br />
+<!-- destaques --><br />
+<?php require_once('mysql_destaques.php'); ?><br />
+<div id="blocoDestaques"></p>
+<p>	<a class="faixa" href="#" title=""><!-- --></a></p>
+<p>	<ul><br />
+		<li><br />
+			<a href="#" title="Destaque 1"><br />
+				<img src="img/destaque1.jpg" alt="Destaque 1" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="#" title="Destaque 1">Destaque 1 - Muita coisa boa!</a></p><br />
+		</li><br />
+	</ul><br />
+</div><br />
+<!-- /destaques --><br />
 [/code]</p>
 <p>Agora é só criar um loop utilizando o <code>foreach()</code> para gerar um LI para cada destaque que foi encontrado no banco de dados... Vamos também substituir os valores "enchedores de linguiça" por valores dinâmicos:</p>
 <p>[code language="php"]<br />
-&lt;!-- destaques --&gt;<br />
-&lt;?php require_once('mysql_destaques.php'); ?&gt;<br />
-&lt;div id=&quot;blocoDestaques&quot;&gt;</p>
-<p>	&lt;a class=&quot;faixa&quot; href=&quot;#&quot; title=&quot;&quot;&gt;&lt;!-- --&gt;&lt;/a&gt;</p>
-<p>	&lt;ul&gt;<br />
-		&lt;?php foreach ($lista_destaques AS $destaque) { ?&gt;<br />
-		&lt;li&gt;<br />
-			&lt;a href=&quot;&lt;?php echo $destaque-&gt;link; ?&gt;&quot; title=&quot;&lt;?php echo $destaque-&gt;titulo; ?&gt;&quot;&gt;<br />
-				&lt;img src=&quot;&lt;?php echo $destaque-&gt;imagem; ?&gt;&quot; alt=&quot;&lt;?php echo $destaque-&gt;titulo; ?&gt;&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;&lt;?php echo $destaque-&gt;link; ?&gt;&quot; title=&quot;&lt;?php echo $destaque-&gt;titulo; ?&gt;&quot;&gt;&lt;?php echo $destaque-&gt;titulo; ?&gt;&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;<br />
-		&lt;?php } ?&gt;<br />
-	&lt;/ul&gt;<br />
-&lt;/div&gt;<br />
-&lt;!-- /destaques --&gt;<br />
+<!-- destaques --><br />
+<?php require_once('mysql_destaques.php'); ?><br />
+<div id="blocoDestaques"></p>
+<p>	<a class="faixa" href="#" title=""><!-- --></a></p>
+<p>	<ul><br />
+		<?php foreach ($lista_destaques AS $destaque) { ?><br />
+		<li><br />
+			<a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>"><br />
+				<img src="<?php echo $destaque->imagem; ?>" alt="<?php echo $destaque->titulo; ?>" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>"><?php echo $destaque->titulo; ?></a></p><br />
+		</li><br />
+		<?php } ?><br />
+	</ul><br />
+</div><br />
+<!-- /destaques --><br />
 [/code]</p>
 <p>Podemos ainda adicionar uma condição ao redor da div#blocoDestaques para ter certeza que nosso script irá funcionar e não vai deixar nenhum buraco no site:</p>
 <p>[code language="php"]<br />
-&lt;!-- destaques --&gt;<br />
-&lt;?php require_once('mysql_destaques.php'); ?&gt;<br />
-&lt;?php if (isset($lista_destaques) AND !empty($lista_destaques)) { ?&gt;<br />
-&lt;div id=&quot;blocoDestaques&quot;&gt;</p>
-<p>	&lt;a class=&quot;faixa&quot; href=&quot;#&quot; title=&quot;&quot;&gt;&lt;!-- --&gt;&lt;/a&gt;</p>
-<p>	&lt;ul&gt;<br />
-		&lt;?php foreach ($lista_destaques AS $destaque) { ?&gt;<br />
-		&lt;li&gt;<br />
-			&lt;a href=&quot;&lt;?php echo $destaque-&gt;link; ?&gt;&quot; title=&quot;&lt;?php echo $destaque-&gt;titulo; ?&gt;&quot;&gt;<br />
-				&lt;img src=&quot;&lt;?php echo $destaque-&gt;imagem; ?&gt;&quot; alt=&quot;&lt;?php echo $destaque-&gt;titulo; ?&gt;&quot; /&gt;<br />
-			&lt;/a&gt;<br />
-			&lt;div class=&quot;fundo&quot;&gt;&lt;!--  --&gt;&lt;/div&gt;<br />
-			&lt;p&gt;&lt;a href=&quot;&lt;?php echo $destaque-&gt;link; ?&gt;&quot; title=&quot;&lt;?php echo $destaque-&gt;titulo; ?&gt;&quot;&gt;&lt;?php echo $destaque-&gt;titulo; ?&gt;&lt;/a&gt;&lt;/p&gt;<br />
-		&lt;/li&gt;<br />
-		&lt;?php } ?&gt;<br />
-	&lt;/ul&gt;<br />
-&lt;/div&gt;<br />
-&lt;?php } ?&gt;<br />
-&lt;!-- /destaques --&gt;<br />
+<!-- destaques --><br />
+<?php require_once('mysql_destaques.php'); ?><br />
+<?php if (isset($lista_destaques) AND !empty($lista_destaques)) { ?><br />
+<div id="blocoDestaques"></p>
+<p>	<a class="faixa" href="#" title=""><!-- --></a></p>
+<p>	<ul><br />
+		<?php foreach ($lista_destaques AS $destaque) { ?><br />
+		<li><br />
+			<a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>"><br />
+				<img src="<?php echo $destaque->imagem; ?>" alt="<?php echo $destaque->titulo; ?>" /><br />
+			</a><br />
+			<div class="fundo"><!--  --></div><br />
+			<p><a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>"><?php echo $destaque->titulo; ?></a></p><br />
+		</li><br />
+		<?php } ?><br />
+	</ul><br />
+</div><br />
+<?php } ?><br />
+<!-- /destaques --><br />
 [/code]</p>
 <p>Com essa condição, se por algum acaso do destino o array <code>$lista_destaques</code> não existir ou for vazio (nenhum destaque encontrado), nós não exibimos nenhum HTML do bloco de destaques, deixando assim o site com um elemento a menos, mas funcionando.</p>
 <p>E o nosso sistema de destaques está pronto!</p>

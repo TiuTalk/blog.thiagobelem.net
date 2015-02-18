@@ -21,23 +21,23 @@ tags:
 <p>Criei um pedacinho de código pequeno porém muito do útil que ajuda a evitar esse mal da seguinte forma: assim que o formulário é enviado ele desabilita todos os campos e botões de submit, fazendo com que não seja possível alterar os dados ou enviar o formulário novamente.</p>
 <p>É só incluir essas linhas no seu site:<br />
 [code language="javascript"]$(function() {<br />
-    $(&quot;form&quot;).submit(function() {<br />
+    $("form").submit(function() {<br />
     	// ReadOnly em todos os inputs<br />
-    	$(&quot;input&quot;, this).attr(&quot;readonly&quot;, true);<br />
+    	$("input", this).attr("readonly", true);<br />
     	// Desabilita os submits<br />
-    	$(&quot;input[type='submit'],input[type='image']&quot;, this).attr(&quot;disabled&quot;, true);<br />
+    	$("input[type='submit'],input[type='image']", this).attr("disabled", true);<br />
     	return true;<br />
     });<br />
 });[/code]</p>
 <p>Mas há um probleminha com esse código: se você usar algum tipo de validação por JavaScript (também ativado pelo submit do formulário) o codigo não vai funcinar caso o usuário tenha digitado algo que invalide o formulário.</p>
 <p>Uma solução seria chamar essa função de validação dentro desse código jQuery, da seguinte forma:<br />
 [code language="javascript" highlight="3"]$(function() {<br />
-	$(&quot;form&quot;).submit(function() {<br />
+	$("form").submit(function() {<br />
 		if (minhaFuncao() == true) {<br />
 			// ReadOnly em todos os inputs<br />
-			$(&quot;input&quot;, this).attr(&quot;readonly&quot;, true);<br />
+			$("input", this).attr("readonly", true);<br />
 			// Desabilita os submits<br />
-			$(&quot;input[type='submit'],input[type='image']&quot;, this).attr(&quot;disabled&quot;, true);<br />
+			$("input[type='submit'],input[type='image']", this).attr("disabled", true);<br />
 			return true;<br />
 		} else {<br />
 			return false;<br />

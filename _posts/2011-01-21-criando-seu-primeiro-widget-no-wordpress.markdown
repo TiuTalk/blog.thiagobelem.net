@@ -28,16 +28,16 @@ tags:
 </ul>
 <p>Sabendo disso.. vamos começar a nossa classe:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>/**<br />
  * Widget de Sobre o Autor<br />
  *<br />
- * @author Thiago Belem &lt;contato@thiagobelem.net&gt;<br />
+ * @author Thiago Belem <contato@thiagobelem.net><br />
  * @link http://blog.thiagobelem.net/criando-seu-primeiro-widget-no-wordpress/<br />
  */<br />
 class SobreAutorWidget extends WP_Widget {</p>
 <p>}</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Lembrando que a sua classe DEVE estender a classe <strong>WP_Widget</strong>, do próprio WordPress.</p>
 <p>Agora vamos inserir quatro métodos vazios para deixar a estrutura da classe pronta:</p>
@@ -81,9 +81,9 @@ class SobreAutorWidget extends WP_Widget {</p>
 	 */<br />
 	public function form($instancia) {<br />
 		$widget['link_autor'] = (boolean)$instancia['link_autor'];<br />
-		?&gt;<br />
-		&lt;p&gt;&lt;label for=&quot;&lt;?php echo $this-&gt;get_field_id('link_autor'); ?&gt;&quot;&gt;&lt;input id=&quot;&lt;?php echo $this-&gt;get_field_id('link_autor'); ?&gt;&quot; name=&quot;&lt;?php echo $this-&gt;get_field_name('link_autor'); ?&gt;&quot; type=&quot;checkbox&quot; value=&quot;1&quot; &lt;?php if ($widget['link_autor']) echo 'checked=&quot;checked&quot;'; ?&gt; /&gt; &lt;?php _e('Exibe o link do autor'); ?&gt;&lt;/label&gt;&lt;/p&gt;<br />
-		&lt;?php<br />
+		?><br />
+		<p><label for="<?php echo $this->get_field_id('link_autor'); ?>"><input id="<?php echo $this->get_field_id('link_autor'); ?>" name="<?php echo $this->get_field_name('link_autor'); ?>" type="checkbox" value="1" <?php if ($widget['link_autor']) echo 'checked="checked"'; ?> /> <?php _e('Exibe o link do autor'); ?></label></p><br />
+		<?php<br />
 	}[/code]</p>
 <p>Eu sei que parece complicado, mas estamos apenas criando um parágrafo com um checkbox e um label... Para definir o ID e o name do input utilizamos recursos do próprio WordPress, assim não caímos no problema de usar um name que já exista... O resultado é um checkbox onde você pode decidir se exibe ou não o link do autor no widget.</p>
 <p>Logo no começo do método pegamos uma informação da instância atual do widget, assim caso estejamos editando um widget, saberemos a opção salva no banco de dados.</p>
@@ -116,10 +116,10 @@ class SobreAutorWidget extends WP_Widget {</p>
 <p>Agora vamos trazer alguns dados sobre o autor:</p>
 <p>[code language="php" firstline="27"]<br />
 		$autor = array(<br />
-			'nome' =&gt; get_the_author_meta('display_name'),<br />
-			'email' =&gt; get_the_author_meta('user_email'),<br />
-			'descricao' =&gt; get_the_author_meta('description'),<br />
-			'link' =&gt; get_the_author_meta('user_url')<br />
+			'nome' => get_the_author_meta('display_name'),<br />
+			'email' => get_the_author_meta('user_email'),<br />
+			'descricao' => get_the_author_meta('description'),<br />
+			'link' => get_the_author_meta('user_url')<br />
 		);<br />
 [/code]</p>
 <p>Feito isso é só começar a exibir o HTML do Widget:<br />
@@ -128,17 +128,17 @@ class SobreAutorWidget extends WP_Widget {</p>
 		echo $argumentos['before_widget'];<br />
 		echo $argumentos['before_title'] . $argumentos['widget_name'] . $argumentos['after_title'];<br />
 		echo get_avatar($autor['email'], $size = '59');<br />
-		echo &quot;&lt;h4&gt;{$autor['nome']}&lt;/h4&gt;&quot;;<br />
-		echo &quot;&lt;p&gt;{$autor['descricao']}&lt;/p&gt;&quot;;<br />
-		if (isset($instancia['link_autor']) &amp;&amp; $instancia['link_autor']) {<br />
-			echo '&lt;p&gt;Visite o &lt;a href=&quot;'. $autor['link'] .'&quot; title=&quot;'. $autor['nome'] .'&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;site do autor&lt;/a&gt;&lt;/p&gt;';<br />
+		echo "<h4>{$autor['nome']}</h4>";<br />
+		echo "<p>{$autor['descricao']}</p>";<br />
+		if (isset($instancia['link_autor']) && $instancia['link_autor']) {<br />
+			echo '<p>Visite o <a href="'. $autor['link'] .'" title="'. $autor['nome'] .'" rel="nofollow" target="_blank">site do autor</a></p>';<br />
 		}<br />
 		echo $argumentos['after_widget'];<br />
 [/code]</p>
 <p>E o nosso widget está pronto!</p>
 <p>Agora você precisa de apenas uma linha para habilitá-lo no seu painel de controle:<br />
 [code language="php"]<br />
-add_action('widgets_init', create_function('', 'return register_widget(&quot;SobreAutorWidget&quot;);'));<br />
+add_action('widgets_init', create_function('', 'return register_widget("SobreAutorWidget");'));<br />
 [/code]</p>
 <p>[caption id="attachment_1389" align="aligncenter" width="263" caption="Widget em funcionamento"]<img src="/assets/uploads/2011/01/1295580557334.png" alt="" title="Widget sobre o autor" width="263" height="120" class="size-full wp-image-1389" />[/caption]</p>
 <p>Espero que tenham gostado! Agora é só você editar o CSS do seu blog para deixar o widget bem apresentável. ;)</p>

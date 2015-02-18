@@ -20,7 +20,7 @@ tags:
 <p>Manipular os erros de forma correta, além de deixar o site mais "bonito" faz com que você saiba, em <strong>tempo real</strong>, o que acontece com aquele seu site de 4 anos atrás que você nem monitora mais, pois ele te envia um e-mail dizendo o nome do site, o arquivo e a linha que deu erro.</p>
 <h3>Arquivo para a manipulação de erros</h3>
 <p>Para iniciar a manipular os seus erros é só dar um include/require nesse arquivo logo no começo do seu site. E não se esqueça de mudar as configurações entre as linhas 8 e 14.</p>
-<p>[code language="php"]&lt;?php<br />
+<p>[code language="php"]<?php<br />
 /**<br />
  *  Arquivo para manipulação de erros de forma segura:<br />
  *   envia um e-mail para o administrador com as informações sobre o erro<br />
@@ -44,30 +44,30 @@ $_CONFIG['errorHandler']['toName'] = 'seu nome';</p>
 		//$backtrace = array_reverse(debug_backtrace());<br />
 	} else {<br />
 		$exc = func_get_arg(0);<br />
-		$errno = $exc-&gt;getCode(); // Nome do erro<br />
-		$errstr = $exc-&gt;getMessage(); // Descrição do erro<br />
-		$errfile = $exc-&gt;getFile(); // Arquivo<br />
-		$errline = $exc-&gt;getLine(); // Linha<br />
-		//$backtrace = $exc-&gt;getTrace();<br />
+		$errno = $exc->getCode(); // Nome do erro<br />
+		$errstr = $exc->getMessage(); // Descrição do erro<br />
+		$errfile = $exc->getFile(); // Arquivo<br />
+		$errline = $exc->getLine(); // Linha<br />
+		//$backtrace = $exc->getTrace();<br />
 	}<br />
 	// A variável $backtrace pode ser usada para fazer um Back Trace do erro</p>
-<p>	// &quot;Nome&quot; de cada tipo de erro<br />
+<p>	// "Nome" de cada tipo de erro<br />
 	$errorType = array (<br />
-		E_ERROR =&gt; 'ERROR',<br />
-		E_WARNING =&gt; 'WARNING',<br />
-		E_PARSE =&gt; 'PARSING ERROR',<br />
-		E_NOTICE =&gt; 'NOTICE',<br />
-		E_CORE_ERROR =&gt; 'CORE ERROR',<br />
-		E_CORE_WARNING =&gt; 'CORE WARNING',<br />
-		E_COMPILE_ERROR =&gt; 'COMPILE ERROR',<br />
-		E_COMPILE_WARNING =&gt; 'COMPILE WARNING',<br />
-		E_USER_ERROR =&gt; 'USER ERROR',<br />
-		E_USER_WARNING =&gt; 'USER WARNING',<br />
-		E_USER_NOTICE =&gt; 'USER NOTICE',<br />
-		E_STRICT =&gt; 'STRICT NOTICE',<br />
-		E_RECOVERABLE_ERROR =&gt; 'RECOVERABLE ERROR'<br />
+		E_ERROR => 'ERROR',<br />
+		E_WARNING => 'WARNING',<br />
+		E_PARSE => 'PARSING ERROR',<br />
+		E_NOTICE => 'NOTICE',<br />
+		E_CORE_ERROR => 'CORE ERROR',<br />
+		E_CORE_WARNING => 'CORE WARNING',<br />
+		E_COMPILE_ERROR => 'COMPILE ERROR',<br />
+		E_COMPILE_WARNING => 'COMPILE WARNING',<br />
+		E_USER_ERROR => 'USER ERROR',<br />
+		E_USER_WARNING => 'USER WARNING',<br />
+		E_USER_NOTICE => 'USER NOTICE',<br />
+		E_STRICT => 'STRICT NOTICE',<br />
+		E_RECOVERABLE_ERROR => 'RECOVERABLE ERROR'<br />
 	);</p>
-<p>	// Define o &quot;nome&quot; do erro atual<br />
+<p>	// Define o "nome" do erro atual<br />
 	if (array_key_exists($errno, $errorType)) {<br />
 		$err = $errorType[$errno];<br />
 	} else {<br />
@@ -75,41 +75,41 @@ $_CONFIG['errorHandler']['toName'] = 'seu nome';</p>
 	}</p>
 <p>	// Se está ativo o LOG de erros, salva uma mensagem no log, usando o formato padrão<br />
     if (ini_get('log_errors'))<br />
-        error_log(sprintf(&quot;PHP %s:  %s in %s on line %d&quot;, $err, $errstr, $errfile, $errline));</p>
+        error_log(sprintf("PHP %s:  %s in %s on line %d", $err, $errstr, $errfile, $errline));</p>
 <p>	// Mensagem para o email<br />
 	$mensagem = '';<br />
-	$mensagem .= '[ ERRO NO PHP ]' . &quot;\r\n&quot;;<br />
-	$mensagem .= 'Site: ' . $_CONFIG['errorHandler']['siteName'] . &quot;\r\n&quot;;<br />
-	$mensagem .= 'Tipo de erro: ' . $err . &quot;\r\n&quot;;<br />
-	$mensagem .= 'Arquivo: ' . $errfile . &quot;\r\n&quot;;<br />
-	$mensagem .= 'Linha: ' . $errline . &quot;\r\n&quot;;<br />
-	$mensagem .= 'Descrição: ' . $errstr . &quot;\r\n&quot;;<br />
+	$mensagem .= '[ ERRO NO PHP ]' . "\r\n";<br />
+	$mensagem .= 'Site: ' . $_CONFIG['errorHandler']['siteName'] . "\r\n";<br />
+	$mensagem .= 'Tipo de erro: ' . $err . "\r\n";<br />
+	$mensagem .= 'Arquivo: ' . $errfile . "\r\n";<br />
+	$mensagem .= 'Linha: ' . $errline . "\r\n";<br />
+	$mensagem .= 'Descrição: ' . $errstr . "\r\n";<br />
 	if (isset($_SERVER['REMOTE_ADDR'])) {<br />
-		$mensagem .= &quot;\r\n&quot;;<br />
-		$mensagem .= '[ DADOS DO VISITANTE ]' . &quot;\r\n&quot;;<br />
-		$mensagem .= 'IP: ' . $_SERVER['REMOTE_ADDR'] . &quot;\r\n&quot;;<br />
-		$mensagem .= 'User Agent: ' . $_SERVER['HTTP_USER_AGENT'] . &quot;\r\n&quot;;<br />
+		$mensagem .= "\r\n";<br />
+		$mensagem .= '[ DADOS DO VISITANTE ]' . "\r\n";<br />
+		$mensagem .= 'IP: ' . $_SERVER['REMOTE_ADDR'] . "\r\n";<br />
+		$mensagem .= 'User Agent: ' . $_SERVER['HTTP_USER_AGENT'] . "\r\n";<br />
 	}<br />
 	if (isset($_SERVER['REQUEST_URI'])) {<br />
-		$url = (preg_match('/HTTPS/i', $_SERVER[&quot;SERVER_PROTOCOL&quot;])) ? 'https' : 'http';<br />
+		$url = (preg_match('/HTTPS/i', $_SERVER["SERVER_PROTOCOL"])) ? 'https' : 'http';<br />
 		$url .= '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];<br />
-		$mensagem .= &quot;\r\n&quot;;<br />
-		$mensagem .= 'URL: ' . $url . &quot;\r\n&quot;;<br />
+		$mensagem .= "\r\n";<br />
+		$mensagem .= 'URL: ' . $url . "\r\n";<br />
 	}<br />
 	if (isset($_SERVER['HTTP_REFERER'])) {<br />
-		$mensagem .= 'Referer: ' . $_SERVER['HTTP_REFERER'] . &quot;\r\n&quot;;<br />
+		$mensagem .= 'Referer: ' . $_SERVER['HTTP_REFERER'] . "\r\n";<br />
 	}<br />
-	$mensagem .= &quot;\r\n&quot;;<br />
-	$mensagem .= 'Data: ' . date('d/m/Y H:i:s'). &quot;\r\n&quot;;</p>
+	$mensagem .= "\r\n";<br />
+	$mensagem .= 'Data: ' . date('d/m/Y H:i:s'). "\r\n";</p>
 <p>	// Mensagem simples<br />
 	$mensagemSimples .= $err . ': ' . $errstr . ' no arquivo ' . $errfile . ' (Linha ' . $errline . ')';</p>
 <p>	// Começa a definição do e-mail<br />
 	$assunto = '[' . $err . '] ' . $_CONFIG['errorHandler']['siteName'] . ' - ' . date('d/m/y H:i:s');</p>
 <p>	$headers = '';<br />
-	$headers .= 'From: ' . $_CONFIG['errorHandler']['fromName'] . ' &lt;' . $_CONFIG['errorHandler']['from'] . '&gt;' . &quot;\r\n&quot;;<br />
-	$headers .= 'To: ' . $_CONFIG['errorHandler']['toName'] . ' &lt;' . $_CONFIG['errorHandler']['to'] . '&gt;' . &quot;\r\n&quot;;<br />
-	$headers .= 'Reply-To: ' . $_CONFIG['errorHandler']['fromName'] . ' &lt;' . $_CONFIG['errorHandler']['from'] . '&gt;' . &quot;\r\n&quot;;<br />
-	$headers .= 'Return-Path: ' . $_CONFIG['errorHandler']['fromName'] . ' &lt;' . $_CONFIG['errorHandler']['from'] . '&gt;' . &quot;\r\n&quot;;<br />
+	$headers .= 'From: ' . $_CONFIG['errorHandler']['fromName'] . ' <' . $_CONFIG['errorHandler']['from'] . '>' . "\r\n";<br />
+	$headers .= 'To: ' . $_CONFIG['errorHandler']['toName'] . ' <' . $_CONFIG['errorHandler']['to'] . '>' . "\r\n";<br />
+	$headers .= 'Reply-To: ' . $_CONFIG['errorHandler']['fromName'] . ' <' . $_CONFIG['errorHandler']['from'] . '>' . "\r\n";<br />
+	$headers .= 'Return-Path: ' . $_CONFIG['errorHandler']['fromName'] . ' <' . $_CONFIG['errorHandler']['from'] . '>' . "\r\n";<br />
 	$headers .= 'X-Mailer: PHP/' . phpversion();</p>
 <p>	// Faz um envio simples<br />
 	$enviado = @mail($_CONFIG['errorHandler']['to'], $assunto, $mensagem, $headers);</p>
@@ -122,11 +122,11 @@ $_CONFIG['errorHandler']['toName'] = 'seu nome';</p>
 <p>// Define o seu novo manipulador de erros<br />
 set_error_handler('manipuladorErros');</p>
 <p>echo $n;<br />
-?&gt;[/code]</p>
+?>[/code]</p>
 <p>Caso você precise mudar a forma com qual o email é enviado, é só alterar ali em cima, entre as linhas 65 e 105.</p>
 <h3>Causando um erro</h3>
 <p>Ao executar o seguinte script (exibir uma variável que não existe):</p>
-<p>[code language="php" light="true"]&lt;?php echo $n; ?&gt; [/code]</p>
+<p>[code language="php" light="true"]<?php echo $n; ?> [/code]</p>
 <p>Termos a seguinte resposta por email:</p>
 <p>[code language="plain" light="true"][ ERRO NO PHP ]<br />
 Site: Meu site<br />

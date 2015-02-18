@@ -22,25 +22,25 @@ tags:
 <p><br/><br/></p>
 <h3>2. Indentação Consistente</h3>
 <p>Indentação é, sem dúvida, a parte mais importante desse artigo... Sem uma boa indentação o código perde toda a hierarquia de comandos... Existem várias formas de indentar o seu código, todas elas são válidas, mas algumas são mais recomendadas. Veja dois exemplos dos estilos de indentação mais utilizados:</p>
-<p>[code language="php"]&lt;?php</p>
-<p>if ($nota &gt;= 7) {<br />
+<p>[code language="php"]<?php</p>
+<p>if ($nota >= 7) {<br />
 	echo 'Você foi aprovado!';<br />
 } else {<br />
-	if ($nota &gt; 3) {<br />
+	if ($nota > 3) {<br />
 		echo 'Você precisa fazer prova final!';<br />
 	} else {<br />
 		echo 'Você foi reprovado!';<br />
 	}<br />
 }</p>
-<p>?&gt;[/code]<br />
-[code language="php"]&lt;?php</p>
-<p>if ($nota &gt;= 7)<br />
+<p>?>[/code]<br />
+[code language="php"]<?php</p>
+<p>if ($nota >= 7)<br />
 {<br />
 	echo 'Você foi aprovado!';<br />
 }<br />
 else<br />
 {<br />
-	if ($nota &gt; 3)<br />
+	if ($nota > 3)<br />
 	{<br />
 		echo 'Você precisa fazer prova final!';<br />
 	}<br />
@@ -49,12 +49,12 @@ else<br />
 		echo 'Você foi reprovado!';<br />
 	}<br />
 }</p>
-<p>?&gt;[/code]<br />
+<p>?>[/code]<br />
 Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é tão dificil assim perceber onde começa e termina cada bloco... Há um <a href="http://en.wikipedia.org/wiki/Indent_style" title="Estilos de Indentação" target="_blank">artigo na Wikipédia</a> que mostra os vários estilos de indentação.</p>
 <p><br/></p>
 <h3>3. Evite comentários óbvios</h3>
 <p>Comentar o seu código é sempre bom... Comentários só pesam no tamanho do arquivo. E não é só por isso que vamos sair comentando todas as nossas linhas... Além de duplicar (ou triplicar) o nosso tempo de desenvolvimento, nosso codigo vai ficar muito poluído e explicitar o óbivio... Vejamos alguns exemplos que não precisam nem ser comentados (literalmente):</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>// Se o $nome for igual a Thiago<br />
 if ($nome == 'Thiago')  {<br />
 	// Exibe uma mensagem de boas vindas<br />
@@ -62,30 +62,30 @@ if ($nome == 'Thiago')  {<br />
 	// Calcula a idade da pessoa<br />
 	$idade = calculaIdade($nome);<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p><br/></p>
 <h3>4. Agrupamento de código</h3>
 <p>Muitas vezes fazemos isso sem perceber... E é uma ótima prática! Agrupe as linhas de código por suas funções/tarefas... Veja um exemplo:</p>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>// Lista os produtos em destaque<br />
-$sql = &quot;SELECT * FROM `produtos` WHERE `destaque` = 1&quot;;<br />
+$sql = "SELECT * FROM `produtos` WHERE `destaque` = 1";<br />
 $query = mysql_query($sql);<br />
 while ($produto = mysql_fetch_assoc($query)) {<br />
-	echo $produto['nome'] . '&lt;br /&gt;';<br />
+	echo $produto['nome'] . '<br />';<br />
 }</p>
 <p>// Lista o apelido dos usuários online<br />
-$sql = &quot;SELECT `apelido` FROM `usuarios` WHERE `online` = 1&quot;;<br />
+$sql = "SELECT `apelido` FROM `usuarios` WHERE `online` = 1";<br />
 $query = mysql_query($sql);<br />
 while ($usuario = mysql_fetch_assoc($query)) {<br />
-	echo '»' . $usuario['apelido'] . '&lt;br /&gt;';<br />
+	echo '»' . $usuario['apelido'] . '<br />';<br />
 }</p>
-<p>?&gt;[/code]</p>
+<p>?>[/code]</p>
 <p><br/></p>
 <h3>5. Os princípios DRY, DIE e KISS</h3>
 <p>Eu me lembro desses três principios diáriamente quando estou criando código e, caso você consiga entendê-los, compreendê-los e usá-los, você vai notar uma incrivel melhoria na qualidade e eficiência do seu código. Vamos ao nome e significado de cada um:</p>
-<p>&raquo; <strong style="background: gray; color: white">DRY</strong> ou <strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself (<em>Não Se Repita</em>) - Baseia-se no conceito de que computadores e sistemas são feitos da automação de tarefas repetitivas e o seu código não deve ser diferete... Você não deve duplicar uma linha de código pra fazer a mesma coisa!</p>
-<p>&raquo; <strong style="background: gray; color: white">DIE</strong> ou <strong>D</strong>uplication <strong>I</strong>s <strong>E</strong>vil (<em>Duplicação é malígna/má</em>) - Segue o mesmo conceito do DRY.</p>
-<p>&raquo; <strong style="background: gray; color: white">KISS</strong> ou <strong>K</strong>eep <strong>I</strong>t <strong>S</strong>imple, <strong>S</strong>tupid (<em>Mantenha-o simples, estúpido</em>) - Determina que quanto mais simples e enxuto for seu código, melhor. Simples e rápido.</p>
+<p>» <strong style="background: gray; color: white">DRY</strong> ou <strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself (<em>Não Se Repita</em>) - Baseia-se no conceito de que computadores e sistemas são feitos da automação de tarefas repetitivas e o seu código não deve ser diferete... Você não deve duplicar uma linha de código pra fazer a mesma coisa!</p>
+<p>» <strong style="background: gray; color: white">DIE</strong> ou <strong>D</strong>uplication <strong>I</strong>s <strong>E</strong>vil (<em>Duplicação é malígna/má</em>) - Segue o mesmo conceito do DRY.</p>
+<p>» <strong style="background: gray; color: white">KISS</strong> ou <strong>K</strong>eep <strong>I</strong>t <strong>S</strong>imple, <strong>S</strong>tupid (<em>Mantenha-o simples, estúpido</em>) - Determina que quanto mais simples e enxuto for seu código, melhor. Simples e rápido.</p>
 <p>Algumas pessoas até brincando com "Dry, kiss and die", algo como "Seque, beije e morra"... Se algum dia alguém te falar, isso, você já sabe o que fazer! :)</p>
 <p><br/></p>
 <h3>6. Nomes crutos para variáveis temporárias</h3>
@@ -93,9 +93,9 @@ while ($usuario = mysql_fetch_assoc($query)) {<br />
 <p><br/></p>
 <h3>7. Evidencie os termos especiais do SQL</h3>
 <p>Cansei de ver pessoas escrevendo consultas SQL assim:<br />
-[code language="sql" light="true"]select nome from produtos where preco &gt; 10 limit 1[/code]<br />
+[code language="sql" light="true"]select nome from produtos where preco > 10 limit 1[/code]<br />
 Quando não evidenciamos os termos especiais (protegidos) fica dificil entender com facilidade o que a consulta faz... Seria muito mais produtivo fazer algo assim:<br />
-[code language="sql" light="true"]SELECT `nome` FROM `produtos` WHERE `preco` &gt; 10 LIMIT 1[/code]<br />
+[code language="sql" light="true"]SELECT `nome` FROM `produtos` WHERE `preco` > 10 LIMIT 1[/code]<br />
 Onde as palavras protegidas do SQL são deixadas em maiúscula e os nomes de colunas e tabelas são colocados entre crases.</p>
 <p><br/></p>
 <h3>8. Refatoração de código</h3>

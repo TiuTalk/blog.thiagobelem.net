@@ -61,39 +61,39 @@ tags:
 <p>Primeiro de tudo, precisamos validar os dados passados por parâmetro:<br />
 [code language="php" firstline="114"]<br />
 		// Verifica se é um usuário válido<br />
-		if ($this-&gt;validaUsuario($usuario, $senha)) {</p>
+		if ($this->validaUsuario($usuario, $senha)) {</p>
 <p>			// Continuaremos aqui...</p>
 <p>		} else {<br />
-			$this-&gt;erro = 'Usuário inválido';<br />
+			$this->erro = 'Usuário inválido';<br />
 			return false;<br />
 		}<br />
 [/code]</p>
 <p>Já sabemos se o usuário foi validado, agora nós vamos verificar se é necessário (e possível) iniciar a sessão:<br />
 [code language="php" firstline="117"]<br />
 			// Inicia a sessão?<br />
-			if ($this-&gt;iniciaSessao AND !isset($_SESSION)) {<br />
+			if ($this->iniciaSessao AND !isset($_SESSION)) {<br />
 				session_start();<br />
 			}<br />
 [/code]</p>
 <p>O próximo passo é atrazer (ou não) os dados do banco de dados para a sessão:<br />
 [code language="php" firstline="122"]<br />
 			// Traz dados da tabela?<br />
-			if ($this-&gt;dados != false) {<br />
+			if ($this->dados != false) {<br />
 				// Adiciona o campo do usuário na lista de dados<br />
-				if (!in_array($this-&gt;campos['usuario'], $this-&gt;dados)) {<br />
-					$this-&gt;dados[] = 'usuario';<br />
+				if (!in_array($this->campos['usuario'], $this->dados)) {<br />
+					$this->dados[] = 'usuario';<br />
 				}</p>
 <p>				// Monta o formato SQL da lista de campos<br />
-				$dados = '`' . join('`, `', array_unique($this-&gt;dados)) . '`';</p>
+				$dados = '`' . join('`, `', array_unique($this->dados)) . '`';</p>
 <p>				// Consulta os dados<br />
-				$sql = &quot;SELECT {$dados}<br />
-						FROM `{$this-&gt;bancoDeDados}`.`{$this-&gt;tabelaUsuarios}`<br />
-						WHERE `{$this-&gt;campos['usuario']}` = '{$usuario}'&quot;;<br />
+				$sql = "SELECT {$dados}<br />
+						FROM `{$this->bancoDeDados}`.`{$this->tabelaUsuarios}`<br />
+						WHERE `{$this->campos['usuario']}` = '{$usuario}'";<br />
 				$query = mysql_query($sql);</p>
 <p>				// Se a consulta falhou<br />
 				if (!$query) {<br />
 					// A consulta foi mal sucedida, retorna false<br />
-					$this-&gt;erro = 'A consulta dos dados é inválida';<br />
+					$this->erro = 'A consulta dos dados é inválida';<br />
 					return false;<br />
 				} else {<br />
 					// Traz os dados encontrados para um array<br />
@@ -101,8 +101,8 @@ tags:
 					// Limpa a consulta da memória<br />
 					mysql_free_result($query);</p>
 <p>					// Passa os dados para a sessão<br />
-					foreach ($dados AS $chave=&gt;$valor) {<br />
-						$_SESSION[$this-&gt;prefixoChaves . $chave] = $valor;<br />
+					foreach ($dados AS $chave=>$valor) {<br />
+						$_SESSION[$this->prefixoChaves . $chave] = $valor;<br />
 					}<br />
 				}<br />
 			}<br />
@@ -113,14 +113,14 @@ tags:
 <p>Precisamos ainda definir um valor na sessão e criar (caso seja possível) o cookie que irá ajudar na identificação (e segurança) do usuário:</p>
 <p>[code language="php" firstline="156"]<br />
 			// Usuário logado com sucesso<br />
-			$_SESSION[$this-&gt;prefixoChaves . 'logado'] = true;</p>
+			$_SESSION[$this->prefixoChaves . 'logado'] = true;</p>
 <p>			// Define um cookie para maior segurança?<br />
-			if ($this-&gt;cookie) {<br />
+			if ($this->cookie) {<br />
 				// Monta uma cookie com informações gerais sobre o usuário: usuario, ip e navegador<br />
 				$valor = join('#', array($usuario, $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT']));</p>
 <p>				// Encripta o valor do cookie<br />
 				$valor = sha1($valor);</p>
-<p>				setcookie($this-&gt;prefixoChaves . 'token', $valor, 0, '/');<br />
+<p>				setcookie($this->prefixoChaves . 'token', $valor, 0, '/');<br />
 			}</p>
 <p>			// Fim da verificação, retorna true<br />
 			return true;<br />

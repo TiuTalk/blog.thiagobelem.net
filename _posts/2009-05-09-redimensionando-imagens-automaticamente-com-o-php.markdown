@@ -17,37 +17,37 @@ tags: []
 <p>Existe uma classe pronta de PHP que eu gosto muito, chama <a href="http://wideimage.sourceforge.net/" target="_blank">WideImage</a>... Vou mostrar aqui como usá-la para redimensionar (<em>resize</em>) e cortar (<em>crop</em>) imagens automaticamente, gerando (ou não) arquivos novos. Para um sistema que gera miniaturas (<em>thumbs</em>) isso é mais do que o suficiente.</p>
 <h3>Redimensionando imagens</h3>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>// Chama o arquivo com a classe WideImage<br />
 require('/caminho/WideImage.inc.php');</p>
 <p>// Carrega a imagem a ser manipulada<br />
 $image = wiImage::load('/caminho/foto.jpg');</p>
 <p>// Redimensiona a imagem<br />
-$image = $image-&gt;resize(400, 300);</p>
+$image = $image->resize(400, 300);</p>
 <p>// Salva a imagem em um arquivo (novo ou não)<br />
-$image-&gt;saveToFile('/caminho/nova_foto.jpg');</p>
-<p>?&gt;<br />
+$image->saveToFile('/caminho/nova_foto.jpg');</p>
+<p>?><br />
 [/code]</p>
 <h3>Cortando imagens</h3>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>// Chama o arquivo com a classe WideImage<br />
 require('/caminho/WideImage.inc.php');</p>
 <p>// Carrega a imagem a ser manipulada<br />
 $image = wiImage::load('/caminho/foto.jpg');</p>
 <p>// Corta a imagem (Argumentos: X1, Y1, X2, Y2)<br />
-$image = $image-&gt;crop(10, 20, 110, 120);<br />
+$image = $image->crop(10, 20, 110, 120);<br />
 // Faz um quadrado da posição [X1;Y1] até [X2;Y2]</p>
 <p>// Salva a imagem em um arquivo (novo ou não)<br />
-$image-&gt;saveToFile('/caminho/nova_foto.jpg');</p>
-<p>?&gt;[/code]</p>
+$image->saveToFile('/caminho/nova_foto.jpg');</p>
+<p>?>[/code]</p>
 <h3>Mudando a qualidade de imagens</h3>
-<p>[code language="php"]&lt;?php</p>
+<p>[code language="php"]<?php</p>
 <p>// Chama o arquivo com a classe WideImage<br />
 require('/caminho/WideImage.inc.php');</p>
 <p>// Carrega a imagem a ser manipulada<br />
 $image = wiImage::load('/caminho/foto.jpg');</p>
 <p>// Salva a imagem em um arquivo com 80% de qualidade<br />
-$image-&gt;saveToFile('/caminho/nova_foto.jpg', null, 80);</p>
-<p>?&gt;[/code]</p>
+$image->saveToFile('/caminho/nova_foto.jpg', null, 80);</p>
+<p>?>[/code]</p>
 <p>Estes foram apenas alguns exemplos... A classe pode fazer muito mais: tons de cinza, marca d'agua, rotacionar, flip, espelho, filtros PNG e muito mais... Acesse o <a href="http://wideimage.sourceforge.net/" target="_blank">site da classe</a> para ver outros exemplos e a documentação dos métodos dela.</p>
 <p>Espero que tenham gostado! ;)</p>

@@ -19,30 +19,30 @@ tags: []
 <p>Depois, crie a seguinte estrutura de pastas:</p>
 <p style="padding-left: 30px;"><strong>../app/locale/<span style="color: #99cc00;">br<span style="color: #000000;">/</span>LC_MESSAGE</span>/</strong></p>
 <p>Agora, dentro da pasta LC_MESSAGE criada, crie um arquivo chamado <span style="color: #ff6600;"><strong>default.po</strong></span> com o seguinte conteúdo:</p>
-<p>[code]msgid  &quot;January&quot;<br />
-msgstr &quot;Janeiro&quot;</p>
-<p>msgid  &quot;February&quot;<br />
-msgstr &quot;Fevereiro&quot;</p>
-<p>msgid  &quot;March&quot;<br />
-msgstr &quot;Março&quot;</p>
-<p>msgid  &quot;April&quot;<br />
-msgstr &quot;Abril&quot;</p>
-<p>msgid  &quot;May&quot;<br />
-msgstr &quot;Maio&quot;</p>
-<p>msgid  &quot;June&quot;<br />
-msgstr &quot;Junho&quot;</p>
-<p>msgid  &quot;July&quot;<br />
-msgstr &quot;Julho&quot;</p>
-<p>msgid  &quot;August&quot;<br />
-msgstr &quot;Agosto&quot;</p>
-<p>msgid  &quot;September&quot;<br />
-msgstr &quot;Setembro&quot;</p>
-<p>msgid  &quot;October&quot;<br />
-msgstr &quot;Outubro&quot;</p>
-<p>msgid  &quot;November&quot;<br />
-msgstr &quot;Novembro&quot;</p>
-<p>msgid  &quot;December&quot;<br />
-msgstr &quot;Dezembro&quot;</p>
+<p>[code]msgid  "January"<br />
+msgstr "Janeiro"</p>
+<p>msgid  "February"<br />
+msgstr "Fevereiro"</p>
+<p>msgid  "March"<br />
+msgstr "Março"</p>
+<p>msgid  "April"<br />
+msgstr "Abril"</p>
+<p>msgid  "May"<br />
+msgstr "Maio"</p>
+<p>msgid  "June"<br />
+msgstr "Junho"</p>
+<p>msgid  "July"<br />
+msgstr "Julho"</p>
+<p>msgid  "August"<br />
+msgstr "Agosto"</p>
+<p>msgid  "September"<br />
+msgstr "Setembro"</p>
+<p>msgid  "October"<br />
+msgstr "Outubro"</p>
+<p>msgid  "November"<br />
+msgstr "Novembro"</p>
+<p>msgid  "December"<br />
+msgstr "Dezembro"</p>
 <p>[/code]</p>
 <p>Agora é só ir no arquivo de configurações (../app/config/core.php) e inserir a seguinte linha:</p>
 <p>[code language="php"]Configure::write('Config.language', 'br');[/code]</p>

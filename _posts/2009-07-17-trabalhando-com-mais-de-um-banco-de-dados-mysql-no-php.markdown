@@ -15,7 +15,7 @@ tags:
 - MySQL
 ---
 <p>Hoje vi que há pouco material sobre como fazer o PHP conectar-se a dois servidores/bancos diferentes do MySQL... Então vamos direto ao ponto:</p>
-<p>[code language="php"]&lt;?php<br />
+<p>[code language="php"]<?php<br />
 	// Primeiro servidor<br />
 	$banco1 = mysql_connect('127.0.0.1', 'root', '');<br />
 	mysql_select_db('banco', $banco1);</p>
@@ -35,5 +35,5 @@ tags:
 <p>	// Consulta no 3° banco<br />
 	$sql3 = mysql_query('SELECT * FROM `noticias`', $banco3);<br />
 	// ... processa os dados ...<br />
-?&gt;[/code]</p>
+?>[/code]</p>
 <p>Espero que tenham gostado! :)</p>

@@ -32,11 +32,11 @@ tags:
 <h3>O código</h3>
 <p>O código para pegar os vídeos é bem simples, por isso vou colocá-lo inteiro sem explicá-lo passo-a-passo:</p>
 <p>[code language="php"]<br />
-&lt;?php<br />
+<?php<br />
 // Seu usuário do YouTube<br />
 $usuario = 'videosimprovaveis';</p>
 <p>// URL do Feed RSS de vídeos de um usuário<br />
-$youTube_UserFeedURL = 'http://gdata.youtube.com/feeds/base/users/%s/uploads?orderby=updated&amp;v=2';</p>
+$youTube_UserFeedURL = 'http://gdata.youtube.com/feeds/base/users/%s/uploads?orderby=updated&v=2';</p>
 <p>// Usa cURL para pegar o XML do feed<br />
 $cURL = curl_init(sprintf($youTube_UserFeedURL, $usuario));<br />
 curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);<br />
@@ -47,31 +47,31 @@ curl_close($cURL);</p>
 $xml = new SimpleXMLElement($resultado);</p>
 <p>$videos = array();</p>
 <p>// Passa por todos vídeos no RSS<br />
-foreach ($xml-&gt;entry AS $video) {<br />
-	$url = (string)$video-&gt;link['href'];</p>
+foreach ($xml->entry AS $video) {<br />
+	$url = (string)$video->link['href'];</p>
 <p>	// Quebra a URL do vídeo para pegar o ID<br />
 	parse_str(parse_url($url, PHP_URL_QUERY), $params);<br />
 	$id = $params['v'];</p>
 <p>	// Monta um array com os dados do vídeo<br />
 	$videos[] = array(<br />
-		'id' =&gt; $id,<br />
-		'titulo' =&gt; (string)$video-&gt;title,<br />
-		'thumbnail' =&gt; 'http://i' . rand(1, 4) .'.ytimg.com/vi/'. $id .'/hqdefault.jpg',<br />
-		'url' =&gt; $url<br />
+		'id' => $id,<br />
+		'titulo' => (string)$video->title,<br />
+		'thumbnail' => 'http://i' . rand(1, 4) .'.ytimg.com/vi/'. $id .'/hqdefault.jpg',<br />
+		'url' => $url<br />
 	);<br />
 }</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Ao final desse código teremos o array <code>$videos</code> com a lista de vídeos do usuário... Para exibir o thumbnail de cada um dos vídeos devidamente linkado para o vídeo (no YouTube), podemos fazer assim:</p>
 <p>[code language="php"]<br />
-&lt;h1&gt;Meus Vídeos&lt;/h1&gt;</p>
-<p>&lt;ul&gt;<br />
-	&lt;?php foreach ($videos AS $video) { ?&gt;<br />
-	&lt;li&gt;<br />
-		&lt;a href=&quot;&lt;?php echo $video['url'] ?&gt;&quot; title=&quot;&lt;?php echo $video['titulo'] ?&gt;&quot;&gt;&lt;img src=&quot;&lt;?php echo $video['thumbnail'] ?&gt;&quot; alt=&quot;&lt;?php echo $video['titulo'] ?&gt;&quot; width=&quot;150&quot; /&gt;&lt;/a&gt;<br />
-	&lt;/li&gt;<br />
-	&lt;?php } ?&gt;<br />
-&lt;/ul&gt;<br />
+<h1>Meus Vídeos</h1></p>
+<p><ul><br />
+	<?php foreach ($videos AS $video) { ?><br />
+	<li><br />
+		<a href="<?php echo $video['url'] ?>" title="<?php echo $video['titulo'] ?>"><img src="<?php echo $video['thumbnail'] ?>" alt="<?php echo $video['titulo'] ?>" width="150" /></a><br />
+	</li><br />
+	<?php } ?><br />
+</ul><br />
 [/code]</p>
 <p>Código-fonte do arquivo desse tutorial: <a href="http://snipplr.com/view/48433/listando-seus-vdeos-do-youtube-com-php/">Snipplr</a></p>
 <p>Espero que tenham gostado!</p>

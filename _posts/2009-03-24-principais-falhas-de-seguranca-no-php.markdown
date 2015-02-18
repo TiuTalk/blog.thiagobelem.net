@@ -17,7 +17,7 @@ tags: []
 <h4>Cuidados com a URL - Parte I</h4>
 <p>Uma falha muito comum são aqueles sites que, tentando usar um sistema "legal", acabam abusando da sorte... São sites que incluem o conteúdo <span style="color: #999999;">(via <strong>include()</strong>)</span> baseado em uma variável do método $_GET. Exemplo:</p>
 <p>[code language="php"]<br />
-&lt;?php<br />
+<?php<br />
 	// Verifica se a variável $_GET['pagina'] existe<br />
 	if (isset($_GET['pagina'])) {<br />
 		// Pega o valor da variável $_GET['pagina']<br />
@@ -27,7 +27,7 @@ tags: []
 		$arquivo = 'home.php';<br />
 	}<br />
 	include ($arquivo); // Inclui o arquivo<br />
-?&gt;<br />
+?><br />
 [/code]</p>
 <p>E na URL do site ficaria:<br />
 <span style="color: #008080;">http://www.meusite.com.br/?<span style="color: #0000ff;">pagina=contato.php</span></span></p>
@@ -36,7 +36,7 @@ tags: []
 <p>O seu site incluiria o arquivo normalmente e executaria tudo que existe dentro dele... O resto você já pode imaginar.</p>
 <p>Evitar que isso aconteça é extremamente simples: é só criar um <em>array </em>contendo os nomes dos arquivos que poderão ser incluídos, dessa forma:</p>
 <p>[code language="php" wrap="false"]<br />
-&lt;?php<br />
+<?php<br />
 	// Define uma lista com os arquivos que poderão ser chamados na URL<br />
 	$permitidos = array('home.php', 'produtos.php', 'contato.php', 'empresa.php');</p>
 <p>	// Verifica se a variável $_GET['pagina'] existe E se ela faz parte da lista de arquivos permitidos<br />
@@ -48,7 +48,7 @@ tags: []
 		$arquivo = 'home.php';<br />
 	}<br />
 	include ($arquivo); // Inclui o arquivo<br />
-?&gt;<br />
+?><br />
 [/code]</p>
 <p>Viu? Adicionamos uma única linha e mais uma condição e está tudo resolvido. Com isso, se o atacante colocar lá o site dele na URL do seu site o PHP vai identificar que a variável <strong>$_GET['pagina']</strong> existe mas não está no <em>array </em><strong>$permitidos</strong>, então ele vai incluir o arquivo <strong>home.php</strong>.</p>
 <h4>Cuidados com a URL - Parte II</h4>
@@ -59,18 +59,18 @@ ou<br />
 <span style="color: #008080;">http://www.meusite.com.br/?pagina=produtos.php&<span style="color: #0000ff;">id=12</span></span></p>
 <p>Com isso <span style="color: #999999;">(se você não se preparar) </span>você deixa uma porta aberta para um ataque famoso chamado <strong>SQL-Injection</strong> que nada mais é do que a inserção de um código SQL em um campo de texto ou parâmetro da URL que será enviado diretamente para o banco. Vamos a um exemplo:</p>
 <p>[code language="php" highlight="9"]<br />
-&lt;?php<br />
+<?php<br />
 // Formato da URL:<br />
 //  http://www.meusite.com.br/produtos.php?id=12</p>
 <p>// Salva o parâmetro da URL numa variável<br />
 $produto = $_GET['id'];</p>
 <p>// Monta a consulta MySQL<br />
-$sql = &quot;SELECT * FROM `produtos` WHERE `id` = '&quot;.$produto.&quot;' LIMIT 1&quot;;</p>
+$sql = "SELECT * FROM `produtos` WHERE `id` = '".$produto."' LIMIT 1";</p>
 <p>// Executa a query<br />
 $query = mysql_query($sql);</p>
 <p>// Salva o resultado (em formato de array) em uma variável<br />
 $resultado = mysql_fetch_assoc($query);</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>A sua consulta ao MySQL ficaria da seguinte forma:</p>
 <p>[code language="sql" light="true"]SELECT * FROM `produtos` WHERE `id` = '12' LIMIT 1[/code]</p>
@@ -95,5 +95,5 @@ $parametro = mysql_real_escape_string($_GET['nome']);<br />
 <h4>Sobre Usuários e Senhas</h4>
 <p>Outro ponto muito importante é não exibir, em momento algum, o nome de login <span style="color: #999999;">(usuário)</span> de algum usuário cadastrado no sistema. Lembre-se que para um usuário conseguir invadir a conta do outro ele precisa de duas coisas: usuário <span style="color: #999999;">(ou e-mail)</span> e a senha.. Se ele souber o usuário já tem 50% de sucesso.</p>
 <p>Vale lembrar também que você <strong>não precisa</strong> deixar a senha do usuário na forma real quando salva-la no banco. É muito mais seguro salvar um <strong>md5() </strong>ou <strong>sha1()</strong> da senha no banco e quando for necessário fazer a validação do usuário você também gera o <strong>md5()</strong> ou <strong>sha1()</strong> da senha que ele digitou e compara com o que há no banco. Assim, se por ventura alguém conseguir invadir e pegar todos os registros do banco de usuários, o máximo que ele irá conseguir são o usuário/e-mail e uma senha criptografada.</p>
-<p>Se quiser saber como funciona criptografica no PHP é só ver esse post:<br />&raquo;&nbsp;<a href="http://blog.thiagobelem.net/php/criptografia-no-php-usando-md5-sha1-e-base64/">Criptografia no PHP usando md5, sha1 e base64</a></p>
+<p>Se quiser saber como funciona criptografica no PHP é só ver esse post:<br />» <a href="http://blog.thiagobelem.net/php/criptografia-no-php-usando-md5-sha1-e-base64/">Criptografia no PHP usando md5, sha1 e base64</a></p>
 <p>Espero que tenham gostado. :)</p>

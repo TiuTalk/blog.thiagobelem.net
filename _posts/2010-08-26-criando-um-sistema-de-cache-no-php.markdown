@@ -21,16 +21,16 @@ tags:
 <p>Vamos criar aqui uma classe que servirá para armazenar qualquer tipo de texto, variável, número inteiro, resultado SQL e etc.</p>
 <p>Para começar, começamos criando uma classe vazia:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>/**<br />
  * Sistema de cache<br />
  *<br />
- * @author Thiago Belem &lt;contato@thiagobelem.net&gt;<br />
+ * @author Thiago Belem <contato@thiagobelem.net><br />
  * @link http://blog.thiagobelem.net/<br />
  */<br />
 class Cache {</p>
 <p>}</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Agora vamos adicionar alguns atributos que serão usados pelo sistema de cache:</p>
 <p>[code language="php"]<br />
@@ -64,8 +64,8 @@ class Cache {</p>
 	 */<br />
 	protected function setFolder($folder) {<br />
 		// Se a pasta existir, for uma pasta e puder ser escrita<br />
-		if (file_exists($folder) &amp;&amp; is_dir($folder) &amp;&amp; is_writable($folder)) {<br />
-			$this-&gt;folder = $folder;<br />
+		if (file_exists($folder) && is_dir($folder) && is_writable($folder)) {<br />
+			$this->folder = $folder;<br />
 		} else {<br />
 			trigger_error('Não foi possível acessar a pasta de cache', E_USER_ERROR);<br />
 		}<br />
@@ -88,7 +88,7 @@ class Cache {</p>
 	 * @return void<br />
 	 */<br />
 	public function __construct($folder = null) {<br />
-		$this-&gt;setFolder(!is_null($folder) ? $folder : sys_get_temp_dir());<br />
+		$this->setFolder(!is_null($folder) ? $folder : sys_get_temp_dir());<br />
 	}<br />
 [/code]</p>
 <p>O construtor será chamado sempre que instanciarmos a classe Cache e, como você pode ver, ele recebe um parâmetro (opcional) onde podemos definir o local onde os arquivos serão criados... Se não passarmos nenhum parâmetro para ele o mesmo irá usar o local de arquivos temporários definido pelo seu sistema operacional.</p>
@@ -102,7 +102,7 @@ class Cache {</p>
 	 * @return string Local do arquivo de cache<br />
 	 */<br />
 	protected function generateFileLocation($key) {<br />
-		return $this-&gt;folder . DIRECTORY_SEPARATOR . sha1($key) . '.tmp';<br />
+		return $this->folder . DIRECTORY_SEPARATOR . sha1($key) . '.tmp';<br />
 	}<br />
 [/code]</p>
 <p>E o método que irá criar o arquivo de cache propriamente dito:</p>
@@ -119,7 +119,7 @@ class Cache {</p>
 	 */<br />
 	protected function createCacheFile($key, $content) {<br />
 		// Gera o nome do arquivo<br />
-		$filename = $this-&gt;generateFileLocation($key);</p>
+		$filename = $this->generateFileLocation($key);</p>
 <p>		// Cria o arquivo com o conteúdo<br />
 		return file_put_contents($filename, $content)<br />
 			OR trigger_error('Não foi possível criar o arquivo de cache', E_USER_ERROR);<br />
@@ -142,9 +142,9 @@ class Cache {</p>
 	public function save($key, $content, $time = null) {<br />
 		$time = strtotime(!is_null($time) ? $time : self::$time);</p>
 <p>		$content = serialize(array(<br />
-			'expires' =&gt; $time,<br />
-			'content' =&gt; $content));</p>
-<p>		return $this-&gt;createCacheFile($key, $content);<br />
+			'expires' => $time,<br />
+			'content' => $content));</p>
+<p>		return $this->createCacheFile($key, $content);<br />
 	}<br />
 [/code]</p>
 <p>E agora o método para ler esse valor do cache:</p>
@@ -159,10 +159,10 @@ class Cache {</p>
 	 * @return mixed Se o cache foi encontrado retorna o seu valor, caso contrário retorna NULL<br />
 	 */<br />
 	public function read($key) {<br />
-		$filename = $this-&gt;generateFileLocation($key);<br />
-		if (file_exists($filename) &amp;&amp; is_readable($filename)) {<br />
+		$filename = $this->generateFileLocation($key);<br />
+		if (file_exists($filename) && is_readable($filename)) {<br />
 			$cache = unserialize(file_get_contents($filename));<br />
-			if ($cache['expires'] &gt; time()) {<br />
+			if ($cache['expires'] > time()) {<br />
 				return $cache['content'];<br />
 			} else {<br />
 				unlink($filename);<br />
@@ -177,14 +177,14 @@ class Cache {</p>
 <p>[code language="php"]<br />
 // Verifica se a frase já está no cache<br />
 $cache = new Cache();<br />
-$frase = $cache-&gt;read('frase-dia');<br />
+$frase = $cache->read('frase-dia');<br />
 // Se não houver frase no cache ou já tiver expirado<br />
 if (!$frase) {<br />
 	// Cria uma nova frase e salva-a no cache por 30s<br />
 	$frase = 'CALMA! O sábio jamais se aborrece ('. date('H:i:s') .')';<br />
-	$cache-&gt;save('frase-dia', $frase, '30 seconds');<br />
+	$cache->save('frase-dia', $frase, '30 seconds');<br />
 }<br />
-echo &quot;&lt;p&gt;{$frase}&lt;/p&gt;&quot;;<br />
+echo "<p>{$frase}</p>";<br />
 [/code]</p>
 <p>Veja o código-fonte completo da classe: <a href="http://pastebin.com/p4m0CpwH">http://pastebin.com/p4m0CpwH</a></p>
 <p>Um grande abraço e até a próxima! :)</p>

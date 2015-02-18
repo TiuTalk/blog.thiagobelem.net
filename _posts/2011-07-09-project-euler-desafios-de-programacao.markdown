@@ -31,7 +31,7 @@ tags:
 <li>Cria um código pra calcular a resposta do problema</li>
 <li>"Inputa" a resposta e o site te diz se você acertou ou não</li>
 </ol>
-<p>Existem <a href="http://projecteuler.net/index.php?section=problems&amp;id=1" target="_blank">problemas resolvidos por mais 150.000 pessoas</a>, e existem <a href="http://projecteuler.net/index.php?section=problems&amp;id=344" target="_blank">problemas que apenas 25 pessoas conseguiram resolver</a>!</p>
+<p>Existem <a href="http://projecteuler.net/index.php?section=problems&id=1" target="_blank">problemas resolvidos por mais 150.000 pessoas</a>, e existem <a href="http://projecteuler.net/index.php?section=problems&id=344" target="_blank">problemas que apenas 25 pessoas conseguiram resolver</a>!</p>
 <h3>Resolvendo o primeiro problema com PHP e Python</h3>
 <p>Resolvi trazer o primeiro problema aqui pro blog e mostrar duas soluções (idênticas) que criei usando <a href="http://blog.thiagobelem.net/desenvolvimento/php/" target="_blank">PHP</a> e <a href="http://blog.thiagobelem.net/desenvolvimento/python/" target="_blank">Pyhon</a>.</p>
 <p>Segue a descrição e a tradução do problema:</p>
@@ -45,7 +45,7 @@ tags:
 <p>Primeiro vamos à minha solução em PHP:</p>
 <p>[code language="php"]function solucao() {<br />
 	$soma = 0;</p>
-<p>	for ($i = 1; $i &lt; 1000; $i++) {<br />
+<p>	for ($i = 1; $i < 1000; $i++) {<br />
 		if (!($i % 3) || !($i % 5))<br />
 			$soma += $i;<br />
 	}</p>

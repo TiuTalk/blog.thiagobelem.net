@@ -32,16 +32,16 @@ tags:
 <h3>Reescrevendo a URL</h3>
 <p>O nosso <code>.htaccess</code> para reescrever a URL anterior (da página de contato) e essa nova URL mais complexa, ficará assim:</p>
 <p>[code language="shell"]<br />
-&lt;IfModule mod_rewrite.c&gt;<br />
+<IfModule mod_rewrite.c><br />
 	RewriteEngine On</p>
 <p>	# Página de contato<br />
 	RewriteRule ^contato/?$ /contato.php [NC,L]<br />
 	# Página de exibição de um produto<br />
-	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&amp;nome=$1 [NC]<br />
-&lt;/IfModule&gt;<br />
+	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]<br />
+</IfModule><br />
 [/code]</p>
 <p>Agora vamos separar a regra de reescrita em três partes e explicar uma por uma:</p>
-<p><code>RewriteRule <span style="background: yellow;">^produtos/([a-z0-9-]+)/([0-9]+)/?$</span> <span style="background: lime;">/produtos.php?id=$2&amp;nome=$1</span> <span style="background: cyan;">[NC]</span></code></p>
+<p><code>RewriteRule <span style="background: yellow;">^produtos/([a-z0-9-]+)/([0-9]+)/?$</span> <span style="background: lime;">/produtos.php?id=$2&nome=$1</span> <span style="background: cyan;">[NC]</span></code></p>
 <p>Vai ser preciso começar a entender um pouco sobre expressões regulares agora... Vamos lá!</p>
 <h3>Expressões Regulares</h3>
 <p>As expressões regulares ou <em>RegExp</em> ou <em>ER</em> são formas de você validar uma string (texto).</p>
@@ -57,7 +57,7 @@ tags:
 <p>Poderiamos modificar a expressão regular para: <code>^[0-9]{3,9}-</code> e ela teria o mesmo comportamento pois só precisamos verificar o começo da string... :)</p>
 <p>Recomendo que você pare um pouquinho para ler o <a title="Guia de Expressões Regulares" href="http://guia-er.sourceforge.net/">Guia de Expressões Regulares</a>, é muito bom e vai te ajudar a entender melhor uma das sete maravilhas da Informática que é uma Expressão Regular.</p>
 <p>Agora vamos voltar a nossa URL Amigável:</p>
-<p><code>RewriteRule <span style="background: yellow;">^produtos/([a-z0-9-]+)/([0-9]+)/?$</span> <span style="background: lime;">/produtos.php?id=$2&amp;nome=$1</span> <span style="background: cyan;">[NC]</span></code></p>
+<p><code>RewriteRule <span style="background: yellow;">^produtos/([a-z0-9-]+)/([0-9]+)/?$</span> <span style="background: lime;">/produtos.php?id=$2&nome=$1</span> <span style="background: cyan;">[NC]</span></code></p>
 <h4>Primeira parte</h4>
 <p>Na primeira parte, em amarelo, temos <code style="background: yellow;">^produtos/([a-z0-9-]+)/([0-9]+)/?$</code>, o que isso significa?</p>
 <p>Vamos dividir essa parte em pequenos blocos e explicar cada um:</p>
@@ -66,18 +66,18 @@ tags:
 <p><code style="background: yellow;">/([0-9]+)/?$</code> - E por fim temos <code>([0-9]+)</code> que signfica "no minimo <code>+</code> um número <code>0-9</code>" seguido de uma barra opcional <code>/?</code> e o fim da url.</p>
 <p>Isso tudo significa que, com a primeira parte, validamos strings como <code>/produtos/camiseta-azul/2/</code>, <code>/produtos/bola/89/</code> e <code>/produtos/cachecol-rosa-da-2a-africa-do-sul/666/</code> e invalidamos strings como <code>/produtos/palhaço/a/</code>,  <code>/produtos/camisa/</code> ou <code>/produtos/camiseta legal/187a/</code>.</p>
 <h4>Segunda parte</h4>
-<p>Na segunda parte, em amarelo, temos <code style="background: lime;">/produtos.php?id=$2&amp;nome=$1</code>, o que isso significa?</p>
+<p>Na segunda parte, em amarelo, temos <code style="background: lime;">/produtos.php?id=$2&nome=$1</code>, o que isso significa?</p>
 <p>Significa que iremos passar os valores encontrados na primeira parte para uma nova URL interna, ou seja, chamaremos o arquivo <code style="background: lime;">/produtos.php</code> e passaremos dois parâmetros via <strong>GET</strong> para ele:</p>
 <p>Temos <code style="background: lime;">$2</code> no parâmetro <code>id</code>, esse "sifrao dois" significa a segunda "variável" encontrada na URL, que nesse caso é a parte <code style="background: yellow;">([0-9]+)</code> da expressão regular, que conterá o ID do produto.</p>
 <p>E temos <code style="background: lime;">$1</code> no parâmetro <code>nome</code>, esse "sifrao um" significa a primeira "variável" encontrada na URL, que nesse caso é a parte <code style="background: yellow;">([a-z0-9-]+)</code> da expressão regular, que conterá o nome do produto! :)</p>
-<p>Com isso tudo, ao chamar a URL <code>/produtos/camiseta-azul/2/</code> o Apache irá, malandramente e internamente, direcionar a requisição para o caminho <code>/produtos.php?id=2&amp;nome=camiseta-azul</code>.</p>
+<p>Com isso tudo, ao chamar a URL <code>/produtos/camiseta-azul/2/</code> o Apache irá, malandramente e internamente, direcionar a requisição para o caminho <code>/produtos.php?id=2&nome=camiseta-azul</code>.</p>
 <p>Perceba que os valores (<strong>2</strong> e <strong>camiseta-azul</strong>) foram passados para o "antigo" arquivo, cada um em seu devido lugar... Com isso, ao executar o arquivo <code>/produtos.php</code> você terá acesso aos dois valores que foram passados na URL Amigável utilizando a super-global <code>$_GET</code>:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>echo 'ID do produto: ' . $_GET['id']; // 2<br />
-echo '&lt;br /&gt;';<br />
+echo '<br />';<br />
 echo 'Nome (slug) do produto: ' . $_GET['nome']; // camiseta-azul</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Quer coisa melhor que isso minha gente?!</p>
 <h4>Terceira parte</h4>
@@ -87,17 +87,17 @@ echo 'Nome (slug) do produto: ' . $_GET['nome']; // camiseta-azul</p>
 <h3>Mais exemplos de URLs Amigáveis</h3>
 <p>Vamos ver mais alguns exemplos que podemos colocar no nosso <code>.htaccess</code> e o entendimento de cada uma das regras, fica por sua conta:</p>
 <p>[code language="shell"]<br />
-&lt;IfModule mod_rewrite.c&gt;<br />
+<IfModule mod_rewrite.c><br />
 	RewriteEngine On</p>
 <p>	# Página de contato<br />
 	RewriteRule ^contato/?$ /contato.php [NC,L]<br />
 	# Página de exibição de um produto<br />
-	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&amp;nome=$1 [NC]<br />
+	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]<br />
 	# Página de exibição de uma categoria de livros<br />
 	RewriteRule ^livro/([a-z0-9-]+)/?$ /livros.php?categoria=$1 [NC,L]<br />
 	# Página de exibição de um artigo com a data na URL<br />
-	RewriteRule ^artigo/([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-z0-9-]+)/([0-9]+)/?$ /artigo.php?id=$5&amp;nome=$4&amp;data=$1-$2-$3 [NC]<br />
-&lt;/IfModule&gt;<br />
+	RewriteRule ^artigo/([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-z0-9-]+)/([0-9]+)/?$ /artigo.php?id=$5&nome=$4&data=$1-$2-$3 [NC]<br />
+</IfModule><br />
 [/code]</p>
 <p>Uma ferramenta que pode ajudá-los a testar expressões regulares é a <a title="RegExr: Online Regular Expression Testing Tool" rel="nofollow" href="http://gskinner.com/RegExr/" target="_blank">RegExr: Online Regular Expression Testing Tool</a>.</p>
 <p>Espero realmente que vocês tenham gostado... Amanhã vou tentar abordar outros assuntos e, dependendo do retorno e das dúvidas que vocês deixarem nos comentários, faço outro artigo sobre URLs Amigáveis.</p>

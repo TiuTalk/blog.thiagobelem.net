@@ -13,21 +13,21 @@ tags: []
 <p>Normalmente se usa <strong>regexp </strong>(<em><strong>Reg</strong>ular <strong>Exp</strong>ression</em>) pra algumas tarefas simples mas muito úteis: como validar um e-mail, validar uma url, validar a formatação de uma senha que precise ter no minimo 2 letras, 6 números e 7 caracteres... Isso tudo pode e deve ser validado com expressões regulares.</p>
 <p>Antes de mostrar o código da validação de e-mail, vou fazer uma breve introdução aos possíveis "formatos" de uma regexp... Nem todas serão usadas, mas é bom que vocês já vejam tudo que é possível fazer:</p>
 <ul>
-<li><strong>\s</strong> -&gt; Significa um espaço em branco</li>
-<li><strong>^</strong> -&gt; Significa o início da string</li>
-<li><strong>$</strong> -&gt; Significa o fim da string</li>
-<li><strong>.</strong> -&gt; Significa qualquer caractere</li>
-<li><strong>(bola|casa)</strong> -&gt; Significa bola ou casa</li>
-<li><strong>[0-9]</strong> -&gt;Significa qualquer número entre zero e nove</li>
-<li><strong>[a-z]</strong> -&gt; Significa qualquer letra minúscula</li>
-<li><strong>[A-Z]</strong> -&gt; Significa qualquer letra maiúscula</li>
-<li><strong>[^a-z]</strong> -&gt; Significa a não ocorrência (falta / proibição) de letras minúsculas. O circunflexo (^) tem significado de 'não existe'</li>
-<li><strong>?</strong> -&gt; Significa nenhuma ou uma ocorrência caractere anterior</li>
-<li><strong>* </strong>-&gt; Significa nenhuma ou várias ocorrências do caractere anterior</li>
-<li><strong>+</strong> -&gt; Significa - no mínimo - uma ocorrência do caractere anterior</li>
-<li><strong>{3}</strong> -&gt; Significa exatamente três caracteres</li>
-<li><strong>{3,}</strong> -&gt; Significa três ou mais caracteres</li>
-<li><strong>{3,6}</strong> -&gt; Significa entre três e seis caracteres, pode ser 4, 5 também</li>
+<li><strong>\s</strong> -> Significa um espaço em branco</li>
+<li><strong>^</strong> -> Significa o início da string</li>
+<li><strong>$</strong> -> Significa o fim da string</li>
+<li><strong>.</strong> -> Significa qualquer caractere</li>
+<li><strong>(bola|casa)</strong> -> Significa bola ou casa</li>
+<li><strong>[0-9]</strong> ->Significa qualquer número entre zero e nove</li>
+<li><strong>[a-z]</strong> -> Significa qualquer letra minúscula</li>
+<li><strong>[A-Z]</strong> -> Significa qualquer letra maiúscula</li>
+<li><strong>[^a-z]</strong> -> Significa a não ocorrência (falta / proibição) de letras minúsculas. O circunflexo (^) tem significado de 'não existe'</li>
+<li><strong>?</strong> -> Significa nenhuma ou uma ocorrência caractere anterior</li>
+<li><strong>* </strong>-> Significa nenhuma ou várias ocorrências do caractere anterior</li>
+<li><strong>+</strong> -> Significa - no mínimo - uma ocorrência do caractere anterior</li>
+<li><strong>{3}</strong> -> Significa exatamente três caracteres</li>
+<li><strong>{3,}</strong> -> Significa três ou mais caracteres</li>
+<li><strong>{3,6}</strong> -> Significa entre três e seis caracteres, pode ser 4, 5 também</li>
 </ul>
 <p>Mas calma... Onde isso tudo vai?</p>
 <p>Vamos a um exemplo simpes... Uma <strong>regexp </strong>pra verificar um nome de usuario que precise ter no mínimo 5 caracteres e possa ser composto apenas por letras minusculas e números: <strong>^[a-z0-9]{5,}$<br />

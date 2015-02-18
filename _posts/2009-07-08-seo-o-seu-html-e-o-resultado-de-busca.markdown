@@ -23,8 +23,8 @@ tags:
 Vamos as explicações:</p>
 <ul>
 <li>Em vermelho temos a(s) <strong><em>key word</em></strong>(s) que é(são) a(s) palavra(s) buscada(s) pelo usuário;</li>
-<li>Em azul temos o título do seu site, definido na tag <strong>&lt;title&gt;</strong> do seu HTML;</li>
-<li>Em verde temos a <strong>descrição</strong> do site, definido na tag <strong>&lt;meta name="description" content="..." /&gt;</strong>, dentro do <strong>&lt;head&gt;</strong> da sua página;</li>
+<li>Em azul temos o título do seu site, definido na tag <strong><title></strong> do seu HTML;</li>
+<li>Em verde temos a <strong>descrição</strong> do site, definido na tag <strong><meta name="description" content="..." /></strong>, dentro do <strong><head></strong> da sua página;</li>
 <li>E por fim temos, em amarelo, o link da página indexada pelo Google</li>
 </ul>
 <p>--</p>

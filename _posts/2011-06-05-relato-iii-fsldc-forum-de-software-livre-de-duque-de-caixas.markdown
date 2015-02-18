@@ -30,7 +30,7 @@ tags:
 <p>Dessa vez não encontrei tantos conhecidos, mas o evento foi muito bom.</p>
 <p><img class="size-full wp-image-1565 aligncenter" title="FSLDC" src="/assets/uploads/2011/06/fsldc.png" alt="" width="439" height="116" /></p>
 <h3>Project Cauã - Jon "Maddog" Hall</h3>
-<p>[caption id="" align="alignright" width="150" caption="Jon &quot;Maddog&quot; Hall"]<img title="Jon &quot;Maddog&quot; Hall" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Jon_maddog_abr.jpg/200px-Jon_maddog_abr.jpg" alt="Jon &quot;Maddog&quot; Hall" width="150" />[/caption]</p>
+<p>[caption id="" align="alignright" width="150" caption="Jon "Maddog" Hall"]<img title="Jon "Maddog" Hall" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Jon_maddog_abr.jpg/200px-Jon_maddog_abr.jpg" alt="Jon "Maddog" Hall" width="150" />[/caption]</p>
 <p>Na primeira palestra do dia conheci o Maddog, o diretor executivo da Linux International... O cara é um gênio de primeira... Sabe MUITO sobre computadores, Linux e etc.</p>
 <p>A palestra dele foi sobre o <a href="http://www.projectcaua.org/">Project Cauã</a>, que visa levar computadores eficientes, funcionais, leves e baratos para residências e empresas, usando antigo modelo dos <em>mainframes</em>, onde havia uma grande central de processamento e vários pequenos "clients" que fariam uso dessa central. A ideia em si não é ruim, seria um mundo muito melhor, porém acho-a um tanto quanto <strong>utópica</strong>.</p>
 <h3>eLua - Desenvolvimento Embedded - Dado Sutter</h3>

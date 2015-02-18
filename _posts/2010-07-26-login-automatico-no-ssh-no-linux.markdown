@@ -65,7 +65,7 @@ The key's randomart image is:<br />
 <p>Faça login via SSH no seu servidor, e execute os seguintes comandos:</p>
 <p>[code language="shell"]<br />
 $ cd ~/.ssh/<br />
-$ cat id_dsa.pub &gt;&gt; authorized_keys<br />
+$ cat id_dsa.pub >> authorized_keys<br />
 $ chmod 644 authorized_keys<br />
 [/code]</p>
 <p>Se o arquivo <code>authorized_keys</code> já existir, você pode criar o <code>authorized_keys2</code> ou <code>authorized_keys3</code>.</p>

@@ -60,7 +60,7 @@ tags:
 <p>A maioria desses eventos são semanais:</p>
 <ul>
 <li><a href="http://openspacerio.org/">Open Space</a> um <strong>sábado </strong>por mês (avisado pelo site), das 10 às 17h na <em>Av. Pasteur, 458 - Prédio do CCET, Sala 204 - Urca</em></li>
-<li><a href="http://horaextra.org/">#HoraExtra</a> às <strong>segundas</strong> a partir das 19h na <em>R. do Ouvidor - Centro (Lanchão &amp; CIA)</em></li>
+<li><a href="http://horaextra.org/">#HoraExtra</a> às <strong>segundas</strong> a partir das 19h na <em>R. do Ouvidor - Centro (Lanchão & CIA)</em></li>
 <li><a href="http://dojorio.wordpress.com/">Coding DOJO Rio</a> às <strong>quartas</strong> a partir das 18:30 na <em>Av. Treze de Maio, 13 - sala 616 - Centro (Instituto Íparos)</em></li>
 <li>Happy Hour do <a href="http://beesoffice.com/">Bees Office</a> as 17h de toda <strong>última sexta-feira do mês</strong>.</li>
 </ul>

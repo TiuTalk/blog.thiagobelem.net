@@ -31,7 +31,7 @@ echo removeAcentos(' [Resolvido] » Problemas na conversão de página html', '-
 <p>[code language="php"]/***<br />
  * Função para remover acentos de uma string<br />
  *<br />
- * @autor Thiago Belem &lt;contato@thiagobelem.net&gt;<br />
+ * @autor Thiago Belem <contato@thiagobelem.net><br />
  */<br />
 function removeAcentos($string, $slug = false) {<br />
 	$string = strtolower($string);</p>
@@ -47,7 +47,7 @@ function removeAcentos($string, $slug = false) {<br />
 	$ascii['d'] = array(208);<br />
 	$ascii['n'] = array(241);<br />
 	$ascii['y'] = array(253, 255);</p>
-<p>	foreach ($ascii as $key=&gt;$item) {<br />
+<p>	foreach ($ascii as $key=>$item) {<br />
 		$acentos = '';<br />
 		foreach ($item AS $codigo) $acentos .= chr($codigo);<br />
 		$troca[$key] = '/['.$acentos.']/i';<br />

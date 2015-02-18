@@ -28,9 +28,9 @@ echo '
 <ol>
 <li>Pegamos o conteúdo (XML completo) do <em>Feed RSS</em> do meu blog...</li>
 <li>Chamamos a classe <strong>SimpleXML</strong> do PHP</li>
-<li>Criamos um loop (repetição) para cada <strong>&lt;item&gt;</strong> dentro do <strong>&lt;channel&gt;</strong>, o que representa cada notícia de um RSS</li>
+<li>Criamos um loop (repetição) para cada <strong><item></strong> dentro do <strong><channel></strong>, o que representa cada notícia de um RSS</li>
 </ol>
-<p>Dentro do loop, teremos <span style="color: #99cc00;"><strong>$entrada</strong></span> (um objeto) que contém os dados de cada &lt;item&gt; do RSS: title, description, link, pubDate e etc.</p>
+<p>Dentro do loop, teremos <span style="color: #99cc00;"><strong>$entrada</strong></span> (um objeto) que contém os dados de cada <item> do RSS: title, description, link, pubDate e etc.</p>
 <p>Como diria o meu professor de física do colegial: "<em>Mel na chupeta!</em>"</p>
 <p>Vamos aos links de referências, para aqueles que não são <a href="http://blog.thiagobelem.net/vida-pessoal/codificadores-e-programadores/" target="_parent">codificadores</a> e gostam de saber o porquê das coisas:</p>
 <p>» <strong>SimpleXML (Documentação)</strong> - <a href="http://www.php.net/manual/pt_BR/book.simplexml.php" target="_blank">http://www.php.net/manual/pt_BR/book.simplexml.php</a><br />

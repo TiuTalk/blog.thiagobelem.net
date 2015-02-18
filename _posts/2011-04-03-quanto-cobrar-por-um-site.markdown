@@ -25,7 +25,7 @@ tags:
 <li>Agora calcule quantas horas por dia você quer trabalhar como freelancer, leve em conta sua família, suas atividades extras e o tempo que você vai reservar para estudar/aprender coisas novas... Trabalhando 5 horas por dia você tem uma carga horária aceitável e dá pra fazer muita coisa durante o resto dia... Divida o valor por dia por essas horas e você terá <strong>R$ 30,00</strong> que é o valor da sua hora/trabalho.</li>
 </ol>
 <p>Usando o raciocínio acima, a formular pra calcular o valor da sua hora trabalho é:</p>
-<p style="text-align: center;"><span style="color: #008000;">&lt;valor do salário ideal&gt;</span> / (<span style="color: #ff6600;">&lt;dias trabalhados por mês&gt;</span> * <span style="color: #0000ff;">&lt;horas de trabalho por dia&gt;</span>)</p>
+<p style="text-align: center;"><span style="color: #008000;"><valor do salário ideal></span> / (<span style="color: #ff6600;"><dias trabalhados por mês></span> * <span style="color: #0000ff;"><horas de trabalho por dia></span>)</p>
 <p style="text-align: left;">Por exemplo:</p>
 <p style="text-align: center;"><span style="color: #008000;">3000</span> / (<span style="color: #ff6600;">20</span> * <span style="color: #0000ff;">5</span>) = R$ <strong>30,00</strong> por hora/trabalho</p>
 <p>Tendo um valor pra hora/trabalho definido você pode calcular o valor total de um serviço pensando em quanto tempo você ACHA que vai demorar pra fazer ele, por exemplo: se você calcula de irá demorar 1 mês para fazer o trabalho, cobre R$ 3.000,00 pelo trabalho.. Se você demorar 40 dias, calcule proporcionalmente.</p>

@@ -27,7 +27,7 @@ $mensagem = "Boa noite";<br />
 <p>echo $mensagem;</p>
 <p>?>[/code]</p>
 <p>Viram?</p>
-<p>Reparem que no último caso não precisei colocar <strong><span style="color: #000000;">} else if (($hora &gt;= 18) AND ($hora &lt;= 24)) {</span></strong> pois, se o valor não validou nenhuma das outras condições (que foram testadas antes) essa ultima condição está implícita... Seria desperdício de código e recursos fazer mais uma verificação.</p>
+<p>Reparem que no último caso não precisei colocar <strong><span style="color: #000000;">} else if (($hora >= 18) AND ($hora <= 24)) {</span></strong> pois, se o valor não validou nenhuma das outras condições (que foram testadas antes) essa ultima condição está implícita... Seria desperdício de código e recursos fazer mais uma verificação.</p>
 <p>Com uma pequena seqüência de if/else if/else você consegue mudar o valor de uma variável em função da hora atual do servidor e exibir a sua mensagem de boas-vindas!</p>
 <p>Esse também é um bom exemplo de condições múltiplas.</p>
 <p>Espero que tenham gostado :)</p>

@@ -20,16 +20,16 @@ tags: []
 <p>Se você estiver testando seu script localmente, pode ignorar a segunda consideração e só se preocupar em enviar arquivos menores que 2Mb para testar a aplicação.</p>
 <p>Vamos ao formulário HTML para o usuário escolher o arquivo a ser enviado:</p>
 <p>[code language="html"]<br />
-&lt;form method=&quot;post&quot; action=&quot;recebe_upload.php&quot; enctype=&quot;multipart/form-data&quot;&gt;<br />
-&lt;label&gt;Arquivo&lt;/label&gt;<br />
-&lt;input type=&quot;file&quot; name=&quot;arquivo&quot; /&gt;<br />
-&lt;input type=&quot;submit&quot; value=&quot;Enviar&quot; /&gt;<br />
-&lt;/form&gt;<br />
+<form method="post" action="recebe_upload.php" enctype="multipart/form-data"><br />
+<label>Arquivo</label><br />
+<input type="file" name="arquivo" /><br />
+<input type="submit" value="Enviar" /><br />
+</form><br />
 [/code]</p>
 <p>Salve este HTML dentro de arquivo com o nome que preferir.</p>
 <p>Agora vamos criar o arquivo que irá receber os dados e cuidar de tudo pra você... Salve-o como <span style="color: #99cc00;"><strong>recebe_upload.php</strong></span>:</p>
 <p>[code language="php"]<br />
-&lt;?php</p>
+<?php</p>
 <p>// Pasta onde o arquivo vai ser salvo<br />
 $_UP['pasta'] = 'uploads/';</p>
 <p>// Tamanho máximo do arquivo (em Bytes)<br />
@@ -46,18 +46,18 @@ $_UP['erros'][3] = 'O upload do arquivo foi feito parcialmente';<br />
 $_UP['erros'][4] = 'Não foi feito o upload do arquivo';</p>
 <p>// Verifica se houve algum erro com o upload. Se sim, exibe a mensagem do erro<br />
 if ($_FILES['arquivo']['error'] != 0) {<br />
-die(&quot;Não foi possível fazer o upload, erro:&lt;br /&gt;&quot; . $_UP['erros'][$_FILES['arquivo']['error']]);<br />
+die("Não foi possível fazer o upload, erro:<br />" . $_UP['erros'][$_FILES['arquivo']['error']]);<br />
 exit; // Para a execução do script<br />
 }</p>
 <p>// Caso script chegue a esse ponto, não houve erro com o upload e o PHP pode continuar</p>
 <p>// Faz a verificação da extensão do arquivo<br />
 $extensao = strtolower(end(explode('.', $_FILES['arquivo']['name'])));<br />
 if (array_search($extensao, $_UP['extensoes']) === false) {<br />
-echo &quot;Por favor, envie arquivos com as seguintes extensões: jpg, png ou gif&quot;;<br />
+echo "Por favor, envie arquivos com as seguintes extensões: jpg, png ou gif";<br />
 }</p>
 <p>// Faz a verificação do tamanho do arquivo<br />
-else if ($_UP['tamanho'] &lt; $_FILES['arquivo']['size']) {<br />
-echo &quot;O arquivo enviado é muito grande, envie arquivos de até 2Mb.&quot;;<br />
+else if ($_UP['tamanho'] < $_FILES['arquivo']['size']) {<br />
+echo "O arquivo enviado é muito grande, envie arquivos de até 2Mb.";<br />
 }</p>
 <p>// O arquivo passou em todas as verificações, hora de tentar movê-lo para a pasta<br />
 else {<br />
@@ -72,14 +72,14 @@ $nome_final = $_FILES['arquivo']['name'];<br />
 <p>// Depois verifica se é possível mover o arquivo para a pasta escolhida<br />
 if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_final)) {<br />
 // Upload efetuado com sucesso, exibe uma mensagem e um link para o arquivo<br />
-echo &quot;Upload efetuado com sucesso!&quot;;<br />
-echo '&lt;br /&gt;&lt;a href=&quot;' . $_UP['pasta'] . $nome_final . '&quot;&gt;Clique aqui para acessar o arquivo&lt;/a&gt;';<br />
+echo "Upload efetuado com sucesso!";<br />
+echo '<br /><a href="' . $_UP['pasta'] . $nome_final . '">Clique aqui para acessar o arquivo</a>';<br />
 } else {<br />
 // Não foi possível fazer o upload, provavelmente a pasta está incorreta<br />
-echo &quot;Não foi possível enviar o arquivo, tente novamente&quot;;<br />
+echo "Não foi possível enviar o arquivo, tente novamente";<br />
 }</p>
 <p>}</p>
-<p>?&gt;<br />
+<p>?><br />
 [/code]</p>
 <p>Com isso você já tem um script que recebe os dados enviados pelo formulário e que coloca (ou não) o arquivo na pasta.</p>
 <p>Eu sei que esse script pode parecer um pouco avançado pra quem tá começando, mas eu preferi fazer o "básico que todo mundo procura". Tentei colocar o máximo de comentários e fazer uma sintaxe mais clara o possível pra que vocês entendam.</p>

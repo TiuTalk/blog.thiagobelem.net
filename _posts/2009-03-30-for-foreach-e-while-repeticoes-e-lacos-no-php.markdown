@@ -20,7 +20,7 @@ echo $n . "<br />";<br />
 ?><br />
 [/code]</p>
 <p>Com isso eu irei enumerar todos os números de <strong>1</strong> ($n) até <strong>10</strong> ($limite).</p>
-<p>O <strong>for()</strong> é formado por três partes: <strong>a declaração</strong> ($n = 1) onde definimos uma variável para ser usada na repetição; depois temos <strong>a condição</strong> ($n &lt;= $limite) onde definimos uma condição que, enquanto verdadeira, a repetição acontecerá; e por último definimos a alteração ou <strong>incremento</strong> ($n++) que será executado após cada repetição.</p>
+<p>O <strong>for()</strong> é formado por três partes: <strong>a declaração</strong> ($n = 1) onde definimos uma variável para ser usada na repetição; depois temos <strong>a condição</strong> ($n <= $limite) onde definimos uma condição que, enquanto verdadeira, a repetição acontecerá; e por último definimos a alteração ou <strong>incremento</strong> ($n++) que será executado após cada repetição.</p>
 <p>Ou seja, definimos $n e enquanto $n for menor ou igual a $limite exibimos $n (echo), depois incrementamos $n.</p>
 <p>Durante a execução de qualquer repetição você pode usar o comando<strong> <span style="color: #ff6600;">break;</span> </strong>para encerrar o bloco de repetição/loop e continuar o script. Há também o comando <strong><span style="color: #ff6600;">continue;</span></strong> que pula para próxima execução da repetição.</p>
 <p>O <strong>for()</strong> pode ser usado, por exemplo, para montar a exibição de um calendário.</p>
