@@ -2,7 +2,7 @@
 layout: post
 title: Sistema de logins com classe no PHP – Como usar?
 excerpt: 'Aprenda a instalar e usar a classe de login que foi criada em várias <a
-  title="Busca: Sistema de logins com classe no PHP" href="http://blog.thiagobelem.net/?s=Sistema+de+logins+com+classe+no+PHP">partes</a>
+  title="Busca: Sistema de logins com classe no PHP" href="/?s=Sistema+de+logins+com+classe+no+PHP">partes</a>
   e deixe o "conteúdo protegido" [do seu site] realmente protegido por traz de um
   sistema de login baseado em PHP e MySQL e que funciona perfeitamente em PHP 4 e
   PHP 5.'
@@ -17,9 +17,9 @@ tags:
 - Login
 ---
 <p>Fala gente,</p>
-<p>Hoje, domingão, vou mostrar pra vocês como é fácil usar o <a title="Busca: Sistema de logins com classe no PHP" href="http://blog.thiagobelem.net/?s=Sistema+de+logins+com+classe+no+PHP">Sistema de logins com classe no PHP</a> que ensinei a fazer durante as últimas semanas.</p>
+<p>Hoje, domingão, vou mostrar pra vocês como é fácil usar o <a title="Busca: Sistema de logins com classe no PHP" href="/?s=Sistema+de+logins+com+classe+no+PHP">Sistema de logins com classe no PHP</a> que ensinei a fazer durante as últimas semanas.</p>
 <p>Antes de mais nada vocês devem criar um arquivo chamado <strong>usuarios.class.php</strong> em algum lugar do seu site, de preferência dentro de uma pasta chamada "<strong>includes</strong>" ou "<strong>inclues/classes</strong>" pra ficar mais organizado.</p>
-<p>Dentro desse arquivo você insere o conteúdo da classe criada durante a <a title="Criando um sistema de logins com classe no PHP – Parte 1" href="http://blog.thiagobelem.net/criando-um-sistema-de-logins-com-classe-no-php-parte-1/" target="_blank">Parte 1</a>, <a title="Criando um sistema de logins com classe no PHP – Parte 2" href="http://blog.thiagobelem.net/criando-um-sistema-de-logins-com-classe-no-php-parte-2/" target="_blank">Parte 2</a>, <a title="Criando um sistema de logins com classe no PHP – Parte 3" href="http://blog.thiagobelem.net/criando-um-sistema-de-logins-com-classe-no-php-parte-3/" target="_blank">Parte 3</a> e <a title="Criando um sistema de logins com classe no PHP – Parte 4" href="http://blog.thiagobelem.net/criando-um-sistema-de-logins-com-classe-no-php-parte-4/" target="_blank">Parte 4</a> do tutorial.</p>
+<p>Dentro desse arquivo você insere o conteúdo da classe criada durante a <a title="Criando um sistema de logins com classe no PHP – Parte 1" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" target="_blank">Parte 1</a>, <a title="Criando um sistema de logins com classe no PHP – Parte 2" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-2" target="_blank">Parte 2</a>, <a title="Criando um sistema de logins com classe no PHP – Parte 3" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-3" target="_blank">Parte 3</a> e <a title="Criando um sistema de logins com classe no PHP – Parte 4" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-4" target="_blank">Parte 4</a> do tutorial.</p>
 <p>Para que todo mundo entenda como é essa instalação vamos criar uma situação hipotética onde vocês tem um site, nesse site existem as seguintes páginas:</p>
 <ul>
 <li>A página de login (<strong>login.php</strong>);</li>

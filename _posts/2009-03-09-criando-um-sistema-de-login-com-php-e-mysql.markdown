@@ -180,9 +180,9 @@ protegePagina(); // Chama a função que protege a página
 <p>[code language="php"]
 echo "Olá, " . $_SESSION['usuarioNome'];
 [/code]</p>
-<p>Veja mais sobre escrever e pegar valores da sessão (coisa que acontece muito nesse sistema de login) no tópico <a href="http://blog.thiagobelem.net/php/aprendendo-a-usar-sessoes-no-php/" target="_blank">Aprendendo a usar sessões no PHP</a>.</p>
+<p>Veja mais sobre escrever e pegar valores da sessão (coisa que acontece muito nesse sistema de login) no tópico <a href="/aprendendo-a-usar-sessoes-no-php" target="_blank">Aprendendo a usar sessões no PHP</a>.</p>
 <p>Viram como é fácil?</p>
-<p>Pra quem quiser um tutorial mais explicado e detalhado recomendo: <a href="http://blog.thiagobelem.net/mysql/como-criar-um-sistema-de-login-com-niveis-de-permissao/" target="_blank">Como criar um Sistema de Login com Níveis de Permissão</a> (passo-a-passo).</p>
-<blockquote><p><strong>Nota:</strong> Alguns de vocês devem ter notado que durante essa semana, no post <a href="http://blog.thiagobelem.net/mysql/criando-sistemas-seguros-parte-1/" target="_blank">Criando Sistemas Seguros</a>, falei sobre <strong>não usar</strong> nomes óbvios para tabelas de usuários. Mas esse exemplo é apenas explicativo, você pode mudar o nome da tabela de usuários se preferir e depois é só alterar a variável no bloco de configurações dentro do <span style="color: #ff0000;">seguranca.php</span>.</p></blockquote>
+<p>Pra quem quiser um tutorial mais explicado e detalhado recomendo: <a href="/como-criar-um-sistema-de-login-com-niveis-de-permissao" target="_blank">Como criar um Sistema de Login com Níveis de Permissão</a> (passo-a-passo).</p>
+<blockquote><p><strong>Nota:</strong> Alguns de vocês devem ter notado que durante essa semana, no post <a href="/criando-sistemas-seguros-parte-1" target="_blank">Criando Sistemas Seguros</a>, falei sobre <strong>não usar</strong> nomes óbvios para tabelas de usuários. Mas esse exemplo é apenas explicativo, você pode mudar o nome da tabela de usuários se preferir e depois é só alterar a variável no bloco de configurações dentro do <span style="color: #ff0000;">seguranca.php</span>.</p></blockquote>
 <p>--</p>
-<p>Veja <a href="http://blog.thiagobelem.net/mysql/criando-um-sistema-de-logins-com-classe-no-php-parte-1/" title="Criando um sistema de logins com classe no PHP" target="_blank">aqui</a> como criar um <strong>sistema de login usando classes</strong> (Orientação a Objetos) e que funciona no PHP 4 e PHP 5.</p>
+<p>Veja <a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" title="Criando um sistema de logins com classe no PHP" target="_blank">aqui</a> como criar um <strong>sistema de login usando classes</strong> (Orientação a Objetos) e que funciona no PHP 4 e PHP 5.</p>

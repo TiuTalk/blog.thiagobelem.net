@@ -18,7 +18,7 @@ tags:
 - Friendly URLs
 - htaccess
 ---
-<p>Como prometido, hoje vou continuar o <a title="Aprendendo URLs amigáveis (Friendly URLs)" href="http://blog.thiagobelem.net/tutoriais/aprendendo-urls-amigaveis/">tutorial sobre URLs amigáveis</a>... Ontem fizemos uma introdução e explicação básica sobre as regras simples e hoje vamos falar sobre regras mais complexas que usam expressões regulares.</p>
+<p>Como prometido, hoje vou continuar o <a title="Aprendendo URLs amigáveis (Friendly URLs)" href="/aprendendo-urls-amigaveis">tutorial sobre URLs amigáveis</a>... Ontem fizemos uma introdução e explicação básica sobre as regras simples e hoje vamos falar sobre regras mais complexas que usam expressões regulares.</p>
 <p style="color: gray;"><strong>Atualização 30/04/10</strong>: Adicionei algumas informações extras e fiz algumas correções nas RewriteRules.</p>
 <h3>Reescrevendo URLs que possuem parâmetros</h3>
 <p>Continuando o nosso exemplo, faremos agora a reescrita de URL do seguinte caso:</p>

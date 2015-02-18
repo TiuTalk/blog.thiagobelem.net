@@ -11,7 +11,7 @@ tags: []
 <p>Fala pessoal! Hoje vou explicar como calcular a diferença (em dias) entre duas datas no PHP.</p>
 <p>O processo é bem simples e se resume a criar o <abbr title="Quantidade de segundos que se passaram desde 1970 (a Era Unix)"><em>timestamp</em></abbr> dessas datas e depois calcular o número de dias baseando-se na quantidade de segundos entre as duas datas.</p>
 <p>Vou mostrar como fazer o processo de duas formas pois, normalmente, trabalhos com datas em dois formatos: <strong>DD/MM/AAAA</strong> (padrão brasileiro) e <strong>AAAA-MM-DD</strong> (formato do MySQL).</p>
-<p>Se alguém aí quiser ler um pouco mais sobre como trabalhar com datas no PHP é só dar uma olhada nesse post: <a href="http://blog.thiagobelem.net/php/trabalhando-com-datas-no-php/">Trabalhando com datas no PHP</a>.</p>
+<p>Se alguém aí quiser ler um pouco mais sobre como trabalhar com datas no PHP é só dar uma olhada nesse post: <a href="/trabalhando-com-datas-no-php">Trabalhando com datas no PHP</a>.</p>
 <p>Vamos ao primeiro exemplo que usa datas no formato <strong>DD/MM/AAAA</strong>:</p>
 <p>[code language="php"]
 <?php</p>

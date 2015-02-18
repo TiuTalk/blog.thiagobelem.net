@@ -11,7 +11,7 @@ categories:
 tags: []
 ---
 <p>Esse é um artigo que eu adoro, criado pelo meu amigo <a href="http://www.michelazzo.com.br/" target="_blank">Paulino Michelazzo</a>, da <span class="removed_link" title="http://www.fabricalivre.com.br/">Fábrica Livre</span>.</p>
-<p>Não vou nem me atrever a filosofar sobre o assunto desse artigo, vou deixar que todos vocês leiam e entendam... Mas posso dizer que ele trata do mesmo assunto que falei no meu outro artigo, <a title="Codificadores e Programadores" href="http://blog.thiagobelem.net/vida-pessoal/codificadores-e-programadores/" target="_blank">Codificadores e Programadores</a>. :)</p>
+<p>Não vou nem me atrever a filosofar sobre o assunto desse artigo, vou deixar que todos vocês leiam e entendam... Mas posso dizer que ele trata do mesmo assunto que falei no meu outro artigo, <a title="Codificadores e Programadores" href="/codificadores-e-programadores" target="_blank">Codificadores e Programadores</a>. :)</p>
 <p>--</p>
 <p>Quem nunca encontrou um "sobrinho" diante do caminho e que nunca precisou refazer um trabalho dele que atire a primeira pedra.</p>
 <p style="padding-left: 30px;">-         Estou precisando fazer um web site. Quando você cobra?

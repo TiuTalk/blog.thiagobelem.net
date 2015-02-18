@@ -18,7 +18,7 @@ tags:
 <p>Acredito que alguns de vocês, que estão começando, e não se acostumaram tanto assim com o domínio das técnicas de SEO se perguntam qual a real relação entre os resultados das buscas e o HTML do seu site.</p>
 <p>Todos os elementos que aparecem nos resultados de busca têm ligação direta com o HTML da página em questão.</p>
 <p>Veja a imagem a seguir:
-<a href="http://blog.thiagobelem.net/arquivos/2009/07/google.jpg"><img src="http://blog.thiagobelem.net/arquivos/2009/07/google.jpg" alt="google" title="google" width="600" height="471" class="aligncenter size-full wp-image-566" style="border: 1px solid gray; margin: 10px 0 0 12px" /></a>
+<a href="/arquivos/2009/07/google.jpg"><img src="http://blog.thiagobelem.net/arquivos/2009/07/google.jpg" alt="google" title="google" width="600" height="471" class="aligncenter size-full wp-image-566" style="border: 1px solid gray; margin: 10px 0 0 12px" /></a>
 
 Vamos as explicações:</p>
 <ul>

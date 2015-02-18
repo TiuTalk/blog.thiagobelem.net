@@ -30,12 +30,12 @@ tags:
 <h2>Criando um tema para WordPress</h2>
 <p>Se você ainda não está acompanhando, veja as outras partes dessa sequência de artigos:</p>
 <ul>
-<li><a title="Criando um tema para WordPress – Parte 1" href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress/" target="_blank">Parte 1 - Estrutura inicial do tema</a></li>
-<li><a title="Criando um tema para WordPress – Parte 2" href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-2/" target="_blank">Parte 2 - HTML5, Funções básicas do WordPress, Feed RSS e Atom</a></li>
-<li><a title="Criando um tema para WordPress – Parte 3" href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-3/" target="_blank">Parte 3 - Topo e listagem de posts</a></li>
+<li><a title="Criando um tema para WordPress – Parte 1" href="/criando-um-tema-para-wordpress" target="_blank">Parte 1 - Estrutura inicial do tema</a></li>
+<li><a title="Criando um tema para WordPress – Parte 2" href="/criando-um-tema-para-wordpress-parte-2" target="_blank">Parte 2 - HTML5, Funções básicas do WordPress, Feed RSS e Atom</a></li>
+<li><a title="Criando um tema para WordPress – Parte 3" href="/criando-um-tema-para-wordpress-parte-3" target="_blank">Parte 3 - Topo e listagem de posts</a></li>
 </ul>
 <h2>Parte 4 - Separando o tema em blocos reutilizáveis</h2>
-<p>Na <a title="Criando um tema para WordPress – Parte 3" href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-3/" target="_blank">Parte 3</a> criamos o template básico da home (<strong>index.php</strong>) que ficou mais ou menos assim:</p>
+<p>Na <a title="Criando um tema para WordPress – Parte 3" href="/criando-um-tema-para-wordpress-parte-3" target="_blank">Parte 3</a> criamos o template básico da home (<strong>index.php</strong>) que ficou mais ou menos assim:</p>
 <div data-gist-id="2353682" data-gist-show-loading="false"></div>
 <p>Agora vamos separar as partes do nosso tema!</p>
 <h3>Header e Footer</h3>
@@ -67,7 +67,7 @@ tags:
 <li><strong>sidebar.php</strong> - Lateral do site</li>
 <li><strong>index.php</strong> - Template da <strong>página inicial</strong> (listagem de posts)</li>
 </ul>
-<p>Na <a title="Criando um tema para WordPress – Parte 5" href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-5/">Parte 5</a> iremos criar o <strong>single.php</strong> que é justamente o template que mostra todo o <strong>conteúdo do post</strong> (texto completo).</p>
+<p>Na <a title="Criando um tema para WordPress – Parte 5" href="/criando-um-tema-para-wordpress-parte-5">Parte 5</a> iremos criar o <strong>single.php</strong> que é justamente o template que mostra todo o <strong>conteúdo do post</strong> (texto completo).</p>
 <p>Acompanhe o template que estou criando pro meu blog, com mais algumas coisinhas (que não coloquei aqui), no GitHub: <a href="https://github.com/TiuTalk/blog.thiagobelem.net" target="_blank">https://github.com/TiuTalk/blog.thiagobelem.net</a></p>
 <p>Gostou? Então comenta, compartilha e recomenda! <img src="http://blog.thiagobelem.net/wp-includes/images/smilies/icon_smile.gif" alt=":)" /></p>
 <p>Abraços e até a próxima!</p>

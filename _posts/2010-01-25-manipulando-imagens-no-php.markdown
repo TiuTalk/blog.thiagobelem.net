@@ -17,7 +17,7 @@ tags:
 - WideImage
 ---
 <p>Fala fala minha gente! Tudo na mais devida paz? :)</p>
-<p>Hoje vou falar mais um pouquinho sobre a classe <a title="WideImage" rel="external" href="http://wideimage.sourceforge.net/">WideImage</a> (agora na versão 9.09.04) que eu já falei um pouco no artigo <a href="http://blog.thiagobelem.net/php/redimensionando-imagens-automaticamente-com-o-php/" title="Redimensionando imagens automaticamente com o PHP">Redimensionando imagens automaticamente com o PHP</a>.</p>
+<p>Hoje vou falar mais um pouquinho sobre a classe <a title="WideImage" rel="external" href="http://wideimage.sourceforge.net/">WideImage</a> (agora na versão 9.09.04) que eu já falei um pouco no artigo <a href="/redimensionando-imagens-automaticamente-com-o-php" title="Redimensionando imagens automaticamente com o PHP">Redimensionando imagens automaticamente com o PHP</a>.</p>
 <p>A classe <strong>WideImage</strong> te ajuda manipular imagens salvas no seu site de forma extemamente fácil e intuitiva, com ela você pode:</p>
 <ul>
 <li>Redimensionar imagens;</li>

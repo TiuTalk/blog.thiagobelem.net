@@ -20,7 +20,7 @@ tags:
 ---
 <p>Hoje vou ensinar como criar um menu usando listas (ol) e que tem o efeito de expandir/retrair feito com jQuery.</p>
 <p>O efeito em sí é bem simples e fácil de ser modificado... O meu foi feito usando HTML puro e uma folha de estilos (CSS) pequena. No final do tutorial você vai encontrar o link pra download do arquivo .rar com o exemplo dessa aula.</p>
-<p><a href="http://blog.thiagobelem.net/exemplo3/" target="_blank">Veja aqui um exemplo de como vai ficar o menu.</a></p>
+<p><a href="/exemplo3" target="_blank">Veja aqui um exemplo de como vai ficar o menu.</a></p>
 <p>Bom... vamos lá!</p>
 <h3>Código (X)HTML do menu</h3>
 <p>[code lang="html"]<ul id="menu">
@@ -105,5 +105,5 @@ tags:
 <p>--</p>
 <p>É só juntar todas as peças (como foi feito no exemplo) e o seu menu irá funcionar que é uma maravilha! :D</p>
 <p>O código do efeito pode parecer um pouco complicado pra quem tá começando com jQuery, mas é só ler os comentários e procurar um pouco sobre cada função (<strong>slideToggle</strong>, <strong>toggleClass</strong>, <strong>click</strong>) na documentação que, com os exemplos de lá vai ficar tudo claro.</p>
-<p><a href="http://blog.thiagobelem.net/arquivos/2009/06/menu.rar" target="_blank">Faça aqui o download do arquivo .rar com os arquivos dessa aula.</a></p>
+<p><a href="/arquivos/2009/06/menu.rar" target="_blank">Faça aqui o download do arquivo .rar com os arquivos dessa aula.</a></p>
 <p>Espero que tenham gostado, qualquer dúvida é só falar.</p>

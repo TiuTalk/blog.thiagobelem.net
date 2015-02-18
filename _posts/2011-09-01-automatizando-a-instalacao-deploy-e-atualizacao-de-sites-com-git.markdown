@@ -36,7 +36,7 @@ $ git commit -q -m "Iniciando o repositório"
 [/code]</p>
 <p>Agora que seu repositório local está pronto, o index.html foi criado e o primeiro commit feito, vamos criar o repositório remoto no ambiente de produção (servidor onde o site está/vai rodar).</p>
 <h3>Repositório remoto</h3>
-<p>Partindo do princípio que o seu site vai rodar em um servidor que você possui <a href="http://blog.thiagobelem.net/login-automatico-no-ssh-no-linux/" target="_blank">acesso SSH facilitado</a>, vamos criar o repositório lá que será uma cópia do servidor local:</p>
+<p>Partindo do princípio que o seu site vai rodar em um servidor que você possui <a href="/login-automatico-no-ssh-no-linux" target="_blank">acesso SSH facilitado</a>, vamos criar o repositório lá que será uma cópia do servidor local:</p>
 <p>[code language="bash"]
 $ mkdir website.git && cd website.git
 $ git init --bare

@@ -14,7 +14,7 @@ tags: []
 <p>Hoje vou demonstrar como podemos criar um sistema de busca simples para o seu site.</p>
 <p>O sistema de busca aqui explicado consiste em duas coisas: o formulário de busca, que pode ir em qualquer lugar do seu site (topo/lateral) e a página de resultados da busca, que exibirá um resultado parecido com o do Google.</p>
 <p>A busca será feita no <strong>título</strong> e no <strong>conteúdo</strong> das notícias cadastradas no banco de dados, em uma tabela chamada <strong>notícias</strong>.</p>
-<p>Veja <a href="http://blog.thiagobelem.net/arquivos/2009/05/busca.jpg" target="_blank">um exemplo</a> (imagem) de como ficará o resultado da busca sem CSS.</p>
+<p>Veja <a href="/arquivos/2009/05/busca.jpg" target="_blank">um exemplo</a> (imagem) de como ficará o resultado da busca sem CSS.</p>
 <p>Veja o código de criação da tabela:</p>
 <p>[code language="sql"]
 CREATE TABLE `noticias` (

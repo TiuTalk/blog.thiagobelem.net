@@ -101,7 +101,7 @@ while ($registro = mysql_fetch_object($query)) {
 	$lista_destaques[] = $registro;
 }
 [/code]</p>
-<p>Pronto... Nosso arquivo está pronto! Veja <a href="http://blog.thiagobelem.net/exemplos/destaque/mysql_destaques.phps">aqui</a> como ele ficou.</p>
+<p>Pronto... Nosso arquivo está pronto! Veja <a href="/exemplos/destaque/mysql_destaques.phps">aqui</a> como ele ficou.</p>
 <p>Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está assim:</p>
 <p>[code language="html"]
 <!-- destaques -->

@@ -26,7 +26,7 @@ tags:
 <li><a href="http://php.net/manual/book.simplexml.php">SimpleXML</a></li>
 </ul>
 <p>O <strong>SimpleXML</strong> já vem habilitado no PHP, mas o <strong>cURL</strong> normalmente não.. Se você contratou uma hospedagem compartilhada provavelmente ambos já estão habilitados.</p>
-<p>Pra quem não conhece o <strong>cURL</strong> (ou precisa habilitá-lo), recomendo a leitura: <a href="http://blog.thiagobelem.net/tutorial-basico-de-curl-instalacao-configuracao-e-uso/">Tutorial básico de cURL – Instalação, configuração e uso</a></p>
+<p>Pra quem não conhece o <strong>cURL</strong> (ou precisa habilitá-lo), recomendo a leitura: <a href="/tutorial-basico-de-curl-instalacao-configuracao-e-uso">Tutorial básico de cURL – Instalação, configuração e uso</a></p>
 <p>Se você receber a seguinte mensagem de erro, significa que seu cURL não está habilitado:</p>
 <blockquote><p>Fatal error: Call to undefined function curl_init()</p></blockquote>
 <h3>O código</h3>

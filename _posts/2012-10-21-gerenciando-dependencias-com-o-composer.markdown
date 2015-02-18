@@ -18,7 +18,7 @@ tags:
 - Doctrine
 - Packagist
 ---
-<p>Se você está lendo esse artigo pelo <a href="http://blog.thiagobelem.net/feed/" target="_blank">Feed RSS</a>, recomendo fortemente que vá até o blog ver o <strong>novo layout</strong>: <a href="http://wp.me/pLryp-Gu" target="_blank">http://wp.me/pLryp-Gu</a> :)</p>
+<p>Se você está lendo esse artigo pelo <a href="/feed" target="_blank">Feed RSS</a>, recomendo fortemente que vá até o blog ver o <strong>novo layout</strong>: <a href="http://wp.me/pLryp-Gu" target="_blank">http://wp.me/pLryp-Gu</a> :)</p>
 <p>Tudo começou com esse tweet:</p>
 <p>https://twitter.com/TiuTalk/status/254967835045031936</p>
 <p>E durante a semana seguinte rolou a entrevista com os palestrantes do <a title="PHP'n Rio 2012" href="http://phpnrio.com.br/2012/" target="_blank">PHP'n Rio 2012</a>:</p>

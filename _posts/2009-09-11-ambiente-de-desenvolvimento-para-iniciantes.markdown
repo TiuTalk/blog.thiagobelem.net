@@ -32,7 +32,7 @@ tags:
 <p><strong>Atenção:</strong> as versões ali em cima são as <strong>atuais</strong> e recomendadas HOJE... Amanhã pode vir coisa nova pela frente e isso mudar.</p>
 <p>Existem também outros programas que eu uso e facilitam (muito) a minha vida...</p>
 <h3>MySQL Workbench</h3>
-<p>O <a href="http://wb.mysql.com/" target="_blank">MySQL Workbench</a> (<em>free</em>) é um programa para planejamento e design de banco de dados, muito útil quando temos dificuldade de imaginar como ficaria aquele emaranhado de tabelas e relações do banco de dados de um site maiorzinho. Falei sobre ele <a href="http://blog.thiagobelem.net/mysql/modelagem-de-banco-de-dados/" target="_blank">nesse post</a>.</p>
+<p>O <a href="http://wb.mysql.com/" target="_blank">MySQL Workbench</a> (<em>free</em>) é um programa para planejamento e design de banco de dados, muito útil quando temos dificuldade de imaginar como ficaria aquele emaranhado de tabelas e relações do banco de dados de um site maiorzinho. Falei sobre ele <a href="/modelagem-de-banco-de-dados" target="_blank">nesse post</a>.</p>
 <h3>Eclipse Galileo</h3>
 <p>Comecei a usar o <a href="http://www.eclipse.org/galileo/" target="_blank">Eclipse Galileo</a> (<em>free</em>) recentemente como IDE de desenvolvimento para PHP... Adorei! Ele é leve, altamente configurável e tem a capacidade de "ler" todos os arquivos do seu PHP e te ajudar a informar onde cada variável foi definida, ou quais são os argumentos daquela função que você criou a semanas atrás e nem lembra mais onde fica.</p>
 <h3>HeidiSQL</h3>

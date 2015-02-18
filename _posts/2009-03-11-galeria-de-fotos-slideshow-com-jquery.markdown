@@ -12,7 +12,7 @@ tags: []
 ---
 <p>Hoje vou ensinar a criar uma galeria de fotos (ou <em>slideshow</em>) usando o jQuery. Pra quem ainda não sabe: o jQuery é um <abbr title="Em desenvolvimento de software, um framework ou arcabouço é uma abstração que une códigos comuns entre vários projetos de software provendo uma funcionalidade genérica. Um framework pode atingir uma funcionalidade específica, por configuração, durante a programação de uma aplicação.">framework</abbr> de JavaScript desenvolvido para codificação rápida (leia-se <strong>relâmpago</strong>).</p>
 <p>O lema do <a href="http://jquery.com/" target="_blank">jQuery</a> é <em>The Write Less, do More</em> que em bom português significa "Escreva menos, faça mais". E é exatamente isso que o jQ te proporciona: fazer muito mais funcionalidades e efeitos com muito menos código.</p>
-<p><a href="http://blog.thiagobelem.net/exemplo1/" target="_blank">Veja um exemplo on-line do resultado desta aula.</a></p>
+<p><a href="/exemplo1" target="_blank">Veja um exemplo on-line do resultado desta aula.</a></p>
 <p>Pra aula de hoje você vai precisar de - <strong>apenas</strong> - duas coisas:</p>
 <ol>
 <li>Última versão do <strong>jQuery</strong>: <a href="http://jquery.com/" target="_blank">http://jquery.com/</a> <span style="color: #999999;">- Clique no botão <em><strong>Download ( jQuery );</strong></em></span></li>
@@ -46,6 +46,6 @@ $('#slideShow').cycle({ fx: 'fade' });
 [/code]</p>
 <p>Com isso você definiu qual a div que contem o slideshow (repare que o ID da div vai ali no começo da terceira linha) e o jQuery inicia o efeito sozinho.</p>
 <p>Mas só isso? Sim. Você já tem um slideshow, automático, com efeito de transição <em>fade</em> pronto pra ser usado!</p>
-<p><a href="http://blog.thiagobelem.net/exemplo1/" target="_blank">Veja como ficou a galeria criada neste exemplo.</a></p>
+<p><a href="/exemplo1" target="_blank">Veja como ficou a galeria criada neste exemplo.</a></p>
 <p>No site do jCycle você vai ver dezenas de outros exemplos de transições e opções que podem ser usadas na chamada do jCycle. Teste-os, você vai adorar!</p>
 <p>Espero que tenham gostado.  :P</p>

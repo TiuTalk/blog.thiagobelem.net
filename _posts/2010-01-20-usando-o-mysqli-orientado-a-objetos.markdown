@@ -20,7 +20,7 @@ tags:
 ---
 <p>Fala minha gente!</p>
 <p>Hoje vou mostrar para vocês como usar a extensão <a href="http://br.php.net/manual/pt_BR/book.mysqli.php" title="MySQLi">MySQLi</a> (<em>MySQL Improved</em> ou MySQL Melhorado) do MySQL.</p>
-<p>Já falei um pouco sobre o MySQLi <a href="http://blog.thiagobelem.net/mysql/guia-pratico-de-mysqli-no-php/" title="Guia prÃ¡tico de MySQLi no PHP">nesse post</a>, mas foi sobre o método procedural, e hoje vamos falar sobre o método orientado a objetos.</p>
+<p>Já falei um pouco sobre o MySQLi <a href="/guia-pratico-de-mysqli-no-php" title="Guia prÃ¡tico de MySQLi no PHP">nesse post</a>, mas foi sobre o método procedural, e hoje vamos falar sobre o método orientado a objetos.</p>
 <p>Antes de mais nada: o MySQLi só está presente na <strong>versão 4.1.3+ do MySQL</strong> e na <strong>versão 5 do PHP</strong>, se você tem um servidor que não tenha alguma dessas versões, se mate. :)</p>
 <p>E vejam que coisa interessante está escrita na <a href="http://br.php.net/manual/pt_BR/mysqli.overview.php" title="MySQLi overview">Overview do MySQLi</a>:</p>
 <blockquote><p><strong>Note:</strong> If you are using MySQL versions 4.1.3 or later it is strongly recommended that you use this extension. </p></blockquote>
@@ -85,7 +85,7 @@ $mysqli->close();</p>
 <p>?>[/code]
 De primeiro contato sei que muita gente vai achar que o MySQLi é mais complicado, é só ver o número de linhas: quase o dobro.. Mas o MySQLi tem uma vantagem indescutível em cima do MySQL normal: <strong style="color: #B40000">a segurança</strong>.</p>
 <p>Primeiro nós <strong>PREPARAMOS</strong> uma consulta com um local para receber um valor variável... É aquela interrogação.</p>
-<p>Depois nós dizemos que o local reservado receberá um conteúdo do tipo string (s) com valor $data.. Ou seja, se <strong>$data</strong> fosse um inteiro ou booleando a consulta daria um erro, ela só aceitará strings, e digo mais: strings que não modifiquem a consulta... se for uma <a href="http://blog.thiagobelem.net/?s=SQL+Injection" title="SQL Injection"><em>SQL Injection</em></a> o <strong>MySQLi</strong> irá escapá-la e ele [o ataque] não funcionará!</p>
+<p>Depois nós dizemos que o local reservado receberá um conteúdo do tipo string (s) com valor $data.. Ou seja, se <strong>$data</strong> fosse um inteiro ou booleando a consulta daria um erro, ela só aceitará strings, e digo mais: strings que não modifiquem a consulta... se for uma <a href="/?s=SQL+Injection" title="SQL Injection"><em>SQL Injection</em></a> o <strong>MySQLi</strong> irá escapá-la e ele [o ataque] não funcionará!</p>
 <p>Depois é só executar, reservar variáveis para o resultado e usá-las com um <strong>fetch()</strong> normal.. ;)</p>
 <p>Vejam um exemplo de consulta com três parâmetros: duas strings e um inteiro:</p>
 <p>[code language="php"]<?php</p>

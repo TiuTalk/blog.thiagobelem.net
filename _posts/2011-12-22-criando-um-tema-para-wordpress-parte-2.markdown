@@ -21,7 +21,7 @@ tags:
 - wp
 - template
 ---
-<p>Na <a href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress/" target="_blank">Parte 1</a> começamos a criar o tema, e agora nós vamos começar a criar o HTML da home do novo tema do meu blog. :)</p>
+<p>Na <a href="/criando-um-tema-para-wordpress" target="_blank">Parte 1</a> começamos a criar o tema, e agora nós vamos começar a criar o HTML da home do novo tema do meu blog. :)</p>
 <p>Por enquanto não tenho nenhum layout à seguir, então vou tentar criar o "HTML ideal" com o máximo de semântica possível e vamos ver o que vai sair disso...</p>
 <h3>Passo 3 - Estrutura inicial de uma página HTML5</h3>
 <p>Pra começar, abrimos o <code>index.php</code> que até então está vazio e adicionamos a estrutura básica do HTML5:</p>
@@ -43,5 +43,5 @@ tags:
 <p>Já que estamos criando um tema para blog, nada melhor do que aproveitar que estamos editando o elemento <strong>head</strong> e adicionar os links dos mesmos:</p>
 <div data-gist-id="1507445" data-gist-show-loading="false"></div>
 <h3>Finalizando</h3>
-<p>Espero que tenham gostado... no <a href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-3/" title="Criando um tema para WordPress – Parte 3" target="_blank">próximo artigo</a> iremos começar a montar o HTML do topo e do conteúdo da página, onde iremos listar os posts. :)</p>
+<p>Espero que tenham gostado... no <a href="/criando-um-tema-para-wordpress-parte-3" title="Criando um tema para WordPress – Parte 3" target="_blank">próximo artigo</a> iremos começar a montar o HTML do topo e do conteúdo da página, onde iremos listar os posts. :)</p>
 <p>Gostou? Então comente! Caso contrário eu posso ficar desmotivado e a terceira parte não vai sair...</p>

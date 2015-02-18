@@ -69,7 +69,7 @@ yepnope({
 <p>Essa foi, sem dúvida, a melhor palestra do evento.</p>
 <p>O <a href="http://www.bernarddeluna.com/">Bernard</a> é um cara muito animado, polêmico e extremamente egocêntrico... Esses são os ingredientes perfeitos pra uma palestra de sucesso.</p>
 <p>Ele falou sobre HTML 5 de uma forma geral sobre planejamento de design para corte, documentação de layout e de implementação, boas práticas de implementação como padronização e reutilização de código.</p>
-<p>A parte mais legal da palestra foi quando ele mostrou o <a title="Zen-Coding – Criando HTML como um ninja!" href="http://blog.thiagobelem.net/zen-coding-criando-html-como-um-ninja/">Zen Coding</a>, uma ferramenta que já falei aqui no blog e permite a implementação de HTML com uma velocidade sem precedentes.</p>
+<p>A parte mais legal da palestra foi quando ele mostrou o <a title="Zen-Coding – Criando HTML como um ninja!" href="/zen-coding-criando-html-como-um-ninja">Zen Coding</a>, uma ferramenta que já falei aqui no blog e permite a implementação de HTML com uma velocidade sem precedentes.</p>
 <h3>Finalização do evento: Hora Extra e muitos sorteios</h3>
 <p>O evento terminou, claro, em <a href="http://horaextra.org/">#HoraExtra</a>... Mas antes houveram vários sorteios de kits da Globo.com, livro da Smashing Magazine e de <strong>duas vagas</strong> para a próxima turma do meu <a href="http://curso-cakephp.com.br">curso de CakePHP</a>, sobre o qual falarei em breve aqui no blog.</p>
 <p>Espero que tenham gostado do relato! Vou ficando por aqui ;)</p>

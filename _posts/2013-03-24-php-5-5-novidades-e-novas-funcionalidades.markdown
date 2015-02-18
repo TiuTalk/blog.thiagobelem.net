@@ -32,4 +32,4 @@ tags:
 <p>Agora é possível indexar arrays e strings literais, por exemplo:</p>
 <div data-gist-id="5232943" data-gist-show-loading="false"></div>
 <h2>API oficial de senhas</h2>
-<p>E por último mas não menos importante, a nova e inédia <a href="http://blog.thiagobelem.net/php-5-5-api-de-senhas/">API de hashing de senhas</a>, algo bem interessante e que irá "padronizar" de uma vez por todas a questão de hashing/segurança de senhas... E por isso ela merece <a href="http://blog.thiagobelem.net/php-5-5-api-de-senhas/">um artigo</a> só pra ela.</p>
+<p>E por último mas não menos importante, a nova e inédia <a href="/php-5-5-api-de-senhas">API de hashing de senhas</a>, algo bem interessante e que irá "padronizar" de uma vez por todas a questão de hashing/segurança de senhas... E por isso ela merece <a href="/php-5-5-api-de-senhas">um artigo</a> só pra ela.</p>

@@ -160,7 +160,7 @@ class MeuSQL {
 <p>}</p>
 <p>?>
 [/code]</p>
-<p>Se quiser, pode fazer o <a rel="nofollow" href="http://blog.thiagobelem.net/arquivos/2009/05/classe-meusql.txt" target="_blank">download</a> do arquivo com a classe e o exemplo de uso.</p>
+<p>Se quiser, pode fazer o <a rel="nofollow" href="/arquivos/2009/05/classe-meusql.txt" target="_blank">download</a> do arquivo com a classe e o exemplo de uso.</p>
 <p>Não falei nem 1/10 do poder da orientação a objetos, mas fique certo de que o seu uso é recomendado, e deixa o código mais seguro além de mais rápido e (pra alguns) mais bonito.</p>
 <p>Espero que tenham gostado... Qualquer dúvida (e eu sei que serão muitas) podem deixar seu comentário.</p>
 <p>Abraços e até a próxima! :D</p>

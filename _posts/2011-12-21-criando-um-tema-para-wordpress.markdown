@@ -39,5 +39,5 @@ tags:
 <p>Com isso o tema já aparece na nossa lista de temas dentro do Painel de Controle do WordPress:</p>
 <p>[caption id="attachment_1896" align="aligncenter" width="264"]<img class="size-full wp-image-1896" title="tema-style" src="/assets/uploads/2011/12/tema-style.png" alt="" width="264" height="356" /> Tema disponível[/caption]</p>
 <p>Nosso tema já pode ser habilitado, e quando você acessar o blog já estará vendo o conteúdo do arquivo <code>index.php</code> que você criou antes: uma tela em branco! :)</p>
-<p>No <a href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-2/">próximo artigo</a> vamos começar a criar o HTML da página inicial..</p>
+<p>No <a href="/criando-um-tema-para-wordpress-parte-2">próximo artigo</a> vamos começar a criar o HTML da página inicial..</p>
 <p>Até a próxima!</p>

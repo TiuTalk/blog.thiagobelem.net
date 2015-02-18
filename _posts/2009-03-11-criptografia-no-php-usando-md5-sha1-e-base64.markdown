@@ -9,7 +9,7 @@ categories:
 - Segurança
 tags: []
 ---
-<p>Veja um artigo mais atualizado em: <a href="http://blog.thiagobelem.net/criptografando-senhas-no-php-usando-bcrypt-blowfish/" title="Criptografando senhas no PHP usando bcrypt (Blowfish)">Criptografando senhas no PHP usando bcrypt (Blowfish)</a></p>
+<p>Veja um artigo mais atualizado em: <a href="/criptografando-senhas-no-php-usando-bcrypt-blowfish" title="Criptografando senhas no PHP usando bcrypt (Blowfish)">Criptografando senhas no PHP usando bcrypt (Blowfish)</a></p>
 <hr />
 <p>Hoje vou falar sobre três tipos de codificação/criptografia (na verdade, <strong>hash</strong>) muito usados no PHP.</p>
 <p>Dois deles são <strong>hashes</strong> de "<strong>mão unica</strong>" ou <em>one-way</em>. Com esse tipo de hash você apenas codifica o texto.. Não tem como, baseado no texto já codificado, descobrir o texto original. O outro é mão dupla, o que possibilita a criação de duas funções: uma para codificar e outra para decodificar o texto.</p>

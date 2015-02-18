@@ -72,7 +72,7 @@ echo "Não foi possível salvar o LOG!";
 <p>?>
 [/code]</p>
 <p>Sugiro que salvem LOGs - principalmente - de todas as tentativas de login. Salve LOGs também das alterações, cadastros e deleções de registros do sistema (produtos/categorias/lojas/notícias e etc.). Isso vai tornar a sua aplicação mais segura e quando algo der errado você vai poder encontrar "o pai da criança" com mais facilidade.</p>
-<p>Se você já tiver feito um sistema de login no seu site (se não, <a href="http://blog.thiagobelem.net/mysql/criando-um-sistema-de-login-com-php-e-mysql/" target="_blank">veja aqui como fazer um</a>), salve também o usuário atual, como por exemplo:</p>
+<p>Se você já tiver feito um sistema de login no seu site (se não, <a href="/criando-um-sistema-de-login-com-php-e-mysql" target="_blank">veja aqui como fazer um</a>), salve também o usuário atual, como por exemplo:</p>
 <p style="text-align: center;"><span style="color: #000000;">"<strong>[ Usuário: Fulano ] Cadastrou uma notícia</strong>"</span></p>
 <p>Com isso, você tem o nome do usuário usado, o IP e a data e hora de onde/quando/como foi executada a ação de cadastro. Muito útil, não?</p>
 <p>Até a próxima!</p>

@@ -15,8 +15,8 @@ tags:
 - bcrypt
 - auth
 ---
-<p>Recentemente escrevi um pequeno artigo falando sobre as <a title="Criptografando senhas no PHP usando bcrypt (Blowfish)" href="http://blog.thiagobelem.net/criptografando-senhas-no-php-usando-bcrypt-blowfish/">vantagens e utilização do bcrypt</a> em projetos PHP.</p>
-<p>E agora gostaria de mostrar pra vocês como é fácil hashear senhas usando o <strong>bcrypt</strong> dentro do <a href="http://blog.thiagobelem.net/frameworks/cakephp/">CakePHP</a>.</p>
+<p>Recentemente escrevi um pequeno artigo falando sobre as <a title="Criptografando senhas no PHP usando bcrypt (Blowfish)" href="/criptografando-senhas-no-php-usando-bcrypt-blowfish">vantagens e utilização do bcrypt</a> em projetos PHP.</p>
+<p>E agora gostaria de mostrar pra vocês como é fácil hashear senhas usando o <strong>bcrypt</strong> dentro do <a href="/cakephp">CakePHP</a>.</p>
 <h2>Versão 2.3+</h2>
 <p>O <a href="https://github.com/cakephp/cakephp/blob/2.3/lib/Cake/Controller/Component/Auth/BlowfishAuthenticate.php" target="_blank">BlowfishAuthenticate</a> é um "objeto" de autenticação que está disponível apenas a partir da <a href="https://github.com/cakephp/cakephp/tree/2.3" target="_blank">versão 2.3 do CakePHP</a>, que hoje (20/11) ainda está em desenvolvimento.</p>
 <h2>Habilitando e configurando o AuthComponent</h2>

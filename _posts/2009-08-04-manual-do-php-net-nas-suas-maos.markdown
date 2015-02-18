@@ -20,5 +20,5 @@ tags:
 <p>Agora é só clicar na setinha e clicar em <strong>Adicionar "Add PHP.net search"</strong>, como mostra a imagem:</p>
 <p style="text-align: center"><img src="http://blog.thiagobelem.net/arquivos/2009/08/imagem2.jpg" alt="Manual do PHP.net nas suas mãos!" title="Manual do PHP.net nas suas mãos!" width="303" height="177" class="aligncenter size-full wp-image-609" style="border: 1px solid silver" /></p>
 <p>Prontinho! Agora você tem o <a href="http://php.net/" target="_blank">PHP.net</a> como mais uma opção de busca e é só digitar o nome da função que você deseja e ele vai te levar direto para a documentação ou, caso ele não encontre nada, para uma página de busca com resultados parecidos.</p>
-<p>Veja como adicionar esset ipo de busca rápida no seu site: <a href="http://blog.thiagobelem.net/php/open-search-adicionando-a-busca-rapida-no-seu-site/">Open Search: Adicionando a Busca Rápida no seu site</a></p>
+<p>Veja como adicionar esset ipo de busca rápida no seu site: <a href="/open-search-adicionando-a-busca-rapida-no-seu-site">Open Search: Adicionando a Busca Rápida no seu site</a></p>
 <p>Um grande abraço para todos! :)</p>

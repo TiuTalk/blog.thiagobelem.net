@@ -15,7 +15,7 @@ tags:
 - Google Maps
 ---
 <p>Fala gente,</p>
-<p>Essa é a continuação de um tutorial da semana passada: <a href="http://blog.thiagobelem.net/php/buscando-a-latitude-e-longitude-de-um-endereco-google-maps-php-parte-1/" target="_blank">Buscando a Latitude e Longitude de um endereço – Google Maps + PHP – Parte 1</a></p>
+<p>Essa é a continuação de um tutorial da semana passada: <a href="/buscando-a-latitude-e-longitude-de-um-endereco-google-maps-php-parte-1" target="_blank">Buscando a Latitude e Longitude de um endereço – Google Maps + PHP – Parte 1</a></p>
 <p>Hoje vou mostrar como você pode exibir um mapinha do <a href="http://maps.google.com/" target="_blank">Google Maps</a> no seu site, usando as informações encontradas com a <strong>Google Maps API</strong> (que usamos no outro artigo).</p>
 <p>Se você ainda não tiver uma Google Maps API Key (ou GMAK) acesse esse endereço e pegue a sua: <a href="http://code.google.com/intl/pt-BR/apis/maps/signup.html" target="_blank">http://code.google.com/intl/pt-BR/apis/maps/signup.html</a></p>
 <p>Agora, dentro do <strong><head></strong> do seu site, insira o seguinte código:</p>
@@ -40,5 +40,5 @@ tags:
 <p>		map.addOverlay(marker);
 		map.setCenter(point, zoom);
 	}[/code]</p>
-<p>Agora é só substituir o <strong style="background: gray; color: orange">{LATITUDE}</strong>, <strong style="background: gray; color: orange">{LONGITUDE}</strong> e <strong style="background: gray; color: orange">{ZOOM}</strong> (nas linhas 3, 4 e 5) pelas informações que você conseguiu pegar usando o passo-a-passo do <a href="http://blog.thiagobelem.net/php/buscando-a-latitude-e-longitude-de-um-endereco-google-maps-php-parte-1/" target="_blank">outro artigo</a>.</p>
+<p>Agora é só substituir o <strong style="background: gray; color: orange">{LATITUDE}</strong>, <strong style="background: gray; color: orange">{LONGITUDE}</strong> e <strong style="background: gray; color: orange">{ZOOM}</strong> (nas linhas 3, 4 e 5) pelas informações que você conseguiu pegar usando o passo-a-passo do <a href="/buscando-a-latitude-e-longitude-de-um-endereco-google-maps-php-parte-1" target="_blank">outro artigo</a>.</p>
 <p>Espero que tenham gostado! :)</p>

@@ -18,10 +18,10 @@ tags:
 - CSS
 ---
 <p>Fala gente!</p>
-<p>Tenho recebido vários e-mails pedindo um tutorial ensinando a criar um sistema de destaques como esse que fiz na <a href="http://blog.thiagobelem.net/" title="Thiago Belem / Blog">home do blog</a>.</p>
+<p>Tenho recebido vários e-mails pedindo um tutorial ensinando a criar um sistema de destaques como esse que fiz na <a href="/" title="Thiago Belem / Blog">home do blog</a>.</p>
 <p>O sistema de destaques que iremos criar não é específico para o WordPress e sim para qualquer site... Por isso não iremos criar um plugin de WordPress ou usar as funções do mesmo, faremos tudo com código puro.</p>
 <p>O sistema de destaques que iremos criar terá a seguinte aparência:
-<a href="http://blog.thiagobelem.net/arquivos/2010/02/destaque.jpg"><img src="http://blog.thiagobelem.net/arquivos/2010/02/destaque-300x114.jpg" alt="" title="Sistema de Destaques" width="300" height="114" class="aligncenter size-medium wp-image-709" /></a></p>
+<a href="/arquivos/2010/02/destaque.jpg"><img src="http://blog.thiagobelem.net/arquivos/2010/02/destaque-300x114.jpg" alt="" title="Sistema de Destaques" width="300" height="114" class="aligncenter size-medium wp-image-709" /></a></p>
 <h3>A marcação XHTML</h3>
 <p>Antes de mais nada, precisamos criar o HTML do nosso bloco de destaque... Começamos com uma div e dentro dela criaremos uma lista (UL) com três itens (LI):</p>
 <p>[code language="html"]
@@ -80,7 +80,7 @@ tags:
 <p>Algumas pessoas podem ter pensado que errei ao criar dois links ao invés de inserir o parágrafo (P) dentro do primeiro link, após a imagem... Mas isso seria errado pois o link é um elemento de linha (<em>in-line</em>) e o parágrafo é um elemento de bloco (<em>block</em>) e nunca devemos inserir um elemento <em>block</em> dentro de um <em>in-line</em>.</p>
 <p>Criamos também, antes de cada parágrafo, uma <strong>div.fundo</strong> vazia que será o fundo preto transparente da descrição/titulo de cada item.</p>
 <p>Até agora nosso sistema de destaques ficou assim:
-<a href="http://blog.thiagobelem.net/arquivos/2010/02/destaque1.jpg"><img src="http://blog.thiagobelem.net/arquivos/2010/02/destaque1-230x300.jpg" alt="" title="Sistema de Destaques - 1ª Prévia" width="230" height="300" class="aligncenter size-medium wp-image-710" /></a></p>
+<a href="/arquivos/2010/02/destaque1.jpg"><img src="http://blog.thiagobelem.net/arquivos/2010/02/destaque1-230x300.jpg" alt="" title="Sistema de Destaques - 1ª Prévia" width="230" height="300" class="aligncenter size-medium wp-image-710" /></a></p>
 <p>Por fim, nós vamos inserir mais um link, dessa vez vazio, antes da lista (UL)... Esse link será a faixa [Destaques] que teremos sobre a imagem e a nossa marcação HTML está pronta:</p>
 <p>[code language="html"]
 <!-- destaques -->
@@ -204,6 +204,6 @@ tags:
 <p>	background: transparent url('../img/faixa.png') 0 0 no-repeat;
 }
 [/code]</p>
-<p>Por enquanto vamos ficar por aqui... O HTML e o CSS do sistema de destaques está pronto... Na <a href="http://blog.thiagobelem.net/css/criando-um-sistema-de-destaques-parte-2/" title="Criando um sistema de destaques - Parte 2">Parte 2</a> falaremos sobre o efeito em jQuery que fará a transição dos slides e colocaremos o paginador.</p>
-<p>Quer ver como ficou o sistema de destaques até agora? Veja <a href="http://blog.thiagobelem.net/exemplos/destaque/parte1/" title="Sistema de Destaques - Parte 1" target="_blank">online</a> ou faça download do <a href="http://blog.thiagobelem.net/exemplos/destaque/parte1.rar" title="Sistema de Destaques - Parte 1" target="_blank">RAR</a> com os arquivos.</p>
+<p>Por enquanto vamos ficar por aqui... O HTML e o CSS do sistema de destaques está pronto... Na <a href="/criando-um-sistema-de-destaques-parte-2" title="Criando um sistema de destaques - Parte 2">Parte 2</a> falaremos sobre o efeito em jQuery que fará a transição dos slides e colocaremos o paginador.</p>
+<p>Quer ver como ficou o sistema de destaques até agora? Veja <a href="/exemplos/destaque/parte1/" title="Sistema de Destaques - Parte 1" target="_blank">online</a> ou faça download do <a href="/exemplos/destaque/parte1.rar" title="Sistema de Destaques - Parte 1" target="_blank">RAR</a> com os arquivos.</p>
 <p>Espero que tenham gostado! :)</p>

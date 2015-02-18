@@ -142,6 +142,6 @@ add_action('widgets_init', create_function('', 'return register_widget("SobreAut
 [/code]</p>
 <p>[caption id="attachment_1389" align="aligncenter" width="263" caption="Widget em funcionamento"]<img src="/assets/uploads/2011/01/1295580557334.png" alt="" title="Widget sobre o autor" width="263" height="120" class="size-full wp-image-1389" />[/caption]</p>
 <p>Espero que tenham gostado! Agora é só você editar o CSS do seu blog para deixar o widget bem apresentável. ;)</p>
-<p>Faça o download do código-fonte completo do widget: <a href="http://blog.thiagobelem.net/arquivos/widget_sobre-autor.class.phps" title="Widget - Sobre o autor (código fonte)" target="_blank">http://blog.thiagobelem.net/arquivos/widget_sobre-autor.class.phps</a></p>
+<p>Faça o download do código-fonte completo do widget: <a href="/arquivos/widget_sobre-autor.class.phps" title="Widget - Sobre o autor (código fonte)" target="_blank">http://blog.thiagobelem.net/arquivos/widget_sobre-autor.class.phps</a></p>
 <p>Gostou do artigo? Criou um widget pro seu blog? Comente como foi! Diga o que você conseguiu fazer! :)</p>
 <p>Um grande abraço e até a próxima!</p>

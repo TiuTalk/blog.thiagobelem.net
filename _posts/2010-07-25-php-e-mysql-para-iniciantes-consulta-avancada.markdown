@@ -57,7 +57,7 @@ $sql = "SELECT
 		LIMIT 10";
 [/code]</p>
 <p>O interessante dessa consulta é que ela busca os registros da tabela <code>noticia</code> que possuam um relacionamento com os registros da tabela <code>categorias</code> e, o registro correspondente na tabela <code>categorias</code> deve possuir o valor da variável <code>$categoria</code> no campo <code>nome</code>.</p>
-<p>Para quem não entendeu a explicação acima, vale a pena a leitura do meu artigo <a title="Relacionamento de Tabelas no MySQL" href="http://blog.thiagobelem.net/mysql/relacionamento-de-tabelas-no-mysql/">Relacionamento de Tabelas no MySQL</a>.</p>
+<p>Para quem não entendeu a explicação acima, vale a pena a leitura do meu artigo <a title="Relacionamento de Tabelas no MySQL" href="/relacionamento-de-tabelas-no-mysql">Relacionamento de Tabelas no MySQL</a>.</p>
 <p>Continuando o script, rodamos a consulta e exibimos o resultado:</p>
 <p>[code language="php" firstline="36"]
 // Prepara a consulta OU mostra uma mensagem de erro
@@ -80,5 +80,5 @@ echo "<p>Registros encontrados: {$resultado->num_rows}</p>";</p>
 $resultado->free();
 [/code]</p>
 <p>E vocês acabaram de ver um exemplo de consulta complexa usando MySQLi! :)</p>
-<p>Faça o download dos arquivos desse tutorial aqui: <a href="http://blog.thiagobelem.net/arquivos/2010/07/PHP-e-MySQL-Consulta-Avançada.zip">PHP-e-MySQL-Consulta-Avançada.zip</a></p>
+<p>Faça o download dos arquivos desse tutorial aqui: <a href="/arquivos/2010/07/PHP-e-MySQL-Consulta-Avançada.zip">PHP-e-MySQL-Consulta-Avançada.zip</a></p>
 <p>Abraços e até a próxima!</p>

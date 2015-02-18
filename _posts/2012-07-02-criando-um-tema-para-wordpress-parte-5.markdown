@@ -21,10 +21,10 @@ tags:
 <p>Hoje vamos continuar com a parte 5 da série de posts onde mostro o passo-a-passo da criação de um tema pra WordPress.</p>
 <p>Se você ainda não está acompanhando, veja as outras partes dessa sequência de artigos:</p>
 <ul>
-<li><a title="Criando um tema para WordPress – Parte 1" href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress/" target="_blank">Parte 1 - Estrutura inicial do tema</a></li>
-<li><a title="Criando um tema para WordPress – Parte 2" href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-2/" target="_blank">Parte 2 - HTML5, Funções básicas do WordPress, Feed RSS e Atom</a></li>
-<li><a title="Criando um tema para WordPress – Parte 3" href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-3/" target="_blank">Parte 3 - Topo e listagem de posts</a></li>
-<li><a title="Criando um tema para WordPress – Parte 4" href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-4/">Parte 4 - Header, Footer e Sidebar</a></li>
+<li><a title="Criando um tema para WordPress – Parte 1" href="/criando-um-tema-para-wordpress" target="_blank">Parte 1 - Estrutura inicial do tema</a></li>
+<li><a title="Criando um tema para WordPress – Parte 2" href="/criando-um-tema-para-wordpress-parte-2" target="_blank">Parte 2 - HTML5, Funções básicas do WordPress, Feed RSS e Atom</a></li>
+<li><a title="Criando um tema para WordPress – Parte 3" href="/criando-um-tema-para-wordpress-parte-3" target="_blank">Parte 3 - Topo e listagem de posts</a></li>
+<li><a title="Criando um tema para WordPress – Parte 4" href="/criando-um-tema-para-wordpress-parte-4">Parte 4 - Header, Footer e Sidebar</a></li>
 </ul>
 <h3>Página interna do post (single.php)</h3>
 <p>Eu não sei exatamente por que chamo esse tipo de página de "interna do post" ou "interna da notícia", mas essa é a página que mostra todo o conteúdo do post em questão.</p>

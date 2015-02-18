@@ -22,7 +22,7 @@ tags:
 - the loop
 - post
 ---
-<p>No <a href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-2/" title="Criando um tema para WordPress – Parte 2" target="_blank">último artigo</a> nós começamos a criar o HTML da página inicial, e agora vamos continuar o trabalho criando o topo do site e listando os posts.</p>
+<p>No <a href="/criando-um-tema-para-wordpress-parte-2" title="Criando um tema para WordPress – Parte 2" target="_blank">último artigo</a> nós começamos a criar o HTML da página inicial, e agora vamos continuar o trabalho criando o topo do site e listando os posts.</p>
 <h3>Deixando o título mais... dinâmico</h3>
 <p>Uma boa prática é mostrar o título do post dentro da tag <strong>title</strong>, no <strong>head</strong> do site... Pra isso vamos usar a função <a href="http://codex.wordpress.org/Function_Reference/wp_title" target="_blank">wp_title()</a> e fazer a seguinte mudança:</p>
 <div data-gist-id="1514337" data-gist-show-loading="false"></div>

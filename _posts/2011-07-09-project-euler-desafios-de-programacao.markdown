@@ -33,7 +33,7 @@ tags:
 </ol>
 <p>Existem <a href="http://projecteuler.net/index.php?section=problems&id=1" target="_blank">problemas resolvidos por mais 150.000 pessoas</a>, e existem <a href="http://projecteuler.net/index.php?section=problems&id=344" target="_blank">problemas que apenas 25 pessoas conseguiram resolver</a>!</p>
 <h3>Resolvendo o primeiro problema com PHP e Python</h3>
-<p>Resolvi trazer o primeiro problema aqui pro blog e mostrar duas soluções (idênticas) que criei usando <a href="http://blog.thiagobelem.net/desenvolvimento/php/" target="_blank">PHP</a> e <a href="http://blog.thiagobelem.net/desenvolvimento/python/" target="_blank">Pyhon</a>.</p>
+<p>Resolvi trazer o primeiro problema aqui pro blog e mostrar duas soluções (idênticas) que criei usando <a href="/php" target="_blank">PHP</a> e <a href="/python" target="_blank">Pyhon</a>.</p>
 <p>Segue a descrição e a tradução do problema:</p>
 <blockquote><p><em>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</em></p>
 <p><em>Find the sum of all the multiples of 3 or 5 below 1000.</em></p></blockquote>

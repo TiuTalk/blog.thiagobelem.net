@@ -95,5 +95,5 @@ echo $this->Paginator->next('Mais antigas »', null, null, array('class' => 'des
 <p><a href="http://assando-sites.com.br/"><img src="/assets/uploads/2011/07/cookie.png" alt="Assando Sites, curso online de CakePHP" title="Assando Sites, curso online de CakePHP" width="128" height="128" class="alignright size-full wp-image-1737" /></a></p>
 <p>Inscreva-se no meu <strong>curso online</strong> de CakePHP, o <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br" target="_blank">Assando Sites</a>!</p>
 <p>Você aprende sem sair de casa, aos domingos ou quando preferir assistir os vídeos gravados em aula. :)</p>
-<p>Para saber mais informações sobre o curso, <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br" target="_blank">acesse o site</a> ou leia <a title="Curso online de CakePHP" href="http://blog.thiagobelem.net/curso-online-de-cakephp/" target="_blank">este post aqui no blog</a>.</p>
+<p>Para saber mais informações sobre o curso, <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br" target="_blank">acesse o site</a> ou leia <a title="Curso online de CakePHP" href="/curso-online-de-cakephp" target="_blank">este post aqui no blog</a>.</p>
 <p>Um grande abraço e até a próxima!</p>

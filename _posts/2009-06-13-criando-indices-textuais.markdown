@@ -80,7 +80,7 @@ $out = strrev($out);
 <p>return $out;
 }
 ?>[/code]</p>
-<p>Se você quiser, pode fazer o <a title="Download do arquivo" href="http://blog.thiagobelem.net/arquivos/2009/06/idtextual.txt" target="_blank">download do arquivo (.txt) com a função</a> (com a indentação correta).</p>
+<p>Se você quiser, pode fazer o <a title="Download do arquivo" href="/arquivos/2009/06/idtextual.txt" target="_blank">download do arquivo (.txt) com a função</a> (com a indentação correta).</p>
 <h3>Usando a função</h3>
 <p>Para usar a função é bem simples, veja a conversão de número em texto:</p>
 <p>[code='php']<?php

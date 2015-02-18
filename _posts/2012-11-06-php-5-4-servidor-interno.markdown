@@ -12,7 +12,7 @@ tags:
 - PHP 5.4
 - servidor interno
 ---
-<p>Uma das <a title="PHP 5.4 – Novidades e novas funcionalidades" href="http://blog.thiagobelem.net/php-5-4-novas-funcionalidades/">funcionalidades implementadas do PHP 5.4</a> é o servidor interno, que permite que você teste e desenvolva sites localmente sem a necessidade de servidores como <strong>Apache</strong> ou <strong>Nginx</strong>.</p>
+<p>Uma das <a title="PHP 5.4 – Novidades e novas funcionalidades" href="/php-5-4-novas-funcionalidades">funcionalidades implementadas do PHP 5.4</a> é o servidor interno, que permite que você teste e desenvolva sites localmente sem a necessidade de servidores como <strong>Apache</strong> ou <strong>Nginx</strong>.</p>
 <p>Este é um recurso que eu já havia visto em linguagens como <strong>Python</strong> e <strong>Ruby</strong>, mas (até onde eu sei) nunca haviam criado algo do tipo para PHP.</p>
 <p>A sintaxe padrão do comando é a seguinte:</p>
 <div data-gist-id="4028578" data-gist-show-loading="false"></div>

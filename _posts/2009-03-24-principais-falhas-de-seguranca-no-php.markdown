@@ -12,7 +12,7 @@ categories:
 tags: []
 ---
 <p>Hoje vou falar sobre alguns erros comuns que são cometidos por programadores que estão começando agora. Resolvi fazer esse post pois vejo diariamente em fóruns de PHP pessoas com erros em scripts que possuem rombos enormes de segurança...</p>
-<p>Não prometo deixar o seu sistema tão protegido quanto o <a title="Cadillac One" href="http://blog.thiagobelem.net/arquivos/2009/03/cadillac-one.jpg" target="_blank"><em>carro do Obama</em></a> mas, sem dúvida, você vai evitar que muita gente faça um estrago considerável no seu site.</p>
+<p>Não prometo deixar o seu sistema tão protegido quanto o <a title="Cadillac One" href="/arquivos/2009/03/cadillac-one.jpg" target="_blank"><em>carro do Obama</em></a> mas, sem dúvida, você vai evitar que muita gente faça um estrago considerável no seu site.</p>
 <p>Se você se identificar com algumas dessas medidas não saia correndo e se jogue da ponte... Faça os devidos ajustes e tudo ficará bem.</p>
 <h4>Cuidados com a URL - Parte I</h4>
 <p>Uma falha muito comum são aqueles sites que, tentando usar um sistema "legal", acabam abusando da sorte... São sites que incluem o conteúdo <span style="color: #999999;">(via <strong>include()</strong>)</span> baseado em uma variável do método $_GET. Exemplo:</p>
@@ -95,5 +95,5 @@ $parametro = mysql_real_escape_string($_GET['nome']);
 <h4>Sobre Usuários e Senhas</h4>
 <p>Outro ponto muito importante é não exibir, em momento algum, o nome de login <span style="color: #999999;">(usuário)</span> de algum usuário cadastrado no sistema. Lembre-se que para um usuário conseguir invadir a conta do outro ele precisa de duas coisas: usuário <span style="color: #999999;">(ou e-mail)</span> e a senha.. Se ele souber o usuário já tem 50% de sucesso.</p>
 <p>Vale lembrar também que você <strong>não precisa</strong> deixar a senha do usuário na forma real quando salva-la no banco. É muito mais seguro salvar um <strong>md5() </strong>ou <strong>sha1()</strong> da senha no banco e quando for necessário fazer a validação do usuário você também gera o <strong>md5()</strong> ou <strong>sha1()</strong> da senha que ele digitou e compara com o que há no banco. Assim, se por ventura alguém conseguir invadir e pegar todos os registros do banco de usuários, o máximo que ele irá conseguir são o usuário/e-mail e uma senha criptografada.</p>
-<p>Se quiser saber como funciona criptografica no PHP é só ver esse post:» <a href="http://blog.thiagobelem.net/php/criptografia-no-php-usando-md5-sha1-e-base64/">Criptografia no PHP usando md5, sha1 e base64</a></p>
+<p>Se quiser saber como funciona criptografica no PHP é só ver esse post:» <a href="/criptografia-no-php-usando-md5-sha1-e-base64">Criptografia no PHP usando md5, sha1 e base64</a></p>
 <p>Espero que tenham gostado. :)</p>

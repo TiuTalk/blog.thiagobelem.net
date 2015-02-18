@@ -22,7 +22,7 @@ tags:
 ---
 <p>Vejamos, esta na hora da segunda parte deste tutorial!</p>
 <p>Para encurtar os posts, irei colocar apenas os trechos do código necessários, vocês devem acompanhar com uma copia dos arquivos no seu PC, de preferência. No futuro, vou manter os códigos com suas ultimas atualizações em um repositório no <a title="GitHub" href="http://github.com" target="_blank">GitHub</a>.</p>
-<p>Na <a title="HTML5 vs HTML4 – Parte 1" href="http://blog.thiagobelem.net/html5-vs-html4-parte-1/" target="_blank">primeira parte</a>, construímos o arquivo <strong>HTML</strong>, vazio, hoje começaremos a mexer no body do documento, e colocar tudo que aparecera no site.</p>
+<p>Na <a title="HTML5 vs HTML4 – Parte 1" href="/html5-vs-html4-parte-1" target="_blank">primeira parte</a>, construímos o arquivo <strong>HTML</strong>, vazio, hoje começaremos a mexer no body do documento, e colocar tudo que aparecera no site.</p>
 <p>Como sou muito fã das novidades do <strong>HTML5</strong>, vou continuar postando códigos comparativos, ainda mais na parte de formulários, onde vejo as mais belas inovações, apesar de pouco compatíveis por enquanto.</p>
 <p>Vamos ao nosso formulário, primeiro, claro, em <strong>HTML4</strong>:</p>
 <div data-gist-id="4746524" data-gist-show-loading="false"></div>
@@ -55,7 +55,7 @@ tags:
 <p><span style="line-height: 1.714285714; font-size: 1rem;">Entre muitos outros... Recomendo a leitura dos artigos sobre HTML5 na </span><a style="line-height: 1.714285714; font-size: 1rem;" title="w3schools, html5 form input types" href="http://www.w3schools.com/html/html5_form_input_types.asp" target="_blank">W3Schools</a><span style="line-height: 1.714285714; font-size: 1rem;">, mas atenção: <span style="color: #ff0000;">use o W3Schools com muito cuidado</span>! Vide: </span><a style="line-height: 1.714285714; font-size: 1rem;" href="http://w3fools.com/">http://w3fools.com/</a></p>
 <p>Sobre a questão de <strong>compatibilidade</strong> dos recursos do HTML5, procure sobre <strong>Modernizr</strong>, <strong>HTML5Shiv</strong> e <strong>Polyfills</strong>.</p>
 <p>Mas nem tudo são flores, por enquanto ainda será necessário verificar se o valor do <strong>coefA</strong> é igual a zero, ou seja, usaremos o mesmo script anterior, porem só o que necessitamos agora:</p>
-<p>[gist id= 4746566]</p>
+<div data-gist-id="4746566" data-gist-show-loading="false"></div>
 <p>Se estivermos procurando apenas valores <strong>maiores que zero</strong>, poderíamos ter feito essa "regra" diretamente no campo, sem a necessidade de JavaScript:</p>
 <div data-gist-id="4746599" data-gist-show-loading="false"></div>
 <h3>Conclusão</h3>

@@ -16,7 +16,7 @@ tags:
 - Login
 ---
 <p>Fala pessoal!</p>
-<p>Hoje acordei cedo e resolvi criar um novo artigo explicando como se faz um sistema de login passo-a-passo, que nem eu fiz o tutorial sobre <a href="http://blog.thiagobelem.net/mysql/upload-de-arquivos-como-tudo-funciona/">como funciona o upload e validação de arquivos</a> no PHP.</p>
+<p>Hoje acordei cedo e resolvi criar um novo artigo explicando como se faz um sistema de login passo-a-passo, que nem eu fiz o tutorial sobre <a href="/upload-de-arquivos-como-tudo-funciona">como funciona o upload e validação de arquivos</a> no PHP.</p>
 <p>O meu intuito nesse artigo não é entregar um script pronto mas sim te mostrar o "caminho das pedras" enquanto <strong>você</strong> é quem criará o seu próprio sistema.</p>
 <p>Versões utilizadas nesse artigo: <strong>PHP 5.2.9</strong> e <strong>MySQL 5.0.5</strong>.</p>
 <p>O nosso sistema consistirá em um login simples, validado por usuário e senha (encriptada) contra uma tabela no banco de dados e armazenando os dados na sessão. Haverão dois níveis de acesso para os nossos usuários: normal (1) e administrador (2).</p>
@@ -38,7 +38,7 @@ tags:
 <p>Com isso você já tem uma tabela pronta para o nosso tutorial... Rode esse script se quiser alimentar a tabela com alguns usuários de teste:
 [code language="sql"]INSERT INTO `usuarios` VALUES (NULL, 'Usuário Teste', 'demo', SHA1( 'demo' ), 'usuario@demo.com.br', 1, 1, NOW( ));
 INSERT INTO `usuarios` VALUES (NULL, 'Administrador Teste', 'admin', SHA1( 'admin' ), 'admin@demo.com.br', 2, 1, NOW( ));[/code]</p>
-<p>Como vocês podem perceber, o nosso campo de senha tem 40 caracteres e quando cadastramos os usuários testes usamos <strong style="color: white; background: gray">SHA1('{senha}')</strong> isso significa que usaremos uma senha encriptada... Se você quiser saber mais sobre sha1 veja esse artigo: <a href="http://blog.thiagobelem.net/php/criptografia-no-php-usando-md5-sha1-e-base64/" target="_blank">Criptografia no PHP usando md5, sha1 e base64</a>.</p>
+<p>Como vocês podem perceber, o nosso campo de senha tem 40 caracteres e quando cadastramos os usuários testes usamos <strong style="color: white; background: gray">SHA1('{senha}')</strong> isso significa que usaremos uma senha encriptada... Se você quiser saber mais sobre sha1 veja esse artigo: <a href="/criptografia-no-php-usando-md5-sha1-e-base64" target="_blank">Criptografia no PHP usando md5, sha1 e base64</a>.</p>
 <p></p>
 <h3>O formulário de Login em XHTML</h3>
 <p>Vamos criar agora o nosso formulário que será onde o visitante entrará com os dados e será mandado para a pagina validacao.php onde os dados serão validados (ohh).</p>
@@ -166,6 +166,6 @@ Ou se você preferir, uma versão mais extensa:
 ?>[/code]</p>
 <p>--</p>
 <p>Quem não conseguir fazer um sistema de login depois dessa aula não vai ganhar batata frita no fim do dia! :D</p>
-<p>Pra quem quiser, aqui tem um <a href="http://blog.thiagobelem.net/arquivos/2009/07/login20090724.rar" target="_blank">RAR para download</a> com os arquivos desse artigo.</p>
+<p>Pra quem quiser, aqui tem um <a href="/arquivos/2009/07/login20090724.rar" target="_blank">RAR para download</a> com os arquivos desse artigo.</p>
 <p>--</p>
-<p>Veja <a href="http://blog.thiagobelem.net/mysql/criando-um-sistema-de-logins-com-classe-no-php-parte-1/" title="Criando um sistema de logins com classe no PHP" target="_blank">aqui</a> como criar um <strong>sistema de login usando classes</strong> (Orientação a Objetos) e que funciona no PHP 4 e PHP 5.</p>
+<p>Veja <a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" title="Criando um sistema de logins com classe no PHP" target="_blank">aqui</a> como criar um <strong>sistema de login usando classes</strong> (Orientação a Objetos) e que funciona no PHP 4 e PHP 5.</p>

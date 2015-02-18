@@ -18,7 +18,7 @@ tags:
 <p>Hoje consegui um tempinho para voltar a postar no blog e resolvi voltar um com uma sequencia de tutorias básicos sobre MySQL + PHP para iniciantes.</p>
 <p>Nessa primeira parte vamos criar um script que irá resgatar as notícias de um banco de dados e fazer mais alguns procedimentos.</p>
 <div style="background: #FFF7D9; border: 1px dashed #FFE294; padding: 5px; margin-bottom: 10px;">Vamos usar <a href="http://www.php.net/manual/pt_BR/book.mysqli.php">MySQLi</a> ao invés de MySQL. Mesmo sendo um recurso <em>avançado</em> para alguns, é bom ensinar uma forma correta e segura de trabalhar pra quem tá começando. :)</p>
-<p style="margin-bottom: 0px;">• Saiba mais sobre o MySQLi <a title="Usando o MySQLi Orientado a Objetos" href="http://blog.thiagobelem.net/mysql/usando-o-mysqli-orientado-a-objetos/">aqui</a> e <a title="Guia prático de MySQLi no PHP" href="http://blog.thiagobelem.net/mysql/guia-pratico-de-mysqli-no-php/">aqui</a></p>
+<p style="margin-bottom: 0px;">• Saiba mais sobre o MySQLi <a title="Usando o MySQLi Orientado a Objetos" href="/usando-o-mysqli-orientado-a-objetos">aqui</a> e <a title="Guia prático de MySQLi no PHP" href="/guia-pratico-de-mysqli-no-php">aqui</a></p>
 <p style="margin-bottom: 0px;">• Os recursos utilizando aqui (MySQLi) só funcionam em <strong>PHP 5+</strong> e <strong>MySQL 4.1+</strong></p>
 </div>
 <p>Essas serão as tabelas que iremos utilizar nesse e nos próximos tutoriais:</p>
@@ -29,7 +29,7 @@ tags:
 <li>Cada <strong>categoria</strong> contém zero ou mais <strong>notícias</strong></li>
 </ul>
 <div style="background: #FFF7D9; border: 1px dashed #FFE294; padding: 5px; margin-bottom: 10px;">
-<p style="margin-bottom: 0px;">A imagem acima foi criada utilizando o <a href="http://wb.mysql.com/">MySQL Workbench</a>, uma ótima ferramenta de <a title="modelagem de banco de dados" href="http://blog.thiagobelem.net/mysql/modelagem-de-banco-de-dados/">modelagem de banco de dados</a>.</p>
+<p style="margin-bottom: 0px;">A imagem acima foi criada utilizando o <a href="http://wb.mysql.com/">MySQL Workbench</a>, uma ótima ferramenta de <a title="modelagem de banco de dados" href="/modelagem-de-banco-de-dados">modelagem de banco de dados</a>.</p>
 </div>
 <p>Para criar essas tabelas em seu banco de dados, execute esse código SQL:</p>
 <p>[code language="sql"]
@@ -195,6 +195,6 @@ $resultado->free();</p>
 <p>?>
 [/code]</p>
 <p>Por hoje é só! :)</p>
-<p>Faça o download de todos os arquivos desse tutorial: <a href="http://blog.thiagobelem.net/arquivos/2010/07/PHP-e-MySQL-Consulta-Simples.zip">PHP-e-MySQL-Consulta-Simples.zip</a></p>
+<p>Faça o download de todos os arquivos desse tutorial: <a href="/arquivos/2010/07/PHP-e-MySQL-Consulta-Simples.zip">PHP-e-MySQL-Consulta-Simples.zip</a></p>
 <p>Nas próximas partes desse tutorial iremos ver uma consulta mais complexa (ligando as duas tabelas) e outros scripts para cadastrar e editar notícias.</p>
 <p>Um grade abraço e até a próxima!</p>

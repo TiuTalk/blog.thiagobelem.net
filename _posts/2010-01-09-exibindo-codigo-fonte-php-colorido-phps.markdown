@@ -18,7 +18,7 @@ tags:
 ---
 <p>Fala gente,</p>
 <p>Essa semana usei um recurso novo aqui no blog, são os arquivos phps ou PHP Source, normalmente eles não são interpretados pelo servidor, mas quando são acontece algo diferente com eles: ao invés do servidor executar seu código como PHP normal, ele exibe o código fonte, todo colorido, pra quem acessar.</p>
-<p><strong>Veja um exemplo:</strong> <a href="http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.phps" target="_blank">http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.phps</a></p>
+<p><strong>Veja um exemplo:</strong> <a href="/arquivos/2010/01/usuarios.class.parte1.phps" target="_blank">http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.phps</a></p>
 <p>Isso é bem útil quando temos um site de tutoriais/compartilhamento de código/programação.</p>
 <p>Hoje vou ensiná-los como habilitar isso em seus servidores rodando Apache e PHP... São apenas dois passos!</p>
 <h3>Passo 1</h3>

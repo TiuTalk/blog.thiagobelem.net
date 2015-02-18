@@ -22,7 +22,7 @@ tags:
 <p>Toda nova versão (seja ela do WordPress, Java ou PHP) traz melhorias significativas à segurança e performance do seu sistema/aplicativo... só isso deveria ser motivo pra você se dar ao trabalho de <strong>manter tudo atualizado na última versão, sempre</strong>. Não atualizar significa assinar o <em>mea culpa</em> caso seu sistema seja invadido.</p>
 <h2>Traits (ou características)</h2>
 <p>Traits são mecanismos que ajudam (e muito) a <strong>reutilização de código</strong>, e servem perfeitamente para resolver o problema da falta de <strong>herança múltipla</strong>.</p>
-<p>Veja mais sobre Traits num outro artigo meu, aqui: <a href="http://blog.thiagobelem.net/php-5-4-traits/">http://blog.thiagobelem.net/php-5-4-traits/</a></p>
+<p>Veja mais sobre Traits num outro artigo meu, aqui: <a href="/php-5-4-traits">http://blog.thiagobelem.net/php-5-4-traits/</a></p>
 <h2>Nova sintaxe para arrays</h2>
 <p>Antigamente você criava arrays assim:</p>
 <div data-gist-id="3970221" data-gist-show-loading="false"></div>

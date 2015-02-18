@@ -21,7 +21,7 @@ ob_start("ob_gzhandler");
 <h4>Definindo expire-headers para imagens, Javascript, CSS e etc</h4>
 <p>Todos os elementos de um site podem ser cacheados (salvos no computador do visitante) para economizar tempo de carregamento. E sempre que esses arquivos são salvos é preciso definir um <em>expire-header</em>, ou seja, quanto tempo o arquivo ficará salvo.</p>
 <p>Se você já terminou o seu site, ele está no ar, as imagens têm nomes diferentes e você quer economizar <em>bandwidth</em> (tráfego mensal), essa dica é pra você.</p>
-<p>Edite o arquivo <span style="color: #ff6600;"><strong>.htaccess</strong></span> na raiz do seu site (se o arquivo não existe <a href="http://blog.thiagobelem.net/tutoriais/instalando-o-no-www-no-seu-site/" target="_blank">veja aqui como criá-lo</a>) e coloque o seguinte código nele:</p>
+<p>Edite o arquivo <span style="color: #ff6600;"><strong>.htaccess</strong></span> na raiz do seu site (se o arquivo não existe <a href="/instalando-o-no-www-no-seu-site" target="_blank">veja aqui como criá-lo</a>) e coloque o seguinte código nele:</p>
 <p>[code language="html"]
 <filesMatch ".(ico|jpg|jpeg|png|gif|swf|css|js)$">
 Header set Expires "Sun, 30 Apr 2090 20:00:00 GMT"

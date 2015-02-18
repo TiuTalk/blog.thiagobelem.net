@@ -17,7 +17,7 @@ tags:
 - CSS
 - Javascript
 ---
-<p>A alguns meses fiz um artigo sobre <a href="http://blog.thiagobelem.net/css/otimizando-o-seu-site-carregamento/" target="_blank">como otimizar o carregamento do seu site</a> no qual eu falava sobre headers, compactação de resposta HTTP dentre outros.</p>
+<p>A alguns meses fiz um artigo sobre <a href="/otimizando-o-seu-site-carregamento" target="_blank">como otimizar o carregamento do seu site</a> no qual eu falava sobre headers, compactação de resposta HTTP dentre outros.</p>
 <p>Hoje vou falar sobre algumas outras dicas que fazem muito efeito tanto no carregamento do site quanto do bandwidth mensal que você vai usar.</p>
 <p>Alguns sites por ai dizem que o tempo ideal de carregamento de um site é quatro segundos, mas isso depende muito da Internet da pessoa e, claro, do tipo de conteúdo que estamos falando. Eu acredito que um site que carregue em até 10 segundos seja de ótimo tamanho e, se for por volta disso, não vai prejudicar o número de visitantes.</p>
 <h3>1. Tag <style> e style-in-line</h3>

@@ -42,7 +42,7 @@ tags: []
 <h3>Caracteres especiais</h3>
 <p>As senhas devem ser um misto de letras minúsculas e maiúsculas, com no mínimo três números e/ou caracteres especiais... Essa regra também vale para as senhas dos administradores do sistema e não apenas os usuários.</p>
 <h3>Armazenando senhas no banco de dados</h3>
-<p><strong>Nunca</strong> salve uma senha no banco de dados sem encripta-la antes... Veja mais sobre criptografia neste artigo: <a href="http://blog.thiagobelem.net/php/criptografia-no-php-usando-md5-sha1-e-base64/" target="_blank">Criptografia no PHP usando md5, sha1 e base64</a>. Se você salvar as senhas como texto plano e alguém conseguir invadir o seu banco de dados terá acesso a TODAS as contas... E acredite, você não quer que isso aconteça.</p>
+<p><strong>Nunca</strong> salve uma senha no banco de dados sem encripta-la antes... Veja mais sobre criptografia neste artigo: <a href="/criptografia-no-php-usando-md5-sha1-e-base64" target="_blank">Criptografia no PHP usando md5, sha1 e base64</a>. Se você salvar as senhas como texto plano e alguém conseguir invadir o seu banco de dados terá acesso a TODAS as contas... E acredite, você não quer que isso aconteça.</p>
 <h3>Mudança de senhas</h3>
 <p>Peça que (ou obrigue) o usuário a mudar sua senha a cada trinta dias... Mesmo que a senha seja extremamente forte e segura, ele pode tê-la anotado em algum papel e outra pessoa pode descobrir.</p>
 <h3>Botão de emergência<span style="color: #999999;"> (Red button)</span></h3>

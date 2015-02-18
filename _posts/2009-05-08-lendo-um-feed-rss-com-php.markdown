@@ -32,7 +32,7 @@ echo '
 </ol>
 <p>Dentro do loop, teremos <span style="color: #99cc00;"><strong>$entrada</strong></span> (um objeto) que contém os dados de cada <item> do RSS: title, description, link, pubDate e etc.</p>
 <p>Como diria o meu professor de física do colegial: "<em>Mel na chupeta!</em>"</p>
-<p>Vamos aos links de referências, para aqueles que não são <a href="http://blog.thiagobelem.net/vida-pessoal/codificadores-e-programadores/" target="_parent">codificadores</a> e gostam de saber o porquê das coisas:</p>
+<p>Vamos aos links de referências, para aqueles que não são <a href="/codificadores-e-programadores" target="_parent">codificadores</a> e gostam de saber o porquê das coisas:</p>
 <p>» <strong>SimpleXML (Documentação)</strong> - <a href="http://www.php.net/manual/pt_BR/book.simplexml.php" target="_blank">http://www.php.net/manual/pt_BR/book.simplexml.php</a>
 » <strong>RSS (Wikipédia)</strong> - <a href="http://pt.wikipedia.org/wiki/RSS" target="_blank">http://pt.wikipedia.org/wiki/RSS
 </a>» <strong>Feed (Wikipédia) </strong>- <a href="http://pt.wikipedia.org/wiki/Feed" target="_blank">http://pt.wikipedia.org/wiki/Feed

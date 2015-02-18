@@ -7,7 +7,7 @@ categories:
 - Sem categoria
 tags: []
 ---
-<p>Pessoal, o post <a title="Opinião do leitor: O que você gostaria de ver por aqui?" href="http://blog.thiagobelem.net/opiniao-do-leitor-o-que-voce-gostaria-de-ver-por-aqui/">Opinião do leitor: O que você gostaria de ver por aqui?</a> já recebeu um número bom de comentários, então segue o "<strong>Top 5</strong>" de assuntos que o pessoal anda pedindo:</p>
+<p>Pessoal, o post <a title="Opinião do leitor: O que você gostaria de ver por aqui?" href="/opiniao-do-leitor-o-que-voce-gostaria-de-ver-por-aqui">Opinião do leitor: O que você gostaria de ver por aqui?</a> já recebeu um número bom de comentários, então segue o "<strong>Top 5</strong>" de assuntos que o pessoal anda pedindo:</p>
 <ul>
 <li>MVC no PHP +++++++++++</li>
 <li>WordPress ++++++</li>
@@ -21,4 +21,4 @@ tags: []
 <li>TDD no PHP</li>
 </ul>
 <p>Não prometo que vou tratar de todos esses assuntos, mas isso vai me ajudar bastante à ter idéias para futuros artigos! :)</p>
-<p>Outra coisa que eu planejo fazer é revisar/atualizar alguns artigos antigos como <a href="http://blog.thiagobelem.net/criando-um-sistema-de-login-com-php-e-mysql/" data-bump-view="tp">Criando um sistema de login com PHP e MySQL</a> e outros artigos.</p>
+<p>Outra coisa que eu planejo fazer é revisar/atualizar alguns artigos antigos como <a href="/criando-um-sistema-de-login-com-php-e-mysql" data-bump-view="tp">Criando um sistema de login com PHP e MySQL</a> e outros artigos.</p>

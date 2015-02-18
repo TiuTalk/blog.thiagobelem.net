@@ -14,7 +14,7 @@ tags:
 - PHP
 - Login
 ---
-<p>Vamos que vamos! Essa é a segunda parte do nosso tutorial "<strong>Criando um sistema de logins com classe no PHP</strong>", na <a href="http://blog.thiagobelem.net/mysql/criando-um-sistema-de-logins-com-classe-no-php-parte-1/" title="Criando um sistema de logins com classe no PHP - Parte 1" target="_blank">Parte 1</a> começamos a criar a classe e definimos um método que validava se o usuário existe, agora vamos continuar a classe e criar um método que deixará o usuário logado no sistema usando sessão e cookies.</p>
+<p>Vamos que vamos! Essa é a segunda parte do nosso tutorial "<strong>Criando um sistema de logins com classe no PHP</strong>", na <a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" title="Criando um sistema de logins com classe no PHP - Parte 1" target="_blank">Parte 1</a> começamos a criar a classe e definimos um método que validava se o usuário existe, agora vamos continuar a classe e criar um método que deixará o usuário logado no sistema usando sessão e cookies.</p>
 <p>Primeiro, vamos adicionar algumas novas propriedades que iremos usar nessa parte do tutorial:
 [code language="php" firstline="32"]
 	/**
@@ -142,13 +142,13 @@ tags:
 <p>Por hoje é só pessoal... Na Parte 3 do tutorial iremos criar o método que irá verificar o usuário está logado (que vocês poderão usar nas suas páginas protegidas) e o método para logout, mas isso não é tudo... Ainda vai faltar o "lembrar minha senha" e outras implementações... Talvez um sisteminha de permissões, quem sabe? :D</p>
 <p>Pra quem quiser, o download do script completo:</p>
 <ul>
-<li><strong>Parte 1</strong> » <a href="http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.phps" title="usuarios.class.parte1.phps (Parte 1)" target="_blank">PHP</a> ou <a href="http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.rar" title="usuarios.class.parte1.rar (Parte 1)" target="_blank">RAR</a></li>
-<li><strong>Parte 2</strong> » <a href="http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte2.phps" title="usuarios.class.parte2.phps (Parte 2)" target="_blank">PHP</a> ou <a href="http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte2.rar" title="usuarios.class.parte2.rar (Parte 2)" target="_blank">RAR</a> (Já inclui os códigos da Parte 1)</li>
+<li><strong>Parte 1</strong> » <a href="/arquivos/2010/01/usuarios.class.parte1.phps" title="usuarios.class.parte1.phps (Parte 1)" target="_blank">PHP</a> ou <a href="/arquivos/2010/01/usuarios.class.parte1.rar" title="usuarios.class.parte1.rar (Parte 1)" target="_blank">RAR</a></li>
+<li><strong>Parte 2</strong> » <a href="/arquivos/2010/01/usuarios.class.parte2.phps" title="usuarios.class.parte2.phps (Parte 2)" target="_blank">PHP</a> ou <a href="/arquivos/2010/01/usuarios.class.parte2.rar" title="usuarios.class.parte2.rar (Parte 2)" target="_blank">RAR</a> (Já inclui os códigos da Parte 1)</li>
 </ul>
 <p>Não deixem de dar uma olhada nas outras partes:</p>
 <ul>
-<li><a href="http://blog.thiagobelem.net/mysql/criando-um-sistema-de-logins-com-classe-no-php-parte-1/" title="Criando um sistema de logins com classe no PHP - Parte 1" target="_blank">Criando um sistema de logins com classe no PHP - Parte 1</a></li>
-<li><a href="http://blog.thiagobelem.net/mysql/criando-um-sistema-de-logins-com-classe-no-php-parte-3/" title="Criando um sistema de logins com classe no PHP - Parte 3" target="_blank">Criando um sistema de logins com classe no PHP - Parte 3</a></li>
+<li><a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" title="Criando um sistema de logins com classe no PHP - Parte 1" target="_blank">Criando um sistema de logins com classe no PHP - Parte 1</a></li>
+<li><a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-3" title="Criando um sistema de logins com classe no PHP - Parte 3" target="_blank">Criando um sistema de logins com classe no PHP - Parte 3</a></li>
 </ul>
 <p>Quem gostou levanta a mão! \o. (E com a outra mão, deixa um comentário agradecendo)</p>
 <p>Abraços e até a próxima!</p>

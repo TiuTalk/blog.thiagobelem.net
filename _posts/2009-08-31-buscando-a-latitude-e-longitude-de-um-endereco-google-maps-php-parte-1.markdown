@@ -77,6 +77,6 @@ $dados = $gmaps->geolocal($endereco);</p>
 <p>// Exibe os dados encontrados:
 print_r($dados);
 ?>[/code]</p>
-<p>Com isso já temos todas as informações necessárias para exibir um mapinha do GoogleMaps com o endereço marcado, o que faremos no <a href="http://blog.thiagobelem.net/html/exibindo-mapas-no-seu-site-google-maps-php-parte-2/" target="_blank">próximo tutorial</a>. :)</p>
-<p><strong style="color: blue">Parte 2:</strong> <a href="http://blog.thiagobelem.net/html/exibindo-mapas-no-seu-site-google-maps-php-parte-2/" target="_blank">Exibindo mapas no seu site – Google Maps + PHP – Parte 2</a></p>
+<p>Com isso já temos todas as informações necessárias para exibir um mapinha do GoogleMaps com o endereço marcado, o que faremos no <a href="/exibindo-mapas-no-seu-site-google-maps-php-parte-2" target="_blank">próximo tutorial</a>. :)</p>
+<p><strong style="color: blue">Parte 2:</strong> <a href="/exibindo-mapas-no-seu-site-google-maps-php-parte-2" target="_blank">Exibindo mapas no seu site – Google Maps + PHP – Parte 2</a></p>
 <p>Um grande abraço a todos!</p>
