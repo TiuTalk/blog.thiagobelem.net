@@ -24,7 +24,7 @@ Vamos a um exemplo prático:
 
 Suponhamos que eu queira publicar um link (pro meu blog) no [meu twitter](http://twitter.com/tiutalk), o link normalmente seria:
 
-<p style="padding-left: 30px;"><span style="color: #0000ff;">http://blog.thiagobelem.net/</span>
+<p style="padding-left: 30px;"><span style="color: #0000ff;">/</span>
 
 Mas quando eu olhasse os relatórios do GA, apareceria apenas "twitter.com" como site de referência, sem saber se foi no meu perfil ou não.
 
@@ -32,7 +32,7 @@ Mas quando eu olhasse os relatórios do GA, apareceria apenas "twitter.com" como
 
 Então, pra fazer isso funcionar, adicionamos alguns parâmetros no fim da URL:
 
-<p style="padding-left: 30px;"><span style="color: #0000ff;">http://blog.thiagobelem.net/<span style="color: #ff6600;">?utm_campaign=<span style="color: #ff00ff;">blog</span>&utm_source=<span style="color: #ff00ff;">twitter</span>&utm_medium=<span style="color: #ff00ff;">micro-blog</span></span></span>
+<p style="padding-left: 30px;"><span style="color: #0000ff;">/<span style="color: #ff6600;">?utm_campaign=<span style="color: #ff00ff;">blog</span>&utm_source=<span style="color: #ff00ff;">twitter</span>&utm_medium=<span style="color: #ff00ff;">micro-blog</span></span></span>
 
 E pra quem ficou preocupado com o limite de 140 caracteres: é só reduzir a sua nova URL em um sistema que reduz URLs, recomendo o [TinyURL](http://tinyurl.com/).
 

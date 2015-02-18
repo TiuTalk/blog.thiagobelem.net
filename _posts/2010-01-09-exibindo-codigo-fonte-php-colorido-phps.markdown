@@ -20,7 +20,7 @@ Fala gente,
 
 Essa semana usei um recurso novo aqui no blog, são os arquivos phps ou PHP Source, normalmente eles não são interpretados pelo servidor, mas quando são acontece algo diferente com eles: ao invés do servidor executar seu código como PHP normal, ele exibe o código fonte, todo colorido, pra quem acessar.
 
-<strong>Veja um exemplo:</strong> [http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.phps](/arquivos/2010/01/usuarios.class.parte1.phps)
+<strong>Veja um exemplo:</strong> [/arquivos/2010/01/usuarios.class.parte1.phps](/arquivos/2010/01/usuarios.class.parte1.phps)
 
 Isso é bem útil quando temos um site de tutoriais/compartilhamento de código/programação.
 

@@ -25,7 +25,7 @@ Agora segue o artigo original:
 
 --------
 
-Meses atrás fiz um artigo ensinando a <span class="removed_link" title="http://blog.thiagobelem.net/mysql/instalando-o-php-5-3-0-no-ubuntu/">instalar o PHP 5.3.0 no Ubuntu Jaunty (9.04)</span> e hoje ensinarei a compilar e instalar o <strong>PHP 5.3.3</strong> no <strong>Ubuntu Maverick</strong> (10.10) recém-instalado.
+Meses atrás fiz um artigo ensinando a <span class="removed_link" title="/mysql/instalando-o-php-5-3-0-no-ubuntu/">instalar o PHP 5.3.0 no Ubuntu Jaunty (9.04)</span> e hoje ensinarei a compilar e instalar o <strong>PHP 5.3.3</strong> no <strong>Ubuntu Maverick</strong> (10.10) recém-instalado.
 
 <a id="more"></a><a id="more-1007"></a>
 
@@ -57,7 +57,7 @@ Depois disso instalamos o <strong>MySQL 5.1</strong> com o seguinte comando, que
 
 Durante o final da instalação uma janela aparecerá perguntando a senha padrão do MySQL:
 
-<img class="size-full wp-image-1023  " title="Configuração de senha do MySQL 5.1" src="http://blog.thiagobelem.net/arquivos/2010/12/mysql.png" alt="" width="632" height="266" /> Configuração de senha do MySQL 5.1
+<img class="size-full wp-image-1023  " title="Configuração de senha do MySQL 5.1" src="/arquivos/2010/12/mysql.png" alt="" width="632" height="266" /> Configuração de senha do MySQL 5.1
 
 <h2 id="php">Terceiro passo - Download e compilação do <strong>PHP 5.3.3</strong></h2>
 <h3>Bibliotecas necessárias</h3>

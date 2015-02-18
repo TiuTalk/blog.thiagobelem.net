@@ -34,7 +34,7 @@ Começaremos o arquivo <code>consulta-avancada.php</code> da mesma forma que ini
  * PHP 5+, MySQL 4.1+
  *
  * @author Thiago Belem <contato@thiagobelem.net>
- * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
+ * @link /mysql/php-e-mysql-para-iniciantes-consulta-simples/
  */
 
 // Inclui o arquivo que faz a conexão ao banco de dados

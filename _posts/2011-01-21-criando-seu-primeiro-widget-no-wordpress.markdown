@@ -40,7 +40,7 @@ Sabendo disso.. vamos começar a nossa classe:
  * Widget de Sobre o Autor
  *
  * @author Thiago Belem <contato@thiagobelem.net>
- * @link http://blog.thiagobelem.net/criando-seu-primeiro-widget-no-wordpress/
+ * @link /criando-seu-primeiro-widget-no-wordpress/
  */
 class SobreAutorWidget extends WP_Widget {
 
@@ -192,7 +192,7 @@ add_action('widgets_init', create_function('', 'return register_widget("SobreAut
 
 Espero que tenham gostado! Agora é só você editar o CSS do seu blog para deixar o widget bem apresentável. ;)
 
-Faça o download do código-fonte completo do widget: [http://blog.thiagobelem.net/arquivos/widget_sobre-autor.class.phps](/arquivos/widget_sobre-autor.class.phps)
+Faça o download do código-fonte completo do widget: [/arquivos/widget_sobre-autor.class.phps](/arquivos/widget_sobre-autor.class.phps)
 
 Gostou do artigo? Criou um widget pro seu blog? Comente como foi! Diga o que você conseguiu fazer! :)
 

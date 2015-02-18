@@ -184,7 +184,7 @@ Um grande abraço e espero que tenham gostado! :)
 
 Inscreva-se no meu <strong>curso online</strong> de CakePHP, o [Assando Sites](http://assando-sites.com.br/)! As próximas turmas já serão feitas utilizando o CakePHP 2.0 como padrão!
 
-As aulas são ao-vivo e você aprende sem sair de casa, aos domingos ou quando preferir assistir os vídeos gravados em aula. <img src="http://blog.thiagobelem.net/wp-includes/images/smilies/icon_smile.gif" alt=":)" />
+As aulas são ao-vivo e você aprende sem sair de casa, aos domingos ou quando preferir assistir os vídeos gravados em aula. <img src="/wp-includes/images/smilies/icon_smile.gif" alt=":)" />
 
 Para saber mais informações sobre o curso, [este post aqui no blog](/curso-online-de-cakephp).
 

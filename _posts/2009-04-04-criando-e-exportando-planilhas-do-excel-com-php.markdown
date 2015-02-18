@@ -15,7 +15,7 @@ Hoje vou ensinar como criar uma planilha do Excel (.xls) e enviá-la para Downlo
 <?php
 /*
 * Criando e exportando planilhas do Excel
-* http://blog.thiagobelem.net/
+* /
 */
 
 // Definimos o nome do arquivo que será exportado

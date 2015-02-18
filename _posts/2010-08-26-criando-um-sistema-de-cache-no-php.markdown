@@ -33,7 +33,7 @@ Para começar, começamos criando uma classe vazia:
  * Sistema de cache
  *
  * @author Thiago Belem <contato@thiagobelem.net>
- * @link http://blog.thiagobelem.net/
+ * @link /
  */
 class Cache {
 

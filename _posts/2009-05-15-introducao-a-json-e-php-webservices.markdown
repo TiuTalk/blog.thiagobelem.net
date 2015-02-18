@@ -45,7 +45,7 @@ Agora colocamos alguns valores:
 {% highlight javascript linenos %}
 var meuBlog = {
 titulo: 'Thiago Belem / Blog',
-url: 'http://blog.thiagobelem.net/'
+url: '/'
 }
 {% endhighlight %}
 
@@ -62,7 +62,7 @@ Para incrementar, vamos colocar um array?
 {% highlight javascript linenos %}
 var meuBlog = {
 titulo: 'Thiago Belem / Blog',
-url: 'http://blog.thiagobelem.net/',
+url: '/',
 assuntos: ['PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB']
 }
 {% endhighlight %}
@@ -82,14 +82,14 @@ Vejamos um exemplo de escrita:
 
 $meuBlog = array(
 'titulo' => 'Thiago Belem / Blog',
-'url' => 'http://blog.thiagobelem.net/',
+'url' => '/',
 'assuntos' => array('PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB')
 );
 
 $json = json_encode($meuBlog);
 
 echo $json;
-// Resultado: { titulo: 'Thiago Belem / Blog', url: 'http://blog.thiagobelem.net/', assuntos: ['PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB'] }
+// Resultado: { titulo: 'Thiago Belem / Blog', url: '/', assuntos: ['PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB'] }
 
 ?>
 {% endhighlight %}

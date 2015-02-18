@@ -96,7 +96,7 @@ Mas antes de mostrar o script vou ajudar a vocês entenderem como a relação é
 SELECT * FROM `produtos` ORDER BY `nome` ASC
 {% endhighlight %}
 Sua tradução seria: <strong style="color: navy">SELECIONAR todas as colunas da TABELA `produtos` ORDENADO PELO `nome` ASCENDETEMENTE</strong>
-<center><img src="http://blog.thiagobelem.net/arquivos/2009/08/relacionamento1.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
+<center><img src="/arquivos/2009/08/relacionamento1.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
 
 Agora usaremos uma nova "palavra" do MySQL que é o <strong style="background: gray; color: white">JOIN</strong> (tradução: "unir") e serve para unir resultados de duas tabelas.. ;)
 
@@ -107,7 +107,7 @@ A nossa consulta ficará assim:
 SELECT `produtos`.* FROM `produtos` INNER JOIN `categorias` ON `produtos`.`categoria_id` = `categorias`.`id` ORDER BY `produtos`.`nome` ASC
 {% endhighlight %}
 Sua tradução seria: <strong style="color: navy">SELECIONAR todas as colunas [da tabela produtos] da TABELA `produtos` UNINDO A TABELA `categorias` ONDE a coluna `categoria_id` [da tabela produtos] É IGUAL a coluna `id` [da tabela categorias] ORDENADO PELO `nome` [da tabela produtos] ASCENDETEMENTE</strong>
-<center><img src="http://blog.thiagobelem.net/arquivos/2009/08/relacionamento1.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
+<center><img src="/arquivos/2009/08/relacionamento1.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
 
 A nossa "regra de relação" acontece ali entre o ON e o ORDER BY, dizemos que a relação entre as tabelas usará como referencia a coluna "categoria_id" da tabela "produtos" sendo igual a coluna "id" da tabela "categorias"... Se você fosse usar algum WHERE ele entraria depois do ON e antes do ORDER BY.
 
@@ -120,7 +120,7 @@ Da forma que a nossa consulta está ainda não estamos pegando o nome da categor
 SELECT `produtos`.*, `categorias`.`nome` FROM `produtos` INNER JOIN `categorias` ON `produtos`.`categoria_id` = `categorias`.`id` ORDER BY `produtos`.`nome` ASC
 {% endhighlight %}
 Agora estamos pegando também o valor da coluna <strong>"nome"</strong> do registro encontrado (pela relação) na tabela <strong>"categorias"</strong>.
-<center><img src="http://blog.thiagobelem.net/arquivos/2009/08/relacionamento2.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
+<center><img src="/arquivos/2009/08/relacionamento2.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
 
 Só que agora temos um novo problema... Nas duas tabelas existe uma coluna chamada "nome", e quando estivermos lá no PHP, dentro do while, não teríamos como identificar de qual tabela pegamos as informações (veja a próxima imagem), pois as duas seriam <strong>$produto['nome']</strong>... Precisamos então renomear esse novo campo que adicionamos a busca, assim:
 {% highlight sql linenos %}
@@ -133,7 +133,7 @@ E por fim, faremos mais uma modificação, pra evitar ficar usando `tabela`.`col
 SELECT p.*, c.`nome` AS categoria FROM `produtos` AS p INNER JOIN `categorias` AS c ON p.`categoria_id` = c.`id` ORDER BY p.`nome` ASC
 {% endhighlight %}
 Nesse caso <strong>p</strong> representará a tabela "produtos" e <strong>c</strong> representará a "categorias".
-<center><img src="http://blog.thiagobelem.net/arquivos/2009/08/relacionamento3.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
+<center><img src="/arquivos/2009/08/relacionamento3.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
 
 Sei que parece uma consulta maior e mais complicada... Mas você fará o MySQL trabalhar <u>muito menos</u> se fizer assim, com JOINS, do que fazer uma 2ª consulta dentro do while... Essa é a forma mais correta de fazer consultas quando precisamos de informações vindas de mais de uma tabela.
 
@@ -169,7 +169,7 @@ Só pra exemplo, essa seria a consulta que pega os produtos, as categorias e o n
 {% highlight sql linenos %}
 SELECT p.*, c.`nome` AS categoria, u.`nome` AS usuario FROM `produtos` AS p INNER JOIN `categorias` AS c ON p.`categoria_id` = c.`id` INNER JOIN `usuarios` AS u ON p.`usuario_id` = u.`id` WHERE (p.`ativo` = 1) ORDER BY p.`nome` ASC
 {% endhighlight %}
-<center><img src="http://blog.thiagobelem.net/arquivos/2009/08/relacionamento4.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
+<center><img src="/arquivos/2009/08/relacionamento4.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
 
 Sim.. eu adoro consultas gigantescas. :D
 

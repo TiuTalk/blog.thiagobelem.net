@@ -33,7 +33,7 @@ Então, começaremos o nosso arquivo:
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009
-* Thiago Belem ~ http://blog.thiagobelem.net/
+* Thiago Belem ~ /
 */
 
 // Dados do servidor
@@ -64,7 +64,7 @@ Então, fazendo algumas alterações no nosso arquivo:
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009
-* Thiago Belem ~ http://blog.thiagobelem.net/
+* Thiago Belem ~ /
 */
 
 // Dados do servidor
@@ -103,7 +103,7 @@ Então, fazendo algumas alterações no nosso arquivo:
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009
-* Thiago Belem ~ http://blog.thiagobelem.net/
+* Thiago Belem ~ /
 */
 
 // Dados do servidor
@@ -149,7 +149,7 @@ Então, fazendo algumas alterações no nosso arquivo:
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009
-* Thiago Belem ~ http://blog.thiagobelem.net/
+* Thiago Belem ~ /
 */
 
 // Dados do servidor
@@ -199,7 +199,7 @@ Então, finalizando o no nosso arquivo:
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009
-* Thiago Belem ~ http://blog.thiagobelem.net/
+* Thiago Belem ~ /
 */
 
 // Dados do servidor

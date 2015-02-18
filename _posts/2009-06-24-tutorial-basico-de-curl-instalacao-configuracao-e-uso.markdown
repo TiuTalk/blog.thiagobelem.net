@@ -41,7 +41,7 @@ Bom, primeiro de tudo, vamos o script mais simples que você pode usar para pega
 {% highlight php linenos %}
 <?php
   // Inicia o cURL acessando uma URL
-  $cURL = curl_init('http://blog.thiagobelem.net/robots.txt');
+  $cURL = curl_init('/robots.txt');
   // Define a opção que diz que você quer receber o resultado encontrado
   curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
   // Executa a consulta, conectando-se ao site e salvando o resultado na variável $resultado

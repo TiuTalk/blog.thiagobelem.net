@@ -78,7 +78,7 @@ function tinyURL($url)
 
 {% highlight php linenos %}
 <?php
-  echo tinyURL('http://blog.thiagobelem.net/');
+  echo tinyURL('/');
   // http://tinyurl.com/kwzg4w
 ?>
 {% endhighlight %}

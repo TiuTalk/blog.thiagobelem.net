@@ -9,7 +9,7 @@ categories:
 - Tutoriais
 tags: []
 ---
-<img class="alignright size-full wp-image-360" style="margin-left: 10px; margin-right: 5px;" title="MySQL" src="http://blog.thiagobelem.net/arquivos/2009/03/mysql-167x86.png" alt="MySQL" width="150" />Este talvez seja o tópico mais importante (e longo) do blog... Aqui aprenderemos a inserir dados, alterar dados e deletar dados do MySQL.
+<img class="alignright size-full wp-image-360" style="margin-left: 10px; margin-right: 5px;" title="MySQL" src="/arquivos/2009/03/mysql-167x86.png" alt="MySQL" width="150" />Este talvez seja o tópico mais importante (e longo) do blog... Aqui aprenderemos a inserir dados, alterar dados e deletar dados do MySQL.
 
 É, sem dúvida, a tarefa mais executada em uma aplicação de médio/grande porte e você vai <strong>precisar</strong> dominar cada um desses passos da mesma forma que você domina o seu idioma nativo. Por isso, preste muita atenção.
 

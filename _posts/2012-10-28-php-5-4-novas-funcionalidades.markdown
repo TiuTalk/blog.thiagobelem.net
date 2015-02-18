@@ -28,7 +28,7 @@ Toda nova versão (seja ela do WordPress, Java ou PHP) traz melhorias significat
 <h2>Traits (ou características)</h2>
 Traits são mecanismos que ajudam (e muito) a <strong>reutilização de código</strong>, e servem perfeitamente para resolver o problema da falta de <strong>herança múltipla</strong>.
 
-Veja mais sobre Traits num outro artigo meu, aqui: [http://blog.thiagobelem.net/php-5-4-traits/](/php-5-4-traits)
+Veja mais sobre Traits num outro artigo meu, aqui: [/php-5-4-traits/](/php-5-4-traits)
 
 <h2>Nova sintaxe para arrays</h2>
 Antigamente você criava arrays assim:

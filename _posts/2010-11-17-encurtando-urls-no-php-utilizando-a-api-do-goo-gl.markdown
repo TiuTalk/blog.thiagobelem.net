@@ -33,7 +33,7 @@ O código da classe é bem simples:
  * Classe para encurtamento de URL utilizando a API do serviço goo.gl
  *
  * @author Thiago Belem <contato@thiagobelem.net>
- * @link http://blog.thiagobelem.net/
+ * @link /
  * @version 1.0
  */
 class Googl {
@@ -167,7 +167,7 @@ Veja um exemplo:
 {% highlight php linenos %}
 $Googl = new Googl();
 
-$url = 'http://blog.thiagobelem.net/vida-pessoal/freelancear-ou-nao-freelancear-eis-a-questao-parte-3/';
+$url = '/vida-pessoal/freelancear-ou-nao-freelancear-eis-a-questao-parte-3/';
 $url_encurtada = $Googl->shorten($url);
 
 echo "URL original: <strong>". $url ."</strong>

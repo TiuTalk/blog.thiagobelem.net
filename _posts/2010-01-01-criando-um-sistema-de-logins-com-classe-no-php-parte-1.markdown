@@ -24,7 +24,7 @@ Outro detalhe importante sobre o sistema é que ele irá funcionar nas versões 
 
 <h3>A Tabela de Usuários</h3>
 Se você já tem uma tabela de usuários pode pular essa parte... Se não, vamos criar a seguinte tabela no banco de dados do seu site:
-<img src="http://blog.thiagobelem.net/arquivos/2009/12/tabela_usuarios.jpg" alt="Tabela de Usuários" title="Tabela de Usuários" width="163" height="146" class="size-full wp-image-664" />
+<img src="/arquivos/2009/12/tabela_usuarios.jpg" alt="Tabela de Usuários" title="Tabela de Usuários" width="163" height="146" class="size-full wp-image-664" />
 Para criar essa tabela, você poderá usar o seguinte código SQL:
 {% highlight SQL linenos %}
 CREATE TABLE `usuarios` (

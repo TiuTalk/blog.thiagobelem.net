@@ -16,7 +16,7 @@ Ohay!  :-D
 Hoje vou demonstrar como vocês podem criar uma validação de campos (inputs) usando <strong>jQuery </strong>(JavaScript) e um plugin dele. Vamos verificar, por exemplo, se todos os campos foram preenchidos ou não.. ou se os seus valores estão ok.
 
 Veja um exemplo do que será aprendido nessa aula:
-[http://blog.thiagobelem.net/exemplo2/](/exemplo2)
+[/exemplo2/](/exemplo2)
 
 Usarei como exemplo um formulário de contato que é o mais comum por ai... Vamos ao passo-a-passo:
 
@@ -110,7 +110,7 @@ Coloquei alguns comentários na parte das instruções de validação para facil
 Com isso você faz uma validação <em>client-side</em> que ajuda a evitar dados inválidos e campos vazios. Mas preciso lembrar que, por ser <em>client-side</em>, essa validação acontece apenas no computador do visitante e o mesmo pode desativar o JavaScript e a validação toda não irá funcionar. Então não se esqueça de fazer a mesma validação dentro do PHP quando receber os dados.
 
 Veja o exemplo desta aula funcionando:
-[http://blog.thiagobelem.net/exemplo2/](/exemplo2)
+[/exemplo2/](/exemplo2)
 
 Mais exemplos de validações diferentes podem ser encontrados no site do plugin:
 [http://jquery.bassistance.de/validate/demo/](http://jquery.bassistance.de/validate/demo/)

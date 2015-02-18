@@ -87,7 +87,7 @@ Aceito sugestões sobre o que abordar na próxima parte! :)
 
 Acompanhe o template que estou criando pro meu blog, com mais algumas coisinhas (que não coloquei aqui), no GitHub: [https://github.com/TiuTalk/blog.thiagobelem.net](https://github.com/TiuTalk/blog.thiagobelem.net)
 
-Gostou? Então comenta, compartilha e recomenda! <img src="http://blog.thiagobelem.net/wp-includes/images/smilies/icon_smile.gif" alt=":)" />
+Gostou? Então comenta, compartilha e recomenda! <img src="/wp-includes/images/smilies/icon_smile.gif" alt=":)" />
 
 Abraços e até a próxima!
 

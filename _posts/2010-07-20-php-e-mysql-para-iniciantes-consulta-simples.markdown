@@ -29,7 +29,7 @@ Nessa primeira parte vamos criar um script que irá resgatar as notícias de um 
 </div>
 Essas serão as tabelas que iremos utilizar nesse e nos próximos tutoriais:
 
-<img class="aligncenter size-full wp-image-850" title="Banco de Dados" src="http://blog.thiagobelem.net/arquivos/2010/07/database1.png" alt="Tabelas notícias e categorias" width="340" height="232" />
+<img class="aligncenter size-full wp-image-850" title="Banco de Dados" src="/arquivos/2010/07/database1.png" alt="Tabelas notícias e categorias" width="340" height="232" />
 
 Iremos usar essas tabelas para armazenar notícias que estarão ligadas à categorias.
 
@@ -92,7 +92,7 @@ Vamos iniciar o nosso script criando um pequeno script de conexão ao banco de d
  * PHP 5+, MySQL 4.1+
  *
  * @author Thiago Belem <contato@thiagobelem.net>
- * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
+ * @link /mysql/php-e-mysql-para-iniciantes-consulta-simples/
  */
 
 // Dados de acesso ao servidor MySQL
@@ -129,7 +129,7 @@ O próximo passo será criar um script que faz uma consulta SQL, vamos começar 
  * PHP 5+, MySQL 4.1+
  *
  * @author Thiago Belem <contato@thiagobelem.net>
- * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
+ * @link /mysql/php-e-mysql-para-iniciantes-consulta-simples/
  */
 
 // Inclui o arquivo que faz a conexão ao banco de dados
@@ -226,7 +226,7 @@ O arquivo <code>consulta.php</code> ficou assim:
  * PHP 5+, MySQL 4.1+
  *
  * @author Thiago Belem <contato@thiagobelem.net>
- * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
+ * @link /mysql/php-e-mysql-para-iniciantes-consulta-simples/
  */
 
 // Inclui o arquivo que faz a conexão ao banco de dados

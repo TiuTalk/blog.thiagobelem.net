@@ -17,7 +17,7 @@ Suponhamos que você queira saber com precisão que dia será daqui... 28 dias. 
 <?php
 /*
 * Calculando datas no futuro com o PHP
-* http://blog.thiagobelem.net/
+* /
 */
 
 // Calcula a data daqui 3 dias
@@ -49,7 +49,7 @@ Nesse exemplo todas as datas serão calculadas a partir da data atual... Mas e s
 <?php
 /*
 * Calculando datas no futuro com o PHP a partir de datas definidas
-* http://blog.thiagobelem.net/
+* /
 */
 
 // Pega a data que está salva no banco de dados

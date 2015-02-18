@@ -29,7 +29,7 @@ Fiz uma classe que vocês vão poder usar para pegar o resultado de busca do Goo
  * API de busca do Google
  *
  * @author      Thiago Belem (contato@thiagobelem.net)
- * @link      http://blog.thiagobelem.net/
+ * @link      /
  * @version      1.1
  */
 class googleSearchAPI {

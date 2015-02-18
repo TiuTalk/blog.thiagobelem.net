@@ -17,11 +17,11 @@ tags:
 <h3>1. Comentário e Documentação</h3>
 Comentar o seu código está se tornando cada dia mais útil e eficiente. Seguindo os padrões corretos você pode conseguir que a sua IDE faça coisas desse tipo:
 
-<center><img class="aligncenter size-full wp-image-657" title="img1" src="http://blog.thiagobelem.net/arquivos/2009/12/img1.jpg" alt="img1" width="555" height="434" /></center>
+<center><img class="aligncenter size-full wp-image-657" title="img1" src="/arquivos/2009/12/img1.jpg" alt="img1" width="555" height="434" /></center>
 
 Quando você passa o mouse sobre o nome de uma função ou método o IDE vai até onde ela foi definida, interpreta a sintaxe dos comentários e te traz as informações... Isso te ajuda a saber com facilidade o que a função faz, quais são os seus parâmetros e o que ela retorna... e se você estiver usando o <strong>Eclipse</strong> é só apertar F3 e ele te leva até onde essa função foi declara! Quer mais que isso?
 
-<center><img class="aligncenter size-full wp-image-658" title="img2" src="http://blog.thiagobelem.net/arquivos/2009/12/img2.jpg" alt="img2" width="579" height="259" /></center>
+<center><img class="aligncenter size-full wp-image-658" title="img2" src="/arquivos/2009/12/img2.jpg" alt="img2" width="579" height="259" /></center>
 
 <br/><br/>
 

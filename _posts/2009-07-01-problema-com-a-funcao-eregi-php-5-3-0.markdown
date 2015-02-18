@@ -16,7 +16,7 @@ tags:
 - preg
 - Erro
 ---
-Quem atualizou o PHP para a versão 5.3.0 (<span class="removed_link" title="http://blog.thiagobelem.net/noticias/php-5-3-0-lancado/">lançada ontem</span>) pode ter encontrado inúmeros erros de funções que foram depreciadas (ou <em>deprecated</em>).
+Quem atualizou o PHP para a versão 5.3.0 (<span class="removed_link" title="/noticias/php-5-3-0-lancado/">lançada ontem</span>) pode ter encontrado inúmeros erros de funções que foram depreciadas (ou <em>deprecated</em>).
 
 Essas funções são usadas para testar a presença de uma expressão regular dentro de uma string.
 
