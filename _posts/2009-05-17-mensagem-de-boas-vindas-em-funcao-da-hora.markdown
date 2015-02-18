@@ -10,13 +10,17 @@ categories:
 - Tutoriais
 tags: []
 ---
-<p>Semana passada algumas pessoas me perguntaram no MSN como poderiam fazer uma mensagem de boas-vindas em função da hora...</p>
-<p>Isso é muito simples, veja um exemplo:</p>
+Semana passada algumas pessoas me perguntaram no MSN como poderiam fazer uma mensagem de boas-vindas em função da hora...
 
-[code='php']<?php</p>
-<p>// Formato 24 horas (de 1 a 24)
-$hora = date('G');</p>
-<p>if (($hora >= 0) AND ($hora < 6)) {
+Isso é muito simples, veja um exemplo:
+
+
+[code='php']<?php
+
+// Formato 24 horas (de 1 a 24)
+$hora = date('G');
+
+if (($hora >= 0) AND ($hora < 6)) {
 $mensagem = "Boa madrugada";
 } else if (($hora >= 6) AND ($hora < 12)) {
 $mensagem = "Bom dia";
@@ -24,12 +28,19 @@ $mensagem = "Bom dia";
 $mensagem = "Boa tarde";
 } else {
 $mensagem = "Boa noite";
-}</p>
-<p>echo $mensagem;</p>
-<p>?>[/code]
+}
 
-<p>Viram?</p>
-<p>Reparem que no último caso não precisei colocar <strong><span style="color: #000000;">} else if (($hora >= 18) AND ($hora <= 24)) {</span></strong> pois, se o valor não validou nenhuma das outras condições (que foram testadas antes) essa ultima condição está implícita... Seria desperdício de código e recursos fazer mais uma verificação.</p>
-<p>Com uma pequena seqüência de if/else if/else você consegue mudar o valor de uma variável em função da hora atual do servidor e exibir a sua mensagem de boas-vindas!</p>
-<p>Esse também é um bom exemplo de condições múltiplas.</p>
-<p>Espero que tenham gostado :)</p>
+echo $mensagem;
+
+?>[/code]
+
+Viram?
+
+Reparem que no último caso não precisei colocar <strong><span style="color: #000000;">} else if (($hora >= 18) AND ($hora <= 24)) {</span></strong> pois, se o valor não validou nenhuma das outras condições (que foram testadas antes) essa ultima condição está implícita... Seria desperdício de código e recursos fazer mais uma verificação.
+
+Com uma pequena seqüência de if/else if/else você consegue mudar o valor de uma variável em função da hora atual do servidor e exibir a sua mensagem de boas-vindas!
+
+Esse também é um bom exemplo de condições múltiplas.
+
+Espero que tenham gostado :)
+

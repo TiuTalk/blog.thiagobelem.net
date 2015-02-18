@@ -11,10 +11,14 @@ categories:
 - Tutoriais
 tags: []
 ---
-<p>Fala pessoal! :D</p>
-<p>Hoje vou mostrar como fazer a validação do formato de uma data...</p>
-<p>A lógica é bem simples: uma data pode vir em vários formatos: AAAA-MM-DD, DD/MM/AAAA, AAAAMMDD, DDMMAAAA e por aí vai... E você precisa de uma função que verifique se é uma data válida, independente do seu formato.</p>
-<p>A função poderia ser assim:</p>
+Fala pessoal! :D
+
+Hoje vou mostrar como fazer a validação do formato de uma data...
+
+A lógica é bem simples: uma data pode vir em vários formatos: AAAA-MM-DD, DD/MM/AAAA, AAAAMMDD, DDMMAAAA e por aí vai... E você precisa de uma função que verifique se é uma data válida, independente do seu formato.
+
+A função poderia ser assim:
+
 
 [code='php']<?php
 /**
@@ -29,30 +33,36 @@ switch($formato) {
 case 'DD-MM-AAAA':
 case 'DD/MM/AAAA':
 list($d, $m, $a) = preg_split('/[-./ ]/', $data);
-break;</p>
-<p>case 'AAAA/MM/DD':
+break;
+
+case 'AAAA/MM/DD':
 case 'AAAA-MM-DD':
 list($a, $m, $d) = preg_split('/[-./ ]/', $data);
-break;</p>
-<p>case 'AAAA/DD/MM':
+break;
+
+case 'AAAA/DD/MM':
 case 'AAAA-DD-MM':
 list($a, $d, $m) = preg_split('/[-./ ]/', $data);
-break;</p>
-<p>case 'MM-DD-AAAA':
+break;
+
+case 'MM-DD-AAAA':
 case 'MM/DD/AAAA':
 list($m, $d, $a) = preg_split('/[-./ ]/', $data);
-break;</p>
-<p>case 'AAAAMMDD':
+break;
+
+case 'AAAAMMDD':
 $a = substr($data, 0, 4);
 $m = substr($data, 4, 2);
 $d = substr($data, 6, 2);
-break;</p>
-<p>case 'AAAADDMM':
+break;
+
+case 'AAAADDMM':
 $a = substr($data, 0, 4);
 $d = substr($data, 4, 2);
 $m = substr($data, 6, 2);
-break;</p>
-<p>default:
+break;
+
+default:
 throw new Exception( "Formato de data inválido");
 break;
 }
@@ -60,11 +70,16 @@ return checkdate($m, $d, $a);
 }
 ?>[/code]
 
-<p>Tá... mas o que essa função realmente faz?</p>
-<p>Vamos lá... Criamos uma função que precisa de dois argumentos, a data a ser validada ($data) e o seu formato ($formato).. Definimos também um valor padrão para o segundo argumento.</p>
-<p>Dentro da função nós fazemos um <strong>switch</strong>() que equivale (em alguns casos) a uma seqüência longa de ifs e elses... Cada bloco de <em>case</em> acontecerá apenas quando $formato for igual ao valor especificado no <em>case</em> (caso). Caso o formato não esteja especificado em nenhum case, é exibida uma mensagem de erro com o <strong>throw new Exception()</strong>.</p>
-<p>Em cada case nós temos uma forma de "quebrar" a data e pegar cada uma das suas partes: dia ($d), mês ($m) e ano ($a)... Partes essas que serão verificadas usando a função <strong>checkdate() </strong>na última linha da função.</p>
-<p>Por fim, a função retorna verdadeiro (true) ou falso (false)... Então podemos usá-la da seguinte maneira:</p>
+Tá... mas o que essa função realmente faz?
+
+Vamos lá... Criamos uma função que precisa de dois argumentos, a data a ser validada ($data) e o seu formato ($formato).. Definimos também um valor padrão para o segundo argumento.
+
+Dentro da função nós fazemos um <strong>switch</strong>() que equivale (em alguns casos) a uma seqüência longa de ifs e elses... Cada bloco de <em>case</em> acontecerá apenas quando $formato for igual ao valor especificado no <em>case</em> (caso). Caso o formato não esteja especificado em nenhum case, é exibida uma mensagem de erro com o <strong>throw new Exception()</strong>.
+
+Em cada case nós temos uma forma de "quebrar" a data e pegar cada uma das suas partes: dia ($d), mês ($m) e ano ($a)... Partes essas que serão verificadas usando a função <strong>checkdate() </strong>na última linha da função.
+
+Por fim, a função retorna verdadeiro (true) ou falso (false)... Então podemos usá-la da seguinte maneira:
+
 
 [code='php']<?php
 if (validaData('12/04/2009', 'DD/MM/AAAA')) {
@@ -72,16 +87,20 @@ echo "Data valida!";
 } else {
 echo "Data invalida!";
 }
-// Data valida</p>
-<p>echo "";</p>
-<p>if (validaData('20090412', 'AAAAMMDD')) {
+// Data valida
+
+echo "";
+
+if (validaData('20090412', 'AAAAMMDD')) {
 echo "Data valida!";
 } else {
 echo "Data invalida!";
 }
-// Data valida</p>
-<p>echo "";</p>
-<p>if (validaData('04/12/2009', 'AAAA-MM-DD')) {
+// Data valida
+
+echo "";
+
+if (validaData('04/12/2009', 'AAAA-MM-DD')) {
 echo "Data valida!";
 } else {
 echo "Data invalida!";
@@ -89,5 +108,7 @@ echo "Data invalida!";
 // Data invalida
 ?>[/code]
 
-<p>Ahh.. essa função também te ajuda a validar datas vindas do MySQL (no formato AAAA-MM-DD).</p>
-<p>E aí? Gostaram? :)</p>
+Ahh.. essa função também te ajuda a validar datas vindas do MySQL (no formato AAAA-MM-DD).
+
+E aí? Gostaram? :)
+

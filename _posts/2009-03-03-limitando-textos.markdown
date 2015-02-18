@@ -8,12 +8,15 @@ categories:
 - Artigos
 tags: []
 ---
-<p>Espero que tenham gostado da nova aparência blog... Nesse novo blog eu vou postar alguns scripts prontos de PHP para vocês conhecerem novas formas de resolver os problemas do dia-a-adia.</p>
-<p>Hoje, nesse post de abertura vou mostrar pra vocês como fazer um script que limita textos, muito usado quando você precisa exibir até X caracteres de uma frase e colocar um <span style="color: #ff6600;"><strong>...</strong></span> depois.</p>
-<p>Vamos ao script:
+Espero que tenham gostado da nova aparência blog... Nesse novo blog eu vou postar alguns scripts prontos de PHP para vocês conhecerem novas formas de resolver os problemas do dia-a-adia.
+
+Hoje, nesse post de abertura vou mostrar pra vocês como fazer um script que limita textos, muito usado quando você precisa exibir até X caracteres de uma frase e colocar um <span style="color: #ff6600;"><strong>...</strong></span> depois.
+
+Vamos ao script:
 [code language="php"]function limita_caracteres($texto, $limite, $quebra = true) {
-    $tamanho = strlen($texto);</p>
-<p>    // Verifica se o tamanho do texto é menor ou igual ao limite
+    $tamanho = strlen($texto);
+
+    // Verifica se o tamanho do texto é menor ou igual ao limite
     if ($tamanho <= $limite) {
         $novo_texto = $texto;
     // Se o tamanho do texto for maior que o limite
@@ -28,21 +31,25 @@ tags: []
             // Corta o $texto até a posição localizada
             $novo_texto = trim(substr($texto, 0, $ultimo_espaco)).'...';
         }
-    }</p>
-<p>    // Retorna o valor formatado
+    }
+
+    // Retorna o valor formatado
     return $novo_texto;
 }[/code]
-E aí? O que me dizem? Bem legal né?</p>
-<p>Pra usar essa função é bem simples, você só precisa definir dois dos três argumentos dela:
+E aí? O que me dizem? Bem legal né?
+
+Pra usar essa função é bem simples, você só precisa definir dois dos três argumentos dela:
 [code language="php"]echo limita_caracteres("Esta é uma frase muito longa!", 10);
 // Irá exibir apenas os 10 primeiros caracteres da frase, cortando
 //    qualquer palavra no meio se necessário
-// Resultado: Esta é uma fras...</p>
-<p>// Você tambem pode setar a terceira opção em 'false':
+// Resultado: Esta é uma fras...
+
+// Você tambem pode setar a terceira opção em 'false':
 echo limita_caracteres("Esta é uma frase muito longa!", 10, false);
 // Irá até a última palavra completa antes de estourar o limite de 10
 // Resultado: Esta é uma...[/code]
-O código está todo comentado, quem tiver alguma dúvida é só comentar e responderei assim que possível.</p>
+O código está todo comentado, quem tiver alguma dúvida é só comentar e responderei assim que possível.
+
 <h4>Documentação Oficial:</h4>
 <ul>
 <li><strong>Função <a href="http://us2.php.net/strlen" target="_blank">strlen()</a></strong> » Mede quantos caracteres tem uma string</li>

@@ -17,9 +17,11 @@ tags:
 - Formulário
 - Submit
 ---
-<p>Um problema muito comum em alguns sistemas é chamado de "submit múltiplo", é quando aquele usuário apressadinho clica 5x no [enviar] achando que vai tornar tudo mais rápido e, dependendo do sistema, isso causa um desastre.</p>
-<p>Criei um pedacinho de código pequeno porém muito do útil que ajuda a evitar esse mal da seguinte forma: assim que o formulário é enviado ele desabilita todos os campos e botões de submit, fazendo com que não seja possível alterar os dados ou enviar o formulário novamente.</p>
-<p>É só incluir essas linhas no seu site:
+Um problema muito comum em alguns sistemas é chamado de "submit múltiplo", é quando aquele usuário apressadinho clica 5x no [enviar] achando que vai tornar tudo mais rápido e, dependendo do sistema, isso causa um desastre.
+
+Criei um pedacinho de código pequeno porém muito do útil que ajuda a evitar esse mal da seguinte forma: assim que o formulário é enviado ele desabilita todos os campos e botões de submit, fazendo com que não seja possível alterar os dados ou enviar o formulário novamente.
+
+É só incluir essas linhas no seu site:
 [code language="javascript"]$(function() {
     $("form").submit(function() {
     	// ReadOnly em todos os inputs
@@ -30,8 +32,9 @@ tags:
     });
 });[/code]
 
-<p>Mas há um probleminha com esse código: se você usar algum tipo de validação por JavaScript (também ativado pelo submit do formulário) o codigo não vai funcinar caso o usuário tenha digitado algo que invalide o formulário.</p>
-<p>Uma solução seria chamar essa função de validação dentro desse código jQuery, da seguinte forma:
+Mas há um probleminha com esse código: se você usar algum tipo de validação por JavaScript (também ativado pelo submit do formulário) o codigo não vai funcinar caso o usuário tenha digitado algo que invalide o formulário.
+
+Uma solução seria chamar essa função de validação dentro desse código jQuery, da seguinte forma:
 [code language="javascript" highlight="3"]$(function() {
 	$("form").submit(function() {
 		if (minhaFuncao() == true) {
@@ -46,6 +49,9 @@ tags:
 	});
 });[/code]
 
-<p>Com isso nós iremos bloquear o próximo submit apenas quando os dados forem validados. ;)</p>
-<p>Espero que tenham gostado! :)</p>
-<p><strong style="background: gray; color: white">Atualização:</strong> Troquei o código por um que funciona no IE6, não tem alert() e é mais fácil de entender.</p>
+Com isso nós iremos bloquear o próximo submit apenas quando os dados forem validados. ;)
+
+Espero que tenham gostado! :)
+
+<strong style="background: gray; color: white">Atualização:</strong> Troquei o código por um que funciona no IE6, não tem alert() e é mais fácil de entender.
+

@@ -16,46 +16,64 @@ tags:
 - preg
 - Erro
 ---
-<p>Quem atualizou o PHP para a versão 5.3.0 (<span class="removed_link" title="http://blog.thiagobelem.net/noticias/php-5-3-0-lancado/">lançada ontem</span>) pode ter encontrado inúmeros erros de funções que foram depreciadas (ou <em>deprecated</em>).</p>
-<p>Essas funções são usadas para testar a presença de uma expressão regular dentro de uma string.</p>
-<p>Vim falar sobre a função ereg e eregi que são muito usadas (pelo menos por mim) e que precisam ser trocadas por uma versão em Pearl.</p>
-<p>Antigamente faríamos assim:</p>
+Quem atualizou o PHP para a versão 5.3.0 (<span class="removed_link" title="http://blog.thiagobelem.net/noticias/php-5-3-0-lancado/">lançada ontem</span>) pode ter encontrado inúmeros erros de funções que foram depreciadas (ou <em>deprecated</em>).
 
-[code lang="php"]&lt;?php</p>
-<p>$palavra = '(casa|carro)';
-$frase = 'Eu fui pra casa ontem!';</p>
-<p>if (ereg($palavra, $frase)) {
+Essas funções são usadas para testar a presença de uma expressão regular dentro de uma string.
+
+Vim falar sobre a função ereg e eregi que são muito usadas (pelo menos por mim) e que precisam ser trocadas por uma versão em Pearl.
+
+Antigamente faríamos assim:
+
+
+[code lang="php"]&lt;?php
+
+$palavra = '(casa|carro)';
+$frase = 'Eu fui pra casa ontem!';
+
+if (ereg($palavra, $frase)) {
 	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;
 } else {
 	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;
-}</p>
-<p>?&gt;[/code]
+}
 
-<p>Agora, com o PHP 5.3.0 precisamos usar a função <strong>preg_match()</strong>, dessa forma:</p>
+?&gt;[/code]
 
-[code lang="php"]&lt;?php</p>
-<p>$palavra = '/(casa|carro)/';
-$frase = 'Eu fui pra casa ontem!';</p>
-<p>if (preg_match($palavra, $frase)) {
+Agora, com o PHP 5.3.0 precisamos usar a função <strong>preg_match()</strong>, dessa forma:
+
+
+[code lang="php"]&lt;?php
+
+$palavra = '/(casa|carro)/';
+$frase = 'Eu fui pra casa ontem!';
+
+if (preg_match($palavra, $frase)) {
 	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;
 } else {
 	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;
-}</p>
-<p>?&gt;[/code]
+}
 
-<p>Repare que entrou uma barra (pra direita) antes e depois da expressão regular.</p>
+?&gt;[/code]
+
+Repare que entrou uma barra (pra direita) antes e depois da expressão regular.
+
 <h3>eregi()</h3>
-<p>E pra quem usava o eregi, é só adicionar um "i" no final da expressão regular, dessa forma:</p>
+E pra quem usava o eregi, é só adicionar um "i" no final da expressão regular, dessa forma:
 
-[code lang="php"]&lt;?php</p>
-<p>$palavra = '/(casa|carro)/i';
-$frase = 'Eu fui pra CasA ontem!';</p>
-<p>if (preg_match($palavra, $frase)) {
+
+[code lang="php"]&lt;?php
+
+$palavra = '/(casa|carro)/i';
+$frase = 'Eu fui pra CasA ontem!';
+
+if (preg_match($palavra, $frase)) {
 	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;
 } else {
 	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;
-}</p>
-<p>?&gt;[/code]
+}
 
-<p>--</p>
-<p>Espero que tenham gostado desse pequeno "atalho" :P</p>
+?&gt;[/code]
+
+--
+
+Espero que tenham gostado desse pequeno "atalho" :P
+

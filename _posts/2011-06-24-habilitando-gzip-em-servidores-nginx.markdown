@@ -18,37 +18,52 @@ tags:
 - compactação
 - compressão
 ---
-<p>Fala pessoal!</p>
-<p>Já faz um tempão que não posto um artigo "técnico" aqui, não é mesmo?</p>
-<p>Hoje precisei habilitar o <a title="gzip" href="http://www.gzip.org/">gzip</a> na minha VPS que roda <a title="Nginx" href="http://nginx.org/">Nginx</a> (um servidor web <strong>parrudão</strong> que veio pra cutucar o <strong>Apache</strong>)... Depois de pesquisar um pouco, cheguei à uma solução e resolvi repassar. :)</p>
+Fala pessoal!
+
+Já faz um tempão que não posto um artigo "técnico" aqui, não é mesmo?
+
+Hoje precisei habilitar o <a title="gzip" href="http://www.gzip.org/">gzip</a> na minha VPS que roda <a title="Nginx" href="http://nginx.org/">Nginx</a> (um servidor web <strong>parrudão</strong> que veio pra cutucar o <strong>Apache</strong>)... Depois de pesquisar um pouco, cheguei à uma solução e resolvi repassar. :)
+
 <h3>gzoque?</h3>
-<p>Pra quem não sabe, o <strong>gzip</strong> é um método de compressão de arquivos (lembram do ZIP e do RAR?) utilizando também no mundo WEB.. O seu navegador consegue receber um arquivo .js compactado com <strong>gzip</strong> e utilizá-lo da mesma forma.</p>
-<p><a href="http://pt.wikipedia.org/wiki/Gzip">http://pt.wikipedia.org/wiki/Gzip</a></p>
-<p>Na maioria dos casos a compressão em gzip atinge uma <strong>redução de 50% do tamanho original</strong>... Por isso ela é muito recomendada na hora de otimizar o carregamento dos sites.</p>
+Pra quem não sabe, o <strong>gzip</strong> é um método de compressão de arquivos (lembram do ZIP e do RAR?) utilizando também no mundo WEB.. O seu navegador consegue receber um arquivo .js compactado com <strong>gzip</strong> e utilizá-lo da mesma forma.
+
+<a href="http://pt.wikipedia.org/wiki/Gzip">http://pt.wikipedia.org/wiki/Gzip</a>
+
+Na maioria dos casos a compressão em gzip atinge uma <strong>redução de 50% do tamanho original</strong>... Por isso ela é muito recomendada na hora de otimizar o carregamento dos sites.
+
 <h3>Configurando o nginx</h3>
-<p>Pra fazer o nginx entregar arquivos HTML, XML, CSS, JS (e outros) comprimidos em gzip você precisa editar o arquivo de configuração do site, normalmente esses arquivos ficam na pasta:</p>
+Pra fazer o nginx entregar arquivos HTML, XML, CSS, JS (e outros) comprimidos em gzip você precisa editar o arquivo de configuração do site, normalmente esses arquivos ficam na pasta:
+
 
 [code]/etc/nginx/sites-available/{arquivo}[/code]
 
-<p>Mas isso pode variar no seu servidor.</p>
-<p>Encontrado o arquivo, é só colocar algo do tipo dentro do bloco de configuração do seu site:</p>
+Mas isso pode variar no seu servidor.
+
+Encontrado o arquivo, é só colocar algo do tipo dentro do bloco de configuração do seu site:
+
 
 [code language="shell"]# Habilita o gzip
 gzip			on;
 gzip_http_version	1.1;
 gzip_vary		on;
 gzip_comp_level	6;
-gzip_proxied	any;</p>
-<p># Mime-types que serão compactados
-gzip_types		text/html text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;</p>
-<p># http://blog.leetsoft.com/2007/7/25/nginx-gzip-ssl
-gzip_buffers	16	8k;</p>
-<p># Desabilita o gzip para alguns navegadores
+gzip_proxied	any;
+
+# Mime-types que serão compactados
+gzip_types		text/html text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+# http://blog.leetsoft.com/2007/7/25/nginx-gzip-ssl
+gzip_buffers	16	8k;
+
+# Desabilita o gzip para alguns navegadores
 gzip_disable	"MSIE [1-6].(?!.*SV1)";[/code]
 
-<p>Gist: <a href="https://gist.github.com/1045708" target="_blank">https://gist.github.com/1045708</a></p>
-<p>Depois é só reiniciar o seu servidor:</p>
+Gist: <a href="https://gist.github.com/1045708" target="_blank">https://gist.github.com/1045708</a>
+
+Depois é só reiniciar o seu servidor:
+
 
 [code language="shell"]sudo /etc/init.d/nginx restart[/code]
 
-<p>E correr para o abraço! :)</p>
+E correr para o abraço! :)
+

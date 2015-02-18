@@ -14,40 +14,54 @@ tags:
 - MySQL
 - Query
 ---
-<p>Fala minha gente!</p>
-<p>Hoje consegui um tempinho para voltar a postar no blog e resolvi voltar um com uma sequencia de tutorias básicos sobre MySQL + PHP para iniciantes.</p>
-<p>Nessa primeira parte vamos criar um script que irá resgatar as notícias de um banco de dados e fazer mais alguns procedimentos.</p>
-<div style="background: #FFF7D9; border: 1px dashed #FFE294; padding: 5px; margin-bottom: 10px;">Vamos usar <a href="http://www.php.net/manual/pt_BR/book.mysqli.php">MySQLi</a> ao invés de MySQL. Mesmo sendo um recurso <em>avançado</em> para alguns, é bom ensinar uma forma correta e segura de trabalhar pra quem tá começando. :)</p>
-<p style="margin-bottom: 0px;">• Saiba mais sobre o MySQLi <a title="Usando o MySQLi Orientado a Objetos" href="/usando-o-mysqli-orientado-a-objetos">aqui</a> e <a title="Guia prático de MySQLi no PHP" href="/guia-pratico-de-mysqli-no-php">aqui</a></p>
-<p style="margin-bottom: 0px;">• Os recursos utilizando aqui (MySQLi) só funcionam em <strong>PHP 5+</strong> e <strong>MySQL 4.1+</strong></p>
+Fala minha gente!
+
+Hoje consegui um tempinho para voltar a postar no blog e resolvi voltar um com uma sequencia de tutorias básicos sobre MySQL + PHP para iniciantes.
+
+Nessa primeira parte vamos criar um script que irá resgatar as notícias de um banco de dados e fazer mais alguns procedimentos.
+
+<div style="background: #FFF7D9; border: 1px dashed #FFE294; padding: 5px; margin-bottom: 10px;">Vamos usar <a href="http://www.php.net/manual/pt_BR/book.mysqli.php">MySQLi</a> ao invés de MySQL. Mesmo sendo um recurso <em>avançado</em> para alguns, é bom ensinar uma forma correta e segura de trabalhar pra quem tá começando. :)
+
+<p style="margin-bottom: 0px;">• Saiba mais sobre o MySQLi <a title="Usando o MySQLi Orientado a Objetos" href="/usando-o-mysqli-orientado-a-objetos">aqui</a> e <a title="Guia prático de MySQLi no PHP" href="/guia-pratico-de-mysqli-no-php">aqui</a>
+
+<p style="margin-bottom: 0px;">• Os recursos utilizando aqui (MySQLi) só funcionam em <strong>PHP 5+</strong> e <strong>MySQL 4.1+</strong>
+
 </div>
-<p>Essas serão as tabelas que iremos utilizar nesse e nos próximos tutoriais:</p>
-<p><img class="aligncenter size-full wp-image-850" title="Banco de Dados" src="http://blog.thiagobelem.net/arquivos/2010/07/database1.png" alt="Tabelas notícias e categorias" width="340" height="232" /></p>
-<p>Iremos usar essas tabelas para armazenar notícias que estarão ligadas à categorias.</p>
+Essas serão as tabelas que iremos utilizar nesse e nos próximos tutoriais:
+
+<img class="aligncenter size-full wp-image-850" title="Banco de Dados" src="http://blog.thiagobelem.net/arquivos/2010/07/database1.png" alt="Tabelas notícias e categorias" width="340" height="232" />
+
+Iremos usar essas tabelas para armazenar notícias que estarão ligadas à categorias.
+
 <ul>
 <li>Cada <strong>notícia</strong> pertence a uma <strong>categoria</strong></li>
 <li>Cada <strong>categoria</strong> contém zero ou mais <strong>notícias</strong></li>
 </ul>
 <div style="background: #FFF7D9; border: 1px dashed #FFE294; padding: 5px; margin-bottom: 10px;">
-<p style="margin-bottom: 0px;">A imagem acima foi criada utilizando o <a href="http://wb.mysql.com/">MySQL Workbench</a>, uma ótima ferramenta de <a title="modelagem de banco de dados" href="/modelagem-de-banco-de-dados">modelagem de banco de dados</a>.</p>
+<p style="margin-bottom: 0px;">A imagem acima foi criada utilizando o <a href="http://wb.mysql.com/">MySQL Workbench</a>, uma ótima ferramenta de <a title="modelagem de banco de dados" href="/modelagem-de-banco-de-dados">modelagem de banco de dados</a>.
+
 </div>
-<p>Para criar essas tabelas em seu banco de dados, execute esse código SQL:</p>
+Para criar essas tabelas em seu banco de dados, execute esse código SQL:
+
 
 [code language="sql"]
 -- -----------------------------------------------------
 -- Table `categorias`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `categorias` ;</p>
-<p>CREATE  TABLE IF NOT EXISTS `categorias` (
+DROP TABLE IF EXISTS `categorias` ;
+
+CREATE  TABLE IF NOT EXISTS `categorias` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
   `nome` VARCHAR(50) NOT NULL ,
   PRIMARY KEY (`id`) )
-ENGINE = MyISAM;</p>
-<p>-- -----------------------------------------------------
+ENGINE = MyISAM;
+
+-- -----------------------------------------------------
 -- Table `noticias`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `noticias` ;</p>
-<p>CREATE  TABLE IF NOT EXISTS `noticias` (
+DROP TABLE IF EXISTS `noticias` ;
+
+CREATE  TABLE IF NOT EXISTS `noticias` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
   `categoria_id` INT UNSIGNED NOT NULL ,
   `titulo` VARCHAR(100) NOT NULL ,
@@ -65,7 +79,8 @@ DROP TABLE IF EXISTS `noticias` ;</p>
 ENGINE = MyISAM;
 [/code]
 
-<p>Vamos iniciar o nosso script criando um pequeno script de conexão ao banco de dados:</p>
+Vamos iniciar o nosso script criando um pequeno script de conexão ao banco de dados:
+
 
 [code language="php" highlight="21"]
 <?php
@@ -78,24 +93,31 @@ ENGINE = MyISAM;
  *
  * @author Thiago Belem <contato@thiagobelem.net>
  * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
- */</p>
-<p>// Dados de acesso ao servidor MySQL
+ */
+
+// Dados de acesso ao servidor MySQL
 $MySQL = array(
 	'servidor' => '127.0.0.1',	// Endereço do servidor
 	'usuario' => 'root',		// Usuário
 	'senha' => '',				// Senha
 	'banco' => 'meu_site'		// Nome do banco de dados
-);</p>
-<p>$MySQLi = new MySQLi($MySQL['servidor'], $MySQL['usuario'], $MySQL['senha'], $MySQL['banco']);</p>
-<p>// Verifica se ocorreu um erro e exibe a mensagem de erro
+);
+
+$MySQLi = new MySQLi($MySQL['servidor'], $MySQL['usuario'], $MySQL['senha'], $MySQL['banco']);
+
+// Verifica se ocorreu um erro e exibe a mensagem de erro
 if (mysqli_connect_errno())
-    trigger_error(mysqli_connect_error(), E_USER_ERROR);</p>
-<p>?>
+    trigger_error(mysqli_connect_error(), E_USER_ERROR);
+
+?>
 [/code]
 
-<p>Na linha 21 nós criamos uma instância do MySQLi passando os dados de conexão com o servidor e, logo depois, verificamos se houve algum erro durante a conexão e exibimos a mensagem de erro.</p>
-<p>Salve esse script com o nome de <code>mysqli.php</code> em uma pasta chamada <code>includes</code>.</p>
-<p>O próximo passo será criar um script que faz uma consulta SQL, vamos começar o arquivo PHP com os comentários de créditos e o <code><a href="http://php.net/manual/en/function.require-once.php">require</a></code> para chamar o arquivo de conexão ao banco de dados:</p>
+Na linha 21 nós criamos uma instância do MySQLi passando os dados de conexão com o servidor e, logo depois, verificamos se houve algum erro durante a conexão e exibimos a mensagem de erro.
+
+Salve esse script com o nome de <code>mysqli.php</code> em uma pasta chamada <code>includes</code>.
+
+O próximo passo será criar um script que faz uma consulta SQL, vamos começar o arquivo PHP com os comentários de créditos e o <code><a href="http://php.net/manual/en/function.require-once.php">require</a></code> para chamar o arquivo de conexão ao banco de dados:
+
 
 [code language="php"]
 <?php
@@ -108,13 +130,16 @@ if (mysqli_connect_errno())
  *
  * @author Thiago Belem <contato@thiagobelem.net>
  * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
- */</p>
-<p>// Inclui o arquivo que faz a conexão ao banco de dados
-require_once('includes/mysqli.php');</p>
-<p>?>
+ */
+
+// Inclui o arquivo que faz a conexão ao banco de dados
+require_once('includes/mysqli.php');
+
+?>
 [/code]
 
-<p>Agora vamos montar uma consulta SQL simples para buscar as 10 últimas notícias ativas:</p>
+Agora vamos montar uma consulta SQL simples para buscar as 10 últimas notícias ativas:
+
 
 [code language="php" firstline="17"]
 // Monta a consulta SQL para trazer as últimas 10 notícias ativas
@@ -125,56 +150,71 @@ $sql = 'SELECT *
 		LIMIT 10';
 [/code]
 
-<p>A consulta montada poderia ser traduzida por:</p>
-<blockquote><p>SELECIONE todas as colunas
+A consulta montada poderia ser traduzida por:
+
+<blockquote>SELECIONE todas as colunas
 DA TABELA `noticias`
 ONDE `ativa` for igual a 1
 ORDENANDO PELO `cadastro` DECRESCENTEMENTE
-LIMITADO A 10 resultados</p></blockquote>
-<p>Agora precisamos executar a consulta utilizando o método <code><a href="http://www.php.net/manual/pt_BR/mysqli.query.php">query</a></code> do MySQLi:</p>
+LIMITADO A 10 resultados
+</blockquote>
+Agora precisamos executar a consulta utilizando o método <code><a href="http://www.php.net/manual/pt_BR/mysqli.query.php">query</a></code> do MySQLi:
+
 
 [code language="php" firstline="24"]
 // Executa a consulta OU mostra uma mensagem de erro
 $resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
 [/code]
 
-<p>E agora só precisamos rodar um loop, e em cada iteração (passada no loop) iremos exibir a notícia encontrada, montando um bloco HTML:</p>
+E agora só precisamos rodar um loop, e em cada iteração (passada no loop) iremos exibir a notícia encontrada, montando um bloco HTML:
+
 
 [code language="php" firstline="27"]
 // Faz um loop, passando por todos os resultados encontrados
 while ($noticia = $resultado->fetch_object()) {
 	// Exibe a notícia dentro de um bloco HTML
-	?></p>
-<p>	<h2><?php echo $noticia->titulo; ?></h2>
-	<p><?php echo $noticia->descricao; ?></p>
-	<p><a href="noticia.php?id=<?php echo $noticia->id; ?>" title="Continue lendo essa notícia">Leia mais &raquo;</a></p></p>
-<p>	<?php
+	?>
+
+	<h2><?php echo $noticia->titulo; ?></h2>
+	<?php echo $noticia->descricao; ?>
+
+	<a href="noticia.php?id=<?php echo $noticia->id; ?>" title="Continue lendo essa notícia">Leia mais &raquo;</a>
+
+
+	<?php
 } // while ($noticia = $resultado->fetch_object())
 [/code]
 
-<p>Fazendo isso, para cada notícia encontrada pela consulta, será criado o seguinte bloco HTML:</p>
+Fazendo isso, para cada notícia encontrada pela consulta, será criado o seguinte bloco HTML:
+
 
 [code language="html"]
 <h2>Titulo da notícia</h2>
-<p>Descrição da notícia</p>
-<p><a href="noticia.php?id=2" title="Continue lendo essa notícia">Leia mais &raquo;</a></p>
+Descrição da notícia
+
+<a href="noticia.php?id=2" title="Continue lendo essa notícia">Leia mais &raquo;</a>
+
 [/code]
 
-<p>Depois disso, podemos colocar mais um pequeno bloco de código que irá mostrar o total de registros encontrados com a consulta:</p>
+Depois disso, podemos colocar mais um pequeno bloco de código que irá mostrar o total de registros encontrados com a consulta:
+
 
 [code language="php" firstline="39"]
 // Exibe o total de registros encontrados
-echo "<p>Registros encontrados: {$resultado->num_rows}</p>";
+echo "Registros encontrados: {$resultado->num_rows}
+";
 [/code]
 
-<p>E no final de tudo precisamos - <strong>SEMPRE</strong> - liberar o resultado da consulta, limpando espaço na memória e deixando tudo mais organizado:</p>
+E no final de tudo precisamos - <strong>SEMPRE</strong> - liberar o resultado da consulta, limpando espaço na memória e deixando tudo mais organizado:
+
 
 [code language="php" firstline="42"]
 // Libera o resultado para liberar memória
 $resultado->free();
 [/code]
 
-<p>O arquivo <code>consulta.php</code> ficou assim:</p>
+O arquivo <code>consulta.php</code> ficou assim:
+
 
 [code language="php"]
 <?php
@@ -187,34 +227,50 @@ $resultado->free();
  *
  * @author Thiago Belem <contato@thiagobelem.net>
  * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
- */</p>
-<p>// Inclui o arquivo que faz a conexão ao banco de dados
-require_once('includes/mysqli.php');</p>
-<p>// Monta a consulta SQL para trazer as últimas 10 notícias ativas
+ */
+
+// Inclui o arquivo que faz a conexão ao banco de dados
+require_once('includes/mysqli.php');
+
+// Monta a consulta SQL para trazer as últimas 10 notícias ativas
 $sql = 'SELECT *
 		FROM `noticias` AS Noticia
 		WHERE Noticia.`ativa` = 1
 		ORDER BY Noticia.`cadastro` DESC
-		LIMIT 10';</p>
-<p>// Executa a consulta OU mostra uma mensagem de erro
-$resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);</p>
-<p>// Faz um loop, passando por todos os resultados encontrados
+		LIMIT 10';
+
+// Executa a consulta OU mostra uma mensagem de erro
+$resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
+
+// Faz um loop, passando por todos os resultados encontrados
 while ($noticia = $resultado->fetch_object()) {
 	// Exibe a notícia dentro de um bloco HTML
-	?></p>
-<p>	<h2><?php echo $noticia->titulo; ?></h2>
-	<p><?php echo $noticia->descricao; ?></p>
-	<p><a href="noticia.php?id=<?php echo $noticia->id; ?>" title="Continue lendo essa notícia">Leia mais &raquo;</a></p></p>
-<p>	<?php
-} // while ($noticia = $resultado->fetch_object())</p>
-<p>// Exibe o total de registros encontrados
-echo "<p>Registros encontrados: {$resultado->num_rows}</p>";</p>
-<p>// Libera o resultado para liberar memória
-$resultado->free();</p>
-<p>?>
+	?>
+
+	<h2><?php echo $noticia->titulo; ?></h2>
+	<?php echo $noticia->descricao; ?>
+
+	<a href="noticia.php?id=<?php echo $noticia->id; ?>" title="Continue lendo essa notícia">Leia mais &raquo;</a>
+
+
+	<?php
+} // while ($noticia = $resultado->fetch_object())
+
+// Exibe o total de registros encontrados
+echo "Registros encontrados: {$resultado->num_rows}
+";
+
+// Libera o resultado para liberar memória
+$resultado->free();
+
+?>
 [/code]
 
-<p>Por hoje é só! :)</p>
-<p>Faça o download de todos os arquivos desse tutorial: <a href="/arquivos/2010/07/PHP-e-MySQL-Consulta-Simples.zip">PHP-e-MySQL-Consulta-Simples.zip</a></p>
-<p>Nas próximas partes desse tutorial iremos ver uma consulta mais complexa (ligando as duas tabelas) e outros scripts para cadastrar e editar notícias.</p>
-<p>Um grade abraço e até a próxima!</p>
+Por hoje é só! :)
+
+Faça o download de todos os arquivos desse tutorial: <a href="/arquivos/2010/07/PHP-e-MySQL-Consulta-Simples.zip">PHP-e-MySQL-Consulta-Simples.zip</a>
+
+Nas próximas partes desse tutorial iremos ver uma consulta mais complexa (ligando as duas tabelas) e outros scripts para cadastrar e editar notícias.
+
+Um grade abraço e até a próxima!
+

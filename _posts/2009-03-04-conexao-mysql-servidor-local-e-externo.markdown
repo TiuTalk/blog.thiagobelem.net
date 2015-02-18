@@ -8,33 +8,42 @@ categories:
 - Artigos
 tags: []
 ---
-<p>Fala pessoal,</p>
-<p>Um probleminha muito comum que me atrapalhava quando eu não usava frameworks é ficar configurando o arquivo de conexão do MySQL pra servidor local e externo... Ao longo dos anos vim criando métodos mais eficazes e esse aqui eu criei hoje.</p>
-<p>Esse script tem uma vantagem enorme: ele decide qual configuração de conexão usar em função do domínio que está sendo utilizado pra acessar o site!</p>
-<p>Por exemplo: Se você estiver acessando o site pelo 127.0.0.1 ele usa a configuração de conexão local, se estiver acessando por um domínio escolhido, thiagobelem.net por exemplo, ele usa outra configuração... Não tem limite de configurações, você pode definir quantas quiser.</p>
-<p>Vamos ao script:</p>
+Fala pessoal,
+
+Um probleminha muito comum que me atrapalhava quando eu não usava frameworks é ficar configurando o arquivo de conexão do MySQL pra servidor local e externo... Ao longo dos anos vim criando métodos mais eficazes e esse aqui eu criei hoje.
+
+Esse script tem uma vantagem enorme: ele decide qual configuração de conexão usar em função do domínio que está sendo utilizado pra acessar o site!
+
+Por exemplo: Se você estiver acessando o site pelo 127.0.0.1 ele usa a configuração de conexão local, se estiver acessando por um domínio escolhido, thiagobelem.net por exemplo, ele usa outra configuração... Não tem limite de configurações, você pode definir quantas quiser.
+
+Vamos ao script:
+
 
 [code='php']
 /**
 *  Arquivo de conexão ao MySQL usando servidor local e externo
 */
-$n = -1;</p>
-<p>// Define os servidores e configurações de cada conexão</p>
-<p>$n++;
+$n = -1;
+
+// Define os servidores e configurações de cada conexão
+
+$n++;
 $MySQL[$n]['dominios']  = array('127.0.0.1', 'localhost'); // Possíveis dominios
 $MySQL[$n]['servidor']  = '127.0.0.1'; // Servidor MySQL
 $MySQL[$n]['usuario']   = 'root'; // Usuário MySQL
 $MySQL[$n]['senha']     = ''; // Senha MySQL
 $MySQL[$n]['banco']     = 'meu_banco'; // Banco de dados
-$MySQL[$n]['persis']    = false; // Conexão persistente?</p>
-<p>$n++;
+$MySQL[$n]['persis']    = false; // Conexão persistente?
+
+$n++;
 $MySQL[$n]['dominios']  = array('thiagobelem.net', 'thiagobelem.com.br');
 $MySQL[$n]['servidor']  = '127.0.0.1'; // Servidor MySQL
 $MySQL[$n]['usuario']   = 'meu_usuario'; // Usuário MySQL
 $MySQL[$n]['senha']     = 'minha_senha'; // Senha MySQL
 $MySQL[$n]['banco']     = 'meu_banco'; // Banco de dados
-$MySQL[$n]['persis']    = false; // Conexão persistente?</p>
-<p>// Decide qual conexão usar
+$MySQL[$n]['persis']    = false; // Conexão persistente?
+
+// Decide qual conexão usar
 foreach ($MySQL as $key=>$servidor) {
     if (!isset($_SERVER['HTTP_HOST'])) {
         $usar = $key;
@@ -51,16 +60,20 @@ foreach ($MySQL as $key=>$servidor) {
         if ($encontrado)
             break;
     }
-}</p>
-<p>// Decide o tipo de conexão
-$MySQL['conexao'] = ($MySQL[$usar]['persis']) ? 'mysql_pconnect' : 'mysql_connect';</p>
-<p>// Conecta-se ao servidor usando o tipo de conexão definido
-$MySQL['link'] = $MySQL['conexao']($MySQL[$usar]['servidor'], $MySQL[$usar]['usuario'], $MySQL[$usar]['senha']) or die("Não foi possível se conectar ao servidor MySQL no endereço [".$MySQL[$usar]['servidor']."]");</p>
-<p>// Conecta-se ao banco de dados
+}
+
+// Decide o tipo de conexão
+$MySQL['conexao'] = ($MySQL[$usar]['persis']) ? 'mysql_pconnect' : 'mysql_connect';
+
+// Conecta-se ao servidor usando o tipo de conexão definido
+$MySQL['link'] = $MySQL['conexao']($MySQL[$usar]['servidor'], $MySQL[$usar]['usuario'], $MySQL[$usar]['senha']) or die("Não foi possível se conectar ao servidor MySQL no endereço [".$MySQL[$usar]['servidor']."]");
+
+// Conecta-se ao banco de dados
 mysql_select_db($MySQL[$usar]['banco'], $MySQL['link']) or die("Não foi possível conectar-se ao banco de dados [".$MySQL[$usar]['banco']."] no servidor [".$MySQL[$usar]['servidor']."]");
 [/code]
 
-<p>Pra criar mais uma configuração de conexão é só duplicar esse bloco:</p>
+Pra criar mais uma configuração de conexão é só duplicar esse bloco:
+
 
 [code='php']
 $n++;
@@ -72,8 +85,10 @@ $MySQL[$n]['banco']     = 'meu_banco'; // Banco de dados
 $MySQL[$n]['persis']    = false; // Conexão persistente?
 [/code]
 
-<p>Gostaram? Ele tá todo comentado.. Qualquer dúvida é só comentar! =)</p>
-<p>Abraços</p>
+Gostaram? Ele tá todo comentado.. Qualquer dúvida é só comentar! =)
+
+Abraços
+
 <h4>Documentação Oficial:</h4>
 <ul>
 <li><strong><a href="http://www.php.net/manual/pt_BR/function.array.php" target="_blank">Arrays</a></strong> » Cria um array (matriz com vários elementos)</li>

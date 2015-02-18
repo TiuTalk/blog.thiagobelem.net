@@ -14,14 +14,19 @@ tags:
 - PHP
 - TinyURL API
 ---
-<p>Hoje estava eu aqui, sem fazer nada, e resolvi criar uma funçãozinha muito da legal que usa o API do <strong>TinyURL</strong> para converter as suas URLs.</p>
-<p>O TinyURL faz o serviço de converter URLs gigantescas (não importa o seu tamanho) em URLs menores, de 20~25 caracteres (incluindo o http)</p>
-<p>Ela é bem simples e a única coisa que você precisa fazer é passar a sua URL pra ela que ela vai te retornar a URL reduzida.</p>
-<p>A vantagem de usar essa função (e não as que eu achei por aí, buscando no Google) é que ela identifica qual é o melhor método pra fazer a requisição à essa API, usando a biblioteca <strong>cURL</strong>, <strong>file_get_contents()</strong> ou <strong>fopen()</strong>+<strong>fgets()</strong>. ;D</p>
+Hoje estava eu aqui, sem fazer nada, e resolvi criar uma funçãozinha muito da legal que usa o API do <strong>TinyURL</strong> para converter as suas URLs.
+
+O TinyURL faz o serviço de converter URLs gigantescas (não importa o seu tamanho) em URLs menores, de 20~25 caracteres (incluindo o http)
+
+Ela é bem simples e a única coisa que você precisa fazer é passar a sua URL pra ela que ela vai te retornar a URL reduzida.
+
+A vantagem de usar essa função (e não as que eu achei por aí, buscando no Google) é que ela identifica qual é o melhor método pra fazer a requisição à essa API, usando a biblioteca <strong>cURL</strong>, <strong>file_get_contents()</strong> ou <strong>fopen()</strong>+<strong>fgets()</strong>. ;D
+
 <h3>Código da Função</h3>
 
-[code lang="php"]<?php</p>
-<p>/**
+[code lang="php"]<?php
+
+/**
 * Função para criar versões reduzidas das URLs
 *
 * @author    Thiago Belem <contato@thiagobelem.net>
@@ -32,12 +37,14 @@ tags:
 function tinyURL($url)
 {
 	define('TINYURL_API', 'http://tinyurl.com/api-create.php?url=%s');
-	$requestURL = sprintf(TINYURL_API, $url);</p>
-<p>	// Checa a existência da biblioteca cURL
+	$requestURL = sprintf(TINYURL_API, $url);
+
+	// Checa a existência da biblioteca cURL
 	$curl = (bool) function_exists('curl_init');
 	// Checa a variável allow_url_fopen no php.ini
-	$allow_url = (bool) ini_get('allow_url_fopen');</p>
-<p>	// Verifica se a biblioteca cURL existe e se não é possível usar URLs no fopen
+	$allow_url = (bool) ini_get('allow_url_fopen');
+
+	// Verifica se a biblioteca cURL existe e se não é possível usar URLs no fopen
 	if ($curl AND !$allow_url) {
 		// Caso exista, usa o cURL para fazer a requisição
 		$ch = curl_init($requestURL);
@@ -61,8 +68,9 @@ function tinyURL($url)
 	}
 	// Retorna o resultado sem espaços adicionais ou a URL original caso algo tenha dado errado
 	return ((isset($resultado) AND !empty($resultado)) ? trim($resultado) : $url);
-}</p>
-<p>?>[/code]
+}
+
+?>[/code]
 
 <h3>Exemplo de uso <span style="color: #c0c0c0;">(se é que precisa..)</span></h3>
 
@@ -73,4 +81,5 @@ function tinyURL($url)
 ?>
 [/code]
 
-<p>Espero que tenham gostado! :)</p>
+Espero que tenham gostado! :)
+

@@ -14,17 +14,25 @@ tags:
 - CSS
 - CSS Reset
 ---
-<p>Hoje vou falar sobre uma coisa simples, rápida e MUUITO útil... o <strong>CSS Reset</strong> ou <strong>CSS Reseter</strong>.</p>
-<p>Há um grande problema quando implementamos um layout em HTML e CSS e vamos testar em outros browsers como o Internet Explorer ou Safari... Alguns elementos não se comportam da mesma forma, mesmo que esse comportamento não tenha sido definido/sobrescrito por você... por exemplo o H1, H2 e H3... Eles têm tamanhos diferentes em cada browser, mesmo usando a mesma fonte eles vão aparecer - se você não definir esse tamanho - com tamanhos diferentes.</p>
+Hoje vou falar sobre uma coisa simples, rápida e MUUITO útil... o <strong>CSS Reset</strong> ou <strong>CSS Reseter</strong>.
+
+Há um grande problema quando implementamos um layout em HTML e CSS e vamos testar em outros browsers como o Internet Explorer ou Safari... Alguns elementos não se comportam da mesma forma, mesmo que esse comportamento não tenha sido definido/sobrescrito por você... por exemplo o H1, H2 e H3... Eles têm tamanhos diferentes em cada browser, mesmo usando a mesma fonte eles vão aparecer - se você não definir esse tamanho - com tamanhos diferentes.
+
 <h3>O que é?</h3>
-<p>O CSS Reset é - basicamente - um arquivo que "limpa" os estilos padrões de todos os elementos HTML que já possuem uma formatação padrão. Ele tira cores, tamanhos de fonte, <em>margins</em>, <em>paddins</em>, efeitos e decorações... Quase tudo de quase todos os elementos vira "padrão", como um texto sem formatação/alteração nenhuma.</p>
+O CSS Reset é - basicamente - um arquivo que "limpa" os estilos padrões de todos os elementos HTML que já possuem uma formatação padrão. Ele tira cores, tamanhos de fonte, <em>margins</em>, <em>paddins</em>, efeitos e decorações... Quase tudo de quase todos os elementos vira "padrão", como um texto sem formatação/alteração nenhuma.
+
 <h3>Como usar?</h3>
-<p>Da forma mais simples do mundo: inserindo o arquivo no seu site como um CSS normal, antes de qualquer outro CSS que seu site usar.</p>
-<p>Se você inserir em um site pronto você pode ver seu site se desfigurar todo, isso vai significar que você se baseou em estilos padrões de alguns elementos, o que é errado... Já que esse estilo pode mudar entre navegadores/futuras versões.</p>
-<p>É altamente recomendável que você insira/use esse arquivo sempre que for começar a implementar um site. :)</p>
+Da forma mais simples do mundo: inserindo o arquivo no seu site como um CSS normal, antes de qualquer outro CSS que seu site usar.
+
+Se você inserir em um site pronto você pode ver seu site se desfigurar todo, isso vai significar que você se baseou em estilos padrões de alguns elementos, o que é errado... Já que esse estilo pode mudar entre navegadores/futuras versões.
+
+É altamente recomendável que você insira/use esse arquivo sempre que for começar a implementar um site. :)
+
 <h3>E como é esse arquivo?</h3>
-<p>Existem vários <strong>CSS Reset</strong> rolando pela Internet... Todos funcionam da mesma forma mas alguns atingem mais elementos que outros... Mas teoricamente não há diferença.</p>
-<p>Esse aqui é o que eu uso no meu <a href="http://thiagobelem.net/" target="_blank">site pessoal</a>:</p>
+Existem vários <strong>CSS Reset</strong> rolando pela Internet... Todos funcionam da mesma forma mas alguns atingem mais elementos que outros... Mas teoricamente não há diferença.
+
+Esse aqui é o que eu uso no meu <a href="http://thiagobelem.net/" target="_blank">site pessoal</a>:
+
 
 [code language="css"]html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -56,23 +64,27 @@ blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
-}</p>
-<p>:focus {
+}
+
+:focus {
 	outline: 0;
-}</p>
-<p>ins {
+}
+
+ins {
 	text-decoration: none;
 }
 del {
 	text-decoration: line-through;
-}</p>
-<p>table {
+}
+
+table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }[/code]
 
 Se você preferir, existe um CSS da Yahoo mesmo, chamado de YUI CSS Reset:
-<a href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css" target="_blank">http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css</a></p>
+<a href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css" target="_blank">http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css</a>
+
 
 [code language="css"]/*
 Copyright (c) 2009, Yahoo! Inc. All rights reserved.
@@ -113,7 +125,7 @@ abbr,acronym {
 }
 [/code]
 
-<p>E existe um <strong>CSS Reset Reloaded</strong> criado por <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/" target="_blank">Eric Meyer</a>:
+E existe um <strong>CSS Reset Reloaded</strong> criado por <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/" target="_blank">Eric Meyer</a>:
 [code language="css"]html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -161,4 +173,5 @@ blockquote, q {
 	quotes: "" "";
 }[/code]
 
-<p>Espero que tenham gostado! :)</p>
+Espero que tenham gostado! :)
+

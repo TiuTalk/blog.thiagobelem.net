@@ -18,99 +18,141 @@ tags:
 - MySQL
 - MySQLi
 ---
-<p>Fala minha gente!</p>
-<p>Hoje vou mostrar para vocês como usar a extensão <a href="http://br.php.net/manual/pt_BR/book.mysqli.php" title="MySQLi">MySQLi</a> (<em>MySQL Improved</em> ou MySQL Melhorado) do MySQL.</p>
-<p>Já falei um pouco sobre o MySQLi <a href="/guia-pratico-de-mysqli-no-php" title="Guia prÃ¡tico de MySQLi no PHP">nesse post</a>, mas foi sobre o método procedural, e hoje vamos falar sobre o método orientado a objetos.</p>
-<p>Antes de mais nada: o MySQLi só está presente na <strong>versão 4.1.3+ do MySQL</strong> e na <strong>versão 5 do PHP</strong>, se você tem um servidor que não tenha alguma dessas versões, se mate. :)</p>
-<p>E vejam que coisa interessante está escrita na <a href="http://br.php.net/manual/pt_BR/mysqli.overview.php" title="MySQLi overview">Overview do MySQLi</a>:</p>
-<blockquote><p><strong>Note:</strong> If you are using MySQL versions 4.1.3 or later it is strongly recommended that you use this extension. </p></blockquote>
-<p>Que em tradução livre seria:</p>
-<blockquote><p><strong>Nota:</strong> Se você está usando a versão 4.1.3 ou superior do MySQL é altamente recomendável que você use essa extensão. </p></blockquote>
-<p>
-<h3>Começando do começo: O velho modo</h3>
-<p>Acredito que todos vocês já viram uma conexão e consulta MySQL feita da seguinte forma:</p>
+Fala minha gente!
 
-[code language="php"]<?php</p>
-<p>// Conecta ao banco de dados
+Hoje vou mostrar para vocês como usar a extensão <a href="http://br.php.net/manual/pt_BR/book.mysqli.php" title="MySQLi">MySQLi</a> (<em>MySQL Improved</em> ou MySQL Melhorado) do MySQL.
+
+Já falei um pouco sobre o MySQLi <a href="/guia-pratico-de-mysqli-no-php" title="Guia prÃ¡tico de MySQLi no PHP">nesse post</a>, mas foi sobre o método procedural, e hoje vamos falar sobre o método orientado a objetos.
+
+Antes de mais nada: o MySQLi só está presente na <strong>versão 4.1.3+ do MySQL</strong> e na <strong>versão 5 do PHP</strong>, se você tem um servidor que não tenha alguma dessas versões, se mate. :)
+
+E vejam que coisa interessante está escrita na <a href="http://br.php.net/manual/pt_BR/mysqli.overview.php" title="MySQLi overview">Overview do MySQLi</a>:
+
+<blockquote><strong>Note:</strong> If you are using MySQL versions 4.1.3 or later it is strongly recommended that you use this extension.
+</blockquote>
+Que em tradução livre seria:
+
+<blockquote><strong>Nota:</strong> Se você está usando a versão 4.1.3 ou superior do MySQL é altamente recomendável que você use essa extensão.
+</blockquote>
+
+<h3>Começando do começo: O velho modo</h3>
+Acredito que todos vocês já viram uma conexão e consulta MySQL feita da seguinte forma:
+
+
+[code language="php"]<?php
+
+// Conecta ao banco de dados
 mysql_connect('127.0.0.1', 'usuario', 'senha');
-mysql_select_db('meusite');</p>
-<p>// "Hoje" em formato SQL
-$data = date('Y-m-d');</p>
-<p>// Monta e executa uma consulta SQL
+mysql_select_db('meusite');
+
+// "Hoje" em formato SQL
+$data = date('Y-m-d');
+
+// Monta e executa uma consulta SQL
 $sql = "SELECT `id`, `titulo`, `link` FROM `noticias` WHERE `ativa` = 1 AND `data` <= '". $data ."'";
-$query = mysql_query($sql);</p>
-<p>// Para cada resultado encontrado...
+$query = mysql_query($sql);
+
+// Para cada resultado encontrado...
 while ($noticia = mysql_fetch_assoc($query)) {
 	// Exibe um link com a notícia
 	echo '<a href="'. $noticia['link'] .'" title="'. $noticia['titulo'] .'">'. $noticia['titulo'] .'</a>';
 	echo '';
-} // fim while</p>
-<p>// Total de notícias
-echo 'Total de notícias: ' . mysql_num_rows($query);</p>
-<p>?>[/code]
-Não há nada de especial com esse código... Conectamos ao MySQL e depois procuramos todas as notícias ativas e anteriores ao dia de hoje (inclusive)... O código por si só não é feito nem "mal organizado", mas isso é por que vocês ainda não conhecem o <strong>MySQLi</strong>!</p>
-<p>
+} // fim while
+
+// Total de notícias
+echo 'Total de notícias: ' . mysql_num_rows($query);
+
+?>[/code]
+Não há nada de especial com esse código... Conectamos ao MySQL e depois procuramos todas as notícias ativas e anteriores ao dia de hoje (inclusive)... O código por si só não é feito nem "mal organizado", mas isso é por que vocês ainda não conhecem o <strong>MySQLi</strong>!
+
+
 <h3>Orientação a Objetos: a beleza programação</h3>
-<p>Agora veja o código que faz a mesma coisa que o anterior, só que em sua versão MySQLi orientada a objetos:
-[code language="php"]<?php</p>
-<p>// Conecta ao banco de dados
-$mysqli = new mysqli('127.0.0.1', 'usuario', 'senha', 'meusite');</p>
-<p>// Verifica se ocorreu algum erro
+Agora veja o código que faz a mesma coisa que o anterior, só que em sua versão MySQLi orientada a objetos:
+[code language="php"]<?php
+
+// Conecta ao banco de dados
+$mysqli = new mysqli('127.0.0.1', 'usuario', 'senha', 'meusite');
+
+// Verifica se ocorreu algum erro
 if (mysqli_connect_errno()) {
     die('Não foi possível conectar-se ao banco de dados: ' . mysqli_connect_error());
     exit();
-}</p>
-<p>// "Hoje" em formato SQL
-$data = date('Y-m-d');</p>
-<p>// Prepara uma consulta SQL
-if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE `ativa` = 1 AND `data` <= ?")) {</p>
-<p>	// Atribui valores às variáveis da consulta
-	$sql->bind_param('s', $data); // Coloca o valor de $data no lugar da primeira interrogação (?)</p>
-<p>	// Executa a consulta
-	$sql->execute();</p>
-<p>	// Atribui o resultado encontrado a variáveis
-	$sql->bind_result($id, $titulo, $link);</p>
-<p>	// Para cada resultado encontrado...
+}
+
+// "Hoje" em formato SQL
+$data = date('Y-m-d');
+
+// Prepara uma consulta SQL
+if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE `ativa` = 1 AND `data` <= ?")) {
+
+	// Atribui valores às variáveis da consulta
+	$sql->bind_param('s', $data); // Coloca o valor de $data no lugar da primeira interrogação (?)
+
+	// Executa a consulta
+	$sql->execute();
+
+	// Atribui o resultado encontrado a variáveis
+	$sql->bind_result($id, $titulo, $link);
+
+	// Para cada resultado encontrado...
 	while ($sql->fetch()) {
 		// Exibe um link com a notícia
 		echo '<a href="'. $link .'" title="'. $titulo .'">'. $titulo .'</a>';
 		echo '';
-	} // fim while</p>
-<p>	// Total de notícias
-	echo 'Total de notícias: ' . $sql->num_rows;</p>
-<p>	// Fecha a consulta
-	$sql->close();
-}</p>
-<p>// Fecha a conexão com o banco de dados
-$mysqli->close();</p>
-<p>?>[/code]
-De primeiro contato sei que muita gente vai achar que o MySQLi é mais complicado, é só ver o número de linhas: quase o dobro.. Mas o MySQLi tem uma vantagem indescutível em cima do MySQL normal: <strong style="color: #B40000">a segurança</strong>.</p>
-<p>Primeiro nós <strong>PREPARAMOS</strong> uma consulta com um local para receber um valor variável... É aquela interrogação.</p>
-<p>Depois nós dizemos que o local reservado receberá um conteúdo do tipo string (s) com valor $data.. Ou seja, se <strong>$data</strong> fosse um inteiro ou booleando a consulta daria um erro, ela só aceitará strings, e digo mais: strings que não modifiquem a consulta... se for uma <a href="/?s=SQL+Injection" title="SQL Injection"><em>SQL Injection</em></a> o <strong>MySQLi</strong> irá escapá-la e ele [o ataque] não funcionará!</p>
-<p>Depois é só executar, reservar variáveis para o resultado e usá-las com um <strong>fetch()</strong> normal.. ;)</p>
-<p>Vejam um exemplo de consulta com três parâmetros: duas strings e um inteiro:</p>
+	} // fim while
 
-[code language="php"]<?php</p>
-<p>// "Hoje" em formato SQL
+	// Total de notícias
+	echo 'Total de notícias: ' . $sql->num_rows;
+
+	// Fecha a consulta
+	$sql->close();
+}
+
+// Fecha a conexão com o banco de dados
+$mysqli->close();
+
+?>[/code]
+De primeiro contato sei que muita gente vai achar que o MySQLi é mais complicado, é só ver o número de linhas: quase o dobro.. Mas o MySQLi tem uma vantagem indescutível em cima do MySQL normal: <strong style="color: #B40000">a segurança</strong>.
+
+Primeiro nós <strong>PREPARAMOS</strong> uma consulta com um local para receber um valor variável... É aquela interrogação.
+
+Depois nós dizemos que o local reservado receberá um conteúdo do tipo string (s) com valor $data.. Ou seja, se <strong>$data</strong> fosse um inteiro ou booleando a consulta daria um erro, ela só aceitará strings, e digo mais: strings que não modifiquem a consulta... se for uma <a href="/?s=SQL+Injection" title="SQL Injection"><em>SQL Injection</em></a> o <strong>MySQLi</strong> irá escapá-la e ele [o ataque] não funcionará!
+
+Depois é só executar, reservar variáveis para o resultado e usá-las com um <strong>fetch()</strong> normal.. ;)
+
+Vejam um exemplo de consulta com três parâmetros: duas strings e um inteiro:
+
+
+[code language="php"]<?php
+
+// "Hoje" em formato SQL
 $data = date('Y-m-d');
 // Nome do autor
-$autor = 'Thiago Belem';</p>
-<p>// Prepara uma consulta SQL
-if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE (`data` <= ?) AND (`ativa` = ?) AND (`autor` = ?)")) {</p>
-<p>	// Atribui valores às variáveis da consulta
-	$sql->bind_param('sis', $data, 1, $autor);</p>
-<p>	// Executa a consulta
-	$sql->execute();</p>
-<p>	// ... Todo o resto é igual
+$autor = 'Thiago Belem';
+
+// Prepara uma consulta SQL
+if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE (`data` <= ?) AND (`ativa` = ?) AND (`autor` = ?)")) {
+
+	// Atribui valores às variáveis da consulta
+	$sql->bind_param('sis', $data, 1, $autor);
+
+	// Executa a consulta
+	$sql->execute();
+
+	// ... Todo o resto é igual
 }
 ?>[/code]
-Nessa consulta nós reservamos espaços para três variáveis... Depois nós passamos os seus tipos e valores usando o método <strong>bind_param()</strong>, o primeiro parâmetro traz os tipos dos valores, no exemplo foi usado "<strong>sis</strong>" que significa: uma <em><strong>s</strong>tring</em>, um <em><strong>i</strong>nteger</em> (inteiro) e uma <em><strong>s</strong>tring</em>... Depois nós passamos os valores normalmente.. :)</p>
-<p>Os tipos de valores aceitos pelo MySQLi são:</p>
+Nessa consulta nós reservamos espaços para três variáveis... Depois nós passamos os seus tipos e valores usando o método <strong>bind_param()</strong>, o primeiro parâmetro traz os tipos dos valores, no exemplo foi usado "<strong>sis</strong>" que significa: uma <em><strong>s</strong>tring</em>, um <em><strong>i</strong>nteger</em> (inteiro) e uma <em><strong>s</strong>tring</em>... Depois nós passamos os valores normalmente.. :)
+
+Os tipos de valores aceitos pelo MySQLi são:
+
 <ul>
 <li><strong style="color: #B40000">i</strong> para <em>integer</em> (inteiro)</li>
 <li><strong style="color: #B40000">s</strong> para <em>string</em></li>
 <li><strong style="color: #B40000">d</strong> para <em>double</em> (decimal)</li>
 <li><strong style="color: #B40000">b</strong> para <em>blob</em></li>
 </ul>
-<p>Quem quiser saber um pouco mais sobre MySQLi, é só checar a documentação no <a href="http://php.net/">php.net</a>, e não se esqueça de deixar o seu comentário agradecendo (ou reclamando o.O)!</p>
-<p>Espero que tenham gostado! :)</p>
+Quem quiser saber um pouco mais sobre MySQLi, é só checar a documentação no <a href="http://php.net/">php.net</a>, e não se esqueça de deixar o seu comentário agradecendo (ou reclamando o.O)!
+
+Espero que tenham gostado! :)
+

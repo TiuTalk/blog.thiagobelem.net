@@ -14,21 +14,33 @@ tags:
 - PHP 5.4
 - Traits
 ---
-<p>Este artigo faz parte de uma série de outros arquivos sobre as <a title="PHP 5.4 – Novas funcionalidades" href="/php-5-4-novas-funcionalidades" target="_blank">novidades do PHP 5.4</a>.</p>
-<p>Documentação oficial: <a href="http://php.net/traits" target="_blank">http://php.net/traits</a></p>
-<p>Traits são mecanismos que ajudam (e muito) a <strong>reutilização de código</strong>, e servem perfeitamente para resolver o problema da falta de <strong>herança múltipla</strong>.</p>
-<p>Suponhamos que você tenha duas ou mais classes que precisam usar um método/comportamento em comum, antes da versão 5.4 você faria algo do tipo:</p>
-<p>Primeiro temos nossa classe Log, que serviria pra salvar mensagens de log (imagine uma classe completa, que faça algo de útil):</p>
+Este artigo faz parte de uma série de outros arquivos sobre as <a title="PHP 5.4 – Novas funcionalidades" href="/php-5-4-novas-funcionalidades" target="_blank">novidades do PHP 5.4</a>.
+
+Documentação oficial: <a href="http://php.net/traits" target="_blank">http://php.net/traits</a>
+
+Traits são mecanismos que ajudam (e muito) a <strong>reutilização de código</strong>, e servem perfeitamente para resolver o problema da falta de <strong>herança múltipla</strong>.
+
+Suponhamos que você tenha duas ou mais classes que precisam usar um método/comportamento em comum, antes da versão 5.4 você faria algo do tipo:
+
+Primeiro temos nossa classe Log, que serviria pra salvar mensagens de log (imagine uma classe completa, que faça algo de útil):
+
 <div data-gist-id="3970165" data-gist-show-loading="false"></div>
-<p>E agora você tem outras classes que fazem uso dessa funcionalidade (salvar logs), mas essas classes não podem (e nem deveriam) estender Log, então você faria algo do tipo:</p>
+E agora você tem outras classes que fazem uso dessa funcionalidade (salvar logs), mas essas classes não podem (e nem deveriam) estender Log, então você faria algo do tipo:
+
 <div data-gist-id="3970168" data-gist-show-loading="false"></div>
-<p>Mais uma vez, o conteúdo ou métodos dessas classes não importa.. o que importa aqui é o trabalho que temos para poder usar o <strong>Log::log()</strong> para salvar mensagens de log.</p>
-<p>Já na versão 5.4, podemos transformar a classe Log numa Trait:</p>
+Mais uma vez, o conteúdo ou métodos dessas classes não importa.. o que importa aqui é o trabalho que temos para poder usar o <strong>Log::log()</strong> para salvar mensagens de log.
+
+Já na versão 5.4, podemos transformar a classe Log numa Trait:
+
 <div data-gist-id="3970177" data-gist-show-loading="false"></div>
-<p>E manter o comportamento das nossas classes, de forma bem mais simples:</p>
+E manter o comportamento das nossas classes, de forma bem mais simples:
+
 <div data-gist-id="3970188" data-gist-show-loading="false"></div>
 <div data-gist-id="3970189" data-gist-show-loading="false"></div>
-<p>Podemos usar o método log() diretamente (sem a necessidade de instanciar um objeto de Log) pois nossas classes adquiriram as características (métodos e atributos) de Log! :)</p>
+Podemos usar o método log() diretamente (sem a necessidade de instanciar um objeto de Log) pois nossas classes adquiriram as características (métodos e atributos) de Log! :)
+
 <h3>Conclusão</h3>
-<p>Traits são de fato recursos bem interessantes e muitos <a title="O CakePHP 3.0 já está no forno!" href="/o-cakephp-3-0-ja-esta-no-forno">frameworks estão se adaptando</a> à esse poderoso recurso.</p>
-<p>Espero que você tenha gostado (e faça um bom uso) desse novo recurso! :)</p>
+Traits são de fato recursos bem interessantes e muitos <a title="O CakePHP 3.0 já está no forno!" href="/o-cakephp-3-0-ja-esta-no-forno">frameworks estão se adaptando</a> à esse poderoso recurso.
+
+Espero que você tenha gostado (e faça um bom uso) desse novo recurso! :)
+

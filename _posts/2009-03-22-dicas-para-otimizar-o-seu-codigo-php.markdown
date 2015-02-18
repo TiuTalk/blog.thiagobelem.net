@@ -9,8 +9,10 @@ categories:
 - Otimização
 tags: []
 ---
-<p>Vou falar aqui sobre algumas pequenas dicas que você pode levar em conta na hora de escrever o seu script e que vão acabar deixando a sua aplicação <strong>um pouco</strong> mais rápida.</p>
-<p>Vamos ao que interessa:</p>
+Vou falar aqui sobre algumas pequenas dicas que você pode levar em conta na hora de escrever o seu script e que vão acabar deixando a sua aplicação <strong>um pouco</strong> mais rápida.
+
+Vamos ao que interessa:
+
 <ul>
 <li>Chamar um método (de um objeto) é mais rápido do que usar o "_call"</li>
 <li>Chamar uma função é mais rápido do que chamar um método de um objeto</li>
@@ -37,8 +39,13 @@ tags: []
 <li>Não busque por colunas de tabelas que você não irá usar no seu script</li>
 <li>Combine várias <em>queries</em> em um se o seu banco de dados suportar isso</li>
 </ul>
-<p>Se você usar essas dicas você pode ter certeza que está contribuindo para um bom funcionamento da sua aplicação... Mas vale lembrar que essas providências estão longe de tornar a sua aplicação extremamente rápida. Você precisará de outros recursos mais poderosos como cacheamento de alto nível e uma boa integração com os recursos físicos disponíveis para a aplicação.</p>
-<p>Todas essas dicas se tornam inuteis se você não fez um bom planejamento antes de começar a trabalhar a sua aplicação. "Ir fazendo" nunca é melhor do que "Já saber o que precisa(rá) ser feito". Guardem essa dica!</p>
-<p>Veja mais algumas várias dicas (em inglês) aqui: <a title="PHP Bench" href="http://www.phpbench.com/404/" target="_blank">http://www.phpbench.com/</a></p>
-<p>Quem tiver alguma outra dica para deixar um script mais rápido e eficiente é só falar.</p>
-<p>Por hoje, é só! ;)</p>
+Se você usar essas dicas você pode ter certeza que está contribuindo para um bom funcionamento da sua aplicação... Mas vale lembrar que essas providências estão longe de tornar a sua aplicação extremamente rápida. Você precisará de outros recursos mais poderosos como cacheamento de alto nível e uma boa integração com os recursos físicos disponíveis para a aplicação.
+
+Todas essas dicas se tornam inuteis se você não fez um bom planejamento antes de começar a trabalhar a sua aplicação. "Ir fazendo" nunca é melhor do que "Já saber o que precisa(rá) ser feito". Guardem essa dica!
+
+Veja mais algumas várias dicas (em inglês) aqui: <a title="PHP Bench" href="http://www.phpbench.com/404/" target="_blank">http://www.phpbench.com/</a>
+
+Quem tiver alguma outra dica para deixar um script mais rápido e eficiente é só falar.
+
+Por hoje, é só! ;)
+

@@ -8,9 +8,12 @@ categories:
 - Tutoriais
 tags: []
 ---
-<p>Hoje vou mostrar pra vocês como funciona um contador de visitas bem simples usando MySQL.</p>
-<p>Esse contador salva no banco de dados as visitas únicas (<em>uniques</em>) e as visualizações de páginas (<em>pageviews</em>) de cada dia. No script também vem uma função que você pode usar para pegar os totais de cada tipo de visitas filtrando por períodos!</p>
-<p>Antes de tudo, rode esse código SQL no banco de dados do seu site para criar a tabela que o sistema usa:</p>
+Hoje vou mostrar pra vocês como funciona um contador de visitas bem simples usando MySQL.
+
+Esse contador salva no banco de dados as visitas únicas (<em>uniques</em>) e as visualizações de páginas (<em>pageviews</em>) de cada dia. No script também vem uma função que você pode usar para pegar os totais de cada tipo de visitas filtrando por períodos!
+
+Antes de tudo, rode esse código SQL no banco de dados do seu site para criar a tabela que o sistema usa:
+
 
 [code='sql']
 DROP TABLE IF EXISTS `visitas`;
@@ -24,7 +27,8 @@ CREATE TABLE IF NOT EXISTS `visitas` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 [/code]
 
-<p>Agora copie o código desse script PHP e salve-o como <strong>contadorVisitas.php</strong> em algum diretório do seu site:</p>
+Agora copie o código desse script PHP e salve-o como <strong>contadorVisitas.php</strong> em algum diretório do seu site:
+
 
 [code='php']
 /**
@@ -40,41 +44,52 @@ CREATE TABLE IF NOT EXISTS `visitas` (
  *
  * @version 1.0
  * @package ContadorVisitas
- */</p>
-<p> //  Configurações do Script
+ */
+
+ //  Configurações do Script
  // ==============================
- $_CV['registraAuto'] = true;       // Registra as visitas automaticamente?</p>
-<p> $_CV['conectaMySQL'] = true;       // Abre uma conexão com o servidor MySQL?
- $_CV['iniciaSessao'] = true;       // Inicia a sessão com um session_start()?</p>
-<p> $_CV['servidor'] = 'localhost';    // Servidor MySQL
+ $_CV['registraAuto'] = true;       // Registra as visitas automaticamente?
+
+ $_CV['conectaMySQL'] = true;       // Abre uma conexão com o servidor MySQL?
+ $_CV['iniciaSessao'] = true;       // Inicia a sessão com um session_start()?
+
+ $_CV['servidor'] = 'localhost';    // Servidor MySQL
  $_CV['usuario'] = 'root';          // Usuário MySQL
  $_CV['senha'] = '';                // Senha MySQL
- $_CV['banco'] = 'test';            // Banco de dados MySQL</p>
-<p> $_CV['tabela'] = 'visitas';        // Nome da tabela onde os dados são salvos
- // ==============================</p>
-<p> // ======================================
+ $_CV['banco'] = 'test';            // Banco de dados MySQL
+
+ $_CV['tabela'] = 'visitas';        // Nome da tabela onde os dados são salvos
+ // ==============================
+
+ // ======================================
  //   ~ Não edite a partir deste ponto ~
- // ======================================</p>
-<p> // Verifica se precisa fazer a conexão com o MySQL
+ // ======================================
+
+ // Verifica se precisa fazer a conexão com o MySQL
  if ($_CV['conectaMySQL'] == true) {
     $_CV['link'] = mysql_connect($_CV['servidor'], $_CV['usuario'], $_CV['senha']) or die("MySQL: Não foi possível conectar-se ao servidor [".$_CV['servidor']."].");
     mysql_select_db($_CV['banco'], $_CV['link']) or die("MySQL: Não foi possível conectar-se ao banco de dados [".$_CV['banco']."].");
- }</p>
-<p> // Verifica se precisa iniciar a sessão
+ }
+
+ // Verifica se precisa iniciar a sessão
  if ($_CV['iniciaSessao'] == true) {
     session_start();
- }</p>
-<p>/**
+ }
+
+/**
  * Registra uma visita e/ou pageview para o visitante
  */
  function registraVisita() {
-    global $_CV;</p>
-<p>    $sql = "SELECT COUNT(*) FROM `".$_CV['tabela']."` WHERE `data` = CURDATE()";
+    global $_CV;
+
+    $sql = "SELECT COUNT(*) FROM `".$_CV['tabela']."` WHERE `data` = CURDATE()";
     $query = mysql_query($sql);
-    $resultado = mysql_fetch_row($query);</p>
-<p>    // Verifica se é uma visita (do visitante)
-    $nova = (!isset($_SESSION['ContadorVisitas'])) ? true : false;</p>
-<p>    // Verifica se já existe registro para o dia
+    $resultado = mysql_fetch_row($query);
+
+    // Verifica se é uma visita (do visitante)
+    $nova = (!isset($_SESSION['ContadorVisitas'])) ? true : false;
+
+    // Verifica se já existe registro para o dia
     if ($resultado[0] == 0) {
         $sql = "INSERT INTO `".$_CV['tabela']."` VALUES (NULL, CURDATE(), 1, 1)";
     } else {
@@ -85,11 +100,13 @@ CREATE TABLE IF NOT EXISTS `visitas` (
         }
     }
     // Registra a visita
-    mysql_query($sql);</p>
-<p>    // Cria uma variavel na sessão
+    mysql_query($sql);
+
+    // Cria uma variavel na sessão
     $_SESSION['ContadorVisitas'] = md5(time());
- }</p>
-<p>/**
+ }
+
+/**
  * Função que retorna o total de visitas
  *
  * @param string $tipo - O tipo de visitas a se pegar: (uniques|pageviews)
@@ -98,8 +115,9 @@ CREATE TABLE IF NOT EXISTS `visitas` (
  * @return int - Total de visitas do tipo no período
  */
  function pegaVisitas($tipo = 'uniques', $periodo = 'hoje') {
-    global $_CV;</p>
-<p>    switch($tipo) {
+    global $_CV;
+
+    switch($tipo) {
         default:
         case 'uniques':
             $campo = 'uniques';
@@ -107,8 +125,9 @@ CREATE TABLE IF NOT EXISTS `visitas` (
         case 'pageviews':
             $campo = 'pageviews';
             break;
-    }</p>
-<p>    switch($periodo) {
+    }
+
+    switch($periodo) {
         default:
         case 'hoje':
             $busca = "`data` = CURDATE()";
@@ -119,34 +138,46 @@ CREATE TABLE IF NOT EXISTS `visitas` (
         case 'ano':
             $busca = "`data` BETWEEN DATE_FORMAT(CURDATE(), '%Y-01-01') AND DATE_FORMAT(CURDATE(), '%Y-12-31')";
             break;
-    }</p>
-<p>    // Faz a consulta no MySQL em função dos argumentos
+    }
+
+    // Faz a consulta no MySQL em função dos argumentos
     $sql = "SELECT SUM(`".$campo."`) FROM `".$_CV['tabela']."` WHERE ".$busca;
     $query = mysql_query($sql);
-    $resultado = mysql_fetch_row($query);</p>
-<p>    // Retorna o valor encontrado ou zero
+    $resultado = mysql_fetch_row($query);
+
+    // Retorna o valor encontrado ou zero
     return (!empty($resultado)) ? (int)$resultado[0] : 0;
- }</p>
-<p> if ($_CV['registraAuto'] == true) { registraVisita(); }
+ }
+
+ if ($_CV['registraAuto'] == true) { registraVisita(); }
 [/code]
 
-<p>Pronto, você já tem a tabela no banco e o script dentro do site, agora é só abrir o script e configurar a conexão do MySQL e/ou desativá-la se necessário. Todas as opções estão com comentários explicativos... Depois disso é só incluir o script no topo do seu site (antes de tudo) que ele já vai começar a contar as visitas pra você.</p>
-<p>Quando você quiser pegar o total de visitas é só usar um desses exemplos:</p>
+Pronto, você já tem a tabela no banco e o script dentro do site, agora é só abrir o script e configurar a conexão do MySQL e/ou desativá-la se necessário. Todas as opções estão com comentários explicativos... Depois disso é só incluir o script no topo do seu site (antes de tudo) que ele já vai começar a contar as visitas pra você.
+
+Quando você quiser pegar o total de visitas é só usar um desses exemplos:
+
 
 [code='php']
     // Pega o total de visitas únicas de hoje
-    $total = pegaVisitas();</p>
-<p>    // Pega o total de visitas únicas desde o começo do mês
-    $total = pegaVisitas('uniques', 'mes');</p>
-<p>    // Pega o total de visitas únicas desde o começo do ano
-    $total = pegaVisitas('uniques', 'ano');</p>
-<p>    // Pega o total de pageviews de hoje
-    $total = pegaVisitas('pageviews');</p>
-<p>    // Pega o total de pageviews desde o começo do mês
-    $total = pegaVisitas('pageviews', 'mes');</p>
-<p>    // Pega o total de pageviews desde o começo do ano
+    $total = pegaVisitas();
+
+    // Pega o total de visitas únicas desde o começo do mês
+    $total = pegaVisitas('uniques', 'mes');
+
+    // Pega o total de visitas únicas desde o começo do ano
+    $total = pegaVisitas('uniques', 'ano');
+
+    // Pega o total de pageviews de hoje
+    $total = pegaVisitas('pageviews');
+
+    // Pega o total de pageviews desde o começo do mês
+    $total = pegaVisitas('pageviews', 'mes');
+
+    // Pega o total de pageviews desde o começo do ano
     $total = pegaVisitas('pageviews', 'ano');
 [/code]
 
-<p>Espero que tenham gostado!</p>
-<p>:)</p>
+Espero que tenham gostado!
+
+:)
+

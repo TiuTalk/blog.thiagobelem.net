@@ -11,8 +11,10 @@ categories:
 - Artigos
 tags: []
 ---
-<p>Esse é um artigo que vi a muito tempo no blog do meu amigo <a rel="nofollow" href="http://www.tuliofaria.net/" target="_blank">Túlio Faria</a>.</p>
-<p>Sempre deparo com pessoas me perguntando se devem usar o CakePHP ou não... Ou qual a vantagem de usar o CakePHP ao invés do Wordpress ou Joomla (pergunta estranha né).  Tentando esclarecer ainda mais o que é um framework, resolvi escrever o queum framework não é. Vou criar uma lista e explicar o porquê.</p>
+Esse é um artigo que vi a muito tempo no blog do meu amigo <a rel="nofollow" href="http://www.tuliofaria.net/" target="_blank">Túlio Faria</a>.
+
+Sempre deparo com pessoas me perguntando se devem usar o CakePHP ou não... Ou qual a vantagem de usar o CakePHP ao invés do Wordpress ou Joomla (pergunta estranha né).  Tentando esclarecer ainda mais o que é um framework, resolvi escrever o queum framework não é. Vou criar uma lista e explicar o porquê.
+
 <ol>
 <li>Um framework não é um CMS: um framework como o CakePHP não é um CMS, ou seja, ele não gerencia o conteúdo de seu site. Mas nada o impede de criar fazendo uso de um framework.</li>
 <li>Um framework não é incompatível com AJAX: se você quer usar esta sigla bonita em seus projetos, um framework não irá te atrapalhar, aliás, em alguns casos, como no CakePHP, ele lhe fornece alguns helpers para trabalhar de forma mais simples com AJAX. Mas se não oferecesse, você poderia escrever seus arquivos JavaScripts na mão e ser feliz da mesma forma, não sendo assim um fator limitante.</li>
@@ -21,4 +23,5 @@ tags: []
 http://www.tuliofaria.net/o-que-um-framework-nao-e/</li>
 <li>Um framework não faz mágica sozinho: o framework não sabe se você quer ordenar de forma ascendente ou descendente, a menos que você diga a ele. Lembre-se, um framework te ajuda a manter o código organizado e fornecendo algumas facilidades genéricas, permitindo que você desenvolva cada vez mais rápido.</li>
 </ol>
-<p>Bom pessoal, essas são algumas das coisas que vi muita gente confundindo. Caso alguém saiba de mais um fato, comente!</p>
+Bom pessoal, essas são algumas das coisas que vi muita gente confundindo. Caso alguém saiba de mais um fato, comente!
+

@@ -14,14 +14,20 @@ tags:
 - WEB Root
 - Raíz WEB
 ---
-<p>Fala pessoal!</p>
-<p>Como estou sem muito tempo para escrever coisas aqui para o blog, passarei para vocês algumas dicas rápidas sobre Apache de um livro que tenho aqui em casa: <a title="Apache Cookbook, O'Reilly" href="http://oreilly.com/catalog/9780596001919">Apache Cookbook</a> do O'Reilly.</p>
+Fala pessoal!
+
+Como estou sem muito tempo para escrever coisas aqui para o blog, passarei para vocês algumas dicas rápidas sobre Apache de um livro que tenho aqui em casa: <a title="Apache Cookbook, O'Reilly" href="http://oreilly.com/catalog/9780596001919">Apache Cookbook</a> do O'Reilly.
+
 <h3>O Problema</h3>
-<p>Você deseja se certificar de que os arquivos fora do seu diretório WEB não sejam acessíveis através do site.</p>
+Você deseja se certificar de que os arquivos fora do seu diretório WEB não sejam acessíveis através do site.
+
 <h3>A Solução</h3>
-<p>Edite o arquivo <strong>httpd.conf</strong> do seu servidor, em servidores Linux ele provavelmente fica em <code>/usr/apache2/</code> e em servidores Windows o local pode ser em <code>C:/Arquivos de Programas/Apache Group/Apache/conf/</code>, se não encontrar, faça uma busca em <code>httpd.conf</code> que você encontrará. :)</p>
-<p>Neste arquivo, adicione o seguinte bloco de código:</p>
-<p><strong>Linux</strong></p>
+Edite o arquivo <strong>httpd.conf</strong> do seu servidor, em servidores Linux ele provavelmente fica em <code>/usr/apache2/</code> e em servidores Windows o local pode ser em <code>C:/Arquivos de Programas/Apache Group/Apache/conf/</code>, se não encontrar, faça uma busca em <code>httpd.conf</code> que você encontrará. :)
+
+Neste arquivo, adicione o seguinte bloco de código:
+
+<strong>Linux</strong>
+
 
 [code language="shell"]
 # Todo o servidor
@@ -30,15 +36,17 @@ tags:
 	Deny from all
 	AllowOverride None
 	Options None
-</Directory></p>
-<p># Raíz do servidor (opcional)
+</Directory>
+
+# Raíz do servidor (opcional)
 <Directory /var/www/>
 	Order allow,deny
 	Allow from all
 </Directory>
 [/code]
 
-<p><strong>Windows</strong></p>
+<strong>Windows</strong>
+
 
 [code language="shell"]
 # Todo o servidor
@@ -47,19 +55,23 @@ tags:
 	Deny from all
 	AllowOverride None
 	Options None
-</Directory></p>
-<p># Raíz do servidor (opcional)
+</Directory>
+
+# Raíz do servidor (opcional)
 <Directory C:/webroot/>
 	Order allow,deny
 	Allow from all
 </Directory>
 [/code]
 
-<p>A segunda parte (raíz do servidor) é opcional... As chances de já existir um bloco desses no arquivo <code>httpd.conf</code> é muito grande. Coloquei-a ali em cima apenas para vocês poderem testar. E não se esqueça de mudar a letra do drive e o caminho da raíz do servidor se necessário.</p>
+A segunda parte (raíz do servidor) é opcional... As chances de já existir um bloco desses no arquivo <code>httpd.conf</code> é muito grande. Coloquei-a ali em cima apenas para vocês poderem testar. E não se esqueça de mudar a letra do drive e o caminho da raíz do servidor se necessário.
+
 <h3>Saiba mais (documentação)</h3>
 <ul>
 <li><a title="Apache - mod_access" href="http://httpd.apache.org/docs/mod/mod_access.html">http://httpd.apache.org/docs/mod/mod_access.html</a></li>
 <li><a title="Apache - Configuração" href="http://httpd.apache.org/docs/2.2/pt-br/configuring.html">http://httpd.apache.org/docs/2.2/pt-br/configuring.html</a></li>
 </ul>
-<p>Se existir algum assunto relacionado a configuração do Apache que você tem dúvida, deixe seu comentário e tentarei falar sobre nos próximos artigos.</p>
-<p>Abraços e até a próxima!</p>
+Se existir algum assunto relacionado a configuração do Apache que você tem dúvida, deixe seu comentário e tentarei falar sobre nos próximos artigos.
+
+Abraços e até a próxima!
+

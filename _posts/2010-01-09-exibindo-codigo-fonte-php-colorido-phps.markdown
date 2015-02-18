@@ -16,24 +16,33 @@ tags:
 - Código Fonte
 - Syntax Highlighter
 ---
-<p>Fala gente,</p>
-<p>Essa semana usei um recurso novo aqui no blog, são os arquivos phps ou PHP Source, normalmente eles não são interpretados pelo servidor, mas quando são acontece algo diferente com eles: ao invés do servidor executar seu código como PHP normal, ele exibe o código fonte, todo colorido, pra quem acessar.</p>
-<p><strong>Veja um exemplo:</strong> <a href="/arquivos/2010/01/usuarios.class.parte1.phps" target="_blank">http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.phps</a></p>
-<p>Isso é bem útil quando temos um site de tutoriais/compartilhamento de código/programação.</p>
-<p>Hoje vou ensiná-los como habilitar isso em seus servidores rodando Apache e PHP... São apenas dois passos!</p>
+Fala gente,
+
+Essa semana usei um recurso novo aqui no blog, são os arquivos phps ou PHP Source, normalmente eles não são interpretados pelo servidor, mas quando são acontece algo diferente com eles: ao invés do servidor executar seu código como PHP normal, ele exibe o código fonte, todo colorido, pra quem acessar.
+
+<strong>Veja um exemplo:</strong> <a href="/arquivos/2010/01/usuarios.class.parte1.phps" target="_blank">http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.phps</a>
+
+Isso é bem útil quando temos um site de tutoriais/compartilhamento de código/programação.
+
+Hoje vou ensiná-los como habilitar isso em seus servidores rodando Apache e PHP... São apenas dois passos!
+
 <h3>Passo 1</h3>
-<p>Vá na raiz do seu site e edite (ou crie se necessário) o seu arquivo .htaccess e adicione as seguintes linhas:</p>
+Vá na raiz do seu site e edite (ou crie se necessário) o seu arquivo .htaccess e adicione as seguintes linhas:
+
 
 [code]Action php-source /php-source.php
 AddHandler php-source .phps[/code]
 Com isso você cria uma nova "ação" no apache e diz que os arquivos .phps serão "lidos" por essa "ação"... Você vai entender melhor no segundo passo:
 
 <h3>Passo 2</h3>
-<p>Ainda na raiz do seu site, crie um arquivo chamado "<strong>php-source.php</strong>" e coloque o seguinte conteúdo nele:</p>
+Ainda na raiz do seu site, crie um arquivo chamado "<strong>php-source.php</strong>" e coloque o seguinte conteúdo nele:
+
 
 [code language="php"]<?php
 highlight_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["PATH_INFO"]);
 ?> [/code]
 
-<p>Isso fará com que esse arquivo criado pegue o caminho do arquvo requisitado (com extensão .phps) e use a função <a href="http://www.php.net/manual/pt_BR/function.highlight-file.php" title="highlight_file()" target="_blank">highlight_file()</a> do PHP para exibir o seu código-fonte com sintaxe coloria.</p>
-<p>Pronto! :D</p>
+Isso fará com que esse arquivo criado pegue o caminho do arquvo requisitado (com extensão .phps) e use a função <a href="http://www.php.net/manual/pt_BR/function.highlight-file.php" title="highlight_file()" target="_blank">highlight_file()</a> do PHP para exibir o seu código-fonte com sintaxe coloria.
+
+Pronto! :D
+
