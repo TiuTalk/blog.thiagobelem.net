@@ -1,0 +1,39 @@
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+permalink: "/:year/:title"
+excerpt_separator: ""
+
+# Site settings
+title: "Thiago Belem / Blog"
+description: >
+   Artigos e tutoriais sobre desenvolvimento WEB
+
+email: contato@thiagobelem.net
+logo: http://gravatar.com/avatar/67a6eb9b43b617b2051b912b8373a156?s=120
+cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
+
+name: Thiago Belem
+author: Thiago Belem
+author_image: http://gravatar.com/avatar/67a6eb9b43b617b2051b912b8373a156?s=120
+
+paginate:	5
+
+url: "http://blog.thiagobelem.net"
+baseurl: ""
+
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com/TiuTalk
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+  - icon:	github
+    url:	https://github.com/TiuTalk
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
