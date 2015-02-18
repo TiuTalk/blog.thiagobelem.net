@@ -1,7 +1,7 @@
 # Build settings
 markdown: redcarpet
 highlighter: pygments
-permalink: "/:year/:title"
+permalink: "/:title"
 excerpt_separator: ""
 
 # Site settings
