@@ -22,7 +22,8 @@ tags:
 <p>Só pra vocês saberem, existem três níveis de relacionamento: nosso exemplo será um relação de <strong style="color: red">1:N</strong> (fala-se "um pra N" ou "um para muitos") onde cada categoria (1) contém um ou mais produtos (N)... Há também o <strong style="color: red">1:1</strong> onde cada registro de uma tabela (1) está ligado a um e somente um registro de outra tabela (1)... E há outro nível de relacionamento, mais complexo, que é o <strong style="color: red">N:N</strong> onde um ou mais registros de uma tabela (N) estão relacionados a um ou mais registros de outra tabela (N), que seria o exemplo de duas tabelas "produtos" e "tags" onde um produto tem várias tags e vários produtos pertencem a uma tag.</p>
 <p>Não vou me aprofundar muito no assunto... Vou falar apenas da relação mais comum (<strong>1:N</strong>) e dar exemplos de como trabalhar com elas.</p>
 <p>Para o nosso exemplo de hoje usaremos duas tabelas, chamadas "categorias" e "produtos":</p>
-<p>[code language="sql"]CREATE TABLE `categorias` (
+
+[code language="sql"]CREATE TABLE `categorias` (
 	`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 	`nome` VARCHAR( 255 ) NOT NULL
 ) ENGINE = MYISAM;</p>
@@ -31,15 +32,18 @@ tags:
 	`categoria_id` INT NOT NULL ,
 	`nome` VARCHAR( 255 ) NOT NULL ,
 	`preco` DECIMAL( 10,2 ) NOT NULL
-) ENGINE = MYISAM;[/code]</p>
+) ENGINE = MYISAM;[/code]
+
 <p>E vamos inserir alguns dados para exemplo:</p>
-<p>[code language="sql"]-- Extraindo dados da tabela `categorias`
+
+[code language="sql"]-- Extraindo dados da tabela `categorias`
 INSERT INTO `categorias` VALUES(1, 'Camisetas');
 INSERT INTO `categorias` VALUES(2, 'Canecas');</p>
 <p>-- Extraindo dados da tabela `produtos`
 INSERT INTO `produtos` VALUES(1, 1, 'Camiseta Social', 15.00);
 INSERT INTO `produtos` VALUES(2, 1, 'Camiseta Regata', 11.99);
-INSERT INTO `produtos` VALUES(3, 2, 'Caneca Grande', 12.00);[/code]</p>
+INSERT INTO `produtos` VALUES(3, 2, 'Caneca Grande', 12.00);[/code]
+
 <p>Reparem que na tabela produtos temos uma coluna "especial", que é a "categoria_id" (INT)... Ela é quem ajudará a fazer a relação das duas tabelas... Nessa coluna entrará o ID da categoria a qual o produto pertence... Ou seja: as duas camisetas pertencem a categoria "Camisetas" (ID 1) e o terceiro produto (a Caneca Grande) pertence a categoria "Canecas" (ID 2) e é na coluna "categoria_id" que armazenamos esses IDs que identificam as categorias.</p>
 <p>Esse campo responsável pela relação é normalmente chamado de "<em>foreing key</em>" (fk) ou "chave estrangeira".</p>
 <h3>Mas qual a utilidade dessa tal "relação"?</h3>
@@ -64,7 +68,8 @@ Até aí tudo bem... Não tem nenhum pecado nisso... Mas imagine que você tem u
 <h3>A mágica da relação</h3>
 <p>Agora vamos montar uma consulta que <strong>DE UMA SÓ VEZ</strong> irá pegar os dados de cada produto e também o nome da categoria... Com isso reduziremos nossas 1001 consultas pra... uma só! Sem mistérios, sem sub-consultas, nem consultas dentro do <strong>while()</strong>! :D</p>
 <p>Mas antes de mostrar o script vou ajudar a vocês entenderem como a relação é feita... Antes a nossa consulta que pega apenas os produtos era assim:</p>
-<p>[code language="sql" light="true"]SELECT * FROM `produtos` ORDER BY `nome` ASC[/code]
+
+[code language="sql" light="true"]SELECT * FROM `produtos` ORDER BY `nome` ASC[/code]
 Sua tradução seria: <strong style="color: navy">SELECIONAR todas as colunas da TABELA `produtos` ORDENADO PELO `nome` ASCENDETEMENTE</strong>
 <center><img src="http://blog.thiagobelem.net/arquivos/2009/08/relacionamento1.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center></p>
 <p>Agora usaremos uma nova "palavra" do MySQL que é o <strong style="background: gray; color: white">JOIN</strong> (tradução: "unir") e serve para unir resultados de duas tabelas.. ;)</p>
@@ -100,7 +105,8 @@ while ($produto = mysql_fetch_assoc($query)) {
 	echo 'Categoria: ' . $produto['categoria']. '';
 	echo '<hr />';
 }</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <h3>Os outros tipos de JOINs</h3>
 <p>Existem também outros dois tipos de JOIN: o <strong>LEFT JOIN</strong> e o <strong>RIGHT JOIN</strong>:</p>
 <p>Se usássemos o <strong>LEFT JOIN</strong> seriam retornados todos os produtos, independente se eles estão ligados a uma categoria (na tabela categorias) existente ou não.</p>

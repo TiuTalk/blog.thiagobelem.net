@@ -50,12 +50,14 @@ tags:
 <p>Recomendo que, antes de mais nada, se você entende um mínimo de inglês e quer realmente conseguir usar URLs Amigáveis da melhor forma no seu site, leia a <a title="Documentação do mod_rewrite" href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html" target="_blank">documentação do mod_rewrite</a> no site da Apache, e acredite: essa documentação é realmente importante e significativa.</p>
 <p>Vamos começar com o exemplo da página de contato que atualmente você acessa pelo endereço <code>http://www.meusite.com.br/contato.php</code>.</p>
 <p>Vá até a raiz do seu site e edite (ou crie) um arquivo chamado .htaccess (<a title=".htaccess - Wikipédia" href="http://en.wikipedia.org/wiki/Htaccess" target="_blank">leia mais aqui</a>), e dentro dele coloque as seguintes linhas que explicarei mais a diante:</p>
-<p>[code language="plain"]
+
+[code language="plain"]
 <IfModule mod_rewrite.c>
 	RewriteEngine On</p>
 <p>	RewriteRule ^contato/?$ /contato.php [NC,L]
 </IfModule>
-[/code]</p>
+[/code]
+
 <p>Agora vamos as explicações...</p>
 <h4>O que é um arquivo .htaccess?</h4>
 <p>Os arquivos <code>.htaccess</code> são arquivos de acesso e configuração do Apache, são arquivos lidos pelo Apache toda vez que você tenta acessar um arquivo que esta dentro de uma pasta (ou sub pastas) onde exista um arquivo <code>.htaccess</code>. Nesse arquivo podemos criar regras de bloqueio de acesso, redirecionamentos e reescritas de URL.</p>

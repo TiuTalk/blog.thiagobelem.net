@@ -25,15 +25,19 @@ tags:
 <h3>E quando raios eu enviei o header? Eu não fiz nada!</h3>
 <p>Realmente, se você não usa nenhuma função de manipulação de headers, você não fez nada e está recebendo esse erro... Mas há uma explicação pra isso!</p>
 <p>Em se tratando de PHP (e acredito que o mesmo ocorra com todas as outras linguagens WEB que precisam ser lidas por um parseador), o header começa a ser enviado logo que você insira o primeiro caractere no HTML final da página... Seja fora do código PHP com HTML normal, seja dentro do código PHP com um <strong>echo</strong> ou <strong>print()</strong>.</p>
-<p>[code language="php"] <?php
+
+[code language="php"] <?php
 $numero = 3;
 $dobro = $numero * 2; // 6
-?>[/code]</p>
+?>[/code]
+
 <p>Imagine que, na linha 1, antes do "<strong><?php</strong>" houvesse um espaço... Tudo que está fora do "<strong><?php ... ?></strong>" é HTML, então um espaço ali seria como o 1° caractere do HTML causando o envio do header... Qualquer função de sessão/cookie/etc. dentro do bloco de PHP iria causar o erro.</p>
-<p>[code language="php"]<?php
+
+[code language="php"]<?php
 echo 'Olá mundo';
 session_start(); // Inicio de sessão depois do envio do header?! Problema!
-?>[/code]</p>
+?>[/code]
+
 <p>Esse é outro caso clássico.. O desenvolvedor tentou criar uma sessão (que definirá um cookie de sessão novo) após enviar o header (por causa do <strong>echo</strong>).</p>
 <h3>Tá, e como eu resolvo?</h3>
 <p>Lembra que eu disse que você não fez nada e ainda tá recebendo o erro? Pra resolver o problema é a mesma coisa: nada (além do normal) precisa ser feito... Você só precisa colocar todo código que trabalhe com headers (sessões, cookies, redirecionamentos e etc.) antes de enviar qualquer caractere pro HTML... Nada de tentar definir/criar um cookie ou sessão depois de enviar um "Seja bem vindo!" ou enviar o <head> do seu site.</p>

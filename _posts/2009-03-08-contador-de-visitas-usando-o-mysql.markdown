@@ -11,7 +11,8 @@ tags: []
 <p>Hoje vou mostrar pra vocês como funciona um contador de visitas bem simples usando MySQL.</p>
 <p>Esse contador salva no banco de dados as visitas únicas (<em>uniques</em>) e as visualizações de páginas (<em>pageviews</em>) de cada dia. No script também vem uma função que você pode usar para pegar os totais de cada tipo de visitas filtrando por períodos!</p>
 <p>Antes de tudo, rode esse código SQL no banco de dados do seu site para criar a tabela que o sistema usa:</p>
-<p>[code='sql']
+
+[code='sql']
 DROP TABLE IF EXISTS `visitas`;
 CREATE TABLE IF NOT EXISTS `visitas` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -21,9 +22,11 @@ CREATE TABLE IF NOT EXISTS `visitas` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `data` (`data`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-[/code]</p>
+[/code]
+
 <p>Agora copie o código desse script PHP e salve-o como <strong>contadorVisitas.php</strong> em algum diretório do seu site:</p>
-<p>[code='php']
+
+[code='php']
 /**
  * Sistema de contador de visitas
  *
@@ -125,10 +128,12 @@ CREATE TABLE IF NOT EXISTS `visitas` (
     return (!empty($resultado)) ? (int)$resultado[0] : 0;
  }</p>
 <p> if ($_CV['registraAuto'] == true) { registraVisita(); }
-[/code]</p>
+[/code]
+
 <p>Pronto, você já tem a tabela no banco e o script dentro do site, agora é só abrir o script e configurar a conexão do MySQL e/ou desativá-la se necessário. Todas as opções estão com comentários explicativos... Depois disso é só incluir o script no topo do seu site (antes de tudo) que ele já vai começar a contar as visitas pra você.</p>
 <p>Quando você quiser pegar o total de visitas é só usar um desses exemplos:</p>
-<p>[code='php']
+
+[code='php']
     // Pega o total de visitas únicas de hoje
     $total = pegaVisitas();</p>
 <p>    // Pega o total de visitas únicas desde o começo do mês
@@ -141,6 +146,7 @@ CREATE TABLE IF NOT EXISTS `visitas` (
     $total = pegaVisitas('pageviews', 'mes');</p>
 <p>    // Pega o total de pageviews desde o começo do ano
     $total = pegaVisitas('pageviews', 'ano');
-[/code]</p>
+[/code]
+
 <p>Espero que tenham gostado!</p>
 <p>:)</p>

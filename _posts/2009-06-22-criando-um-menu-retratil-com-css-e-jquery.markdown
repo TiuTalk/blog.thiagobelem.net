@@ -23,7 +23,8 @@ tags:
 <p><a href="/exemplo3" target="_blank">Veja aqui um exemplo de como vai ficar o menu.</a></p>
 <p>Bom... vamos lá!</p>
 <h3>Código (X)HTML do menu</h3>
-<p>[code lang="html"]<ul id="menu">
+
+[code lang="html"]<ul id="menu">
 	<li class="header">Menu</li>
 	<li><a href="#" title="">Página inicial</a></li>
 	<li><a href="#" title="">Notícias</a></li>
@@ -36,10 +37,12 @@ tags:
 	</li>
 	<li><a href="#" title="">Quem somos nós</a></li>
 	<li><a href="#" title="">Contato</a></li>
-</ul>[/code]</p>
+</ul>[/code]
+
 <p>Vejam que o sub-menu (que irá aparecer) fica dentro do <li> e fora do <a>.</p>
 <h3>Código CSS do menu</h3>
-<p>[code lang="css"]* {
+
+[code lang="css"]* {
 	margin: 0px;
 	padding: 0px;
 }</p>
@@ -89,9 +92,11 @@ tags:
 <p>ul#menu li ul.sub-menu li a {
 	padding-left: 15px;
 	color: maroon;
-}[/code]</p>
+}[/code]
+
 <h3>Bloco de código do efeito (jQuery)</h3>
-<p>[code lang="javascript"]$(function() {
+
+[code lang="javascript"]$(function() {
 	// Evento de clique do elemento: ul#menu li.parent > a
 	$('ul#menu li.parent > a').click(function() {
 		// Expande ou retrai o elemento ul.sub-menu dentro do elemento pai (ul#menu li.parent)
@@ -101,7 +106,8 @@ tags:
 		});
 		return false;
 	});
-});[/code]</p>
+});[/code]
+
 <p>--</p>
 <p>É só juntar todas as peças (como foi feito no exemplo) e o seu menu irá funcionar que é uma maravilha! :D</p>
 <p>O código do efeito pode parecer um pouco complicado pra quem tá começando com jQuery, mas é só ler os comentários e procurar um pouco sobre cada função (<strong>slideToggle</strong>, <strong>toggleClass</strong>, <strong>click</strong>) na documentação que, com os exemplos de lá vai ficar tudo claro.</p>

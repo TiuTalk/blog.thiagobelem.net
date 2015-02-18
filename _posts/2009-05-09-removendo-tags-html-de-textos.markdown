@@ -19,7 +19,8 @@ tags: []
 <h3>Função strip_tags()</h3>
 <p>O que essa função faz é simples, curto e grosso: acaba, some, oculta, exclui, remove e destrói QUALQUER código HTML da string. Não importa se é um <span style="color: #888888;"><strong><b></strong><span style="color: #000000;">...</span><strong></b></strong></span>, um <span style="color: #888888;"><strong><a></strong></span>...<span style="color: #888888;"><strong></a></strong></span>, ou um <span style="color: #888888;"><strong><iframe></iframe></strong></span>... Vai tudo pro saco.</p>
 <p>Veja um exempo de uso:</p>
-<p>[code='php']
+
+[code='php']
 < ?php
 // Define uma string com código HTML
 $entrada = '
@@ -29,9 +30,11 @@ $entrada = '
 echo $saida;
 // Saída: Ahá... eu sou malandrão!
 ?>
-[/code]</p>
+[/code]
+
 <p>Você também pode, se quiser, definir TAGs permitidas, que permanecerão na string:</p>
-<p>[code='php']
+
+[code='php']
 < ?php
 // Define uma string com código HTML
 $entrada = '
@@ -43,37 +46,46 @@ echo $saida;
 // Saída:
 <p>Ahá... eu sou <strong>malandrão!</strong></p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>» <a href="http://www.php.net/manual/pt_BR/function.strip-tags.php" target="_blank">Documentação da strip_tags()</a></p>
 <h3>Função htmlspecialchars()</h3>
 <p>A htmlspecialchars não remove as TAGs HTML... Ela escapa o código HTML... Transformando-o em códigos/entidades para exibição... Ou seja, se existe um <span style="color: #888888;"><strong><b></strong></span>Hahá!<span style="color: #888888;"><strong></b></strong></span> na string, vai aparecer tudo, inclusive o <span style="color: #888888;"><strong><b></strong><span style="color: #000000;">...</span><strong></b></strong></span> (e não negrito).</p>
 <p>Exemplo de uso:</p>
-<p>[code='php']
+
+[code='php']
 < ?php
 $entrada = 'Eu sou <i>çagaiz</i>!';</p>
 <p>$saida = htmlspecialchars($entrada);
 echo $saida;
 // Saída: Eu sou <i>çagaiz</i>! (Aparecerão todos os caracteres, como se o HTML fosse string)
 ?>
-[/code]</p>
+[/code]
+
 <p>Com isso você vai poder saber exatamente o que o espertinho tentou inserir no seu código... :)</p>
 <p>» <a href="http://www.php.net/manual/pt_BR/function.htmlspecialchars.php" target="_blank">Documentação da htmlspecialchars()</a></p>
 <h3>Função mysql_real_escape_string()</h3>
 <p>No quesito segurança, essa é a função mais legal.. Ela serve pra quando você for inserir aquele código malicioso (que o usuário postou) no seu banco de dados... A função escapa todos os caracteres que o MySQL possa vir a usar e se confundir achando que faz parte da sua query...</p>
 <p>Vamos dar um exemplo:</p>
-<p>[code='php']
+
+[code='php']
 < ?php
 $nome = "Fulaninho's";</p>
 <p>$nome = mysql_real_escape_string($nome);</p>
 <p>$sql = "INSERT INTO `usuarios` VALUES (NULL, '".$nome."')";
 mysql_query($sql);
 ?>
-[/code]</p>
+[/code]
+
 <p>Sem o uso da função, a consulta passada para o MySQL ficaria assim:</p>
-<p>[code='sql']INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho's')[/code]</p>
+
+[code='sql']INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho's')[/code]
+
 <p>Repare que a aspas que fecha o valor a ser inserido, é a que vem depois do "o", e não a que veio depois do "s", que seria o correto... O que daria erro no MySQL ou acabaria resultado no cadastro de dados errados e pela metade.</p>
 <p>Já usando a função, ficaria assim:</p>
-<p>[code='sql']INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho\'s')[/code]</p>
+
+[code='sql']INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho\'s')[/code]
+
 <p>O que fazer com que o nome seja inserido de forma correta, e quando você fizer um <strong>SELECT</strong> para buscar esse dado, ele virá <strong>Fulaninho's</strong> (sem a barra).</p>
 <p>» <a href="http://www.php.net/manual/pt_BR/function.mysql-real-escape-string.php" target="_blank">Documentação da mysql_real_escape_string()</a></p>
 <p>---</p>

@@ -17,16 +17,19 @@ echo date('H:i:s'); // 16:12:16</p>
 sleep(3);</p>
 <p>// Exibe a hora atual
 echo date('H:i:s'); // 16:12:19
-[/code]</p>
+[/code]
+
 <p>Com o usleep() você define uma pausa em milhonésimos de segundos (calcule multiplicando o nº de segundos por 1.000.000).</p>
-<p>[code='php']
+
+[code='php']
 // Exibe a hora atual
 echo date('H:i:s'); // 16:13:16</p>
 <p>// Pausa o script por cinco segundos usando o usleep:
 usleep(5000000);</p>
 <p>// Exibe a hora atual
 echo date('H:i:s'); // 16:13:21
-[/code]</p>
+[/code]
+
 <p>Este é um recurso pouco conhecido do PHP mas que tem o seu valor.</p>
 <p>Até a próxima. ;-)</p>
 <h4>Documentação Oficial:</h4>

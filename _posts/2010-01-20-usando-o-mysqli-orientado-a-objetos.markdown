@@ -29,7 +29,8 @@ tags:
 <p>
 <h3>Começando do começo: O velho modo</h3>
 <p>Acredito que todos vocês já viram uma conexão e consulta MySQL feita da seguinte forma:</p>
-<p>[code language="php"]<?php</p>
+
+[code language="php"]<?php</p>
 <p>// Conecta ao banco de dados
 mysql_connect('127.0.0.1', 'usuario', 'senha');
 mysql_select_db('meusite');</p>
@@ -88,7 +89,8 @@ De primeiro contato sei que muita gente vai achar que o MySQLi é mais complicad
 <p>Depois nós dizemos que o local reservado receberá um conteúdo do tipo string (s) com valor $data.. Ou seja, se <strong>$data</strong> fosse um inteiro ou booleando a consulta daria um erro, ela só aceitará strings, e digo mais: strings que não modifiquem a consulta... se for uma <a href="/?s=SQL+Injection" title="SQL Injection"><em>SQL Injection</em></a> o <strong>MySQLi</strong> irá escapá-la e ele [o ataque] não funcionará!</p>
 <p>Depois é só executar, reservar variáveis para o resultado e usá-las com um <strong>fetch()</strong> normal.. ;)</p>
 <p>Vejam um exemplo de consulta com três parâmetros: duas strings e um inteiro:</p>
-<p>[code language="php"]<?php</p>
+
+[code language="php"]<?php</p>
 <p>// "Hoje" em formato SQL
 $data = date('Y-m-d');
 // Nome do autor

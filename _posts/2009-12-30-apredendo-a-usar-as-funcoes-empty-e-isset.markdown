@@ -36,12 +36,14 @@ $nome = $_POST['nome'];</p>
 if (empty($nome)) {
 	echo "Por favor, preencha o seu nome.";
 }</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>
 <h3>A função <span style="color: orange;">isset()</span></h3>
 <p>Ela serve para saber se uma variável existe... Ela retornará true (verdadeiro) quando uma variável existir e false (falso) quando uma variável não existir... Mas ai você se pergunta: quando uma variável existe?</p>
 <p>Veja os exemplos de variáveis vazias no item anterior... Todos eles fazem com que a variável ($var) passe a existir... Para uma variável "não existir" ela não pode ter sido usada/definida em nenhum momento [anterior] do script... Veja um exemplo onde usamos o isset() em conjunto com o empty() e melhoramos o exemplo do item anterior:</p>
-<p>[code language="php"]<?php</p>
+
+[code language="php"]<?php</p>
 <p>// Verifica se a variável $_POST não é vazia...
 // ou seja: houve um submit no formulário
 if (!empty($_POST)) {</p>
@@ -60,5 +62,6 @@ if (!empty($_POST)) {</p>
 <p>} else {
 	echo "Não houve submit no formulário";
 }</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>Espero que tenham gostado! :)</p>

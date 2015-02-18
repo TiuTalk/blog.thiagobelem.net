@@ -75,11 +75,13 @@ if ($cache === false) {
 while ($dados = mysql_fetch_assoc($query)) {
 	// Aqui você faz a exibição de cada notícia
 }
-?>[/code]</p>
+?>[/code]
+
 <p>
 <h3>Função de atalho para o Memcache</h3>
 <p>Você ainda poderia fazer uma função para fazer todo esse trabalho por você... Ficaria mais ou menos assim:</p>
-<p>[code language="php"]function mysql_queryCache($consulta, $tempo = 3600) {
+
+[code language="php"]function mysql_queryCache($consulta, $tempo = 3600) {
 	$chave = md5($consulta);</p>
 <p>	$mem = new Memcache;
 	$mem->addServer($_SERVER['HTTP_HOST']);</p>
@@ -98,6 +100,7 @@ $query = mysql_queryCache($sql);</p>
 while ($dados = mysql_fetch_assoc($query)) {
 	// Aqui você faz a exibição de cada notícia
 }
-?>[/code]</p>
+?>[/code]
+
 <p>--</p>
 <p>Espero que tenham gostado! :)</p>

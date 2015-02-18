@@ -25,7 +25,8 @@ tags:
 <h3>E como é esse arquivo?</h3>
 <p>Existem vários <strong>CSS Reset</strong> rolando pela Internet... Todos funcionam da mesma forma mas alguns atingem mais elementos que outros... Mas teoricamente não há diferença.</p>
 <p>Esse aqui é o que eu uso no meu <a href="http://thiagobelem.net/" target="_blank">site pessoal</a>:</p>
-<p>[code language="css"]html, body, div, span, applet, object, iframe,
+
+[code language="css"]html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
@@ -72,7 +73,8 @@ del {
 
 Se você preferir, existe um CSS da Yahoo mesmo, chamado de YUI CSS Reset:
 <a href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css" target="_blank">http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css</a></p>
-<p>[code language="css"]/*
+
+[code language="css"]/*
 Copyright (c) 2009, Yahoo! Inc. All rights reserved.
 Code licensed under the BSD License:
 http://developer.yahoo.net/yui/license.txt
@@ -109,7 +111,8 @@ q:before,q:after {
 abbr,acronym {
 	border:0;
 }
-[/code]</p>
+[/code]
+
 <p>E existe um <strong>CSS Reset Reloaded</strong> criado por <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/" target="_blank">Eric Meyer</a>:
 [code language="css"]html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -156,5 +159,6 @@ q:before, q:after {
 }
 blockquote, q {
 	quotes: "" "";
-}[/code]</p>
+}[/code]
+
 <p>Espero que tenham gostado! :)</p>

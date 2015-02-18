@@ -20,15 +20,20 @@ tags:
 <p>Hoje vou mostrar um código bem simples de uma função que eu criei para remover acentos de uma string...</p>
 <p>Essa função é muito útil quando queremos trabalhar com URLs amigáveis e precisamos passar o <em><strong>slug</strong></em> (versão sem acento, espaço e caracteres especiais de uma string) para uma URL.</p>
 <p>Veja como é simples usar a função:</p>
-<p>[code language="php"]// Apenas remove os acentos
+
+[code language="php"]// Apenas remove os acentos
 echo removeAcentos(' [Resolvido] » Problemas na conversão de página html');
-// [resolvido] » problemas na conversao de pagina html[/code]</p>
-<p>[code language="php"]// Cria um slug da string
+// [resolvido] » problemas na conversao de pagina html[/code]
+
+
+[code language="php"]// Cria um slug da string
 echo removeAcentos(' [Resolvido] » Problemas na conversão de página html', '-');
-// resolvido-problemas-na-conversao-de-pagina-html[/code]</p>
+// resolvido-problemas-na-conversao-de-pagina-html[/code]
+
 <p>O segundo parâmetro da função é o caractere que será usado no slug substituindo espaços e caracteres especiais.</p>
 <p>Vamos ao código da função:</p>
-<p>[code language="php"]/***
+
+[code language="php"]/***
  * Função para remover acentos de uma string
  *
  * @autor Thiago Belem <contato@thiagobelem.net>
@@ -62,7 +67,8 @@ function removeAcentos($string, $slug = false) {
 		$string = trim($string, $slug);
 	}</p>
 <p>	return $string;
-}[/code]</p>
+}[/code]
+
 <p>Como vocês podem ver, no começo da função, entre as linhas 9 e 21 é onde definimos os códigos ASCII de cada acento/caractere especial que será convertido por sua letra... Depois nós rodamos um foreach e montamos as ERs (expressões regulares) para a substituição e fazemos toda a troca.</p>
 <p>A vantagem de usar o código ASCII de cada caractere é que não importa em qual codificação seu arquivo está salvo, ela vai funcionar!</p>
 <p>Caso você queira fazer a substituição em strings com mais de uma linha você precisa trocar onde tem "/i" por "/mi" nas linhas 26, 34 e 36.</p>

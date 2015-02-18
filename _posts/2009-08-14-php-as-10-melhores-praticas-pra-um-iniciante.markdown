@@ -47,12 +47,14 @@ tags:
 <h3>6. Organize o seu código (Indentação e espaços)</h3>
 <p>Essa é simples: organize seu código para ficar mais fácil de encontrar alguma coisa quando ela precisar ser modificada... Se você usar uma IDE pode ativar a indentação automática. ;)</p>
 <p>Pra quem ainda não sacou, "indentação" é aquele espaço em branco a esquerda das linhas, criados usando a tecla [TAB] ou espaços em branco, por exemplo:</p>
-<p>[code language="php"]
+
+[code language="php"]
 if ($nota == 10) {
     echo "Parabéns, você passou!";
     exit;
 }
-[/code]</p>
+[/code]
+
 <p>No exemplo acima as linhas 2 e 3 estão indentadas pois pertencem ao bloco condicional.</p>
 <h3>6. Organize seus arquivos</h3>
 <p>Essa também é simples: comece a organizar seus arquivos, separe cada tipo de arquivo em pastas especificas: CSS na pasta css, imagens na pasta img ou imanges, JavaScript na pasta JS... Isso ajuda a não misturar as coisas e permite que você encontre o arquivo que procura de forma mais rápida.</p>

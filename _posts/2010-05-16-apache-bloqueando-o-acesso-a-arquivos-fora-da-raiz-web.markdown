@@ -22,7 +22,8 @@ tags:
 <p>Edite o arquivo <strong>httpd.conf</strong> do seu servidor, em servidores Linux ele provavelmente fica em <code>/usr/apache2/</code> e em servidores Windows o local pode ser em <code>C:/Arquivos de Programas/Apache Group/Apache/conf/</code>, se não encontrar, faça uma busca em <code>httpd.conf</code> que você encontrará. :)</p>
 <p>Neste arquivo, adicione o seguinte bloco de código:</p>
 <p><strong>Linux</strong></p>
-<p>[code language="shell"]
+
+[code language="shell"]
 # Todo o servidor
 <Directory />
 	Order deny,allow
@@ -35,9 +36,11 @@ tags:
 	Order allow,deny
 	Allow from all
 </Directory>
-[/code]</p>
+[/code]
+
 <p><strong>Windows</strong></p>
-<p>[code language="shell"]
+
+[code language="shell"]
 # Todo o servidor
 <Directory C:/>
 	Order deny,allow
@@ -50,7 +53,8 @@ tags:
 	Order allow,deny
 	Allow from all
 </Directory>
-[/code]</p>
+[/code]
+
 <p>A segunda parte (raíz do servidor) é opcional... As chances de já existir um bloco desses no arquivo <code>httpd.conf</code> é muito grande. Coloquei-a ali em cima apenas para vocês poderem testar. E não se esqueça de mudar a letra do drive e o caminho da raíz do servidor se necessário.</p>
 <h3>Saiba mais (documentação)</h3>
 <ul>

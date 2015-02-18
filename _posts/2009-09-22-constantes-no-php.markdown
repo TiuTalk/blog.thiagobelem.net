@@ -64,7 +64,8 @@ A função <strong>constant()</strong> te retorna o valor da constante cujo o no
 if (defined('SITE') == false) {
 	define('SITE', 'Thiago Belem / Blog');
 }
-?>[/code]</p>
+?>[/code]
+
 <h3>Documentação</h3>
 <p>» Capítulo <a href="http://www.php.net/manual/pt_BR/language.constants.php" target="_blank">constantes</a>
 » Função <a href="http://www.php.net/manual/pt_BR/function.define.php" target="_blank">define()</a>

@@ -30,19 +30,23 @@ CREATE TABLE `usuarios` (
   `senha` VARCHAR(40) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM;
-[/code]</p>
+[/code]
+
 <p>
 <h3>A classe Usuario</h3>
 <p>Vamos ao que interessa!</p>
 <p>Antes de tudo, precisamos criar o nosso arquivo, vamos seguir algumas boas páticas de programação e vamos dar o nome de "<strong style="background: gray; color: orange">usuario.class.php</strong>". Criado o arquivo vazio, vamos começar a construir nossa classe:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php
 class Usuario {</p>
 <p>}
 ?>
-[/code]</p>
+[/code]
+
 <p>Agora vamos começar a inserir algumas propriedades (variáveis) que serão usadas pela classe ao longo do projeto...</p>
-<p>[code language="php" firstline="4"]
+
+[code language="php" firstline="4"]
 	/**
 	 * Nome do banco de dados onde está a tabela de usuários
 	 */
@@ -59,10 +63,12 @@ class Usuario {</p>
 		'usuario' => 'usuario',
 		'senha' => 'senha'
 	);
-[/code]</p>
+[/code]
+
 <p>São com essas propriedades da classe que você vai poder customizar a classe para ela funcionar no seu site.. Cada uma esta devidamente comentada e explicada, é só alterar da forma que você necessitar.</p>
 <p>Agora vamos definir o primeiro método da nossa classe:</p>
-<p>[code language="php" firstline="23"]
+
+[code language="php" firstline="23"]
 	/**
 	 * Usa algum tipo de encriptação para codificar uma senha
 	 *
@@ -76,14 +82,16 @@ class Usuario {</p>
 		// return md5($senha);
 		return $senha;
 	}
-[/code]</p>
+[/code]
+
 <p>Esse método cuidará da encriptação da senha (caso ela exista, claro)... Se o seu sistema não usar nenhum tipo de criptografia, pode deixar esse método do jeito que está, mas caso você use, por exemplo, o SHA1, você precisa mudar ali na linha 34 e colocar, por exemplo:
 [code language="php" firstline="34"]
 return sha1($senha);
 [/code]
 Caso você use outro tipo de encriptação, você vai precisar modificar esse método... O importante é você receber a senha pura/plana como parâmetro ($senha) e retornar a senha encriptada.</p>
 <p>Agora vamos criar o segundo método da classe e o último método dessa parte do tutorial:</p>
-<p>[code language="php" firstline="37"]
+
+[code language="php" firstline="37"]
 	/**
 	 * Valida se um usuário existe
 	 *
@@ -110,7 +118,8 @@ Caso você use outro tipo de encriptação, você vai precisar modificar esse m�
 <p>		// Se houver apenas um usuário, retorna true
 		return ($total == 1) ? true : false;
 	}
-[/code]</p>
+[/code]
+
 <p>Esse método, como o comentário explica, cuidará de validar se um usuário existe, procurando o par <strong>$usuario</strong> + <strong>$senha</strong> no banco de dados... Ele só retornará verdadeiro (<em>true</em>) quando apenas um registro for encontrado.
 Se você reparar logo ali no começo do método, na linha 45, ele usa o método <strong style="background: gray; color: #FFF">__codificaSenha()</strong> que irá encriptar (ou não) a senha... Simples né? :)</p>
 <p>Então é isso gente... Por hoje vamos ficar por aqui. Em breve postarei a <a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-2" title="Parte 2" target="_blank">Parte 2</a>, onde iremos criar os métodos que deixam um usuário logado (usando sessões E cookies)... E antes que alguém reclame, <strong>essa classe ainda não está usável</strong>... Ela é apenas a 1ª parte de uma classe que vamos fazendo ao longo dessa sequencia de tutoriais.</p>

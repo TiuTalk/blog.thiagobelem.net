@@ -19,7 +19,8 @@ tags:
 <p>Existe uma função pronta <span style="color: #808080;">(que encontrei <a rel="nofollow" href="http://kevin.vanzonneveld.net/techblog/article/create_short_ids_with_php_like_youtube_or_tinyurl/" target="_blank">aqui</a>, criada pelo Kevin Zonneveld)</span> e que usa técnicas de encriptação para fazer o trabalho de converter números em letras e vice-e-versa.</p>
 <h3>Código da função</h3>
 <p>Vamos ao código da função e depois eu explico como usá-la:</p>
-<p>[code='php']
+
+[code='php']
 <?php
 /**
 * Traduz números para texto e vice-e-versa
@@ -79,19 +80,24 @@ $out = strrev($out);
 }</p>
 <p>return $out;
 }
-?>[/code]</p>
+?>[/code]
+
 <p>Se você quiser, pode fazer o <a title="Download do arquivo" href="/arquivos/2009/06/idtextual.txt" target="_blank">download do arquivo (.txt) com a função</a> (com a indentação correta).</p>
 <h3>Usando a função</h3>
 <p>Para usar a função é bem simples, veja a conversão de número em texto:</p>
-<p>[code='php']<?php
+
+[code='php']<?php
 echo alphaID(9007199254740989);
 // Retorno: PpQXn7COf
-?>[/code]</p>
+?>[/code]
+
 <p>E se usarmos o texto como argumento, definindo o segundo parâmetro como true, teremos o ID novamente:</p>
-<p>[code='php']<?php
+
+[code='php']<?php
 echo alphaID('PpQXn7COf', true);
 // Retorno: 9007199254740989
-?>[/code]</p>
+?>[/code]
+
 <p>--</p>
 <p>Essa função é bem legal pois além de deixar o sistema mais <strong>seguro</strong> (não é só mudar de 58 pra 57 na URL pra tentar acessar outro registro do banco) deixa o sistema mais <strong>profissional</strong> (não é todo mundo que mostra IDs textuais por aí). ;)</p>
 <p>Espero que tenham gostado!</p>

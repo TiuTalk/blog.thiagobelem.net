@@ -11,7 +11,8 @@ tags: []
 <p>Essa é uma dúvida muito comum, pelo menos eu já tive esse problema várias vezes... Principalmente em sistemas financeiros.</p>
 <p>Você já deve ter percebido que números reais (frações) usam ponto como separador de casa decimal.</p>
 <p>A função <strong>number_format()</strong> serve exatamente para isso, veja exemplos:</p>
-<p>[code='php']<?php</p>
+
+[code='php']<?php</p>
 <p>$numero = 1234.56;</p>
 <p>// Formato brasileiro
 echo number_format($numero, 2, ',', '.');
@@ -23,7 +24,8 @@ echo number_format($numero, 2, ',', ' ');
 <p>// Formato inglês sem separador de milhar
 echo number_format($numero, 2, '.', '');
 // 1234.57</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>Podemos passar os seguintes argumentos pra ela:</p>
 <p style="padding-left: 30px;">1º - O número a ser formatado
 2º - A precisão decimal (quantidade de casas decimais que serão exibidas)

@@ -19,12 +19,18 @@ tags:
 <p>Ai fiquei uns bons minutos no Google procurando uma solução e descobri algo que funcionou muito bem e vim compartilhar com vocês: o comando <strong>SOURCE</strong>.</p>
 <p>Primeiro você deve abrir o seu client do MySQL... Se você estiver usando Windows é só navegar (pelo cmd) até a pasta "bin" que fica dentro de onde o MySQL está instalado.</p>
 <p>Se você estiver usando XAMPP essa pasta é:</p>
-<p>[code light="true"]C:\xampp\mysql\bin\[/code]</p>
+
+[code light="true"]C:\xampp\mysql\bin\[/code]
+
 <p>Dentro dessa pasta você vai acessar o client, dessa forma:</p>
-<p>[code light="true" language="sql"]mysql -u USUARIO -p[/code]</p>
+
+[code light="true" language="sql"]mysql -u USUARIO -p[/code]
+
 <p>Não se esqueça de substituir "USUARIO" pelo seu usuário do MySQL, por padrão é o <strong>root</strong>.</p>
 <p>Aí você irá digitar a sua senha, por padrão ela é vazia e é só dar ok.</p>
 <p>Agora que você está dentro do client MySQL é só digitar o comando acompanhado do caminho do arquivo que você quer importar:</p>
-<p>[code light="true" language="sql"]source C:\servidor\bancodedados.sql[/code]</p>
+
+[code light="true" language="sql"]source C:\servidor\bancodedados.sql[/code]
+
 <p>O MySQL irá ler o arquivo e executar cada comando, um por um e entre cada comando ele "limpa" a memória, sem dar erro nenhum! :)</p>
 <p>É perfeito!</p>

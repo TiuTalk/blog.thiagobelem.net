@@ -19,7 +19,8 @@ tags:
 <p>Hoje estava eu aqui, sem nada pra fazer, e resolvi mostrar pra vocês como é fácil usar a API de buscas do Google (<em>Google Search API</em>).</p>
 <p>Fiz uma classe que vocês vão poder usar para pegar o resultado de busca do Google e exibir no seu site, na formatação que preferir.</p>
 <h3>A Classe - Versão 1.1</h3>
-<p>[code language="php" wraplines="false"]<?php</p>
+
+[code language="php" wraplines="false"]<?php</p>
 <p>/**
  * API de busca do Google
  *
@@ -83,10 +84,12 @@ class googleSearchAPI {
 		return $this->resultado['cursor']['estimatedResultCount'];
 	}
 }</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p></p>
 <h3>Exemplo de Uso</h3>
-<p>[code language="php"]<?php</p>
+
+[code language="php"]<?php</p>
 <p>$keywords = 'Thiago Belem';
 $pagina = (isset($_GET['p'])) ? (int)$_GET['p'] : 1;</p>
 <p>$gs = new googleSearchAPI();
@@ -109,7 +112,8 @@ echo "<h2>Pagina: " . $gs->pagina . "</h2>";</p>
 	echo '<a href="?q='.$keywords.'&p='.$n.'">'.$n.'</a>&nbsp;';
 }</p>
 <p>if (($pagina + 5) < $total) echo '...';</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>--</p>
 <p>Infelizmente essa API de busca do Google só retorna 8 resultados por vez (uma limitação do Google mesmo)... mas você tem acesso a todas as páginas que precisar.. É só mudar o valor da variável <strong>$pagina</strong> (do exemplo).</p>
 <p><strong style="background: black; color: white">[15.07.09] Atualização:</strong> Atualizei pra v1.1: Busca em um site específico</p>

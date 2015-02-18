@@ -18,7 +18,8 @@ tags: []
 <style type="text/css">
 img, div { behavior: url(iepngfix.htc) }
 </style>
-<p>[/code]</p>
+<p>[/code]
+
 <p>Vale lembrar que se você usar PNGs transparentes como fundo de outros elementos, você também precisa incluí-los na lista<span style="color: #999999;"> (img, div, input e etc.)</span>.</p>
 <p>4 - Divirta-se.</p>
 <p>Se você colocou os arquivos (.htc e .gif) em outras pastas você precisa alterar os caminhos corretamente, tanto no bloco de CSS (que vai dentro deo HTML, do passo 3) quanto dentro do HTC, que diz onde fica a imagem blank.gif.</p>

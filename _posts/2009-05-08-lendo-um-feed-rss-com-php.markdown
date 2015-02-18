@@ -13,7 +13,8 @@ tags: []
 <p>Graças ao PHP 5 podemos ler XMLs com muita facilidade. Isso sempre foi possível, mas antes exigia mais códigos e mais trabalho... Mas hoje em dia, com a classe <strong>SimpleXML</strong>, ficou tudo incrivelmente mais simples.</p>
 <p>Hoje vou mostrar, como é possível ler o conteúdo de um <abbr title="Really Simple Syndication"><em>Feed RSS</em></abbr> usando <strong>apenas</strong> três linhas de código!</p>
 <p>Vamos ao código:</p>
-<p>[code='php']
+
+[code='php']
 < ?php
 $feed = file_get_contents('http://feeds2.feedburner.com/ThiagoBelem/Blog');
 $rss = new SimpleXmlElement($feed);</p>
@@ -23,7 +24,8 @@ echo '
 <p>';
 }
 ?>
-[/code]</p>
+[/code]
+
 <p>Viram só?! Com isso criamos uma lista contendo links para todas as entradas de um Feed RSS. :D</p>
 <ol>
 <li>Pegamos o conteúdo (XML completo) do <em>Feed RSS</em> do meu blog...</li>

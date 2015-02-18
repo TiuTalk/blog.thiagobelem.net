@@ -60,7 +60,8 @@ Se vocês lerem o comentário vão perceber que um terceiro parâmetro foi adici
 	function lembrarDados($usuario, $senha) {
 		// Continuaremos aqui...
 	}
-[/code]</p>
+[/code]
+
 <p>Primeiro nós vamos calcular o <a href="http://pt.wikipedia.org/wiki/Era_Unix" title="UNIX Timestamp">UNIX Timestamp</a> que será a data exata de quando os cookies irão expirar:
 [code language="php" firstline="402"]
 		// Calcula o timestamp final para os cookies expirarem
@@ -142,7 +143,8 @@ Se o usuário for logado com sucesso o método <strong>logaUsuario()</strong> re
 			unset($_COOKIE[$this->prefixoChaves . 'ls']);
 		}
 	}
-[/code]</p>
+[/code]
+
 <p>Nossa nova funcionalidade está devidamente implementada! :)</p>
 <p>Pra quem quiser, o download do script completo:</p>
 <ul>

@@ -17,19 +17,23 @@ tags:
 <p>Através dos seletores você escolhe com qual elemento do HTML irá trabalhar e/ou interagir.</p>
 <p>Os seletores do jQuery são muito parecidos com os seletores do CSS onde você identifica cada elemento usando uma sintaxe em particular... Pra quem entende de CSS vai ser bem simples.</p>
 <p>Suponhamos que você tenha três DIVs em seqüência e queira colocar uma borda apenas na div com classe "carros", exemplo:</p>
-<p>[code language="html"]<div>Olá mundo!</div>
+
+[code language="html"]<div>Olá mundo!</div>
 <div class="carros">Olá mundo!</div>
-<div class="naves">Olá mundo!</div>[/code]</p>
+<div class="naves">Olá mundo!</div>[/code]
+
 <p>Nossa linha do jQuery que coloca uma borda ficaria assim:
 [code language="javascript"]// Assim:
 $("div.carros").css('border', '1px solid red');</p>
 <p>// Ou assim:
 $(".carros").css('border', '1px solid red');
-[/code]</p>
+[/code]
+
 <p>Percebam que a segunda regra vai afetar TODOS os elementos que tenham a class "carros". :)</p>
 <p>Agora vamos mudar a linha de ação um pouco e afetar todas as DIVs exceto a que tenha a classe "naves"... Para isso vamos usar o seletor "div" e excluir o elemento que tenha class "naves", assim:
 [code language="javascript"]
-$("div[class!='naves']").css('border', '1px solid red');[/code]</p>
+$("div[class!='naves']").css('border', '1px solid red');[/code]
+
 <p>Agora suponhamos que você queira fazer três ações sobre o mesmo elemento, você pode fazer isso de três formas:
 [code language="javascript"]// Assim:
 $("div.carros").css('border', '1px solid red');
@@ -43,7 +47,8 @@ elemento.css('color', 'blue');</p>
 <p>// E até assim:
 var elemento = $("div.carros");
 elemento.css('border', '1px solid red').css('color', 'blue');
-[/code]</p>
+[/code]
+
 <p>Existem várias outras formas e atalhos legais para se usar nos seletores... Para selecionar dois (ou mais) elementos você poderia fazer assim:
 [code language="javascript"]$("div.carros, div.naves, div#topo").css('border', '1px solid red');[/code]
 Sabe aquele efeito legal de zebra nas tabelas? O famoso "cor sim, cor não, cor sim, cor não"? Você pode ter esse efeito usando apenas uma linha de jQuery sem definir nenhuma classe ou rodar nenhum codigo dentro da criação da sua tabela, assim:

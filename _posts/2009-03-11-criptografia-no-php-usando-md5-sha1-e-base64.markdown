@@ -19,25 +19,30 @@ tags: []
 <p>Você pode usar o md5 na hora de salvar um dado sigiloso (senhas) o banco... Com isso, ninguém tem acesso à senha original do cliente. Depois é só comparar o md5 do que foi digitado no campo senha (na hora do login) com o que está armazenado no banco, se bater, tá tudo certo.</p>
 <p>Infelizmente o md5 tem um "problema"... Você pode, com muita dificuldade (preste atenção: muita dificuldade), gerar dois md5 iguais. Duas strings diferentes que acabem como um mesmo md5. Isso é raríssimo, mas pode acontecer.</p>
 <p>Pra usar o md5 no PHP é só usar da seguinte forma:</p>
-<p>[code language="php"]
+
+[code language="php"]
 $string = 'O rato reu a ropa do rei de Roma';
 $codificada = md5($string);
 echo "Resultado da codificação usando md5: " . $codificada;
 // 54cf74d1acdb4037ab956c269b63c8ac
-[/code]</p>
+[/code]
+
 <h3>SHA1</h3>
 <p>A outra <strong>hash</strong> de mão única é o <abbr title="SHA: Secure Hash Algorithm">sha1</abbr>. Ele é praticamente identico ao md5, só que tem 160 bits, o que acaba criando uma string-resultado maior: 40 caracteres alfa-numéricos. Outro ponto do sha1 é que, por ser 160 bits e gerar uma cadeia de caracteres maior, uma colisão (encontrar duas strings que, codificadas, sejam a mesma coisa) é bem mais rara que numa chave de 128bits.</p>
 <p>Usar o sha1 no PHP é exatamente a mesma coisa que o md5, só que mudando o nome da função:</p>
-<p>[code language="php"]
+
+[code language="php"]
 $string = 'O rato reu a ropa do rei de Roma';
 $codificada = sha1($string);
 echo "Resultado da codificação usando sha1: " . $codificada;
 // b186b709f7cf5a1d98d413379a66e511df8d59a4
-[/code]</p>
+[/code]
+
 <h3>BASE64</h3>
 <p>É um método para codificação dos dados para transferência na Internet. Ela é uma codificação de mão dupla, e usando uma segunda função você pode descobrir a string original de uma string codificada.</p>
 <p>Para usar ela no PHP você tem as duas formas:</p>
-<p>[code language="php"]
+
+[code language="php"]
 $string = 'O rato reu a ropa do rei de Roma';</p>
 <p>$codificada = base64_encode($string);</p>
 <p>echo "Resultado da codificação usando base64: " . $codificada;
@@ -48,7 +53,8 @@ $string = 'O rato reu a ropa do rei de Roma';</p>
 <p>echo "Resultado da decodificação usando base64: " . $original;
 // O rato reu a ropa do rei de Roma</p>
 <p>// Note que $original vai ser idêntica a $string
-[/code]</p>
+[/code]
+
 <p>Viram como é simples? Com esses recursos é possível deixar a aplicação bem mais segura e, por que não, organizada.</p>
 <p>No próximo post explicarei como criar as suas próprias funções no PHP. Até lá!</p>
 <h4>Documentação Oficial:</h4>

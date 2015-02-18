@@ -31,7 +31,8 @@ tags:
 <blockquote><p>Fatal error: Call to undefined function curl_init()</p></blockquote>
 <h3>O código</h3>
 <p>O código para pegar os vídeos é bem simples, por isso vou colocá-lo inteiro sem explicá-lo passo-a-passo:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php
 // Seu usuário do YouTube
 $usuario = 'videosimprovaveis';</p>
@@ -61,9 +62,11 @@ foreach ($xml->entry AS $video) {
 	);
 }</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Ao final desse código teremos o array <code>$videos</code> com a lista de vídeos do usuário... Para exibir o thumbnail de cada um dos vídeos devidamente linkado para o vídeo (no YouTube), podemos fazer assim:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <h1>Meus Vídeos</h1></p>
 <p><ul>
 	<?php foreach ($videos AS $video) { ?>
@@ -72,6 +75,7 @@ foreach ($xml->entry AS $video) {
 	</li>
 	<?php } ?>
 </ul>
-[/code]</p>
+[/code]
+
 <p>Código-fonte do arquivo desse tutorial: <a href="http://snipplr.com/view/48433/listando-seus-vdeos-do-youtube-com-php/">Snipplr</a></p>
 <p>Espero que tenham gostado!</p>

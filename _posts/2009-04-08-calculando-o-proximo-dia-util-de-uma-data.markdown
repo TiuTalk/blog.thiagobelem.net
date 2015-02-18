@@ -20,7 +20,8 @@ Senão
 FimSe
 Fim</span></p>
 <p>Quando passamos isso pro PHP podemos fazer de uma forma bem simples:</p>
-<p>[code='php']
+
+[code='php']
 <?php</p>
 <p>/**
 * Função para calcular o próximo dia útil de uma data
@@ -43,10 +44,12 @@ $timestamp_final = $timestamp;
 <p>return date($saida, $timestamp_final);
 }</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Com essa função você tem um meio rápido de calcular o próximo dia útil de uma data no formato AAAA-MM-DD  (primeiro argumento) e retorná-la no formato que preferir (segundo argumento).</p>
 <p>Você poderia usá-la da seguinte forma:</p>
-<p>[code='php']
+
+[code='php']
 <?php
 // Dia 05 de abril de 2009 é um domingo
 $data = '2009-04-05';</p>
@@ -62,6 +65,7 @@ $data = '2009-04-08';</p>
 $data_final = proximoDiaUtil($data);
 // Resultado: 08/04/2009
 ?>
-[/code]</p>
+[/code]
+
 <p>Com isso você pode fazer aquele sistema financeiro funcionar melhor e não sair cobrando as pessoas em pleno sabadão. :)</p>
 <p>Até a próxima!</p>

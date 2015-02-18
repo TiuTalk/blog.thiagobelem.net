@@ -20,7 +20,8 @@ tags: []
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-[/code]</p>
+[/code]
+
 <p>Salve este arquivo com o nome de '.htaccess'... Isso mesmo, o arquivo não tem nome, só uma extensão grande de 8 letras.</p>
 <p>Depois, faça upload desse arquivo para o seu site, na mesma pasta onde fica o <em>index</em> do seu site (chamado de <em>root </em>ou <strong>raiz </strong>do site).</p>
 <p>Tente acessar o seu site usando www na frente da URL como de costume, por exemplo: <a href="http://thiagobelem.net/" target="_blank">http://thiagobelem.net/</a> se o site se redirecionar automaticamente pra url sem o www você fez a instalação com sucesso.</p>

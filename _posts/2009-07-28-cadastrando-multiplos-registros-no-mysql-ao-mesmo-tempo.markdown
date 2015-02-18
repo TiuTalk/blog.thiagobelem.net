@@ -16,7 +16,8 @@ tags:
 ---
 <p>Hoje vou falar sobre uma pequena mudança de código que pode significar megas e megas de dados e, conseqüentemente, de performance! :D</p>
 <p>Suponhamos que você tenha um script que receba dados de sei lá onde e cadastre-os no MySQL, seria mais ou menos assim:</p>
-<p>[code language="php"]<?php</p>
+
+[code language="php"]<?php</p>
 <p>$usuarios = array();
 $usuarios[] = array('nome' => 'Thiago', 'email' => 'contato@thiagobelem.net');
 $usuarios[] = array('nome' => 'Fulano da Silva', 'email' => 'fulano@email.com');
@@ -36,11 +37,13 @@ foreach ($usuarios as $usuario) {
 	}
 }</p>
 <p>echo 'Usuários cadastrados: ' . $cadastrados;</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>As consultas passadas para o MySQL ficariam mais ou menos assim:
 [code language="sql" light="true"]INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Thiago', 'contato@thiagobelem.net');
 INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Fulano da Silva', 'fulano@email.com');
-INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Ciclano', 'ciclano@uol.com.br');[/code]</p>
+INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Ciclano', 'ciclano@uol.com.br');[/code]
+
 <p>Não tem nada de errado com o código.. Funciona perfeitamente... Faz o contador direitinho.. Mas imagine se você tem 4000 registros pra inserir na tabela... Você vai rodar 4000 <strong>mysql_query()</strong> e vai deixar o seu MySQL maluquinho!</p>
 <p>Não seria muito melhor fazer assim:
 [code language="php"]<?php</p>
@@ -64,7 +67,9 @@ mysql_query($sql);</p>
 <p>// Pega o número de registros inseridos
 $cadastrados = mysql_affected_rows();</p>
 <p>echo 'Usuários cadastrados: ' . $cadastrados;</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>A nossa consulta ficaria mais ou menos assim:
-[code language="sql" light="true"]INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Thiago', 'contato@thiagobelem.net'), (NULL, 'Fulano da Silva', 'fulano@email.com'), (NULL, 'Ciclano', 'ciclano@uol.com.br')[/code]</p>
+[code language="sql" light="true"]INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Thiago', 'contato@thiagobelem.net'), (NULL, 'Fulano da Silva', 'fulano@email.com'), (NULL, 'Ciclano', 'ciclano@uol.com.br')[/code]
+
 <p>Você pode fazer isso sem problema nenhum e com apenas uma "execução de consulta" você insere os três registros de uma só vez... Não é uma maravilha? :D</p>

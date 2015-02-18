@@ -43,22 +43,26 @@ tags:
 <h3>Solução em PHP</h3>
 <p>Antes de qualquer coisa, eu não sou um bom matemático... Na maior parte do tempo eu não vejo "coisas" quando olho para um monte de números... Provavelmente existem soluções mais elegantes que essa.</p>
 <p>Primeiro vamos à minha solução em PHP:</p>
-<p>[code language="php"]function solucao() {
+
+[code language="php"]function solucao() {
 	$soma = 0;</p>
 <p>	for ($i = 1; $i < 1000; $i++) {
 		if (!($i % 3) || !($i % 5))
 			$soma += $i;
 	}</p>
 <p>	echo $soma;
-}[/code]</p>
+}[/code]
+
 <h3>Solução em Python</h3>
 <p>E agora, a mesma abordagem em Python:</p>
-<p>[code language="python"]def solucao():
+
+[code language="python"]def solucao():
 	soma = 0;</p>
 <p>	for i in range(1, 1000):
 		if not (i % 3) or not (i % 5):
 			soma += i</p>
-<p>	print soma[/code]</p>
+<p>	print soma[/code]
+
 <h3>Conclusão</h3>
 <p>Meu intuito aqui não é comparar as duas linguagens! Pra mim, ambas são excelentes.</p>
 <p>Queria apenas trazer para vocês esse projeto, que pode ajudar muito nos estudos/aperfeiçoamento dos seus conhecimentos de programação (e talvez matemática).</p>

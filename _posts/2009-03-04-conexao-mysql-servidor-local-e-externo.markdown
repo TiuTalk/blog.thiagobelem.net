@@ -13,7 +13,8 @@ tags: []
 <p>Esse script tem uma vantagem enorme: ele decide qual configuração de conexão usar em função do domínio que está sendo utilizado pra acessar o site!</p>
 <p>Por exemplo: Se você estiver acessando o site pelo 127.0.0.1 ele usa a configuração de conexão local, se estiver acessando por um domínio escolhido, thiagobelem.net por exemplo, ele usa outra configuração... Não tem limite de configurações, você pode definir quantas quiser.</p>
 <p>Vamos ao script:</p>
-<p>[code='php']
+
+[code='php']
 /**
 *  Arquivo de conexão ao MySQL usando servidor local e externo
 */
@@ -57,9 +58,11 @@ $MySQL['conexao'] = ($MySQL[$usar]['persis']) ? 'mysql_pconnect' : 'mysql_connec
 $MySQL['link'] = $MySQL['conexao']($MySQL[$usar]['servidor'], $MySQL[$usar]['usuario'], $MySQL[$usar]['senha']) or die("Não foi possível se conectar ao servidor MySQL no endereço [".$MySQL[$usar]['servidor']."]");</p>
 <p>// Conecta-se ao banco de dados
 mysql_select_db($MySQL[$usar]['banco'], $MySQL['link']) or die("Não foi possível conectar-se ao banco de dados [".$MySQL[$usar]['banco']."] no servidor [".$MySQL[$usar]['servidor']."]");
-[/code]</p>
+[/code]
+
 <p>Pra criar mais uma configuração de conexão é só duplicar esse bloco:</p>
-<p>[code='php']
+
+[code='php']
 $n++;
 $MySQL[$n]['dominios']  = array('thiagobelem.net', 'thiagobelem.com.br');
 $MySQL[$n]['servidor']  = '127.0.0.1'; // Servidor MySQL
@@ -67,7 +70,8 @@ $MySQL[$n]['usuario']   = 'meu_usuario'; // Usuário MySQL
 $MySQL[$n]['senha']     = 'minha_senha'; // Senha MySQL
 $MySQL[$n]['banco']     = 'meu_banco'; // Banco de dados
 $MySQL[$n]['persis']    = false; // Conexão persistente?
-[/code]</p>
+[/code]
+
 <p>Gostaram? Ele tá todo comentado.. Qualquer dúvida é só comentar! =)</p>
 <p>Abraços</p>
 <h4>Documentação Oficial:</h4>

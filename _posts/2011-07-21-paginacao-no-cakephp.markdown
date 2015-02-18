@@ -40,7 +40,8 @@ tags:
 </ol>
 <h3>Começando pelo Controller</h3>
 <div>O trabalho da paginação começa no <strong>Controller</strong>... Defina os parâmetros de busca (find) normalmente, como você sempre fez:</div>
-<p>[code language="php"]
+
+[code language="php"]
 class NoticiasController extends AppController {</p>
 <p>	/**
 	 * Lista as notícias utilizando paginação
@@ -54,9 +55,11 @@ class NoticiasController extends AppController {</p>
 		);</p>
 <p>	}</p>
 <p>}
-[/code]</p>
+[/code]
+
 <p>Definido os parâmetros de busca, podemos atribuí-los ao atributo <strong>paginate</strong> do <strong>Controller</strong> e rodar a consulta no model <strong>Noticia</strong>:</p>
-<p>[code language="php"]class NoticiasController extends AppController {</p>
+
+[code language="php"]class NoticiasController extends AppController {</p>
 <p>	/**
 	 * Lista as notícias utilizando paginação
 	 */
@@ -73,22 +76,27 @@ class NoticiasController extends AppController {</p>
 <p>		// Envia os dados pra view
 		$this->set('noticias', $noticias);
 	}</p>
-<p>}[/code]</p>
+<p>}[/code]
+
 <p>E tá tudo pronto.. agora é só ir pra view mostrar essas notícias e colocar os links de paginação! :)</p>
 <h3>Paginação na View</h3>
 <p>Um exemplo básico (usando a tag <em>article</em> do <strong>HTML5</strong>) da listagem de notícias:</p>
-<p>[code language="php"]<article>
+
+[code language="php"]<article>
 <?php foreach($noticias AS $data): ?>
 	<h1><?php echo $data['Noticia']['titulo'] ?></h1>
 	<p><?php echo $data['Noticia']['resumo'] ?></p>
 <?php endforeach; ?>
-</article>[/code]</p>
+</article>[/code]
+
 <p>E por ultimo, a listagem dos links de paginação:</p>
-<p>[code language="php"]
+
+[code language="php"]
 echo $this->Paginator->prev('« Mais novas', null, null, array('class' => 'desabilitado'));
 echo $this->Paginator->numbers();
 echo $this->Paginator->next('Mais antigas »', null, null, array('class' => 'desabilitado'));
-[/code]</p>
+[/code]
+
 <p>Na linha 1 e 3 nós mostramos os links para a <strong>próxima página</strong> e para a <strong>página anterior</strong>. Já na linha 2 nós mostramos aquela lista de números das páginas:<strong> 1, 2, 3, 4</strong> cada uma com um link!</p>
 <p>O <strong>PaginatorHelper</strong> tem muitas outras opções e customizações, não deixe de consultar a <a href="http://api.cakephp.org/class/paginator-helper">documentação</a>.</p>
 <h3>Quer saber mais sobre o CakePHP?</h3>

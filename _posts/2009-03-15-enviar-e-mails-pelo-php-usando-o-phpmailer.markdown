@@ -15,7 +15,8 @@ tags: []
 <p><strong>Nota: </strong>Nesse tutorial usarei a versão 2.3 (<a href="http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/Previous%20Versions/PHPMailer%20v2.3%20for%20PHP5_6/phpMailer_v2.3.zip/download" target="_blank">download</a>) do <strong>PHPMailer </strong>que é a última versão até agora.</p>
 <p>Faça o download, descompacte o arquivo e coloque os arquivos <strong>class.phpmailer.php</strong> e <strong>class.smtp.php</strong> em uma pasta chamada <strong>phpmailer</strong> dentro do seu site.</p>
 <p>Agora, vamos ao script que faz o envio do e-mail:</p>
-<p>[code='php']
+
+[code='php']
 <?php</p>
 <p>// Inclui o arquivo class.phpmailer.php localizado na pasta phpmailer
 require("phpmailer/class.phpmailer.php");</p>
@@ -64,7 +65,8 @@ echo "Não foi possível enviar o e-mail.</p>
 echo "<b>Informações do erro:</b> " . $mail->ErrorInfo;
 }</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Algumas linhas de código estão comentadas porque são opcionais e dependem também da necessidade de quem vai usar o script. Logo no começo, na parte dos dados do servidor você tem a opção de configurar o login do servidor SMTP caso seja necessário.</p>
 <p>Repare que, na parte na qual definimos a mensagem e o assunto do e-mail, temos duas formas de "corpo de e-mail": formato HTML e formato Texto Plano... É bom que você também defina o <a title="Descrição de texto plano na Wikipédia" href="http://pt.wikipedia.org/wiki/Texto_plano" target="_blank">texto plano</a> (que nada mais é do que um texto sem as tags HTML parecido com o conteúdo de um arquivo .txt) por que muitos leitores de e-mail não têm suporte a e-mails em HTML (seja por configuração do usuário ou por falta de funcionalidade mesmo).</p>
 <p>Deixei também um exemplo pronto de como anexar um arquivo ao seu e-mail. O caminho do arquivo (primeiro arquivo) está nos moldes de um servidor rodando localmente... Mas ele pode ser relativo se você estiver usando o script num servidor externo. O segundo argumento é o 'novo' nome do arquivo, mas é opcional.</p>

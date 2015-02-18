@@ -12,16 +12,26 @@ tags: []
 <p>Você precisa iniciar a sessão antes de iniciar o <em>output</em>, ou seja, antes de retornar QUALQUER coisa pro HTML. Antes de dar qualquer echo ou antes de inserir qualquer HTML fora de blocos php. Geralmente o início da sessão é uma das primeiras coisas no começo de todo site.</p>
 <p>A sessão precisa ser iniciada em cada página que você for usar ou definir um valor dela, salvo arquivos que vieram por include, mas é preciso ter iniciado a sessão uma vez antes do include.</p>
 <p>Para abrir a sessão é só usar esse comando no PHP:</p>
-<p>[code='php']session_start(); // Inicia a sessão[/code]</p>
+
+[code='php']session_start(); // Inicia a sessão[/code]
+
 <p>Depois de iniciada a sessão você pode definir valores dentro dela dessa forma:</p>
-<p>[code='php']$_SESSION['usuario'] = 'Thiago';[/code]</p>
+
+[code='php']$_SESSION['usuario'] = 'Thiago';[/code]
+
 <p>E quando você precisar exibir o valor salvo na sessão (provavelmente em outras páginas), é só fazer assim:</p>
-<p>[code='php']echo $_SESSION['usuario']; // Resultado: Thiago[/code]</p>
+
+[code='php']echo $_SESSION['usuario']; // Resultado: Thiago[/code]
+
 <p>Você pode salvar quantos valores quiser, pode re-definir os valores e usa-los em echos, argumentos de funções e da forma que preferir.</p>
 <p>Para deletar uma variável específica da sessão você usa o <strong>unset()</strong>:</p>
-<p>[code='php']unset($_SESSION['usuario']); // Deleta uma variável da sessão[/code]</p>
+
+[code='php']unset($_SESSION['usuario']); // Deleta uma variável da sessão[/code]
+
 <p>Você também pode destruir toda a sessão de uma só vez, eliminando todas as variáveis salvas nela:</p>
-<p>[code='php']session_destroy(); // Destrói toda sessão[/code]</p>
+
+[code='php']session_destroy(); // Destrói toda sessão[/code]
+
 <p>Com isso você tem total controle das sessões no seu site e pode salvar, por exemplo, o nome de usuário depois que ele fez o login e salvar outra variável informando que o usuário está logado. Esta é uma prática muito comum em sistemas de autenticação de usuário.</p>
 <p>Espero que tenham gostado e adoraria que usassem o que aprenderam aqui.</p>
 <h4>Documentação Oficial:</h4>

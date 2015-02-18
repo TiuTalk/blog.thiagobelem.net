@@ -19,21 +19,26 @@ tags: []
 <p>Faça o download da última versão do <strong>jQuery </strong>no site: <a href="http://jquery.com/" target="_blank">http://jquery.com/
 </a>Faça o download do plugin <strong>Validation </strong>no site: <a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" target="_blank">http://bassistance.de/jquery-plugins/jquery-plugin-validation/</a></p>
 <p>Insira-os dentro do <head> do seu site, da seguinte forma:</p>
-<p>[code language="html"]
+
+[code language="html"]
 <script src="jquery.js" type="text/javascript"></script>
  <script src="jquery.validate.js" type="text/javascript"></script>
-[/code]</p>
+[/code]
+
 <p>Após isso, criamos um pequeno bloco de CSS para estilizar as mensagens de erro:</p>
-<p>[code language="css"]
+
+[code language="css"]
 * { font-family: Verdana; font-size: 96%; }
 label { display: block; margin-top: 10px; }
 label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; font-size: 10px }
 p { clear: both; }
 .submit { margin-top: 1em; }
 em { font-weight: bold; padding-right: 1em; vertical-align: top; }
-[/code]</p>
+[/code]
+
 <p>Ainda dentro do <em><strong>head</strong></em>, depois de inserir o <strong>jQuery</strong> e o estilo das mensagens de erro, precisaremos adicionar um bloco de JavaScript contendo instruções para a validação:</p>
-<p>[code language="javascript"]
+
+[code language="javascript"]
 $(document).ready( function() {
 	$("#formularioContato").validate({
 		// Define as regras
@@ -68,9 +73,11 @@ $(document).ready( function() {
 		}
 	});
 });
-[/code]</p>
+[/code]
+
 <p>Por fim, inserimos o HTML do formulário na pagina:</p>
-<p>[code language="html"]
+
+[code language="html"]
 <form id="formularioContato" method="post"></p>
 <p>	<label for="nome">Nome</label>
 	<input id="nome" name="campoNome" type="text" /></p>
@@ -80,7 +87,8 @@ $(document).ready( function() {
 	<textarea id="mensagem" name="campoMensagem"></textarea></p>
 <p>	<input class="submit" type="submit" value="Enviar" /></p>
 <p></form>
-[/code]</p>
+[/code]
+
 <p>Viram como é fácil? O arquivo final ficou <a href="/exemplo2" target="_blank">desta</a> forma. Se você preferir pode copiar todo esse código JavaScript para um arquivo .js e incluí-lo no <head> do seu site da mesma forma que fizemos no começo da aula.</p>
 <p>Coloquei alguns comentários na parte das instruções de validação para facilitar o entendimento.</p>
 <p>Com isso você faz uma validação <em>client-side</em> que ajuda a evitar dados inválidos e campos vazios. Mas preciso lembrar que, por ser <em>client-side</em>, essa validação acontece apenas no computador do visitante e o mesmo pode desativar o JavaScript e a validação toda não irá funcionar. Então não se esqueça de fazer a mesma validação dentro do PHP quando receber os dados.</p>

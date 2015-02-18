@@ -10,11 +10,13 @@ tags: []
 ---
 <p>As vezes seu site pode gerar alguns endereços inválidos (404) e você modificar as mensagens feias de "<em>Error 404 - Page not found</em>".. Pra isso você precisa criar (ou editar) um arquivo chamado .htaccess que fica dentro do seu servidor de hospedagem. O nome do arquivo é esse mesmo, .htaccess (um arquivo sem nome e com extensão grandona).</p>
 <p>Se você já tem esse arquivo no seu servidor, edite-o com o bloco de notas e coloque esse bloco de linhas no começo do arquivo:</p>
-<p>[code='html']ErrorDocument 400 /erro_400.html
+
+[code='html']ErrorDocument 400 /erro_400.html
 ErrorDocument 401 /erro_401.html
 ErrorDocument 403 /erro_403.html
 ErrorDocument 404 /erro_404.html
-ErrorDocument 500 /erro_500.html[/code]</p>
+ErrorDocument 500 /erro_500.html[/code]
+
 <p>E depois é só criar cada um dos arquivos (erro_404.html) dentro da raiz (root) do servidor com a mensagem de erro... Você também pode mudar o nome do arquivo para o que preferir, usar outra extensão e fazer da melhor forma... É só ir mudando e testando.</p>
 <p>Se o seu servidor não tem esse arquivo na raiz (root) então é só abrir o bloco de notas, colocar o código lá e salvar o arquivo como .htaccess (sem nome mesmo) e depois fazer upload pro seu servidor.</p>
 <p>Os possíveis códigos de erro são:</p>

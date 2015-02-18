@@ -26,7 +26,8 @@ tags: []
 <p>Por isso existem os arrays: armazenar valores e/ou variáveis referentes a um mesmo grupo, a uma mesma origem.</p>
 <h3>Arrays no PHP</h3>
 <p>Criar arrays no PHP é extremamente simples, veja dois exemplos onde criamos a nossa lista de compras:</p>
-<p>[code='php']
+
+[code='php']
 < ?php</p>
 <p>// Definição simples e rápida
 $lista = array('Pão', 'Ovos', 'Carne', 'Macarrão');</p>
@@ -43,14 +44,16 @@ $lista[] = 'Ovos';
 $lista[] = 'Carne';
 $lista[] = 'Macarrão';</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Em todos os três exemplos o resultado ($lista) será o mesmo... Vamos falar de cada um:</p>
 <p>No primeiro exemplo, definimos todos os quatro elementos na forma mais simples possível, separados por vírgula.</p>
 <p>Já no segundo exemplo definimos (antes) que $lista será um array, e logo após, definimos seus quatro elementos, perceba que temos um número entre colchetes agora: <strong><span style="color: #000000;">$lista</span><span style="color: #000080;">[<span style="color: #0000ff;">1</span>]</span></strong> esse número significa o índice do array, a posição do elemento. O índice do elemento pode ser definido como numérico ou textual (string)... Veremos isso no próximo exemplo.</p>
 <p>E por fim, no terceiro exemplo, fazemos a mesma coisa que fizemos no segundo, só que omitimos os índices dos elementos, sendo assim, o PHP irá colocar cada elemento no fim do array, começando com a posição 0 (primeiro elemento) e crescendo a cada elemento.</p>
 <h3>Índices Textuais (Strings)</h3>
 <p>Você também pode definir índices (também chamados de <em>keys</em> ou chaves)  como <em>strings</em>, veja um bom exemplo de uso:</p>
-<p>[code='php']
+
+[code='php']
 < ?php</p>
 <p>// Definição longa
 $carro = array();
@@ -60,10 +63,12 @@ $carro['fabricante'] = 'Volkswagen';</p>
 <p>// Definição simples
 $carro = array('cor' => 'Vermelho', 'modelo' => 'CrossFox', 'fabricante' => 'Volkswagen');</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <h3>Exibindo e localizando elementos dos Arrays</h3>
 <p>Quando você for exibir um elemento, é só seguir a mesma sintaxe da declaração longa:</p>
-<p>[code='php']
+
+[code='php']
 < ?php</p>
 <p>// Carro
 $carro = array();
@@ -77,14 +82,16 @@ $lista = array('Pão', 'Ovos', 'Carne', 'Macarrão');</p>
 <p>echo "O segundo item da lista é: " . $lista[1];
 // Resultado: O segundo item da lista é: Ovos</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Vale lembrar, que quando estamos trabalhando com índices numéricos (ordenados), a posição inicial é a zero, então a quarta posição será o índice<span style="color: #000080;"><strong> [<span style="color: #0000ff;">3</span>]</strong></span>.</p>
 <p>Veja também:
 » <a href="http://pt.wikipedia.org/wiki/Array" target="_blank">Array (Wikipédia)</a>
 » <a href="http://br2.php.net/manual/pt_BR/language.types.array.php" target="_blank">Documentação (do PHP) sobre Arrays</a></p>
 <h3>Arrays multi-dimensionais</h3>
 <p>Não vou me aprofundar no assunto... mas você pode definir um array onde um ou mais elementos sejam arrays. Nesse caso o array não pode mais ser chamado de <strong>lista</strong>, e deve ser chamado de <strong>vetor</strong> ou <strong>array</strong> mesmo. Veja um exemplo básico de definição e exibição:</p>
-<p>[code='php']
+
+[code='php']
 < ?php</p>
 <p>// Carro
 $carro = array();
@@ -94,7 +101,8 @@ $carro['fabricante'] = 'Volkswagen';</p>
 <p>echo "A terceira cor do meu " . $carro['modelo'] . " é: " . $carro['cores'][2];
 // Resultado: A terceira cor do meu CrossFox é: Cinza</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>--</p>
 <p>Espero que tenham gostado... Não falei ainda as funções de manipulação de arrays, o que vai ficar para um outro dia.</p>
 <p>Abraços e qualquer dica, dúvida, ou sugestão, é só falar! E não esqueçam de assinar o <a title="Feed RSS" href="http://feeds2.feedburner.com/ThiagoBelem/Blog" target="_blank">Feed RSS</a> do blog. :)</p>

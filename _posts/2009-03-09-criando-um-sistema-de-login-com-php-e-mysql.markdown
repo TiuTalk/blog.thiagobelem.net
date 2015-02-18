@@ -16,7 +16,8 @@ tags: []
 <p>Nosso sistema será bem simples: um arquivo chamado <span style="color: #ff0000;">seguranca.php</span>, que deverá ser incluído no topo do seu site (em todas as páginas) e que faz a conexão com o banco de dados e que possui algumas funções usadas para redirecionar o visitante para o formulário de login (<span style="color: #3366ff;">login.php</span>) caso ele não esteja logado.</p>
 <p>Vamos ao trabalho:</p>
 <p>O que iremos definir primeiro é a tabela usada para armazenar os usuários do sistema:</p>
-<p>[code language="sql"]
+
+[code language="sql"]
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -26,10 +27,12 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 PRIMARY KEY (`id`),
 UNIQUE KEY `usuario` (`usuario`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-[/code]</p>
+[/code]
+
 <p>Execute esse bloco SQL no seu banco de dados para criar a tabela usada pelo sistema.</p>
 <p>Depois disso, vamos ao formulário de login que você colocará dentro de um arquivo chamado <span style="color: #3366ff;">login.php</span>:</p>
-<p>[code language="html"]
+
+[code language="html"]
 <form method="post" action="valida.php">
 <label>Usuário</label>
 <input type="text" name="usuario" maxlength="50" /></p>
@@ -37,10 +40,12 @@ UNIQUE KEY `usuario` (`usuario`)
 <input type="password" name="senha" maxlength="50" /></p>
 <p><input type="submit" value="Entrar" />
 </form>
-[/code]</p>
+[/code]
+
 <p>Esse formulário, com apenas dois campos, manda pra página <span style="color: #3366ff;">valida.php</span>, que é um pequeno PHP que receberá os dados enviados pelo formulário, fará a validação deles e mandará o visitante ou pra página interna (<span style="color: #3366ff;">index.php</span>) ou de volta pra página de login (<span style="color: #3366ff;">login.php</span>).</p>
 <p>Esse é o codigo fonte do arquivo <span style="color: #3366ff;">valida.php</span>:</p>
-<p>[code language="php"]
+
+[code language="php"]
 // Inclui o arquivo com o sistema de segurança
 include("seguranca.php");</p>
 <p>// Verifica se um formulário foi enviado
@@ -59,13 +64,15 @@ header("Location: index.php");
 expulsaVisitante();
 }
 }
-[/code]</p>
+[/code]
+
 <p>A estrutura do seu site, até esse ponto, deve estar dessa forma:</p>
 <p style="padding-left: 30px;"><span style="color: #000000;">../pasta_do_seu_site/index.php</span> » Página intera a ser protegida
 <span style="color: #000000;">../pasta_do_seu_site/login.php</span> » Página com o formulário de login
 <span style="color: #000000;">../pasta_do_seu_site/valida.php</span> » Página que faz a validação dos dados do formulário</p>
 <p>Agora vamos criar o arquivo <span style="color: #ff0000;">seguranca.php</span> na mesma pasta dos demais arquivos:</p>
-<p>[code language="php"]
+
+[code language="php"]
 /**
 * Sistema de segurança com acesso restrito
 *
@@ -168,18 +175,23 @@ unset($_SESSION['usuarioID'], $_SESSION['usuarioNome'], $_SESSION['usuarioLogin'
 <p>// Manda pra tela de login
 header("Location: ".$_SG['paginaLogin']);
 }
-[/code]</p>
+[/code]
+
 <p>Não vou poder explicar todas as funções do arquivo pq é muita coisa.. Mas todas elas estão devidamente comentadas e documentadas... É só olhar.</p>
 <p>Com esse arquivos nós já nos conectamos automaticamente ao servidor MySQL, então se você usar outra forma pra fazer a conexão, vá na parte de configurações do <span style="color: #ff0000;">seguranca.php</span> e defina a variável <span style="color: #ff6600;">$_SG['conectaServidor']</span> pra falso (<em>false</em>). O mesmo acontece pra sessão com a variável <span style="color: #ff6600;">$_SG['abreSessao']</span>.</p>
 <p>Agora é só incluir essas linhas no topo de cada arquivo que deverá ter o acesso restrito:</p>
-<p>[code language="php"]
+
+[code language="php"]
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
-[/code]</p>
+[/code]
+
 <p>Quando vocês quiserem exibir o nome do usuário logado, é só fazer isso:</p>
-<p>[code language="php"]
+
+[code language="php"]
 echo "Olá, " . $_SESSION['usuarioNome'];
-[/code]</p>
+[/code]
+
 <p>Veja mais sobre escrever e pegar valores da sessão (coisa que acontece muito nesse sistema de login) no tópico <a href="/aprendendo-a-usar-sessoes-no-php" target="_blank">Aprendendo a usar sessões no PHP</a>.</p>
 <p>Viram como é fácil?</p>
 <p>Pra quem quiser um tutorial mais explicado e detalhado recomendo: <a href="/como-criar-um-sistema-de-login-com-niveis-de-permissao" target="_blank">Como criar um Sistema de Login com Níveis de Permissão</a> (passo-a-passo).</p>

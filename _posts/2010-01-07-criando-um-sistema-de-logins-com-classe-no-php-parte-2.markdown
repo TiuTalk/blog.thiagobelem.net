@@ -43,11 +43,13 @@ tags:
 	 * @var string
 	 */
 	var $erro = '';
-[/code]</p>
+[/code]
+
 <p>Todas as propriedades estão comentadas, é bom vocês irem se acostumando com essa necessidade dos comentários organizados e padronizados, isso vai se tornar um "<em>must have</em>" num futuro não muito distante... Mas isso é assunto pra um outro tutorial.</p>
 <p>Reparem que criamos uma propriedade $erro, ela será usada para armazenar as mensagens de erro quando algo der errado... :)</p>
 <p>Agora vamos começar a criar o novo, gigantesco e magnífico método que irá salvar o usuário no sistema, mantendo-o logado:</p>
-<p>[code language="php" firstline="106"]
+
+[code language="php" firstline="106"]
 	/**
 	 * Loga um usuário no sistema salvando seus dados na sessão
 	 *
@@ -57,7 +59,8 @@ tags:
 	 */
 	function logaUsuario($usuario, $senha) {</p>
 <p>	}
-[/code]</p>
+[/code]
+
 <p>Primeiro de tudo, precisamos validar os dados passados por parâmetro:
 [code language="php" firstline="114"]
 		// Verifica se é um usuário válido
@@ -67,14 +70,16 @@ tags:
 			$this->erro = 'Usuário inválido';
 			return false;
 		}
-[/code]</p>
+[/code]
+
 <p>Já sabemos se o usuário foi validado, agora nós vamos verificar se é necessário (e possível) iniciar a sessão:
 [code language="php" firstline="117"]
 			// Inicia a sessão?
 			if ($this->iniciaSessao AND !isset($_SESSION)) {
 				session_start();
 			}
-[/code]</p>
+[/code]
+
 <p>O próximo passo é atrazer (ou não) os dados do banco de dados para a sessão:
 [code language="php" firstline="122"]
 			// Traz dados da tabela?
@@ -106,12 +111,14 @@ tags:
 					}
 				}
 			}
-[/code]</p>
+[/code]
+
 <p>Da linha 124 até a linha 135 nó montamos a consulta que será usada para fazer a busca no banco de dados, depois disso nós a executamos e, caso a consulta tenha sido bem sucedida, salvamos os dados na sessão.</p>
 <p>Repare que para isso usamos <strong style="background: #B4DFEF; color: black">$_SESSION[$this->prefixoChaves . $chave]</strong>, isso irá criar valores na sessão usando o prefixo (definido na propriedade <strong>$this->prefixoChaves</strong> no começo da classe) seguido o nome do campo que estava no banco de dados... Então, segundo o nosso exemplo: se estamos pegando o campo <strong>id</strong> e o campo <strong>nome</strong> lá da tabela, as chaves criadas na sessão serão <strong>usuario_id</strong> e <strong>usuario_nome</strong>... Legal não?</p>
 <p>Mas calma que ainda não acabou!</p>
 <p>Precisamos ainda definir um valor na sessão e criar (caso seja possível) o cookie que irá ajudar na identificação (e segurança) do usuário:</p>
-<p>[code language="php" firstline="156"]
+
+[code language="php" firstline="156"]
 			// Usuário logado com sucesso
 			$_SESSION[$this->prefixoChaves . 'logado'] = true;</p>
 <p>			// Define um cookie para maior segurança?
@@ -124,7 +131,8 @@ tags:
 			}</p>
 <p>			// Fim da verificação, retorna true
 			return true;
-[/code]</p>
+[/code]
+
 <p>A parte do cookie pode parecer complexa mais não é... Criamos um cookie chamado "usuario_token" contendo informações adicionais do usuário: usuário, IP e informações do navegador... Essas informações serão usadas para proteger o login do usuário caso outros usuários tentem roubar o ID de sessão ou forjar IDs falsos.</p>
 <p>Agora sim o método terminou! :D</p>
 <p>Resumindo tudo:</p>

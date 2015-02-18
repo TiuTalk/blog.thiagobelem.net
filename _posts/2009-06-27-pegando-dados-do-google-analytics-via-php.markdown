@@ -30,7 +30,8 @@ tags:
 	require_once("gapi.class.php");</p>
 <p>	// Autenticação
 	$ga = new gapi('SEU E-MAIL', 'SUA SENHA');
-?>[/code]</p>
+?>[/code]
+
 <p>--</p>
 <h3>Exemplo de uso - Listando os perfis de site</h3>
 <p>Para listar todos os perfis de site que você tem na sua conta você pode fazer assim:
@@ -49,7 +50,8 @@ tags:
 O código acima irá exibir uma pequena lista dos sites que você tem na sua conta do Analytics... Usarei como exemplo o ID <strong>12345</strong> que é um ID fictício.</p>
 <h3>Exemplo de uso - Pegando dados</h3>
 <p>Agora você já fez o login e tem o ID do perfil do site que você quer pegar os resultados... Vamos fazer duas consultas de exemplo e pegar os dados necessários para fazer um relatório completo sobre as visitas e pageviews do mês passado:</p>
-<p>[code lang="php"]<?php
+
+[code lang="php"]<?php
 	require_once("gapi.class.php");</p>
 <p>	// Autenticação
 	$ga = new gapi('SEU EMAIL', 'SUA SENHA');</p>

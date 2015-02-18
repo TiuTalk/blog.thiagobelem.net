@@ -16,7 +16,8 @@ tags: []
 <p>A busca será feita no <strong>título</strong> e no <strong>conteúdo</strong> das notícias cadastradas no banco de dados, em uma tabela chamada <strong>notícias</strong>.</p>
 <p>Veja <a href="/arquivos/2009/05/busca.jpg" target="_blank">um exemplo</a> (imagem) de como ficará o resultado da busca sem CSS.</p>
 <p>Veja o código de criação da tabela:</p>
-<p>[code language="sql"]
+
+[code language="sql"]
 CREATE TABLE `noticias` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `titulo` VARCHAR( 255 ) NOT NULL ,
@@ -24,11 +25,13 @@ CREATE TABLE `noticias` (
 `ativa` BOOL NOT NULL ,
 `cadastro` DATETIME NOT NULL ,
 INDEX ( `ativa` )
-) ENGINE = MYISAM[/code]</p>
+) ENGINE = MYISAM[/code]
+
 <p>As colunas da tabela serão: <strong>id</strong>, <strong>titulo</strong>, <strong>texto</strong>, <strong>ativa</strong><span style="color: #999999;"> (1 ou 0)</span>, e <strong>cadastro</strong> <span style="color: #999999;">(AAAA-MM-DD HH:MM:SS)</span>.</p>
 <p>Esta é uma estrutura simples de uma tabela de notícias, e você vai precisar adaptar o script para a sua tabela caso queira usar uma pronta.</p>
 <p>Vamos ao formulário de busca:</p>
-<p>[code language="html"]
+
+[code language="html"]
 <form method="GET" action="http://www.meusite.com.br/busca.php">
 <fieldset>
 <label for="consulta">Buscar:</label>
@@ -36,11 +39,13 @@ INDEX ( `ativa` )
 <input type="submit" value="OK" />
 </fieldset>
 </form>
-[/code]</p>
+[/code]
+
 <p>Não se esqueça de alterar o action para o endereço certo do seu site... Se você preferir, pode definir o action usando caminho relativo, não há diferença.</p>
 <p>Passaremos a busca por método GET para ficar mais parecido com o Google. :)</p>
 <p>E agora o arquivo (<span style="color: #ff6600;"><strong>busca.php</strong></span>) que recebe os dados do formulário, faz a conexão ao banco de dados, processa a busca e exibe o resultado (sem paginação):</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php</p>
 <p>// Conexão com o MySQL
 // ========================
@@ -83,11 +88,13 @@ echo "</li>";
 }
 echo "</ul>";
 ?>
-[/code]</p>
+[/code]
+
 <p>Não se esqueça de mudar, dentro da exibição dos resultados, como é definida a variável $link para o formato que o seu site usa ;)</p>
 <p><strong>-----</strong></p>
 <p>E pra quem quiser o mesmo script com paginação:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php</p>
 <p>// Configuração do script
 // ========================
@@ -160,7 +167,8 @@ echo '<a href="?consulta='.$_GET['consulta'].'&pagina='.$n.'">'.$n.'</a>&nbsp;&n
 }
 }</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Reconheço que o script poderia ser mais simples, mas seu uso ficaria muito limitado (e o código ficaria enorme)... E com paginação fica muito mais legal, além de ser o que todo mundo acaba procurando.</p>
 <p>---</p>
 <p>Vocês perceberão que não há formatação e estilização (CSS) nenhuma... Esse sistema de busca foi feito para você usar de base e criar o seu próprio sistema.</p>

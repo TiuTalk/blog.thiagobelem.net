@@ -22,7 +22,8 @@ tags:
 <p><br/><br/></p>
 <h3>2. Indentação Consistente</h3>
 <p>Indentação é, sem dúvida, a parte mais importante desse artigo... Sem uma boa indentação o código perde toda a hierarquia de comandos... Existem várias formas de indentar o seu código, todas elas são válidas, mas algumas são mais recomendadas. Veja dois exemplos dos estilos de indentação mais utilizados:</p>
-<p>[code language="php"]<?php</p>
+
+[code language="php"]<?php</p>
 <p>if ($nota >= 7) {
 	echo 'Você foi aprovado!';
 } else {
@@ -54,7 +55,8 @@ Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é t�
 <p><br/></p>
 <h3>3. Evite comentários óbvios</h3>
 <p>Comentar o seu código é sempre bom... Comentários só pesam no tamanho do arquivo. E não é só por isso que vamos sair comentando todas as nossas linhas... Além de duplicar (ou triplicar) o nosso tempo de desenvolvimento, nosso codigo vai ficar muito poluído e explicitar o óbivio... Vejamos alguns exemplos que não precisam nem ser comentados (literalmente):</p>
-<p>[code language="php"]<?php</p>
+
+[code language="php"]<?php</p>
 <p>// Se o $nome for igual a Thiago
 if ($nome == 'Thiago')  {
 	// Exibe uma mensagem de boas vindas
@@ -62,11 +64,13 @@ if ($nome == 'Thiago')  {
 	// Calcula a idade da pessoa
 	$idade = calculaIdade($nome);
 }</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p><br/></p>
 <h3>4. Agrupamento de código</h3>
 <p>Muitas vezes fazemos isso sem perceber... E é uma ótima prática! Agrupe as linhas de código por suas funções/tarefas... Veja um exemplo:</p>
-<p>[code language="php"]<?php</p>
+
+[code language="php"]<?php</p>
 <p>// Lista os produtos em destaque
 $sql = "SELECT * FROM `produtos` WHERE `destaque` = 1";
 $query = mysql_query($sql);
@@ -79,7 +83,8 @@ $query = mysql_query($sql);
 while ($usuario = mysql_fetch_assoc($query)) {
 	echo '»' . $usuario['apelido'] . '';
 }</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p><br/></p>
 <h3>5. Os princípios DRY, DIE e KISS</h3>
 <p>Eu me lembro desses três principios diáriamente quando estou criando código e, caso você consiga entendê-los, compreendê-los e usá-los, você vai notar uma incrivel melhoria na qualidade e eficiência do seu código. Vamos ao nome e significado de cada um:</p>

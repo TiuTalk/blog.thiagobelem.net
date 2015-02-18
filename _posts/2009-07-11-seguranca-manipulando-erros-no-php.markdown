@@ -20,7 +20,8 @@ tags:
 <p>Manipular os erros de forma correta, além de deixar o site mais "bonito" faz com que você saiba, em <strong>tempo real</strong>, o que acontece com aquele seu site de 4 anos atrás que você nem monitora mais, pois ele te envia um e-mail dizendo o nome do site, o arquivo e a linha que deu erro.</p>
 <h3>Arquivo para a manipulação de erros</h3>
 <p>Para iniciar a manipular os seus erros é só dar um include/require nesse arquivo logo no começo do seu site. E não se esqueça de mudar as configurações entre as linhas 8 e 14.</p>
-<p>[code language="php"]<?php
+
+[code language="php"]<?php
 /**
  *  Arquivo para manipulação de erros de forma segura:
  *   envia um e-mail para o administrador com as informações sobre o erro
@@ -122,13 +123,17 @@ $_CONFIG['errorHandler']['toName'] = 'seu nome';</p>
 <p>// Define o seu novo manipulador de erros
 set_error_handler('manipuladorErros');</p>
 <p>echo $n;
-?>[/code]</p>
+?>[/code]
+
 <p>Caso você precise mudar a forma com qual o email é enviado, é só alterar ali em cima, entre as linhas 65 e 105.</p>
 <h3>Causando um erro</h3>
 <p>Ao executar o seguinte script (exibir uma variável que não existe):</p>
-<p>[code language="php" light="true"]<?php echo $n; ?> [/code]</p>
+
+[code language="php" light="true"]<?php echo $n; ?> [/code]
+
 <p>Termos a seguinte resposta por email:</p>
-<p>[code language="plain" light="true"][ ERRO NO PHP ]
+
+[code language="plain" light="true"][ ERRO NO PHP ]
 Site: Meu site
 Tipo de erro: NOTICE
 Arquivo: C:\apache\htdocs\erro.php
@@ -139,9 +144,12 @@ IP: 127.0.0.1
 User Agent: Mozilla/5.0 (Windows; U; Windows NT 5.2; pt-BR; rv:1.9.1) Gecko/20090624 Firefox/3.5 (.NET CLR 3.5.30729)</p>
 <p>URL: http://127.0.0.1/erro.php
 Referer: http://127.0.0.1/</p>
-<p>Data: 11/07/2009 10:40:29[/code]</p>
+<p>Data: 11/07/2009 10:40:29[/code]
+
 <p>E o assunto do e-mail recebido será:</p>
-<p>[code language="plain" light="true"][NOTICE] Meu site - 11/07/2009 10:40:29[/code]</p>
+
+[code language="plain" light="true"][NOTICE] Meu site - 11/07/2009 10:40:29[/code]
+
 <p>Gostaram né? :D</p>
 <p>Mesmo que esse formato de manipulação funcione, peço que não considerem essa versão do arquivo como a final e editem-no  da forma que acharem melhor para adequá-lo às suas necessidades.</p>
 <p>Um grande abraço e até a próxima!</p>

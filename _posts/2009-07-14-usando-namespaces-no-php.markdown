@@ -24,7 +24,8 @@ tags:
 <p>function connect() {
 	// Faz a sua conexão com o banco de dados
 }</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>Só que se você usar alguma outra biblioteca/classe/função pronta, pode haver uma colisão de nomes e você vai precisar mudar o nome da sua função pra algo maior... Só que você não quer isso.</p>
 <p>Aí, usando a maravilha do namespace, você faz assim:
 [code language="php" highlight="3"]<?php</p>
@@ -32,22 +33,26 @@ tags:
 <p>function connect() {
 	// Faz a sua conexão com o banco de dados
 }</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>E quando você precisar chamar a função do MeuProjeto é só fazer assim:
 [code language="php"]<?php
 	// Inclui o arquivo com a função
 	include("conexao-MySQL.php");</p>
 <p>	// Chama a função dentro do namespace
 	MeuProjeto/connect();
-?>[/code]</p>
+?>[/code]
+
 <h3>Sintaxe alternativa</h3>
-<p>[code language="php"]<?php</p>
+
+[code language="php"]<?php</p>
 <p>namespace MeuProjeto {</p>
 <p>	function connect() {
 		// Faz a sua conexão com o banco de dados
 	}</p>
 <p>}</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>--</p>
 <p>Eu usei apenas exemplo com funções, mas os namespaces funcionam muito bem com classes e constantes também! Vale a pena experimentar.</p>
 <p>Um grande abraço. ;)</p>

@@ -19,16 +19,19 @@ tags: []
 </ol>
 <p>Se você estiver testando seu script localmente, pode ignorar a segunda consideração e só se preocupar em enviar arquivos menores que 2Mb para testar a aplicação.</p>
 <p>Vamos ao formulário HTML para o usuário escolher o arquivo a ser enviado:</p>
-<p>[code language="html"]
+
+[code language="html"]
 <form method="post" action="recebe_upload.php" enctype="multipart/form-data">
 <label>Arquivo</label>
 <input type="file" name="arquivo" />
 <input type="submit" value="Enviar" />
 </form>
-[/code]</p>
+[/code]
+
 <p>Salve este HTML dentro de arquivo com o nome que preferir.</p>
 <p>Agora vamos criar o arquivo que irá receber os dados e cuidar de tudo pra você... Salve-o como <span style="color: #99cc00;"><strong>recebe_upload.php</strong></span>:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php</p>
 <p>// Pasta onde o arquivo vai ser salvo
 $_UP['pasta'] = 'uploads/';</p>
@@ -80,7 +83,8 @@ echo "Não foi possível enviar o arquivo, tente novamente";
 }</p>
 <p>}</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Com isso você já tem um script que recebe os dados enviados pelo formulário e que coloca (ou não) o arquivo na pasta.</p>
 <p>Eu sei que esse script pode parecer um pouco avançado pra quem tá começando, mas eu preferi fazer o "básico que todo mundo procura". Tentei colocar o máximo de comentários e fazer uma sintaxe mais clara o possível pra que vocês entendam.</p>
 <p>A parte que realmente faz o "upload" é apenas o comando da linha 53 que é o <strong>move_uploaded_file()</strong>. Vou explicar o nome e o uso dele:</p>

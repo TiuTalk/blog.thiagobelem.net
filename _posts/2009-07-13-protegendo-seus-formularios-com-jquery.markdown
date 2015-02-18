@@ -28,7 +28,8 @@ tags:
     	$("input[type='submit'],input[type='image']", this).attr("disabled", true);
     	return true;
     });
-});[/code]</p>
+});[/code]
+
 <p>Mas há um probleminha com esse código: se você usar algum tipo de validação por JavaScript (também ativado pelo submit do formulário) o codigo não vai funcinar caso o usuário tenha digitado algo que invalide o formulário.</p>
 <p>Uma solução seria chamar essa função de validação dentro desse código jQuery, da seguinte forma:
 [code language="javascript" highlight="3"]$(function() {
@@ -43,7 +44,8 @@ tags:
 			return false;
 		}
 	});
-});[/code]</p>
+});[/code]
+
 <p>Com isso nós iremos bloquear o próximo submit apenas quando os dados forem validados. ;)</p>
 <p>Espero que tenham gostado! :)</p>
 <p><strong style="background: gray; color: white">Atualização:</strong> Troquei o código por um que funciona no IE6, não tem alert() e é mais fácil de entender.</p>

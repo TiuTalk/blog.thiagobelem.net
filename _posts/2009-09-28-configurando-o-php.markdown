@@ -36,7 +36,11 @@ tags:
 <h3>Mudando uma configuração do PHP via arquivos .htaccess</h3>
 <p>Normalmente você vai estar rodando seu site/sistema em um servidor compartilhado, o que não te dará permissão de acesso ao arquivo <strong>php.ini</strong>, por isso o PHP permite que você altere essas opções direto pelo Apache, ou seja: usando arquivos .htaccess.</p>
 <p>Existe um comando diferente para cada TIPO de valor que será alterado, os valores que são flags lógicas, ou seja true ou false, 0 ou 1, on ou off você faz assim:</p>
-<p>[code light="true"]php_flag register_globals Off[/code]</p>
+
+[code light="true"]php_flag register_globals Off[/code]
+
 <p>E os outros tipos de configurações, que recebem valores não lógicos, como o tamanho máximo do upload, você faz assim:</p>
-<p>[code light="true"]php_value post_max_size 10M[/code]</p>
+
+[code light="true"]php_value post_max_size 10M[/code]
+
 <p>Espero que tenham gostado! :)</p>

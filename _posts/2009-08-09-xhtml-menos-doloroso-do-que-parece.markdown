@@ -16,12 +16,14 @@ tags:
 <p>Se isso parece errado para você:
 [code language="html" light="true"]<p>Olá mundo, <strong>olá Terra!</p></strong>[/code]
 Você provavelmente vai preferir isso:
-[code language="html" light="true"]<p>Olá mundo, <strong>olá Terra!</strong></p>[/code]</p>
+[code language="html" light="true"]<p>Olá mundo, <strong>olá Terra!</strong></p>[/code]
+
 <p>Você já andou meio caminho... Essa é a regra principal do XHTML... Todos os elementos precisam ser fechados na ordem inversa a que foram abertos... Como assim? Se você abriu as tags 1, 2 e 3 vai precisar fechar 3, 2 e 1. :)</p>
 <p>Por exemplo, esse código:
 [code language="html" light="true"]<div>
 	<ul>
-		<li>[/code]</p>
+		<li>[/code]
+
 <p>Segundo o XHTML ele deveria ser fechado dessa forma:
 [code language="html" light="true"]		</li>
 	</ul>
@@ -35,11 +37,13 @@ Isso tudo é muito mais organizado e mais fácil de ler, concordam?</p>
 	<hr />
 	<p>Esse é outro parágrafo com TAG de fechamento e  quebra de linha!</p>
 	<input type="text" name="meuInput" />
-</div>[/code]</p>
+</div>[/code]
+
 <p>Viram? É só colocar uma barra (pra direita) antes do > que termina a tag e pronto! :)</p>
 <p>Existem ainda outras regras que ditam uma boa semântica e organização do codigo XHTML como "todas as tags devem ser em minúsculo" e outras que especificam uma lista de <strong>propriedades</strong> obrigatórias pra cada elemento como o <a> tem que ter title, e o <img> tem que ter src e alt.. :)</p>
 <p>Um outro ponto importante do XHTML é o DOCTYPE que informa a definição do XHTML que se esta usando, são três tipos:</p>
-<p>[code language="html" light="true"]<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">[/code]
+
+[code language="html" light="true"]<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">[/code]
 O <strong>DOCTYPE Strict</strong> deve ser usado quando se cumpre todas as especificações do XHTML e ele não validará enquanto TUDO não foi 100% correto e seguindo os <a href="http://www.w3.org/TR/xhtml1/" target="_blank">padrões</a> definidos pelo W3C.
 [code language="html" light="true"]<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">[/code]
 Já o <strong>DOCTYPE Transitional</strong> (que deve ser usado pela maioria dos sites) é quando você saiu do HTML e está em transição para o XHTML perfeito, permitindo que o seu site seja validado com menos exigências.

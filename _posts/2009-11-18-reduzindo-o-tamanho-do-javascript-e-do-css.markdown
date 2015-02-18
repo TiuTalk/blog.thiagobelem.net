@@ -50,7 +50,9 @@ code {
 <p>.find-box-search {
 	border-color: #dfdfdf;
 	background-color: #f1f1f1;
-}[/code]</p>
+}[/code]
+
 <p>Depois:
-[code language="css"]html{background-color:#f7f6f1;}* html input,* html .widget{border-color:#8cbdd5;}textarea,input,select{border-color:#dfdfdf;}kbd,code{background:#eaeaea;}input[readonly]{background-color:#eee;}.find-box-search{border-color:#dfdfdf;background-color:#f1f1f1;}[/code]</p>
+[code language="css"]html{background-color:#f7f6f1;}* html input,* html .widget{border-color:#8cbdd5;}textarea,input,select{border-color:#dfdfdf;}kbd,code{background:#eaeaea;}input[readonly]{background-color:#eee;}.find-box-search{border-color:#dfdfdf;background-color:#f1f1f1;}[/code]
+
 <p>Espero que tenham gostado! :)</p>

@@ -95,7 +95,8 @@ Mas suponhamos que você testou o script e reparou que algo deu errado.. E depoi
 	curl_setopt($cURL, CURLOPT_REFERER, 'http://www.meusite.com.br/contato.php');</p>
 <p>	$resultado = curl_exec($cURL);
 	curl_close($cURL);
-?>[/code]</p>
+?>[/code]
+
 <p>--</p>
 <p>Vou parar por aqui... Sei que existem vários outros usos e possíveis exemplos do cURL, mas a minha intenção era apenas mostrar como é simples e rápido usar todos os recursos do cURL... Se você misturar os comandos certos com as funções certas, vai poder fazer um sistema bem legal.</p>
 <p>Espero que tenham gostado! :D</p>

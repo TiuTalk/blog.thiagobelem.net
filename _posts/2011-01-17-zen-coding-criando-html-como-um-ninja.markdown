@@ -34,7 +34,8 @@ tags:
 		<li><a href=""></a></li>
 		<li><a href=""></a></li>
 	</ul>
-</div>[/code]</p>
+</div>[/code]
+
 <h3>Editores com suporte ao Zen-Coding</h3>
 <p>Você pode baixar o plugin do Zen-Coding no <a href="http://code.google.com/p/zen-coding/" target="_blank">site oficial</a> para os seguintes editores:</p>
 <blockquote><p>Aptana/Eclipse, TextMate (Mac), Coda (Mac), Espresso (Mac), Komodo Edit/IDE, Notepad++ (Windows), PSPad (Windows), <textarea> (browser), editArea (browser), CodeMirror (browser), Dreamweaver (Windows, Mac), Sublime Text (Windows), UltraEdit (Windows), TopStyle (Windows), GEdit, BBEdit/TextWrangler (Mac), Visual Studio (Windows), EmEditor (Windows), Sakura Editor (Windows), NetBeans, IntelliJ IDEA/WebStorm/PHPStorm, Emacs, Vim e Visual Studio</p></blockquote>
@@ -58,7 +59,8 @@ Em um template de site completo:
 		</div>
 		<footer></footer>
 	</body>
-</html>[/code]</p>
+</html>[/code]
+
 <p>Esse é um bom exemplo do que ele é capaz de fazer... Mas não é um uso comum dele... A idéia é você fazer HTML muito rápido, por exemplo quando você digita <code>#menu>ul>li*5>a</code> e "expande", você ganha tempo por não ter que escrever (e organizar/identar), isso tudo:
 [code language="html"]<div id="menu">
 	<ul>
@@ -68,7 +70,8 @@ Em um template de site completo:
 		<li><a href=""></a></li>
 		<li><a href=""></a></li>
 	</ul>
-</div>[/code]</p>
+</div>[/code]
+
 <hr />
 <p>Espero que vocês tenham gostado dessa ferramenta! Ela não é novidade, mas sei que nem todo mundo conhece. ;)</p>
 <p>Lembre-se, quanto menos tempo você gastar fazendo as tarefas que vive fazendo, mais tempo você terá pra ganhar mais dinheiro!</p>

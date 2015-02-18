@@ -12,7 +12,8 @@ tags: []
 <p>Hoje vou ensinar vocês a criarem um pequeno sistema de contador dos visitantes que estão online no seu site.</p>
 <p>Tudo se resume a criar uma entrada única no banco para cada visitante e apagá-la depois de 20 minutos de inatividade (nenhum carregamento de página). Também criaremos uma função para você inserir onde quiser exibir o número de visitantes que apareceram no seu site nesses ultimos 20 minutos e outra função para informar os recordes de visitas. Vamos ao que interessa:</p>
 <p>Primeiro, criamos as tabelas no MySQL para armazenamento dos dados, são duas tabelas: uma para os visitantes onlines e outra para registro dos recordes... Veja os códigos:</p>
-<p>[code language="sql"]
+
+[code language="sql"]
 CREATE TABLE IF NOT EXISTS `visitas_online` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`ip` varchar(15) NOT NULL,
@@ -27,9 +28,11 @@ CREATE TABLE IF NOT EXISTS `visitas_online` (
 	`visitantes` int(11) NOT NULL,
 	PRIMARY KEY (`id`)
 ) ENGINE=MyISAM ;
-[/code]</p>
+[/code]
+
 <p>Depois criamos um arquivo chamado <span style="color: #ff6600;"><strong>visitantes-online.php</strong></span> com o seguinte conteúdo:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php
 /**
 * Sistema de contador de visitantes online
@@ -138,7 +141,8 @@ function visitantesRecorde($formato = 'd/m/Y') {
 }</p>
 <p>if ($_VO['registraAuto'] == true) { registraVisita(); }
 ?>
-[/code]</p>
+[/code]
+
 <p>Você só precisa inserir esse arquivo no <span style="text-decoration: underline;">começo</span> do seu site, antes de enviar qualquer HTML para o visitante. Veja a baixo as funções que você irá usar para contabilizar os visitantes online e os recordes de visitas:</p>
 <p>Nesse arquivo criamos quatro funções que vão fazer o seguinte:</p>
 <p><strong>geraIdentificador()</strong></p>
@@ -150,14 +154,18 @@ function visitantesRecorde($formato = 'd/m/Y') {
 <p><strong>visitantesOnline()</strong></p>
 <p>Esta função vai te retornar um valor numérico inteiro contendo o número de visitantes online no seu site nos últimos 20 minutos.</p>
 <p>Para usá-la, é só inserir um bloco de php onde você deseja que o número apareça, assim:</p>
-<p>[code language="php"]<p>Visitantes online: <?php echo visitantesOnline(); ?>!</p>[/code]</p>
+
+[code language="php"]<p>Visitantes online: <?php echo visitantesOnline(); ?>!</p>[/code]
+
 <p><strong>visitantesRecorde($formato)</strong></p>
 <p>Com essa função você vai receber um array, contendo dois elementos: primeiro a data do recorde, depois o recorde de visitas. Você pode, se quiser, formatar a data retornada (seguindo os parâmetros da função <a href="http://br2.php.net/manual/pt_BR/function.date.php" target="_blank">date()</a>).</p>
 <p>Para usá-la você precisará fazer da seguinte forma:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php $dados = visitantesRecorde(); ?>
 <p>O máximo de visitantes online foi em <?php echo $dados[0]; ?>, com <?php echo $dados[1]; ?> visitantes.</p>
-[/code]</p>
+[/code]
+
 <p>Se quiser formatar a data é só fazer, por exemplo, assim:
 $dados = visitantesRecorde('d/m/Y H:i');</p>
 <p>Espero que tenham gostado! E não se esqueçam de olhar a parte de configurações do script para um bom uso dele.</p>

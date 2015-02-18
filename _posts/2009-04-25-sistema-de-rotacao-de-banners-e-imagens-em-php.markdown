@@ -12,7 +12,8 @@ tags: []
 <p>Essa é uma dúvida comum entre os iniciantes e aqueles que não conhecem nenhum <em><abbr title="Gerenciador de Anúncios">ad manager</abbr></em> que nem o <a title="Google Ad Manager" href="https://www.google.com/dfp/login/pt_BR/index.html" target="_blank">Google Ad Manager</a>: como criar um sistema de rotação de banners (ou imagens) em PHP? Aquela funcionalidade que faz com que, cada vez que você carrague o site (<em>refresh</em>), apareça uma imagem diferente em um local.</p>
 <p>Bom, existem dezenas de formas de fazer isso, mas eu vou tentar fazer da forma mais simples possível.</p>
 <p>Vamos criar um arquivo chamado <span style="color: #ff6600;"><strong>banner_superior.php</strong></span> com o seguinte conteúdo:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php
 unset($_ELEMENTOS);</p>
 <p>$_ELEMENTOS[] = '<a href="http://site.com/"><img src="site.jpg" alt="" width="10" height="10" /></a>';
@@ -22,7 +23,8 @@ $_ELEMENTOS[] = '<a href="http://forum.com/"><img src="forum.jpg" alt="" width="
 $escolhido = rand(0, $total - 1); // Define um número aleatório</p>
 <p>echo $_ELEMENTOS[$escolhido]; // Exibe o elemento</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Depois é só incluir (com <strong>include()</strong>) o arquivo aonde você quer que o banner apareça.</p>
 <p>--</p>
 <p>O que o scrip faz é bem simples: Primeiro definimos um array contendo o código HTML (imagem e link no caso) de cada banner que poderá ser exibido, depois descobrimos quantos elementos foram definidos e, por fim, exibimos um elemento aleatório.</p>

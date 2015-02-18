@@ -17,7 +17,8 @@ tags:
 <p>O ponto-chave desse tipo de função é o uso de duas outras funções nativas do PHP, são elas: <a href="http://www.php.net/manual/pt_BR/function.func-num-args.php" target="_blank">func_num_args()</a> e <a href="http://www.php.net/manual/pt_BR/function.func-get-args.php" target="_blank">func_get_args()</a>.</p>
 <p>A função <strong>func_num_args()</strong> (quando usada dentro de uma outra função) retorna o número de argumentos que foram passados para essa função. E a função <strong>func_get_args()</strong> retorna uma lista (array) com os argumentos que foram passados para essa função.</p>
 <p>Vamos criar uma função para calcular a média de uma quantiade qualquer de números:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php</p>
 <p>/**
  * Função que calcula a média de N números
@@ -25,34 +26,42 @@ tags:
 function media() {</p>
 <p>}</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Perceba que, na definição da função, não colocamos nada no lugar dos parâmetros/argumentos que ela necessita... Exatamente por que <strong>a quantidade de argumentos será variável</strong>.</p>
 <p>Agora vamos pegar o total e a lista de argumentos passados para a função:</p>
-<p>[code language="php" firstline="7"]
+
+[code language="php" firstline="7"]
 	// Total de argumentos passados
 	$total = func_num_args();
 	// Array com cada um dos argumentos passados
 	$numeros = func_get_args();
-[/code]</p>
+[/code]
+
 <p>Feito isso, vamos precisar fazer uma verificação, só por segurança, da quantidade de argumentos passados... Não há lógica em tentar calcular a média de 0 numeros, não é mesmo?</p>
-<p>[code language="php" firstline="12"]
+
+[code language="php" firstline="12"]
 	// Verifica se foi passado pelo menos 1 número
 	if ($total < 1) {
 		trigger_error('Não é possível calcular a média de menos de 1 número!');
 		return 0;
 	}
-[/code]</p>
+[/code]
+
 <p>E por final, caso tenha sido passado pelo menos um argumento, calculamos a somatória dos números e retornamos a média:</p>
-<p>[code language="php" firstline="16"]
+
+[code language="php" firstline="16"]
 	} else {
 		// Calcula a somatória de todos os números passados
 		$soma = array_sum($numeros);
 		// Retorna a média dos números
 		return ($soma / $total);
 	}
-[/code]</p>
+[/code]
+
 <p>No final das contas, nossa função ficou assim:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php</p>
 <p>/**
  * Função que calcula a média de N números
@@ -75,7 +84,8 @@ function media() {
 	}
 }</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>O uso dela é bem simples:
 [code language="php"]
 <?php</p>
@@ -86,5 +96,6 @@ function media() {
 <p>echo media(1, 7, 2.1, 5.3214, 9, 10000);
 // 1670.7369</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Espero que tenham gostado! Até a próxima! :]</p>

@@ -22,7 +22,8 @@ tags:
 <h3>Começando pelo começo</h3>
 <p>Antes de mais nada você, meu amigo desenvolvedor, precisa de uma <strong>Google Maps API Key</strong> (<em>GMAK</em>) que é um código que te permite usar as APIs do Google Maps e te identifica perante ao Google. Para criar a sua GMAK é só entrar <a href="http://code.google.com/intl/pt-BR/apis/maps/signup.html" target="_blank">nesse endereço</a> e preencher o formulário.</p>
 <p>Tendo sua GMAK em mãos, vamos ver a classe que usaremos para esse e os próximos tutoriais:</p>
-<p>[code language="php"]/**
+
+[code language="php"]/**
  * gMaps Class
  *
  * Pega as informações de latitude, longitude e zoom de um endereço usando a API do Google Maps
@@ -66,9 +67,11 @@ class gMaps {
 		}
 		return array('lat' => $latitude, 'lon' => $longitude, 'zoom' => $zoom, 'endereco' => $endereco);
 	}
-}[/code]</p>
+}[/code]
+
 <p>O uso dela é ridiculamente simples:</p>
-<p>[code language="php"]<?php
+
+[code language="php"]<?php
 // Instancia a classe
 $gmaps = new gMaps('SUA GMAK AQUI');</p>
 <p>// Pega os dados (latitude, longitude e zoom) do endereço:
@@ -76,7 +79,8 @@ $endereco = 'Av. Brasil, 1453, Rio de Janeiro, RJ';
 $dados = $gmaps->geolocal($endereco);</p>
 <p>// Exibe os dados encontrados:
 print_r($dados);
-?>[/code]</p>
+?>[/code]
+
 <p>Com isso já temos todas as informações necessárias para exibir um mapinha do GoogleMaps com o endereço marcado, o que faremos no <a href="/exibindo-mapas-no-seu-site-google-maps-php-parte-2" target="_blank">próximo tutorial</a>. :)</p>
 <p><strong style="color: blue">Parte 2:</strong> <a href="/exibindo-mapas-no-seu-site-google-maps-php-parte-2" target="_blank">Exibindo mapas no seu site – Google Maps + PHP – Parte 2</a></p>
 <p>Um grande abraço a todos!</p>

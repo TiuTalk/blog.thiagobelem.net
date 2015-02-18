@@ -9,7 +9,8 @@ categories:
 tags: []
 ---
 <p>Hoje vou ensinar como criar uma planilha do Excel (.xls) e enviá-la para Download com um script bem simples.</p>
-<p>[code language="php"]<?php
+
+[code language="php"]<?php
 /*
 * Criando e exportando planilhas do Excel
 * http://blog.thiagobelem.net/
@@ -49,7 +50,8 @@ header ("Content-Description: PHP Generated Data" );</p>
 <p>// Envia o conteúdo do arquivo
 echo $html;
 exit;</p>
-<p>?>[/code]</p>
+<p>?>[/code]
+
 <p>Você pode repara que o script foi separado em duas partes: primeiro definimos uma tabela html que será o formato da planilha e depois, usando várias configurações header(), enviamos o conteúdo do arquivo para download.</p>
 <p>Com um pouquinho mais de criatividade você pode fazer uma conexão ao banco de dados e preencher a tabela com registros.</p>
 <p>Simples não? =)</p>

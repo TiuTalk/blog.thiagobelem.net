@@ -20,10 +20,12 @@ tags:
 <h3>A Solução</h3>
 <p>Edite o arquivo o arquivo <strong>.htaccess</strong> na raíz do seu site ou o arquivo <strong>httpd.conf</strong> do seu servidor, em servidores Linux ele provavelmente fica em <code>/usr/apache2/</code> e em servidores Windows o local pode ser em <code>C:/Arquivos de Programas/Apache Group/Apache/conf/</code>, se não encontrar, faça uma busca em <code>httpd.conf</code> que você encontrará.</p>
 <p>Em um desses dois arquivos, coloque a seguinte linha de código:</p>
-<p>[code language="shell"]
+
+[code language="shell"]
 # Muda o arquivo de erro 404
 ErrorDocument 404 /erro404.php
-[/code]</p>
+[/code]
+
 <p>Isso fará com que o Apache use o arquivo <strong>erro404.php</strong> para lidar com a mensagem de erro. Você pode usar arquivos HTML também, não tem problema.</p>
 <p>Uma boa idéia é mandar para a página inicial do seu site. :)</p>
 <h3>Saiba mais (documentação)</h3>

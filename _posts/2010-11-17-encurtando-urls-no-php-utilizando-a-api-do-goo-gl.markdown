@@ -20,7 +20,8 @@ tags:
 <p>Depois de algumas horas de insônia resolvi fazer uma classe que, creio eu, vai ser útil pra algumas pessoas por ai: uma classe para encurtar URLs utilizando a API do "novo" serviço de encurtamento do <strong>Google</strong>, o <a href="http://goo.gl/" target="_blank">goo.gl</a>.
 <a id="more"></a><a id="more-991"></a></p>
 <p>O código da classe é bem simples:</p>
-<p>[code language="php"]
+
+[code language="php"]
 <?php</p>
 <p>/**
  * Goo.gl API
@@ -127,24 +128,28 @@ class Googl {</p>
 	}
 }</p>
 <p>?>
-[/code]</p>
+[/code]
+
 <p>Essa classe bem simples possui dois métodos: um para fazer uma requisição HTTP utilizando a biblioteca cURL e outro para encurtar a URL (que utiliza o método de requisição).</p>
 <p>O retorno do método <code>Googl::shorten()</code> vai ser a URL encurtada ou um array de URLs encurtadas (caso você passe um array como parâmetro).</p>
 <p>Um ponto importante sobre essa classe é a utilização da função <a href="http://www.php.net/manual/en/function.filter-var.php">filter_var()</a> para verificar se uma URL é válida antes de tentar encurtar ela... Essa é uma função muito útil para verificar o conteúdo de variáveis.</p>
 <h2>Como usar essa classe?</h2>
 <p>Veja um exemplo:</p>
-<p>[code language="php"]
+
+[code language="php"]
 $Googl = new Googl();</p>
 <p>$url = 'http://blog.thiagobelem.net/vida-pessoal/freelancear-ou-nao-freelancear-eis-a-questao-parte-3/';
 $url_encurtada = $Googl->shorten($url);</p>
 <p>echo "<p>URL original: <strong>". $url ."</strong></p>";
 echo "<p>URL encurtada: <strong>". $url_encurtada ."</strong></p>";
 echo "<p>Diferença: <strong>". (strlen($url) - strlen($url_encurtada)) ."</strong> caracteres</p>";
-[/code]</p>
+[/code]
+
 <p>Como resultado desse exemplo você teria uma URL encurtada economizando 75 caracteres!</p>
 <h3>Usando uma função pra facilitar as coisas</h3>
 <p>Você também pode criar uma função que faz o trabalho de instanciar a classe pra você!</p>
-<p>[code language="php"]
+
+[code language="php"]
 /**
  * Encurta URLs utilizando a classe de API do goo.gl
  *
@@ -156,9 +161,12 @@ function googl($url) {
 	$Googl = new Googl();
 	return $Googl->shorten($url);
 }
-[/code]</p>
+[/code]
+
 <p>Com isso seria só usar:</p>
-<p>[code language="php" light="true"]googl('http://thiagobelem.net/');[/code]</p>
+
+[code language="php" light="true"]googl('http://thiagobelem.net/');[/code]
+
 <h3>Download do código fonte</h3>
 <p>Caso você tenha preguiça de copiar e colar, pode baixar o <a title="Código-fonte da classe Googl" href="/arquivos/googl.class.phps" target="_blank">arquivo com código fonte</a> dela e sair usando!</p>
 <p>Espero que tenham gostado! :)</p>
