@@ -72,6 +72,6 @@ tags:
 <p>Com o MVC você conseguirá organizar seu projeto de forma que tudo tenha seu lugar, e cada camada com sua responsabilidade, permitindo um trabalho muitos mais "centrado" e modularizado.</p>
 <p>Espero que você tenha gostado dessa breve explicação sobre o MVC, e que ela tenha despertado a fagulha de curiosidade/interesse que vai fazer você correr atrás de mais conteúdo sobre o assunto... Te garanto que isso é só a ponta do iceberg.</p>
 <h2>Momento jabá!</h2>
-<p><a href="http://assando-sites.com.br/"><img class="alignright  wp-image-3002" style="box-shadow: none;" alt="Assando Sites, curso online de CakePHP" src="http://blog.thiagobelem.net/wp-content/uploads/2013/01/bolo-topo-gnomo-direita-175x300.png" width="82" height="140" /></a></p>
+<p><a href="http://assando-sites.com.br/"><img class="alignright  wp-image-3002" style="box-shadow: none;" alt="Assando Sites, curso online de CakePHP" src="/assets/uploads/2013/01/bolo-topo-gnomo-direita-175x300.png" width="82" height="140" /></a></p>
 <p>Gostou dos exemplos e quer aprender um pouco mais sobre <strong>CakePHP</strong>? E se eu te disser que tenho um curso que é <strong>online e ao vivo</strong>, e você aprende sem sair de casa?</p>
 <p>Gostou? Então inscreva-se na próxima turma e aprenda a <strong>assar sites</strong> como um cozinheiro de primeira: <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br/">Assando Sites, curso online de CakePHP</a></p>

@@ -42,7 +42,7 @@ tags:
 <p>A palestra dele teve muito a ver com a minha: falou sobre todas as técnicas de otimização de front end, passando por Sprites, CDN e etc.</p>
 <h3>Otimizando o carregamento de sites com jQuery - Thiago Belem</h3>
 <p><a href="http://dev.thiagobelem.net/otimizacao-jquery/slides/">http://dev.thiagobelem.net/otimizacao-jquery/slides/</a></p>
-<p><a href="http://blog.thiagobelem.net/wp-content/uploads/2011/06/324851939.jpg"><img class="aligncenter size-large wp-image-1600" title="324851939" src="http://blog.thiagobelem.net/wp-content/uploads/2011/06/324851939-570x200.jpg" alt="" width="570" height="200" /></a></p>
+<p><a href="/assets/uploads/2011/06/324851939.jpg"><img class="aligncenter size-large wp-image-1600" title="324851939" src="/assets/uploads/2011/06/324851939-570x200.jpg" alt="" width="570" height="200" /></a></p>
 <p>Foi a minha vez de ficar de frente pro público: minha primeira palestra, e eu estava extremamente nervoso.</p>
 <p>A minha <a href="http://dev.thiagobelem.net/otimizacao-jquery/slides/">palestra</a> (feita em HTML5 e CSS3) não possuía tanto conteúdo quanto as outras, isso se deve ao tema escolhido... pouca gente se preocupa com isso hoje em dia.</p>
 <p>Acompanhei a "vibe" que o Solano deixou sobre técnicas de otimização de carregamento de sites e comecei a falar mal das fucking requisições!</p>

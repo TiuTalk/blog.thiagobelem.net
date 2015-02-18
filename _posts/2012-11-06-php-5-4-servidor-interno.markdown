@@ -19,7 +19,7 @@ tags:
 <p>Então se quisermos abrir um servidor na porta 8080 local, seria assim:</p>
 <div data-gist-id="4028583" data-gist-show-loading="false"></div>
 <p>Esse comando <strong>vai abrir um servidor com raíz na pasta atual</strong>, então você pode executar um site/script que esteja em qualquer lugar da sua máquina, e não apenas dentro da raíz pré-definida como acontecia com o Apache ou Nginx.</p>
-<p><img class="aligncenter size-full wp-image-2865" title="php-cli-webserver-492x400" src="http://blog.thiagobelem.net/wp-content/uploads/2012/11/php-cli-webserver-492x400.png" alt="" width="492" height="400" /></p>
+<p><img class="aligncenter size-full wp-image-2865" title="php-cli-webserver-492x400" src="/assets/uploads/2012/11/php-cli-webserver-492x400.png" alt="" width="492" height="400" /></p>
 <h3>Arquivo de entrada e rotas (ou entry-point)</h3>
 <p>Esse servidor embutido do PHP <strong>não suporta aquivos .htaccess</strong>, então você precisará trabalhar a reescrita de URL através de um arquivo comumente chamado de <strong>entry-point</strong>:</p>
 <div data-gist-id="4028593" data-gist-show-loading="false"></div>
