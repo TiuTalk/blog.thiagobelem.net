@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um tema para WordPress – Parte 2
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Na segunda parte começamos a utilizar algumas funções do WordPress para alimentar
   o nosso HTML com informações sobre o blog, feed RSS e etc.
-wordpress_id: 1901
-wordpress_url: http://blog.thiagobelem.net/?p=1901
+
 date: '2011-12-22 10:04:21 -0200'
-date_gmt: '2011-12-22 12:04:21 -0200'
 categories:
 - Desenvolvimento
 - PHP

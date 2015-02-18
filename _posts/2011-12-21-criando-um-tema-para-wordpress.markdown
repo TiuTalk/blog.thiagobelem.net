@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um tema para WordPress - Parte 1
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Primeira parte de uma série de artigos onde irei documentar o passo-a-passo
   do processo de criação de um tema de WordPress, acompanhando um caso do mundo real.
-wordpress_id: 1886
-wordpress_url: http://blog.thiagobelem.net/?p=1886
+
 date: '2011-12-21 15:30:27 -0200'
-date_gmt: '2011-12-21 17:30:27 -0200'
 categories:
 - Desenvolvimento
 - PHP

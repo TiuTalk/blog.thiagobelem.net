@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Melhores práticas para deixar seu código legível
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda um pouquinho sobre as 8 melhores práticas durante o desenvolvimento
   de códigos, em qualquer linguagem de programação e deixe os seus códigos mais limpos,
   organizados e legíveis, facilitando assim o seu trabalho no futuro.
-wordpress_id: 656
-wordpress_url: http://blog.thiagobelem.net/?p=656
+
 date: '2009-12-10 14:33:26 -0200'
-date_gmt: '2009-12-10 16:33:26 -0200'
 categories:
 - Desenvolvimento
 - PHP

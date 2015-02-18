@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Editor gráfico (GUI) para PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 369
-wordpress_url: http://blog.thiagobelem.net/?p=369
+
 date: '2009-03-22 02:53:13 -0300'
-date_gmt: '2009-03-22 05:53:13 -0300'
 categories:
 - PHP
 - Artigos

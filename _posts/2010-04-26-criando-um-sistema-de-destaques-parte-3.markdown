@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um sistema de destaques – Parte 3
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Terceira e última parte do tutorial que te ensina a criar um sistema de destaques
   para o seu site ou blog utilizando PHP, MySQL, xHTML e CSS com efeitos de transição
   em jQuery.
-wordpress_id: 737
-wordpress_url: http://blog.thiagobelem.net/?p=737
+
 date: '2010-04-26 22:30:35 -0300'
-date_gmt: '2010-04-27 01:30:35 -0300'
 categories:
 - HTML
 - CSS

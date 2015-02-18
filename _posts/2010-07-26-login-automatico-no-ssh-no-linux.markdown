@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Login automático no SSH (no Linux)
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Com o SSH você consegue controlar seu servidor remotamente utilizando comandos,
   aprenda a tornar o acesso via SSH uma coisa mais fácil e rápida
-wordpress_id: 886
-wordpress_url: http://blog.thiagobelem.net/?p=886
+
 date: '2010-07-26 19:32:58 -0300'
-date_gmt: '2010-07-26 22:32:58 -0300'
 categories:
 - Linux
 tags:

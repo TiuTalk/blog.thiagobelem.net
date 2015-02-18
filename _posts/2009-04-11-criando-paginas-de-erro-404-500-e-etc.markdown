@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando páginas de erro (404, 500 e etc)
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 412
-wordpress_url: http://blog.thiagobelem.net/?p=412
+
 date: '2009-04-11 21:09:29 -0300'
-date_gmt: '2009-04-12 00:09:29 -0300'
 categories:
 - Tutoriais
 - Apache

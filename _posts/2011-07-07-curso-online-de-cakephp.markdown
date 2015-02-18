@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Curso online de CakePHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1691
-wordpress_url: http://blog.thiagobelem.net/?p=1691
+
 date: '2011-07-07 16:59:24 -0300'
-date_gmt: '2011-07-07 19:59:24 -0300'
 categories:
 - Desenvolvimento
 - PHP

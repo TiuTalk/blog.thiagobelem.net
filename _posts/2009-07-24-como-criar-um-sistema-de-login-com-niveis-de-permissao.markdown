@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Como criar um Sistema de Login com Níveis de Permissão
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda como é a criação de um sistema de login com níveis de acesso e entenda
   como tudo funciona desde a criação do banco de dados até a proteção das páginas
   individualmente.
-wordpress_id: 591
-wordpress_url: http://blog.thiagobelem.net/?p=591
+
 date: '2009-07-24 10:14:29 -0300'
-date_gmt: '2009-07-24 13:14:29 -0300'
 categories:
 - PHP
 - MySQL

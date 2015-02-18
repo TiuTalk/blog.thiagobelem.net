@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Zen-Coding – Criando HTML como um ninja!
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Com o Zen-Coding você pode criar blocos de dezenas de linhas de HTML rapidamente!
   Digite algo parecido com uma expressão CSS e saia com um HTML pronto para usar.
-wordpress_id: 1345
-wordpress_url: http://blog.thiagobelem.net/?p=1345
+
 date: '2011-01-17 22:24:58 -0200'
-date_gmt: '2011-01-18 00:24:58 -0200'
 categories:
 - HTML
 - Artigos

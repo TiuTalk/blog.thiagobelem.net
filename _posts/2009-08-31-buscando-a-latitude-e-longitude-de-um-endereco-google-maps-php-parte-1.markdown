@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Buscando a Latitude e Longitude de um endereço – Google Maps + PHP – Parte
   1
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja o código de uma classe que pode ser usada para encontrar os dados de
   latitude, longitude e nível zoom de um endereço qualquer usando a API de informações
   do Google Maps! É muito simples!
-wordpress_id: 548
-wordpress_url: http://blog.thiagobelem.net/?p=548
+
 date: '2009-08-31 20:27:48 -0300'
-date_gmt: '2009-08-31 23:27:48 -0300'
 categories:
 - PHP
 - Tutoriais

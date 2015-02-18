@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: PHP 5.4 - Servidor interno
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 2855
-wordpress_url: http://blog.thiagobelem.net/?p=2855
+
 date: '2012-11-06 23:09:30 -0200'
-date_gmt: '2012-11-07 01:09:30 -0200'
 categories:
 - Desenvolvimento
 - PHP

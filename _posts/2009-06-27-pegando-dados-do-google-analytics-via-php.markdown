@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Pegando dados do Google Analytics via PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar o GAPI (Google Analytics PHP Interface) para gerar relatórios
   com os dados do Google Analytics de todos os sites da sua conta Google e exiba as
   informações e gráficos dentro do seu próprio site!
-wordpress_id: 555
-wordpress_url: http://blog.thiagobelem.net/?p=555
+
 date: '2009-06-27 11:48:43 -0300'
-date_gmt: '2009-06-27 14:48:43 -0300'
 categories:
 - PHP
 - Artigos

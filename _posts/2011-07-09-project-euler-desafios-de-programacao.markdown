@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Project Euler - Desafios de programação
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1700
-wordpress_url: http://blog.thiagobelem.net/?p=1700
+
 date: '2011-07-09 16:05:20 -0300'
-date_gmt: '2011-07-09 19:05:20 -0300'
 categories:
 - PHP
 - Artigos

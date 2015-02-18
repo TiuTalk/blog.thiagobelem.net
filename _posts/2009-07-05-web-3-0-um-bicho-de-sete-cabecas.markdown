@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Web 3.0 – Um bicho de sete cabeças?
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda um pouquinho mais sobre a nova tendência da Web e entenda como a
   qualidade do seu HTML é tão importante para um mundo melhor em um futuro próximo.
-wordpress_id: 559
-wordpress_url: http://blog.thiagobelem.net/?p=559
+
 date: '2009-07-05 22:51:27 -0300'
-date_gmt: '2009-07-06 01:51:27 -0300'
 categories:
 - HTML
 - Artigos

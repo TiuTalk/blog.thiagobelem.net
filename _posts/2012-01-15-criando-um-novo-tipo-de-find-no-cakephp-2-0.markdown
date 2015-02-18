@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um novo tipo de find() no CakePHP 2.0
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1934
-wordpress_url: http://blog.thiagobelem.net/?p=1934
+
 date: '2012-01-15 21:44:30 -0200'
-date_gmt: '2012-01-15 23:44:30 -0200'
 categories:
 - Desenvolvimento
 - PHP

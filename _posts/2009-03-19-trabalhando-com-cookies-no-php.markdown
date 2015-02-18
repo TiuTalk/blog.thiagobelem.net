@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Trabalhando com Cookies no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 366
-wordpress_url: http://blog.thiagobelem.net/?p=366
+
 date: '2009-03-19 01:59:18 -0300'
-date_gmt: '2009-03-19 04:59:18 -0300'
 categories:
 - PHP
 - Tutoriais

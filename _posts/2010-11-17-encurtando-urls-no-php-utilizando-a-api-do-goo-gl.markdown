@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Encurtando URLs no PHP utilizando a API do goo.gl
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a encurtar URLs pelo PHP utilizando a classe de API do <a href="http://goo.gl/">goo.gl</a>,
   o serviço de encurtamento de URLs do Google.
-wordpress_id: 991
-wordpress_url: http://blog.thiagobelem.net/?p=991
+
 date: '2010-11-17 01:37:09 -0200'
-date_gmt: '2010-11-17 04:37:09 -0200'
 categories:
 - PHP
 - Otimização

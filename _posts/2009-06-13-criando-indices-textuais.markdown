@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando índices textuais
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a trocar índices numéricos (IDs) por índices textuais e deixe o as
   URLs do seu site muito mais amigáveis e seguras com esse recurso.
-wordpress_id: 519
-wordpress_url: http://blog.thiagobelem.net/?p=519
+
 date: '2009-06-13 03:17:33 -0300'
-date_gmt: '2009-06-13 06:17:33 -0300'
 categories:
 - PHP
 - Artigos

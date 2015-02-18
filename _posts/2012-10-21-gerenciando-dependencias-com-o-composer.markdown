@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Gerenciando dependências com o Composer
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O Composer é uma ótima ferramenta que te ajudará a gerenciar, instalar e
   organizar as bibliotecas que são necessárias para o seu projeto funcionar. Garantindo
   que tudo esteja em seu devido lugar, seja fácil de usar e seja facilmente atualizado
-wordpress_id: 2634
-wordpress_url: http://blog.thiagobelem.net/?p=2634
+
 date: '2012-10-21 18:01:55 -0200'
-date_gmt: '2012-10-21 20:01:55 -0200'
 categories:
 - Desenvolvimento
 - PHP

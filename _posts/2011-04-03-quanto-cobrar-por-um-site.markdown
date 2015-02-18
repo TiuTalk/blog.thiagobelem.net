@@ -1,21 +1,9 @@
 ---
 layout: post
-status: publish
-published: true
 title: Quanto cobrar por um site?
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Entenda como eu cobro pelo meu trabalho e como eu calculo o valor de um projeto
-wordpress_id: 1491
-wordpress_url: http://blog.thiagobelem.net/?p=1491
+
 date: '2011-04-03 15:12:34 -0300'
-date_gmt: '2011-04-03 18:12:34 -0300'
 categories:
 - Artigos
 tags:

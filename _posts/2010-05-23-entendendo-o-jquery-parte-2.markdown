@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Entendendo o jQuery – Parte 2
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Um tutorial explicando como o jQuery funciona e por que ele é tão simples
   de se trabalhar. Aprenda a criar um efeito de collapse (abrir e fechar) em uma caixa
   de links seguindo um passo-a-passo onde explico como funciona cada parte do código.
-wordpress_id: 773
-wordpress_url: http://blog.thiagobelem.net/?p=773
+
 date: '2010-05-23 23:30:41 -0300'
-date_gmt: '2010-05-24 02:30:41 -0300'
 categories:
 - Javascript
 - jQuery

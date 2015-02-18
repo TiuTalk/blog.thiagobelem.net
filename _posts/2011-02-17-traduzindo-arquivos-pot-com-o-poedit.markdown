@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Traduzindo arquivos POT com o PoEdit
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: 'O <strong>PoEdit</strong> é um ótimo programa para traduzir arquivos PO
   e POT, usados pelo gettext: o melhor sistema de tradução de softwares, sites e sistemas
   atualmente.'
-wordpress_id: 1418
-wordpress_url: http://blog.thiagobelem.net/?p=1418
+
 date: '2011-02-17 13:10:58 -0200'
-date_gmt: '2011-02-17 15:10:58 -0200'
 categories:
 - Desenvolvimento
 - Artigos

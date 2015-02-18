@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Trabalhando com Sessões no CakePHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: 'Aprenda a inserir, recuperar e deletar valores da sessão usando os métodos
   do component Session do CakePHP, e o melhor: tudo orientado a objetos! :)'
-wordpress_id: 598
-wordpress_url: http://blog.thiagobelem.net/?p=598
+
 date: '2009-07-31 00:33:58 -0300'
-date_gmt: '2009-07-31 03:33:58 -0300'
 categories:
 - PHP
 - CakePHP

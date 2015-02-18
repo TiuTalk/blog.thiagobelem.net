@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Aprendendo URLs amigáveis (Friendly URLs)
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: As URL amigáveis são recursos fundamentais no mundo de hoje em dia... Além
   de melhorar a visitação a confiança do/no seu site, elas melhoram a pontuação dele
   nos sistemas de busca. Aprenda como as URLs amigáveis funcionam e veja exemplos
   de como fazê-las funcionarem no seu site.
-wordpress_id: 740
-wordpress_url: http://blog.thiagobelem.net/?p=740
+
 date: '2010-04-27 23:59:34 -0300'
-date_gmt: '2010-04-28 02:59:34 -0300'
 categories:
 - Artigos
 - SEO

@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um tema para WordPress – Parte 3
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Na terceira parte da nossa sequencia de posts, onde documento a criação de
   um novo tema de WordPress pro meu blog, iremos ver as funções usadas para exibir
   dados do post e como funciona o The Loop, a estrutura principal do WordPress.
-wordpress_id: 1913
-wordpress_url: http://blog.thiagobelem.net/?p=1913
+
 date: '2011-12-23 12:59:09 -0200'
-date_gmt: '2011-12-23 14:59:09 -0200'
 categories:
 - Desenvolvimento
 - PHP

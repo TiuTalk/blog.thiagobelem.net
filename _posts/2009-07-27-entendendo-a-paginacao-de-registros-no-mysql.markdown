@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Entendendo a paginação de registros no MySQL
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda como funciona a paginação de resultados do MySQL e descubra como
   é fácil criar o seu próprio sistema de paginação independente da linguagem de programação
   que você use.
-wordpress_id: 595
-wordpress_url: http://blog.thiagobelem.net/?p=595
+
 date: '2009-07-27 04:02:49 -0300'
-date_gmt: '2009-07-27 07:02:49 -0300'
 categories:
 - PHP
 - MySQL

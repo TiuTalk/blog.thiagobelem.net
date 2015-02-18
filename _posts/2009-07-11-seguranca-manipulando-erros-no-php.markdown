@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Segurança – Manipulando erros no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a construir o seu próprio <strong>manipulador de erros</strong> do
   PHP para receber e-mails quando o seu site der "xabu" e deixe o seu site, além de
   mais bonito, mais seguro.
-wordpress_id: 572
-wordpress_url: http://blog.thiagobelem.net/?p=572
+
 date: '2009-07-11 11:04:50 -0300'
-date_gmt: '2009-07-11 14:04:50 -0300'
 categories:
 - PHP
 - Artigos

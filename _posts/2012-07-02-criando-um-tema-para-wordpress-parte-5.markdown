@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um tema para WordPress – Parte 5
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 2147
-wordpress_url: http://blog.thiagobelem.net/?p=2147
+
 date: '2012-07-02 00:48:02 -0300'
-date_gmt: '2012-07-02 03:48:02 -0300'
 categories:
 - Desenvolvimento
 - PHP

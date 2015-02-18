@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Mensagem de boas-vindas em função da hora
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: 'Aprenda a fazer uma mensagem de boas-vindas que muda em função da hora:
   "Bom dia", "Boa tarde", "Boa noite" e "Boa madrugada" :)'
-wordpress_id: 490
-wordpress_url: http://blog.thiagobelem.net/?p=490
+
 date: '2009-05-17 23:59:58 -0300'
-date_gmt: '2009-05-18 02:59:58 -0300'
 categories:
 - PHP
 - Tutoriais

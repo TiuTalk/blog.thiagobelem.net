@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Operador Ternário
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: 'O operador ternário é uma versão resumida do IF onde definimos tudo na mesma
   linha: a condição, instruções para true e instruções para false. O seu uso é recomendado
   em casos de otimização de código e economia de linhas.'
-wordpress_id: 473
-wordpress_url: http://blog.thiagobelem.net/?p=473
+
 date: '2009-05-11 01:15:20 -0300'
-date_gmt: '2009-05-11 04:15:20 -0300'
 categories:
 - PHP
 - Artigos

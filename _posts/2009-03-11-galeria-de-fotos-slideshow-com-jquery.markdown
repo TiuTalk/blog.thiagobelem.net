@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Galeria de fotos (slideshow) com jQuery
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a criar uma galeria de fotos (com efeito de Slideshow) usando apenas
   HTML e jQuery!
-wordpress_id: 327
-wordpress_url: http://blog.thiagobelem.net/?p=327
+
 date: '2009-03-11 21:31:02 -0300'
-date_gmt: '2009-03-12 00:31:02 -0300'
 categories:
 - jQuery
 - Artigos

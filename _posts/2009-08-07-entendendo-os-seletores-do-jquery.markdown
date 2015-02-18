@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Entendendo os seletores do jQuery
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja exemplos simples e práticos de uso dos seletores do jQuery. Entenda
   como eles funcionam e pra que servem.
-wordpress_id: 612
-wordpress_url: http://blog.thiagobelem.net/?p=612
+
 date: '2009-08-07 19:41:39 -0300'
-date_gmt: '2009-08-07 22:41:39 -0300'
 categories:
 - Javascript
 - jQuery

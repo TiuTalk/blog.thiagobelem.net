@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: O que é e como funciona o jQuery
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda o que é e como funciona essa incrível ferramenta que é o jQuery,
   um framework de Javascript criado para produzir efeitos espetaculares usando apenas
   algumas linhas de código. Este é o primeiro de vários artigos voltados para iniciantes
   no assunto.
-wordpress_id: 747
-wordpress_url: http://blog.thiagobelem.net/?p=747
+
 date: '2010-05-02 00:01:13 -0300'
-date_gmt: '2010-05-02 03:01:13 -0300'
 categories:
 - Javascript
 - jQuery

@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Função para reduzir URLs dinamicamente – TinyURL
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a reduzir as suas URLs dinâmicamente usando uma função que, automaticamente,
   faz uma requisição ao API do TinyURL e te retorna uma URL reduzida com, mais ou
   menos, 25 caracteres!
-wordpress_id: 539
-wordpress_url: http://blog.thiagobelem.net/?p=539
+
 date: '2009-06-21 19:26:10 -0300'
-date_gmt: '2009-06-21 22:26:10 -0300'
 categories:
 - PHP
 - Tutoriais

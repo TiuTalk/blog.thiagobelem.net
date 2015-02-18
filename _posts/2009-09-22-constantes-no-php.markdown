@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Constantes no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprendam pra que servem, como criar e como usar as constantes no PHP, um
   "tipo" de variável que permanece igual até o final da execução do script.
-wordpress_id: 647
-wordpress_url: http://blog.thiagobelem.net/?p=647
+
 date: '2009-09-22 16:04:21 -0300'
-date_gmt: '2009-09-22 19:04:21 -0300'
 categories:
 - PHP
 - Tutoriais

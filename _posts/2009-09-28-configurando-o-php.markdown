@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Configurando o PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja uma lista de opções e configurações do PHP que remecem a sua atenção.
   São opções ligadas a segurança e o "bom funcionamento" do seu sistema. Entenda como
   alterar, pra que servem e quais são os <em>valores ideais</em> pra cada uma dessas
   opções.
-wordpress_id: 649
-wordpress_url: http://blog.thiagobelem.net/?p=649
+
 date: '2009-09-28 13:56:37 -0300'
-date_gmt: '2009-09-28 16:56:37 -0300'
 categories:
 - PHP
 - Artigos

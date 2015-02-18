@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: 'Frameworks no PHP: O que, quando, porque e qual?'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda o que é, quando usar, porque usar e qual framework usar quando se
   trabalha com PHP.
-wordpress_id: 596
-wordpress_url: http://blog.thiagobelem.net/?p=596
+
 date: '2009-07-27 18:39:01 -0300'
-date_gmt: '2009-07-27 21:39:01 -0300'
 categories:
 - PHP
 - Artigos

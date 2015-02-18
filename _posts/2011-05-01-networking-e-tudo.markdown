@@ -1,25 +1,13 @@
 ---
 layout: post
-status: publish
-published: true
 title: Networking é tudo!
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Durante essa última semana me dei conta de que mesmo sendo um cara "foda"
   e "referência" na área (leia-se PHP... e só.), mesmo programando a 10 anos e trabalhando
   a mais de 6 anos com isso todos os dias da minha breve vida, eu não conhecia ninguém
   da área! Sim... Eu NUNCA tinha interagido de verdade com o pessoal que faz exatamente
   o que eu faço.
-wordpress_id: 1510
-wordpress_url: http://blog.thiagobelem.net/?p=1510
+
 date: '2011-05-01 00:49:14 -0300'
-date_gmt: '2011-05-01 03:49:14 -0300'
 categories:
 - Desenvolvimento
 - Artigos

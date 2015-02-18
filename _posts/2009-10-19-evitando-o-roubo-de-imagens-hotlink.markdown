@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Evitando o roubo de imagens – Hotlink
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a evitar que outros sites e blogs usem as imagens do seu site, consumindo
   assim a sua taxa de transferência mensal e roubando o seu conteúdo!
-wordpress_id: 650
-wordpress_url: http://blog.thiagobelem.net/?p=650
+
 date: '2009-10-19 09:34:50 -0200'
-date_gmt: '2009-10-19 11:34:50 -0200'
 categories:
 - Tutoriais
 - Apache

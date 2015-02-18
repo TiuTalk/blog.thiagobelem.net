@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Bloqueando visitantes pelo IP com MySQL e PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aumente a proteção do seu sistema criando um script que poderá ser usado
   para banir e bloquear visitantes em função de seus IPs e tenta mais controle sobre
   quando e quem tem acesso ao seu sistema.
-wordpress_id: 600
-wordpress_url: http://blog.thiagobelem.net/?p=600
+
 date: '2009-07-31 20:40:43 -0300'
-date_gmt: '2009-07-31 23:40:43 -0300'
 categories:
 - PHP
 - MySQL

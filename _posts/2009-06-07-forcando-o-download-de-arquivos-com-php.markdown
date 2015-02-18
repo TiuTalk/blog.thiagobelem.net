@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Forçando o download de arquivos com PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a fazer um script que força o download do arquivo, não importa sua
   extensão ou se o navegador consegue lê-lo ou exibí-lo. Isso permite a criação de
   contadores de downloads e/ou a proteção do arquivo contra download direto.
-wordpress_id: 513
-wordpress_url: http://blog.thiagobelem.net/?p=513
+
 date: '2009-06-07 11:34:59 -0300'
-date_gmt: '2009-06-07 14:34:59 -0300'
 categories:
 - PHP
 - Tutoriais

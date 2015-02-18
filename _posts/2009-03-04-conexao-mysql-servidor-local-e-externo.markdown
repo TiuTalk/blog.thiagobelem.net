@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Conexão MySQL – Servidor Local e Externo
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 199
-wordpress_url: http://blog.thiagobelem.net/?p=199
+
 date: '2009-03-04 10:28:01 -0300'
-date_gmt: '2009-03-04 13:28:01 -0300'
 categories:
 - MySQL
 - Artigos

@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um sistema de login com PHP e MySQL
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Exemplo de script “pronto para uso” de um sistema de login completo para
   você usar no seu site, totalmente cofigurável!
-wordpress_id: 319
-wordpress_url: http://blog.thiagobelem.net/?p=319
+
 date: '2009-03-09 06:01:23 -0300'
-date_gmt: '2009-03-09 09:01:23 -0300'
 categories:
 - PHP
 - MySQL

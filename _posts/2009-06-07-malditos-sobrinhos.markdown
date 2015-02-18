@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Malditos sobrinhos
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Quem nunca encontrou um "sobrinho" diante do caminho e que nunca precisou
   refazer um trabalho dele que atire a primeira pedra. Aprenda quem é (e por que evitar
   ser) o "sobrinho" que é motivo de piada nas rodas de TI.
-wordpress_id: 514
-wordpress_url: http://blog.thiagobelem.net/?p=514
+
 date: '2009-06-07 17:13:41 -0300'
-date_gmt: '2009-06-07 20:13:41 -0300'
 categories:
 - Artigos
 tags: []

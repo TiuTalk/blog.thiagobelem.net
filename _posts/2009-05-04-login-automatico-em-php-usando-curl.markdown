@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Login automático em PHP usando cURL
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a fazer um login automático em outros sites usando a biblioteca cURL
   e ter acesso a dados restritos de forma dinamica.
-wordpress_id: 441
-wordpress_url: http://blog.thiagobelem.net/?p=441
+
 date: '2009-05-04 02:18:17 -0300'
-date_gmt: '2009-05-04 05:18:17 -0300'
 categories:
 - PHP
 - Tutoriais

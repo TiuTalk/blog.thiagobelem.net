@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Exibindo PNGs transparentes no IE5 – IE PNG Fix
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 505
-wordpress_url: http://blog.thiagobelem.net/?p=505
+
 date: '2009-05-29 00:08:07 -0300'
-date_gmt: '2009-05-29 03:08:07 -0300'
 categories:
 - HTML
 - Tutoriais

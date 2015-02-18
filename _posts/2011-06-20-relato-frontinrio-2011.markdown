@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Relato - FrontInRio 2011
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O evento reuniu todo o tipo de publico, mas principalmente desenvolvedores
   front end e desenvolvedores back end.
-wordpress_id: 1591
-wordpress_url: http://blog.thiagobelem.net/?p=1591
+
 date: '2011-06-20 17:27:52 -0300'
-date_gmt: '2011-06-20 20:27:52 -0300'
 categories:
 - Desenvolvimento
 - Implementação

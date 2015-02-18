@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Cadastrando múltiplos registros no MySQL ao mesmo tempo
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a otimizar a inserção de dados em pacote/malote/grupo no MySQL...
   Veja como é mais simples rodar apenas um INSERT para todos os registros ao invés
   de rodar um INSERT para caaaaada registro e sobrecarregar o seu MySQL.
-wordpress_id: 597
-wordpress_url: http://blog.thiagobelem.net/?p=597
+
 date: '2009-07-28 09:02:58 -0300'
-date_gmt: '2009-07-28 12:02:58 -0300'
 categories:
 - MySQL
 - Tutoriais

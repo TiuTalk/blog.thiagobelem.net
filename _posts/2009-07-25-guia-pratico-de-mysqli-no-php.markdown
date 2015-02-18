@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Guia prático de MySQLi no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar a extensão MySQLi do PHP para ter acesso á funções avançadas
   do MySQL. Veja exemplos de uso de cada uma das operações básicas de fomra orientada
   a objetos e deixe seus scripts muito mais profissionais.
-wordpress_id: 594
-wordpress_url: http://blog.thiagobelem.net/?p=594
+
 date: '2009-07-25 14:47:16 -0300'
-date_gmt: '2009-07-25 17:47:16 -0300'
 categories:
 - PHP
 - MySQL

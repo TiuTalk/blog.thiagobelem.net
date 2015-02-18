@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Apache – Mudando a página de erro 404
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a modificar a página de erro "Arquivo não encontrado" (404) do seu
   servidor e redirecione seus visitantes para páginas mais úteis, com conteúdo relevante
   ou até mesmo a página inicial do seu site.
-wordpress_id: 760
-wordpress_url: http://blog.thiagobelem.net/?p=760
+
 date: '2010-05-18 09:16:49 -0300'
-date_gmt: '2010-05-18 12:16:49 -0300'
 categories:
 - Tutoriais
 - Apache

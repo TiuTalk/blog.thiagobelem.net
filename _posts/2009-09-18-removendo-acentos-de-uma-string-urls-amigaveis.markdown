@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Removendo acentos de uma string – URLs amigáveis
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja o código de uma função que te ajudará a remover todos os acentos de
   uma string, podendo ser usada para gerar o slug em uma URL amigável. A função se
   baseia no código ASCII de cada caractere e por isso funciona em qualquer ambiente.
-wordpress_id: 645
-wordpress_url: http://blog.thiagobelem.net/?p=645
+
 date: '2009-09-18 12:48:09 -0300'
-date_gmt: '2009-09-18 15:48:09 -0300'
 categories:
 - PHP
 - Tutoriais

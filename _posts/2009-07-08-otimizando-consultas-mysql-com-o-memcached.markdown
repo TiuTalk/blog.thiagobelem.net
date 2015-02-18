@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Otimizando consultas MySQL com o Memcached
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar o Memcached para otimizar as suas consultas ao MySQL e deixar
   o seu site muito mais rápido, usando a memória virtual do seu servidor para reduzir
   a sobre-carga no banco de dados.
-wordpress_id: 563
-wordpress_url: http://blog.thiagobelem.net/?p=563
+
 date: '2009-07-08 01:26:15 -0300'
-date_gmt: '2009-07-08 04:26:15 -0300'
 categories:
 - PHP
 - MySQL

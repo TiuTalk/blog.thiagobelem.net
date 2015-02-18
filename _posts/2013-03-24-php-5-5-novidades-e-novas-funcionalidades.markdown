@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: PHP 5.5 - Novidades e novas funcionalidades
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 3191
-wordpress_url: http://blog.thiagobelem.net/?p=3191
+
 date: '2013-03-24 15:34:24 -0300'
-date_gmt: '2013-03-24 18:34:24 -0300'
 categories:
 - Desenvolvimento
 - PHP

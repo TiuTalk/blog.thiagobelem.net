@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um sistema de logins com classe no PHP – Parte 4
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Continuação da sequencia de tutoriais que te ensina a criar um poderoso sistema
   de login usando classes no PHP. Nessa parte você aprenderá a implementar o sistema
   de "Lembrar minha senha" na classe com exemplos de uso e explicação para todas as
   funcionalidades.
-wordpress_id: 694
-wordpress_url: http://blog.thiagobelem.net/?p=694
+
 date: '2010-01-28 09:07:17 -0200'
-date_gmt: '2010-01-28 11:07:17 -0200'
 categories:
 - PHP
 - Tutoriais

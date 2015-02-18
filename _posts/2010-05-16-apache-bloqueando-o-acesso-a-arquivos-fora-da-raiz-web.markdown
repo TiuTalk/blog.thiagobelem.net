@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Apache – Bloqueando o acesso a arquivos fora da raíz WEB
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a configurar o Apache para evitar que visitantes do seu site consigam
   acessar arquivos fora da raíz do seu servidor WEB.
-wordpress_id: 750
-wordpress_url: http://blog.thiagobelem.net/?p=750
+
 date: '2010-05-16 17:54:26 -0300'
-date_gmt: '2010-05-16 20:54:26 -0300'
 categories:
 - Tutoriais
 - Apache

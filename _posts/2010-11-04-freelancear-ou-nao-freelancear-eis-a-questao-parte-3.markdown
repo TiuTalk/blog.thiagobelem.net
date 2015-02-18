@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: '"Freelancear ou não freelancear?", eis a questão – Parte 3'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Do meu ponto de vista, a vida de freelancer pode ser muito mais tranqüila
   que a vida de assalariado. Veja porquê!
-wordpress_id: 986
-wordpress_url: http://blog.thiagobelem.net/?p=986
+
 date: '2010-11-04 11:07:01 -0200'
-date_gmt: '2010-11-04 13:07:01 -0200'
 categories:
 - Sem categoria
 - Desenvolvimento

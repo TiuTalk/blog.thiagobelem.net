@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Manipulando dados do MySQL com o PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 359
-wordpress_url: http://blog.thiagobelem.net/?p=359
+
 date: '2009-03-20 16:25:51 -0300'
-date_gmt: '2009-03-20 19:25:51 -0300'
 categories:
 - PHP
 - MySQL

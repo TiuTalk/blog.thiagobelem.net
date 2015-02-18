@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Manual do PHP.net nas suas mãos!
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a adicionar a documentação do <a href="http://php.net/" target="_blank">PHP.net</a>
   na barrinha de busca do Mozilla Firefox e tenha acesso rápido e certeiro à documentação
   da função ou funcionalidade que você procura.
-wordpress_id: 607
-wordpress_url: http://blog.thiagobelem.net/?p=607
+
 date: '2009-08-04 05:03:05 -0300'
-date_gmt: '2009-08-04 08:03:05 -0300'
 categories:
 - PHP
 tags:

@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Sistema de login com CakePHP 1.3 e AuthComponent
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a criar - em minutos - um sistema de login no CakePHP utilizando
   o AuthComponent, conheça as variáveis/configurações e como proteger todo ou apenas
   uma parte do seu sistema.
-wordpress_id: 1753
-wordpress_url: http://blog.thiagobelem.net/?p=1753
+
 date: '2011-08-15 18:29:33 -0300'
-date_gmt: '2011-08-15 21:29:33 -0300'
 categories:
 - Desenvolvimento
 - PHP

@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Problema com a função ereg(i) – PHP 5.3.0
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a converter ereg e eregi em sua versão Perl (usando o preg_match)
   e evite erros de função depreciada no PHP 5.3.0
-wordpress_id: 557
-wordpress_url: http://blog.thiagobelem.net/?p=557
+
 date: '2009-07-01 11:54:54 -0300'
-date_gmt: '2009-07-01 14:54:54 -0300'
 categories:
 - PHP
 - Artigos

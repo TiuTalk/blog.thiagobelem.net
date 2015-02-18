@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Desenvolvedor Profissional… Será?
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja uma pequena comparação entre o desenvolvedor que se diz profissional
   e o desenvolvedor que realmente é profissional... Chega a ser uma piada triste mas
   verdadeira.
-wordpress_id: 699
-wordpress_url: http://blog.thiagobelem.net/?p=699
+
 date: '2010-02-05 17:42:26 -0200'
-date_gmt: '2010-02-05 19:42:26 -0200'
 categories:
 - Desenvolvimento
 - Artigos

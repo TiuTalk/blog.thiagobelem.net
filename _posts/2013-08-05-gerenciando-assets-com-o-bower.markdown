@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Gerenciando assets com o Bower
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 3814
-wordpress_url: http://blog.thiagobelem.net/?p=3814
+
 date: '2013-08-05 10:24:04 -0300'
-date_gmt: '2013-08-05 13:24:04 -0300'
 categories:
 - Desenvolvimento
 - Implementação

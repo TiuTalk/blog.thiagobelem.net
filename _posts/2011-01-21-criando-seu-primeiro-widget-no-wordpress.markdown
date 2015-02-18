@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando seu primeiro widget no WordPress
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a criar widgets no WordPress utilizando classes de forma fácil e
   organizada. Veja um exemplo real de widget que exibe informações sobre o autor do
   post de forma automática.
-wordpress_id: 1370
-wordpress_url: http://blog.thiagobelem.net/?p=1370
+
 date: '2011-01-21 01:44:46 -0200'
-date_gmt: '2011-01-21 03:44:46 -0200'
 categories:
 - PHP
 - WordPress

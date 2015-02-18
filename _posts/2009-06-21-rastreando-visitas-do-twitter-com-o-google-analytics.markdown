@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Rastreando visitas do Twitter com o Google Analytics
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a rastrear as visitas no seu site que vieram pelo seu perfil do Twitter.
   Você não precisa instalar nada no seu site nem no seu Twitter, só modificar as URLs
   que apontam pro seu site. ;)
-wordpress_id: 535
-wordpress_url: http://blog.thiagobelem.net/?p=535
+
 date: '2009-06-21 00:23:02 -0300'
-date_gmt: '2009-06-21 03:23:02 -0300'
 categories:
 - Tutoriais
 - Otimização

@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Contador de visitas usando o MySQL
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 310
-wordpress_url: http://blog.thiagobelem.net/?p=310
+
 date: '2009-03-08 05:14:22 -0300'
-date_gmt: '2009-03-08 08:14:22 -0300'
 categories:
 - MySQL
 - Tutoriais

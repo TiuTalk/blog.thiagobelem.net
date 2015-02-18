@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: 10 dicas para otimizar o carregamento do seu site
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja uma série de dicas e passos que vão ajudar a carregar o seu site muito
   mais rápido! :)
-wordpress_id: 558
-wordpress_url: http://blog.thiagobelem.net/?p=558
+
 date: '2009-07-01 20:13:07 -0300'
-date_gmt: '2009-07-01 23:13:07 -0300'
 categories:
 - HTML
 - CSS

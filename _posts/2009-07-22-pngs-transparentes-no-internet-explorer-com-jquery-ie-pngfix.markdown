@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: PNG's transparentes no Internet Explorer com jQuery (IE PNGFix)
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a instalar o <strong>jQuery pngFix</strong> no seu site e deixe todos
   os PNGs com fundo transparente funcionando em todos os navegadores desde o IE 5.5
   usando apenas três linhas de código! :D
-wordpress_id: 585
-wordpress_url: http://blog.thiagobelem.net/?p=585
+
 date: '2009-07-22 01:26:15 -0300'
-date_gmt: '2009-07-22 04:26:15 -0300'
 categories:
 - CSS
 - Javascript

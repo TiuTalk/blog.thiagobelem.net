@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Relato III FSLDC - Fórum de Software Livre de Duque de Caixas
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1557
-wordpress_url: http://blog.thiagobelem.net/?p=1557
+
 date: '2011-06-05 23:08:57 -0300'
-date_gmt: '2011-06-06 02:08:57 -0300'
 categories:
 - Desenvolvimento
 - PHP

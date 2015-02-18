@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Resultados de busca do Google no seu site
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar a API de busca de Google para exibir os resultados no seu
   site, da forma que achar melhor.
-wordpress_id: 568
-wordpress_url: http://blog.thiagobelem.net/?p=568
+
 date: '2009-07-09 18:00:55 -0300'
-date_gmt: '2009-07-09 21:00:55 -0300'
 categories:
 - PHP
 - Tutoriais

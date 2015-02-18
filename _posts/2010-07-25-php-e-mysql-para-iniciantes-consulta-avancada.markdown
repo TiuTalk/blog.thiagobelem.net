@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: PHP e MySQL para iniciantes – Consulta Avançada
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Continuação do tutorial que ensina iniciantes a trabalharem com PHP e MySQL.
   Nessa parte você aprenderá a fazer consultas avançadas utilizando PHP para acessar
   dados salvos no MySQL, unindo resultados de duas tabelas
-wordpress_id: 875
-wordpress_url: http://blog.thiagobelem.net/?p=875
+
 date: '2010-07-25 17:48:35 -0300'
-date_gmt: '2010-07-25 20:48:35 -0300'
 categories:
 - PHP
 - MySQL

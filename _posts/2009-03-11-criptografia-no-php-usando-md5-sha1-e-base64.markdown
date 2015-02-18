@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criptografia no PHP usando md5, sha1 e base64
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 323
-wordpress_url: http://blog.thiagobelem.net/?p=323
+
 date: '2009-03-11 12:32:14 -0300'
-date_gmt: '2009-03-11 15:32:14 -0300'
 categories:
 - PHP
 - Artigos

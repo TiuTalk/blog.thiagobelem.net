@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: PHP e MySQL para iniciantes – Consulta Simples
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a fazer consultas simples utilizando PHP para acessar dados salvos
   no MySQL
-wordpress_id: 822
-wordpress_url: http://blog.thiagobelem.net/?p=822
+
 date: '2010-07-20 16:38:15 -0300'
-date_gmt: '2010-07-20 19:38:15 -0300'
 categories:
 - PHP
 - MySQL

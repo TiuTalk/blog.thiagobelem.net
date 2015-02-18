@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Bloqueando IPs no Apache com .htaccess
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a bloquear visitantes pelo IP utilizando os arquivos .htaccess do
   seu servidor. Entenda as vantagens e desvantagens de bloquear alguém pelo IP e deixe
   seu servidor mais seguro cortando o mal pela raíz [do servidor!].
-wordpress_id: 734
-wordpress_url: http://blog.thiagobelem.net/?p=734
+
 date: '2010-04-23 13:20:15 -0300'
-date_gmt: '2010-04-23 16:20:15 -0300'
 categories:
 - Tutoriais
 - Apache

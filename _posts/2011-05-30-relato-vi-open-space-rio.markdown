@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Relato VI Open Space Rio
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1545
-wordpress_url: http://blog.thiagobelem.net/?p=1545
+
 date: '2011-05-30 14:44:11 -0300'
-date_gmt: '2011-05-30 17:44:11 -0300'
 categories:
 - Desenvolvimento
 - Implementação

@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Conexão via FTP com o PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar o PHP para enviar e receber arquivos via protocolo FTP tornando
   a sua aplicação muito mais robusta e eficiente. São apenas cinco funções, de uso
   simples... Tudo resumido e explicado pra você.
-wordpress_id: 451
-wordpress_url: http://blog.thiagobelem.net/?p=451
+
 date: '2009-05-05 14:34:35 -0300'
-date_gmt: '2009-05-05 17:34:35 -0300'
 categories:
 - PHP
 - Tutoriais

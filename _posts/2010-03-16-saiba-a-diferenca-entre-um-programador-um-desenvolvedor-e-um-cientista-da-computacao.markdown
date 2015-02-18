@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Saiba a diferença entre um programador, um desenvolvedor e um cientista da
   computação
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Você sabia que há diferenças básicas entre cada uma dessas categorias de
   "pessoas que criam código"? Leia um pouco mais sobre como age e quais são as preocupações
   de cada um.
-wordpress_id: 717
-wordpress_url: http://blog.thiagobelem.net/?p=717
+
 date: '2010-03-16 13:54:07 -0300'
-date_gmt: '2010-03-16 16:54:07 -0300'
 categories:
 - Desenvolvimento
 - Artigos

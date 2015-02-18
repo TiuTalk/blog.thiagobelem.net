@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Resolvendo o problema de "headers already sent"
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda por que esses erros e avisos acontecem, entenda como os headers funcionam
   e veja como é facil resolver (da forma correta) esse problema que todo mundo já
   teve pelo menos uma vez.
-wordpress_id: 633
-wordpress_url: http://blog.thiagobelem.net/?p=633
+
 date: '2009-09-07 12:06:22 -0300'
-date_gmt: '2009-09-07 15:06:22 -0300'
 categories:
 - PHP
 - Tutoriais

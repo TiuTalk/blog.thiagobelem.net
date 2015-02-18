@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um menu retrátil com CSS e jQuery
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a fazer um menu que se expande/retrai usando apenas (X)HTML, CSS
   e jQuery. Código do efeito em si tem apenas 11 linhas! Crie menus animados usando
   no estilo expand / collapse.
-wordpress_id: 540
-wordpress_url: http://blog.thiagobelem.net/?p=540
+
 date: '2009-06-22 09:06:00 -0300'
-date_gmt: '2009-06-22 12:06:00 -0300'
 categories:
 - HTML
 - CSS

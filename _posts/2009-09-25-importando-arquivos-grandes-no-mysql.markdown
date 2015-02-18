@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Importando arquivos grandes no MySQL
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a importar arquivos gigantes no MySQL sem receber erros de memória
   insuficiente. Fácil, muito fácil!
-wordpress_id: 648
-wordpress_url: http://blog.thiagobelem.net/?p=648
+
 date: '2009-09-25 18:03:17 -0300'
-date_gmt: '2009-09-25 21:03:17 -0300'
 categories:
 - MySQL
 - Tutoriais

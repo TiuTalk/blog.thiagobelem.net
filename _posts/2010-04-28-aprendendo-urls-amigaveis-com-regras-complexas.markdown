@@ -1,25 +1,13 @@
 ---
 layout: post
-status: publish
-published: true
 title: Aprendendo URLs amigáveis com regras complexas
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Continuação do artigo que te ensina a usar URLs Amigáveis no seu site com
   explicações detalhadas sobre o que são e como funcionam as Expressões Regulares
   que são utilizadas para fazer esse recurso. Nessa parte iremos criar regras mais
   complexas, que usam valores variáveis e que sao passados via GET para os arquivos
   do seu site.
-wordpress_id: 744
-wordpress_url: http://blog.thiagobelem.net/?p=744
+
 date: '2010-04-28 00:13:46 -0300'
-date_gmt: '2010-04-28 03:13:46 -0300'
 categories:
 - Artigos
 - SEO

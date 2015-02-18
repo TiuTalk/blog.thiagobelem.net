@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: PHP 5.5 - API de senhas
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 3194
-wordpress_url: http://blog.thiagobelem.net/?p=3194
+
 date: '2013-03-27 11:34:44 -0300'
-date_gmt: '2013-03-27 14:34:44 -0300'
 categories:
 - Desenvolvimento
 - PHP

@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Paginação no CakePHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Você vai que precisamos de exatamente <strong>duas linhas</strong> pra fazer
   uma consulta paginada no CakePHP, e mais duas linhas pra mostrar os links de "pŕoximo"
   e "anterior". :)
-wordpress_id: 1713
-wordpress_url: http://blog.thiagobelem.net/?p=1713
+
 date: '2011-07-21 23:05:57 -0300'
-date_gmt: '2011-07-22 02:05:57 -0300'
 categories:
 - Desenvolvimento
 - PHP

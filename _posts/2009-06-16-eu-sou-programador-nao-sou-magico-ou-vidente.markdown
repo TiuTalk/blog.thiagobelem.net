@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: '"Eu sou programador, não sou mágico ou vidente"'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: "É fácil se render ao medo, ingenuidade, excesso de auto-confiança e a ansiedade
   e afirmar que o seu sistema nunca terá erros ou problemas... Perceba que a honestidade
   nesses casos é a melhor saída. Você é um programador, não um vidente."
-wordpress_id: 527
-wordpress_url: http://blog.thiagobelem.net/?p=527
+
 date: '2009-06-16 11:02:56 -0300'
-date_gmt: '2009-06-16 14:02:56 -0300'
 categories:
 - Artigos
 tags: []

@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: 'Relato do Geeks On A Plane #HoraExtra'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1527
-wordpress_url: http://blog.thiagobelem.net/?p=1527
+
 date: '2011-05-04 13:33:18 -0300'
-date_gmt: '2011-05-04 16:33:18 -0300'
 categories:
 - Desenvolvimento
 - Artigos

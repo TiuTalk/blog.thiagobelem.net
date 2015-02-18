@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: O que um framework NÃO é
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a diferença de Framework e CMS e entenda por que essa ferramenta
   maravilhosa não te limita.
-wordpress_id: 512
-wordpress_url: http://blog.thiagobelem.net/?p=512
+
 date: '2009-06-07 07:30:00 -0300'
-date_gmt: '2009-06-07 10:30:00 -0300'
 categories:
 - PHP
 - Frameworks

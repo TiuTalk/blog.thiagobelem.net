@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: 'Open Search: Adicionando a Busca Rápida no seu site'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a incluir o recurso de Open Search no seu site e faça com que ele
   apareça na barrinha de Busca Rápida do FireFox e de vários outros sistemas e navegadores.
-wordpress_id: 653
-wordpress_url: http://blog.thiagobelem.net/?p=653
+
 date: '2009-11-04 12:49:25 -0200'
-date_gmt: '2009-11-04 14:49:25 -0200'
 categories:
 - PHP
 - Tutoriais

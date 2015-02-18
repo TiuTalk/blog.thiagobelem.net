@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: '"Freelancear ou não freelancear?", eis a questão – Parte 2'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Saiba um pouco mais sobre a vida de Freelancer e as responsabilidades e possibilidades
   que essa vida te trás.
-wordpress_id: 958
-wordpress_url: http://blog.thiagobelem.net/?p=958
+
 date: '2010-09-16 10:13:42 -0300'
-date_gmt: '2010-09-16 13:13:42 -0300'
 categories:
 - Sem categoria
 - Desenvolvimento

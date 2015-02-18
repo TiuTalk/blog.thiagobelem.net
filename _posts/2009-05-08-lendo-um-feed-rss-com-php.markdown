@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Lendo um Feed RSS com PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Com a classe SimpleXML você pode ler um Feeds RSS usando apenas três linhas
   de código... É tudo muito simples! Como o próprio nome da classe já diz.
-wordpress_id: 464
-wordpress_url: http://blog.thiagobelem.net/?p=464
+
 date: '2009-05-08 22:52:15 -0300'
-date_gmt: '2009-05-09 01:52:15 -0300'
 categories:
 - PHP
 - Tutoriais

@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Upload de Arquivos – Como tudo funciona
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda "como" e "o que" acontece quando fazemos o upload de um arquivo via
   PHP. Veja como validar o tamanho do arquivo e tipo do arquivo enviado para, no final,
   salvar tudo no seu banco de dados. :D
-wordpress_id: 575
-wordpress_url: http://blog.thiagobelem.net/?p=575
+
 date: '2009-07-13 01:40:59 -0300'
-date_gmt: '2009-07-13 04:40:59 -0300'
 categories:
 - PHP
 - Artigos

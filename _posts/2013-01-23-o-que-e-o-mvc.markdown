@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Mas afinal, o que é o MVC?
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: MVC é um padrão de arquitetura de software que separa a informação (e as
   suas regras de negócio) da interface com a qual o usuário interage.
-wordpress_id: 2982
-wordpress_url: http://blog.thiagobelem.net/?p=2982
+
 date: '2013-01-23 16:10:52 -0200'
-date_gmt: '2013-01-23 18:10:52 -0200'
 categories:
 - Desenvolvimento
 - PHP

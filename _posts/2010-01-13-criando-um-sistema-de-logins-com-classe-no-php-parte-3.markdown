@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um sistema de logins com classe no PHP – Parte 3
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Terceira parte do tutorial que ensina a criar um sistema de login sólido,
   leve e completo... Totalmente customizável e de fácil implementação. Sistema feito
   para rodar em PHP 4 e PHP 5, usando banco de dados em MySQL e Orientação a Objetos.
-wordpress_id: 680
-wordpress_url: http://blog.thiagobelem.net/?p=680
+
 date: '2010-01-13 17:33:33 -0200'
-date_gmt: '2010-01-13 19:33:33 -0200'
 categories:
 - PHP
 - Tutoriais

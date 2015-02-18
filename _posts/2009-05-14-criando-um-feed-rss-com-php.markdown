@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um Feed RSS com PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda como fazer um Feed RSS usando a classe SimpleXMLElement do PHP. Crie
   um Feed RSS de um banco de dados de notícias em MySQL usando apenas 35 linhas e
   abra mais uma porta de entrada para o seu site.
-wordpress_id: 482
-wordpress_url: http://blog.thiagobelem.net/?p=482
+
 date: '2009-05-14 21:22:16 -0300'
-date_gmt: '2009-05-15 00:22:16 -0300'
 categories:
 - PHP
 - Tutoriais

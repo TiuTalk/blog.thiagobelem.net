@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Principais falhas de segurança no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja um pouco sobre cada uma das principais falhas de segurança criadas pelos
   iniciantes em PHP e que podem deixar um site de portas abertas para o mundo...
-wordpress_id: 380
-wordpress_url: http://blog.thiagobelem.net/?p=380
+
 date: '2009-03-24 20:08:33 -0300'
-date_gmt: '2009-03-24 23:08:33 -0300'
 categories:
 - PHP
 - Artigos

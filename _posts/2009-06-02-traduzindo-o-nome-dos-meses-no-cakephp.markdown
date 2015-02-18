@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Traduzindo o nome dos meses no CakePHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar o sistema de localização (l10n) do CakePHP e traduzir o nome
   dos meses que aparecem no input criado automaticamente (HTML Helper) do CakePHP.
-wordpress_id: 511
-wordpress_url: http://blog.thiagobelem.net/?p=511
+
 date: '2009-06-02 12:03:54 -0300'
-date_gmt: '2009-06-02 15:03:54 -0300'
 categories:
 - CakePHP
 - Tutoriais

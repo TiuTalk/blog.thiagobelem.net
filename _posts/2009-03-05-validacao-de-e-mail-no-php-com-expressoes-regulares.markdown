@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Validação de e-mail no PHP com Expressões Regulares
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 234
-wordpress_url: http://blog.thiagobelem.net/?p=234
+
 date: '2009-03-05 20:32:40 -0300'
-date_gmt: '2009-03-05 23:32:40 -0300'
 categories:
 - PHP
 - Tutoriais

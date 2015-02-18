@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: CSS Reset – O que é e como usar?
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda como funciona, como usar, pra que serve e o que é o CSS Reset, uma
   ótima artimanha para ser usada em todos os seus sites e garantir o básico para um
   site que seja igual em todos os navegadores.
-wordpress_id: 630
-wordpress_url: http://blog.thiagobelem.net/?p=630
+
 date: '2009-09-05 00:03:57 -0300'
-date_gmt: '2009-09-05 03:03:57 -0300'
 categories:
 - CSS
 - Artigos

@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: 'Programação: Como matar o dragão e salvar a princesa?'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja a diferença do <em>modus operandi</em> de cada tipo de programador para
   realizar o difícil processo de matar o dragão e salvar a princesa! Uma ótima crônica
   a todos nós, geeks do mundo binário.
-wordpress_id: 569
-wordpress_url: http://blog.thiagobelem.net/?p=569
+
 date: '2009-07-10 21:48:27 -0300'
-date_gmt: '2009-07-11 00:48:27 -0300'
 categories:
 - Artigos
 tags:

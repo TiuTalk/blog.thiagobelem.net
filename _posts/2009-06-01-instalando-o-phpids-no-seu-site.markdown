@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Instalando o PHPIDS no seu site
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O PHPIDS ajuda a proteger o seu site de ataques como XSS, SQL Injection,
   RFE/LFI, DoS entre outros... Aprenda a instalar essa maravilhosa ferramenta que
   ajudará (e muito) na segurança do seu site/sistema.
-wordpress_id: 509
-wordpress_url: http://blog.thiagobelem.net/?p=509
+
 date: '2009-06-01 20:54:49 -0300'
-date_gmt: '2009-06-01 23:54:49 -0300'
 categories:
 - PHP
 - Tutoriais

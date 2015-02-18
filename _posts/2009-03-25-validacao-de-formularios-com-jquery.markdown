@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Validação de formulários com jQuery
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar o jQuery para fazer a validação dos dados inseridos pelo seu
   usuário e, com isso, adicione mais uma camada de segurança ao seu site.
-wordpress_id: 386
-wordpress_url: http://blog.thiagobelem.net/?p=386
+
 date: '2009-03-25 19:51:37 -0300'
-date_gmt: '2009-03-25 22:51:37 -0300'
 categories:
 - jQuery
 - Tutoriais

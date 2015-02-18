@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Gerando senhas aleatórias com PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda o passo-a-passo para criar uma função que gera senhas aleatórias
   contendo (opcionalmente) números, letras maiúsculas e minúsculas e simbolos... Do
   tamanho que você desejar. :)
-wordpress_id: 530
-wordpress_url: http://blog.thiagobelem.net/?p=530
+
 date: '2009-06-17 14:39:02 -0300'
-date_gmt: '2009-06-17 17:39:02 -0300'
 categories:
 - PHP
 - Tutoriais

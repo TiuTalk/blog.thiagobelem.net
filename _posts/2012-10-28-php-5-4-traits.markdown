@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: PHP 5.4 - Traits
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Traits são mecanismos que ajudam (e muito) a reutilização de código, e servem
   perfeitamente para resolver o problema da falta de herança múltipla.
-wordpress_id: 2809
-wordpress_url: http://blog.thiagobelem.net/?p=2809
+
 date: '2012-10-28 21:05:07 -0200'
-date_gmt: '2012-10-28 23:05:07 -0200'
 categories:
 - Desenvolvimento
 - PHP

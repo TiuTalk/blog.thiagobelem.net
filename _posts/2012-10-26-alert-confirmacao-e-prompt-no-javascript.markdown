@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Alert, confirmação e prompt no Javascript
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Neste artigo iremos aprender os diferentes tipos de alert em Javascript e
   conferir como inserir eles em nosso código, deixando nosso sistema/site com uma
   interação maior com o usuário.
-wordpress_id: 2739
-wordpress_url: http://blog.thiagobelem.net/?p=2739
+
 date: '2012-10-26 15:50:39 -0200'
-date_gmt: '2012-10-26 17:50:39 -0200'
 categories:
 - Desenvolvimento
 - Javascript

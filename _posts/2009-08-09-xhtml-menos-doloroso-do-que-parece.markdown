@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: 'XHTML: Menos doloroso do que parece'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O XHTML dita a nova regra de organização e desenvolvimento de código HTML,
   tornando o seu site muito mais organizado, leve e "cross-browser". :)
-wordpress_id: 616
-wordpress_url: http://blog.thiagobelem.net/?p=616
+
 date: '2009-08-09 07:46:04 -0300'
-date_gmt: '2009-08-09 10:46:04 -0300'
 categories:
 - HTML
 - Artigos

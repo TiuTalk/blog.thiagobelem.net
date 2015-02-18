@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: PHPn' Rio 2012
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O PHPn’ Rio é um evento carioca organizado por membros da comunidade PHP
   local. Ele reúne desenvolvedores, designers, empresários e estudantes. Mais do que
   uma conferência formal, é uma oportunidade de compartilhar experiências.
-wordpress_id: 2712
-wordpress_url: http://blog.thiagobelem.net/?p=2712
+
 date: '2012-10-25 13:52:25 -0200'
-date_gmt: '2012-10-25 15:52:25 -0200'
 categories:
 - Desenvolvimento
 - PHP

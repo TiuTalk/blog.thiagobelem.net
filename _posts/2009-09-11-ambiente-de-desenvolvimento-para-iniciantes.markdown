@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Ambiente de Desenvolvimento para iniciantes
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja uma lista das minhas recomendações sobre o Ambiente de Desenvolvimento
   ideal para quem está começando a aprender/trabalhar com o PHP e/ou o CakePHP. São
   vários programas grátis, leves e pequenos que ajudam (muito) a vida de todo programador.
-wordpress_id: 634
-wordpress_url: http://blog.thiagobelem.net/?p=634
+
 date: '2009-09-11 02:44:29 -0300'
-date_gmt: '2009-09-11 05:44:29 -0300'
 categories:
 - Desenvolvimento
 - PHP

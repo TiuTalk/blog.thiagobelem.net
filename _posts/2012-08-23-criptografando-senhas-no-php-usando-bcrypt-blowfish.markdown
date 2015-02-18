@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criptografando senhas no PHP usando bcrypt (Blowfish)
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 2271
-wordpress_url: http://blog.thiagobelem.net/?p=2271
+
 date: '2012-08-23 14:39:53 -0300'
-date_gmt: '2012-08-23 17:39:53 -0300'
 categories:
 - Desenvolvimento
 - PHP

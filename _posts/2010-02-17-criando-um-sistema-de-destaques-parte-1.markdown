@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um sistema de destaques – Parte 1
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a criar um sistema de destaques, como esse usado aqui no blog, para
   o seu site. Na Parte 1 te ajudarei a montar o HTML/CSS do bloco de destaques.
-wordpress_id: 708
-wordpress_url: http://blog.thiagobelem.net/?p=708
+
 date: '2010-02-17 17:03:20 -0200'
-date_gmt: '2010-02-17 19:03:20 -0200'
 categories:
 - HTML
 - CSS

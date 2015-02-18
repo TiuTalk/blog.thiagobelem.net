@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Armazenando informações com localStorage e sessionStorage
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 2098
-wordpress_url: http://blog.thiagobelem.net/?p=2098
+
 date: '2012-06-12 21:37:06 -0300'
-date_gmt: '2012-06-13 00:37:06 -0300'
 categories:
 - Desenvolvimento
 - Javascript

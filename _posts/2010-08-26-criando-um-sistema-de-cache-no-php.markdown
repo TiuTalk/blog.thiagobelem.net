@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um sistema de cache no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Técnicas de cache fazem com que seu site fique até 80% mais rápido e são
   vitais para que seu site "aguente o tranco" quando receber muitas visitas de uma
   vez.
-wordpress_id: 928
-wordpress_url: http://blog.thiagobelem.net/?p=928
+
 date: '2010-08-26 17:42:50 -0300'
-date_gmt: '2010-08-26 20:42:50 -0300'
 categories:
 - PHP
 - Tutoriais

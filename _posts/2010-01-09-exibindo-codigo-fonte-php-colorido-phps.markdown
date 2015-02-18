@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Exibindo código-fonte PHP colorido (.phps)
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja como é simples fazer o seu Apache reconhecer os arquivos .phps e exibir
   o seu código-fonte colorido... Muito útil para sites de tutoriais/compartilhamento
   de código/programação.
-wordpress_id: 671
-wordpress_url: http://blog.thiagobelem.net/?p=671
+
 date: '2010-01-09 09:49:31 -0200'
-date_gmt: '2010-01-09 11:49:31 -0200'
 categories:
 - PHP
 - Tutoriais

@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Listando seus vídeos do YouTube com PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Com esse tutorial você poderá mostrar os seus últimos vídeos publicados no
   YouTube, no seu site de forma totalmente customizável.
-wordpress_id: 1395
-wordpress_url: http://blog.thiagobelem.net/?p=1395
+
 date: '2011-02-04 12:51:30 -0200'
-date_gmt: '2011-02-04 14:51:30 -0200'
 categories:
 - PHP
 - Tutoriais

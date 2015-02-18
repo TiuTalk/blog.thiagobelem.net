@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Automatizando a instalação (deploy) e atualização de sites com Git
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a automatizar e agilizar o processo de deploy e atualização de sites
   utilizando repositórios Git, rodando apenas um comando sempre que você quiser atualizar
   o site!
-wordpress_id: 1780
-wordpress_url: http://blog.thiagobelem.net/?p=1780
+
 date: '2011-09-01 20:21:12 -0300'
-date_gmt: '2011-09-01 23:21:12 -0300'
 categories:
 - Sem categoria
 - Desenvolvimento

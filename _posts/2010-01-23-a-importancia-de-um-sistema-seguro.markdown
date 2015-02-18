@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: A importância de um sistema seguro
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Segurança não é uma funcionalidade que você instala ou um firewall que você
   liga... Segurança é uma métrica que está caindo o tempo todo, é preciso ter conhecimento,
   cuidado e atenção para garantir um minimo de confiança no sistema e evitar problemas
   com os seus clientes.
-wordpress_id: 599
-wordpress_url: http://blog.thiagobelem.net/?p=599
+
 date: '2010-01-23 11:20:26 -0200'
-date_gmt: '2010-01-23 13:20:26 -0200'
 categories:
 - Artigos
 - Segurança

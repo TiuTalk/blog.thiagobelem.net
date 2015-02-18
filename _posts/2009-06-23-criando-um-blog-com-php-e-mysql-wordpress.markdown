@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando um blog com PHP e MySQL – WordPress
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a instalar e configurar, desde o download até a públicação, o WordPress...
   A melhor plataforma de gerenciamento e manutenção de blogs do mundo.
-wordpress_id: 542
-wordpress_url: http://blog.thiagobelem.net/?p=542
+
 date: '2009-06-23 14:47:22 -0300'
-date_gmt: '2009-06-23 17:47:22 -0300'
 categories:
 - PHP
 - WordPress

@@ -1,7 +1,5 @@
 ---
 layout: post
-status: publish
-published: true
 title: HTML5 vs HTML4 - Parte 2
 author:
   display_name: Ruan Nunes
@@ -10,10 +8,8 @@ author:
   url: ''
 author_login: ruan.nunes
 author_email: ruanrln@gmail.com
-wordpress_id: 3097
-wordpress_url: http://blog.thiagobelem.net/?p=3097
+
 date: '2013-02-09 17:08:35 -0200'
-date_gmt: '2013-02-09 19:08:35 -0200'
 categories:
 - Implementação
 - HTML

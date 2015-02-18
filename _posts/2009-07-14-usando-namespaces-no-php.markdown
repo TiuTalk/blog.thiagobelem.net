@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Usando Namespaces no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Com o uso dos namespaces o seu código irá para um novo nível de organização...
   Aprenda o que é, pra que serve e como usar os namespaces no PHP 5.3.0.
-wordpress_id: 577
-wordpress_url: http://blog.thiagobelem.net/?p=577
+
 date: '2009-07-14 09:43:13 -0300'
-date_gmt: '2009-07-14 12:43:13 -0300'
 categories:
 - PHP
 - Artigos

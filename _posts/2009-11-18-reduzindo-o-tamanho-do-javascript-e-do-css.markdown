@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Reduzindo o tamanho do JavaScript e do CSS
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja como usar o <strong>Yahoo YUI Compressor</strong> para reduzir o tamanho
   dos seus arquivos de JavaScript e CSS e fazer com que o seu site carregue muito
   mais rápido.
-wordpress_id: 654
-wordpress_url: http://blog.thiagobelem.net/?p=654
+
 date: '2009-11-18 13:07:14 -0200'
-date_gmt: '2009-11-18 15:07:14 -0200'
 categories:
 - CSS
 - Javascript

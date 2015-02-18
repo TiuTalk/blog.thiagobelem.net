@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Usando bcrypt no CakePHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 2884
-wordpress_url: http://blog.thiagobelem.net/?p=2884
+
 date: '2012-11-20 14:43:21 -0200'
-date_gmt: '2012-11-20 16:43:21 -0200'
 categories:
 - Desenvolvimento
 - PHP

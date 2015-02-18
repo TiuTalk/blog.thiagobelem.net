@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Aprendendo a usar sessões no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 296
-wordpress_url: http://blog.thiagobelem.net/?p=296
+
 date: '2009-03-07 16:54:56 -0300'
-date_gmt: '2009-03-07 19:54:56 -0300'
 categories:
 - Sem categoria
 tags: []

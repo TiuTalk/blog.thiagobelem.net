@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Orientação a Objetos – Material Básico
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Classes são como funções, só que com variáveis e funções próprias.. Geralmente
   usadas para agrupar um numero X de funcionalidades/metodos... Vou ensinar a você
   como criar, passo-a-passo, uma classe para as funções básicas do MySQL.
-wordpress_id: 458
-wordpress_url: http://blog.thiagobelem.net/?p=458
+
 date: '2009-05-07 17:17:55 -0300'
-date_gmt: '2009-05-07 20:17:55 -0300'
 categories:
 - PHP
 - Artigos

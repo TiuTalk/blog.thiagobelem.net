@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Calculando datas no futuro ou passado com o PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 378
-wordpress_url: http://blog.thiagobelem.net/?p=378
+
 date: '2009-03-24 05:16:31 -0300'
-date_gmt: '2009-03-24 08:16:31 -0300'
 categories:
 - PHP
 - Tutoriais

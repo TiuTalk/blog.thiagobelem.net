@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Atualizando seu projeto em CakePHP para a versão 2.0
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1790
-wordpress_url: http://blog.thiagobelem.net/?p=1790
+
 date: '2011-10-19 19:18:39 -0200'
-date_gmt: '2011-10-19 21:18:39 -0200'
 categories:
 - Desenvolvimento
 - PHP

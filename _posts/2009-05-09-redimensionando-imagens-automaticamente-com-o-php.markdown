@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Redimensionando imagens automaticamente com o PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Vou mostrar aqui como usar a classe WideImage para redimensionar (resize)
   e cortar (crop) imagens automaticamente, gerando thumbnails para as suas imagens.
   Aprenda a fazer isso e torne o seu sistema muito mais amigável para o visitante!
   :)
-wordpress_id: 470
-wordpress_url: http://blog.thiagobelem.net/?p=470
+
 date: '2009-05-09 21:54:11 -0300'
-date_gmt: '2009-05-10 00:54:11 -0300'
 categories:
 - PHP
 - Tutoriais

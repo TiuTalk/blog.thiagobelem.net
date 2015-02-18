@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: O que são e como usar as Cron Jobs?
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda o que são, pra que servem e como são criadas as Cron Jobs, tarefas
   que rodam diáriamente no seu servidor e te ajudam com todas as tarefas automáticas
   de limpeza, backup e/ou atualização.
-wordpress_id: 613
-wordpress_url: http://blog.thiagobelem.net/?p=613
+
 date: '2009-08-08 08:50:44 -0300'
-date_gmt: '2009-08-08 11:50:44 -0300'
 categories:
 - Artigos
 - Linux

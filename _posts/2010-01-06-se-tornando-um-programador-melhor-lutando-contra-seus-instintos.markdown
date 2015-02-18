@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: 'Tornando-se um programador melhor: Lutando contra seus instintos'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Os desenvolvedores tentarem programar isoladamente, de tentar acobertar felhas,
   não ser receptivo para os feedbacks, tentar elimitar qualquer possibilidade de vulnerabilidade,
   resumindo, tentarem serem heróis, ou programadores rockstars.
-wordpress_id: 673
-wordpress_url: http://blog.thiagobelem.net/?p=673
+
 date: '2010-01-06 09:27:45 -0200'
-date_gmt: '2010-01-06 11:27:45 -0200'
 categories:
 - Desenvolvimento
 - Artigos

@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Instalando o no-www no seu site
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a remover automaticamente o WWW da URL do seu site utilizando o <strong>no-www</strong>.
   :)
-wordpress_id: 355
-wordpress_url: http://blog.thiagobelem.net/?p=355
+
 date: '2009-03-16 02:58:28 -0300'
-date_gmt: '2009-03-16 05:58:28 -0300'
 categories:
 - Tutoriais
 - Apache

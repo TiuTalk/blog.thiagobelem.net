@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Um site em cada pasta – Apache + Virtual Hosts
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar os Hosts Virtuais do Apache para "rodar" vários sites no mesmo
   servidor, porém em pastas diferentes que não estão necessariamente dentro da Document
   Root (raiz) do seu servidor.
-wordpress_id: 532
-wordpress_url: http://blog.thiagobelem.net/?p=532
+
 date: '2009-06-20 01:13:51 -0300'
-date_gmt: '2009-06-20 04:13:51 -0300'
 categories:
 - Tutoriais
 - Apache

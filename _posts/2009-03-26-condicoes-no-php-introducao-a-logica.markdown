@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Condições no PHP – Introdução à Lógica
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 389
-wordpress_url: http://blog.thiagobelem.net/?p=389
+
 date: '2009-03-26 20:22:54 -0300'
-date_gmt: '2009-03-26 23:22:54 -0300'
 categories:
 - PHP
 - Artigos

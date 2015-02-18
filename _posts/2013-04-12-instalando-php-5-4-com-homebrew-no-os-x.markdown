@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Instalando PHP 5.4 com Homebrew no OS X
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 3685
-wordpress_url: http://blog.thiagobelem.net/?p=3685
+
 date: '2013-04-12 14:16:12 -0300'
-date_gmt: '2013-04-12 17:16:12 -0300'
 categories:
 - Desenvolvimento
 - PHP

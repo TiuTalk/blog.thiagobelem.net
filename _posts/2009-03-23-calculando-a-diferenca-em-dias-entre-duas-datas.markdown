@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Calculando a diferença em dias entre duas datas
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 375
-wordpress_url: http://blog.thiagobelem.net/?p=375
+
 date: '2009-03-23 19:11:02 -0300'
-date_gmt: '2009-03-23 22:11:02 -0300'
 categories:
 - PHP
 - Tutoriais

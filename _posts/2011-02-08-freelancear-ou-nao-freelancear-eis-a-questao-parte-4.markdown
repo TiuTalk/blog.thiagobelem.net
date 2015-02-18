@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: '"Freelancear ou não freelancear?", eis a questão - Parte 4'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1406
-wordpress_url: http://blog.thiagobelem.net/?p=1406
+
 date: '2011-02-08 14:51:19 -0200'
-date_gmt: '2011-02-08 16:51:19 -0200'
 categories:
 - Desenvolvimento
 - Artigos

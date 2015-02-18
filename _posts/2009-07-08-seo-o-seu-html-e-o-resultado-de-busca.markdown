@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: SEO – O seu HTML e o resultado de busca
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda de onde vem cada elemento que aparece nos resultados de busca do
   google
-wordpress_id: 565
-wordpress_url: http://blog.thiagobelem.net/?p=565
+
 date: '2009-07-08 20:29:53 -0300'
-date_gmt: '2009-07-08 23:29:53 -0300'
 categories:
 - HTML
 - Artigos

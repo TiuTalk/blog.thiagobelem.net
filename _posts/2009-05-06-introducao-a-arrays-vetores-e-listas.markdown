@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Introdução a Arrays, Vetores e Listas
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Os arrays são, sem dúvida, um dos recursos mais legais das linguagens de
   programação. Hoje vamos falar um pouco sobre o que são, por que devem ser usados
   e como usá-los no PHP.
-wordpress_id: 454
-wordpress_url: http://blog.thiagobelem.net/?p=454
+
 date: '2009-05-06 09:58:44 -0300'
-date_gmt: '2009-05-06 12:58:44 -0300'
 categories:
 - PHP
 - Artigos

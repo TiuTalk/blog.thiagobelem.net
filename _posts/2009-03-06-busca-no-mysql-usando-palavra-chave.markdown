@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Busca no MySQL usando palavra-chave
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 260
-wordpress_url: http://blog.thiagobelem.net/?p=260
+
 date: '2009-03-06 20:18:45 -0300'
-date_gmt: '2009-03-06 23:18:45 -0300'
 categories:
 - MySQL
 - Tutoriais

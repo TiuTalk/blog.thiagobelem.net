@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Removendo TAGs HTML de textos
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Muita gente abusa da boa vontade e descuido alheio e tenta "brincar" com
   os sites, inserindo blocos de códigos HTML, sendo alguns deles até maliciosos, diga-se
   de passagem. Você, nobre programador, precisa estar pronto para o pior.
-wordpress_id: 467
-wordpress_url: http://blog.thiagobelem.net/?p=467
+
 date: '2009-05-09 08:29:55 -0300'
-date_gmt: '2009-05-09 11:29:55 -0300'
 categories:
 - PHP
 - HTML

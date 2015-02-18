@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Calculando o tempo de carregamento do site
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 280
-wordpress_url: http://blog.thiagobelem.net/?p=280
+
 date: '2009-03-07 05:05:03 -0300'
-date_gmt: '2009-03-07 08:05:03 -0300'
 categories:
 - PHP
 - Tutoriais

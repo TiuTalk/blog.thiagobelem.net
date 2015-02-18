@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Tutorial básico de cURL – Instalação, configuração e uso
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O cURL é uma biblioteca fantástica que te permite fazer requisições e enviar
   dados para outros sites e sistemas da web. Aprenda a instalar e usar essa ferramenta
   que todo sistema pode e deve usar.
-wordpress_id: 545
-wordpress_url: http://blog.thiagobelem.net/?p=545
+
 date: '2009-06-24 10:45:36 -0300'
-date_gmt: '2009-06-24 13:45:36 -0300'
 categories:
 - PHP
 - Artigos

@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Otimizando o seu site – Carregamento
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 417
-wordpress_url: http://blog.thiagobelem.net/?p=417
+
 date: '2009-04-22 20:53:09 -0300'
-date_gmt: '2009-04-22 23:53:09 -0300'
 categories:
 - Artigos
 - Otimização

@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criptografia no PHP usando Sha512, Whirlpool e Salsa20
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Conheça outros métodos de encriptação mais seguros e poderosos que o MD5
   e SHA1.
-wordpress_id: 968
-wordpress_url: http://blog.thiagobelem.net/?p=968
+
 date: '2010-09-24 17:22:15 -0300'
-date_gmt: '2010-09-24 20:22:15 -0300'
 categories:
 - PHP
 - Artigos

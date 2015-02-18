@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: PHP 5.4 - Novidades e novas funcionalidades
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O PHP 5.4 traz vários novos recursos, funcionalidades e  melhorias de sintaxe.
   Saiba o que há de novo!
-wordpress_id: 2798
-wordpress_url: http://blog.thiagobelem.net/?p=2798
+
 date: '2012-10-28 21:07:18 -0200'
-date_gmt: '2012-10-28 23:07:18 -0200'
 categories:
 - Desenvolvimento
 - PHP

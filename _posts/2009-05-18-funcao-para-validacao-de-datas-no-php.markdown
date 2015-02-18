@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Função para validação de datas no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: 'Uma data pode vir em vários formatos: AAAA-MM-DD, DD/MM/AAAA, AAAAMMDD,
   DDMMAAAA e você precisa de uma função que te ajude a verificar se ela é válida ou
   inválida, independente do seu formato.'
-wordpress_id: 492
-wordpress_url: http://blog.thiagobelem.net/?p=492
+
 date: '2009-05-18 20:35:53 -0300'
-date_gmt: '2009-05-18 23:35:53 -0300'
 categories:
 - PHP
 - Tutoriais

@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Orientação à Objetos - Métodos e atributos estáticos
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja o passo a passo da evolução de uma "classe" (que parecia mais código
   estruturado) para utilizar recursos da orientação à objetos, reutilização de código,
   métodos e atributos estáticos... Baseado em fatos reais!
-wordpress_id: 1839
-wordpress_url: http://blog.thiagobelem.net/?p=1839
+
 date: '2011-11-03 21:33:03 -0200'
-date_gmt: '2011-11-03 23:33:03 -0200'
 categories:
 - PHP
 - Artigos

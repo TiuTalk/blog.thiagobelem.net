@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Trabalhando com datas no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 330
-wordpress_url: http://blog.thiagobelem.net/?p=330
+
 date: '2009-03-12 03:58:54 -0300'
-date_gmt: '2009-03-12 06:58:54 -0300'
 categories:
 - PHP
 - Tutoriais

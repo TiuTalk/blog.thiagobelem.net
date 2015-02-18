@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Problemas de incompatibilidade no PHP 5.3
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Veja uma pequena lista de incompatibilidades que você pode encontrar ao atualizar
   o seu servidor para o <strong>PHP 5.3.x</strong> e entenda a importância de sempre
   atualizar o seu sistema para a última versão.
-wordpress_id: 711
-wordpress_url: http://blog.thiagobelem.net/?p=711
+
 date: '2010-03-04 12:16:56 -0300'
-date_gmt: '2010-03-04 15:16:56 -0300'
 categories:
 - PHP
 tags:

@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: 'PHP: Sim, nós precisamos de padrões!'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Se você é um programador web e tem o PHP como sua linguagem principal, ou
   uma das linguagens que mais usa, pode ser que você já tenha ouvido falar que a comunidade
   PHP está buscando se organizar e criar padrões para simplificar/melhorar/evoluir
   o ecossistema desta linguagem que é tão usada no mundo todo.
-wordpress_id: 2975
-wordpress_url: http://blog.thiagobelem.net/?p=2975
+
 date: '2013-01-23 12:11:45 -0200'
-date_gmt: '2013-01-23 14:11:45 -0200'
 categories:
 - Desenvolvimento
 - PHP

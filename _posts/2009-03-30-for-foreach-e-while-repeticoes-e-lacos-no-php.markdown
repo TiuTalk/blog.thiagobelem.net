@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: for, foreach e while – Repetições e Laços no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 393
-wordpress_url: http://blog.thiagobelem.net/?p=393
+
 date: '2009-03-30 10:58:09 -0300'
-date_gmt: '2009-03-30 13:58:09 -0300'
 categories:
 - PHP
 - Artigos

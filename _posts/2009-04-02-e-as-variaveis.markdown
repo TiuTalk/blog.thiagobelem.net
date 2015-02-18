@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: E as variáveis?
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 400
-wordpress_url: http://blog.thiagobelem.net/?p=400
+
 date: '2009-04-02 01:39:18 -0300'
-date_gmt: '2009-04-02 04:39:18 -0300'
 categories:
 - PHP
 - Artigos

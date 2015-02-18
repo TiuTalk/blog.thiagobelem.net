@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Entrando no mundo do SEO
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Muita gente se preocupa com o seu site aparecendo no Google... Aprenda aqui
   como tudo começou e o que se deve fazer para conseguir o seu lugar ao sol.
-wordpress_id: 444
-wordpress_url: http://blog.thiagobelem.net/?p=444
+
 date: '2009-05-04 15:46:36 -0300'
-date_gmt: '2009-05-04 18:46:36 -0300'
 categories:
 - HTML
 - Tutoriais

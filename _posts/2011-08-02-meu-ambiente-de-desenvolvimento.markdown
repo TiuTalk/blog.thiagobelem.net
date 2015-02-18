@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Meu Ambiente de Desenvolvimento
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1743
-wordpress_url: http://blog.thiagobelem.net/?p=1743
+
 date: '2011-08-02 02:23:03 -0300'
-date_gmt: '2011-08-02 05:23:03 -0300'
 categories:
 - Desenvolvimento
 - Artigos

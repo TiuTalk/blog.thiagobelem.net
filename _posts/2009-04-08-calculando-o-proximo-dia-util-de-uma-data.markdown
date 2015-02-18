@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Calculando o próximo dia útil de uma data
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 404
-wordpress_url: http://blog.thiagobelem.net/?p=404
+
 date: '2009-04-08 20:30:40 -0300'
-date_gmt: '2009-04-08 23:30:40 -0300'
 categories:
 - PHP
 - Tutoriais

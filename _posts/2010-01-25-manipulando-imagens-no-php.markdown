@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Manipulando imagens no PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: A classe <strong>WideImage</strong> te ajuda a manipular imagens no PHP de
   forma rápida e prática, com menos de 15 linhas você pode redimensionar, cropar (cortar)
   e salvar uma imagem com qualidade e velocidade. Veja aqui exemplos e explicação
   de como usar cada uma das funcionalidades da classe <strong>WideImage</strong>.
-wordpress_id: 691
-wordpress_url: http://blog.thiagobelem.net/?p=691
+
 date: '2010-01-25 09:59:28 -0200'
-date_gmt: '2010-01-25 11:59:28 -0200'
 categories:
 - PHP
 - Tutoriais

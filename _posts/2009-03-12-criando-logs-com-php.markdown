@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando LOGs com PHP e MySQL
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 336
-wordpress_url: http://blog.thiagobelem.net/?p=336
+
 date: '2009-03-12 22:33:57 -0300'
-date_gmt: '2009-03-13 01:33:57 -0300'
 categories:
 - PHP
 - MySQL

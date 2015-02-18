@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Apredendo a usar as funções empty e isset
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar as funções isset() e empty() do PHP e deixe o seu sistema
   mais seguro e organizado, sabendo quando verificar se uma variável existe e quando
   verificar se ela tem valor.
-wordpress_id: 662
-wordpress_url: http://blog.thiagobelem.net/?p=662
+
 date: '2009-12-30 14:19:28 -0200'
-date_gmt: '2009-12-30 16:19:28 -0200'
 categories:
 - PHP
 - Tutoriais

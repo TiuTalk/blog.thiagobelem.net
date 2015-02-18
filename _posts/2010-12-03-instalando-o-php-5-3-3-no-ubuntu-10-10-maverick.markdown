@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Instalando o PHP 5.3+ no Ubuntu
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a instalar o Apache 2, MySQL 5.1, PostgreSQL 8.4 e PHP 5.3.3 no Ubuntu
   10.10. Desde o download até a compilação! E, de bônus, aprenda a instalar o PHPUnit,
   uma ótima ferramenta para teste unitário de código
-wordpress_id: 1007
-wordpress_url: http://blog.thiagobelem.net/?p=1007
+
 date: '2010-12-03 15:23:05 -0200'
-date_gmt: '2010-12-03 17:23:05 -0200'
 categories:
 - PHP
 - Tutoriais

@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Usando o Robots.txt de forma correta
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a usar o robots.txt para limitar o acesso a algumas pastas ou arquivos
   do seu site dizendo o que os buscadores e indexadores podem ou não acessar nele.
-wordpress_id: 517
-wordpress_url: http://blog.thiagobelem.net/?p=517
+
 date: '2009-06-10 23:34:26 -0300'
-date_gmt: '2009-06-11 02:34:26 -0300'
 categories:
 - Tutoriais
 - Segurança

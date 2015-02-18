@@ -1,21 +1,9 @@
 ---
 layout: post
-status: publish
-published: true
 title: Sistema de rotação de banners e imagens em PHP
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Como criar um sistema de rotação de banners (ou imagens) em PHP
-wordpress_id: 421
-wordpress_url: http://blog.thiagobelem.net/?p=421
+
 date: '2009-04-25 23:37:51 -0300'
-date_gmt: '2009-04-26 02:37:51 -0300'
 categories:
 - PHP
 - Tutoriais

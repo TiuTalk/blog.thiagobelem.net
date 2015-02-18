@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: 'CSS dinâmico: Inserindo PHP no CSS'
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a misturar PHP e CSS e criar arquivos CSS dinâmicos que podem trazer
   informações de cores, fontes e caminhos de imagens direto do banco de dados ou de
   outra "fonte" de informações. ;)
-wordpress_id: 413
-wordpress_url: http://blog.thiagobelem.net/?p=413
+
 date: '2009-04-13 19:42:10 -0300'
-date_gmt: '2009-04-13 22:42:10 -0300'
 categories:
 - PHP
 - CSS

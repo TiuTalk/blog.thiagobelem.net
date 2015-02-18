@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Relacionamento de Tabelas no MySQL
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O relacionamento de tabelas ajuda a buscar informações em mais de uma tabela,
   em apenas uma consulta... Aprenda como funciona e como fazer o relacionamento de
   duas ou mais tabelas no MySQL.
-wordpress_id: 622
-wordpress_url: http://blog.thiagobelem.net/?p=622
+
 date: '2009-08-15 19:29:17 -0300'
-date_gmt: '2009-08-15 22:29:17 -0300'
 categories:
 - PHP
 - MySQL

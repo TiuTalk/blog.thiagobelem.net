@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Sistema de busca em PHP e MySQL com paginação
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a criar um sistema simples de busca usando PHP e MySQL com paginação
   e exibição de resultados parecida com a do Google.
-wordpress_id: 478
-wordpress_url: http://blog.thiagobelem.net/?p=478
+
 date: '2009-05-12 20:59:37 -0300'
-date_gmt: '2009-05-12 23:59:37 -0300'
 categories:
 - PHP
 - MySQL

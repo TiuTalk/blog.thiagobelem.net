@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Exibindo mapas no seu site – Google Maps + PHP – Parte 2
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda como é simples e rápido exibir um mapinha do Google Maps no seu site
   usando informações vindas da Google Maps API.
-wordpress_id: 643
-wordpress_url: http://blog.thiagobelem.net/?p=643
+
 date: '2009-09-17 12:04:02 -0300'
-date_gmt: '2009-09-17 15:04:02 -0300'
 categories:
 - PHP
 - Tutoriais

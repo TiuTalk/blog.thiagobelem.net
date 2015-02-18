@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando funções que aceitem N argumentos
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Descubra como é simples criar funções que podem receber um número indeterminado
   de argumentos e, como exemplo, crie uma função que calcula a média de N números.
-wordpress_id: 668
-wordpress_url: http://blog.thiagobelem.net/?p=668
+
 date: '2010-01-04 11:57:35 -0200'
-date_gmt: '2010-01-04 13:57:35 -0200'
 categories:
 - PHP
 - Tutoriais

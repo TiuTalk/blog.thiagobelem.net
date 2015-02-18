@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Programação em par
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda um pouco sobre a "programação em par" onde duas pessoas trabalham
   em um único computador, uma técnica que pode triplicar o sucesso dos seus projetos
   e aumentar a sua capacidade de relacionamento.
-wordpress_id: 627
-wordpress_url: http://blog.thiagobelem.net/?p=627
+
 date: '2009-08-18 19:31:50 -0300'
-date_gmt: '2009-08-18 22:31:50 -0300'
 categories:
 - Desenvolvimento
 - Artigos

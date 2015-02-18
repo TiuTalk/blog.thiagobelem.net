@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: O CakePHP 3.0 já está no forno!
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 2168
-wordpress_url: http://blog.thiagobelem.net/?p=2168
+
 date: '2012-07-06 20:14:29 -0300'
-date_gmt: '2012-07-06 23:14:29 -0300'
 categories:
 - CakePHP
 - Artigos

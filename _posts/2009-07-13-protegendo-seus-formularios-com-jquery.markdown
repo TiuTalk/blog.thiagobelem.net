@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Protegendo seus formulários com jQuery
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a criar um evento no jQuery que bloqueie múltiplos submits em um
   formulário e proteja o seu formulário contra ataques e o seu banco de dados contra
   registros múltiplos.
-wordpress_id: 576
-wordpress_url: http://blog.thiagobelem.net/?p=576
+
 date: '2009-07-13 18:15:51 -0300'
-date_gmt: '2009-07-13 21:15:51 -0300'
 categories:
 - Javascript
 - jQuery

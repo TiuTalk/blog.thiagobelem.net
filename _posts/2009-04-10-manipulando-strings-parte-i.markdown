@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Manipulando Strings – Parte I
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 410
-wordpress_url: http://blog.thiagobelem.net/?p=410
+
 date: '2009-04-10 12:13:13 -0300'
-date_gmt: '2009-04-10 15:13:13 -0300'
 categories:
 - PHP
 - Tutoriais

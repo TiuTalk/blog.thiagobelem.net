@@ -1,22 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Mudando a senha padrão do MySQL
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Aprenda a mudar a senha do usuário padrão do MySQL (root) no Windows e no
   Linux sem nenhuma grande complicação digitando apenas um ou dois comandos!
-wordpress_id: 602
-wordpress_url: http://blog.thiagobelem.net/?p=602
+
 date: '2009-08-01 08:52:23 -0300'
-date_gmt: '2009-08-01 11:52:23 -0300'
 categories:
 - MySQL
 - Tutoriais

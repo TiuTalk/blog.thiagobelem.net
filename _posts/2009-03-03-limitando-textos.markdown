@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Limitando textos
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 28
 wordpress_url: http://127.0.0.1/pessoal/blog/?p=7
 date: '2009-03-03 02:18:15 -0300'
-date_gmt: '2009-03-03 05:18:15 -0300'
 categories:
 - PHP
 - Artigos

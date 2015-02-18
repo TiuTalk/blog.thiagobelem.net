@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Codificadores e Programadores
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 399
-wordpress_url: http://blog.thiagobelem.net/?p=399
+
 date: '2009-04-02 01:02:50 -0300'
-date_gmt: '2009-04-02 04:02:50 -0300'
 categories:
 - Artigos
 tags: []

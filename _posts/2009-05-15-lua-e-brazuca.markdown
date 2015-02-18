@@ -1,24 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Lua é brazuca!
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: Lua foi criada por desenvolvedores do Tecgraf da PUC-Rio para ser usada em
   um projeto da Petrobras. Devido à sua eficiência, clareza e facilidade de aprendizado,
   passou a ser usada em diversos ramos da programação, como no desenvolvimento de
   jogos.
-wordpress_id: 484
-wordpress_url: http://blog.thiagobelem.net/?p=484
+
 date: '2009-05-15 01:04:20 -0300'
-date_gmt: '2009-05-15 04:04:20 -0300'
 categories:
 - Artigos
 tags: []

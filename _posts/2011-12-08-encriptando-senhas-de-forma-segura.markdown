@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Encriptando senhas de forma segura
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 1856
-wordpress_url: http://blog.thiagobelem.net/?p=1856
+
 date: '2011-12-08 15:42:16 -0200'
-date_gmt: '2011-12-08 17:42:16 -0200'
 categories:
 - PHP
 - Artigos

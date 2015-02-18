@@ -1,25 +1,13 @@
 ---
 layout: post
-status: publish
-published: true
 title: Usando o MySQLi Orientado a Objetos
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O <strong>MySQLi</strong> (<em>MySQL Improved</em> ou MySQL Melhorado) é
   uma extensão mais segura do MySQL que permite a execução de consultas SQL de forma
   segurada e sistematizada, preparando a consulta antes e passando as "variáveis"
   depois... Sem contar que a orientação a objetos transforma o uso dessa técnica num
   oceano de possibilidades.
-wordpress_id: 686
-wordpress_url: http://blog.thiagobelem.net/?p=686
+
 date: '2010-01-20 00:54:00 -0200'
-date_gmt: '2010-01-20 02:54:00 -0200'
 categories:
 - PHP
 - MySQL

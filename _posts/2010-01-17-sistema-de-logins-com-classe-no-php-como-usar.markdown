@@ -1,25 +1,13 @@
 ---
 layout: post
-status: publish
-published: true
 title: Sistema de logins com classe no PHP – Como usar?
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: 'Aprenda a instalar e usar a classe de login que foi criada em várias <a
   title="Busca: Sistema de logins com classe no PHP" href="http://blog.thiagobelem.net/?s=Sistema+de+logins+com+classe+no+PHP">partes</a>
   e deixe o "conteúdo protegido" [do seu site] realmente protegido por traz de um
   sistema de login baseado em PHP e MySQL e que funciona perfeitamente em PHP 4 e
   PHP 5.'
-wordpress_id: 682
-wordpress_url: http://blog.thiagobelem.net/?p=682
+
 date: '2010-01-17 20:03:32 -0200'
-date_gmt: '2010-01-17 22:03:32 -0200'
 categories:
 - PHP
 - Tutoriais

@@ -1,25 +1,13 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando senhas seguras
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: O maior risco para a proteção de uma senha é o próprio usuário que a criou
   e a segurança do sistema TODO é estritamente proporcional à segurança das senhas
   dos usuários desse sistema... Aprenda os erros mais comuns na criação de uma senha
   e quais medidas de segurança tomar para que o seu sistema não seja uma porta aberta
   para invasões.
-wordpress_id: 497
-wordpress_url: http://blog.thiagobelem.net/?p=497
+
 date: '2009-05-21 12:46:04 -0300'
-date_gmt: '2009-05-21 15:46:04 -0300'
 categories:
 - Artigos
 - Segurança

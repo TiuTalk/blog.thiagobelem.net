@@ -1,20 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Criando Sistemas Seguros – Parte 1
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
-wordpress_id: 300
-wordpress_url: http://blog.thiagobelem.net/?p=300
+
 date: '2009-03-08 03:34:22 -0300'
-date_gmt: '2009-03-08 06:34:22 -0300'
 categories:
 - Artigos
 - Segurança

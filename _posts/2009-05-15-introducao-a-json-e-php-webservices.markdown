@@ -1,23 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Introdução a JSON e PHP (Webservices)
-author:
-  display_name: Thiago Belem
-  login: thiago.belem
-  email: contato@thiagobelem.net
-  url: http://thiagobelem.net/
-author_login: thiago.belem
-author_email: contato@thiagobelem.net
-author_url: http://thiagobelem.net/
 excerpt: JSON é um padrão de formatação de dados usado para transmissão de dados entre
   duas aplicações diferentes. Aprenda porque ele é ideal para Webservices e como usá-lo
   acompanhado do PHP.
-wordpress_id: 487
-wordpress_url: http://blog.thiagobelem.net/?p=487
+
 date: '2009-05-15 19:40:50 -0300'
-date_gmt: '2009-05-15 22:40:50 -0300'
 categories:
 - PHP
 - Tutoriais
