@@ -42,7 +42,7 @@ Você precisa entender que essa informação adicional, a princípio, <strong>n�
 O nosso <code>.htaccess</code> para reescrever a URL anterior (da página de contato) e essa nova URL mais complexa, ficará assim:
 
 
-[code language="shell"]
+{% highlight sh linenos %}
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 
@@ -51,7 +51,7 @@ O nosso <code>.htaccess</code> para reescrever a URL anterior (da página de con
 	# Página de exibição de um produto
 	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]
 </IfModule>
-[/code]
+{% endhighlight %}
 
 Agora vamos separar a regra de reescrita em três partes e explicar uma por uma:
 
@@ -115,7 +115,7 @@ Com isso tudo, ao chamar a URL <code>/produtos/camiseta-azul/2/</code> o Apache 
 Perceba que os valores (<strong>2</strong> e <strong>camiseta-azul</strong>) foram passados para o "antigo" arquivo, cada um em seu devido lugar... Com isso, ao executar o arquivo <code>/produtos.php</code> você terá acesso aos dois valores que foram passados na URL Amigável utilizando a super-global <code>$_GET</code>:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 echo 'ID do produto: ' . $_GET['id']; // 2
@@ -123,7 +123,7 @@ echo '';
 echo 'Nome (slug) do produto: ' . $_GET['nome']; // camiseta-azul
 
 ?>
-[/code]
+{% endhighlight %}
 
 Quer coisa melhor que isso minha gente?!
 
@@ -138,7 +138,7 @@ Só para reforçar para quem ainda não pegou a essência da coisa: Na primeira 
 Vamos ver mais alguns exemplos que podemos colocar no nosso <code>.htaccess</code> e o entendimento de cada uma das regras, fica por sua conta:
 
 
-[code language="shell"]
+{% highlight sh linenos %}
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 
@@ -151,7 +151,7 @@ Vamos ver mais alguns exemplos que podemos colocar no nosso <code>.htaccess</cod
 	# Página de exibição de um artigo com a data na URL
 	RewriteRule ^artigo/([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-z0-9-]+)/([0-9]+)/?$ /artigo.php?id=$5&nome=$4&data=$1-$2-$3 [NC]
 </IfModule>
-[/code]
+{% endhighlight %}
 
 Uma ferramenta que pode ajudá-los a testar expressões regulares é a [RegExr: Online Regular Expression Testing Tool](http://gskinner.com/RegExr/).
 

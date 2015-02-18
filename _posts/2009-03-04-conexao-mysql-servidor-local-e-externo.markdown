@@ -19,7 +19,7 @@ Por exemplo: Se você estiver acessando o site pelo 127.0.0.1 ele usa a configur
 Vamos ao script:
 
 
-[code language="php"]
+{% highlight php linenos %}
 /**
 *  Arquivo de conexão ao MySQL usando servidor local e externo
 */
@@ -70,12 +70,12 @@ $MySQL['link'] = $MySQL['conexao']($MySQL[$usar]['servidor'], $MySQL[$usar]['usu
 
 // Conecta-se ao banco de dados
 mysql_select_db($MySQL[$usar]['banco'], $MySQL['link']) or die("Não foi possível conectar-se ao banco de dados [".$MySQL[$usar]['banco']."] no servidor [".$MySQL[$usar]['servidor']."]");
-[/code]
+{% endhighlight %}
 
 Pra criar mais uma configuração de conexão é só duplicar esse bloco:
 
 
-[code language="php"]
+{% highlight php linenos %}
 $n++;
 $MySQL[$n]['dominios']  = array('thiagobelem.net', 'thiagobelem.com.br');
 $MySQL[$n]['servidor']  = '127.0.0.1'; // Servidor MySQL
@@ -83,7 +83,7 @@ $MySQL[$n]['usuario']   = 'meu_usuario'; // Usuário MySQL
 $MySQL[$n]['senha']     = 'minha_senha'; // Senha MySQL
 $MySQL[$n]['banco']     = 'meu_banco'; // Banco de dados
 $MySQL[$n]['persis']    = false; // Conexão persistente?
-[/code]
+{% endhighlight %}
 
 Gostaram? Ele tá todo comentado.. Qualquer dúvida é só comentar! =)
 

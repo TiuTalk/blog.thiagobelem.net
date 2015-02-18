@@ -33,7 +33,7 @@ Antes de tudo, você vai precisar separar seu widget em três métodos dentro de
 Sabendo disso.. vamos começar a nossa classe:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 /**
@@ -47,14 +47,14 @@ class SobreAutorWidget extends WP_Widget {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Lembrando que a sua classe DEVE estender a classe <strong>WP_Widget</strong>, do próprio WordPress.
 
 Agora vamos inserir quatro métodos vazios para deixar a estrutura da classe pronta:
 
 
-[code language="php"]
+{% highlight php linenos %}
 	/**
 	 * Construtor
 	 */
@@ -88,7 +88,7 @@ Agora vamos inserir quatro métodos vazios para deixar a estrutura da classe pro
 	public function form($instancia) {
 
 	}
-[/code]
+{% endhighlight %}
 
 <h3>Método form()</h3>
 Agora vamos começar pelo método form(), que exibe o formulário... Esse widget não precisaria de formulário e opções pois ele não tem nenhum tipo de configuração, mas vamos deixar uma coisa opcional como exibir o link do site do autor.
@@ -96,7 +96,7 @@ Agora vamos começar pelo método form(), que exibe o formulário... Esse widget
 O nosso método form() ficará da seguinte forma:
 
 
-[code language="php"]
+{% highlight php linenos %}
 	/**
 	 * Formulário para os dados do widget (exibido no painel de controle)
 	 *
@@ -109,7 +109,7 @@ O nosso método form() ficará da seguinte forma:
 
 		<?php
 	}
-[/code]
+{% endhighlight %}
 
 Eu sei que parece complicado, mas estamos apenas criando um parágrafo com um checkbox e um label... Para definir o ID e o name do input utilizamos recursos do próprio WordPress, assim não caímos no problema de usar um name que já exista... O resultado é um checkbox onde você pode decidir se exibe ou não o link do autor no widget.
 
@@ -121,7 +121,7 @@ Agora vamos partir para o método update(), que salva os dados e configurações
 Esse método precisará retornar os dados a serem salvos no banco de dados, ficando assim:
 
 
-[code language="php"]
+{% highlight php linenos %}
 	/**
 	 * Salva os dados do widget no banco de dados
 	 *
@@ -135,7 +135,7 @@ Esse método precisará retornar os dados a serem salvos no banco de dados, fica
 
 		return $instancia;
 	}
-[/code]
+{% endhighlight %}
 
 Mais uma vez, não tem mistério: sobrescrevemos os valores de <code>$instancia_antiga</code> (o que estava salvo no banco de dados) com os valores de <code>$nova_instancia</code> e retornamos esses dados "mesclados" para serem salvos no banco de dados.
 
@@ -147,26 +147,26 @@ Esse método será responsável por mostrar os dados (HTML) do widget na lateral
 Esse widget irá funcionar apenas nas páginas de post... então precisamos evitar que ele seja exibido nas outras páginas, dessa forma:
 
 
-[code language="php"]
+{% highlight php linenos %}
 	public function widget($argumentos, $instancia) {
 		if (!is_single()) return;
 	}
-[/code]
+{% endhighlight %}
 
 Agora vamos trazer alguns dados sobre o autor:
 
 
-[code language="php"]
+{% highlight php linenos %}
 		$autor = array(
 			'nome' => get_the_author_meta('display_name'),
 			'email' => get_the_author_meta('user_email'),
 			'descricao' => get_the_author_meta('description'),
 			'link' => get_the_author_meta('user_url')
 		);
-[/code]
+{% endhighlight %}
 
 Feito isso é só começar a exibir o HTML do Widget:
-[code language="php"]
+{% highlight php linenos %}
 		// Exibe o HTML do Widget
 		echo $argumentos['before_widget'];
 		echo $argumentos['before_title'] . $argumentos['widget_name'] . $argumentos['after_title'];
@@ -179,14 +179,14 @@ Feito isso é só começar a exibir o HTML do Widget:
 ';
 		}
 		echo $argumentos['after_widget'];
-[/code]
+{% endhighlight %}
 
 E o nosso widget está pronto!
 
 Agora você precisa de apenas uma linha para habilitá-lo no seu painel de controle:
-[code language="php"]
+{% highlight php linenos %}
 add_action('widgets_init', create_function('', 'return register_widget("SobreAutorWidget");'));
-[/code]
+{% endhighlight %}
 
 <img src="/assets/uploads/2011/01/1295580557334.png" alt="" title="Widget sobre o autor" width="263" height="120" class="size-full wp-image-1389" />
 

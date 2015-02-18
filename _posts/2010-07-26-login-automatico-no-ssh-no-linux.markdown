@@ -22,9 +22,9 @@ Esse recurso parece inútil quando você cuida de um site simples... Mas quando 
 Para acessar o SSH de um servidor normalmente usamos o seguinte comando:
 
 
-[code language="shell"]
+{% highlight sh linenos %}
 $ ssh usuario@dominio
-[/code]
+{% endhighlight %}
 
 Após isso, é perguntado a sua senha de acesso do servidor e você está dentro e pode executar comandos do Linux para trabalhar na máquina.
 
@@ -36,36 +36,36 @@ Vamos chamar a sua maquina de <strong>cliente</strong> (a máquina que você est
 No cliente, vá até a linha de comando e digite:
 
 
-[code language="shell"]
+{% highlight sh linenos %}
 $ ssh-keygen -t rsa
-[/code]
+{% endhighlight %}
 
 Você verá a seguinte resposta:
 
 
-[code language="plain"]
+{% highlight text linenos %}
 Generating public/private dsa key pair.
 Enter file in which to save the key (/home/usuario/.ssh/id_dsa):
-[/code]
+{% endhighlight %}
 
 Dê ENTER sem digitar nada
 
 
-[code language="plain"]
+{% highlight text linenos %}
 Enter passphrase (empty for no passphrase):
-[/code]
+{% endhighlight %}
 
 Dê ENTER sem digitar nada
 
 
-[code language="plain"]
+{% highlight text linenos %}
 Enter same passphrase again:
-[/code]
+{% endhighlight %}
 
 Dê ENTER sem digitar nada
 
 
-[code language="plain"]
+{% highlight text linenos %}
 Your identification has been saved in /home/usuario/.ssh/id_dsa.
 Your public key has been saved in /home/usuario/.ssh/id_dsa.pub.
 The key fingerprint is:
@@ -82,7 +82,7 @@ The key's randomart image is:
 |              o+o|
 |             .E**|
 +-----------------+
-[/code]
+{% endhighlight %}
 
 Feito isso, você criou uma <strong>chave pública</strong> e esse arquivo <code>~/.ssh/id_dsa.pub</code> pode ser enviado para o servidor ao qual você deseja se conectar que, quando você tentar fazer login, ele irá ler o arquivo e te identificar, permitindo o login automático.
 
@@ -90,9 +90,9 @@ Feito isso, você criou uma <strong>chave pública</strong> e esse arquivo <code
 Você pode usar sFTP (FTP via SSH) ou SCP para enviar a chave pública para o servidor, veja um exemplo utilizando SCP:
 
 
-[code language="shell"]
+{% highlight sh linenos %}
 $ scp ~/.ssh/id_dsa.pub USUARIO_REMOTO@SERVIDOR:/home/USUARIO_REMOTO/.ssh/
-[/code]
+{% endhighlight %}
 
 Lembrando que a parta <code>USUARIO_REMOTO@SERVIDOR</code> são os mesmos dados que você utiliza para login.
 
@@ -102,11 +102,11 @@ Feito isso, você precisa habilitar a chave pública.
 Faça login via SSH no seu servidor, e execute os seguintes comandos:
 
 
-[code language="shell"]
+{% highlight sh linenos %}
 $ cd ~/.ssh/
 $ cat id_dsa.pub >> authorized_keys
 $ chmod 644 authorized_keys
-[/code]
+{% endhighlight %}
 
 Se o arquivo <code>authorized_keys</code> já existir, você pode criar o <code>authorized_keys2</code> ou <code>authorized_keys3</code>.
 

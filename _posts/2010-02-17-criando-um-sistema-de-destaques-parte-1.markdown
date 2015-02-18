@@ -30,7 +30,7 @@ O sistema de destaques que iremos criar terá a seguinte aparência:
 Antes de mais nada, precisamos criar o HTML do nosso bloco de destaque... Começamos com uma div e dentro dela criaremos uma lista (UL) com três itens (LI):
 
 
-[code language="html"]
+{% highlight html linenos %}
 <!-- destaques -->
 <div id="blocoDestaques">
 	<ul>
@@ -40,12 +40,12 @@ Antes de mais nada, precisamos criar o HTML do nosso bloco de destaque... Começ
 	</ul>
 </div>
 <!-- /destaques -->
-[/code]
+{% endhighlight %}
 
 Agora, dentro de cada item, vamos adicionar uma imagem (IMG) com um link (A):
 
 
-[code language="html"]
+{% highlight html linenos %}
 		<li>
 			<a href="#" title="Destaque 1">
 				<img src="img/destaque1.jpg" alt="Destaque 1" />
@@ -63,12 +63,12 @@ Agora, dentro de cada item, vamos adicionar uma imagem (IMG) com um link (A):
 				<img src="img/destaque3.jpg" alt="Destaque 3" />
 			</a>
 		</li>
-[/code]
+{% endhighlight %}
 
 Agora vamos inserir, após as imagens com links, parágrafos (P) contendo a descrição (ou titulo) do destaque e que também estão com link (A) para o destaque:
 
 
-[code language="html"]
+{% highlight html linenos %}
 		<li>
 			<a href="#" title="Destaque 1">
 				<img src="img/destaque1.jpg" alt="Destaque 1" />
@@ -95,7 +95,7 @@ Agora vamos inserir, após as imagens com links, parágrafos (P) contendo a desc
 			[Destaque 3 - Agora sim... bem melhor!](#)
 
 		</li>
-[/code]
+{% endhighlight %}
 
 Algumas pessoas podem ter pensado que errei ao criar dois links ao invés de inserir o parágrafo (P) dentro do primeiro link, após a imagem... Mas isso seria errado pois o link é um elemento de linha (<em>in-line</em>) e o parágrafo é um elemento de bloco (<em>block</em>) e nunca devemos inserir um elemento <em>block</em> dentro de um <em>in-line</em>.
 
@@ -107,7 +107,7 @@ Até agora nosso sistema de destaques ficou assim:
 Por fim, nós vamos inserir mais um link, dessa vez vazio, antes da lista (UL)... Esse link será a faixa [Destaques] que teremos sobre a imagem e a nossa marcação HTML está pronta:
 
 
-[code language="html"]
+{% highlight html linenos %}
 <!-- destaques -->
 <div id="blocoDestaques">
 
@@ -143,13 +143,13 @@ Por fim, nós vamos inserir mais um link, dessa vez vazio, antes da lista (UL)..
 	</ul>
 </div>
 <!-- /destaques -->
-[/code]
+{% endhighlight %}
 
 <h3>Melhorando a aparência (CSS)</h3>
 Começaremos criando um arquivo CSS e nele definiremos que a lista (UL), os seus itens (LI) e as imagens não terão estilo, margem ou espaçamento:
 
 
-[code language="css"]
+{% highlight css linenos %}
 #blocoDestaques ul,
 #blocoDestaques ul li {
 	list-style: none;
@@ -162,12 +162,12 @@ Começaremos criando um arquivo CSS e nele definiremos que a lista (UL), os seus
 	margin: 0px;
 	padding: 0px;
 }
-[/code]
+{% endhighlight %}
 
 Agora nós definiremos a altura e largura de todos os elementos usados no destaque:
 
 
-[code language="css"]
+{% highlight css linenos %}
 #blocoDestaques ul,
 #blocoDestaques ul li {
 	list-style: none;
@@ -193,12 +193,12 @@ Agora nós definiremos a altura e largura de todos os elementos usados no destaq
 	width: 100px;
 	height: 100px;
 }
-[/code]
+{% endhighlight %}
 
 Agora nós definimos o posicionamento de todos os elementos, o estilo dos elementos que compoem a descrição de cada item e o fundo da faixa [Desaques] que ficará sobre as imagens:
 
 
-[code language="css"]
+{% highlight css linenos %}
 #blocoDestaques {
 	position: relative;
 }
@@ -263,7 +263,7 @@ Agora nós definimos o posicionamento de todos os elementos, o estilo dos elemen
 
 	background: transparent url('../img/faixa.png') 0 0 no-repeat;
 }
-[/code]
+{% endhighlight %}
 
 Por enquanto vamos ficar por aqui... O HTML e o CSS do sistema de destaques está pronto... Na [Parte 2](/criando-um-sistema-de-destaques-parte-2) falaremos sobre o efeito em jQuery que fará a transição dos slides e colocaremos o paginador.
 

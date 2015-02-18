@@ -34,7 +34,7 @@ Existem vários <strong>CSS Reset</strong> rolando pela Internet... Todos funcio
 Esse aqui é o que eu uso no meu [site pessoal](http://thiagobelem.net/):
 
 
-[code language="css"]
+{% highlight css linenos %}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -82,13 +82,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-[/code]
+{% endhighlight %}
 
 Se você preferir, existe um CSS da Yahoo mesmo, chamado de YUI CSS Reset:
 [http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css](http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css)
 
 
-[code language="css"]
+{% highlight css linenos %}
 /*
 Copyright (c) 2009, Yahoo! Inc. All rights reserved.
 Code licensed under the BSD License:
@@ -126,10 +126,10 @@ q:before,q:after {
 abbr,acronym {
 	border:0;
 }
-[/code]
+{% endhighlight %}
 
 E existe um <strong>CSS Reset Reloaded</strong> criado por [Eric Meyer](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/):
-[code language="css"]
+{% highlight css linenos %}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -176,7 +176,7 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
-[/code]
+{% endhighlight %}
 
 Espero que tenham gostado! :)
 

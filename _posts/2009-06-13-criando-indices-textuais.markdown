@@ -24,7 +24,7 @@ Existe uma função pronta <span style="color: #808080;">(que encontrei [aqui](h
 Vamos ao código da função e depois eu explico como usá-la:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 /**
 * Traduz números para texto e vice-e-versa
@@ -90,7 +90,7 @@ $out = strrev($out);
 return $out;
 }
 ?>
-[/code]
+{% endhighlight %}
 
 Se você quiser, pode fazer o [download do arquivo (.txt) com a função](/arquivos/2009/06/idtextual.txt) (com a indentação correta).
 
@@ -98,22 +98,22 @@ Se você quiser, pode fazer o [download do arquivo (.txt) com a função](/arqui
 Para usar a função é bem simples, veja a conversão de número em texto:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 echo alphaID(9007199254740989);
 // Retorno: PpQXn7COf
 ?>
-[/code]
+{% endhighlight %}
 
 E se usarmos o texto como argumento, definindo o segundo parâmetro como true, teremos o ID novamente:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 echo alphaID('PpQXn7COf', true);
 // Retorno: 9007199254740989
 ?>
-[/code]
+{% endhighlight %}
 
 --
 

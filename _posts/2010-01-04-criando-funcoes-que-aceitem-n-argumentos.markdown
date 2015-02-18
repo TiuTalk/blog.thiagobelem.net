@@ -22,7 +22,7 @@ A função <strong>func_num_args()</strong> (quando usada dentro de uma outra fu
 Vamos criar uma função para calcular a média de uma quantiade qualquer de números:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 /**
@@ -33,47 +33,47 @@ function media() {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Perceba que, na definição da função, não colocamos nada no lugar dos parâmetros/argumentos que ela necessita... Exatamente por que <strong>a quantidade de argumentos será variável</strong>.
 
 Agora vamos pegar o total e a lista de argumentos passados para a função:
 
 
-[code language="php"]
+{% highlight php linenos %}
 	// Total de argumentos passados
 	$total = func_num_args();
 	// Array com cada um dos argumentos passados
 	$numeros = func_get_args();
-[/code]
+{% endhighlight %}
 
 Feito isso, vamos precisar fazer uma verificação, só por segurança, da quantidade de argumentos passados... Não há lógica em tentar calcular a média de 0 numeros, não é mesmo?
 
 
-[code language="php"]
+{% highlight php linenos %}
 	// Verifica se foi passado pelo menos 1 número
 	if ($total < 1) {
 		trigger_error('Não é possível calcular a média de menos de 1 número!');
 		return 0;
 	}
-[/code]
+{% endhighlight %}
 
 E por final, caso tenha sido passado pelo menos um argumento, calculamos a somatória dos números e retornamos a média:
 
 
-[code language="php"]
+{% highlight php linenos %}
 	} else {
 		// Calcula a somatória de todos os números passados
 		$soma = array_sum($numeros);
 		// Retorna a média dos números
 		return ($soma / $total);
 	}
-[/code]
+{% endhighlight %}
 
 No final das contas, nossa função ficou assim:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 /**
@@ -99,10 +99,10 @@ function media() {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 O uso dela é bem simples:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 echo media(2, 6, 10);
@@ -115,7 +115,7 @@ echo media(1, 7, 2.1, 5.3214, 9, 10000);
 // 1670.7369
 
 ?>
-[/code]
+{% endhighlight %}
 
 Espero que tenham gostado! Até a próxima! :]
 

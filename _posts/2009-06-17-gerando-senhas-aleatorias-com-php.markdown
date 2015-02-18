@@ -25,7 +25,7 @@ Vou explicar o passo-a-passo pra criar a função que permitirá uma criação p
 Primeiro, definimos uma função vazia com alguns parâmetros (e seus valores padrões):
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
@@ -34,14 +34,14 @@ function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos 
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Como pode ver, por padrão a senha gerada terá 8 caracteres, letras (minúsculas e maiúsculas) e números... Mas repito: todos esses parâmetros poderão ser modificados e manipulados (veremos isso depois).
 
 Agora definimos algumas variáveis que serão usadas pela função:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
@@ -58,12 +58,12 @@ $caracteres = '';
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Agora começa a brincadeira.. Vamos alimentar a variável $caracteres com todos os caracteres que poderão ser usados na senha:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
@@ -86,14 +86,14 @@ if ($simbolos) $caracteres .= $simb;
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Agora, pra finalizar, contamos com quantos caracteres a variável $caracteres ficou e usamos uma estrutura de repetição (<em>loop</em>) que se repetirá pra cada um dos caracteres finais da senha (variável $tamanho).
 
 Depois é só retornar a variável contendo a senha criada:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
@@ -128,7 +128,7 @@ return $retorno;
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 O código acima já é a função completa e pronta pra usar! :D
 
@@ -138,7 +138,7 @@ Veja exemplos de uso no fim do artigo.
 Fiz também uma versão mais compacta, sem comentários e com créditos:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 /**
@@ -176,13 +176,13 @@ return $retorno;
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 --
 
 <h3>Exemplos de uso</h3>
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 // Gera uma senha com 10 carecteres: letras (min e mai), números
 $senha = geraSenha(10);
@@ -200,7 +200,7 @@ $senha = geraSenha(6, false, true);
 $senha = geraSenha(15, true, true, true);
 // fnwX@dGO7P0!iWM
 ?>
-[/code]
+{% endhighlight %}
 
 --
 

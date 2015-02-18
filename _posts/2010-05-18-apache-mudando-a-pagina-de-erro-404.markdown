@@ -26,10 +26,10 @@ Edite o arquivo o arquivo <strong>.htaccess</strong> na raíz do seu site ou o a
 Em um desses dois arquivos, coloque a seguinte linha de código:
 
 
-[code language="shell"]
+{% highlight sh linenos %}
 # Muda o arquivo de erro 404
 ErrorDocument 404 /erro404.php
-[/code]
+{% endhighlight %}
 
 Isso fará com que o Apache use o arquivo <strong>erro404.php</strong> para lidar com a mensagem de erro. Você pode usar arquivos HTML também, não tem problema.
 

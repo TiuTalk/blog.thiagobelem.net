@@ -26,18 +26,18 @@ A coisa que vocês mais vão ver no jQuery é a própria função <code>jQuery()
 Veja alguns exemplos:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $('p'); // Retorna uma lista de todos os parágrafos na página
 $('a.azul'); // Retorna uma lista de todos os links com classe "azul"
 $('form input[type="text"]'); // Retorna uma lista de todos os inputs (que sejam type="text") e estejam dentro de um formulário
-[/code]
+{% endhighlight %}
 
 Como vocês podem ver, os seletores de jQuery se assemelham muito aos seletores de CSS, e existem formas de você selecionar praticamente qualquer elemento de seu HTML... Lembra que eu disse que jQuery é como uma conversa? Suponhamos que você precise selecionar todos os <code>p</code>, que estão dentro e uma <code>div</code> com classe a "links", e que não possuam um link dentro desse <code>p</code>... O seletor ficaria assim:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $('div.links p:not(:has(a))');
-[/code]
+{% endhighlight %}
 
 Mas você, a esse ponto, já deve ter se perguntado: de que adianta selecionar elementos se nada for feito com eles?
 
@@ -55,7 +55,7 @@ Vamos supor que vocês queiram criar aquele efeito legal de abrir e fechar um el
 Vamos criar o seguinte HTML de exemplo:
 
 
-[code language="html"]
+{% highlight html linenos %}
 <div class="box">
 	<h2>Meus links</h2>
 	[abrir/fechar](#)
@@ -65,7 +65,7 @@ Vamos criar o seguinte HTML de exemplo:
 		<li>[Terceiro link](#)</li>
 	</ul>
 </div>
-[/code]
+{% endhighlight %}
 
 O efeito que nós queremos é: ao clicar no link com classe "trocar" (<code>a.trocar</code>) que estiver dentro de uma div com classe "box" (<code>div.box a.trocar</code>), a lista desordenada com classe "conteudo" (<code>ul.conteudo</code>) que estiver logo após esse link (que recebeu o clique) irá deslizar, fechando e abrindo a cada clique.
 
@@ -74,11 +74,11 @@ Uma das primeiras coisas que se aprende no jQuery é que ele trabalha com os ele
 Para isso, precisamos colocar em nosso código javascript um código que permita executar outros códigos (jQuery ou não) após o carregamento do site... Lembram do "onload" do <code>body</code>? É praticamente a mesma coisa:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $(document).ready(function() {
 	// O que estiver aqui será executado após o carregamento do site
 });
-[/code]
+{% endhighlight %}
 
 Com o código acima criamos um evento <em>ready</em> (pronto) no documento (todo o site) que executará uma <code>function()</code> quando o site estiver carregado (método <code>ready()</code>).
 
@@ -87,22 +87,22 @@ Documentação do método <code>ready()</code>: [http://api.jquery.com/ready/](h
 Faça o seguinte teste para entender melhor:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $(document).ready(function() {
 	alert('O site terminou de carregar!');
 });
-[/code]
+{% endhighlight %}
 
 Veja um exemplo do código acima funcionando: [http://jsbin.com/upuxa3/](http://jsbin.com/upuxa3/)
 
 Agora vamos continuar e voltar ao nosso exemplo de collapse: precisamos criar um evento de clique (método <code>click()</code>) no link que tem a classe "trocar", fazemos isso da seguinte forma:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $(document).ready(function() {
 	$('div.box a.trocar').click();
 });
-[/code]
+{% endhighlight %}
 
 Com o código acima criamos um evento vazio que na verdade irá "clicar" no link... Precisamos colocar uma função como parâmetro desse método <code>click()</code> para que, ao invés de clicar no link, um outro código seja executado.
 
@@ -111,13 +111,13 @@ Documentação do método <code>click()</code>: [http://api.jquery.com/click/](h
 Vamos a um pequeno exemplo que irá disparar um alerta ao clicar no link:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $(document).ready(function() {
 	$('div.box a.trocar').click(function() {
 		alert('Você clicou no link...');
 	});
 });
-[/code]
+{% endhighlight %}
 
 Veja um exemplo do código acima funcionando: [http://jsbin.com/upuxa3/2/](http://jsbin.com/upuxa3/2/)
 
@@ -128,14 +128,14 @@ Mas o jQuery não é esperto (ou seria maleducado?) o suficiente para substituir
 Existem duas formas de evitar o comportamento padrão de um clique em um link quando se trabalha com o método <code>click()</code>: no mais deselegante é retornado <em>false</em> (falso) na função que está no clique. A outra forma, mais correta e elegante, é assim:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $(document).ready(function() {
 	$('div.box a.trocar').click(function(evento) {
 		evento.preventDefault();
 		alert('Você clicou no link...');
 	});
 });
-[/code]
+{% endhighlight %}
 
 É só adicionar um argumento (com o nome que você quiser) à função que é executada no evento <code>click()</code> do link e, dentro da função, usar o método <code>preventDefault()</code> nesse argumento, evitando assim o comportamento padrão do navegador, que seria mandan o visitante para o endereço link após o evento do jQuery ser executado.
 
@@ -144,14 +144,14 @@ Veja um exemplo do código acima funcionando: [http://jsbin.com/upuxa3/3/](http:
 Agora nós podemos continuar nosso exemplo selecionando a lista de links com classe "conteudo" (<code>ul.conteudo</code>) que esta logo após o link que foi clicado:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $(document).ready(function() {
 	$('div.box a.trocar').click(function(evento) {
 		evento.preventDefault();
 		$(this).next('ul.conteudo');
 	});
 });
-[/code]
+{% endhighlight %}
 
 Partimos do link que recebeu o clique <code>$(this)</code> e procuramos uma <code>ul.conteudo</code> que esteja logo em seguida usando o método <code>next()</code>.
 
@@ -162,14 +162,14 @@ Documentação do método <code>next()</code>: [http://api.jquery.com/next/](htt
 Mas, como foi dito anteriormente, não adianta nada selecionar um elemento se não fizermos nada com ele... Já conseguimos encontrar a lista de links e agora precisamos fazer ela aparecer e sumir a cada clique... Fazemos isso dessa forma:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $(document).ready(function() {
 	$('div.box a.trocar').click(function(evento) {
 		evento.preventDefault();
 		$(this).next('ul.conteudo').slideToggle();
 	});
 });
-[/code]
+{% endhighlight %}
 
 Com o método <code>slideToggle()</code> faz com que o elemento feche quando estiver aberto, e abra quando estiver fechado. Ou seja, cada vez que clicarmos no link de "abrir/fechar" o jQuery irá verificar se a lista de links está aberta ou não e irá trocar o seu estado, abrindo-a ou fechando-a.
 
@@ -180,14 +180,14 @@ Poderíamos parar por aqui... Mas se você for um usuário chato, vai clicar 300
 Para evitar esse tipo de comportamento precisamos filtrar o seletor e evitar rodar o <code>slideToggle()</code> enquanto ainda esteja acontecendo uma animação... Ou seja: executamos o método <code>slideToggle()</code> apenas na lista que não (<em>not</em>) estiver animada (<em>animated</em>):
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $(document).ready(function() {
 	$('div.box a.trocar').click(function(evento) {
 		evento.preventDefault();
 		$(this).next('ul.conteudo:not(:animated)').slideToggle();
 	});
 });
-[/code]
+{% endhighlight %}
 
 Documentação do seletor <code>:not()</code>: [http://api.jquery.com/not-selector/](http://api.jquery.com/not-selector/)
 

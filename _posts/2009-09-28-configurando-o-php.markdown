@@ -50,16 +50,16 @@ Normalmente você vai estar rodando seu site/sistema em um servidor compartilhad
 Existe um comando diferente para cada TIPO de valor que será alterado, os valores que são flags lógicas, ou seja true ou false, 0 ou 1, on ou off você faz assim:
 
 
-[code]
+{% highlight sh linenos %}
 php_flag register_globals Off
-[/code]
+{% endhighlight %}
 
 E os outros tipos de configurações, que recebem valores não lógicos, como o tamanho máximo do upload, você faz assim:
 
 
-[code]
+{% highlight sh linenos %}
 php_value post_max_size 10M
-[/code]
+{% endhighlight %}
 
 Espero que tenham gostado! :)
 

@@ -19,14 +19,14 @@ Há duas formas de se alcançar esse objetivo:
 A primeira, um pouco mais complicada, é fazendo o <em>parser</em> (interpretador) do PHP ler os arquivos .css antes de enviá-los para o visitante. Você pode fazê-lo da seguinte forma: crie/edite um arquivo chamado .htaccess dentro do root (raiz) do seu servidor e insira essa linha nele:
 
 
-[code language="html"]
+{% highlight text linenos %}
 AddType application/x-httpd-php.css
-[/code]
+{% endhighlight %}
 
 Depois é só editar o seu arquivo .css e inserir códigos PHP da forma que bem entender... Lembrando apenas de que o retorno (via echo) deve ser a mesma formatação de um CSS... Exemplo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 $cor_fundo = '#CCCCFF';
 $cor_texto = '#003333';
@@ -47,14 +47,14 @@ a.especial {
 text-decoration: none;
 background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;
 }
-[/code]
+{% endhighlight %}
 
 --
 
 A outra forma eu considero um pouco mais simples: Você renomeará o seu arquivo <strong>.css</strong> trocando a extensão para <strong>.php</strong> e adicionará apenas uma linha logo no começo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 // Define que o arquivo terá a codificação de saída no formato CSS
 header("Content-type: text/css");
@@ -78,14 +78,14 @@ a.especial {
 text-decoration: none;
 background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;
 }
-[/code]
+{% endhighlight %}
 
 Não esqueça também de mudar o HTML que inclui a folha de estilos:
 
 
-[code language="html"]
+{% highlight text linenos %}
 <link rel="stylesheet" href="estilo.php" type="text/css" />
-[/code]
+{% endhighlight %}
 
 --
 

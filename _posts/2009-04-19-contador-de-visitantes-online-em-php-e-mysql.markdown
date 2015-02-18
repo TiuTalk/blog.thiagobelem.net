@@ -16,7 +16,7 @@ Tudo se resume a criar uma entrada única no banco para cada visitante e apagá-
 Primeiro, criamos as tabelas no MySQL para armazenamento dos dados, são duas tabelas: uma para os visitantes onlines e outra para registro dos recordes... Veja os códigos:
 
 
-[code language="sql"]
+{% highlight text linenos %}
 CREATE TABLE IF NOT EXISTS `visitas_online` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`ip` varchar(15) NOT NULL,
@@ -32,12 +32,12 @@ CREATE TABLE IF NOT EXISTS `visitas_record` (
 	`visitantes` int(11) NOT NULL,
 	PRIMARY KEY (`id`)
 ) ENGINE=MyISAM ;
-[/code]
+{% endhighlight %}
 
 Depois criamos um arquivo chamado <span style="color: #ff6600;"><strong>visitantes-online.php</strong></span> com o seguinte conteúdo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 /**
 * Sistema de contador de visitantes online
@@ -169,7 +169,7 @@ function visitantesRecorde($formato = 'd/m/Y') {
 
 if ($_VO['registraAuto'] == true) { registraVisita(); }
 ?>
-[/code]
+{% endhighlight %}
 
 Você só precisa inserir esse arquivo no <span style="text-decoration: underline;">começo</span> do seu site, antes de enviar qualquer HTML para o visitante. Veja a baixo as funções que você irá usar para contabilizar os visitantes online e os recordes de visitas:
 
@@ -194,9 +194,9 @@ Esta função vai te retornar um valor numérico inteiro contendo o número de v
 Para usá-la, é só inserir um bloco de php onde você deseja que o número apareça, assim:
 
 
-[code language="php"]
+{% highlight text linenos %}
 Visitantes online: <?php echo visitantesOnline(); ?>!
-[/code]
+{% endhighlight %}
 
 <strong>visitantesRecorde($formato)</strong>
 
@@ -205,11 +205,11 @@ Com essa função você vai receber um array, contendo dois elementos: primeiro 
 Para usá-la você precisará fazer da seguinte forma:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php $dados = visitantesRecorde(); ?>
 O máximo de visitantes online foi em <?php echo $dados[0]; ?>, com <?php echo $dados[1]; ?> visitantes.
 
-[/code]
+{% endhighlight %}
 
 Se quiser formatar a data é só fazer, por exemplo, assim:
 $dados = visitantesRecorde('d/m/Y H:i');

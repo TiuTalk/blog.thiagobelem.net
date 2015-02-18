@@ -19,7 +19,7 @@ Hoje vou falar sobre uma pequena mudança de código que pode significar megas e
 Suponhamos que você tenha um script que receba dados de sei lá onde e cadastre-os no MySQL, seria mais ou menos assim:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 $usuarios = array();
@@ -48,19 +48,19 @@ foreach ($usuarios as $usuario) {
 echo 'Usuários cadastrados: ' . $cadastrados;
 
 ?>
-[/code]
+{% endhighlight %}
 
 As consultas passadas para o MySQL ficariam mais ou menos assim:
-[code language="sql"]
+{% highlight sql linenos %}
 INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Thiago', 'contato@thiagobelem.net');
 INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Fulano da Silva', 'fulano@email.com');
 INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Ciclano', 'ciclano@uol.com.br');
-[/code]
+{% endhighlight %}
 
 Não tem nada de errado com o código.. Funciona perfeitamente... Faz o contador direitinho.. Mas imagine se você tem 4000 registros pra inserir na tabela... Você vai rodar 4000 <strong>mysql_query()</strong> e vai deixar o seu MySQL maluquinho!
 
 Não seria muito melhor fazer assim:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 $usuarios = array();
@@ -92,12 +92,12 @@ $cadastrados = mysql_affected_rows();
 echo 'Usuários cadastrados: ' . $cadastrados;
 
 ?>
-[/code]
+{% endhighlight %}
 
 A nossa consulta ficaria mais ou menos assim:
-[code language="sql"]
+{% highlight sql linenos %}
 INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Thiago', 'contato@thiagobelem.net'), (NULL, 'Fulano da Silva', 'fulano@email.com'), (NULL, 'Ciclano', 'ciclano@uol.com.br')
-[/code]
+{% endhighlight %}
 
 Você pode fazer isso sem problema nenhum e com apenas uma "execução de consulta" você insere os três registros de uma só vez... Não é uma maravilha? :D
 

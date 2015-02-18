@@ -28,12 +28,12 @@ Infelizmente o md5 tem um "problema"... Você pode, com muita dificuldade (prest
 Pra usar o md5 no PHP é só usar da seguinte forma:
 
 
-[code language="php"]
+{% highlight text linenos %}
 $string = 'O rato reu a ropa do rei de Roma';
 $codificada = md5($string);
 echo "Resultado da codificação usando md5: " . $codificada;
 // 54cf74d1acdb4037ab956c269b63c8ac
-[/code]
+{% endhighlight %}
 
 <h3>SHA1</h3>
 A outra <strong>hash</strong> de mão única é o <abbr title="SHA: Secure Hash Algorithm">sha1</abbr>. Ele é praticamente identico ao md5, só que tem 160 bits, o que acaba criando uma string-resultado maior: 40 caracteres alfa-numéricos. Outro ponto do sha1 é que, por ser 160 bits e gerar uma cadeia de caracteres maior, uma colisão (encontrar duas strings que, codificadas, sejam a mesma coisa) é bem mais rara que numa chave de 128bits.
@@ -41,12 +41,12 @@ A outra <strong>hash</strong> de mão única é o <abbr title="SHA: Secure Hash 
 Usar o sha1 no PHP é exatamente a mesma coisa que o md5, só que mudando o nome da função:
 
 
-[code language="php"]
+{% highlight text linenos %}
 $string = 'O rato reu a ropa do rei de Roma';
 $codificada = sha1($string);
 echo "Resultado da codificação usando sha1: " . $codificada;
 // b186b709f7cf5a1d98d413379a66e511df8d59a4
-[/code]
+{% endhighlight %}
 
 <h3>BASE64</h3>
 É um método para codificação dos dados para transferência na Internet. Ela é uma codificação de mão dupla, e usando uma segunda função você pode descobrir a string original de uma string codificada.
@@ -54,7 +54,7 @@ echo "Resultado da codificação usando sha1: " . $codificada;
 Para usar ela no PHP você tem as duas formas:
 
 
-[code language="php"]
+{% highlight text linenos %}
 $string = 'O rato reu a ropa do rei de Roma';
 
 $codificada = base64_encode($string);
@@ -72,7 +72,7 @@ echo "Resultado da decodificação usando base64: " . $original;
 // O rato reu a ropa do rei de Roma
 
 // Note que $original vai ser idêntica a $string
-[/code]
+{% endhighlight %}
 
 Viram como é simples? Com esses recursos é possível deixar a aplicação bem mais segura e, por que não, organizada.
 

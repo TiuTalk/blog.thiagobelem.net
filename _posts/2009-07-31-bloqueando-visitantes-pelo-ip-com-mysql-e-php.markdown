@@ -24,7 +24,7 @@ Banir um visitante de vez, baseando-se no IP dele é, sem dúvida, uma das forma
 Para salvar a lista de IPs banidos usaremos uma tabela no MySQL que pode ser criada com o seguinte código:
 
 
-[code language="sql"]
+{% highlight sql linenos %}
 CREATE TABLE `banidos` (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 	`ip` VARCHAR( 15 ) NOT NULL ,
@@ -32,7 +32,7 @@ CREATE TABLE `banidos` (
 	`fim` DATETIME NOT NULL ,
 	INDEX ( `ip` )
 ) ENGINE = MYISAM
-[/code]
+{% endhighlight %}
 
 Já a parte em PHP do sistema vai funcionar da seguinte maneira... Quando o visitante tentar acessar o seu site é incluído um arquivo que busca no MySQL se esse IP está na lista de banidos, caso esteja o visitante é redirecionado para outro site/endereço.
 
@@ -41,7 +41,7 @@ Não vou falar como fazer uma conexão ao MySQL porque isso já foi dito N vezes
 Antes de verificar se um visitante está "banido" precisamos limpar da tabela os registros que já expiraram... Esse passo é opcional pois quando formos verificar se um usuário está banido vamos verificar também se o período é valido... Vamos lá:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Inclui o arquivo que faz a conexão com o banco de dados
@@ -55,12 +55,12 @@ $sql = "DELETE FROM `banidos` WHERE ( `fim` <= NOW() )";
 mysql_query($sql);
 
 ?>
-[/code]
+{% endhighlight %}
 
 Agora nós vamos verificar se o IP do visitante consta na lista dos que ainda estão banidos:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Inclui o arquivo que faz a conexão com o banco de dados
@@ -81,12 +81,12 @@ if (mysql_num_rows($query) > 0) {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Agora é só redirecionar o visitante para outra página/endereço:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Verifica se o visitante está banido
 $sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip_visitante ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";
 $query = mysql_query($sql);
@@ -95,14 +95,14 @@ if (mysql_num_rows($query) > 0) {
 	header("Location: http://www.pudim.com.br/");
 	exit;
 }
-[/code]
+{% endhighlight %}
 
 --
 
 Agora nós vamos criar uma funçãozinha que você vai usar para banir o visitante durante X minutos... Vamos lá:
 
 
-[code language="php"]
+{% highlight php linenos %}
 function banirVisitante($minutos, $ip = null) {
 	// Define o IP que será banido
 	$ip = (is_null($ip)) ? $_SERVER['REMOTE_ADDR'] : $ip;
@@ -126,15 +126,15 @@ function banirVisitante($minutos, $ip = null) {
 		exit;
 	}
 }
-[/code]
+{% endhighlight %}
 
 Aí quando você quiser banir um visitante, seja qual for o motivo, é só usar a função criada:
-[code language="php"]
+{% highlight php linenos %}
 // Banir visitante por 10 minutos
 banirVisitante(10);
 
 // Banir um IP específico por 3 dias
-banirVisitante(60 * 24 * 3, '114.154.95.24');  [/code]
+banirVisitante(60 * 24 * 3, '114.154.95.24');  {% endhighlight %}
 
 --
 

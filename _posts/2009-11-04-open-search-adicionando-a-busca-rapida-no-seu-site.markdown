@@ -17,9 +17,9 @@ Fala gente,
 Semana passada falei sobre a <strong>busca rápida</strong > (ou <em>Open Search</em>)... Muita gente ficou interessada em como poderiam incluir esse recurso em seus sites então eu fiz um scriptzinho pra facilitar a vida de vocês.
 
 Pra você poder usar esse recurso no seu site o mesmo precisa ter suporte a busca via método GET... Método GET é quando os parâmetros são enviados na URL, veja o exemplo do Google:
-[code]
+{% highlight sh linenos %}
 http://www.google.com.br/search?q=Thiago+Belem
-[/code]
+{% endhighlight %}
 
 Aquela parte no fim onde tem "<strong>?q=</strong>" significa que o parâmetro "<strong>q</strong>" está sendo passado por método GET, caso contrário você não veria nada na URL.
 
@@ -30,14 +30,14 @@ Sem mais baboseiras, vamos direto ao ponto:
 Primeiro você precisa inserir um código HTML dentro do <head> do seu site que irá avisar os outros sites, sistemas e navegadores que o seu site tem um Open Search:
 
 
-[code language="html"]
+{% highlight html linenos %}
 <link rel="search" type="application/opensearchdescription+xml" href="http://www.meusite.com.br/opensearch.php" title="Meu Site" />
-[/code]
+{% endhighlight %}
 
 Perceba que o código está apontando pra um arquivo <strong>opensearch.php</strong>, o nome do arquivo não importa, mas o seu conteúdo sim:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 /**
  * Gerador de busca 'open search' para sites
@@ -94,21 +94,21 @@ $xml->addChild('SyndicationRight', 'open');
 echo $xml->asXml();
 exit;
 ?>
-[/code]
+{% endhighlight %}
 
 Agora preste atenção no bloco de configuração no começo do arquivo!
 
 Dê atenção a parte que tem "endereco_busca"... É ali que você precisa colocar a URL da sua página de busca (resultado de busca) e colocar <strong>{searchTerms}</strong> no lugar que irão os parâmetros de busca... Vamos voltar ao exemplo da busca do Google:
 
 Se eu buscar por "Thiago Belem" a url de resultado vai ficar mais ou menos assim:
-[code]
+{% highlight sh linenos %}
 http://www.google.com.br/search?q=Thiago+Belem
-[/code]
+{% endhighlight %}
 
 Então, criando um open search pra essa mesma busca do Google, teríamos isso na parte "endereco_busca":
-[code]
+{% highlight sh linenos %}
 http://www.google.com.br/search?q={searchTerms}
-[/code]
+{% endhighlight %}
 
 As outras opções são fáceis de entender...
 

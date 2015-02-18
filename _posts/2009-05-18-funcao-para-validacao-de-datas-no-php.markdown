@@ -20,7 +20,7 @@ A lógica é bem simples: uma data pode vir em vários formatos: AAAA-MM-DD, DD/
 A função poderia ser assim:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 /**
 * Validate a date
@@ -70,7 +70,7 @@ break;
 return checkdate($m, $d, $a);
 }
 ?>
-[/code]
+{% endhighlight %}
 
 Tá... mas o que essa função realmente faz?
 
@@ -83,7 +83,7 @@ Em cada case nós temos uma forma de "quebrar" a data e pegar cada uma das suas 
 Por fim, a função retorna verdadeiro (true) ou falso (false)... Então podemos usá-la da seguinte maneira:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 if (validaData('12/04/2009', 'DD/MM/AAAA')) {
 echo "Data valida!";
@@ -110,7 +110,7 @@ echo "Data invalida!";
 }
 // Data invalida
 ?>
-[/code]
+{% endhighlight %}
 
 Ahh.. essa função também te ajuda a validar datas vindas do MySQL (no formato AAAA-MM-DD).
 

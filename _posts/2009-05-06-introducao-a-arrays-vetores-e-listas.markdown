@@ -34,7 +34,7 @@ Por isso existem os arrays: armazenar valores e/ou variáveis referentes a um me
 Criar arrays no PHP é extremamente simples, veja dois exemplos onde criamos a nossa lista de compras:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 // Definição simples e rápida
@@ -55,7 +55,7 @@ $lista[] = 'Carne';
 $lista[] = 'Macarrão';
 
 ?>
-[/code]
+{% endhighlight %}
 
 Em todos os três exemplos o resultado ($lista) será o mesmo... Vamos falar de cada um:
 
@@ -69,7 +69,7 @@ E por fim, no terceiro exemplo, fazemos a mesma coisa que fizemos no segundo, s�
 Você também pode definir índices (também chamados de <em>keys</em> ou chaves)  como <em>strings</em>, veja um bom exemplo de uso:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 // Definição longa
@@ -82,13 +82,13 @@ $carro['fabricante'] = 'Volkswagen';
 $carro = array('cor' => 'Vermelho', 'modelo' => 'CrossFox', 'fabricante' => 'Volkswagen');
 
 ?>
-[/code]
+{% endhighlight %}
 
 <h3>Exibindo e localizando elementos dos Arrays</h3>
 Quando você for exibir um elemento, é só seguir a mesma sintaxe da declaração longa:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 // Carro
@@ -107,7 +107,7 @@ echo "O segundo item da lista é: " . $lista[1];
 // Resultado: O segundo item da lista é: Ovos
 
 ?>
-[/code]
+{% endhighlight %}
 
 Vale lembrar, que quando estamos trabalhando com índices numéricos (ordenados), a posição inicial é a zero, então a quarta posição será o índice<span style="color: #000080;"><strong> [<span style="color: #0000ff;">3</span>]</strong></span>.
 
@@ -119,7 +119,7 @@ Veja também:
 Não vou me aprofundar no assunto... mas você pode definir um array onde um ou mais elementos sejam arrays. Nesse caso o array não pode mais ser chamado de <strong>lista</strong>, e deve ser chamado de <strong>vetor</strong> ou <strong>array</strong> mesmo. Veja um exemplo básico de definição e exibição:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 // Carro
@@ -132,7 +132,7 @@ echo "A terceira cor do meu " . $carro['modelo'] . " é: " . $carro['cores'][2];
 // Resultado: A terceira cor do meu CrossFox é: Cinza
 
 ?>
-[/code]
+{% endhighlight %}
 
 --
 

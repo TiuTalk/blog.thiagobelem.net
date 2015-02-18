@@ -26,7 +26,7 @@ Outro detalhe importante sobre o sistema é que ele irá funcionar nas versões 
 Se você já tem uma tabela de usuários pode pular essa parte... Se não, vamos criar a seguinte tabela no banco de dados do seu site:
 <img src="http://blog.thiagobelem.net/arquivos/2009/12/tabela_usuarios.jpg" alt="Tabela de Usuários" title="Tabela de Usuários" width="163" height="146" class="size-full wp-image-664" />
 Para criar essa tabela, você poderá usar o seguinte código SQL:
-[code language="SQL"]
+{% highlight SQL linenos %}
 CREATE TABLE `usuarios` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
   `nome` VARCHAR(150) NOT NULL ,
@@ -34,7 +34,7 @@ CREATE TABLE `usuarios` (
   `senha` VARCHAR(40) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM;
-[/code]
+{% endhighlight %}
 
 
 <h3>A classe Usuario</h3>
@@ -43,18 +43,18 @@ Vamos ao que interessa!
 Antes de tudo, precisamos criar o nosso arquivo, vamos seguir algumas boas páticas de programação e vamos dar o nome de "<strong style="background: gray; color: orange">usuario.class.php</strong>". Criado o arquivo vazio, vamos começar a construir nossa classe:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 class Usuario {
 
 }
 ?>
-[/code]
+{% endhighlight %}
 
 Agora vamos começar a inserir algumas propriedades (variáveis) que serão usadas pela classe ao longo do projeto...
 
 
-[code language="php"]
+{% highlight php linenos %}
 	/**
 	 * Nome do banco de dados onde está a tabela de usuários
 	 */
@@ -73,14 +73,14 @@ Agora vamos começar a inserir algumas propriedades (variáveis) que serão usad
 		'usuario' => 'usuario',
 		'senha' => 'senha'
 	);
-[/code]
+{% endhighlight %}
 
 São com essas propriedades da classe que você vai poder customizar a classe para ela funcionar no seu site.. Cada uma esta devidamente comentada e explicada, é só alterar da forma que você necessitar.
 
 Agora vamos definir o primeiro método da nossa classe:
 
 
-[code language="php"]
+{% highlight php linenos %}
 	/**
 	 * Usa algum tipo de encriptação para codificar uma senha
 	 *
@@ -94,18 +94,18 @@ Agora vamos definir o primeiro método da nossa classe:
 		// return md5($senha);
 		return $senha;
 	}
-[/code]
+{% endhighlight %}
 
 Esse método cuidará da encriptação da senha (caso ela exista, claro)... Se o seu sistema não usar nenhum tipo de criptografia, pode deixar esse método do jeito que está, mas caso você use, por exemplo, o SHA1, você precisa mudar ali na linha 34 e colocar, por exemplo:
-[code language="php"]
+{% highlight php linenos %}
 return sha1($senha);
-[/code]
+{% endhighlight %}
 Caso você use outro tipo de encriptação, você vai precisar modificar esse método... O importante é você receber a senha pura/plana como parâmetro ($senha) e retornar a senha encriptada.
 
 Agora vamos criar o segundo método da classe e o último método dessa parte do tutorial:
 
 
-[code language="php"]
+{% highlight php linenos %}
 	/**
 	 * Valida se um usuário existe
 	 *
@@ -134,7 +134,7 @@ Agora vamos criar o segundo método da classe e o último método dessa parte do
 		// Se houver apenas um usuário, retorna true
 		return ($total == 1) ? true : false;
 	}
-[/code]
+{% endhighlight %}
 
 Esse método, como o comentário explica, cuidará de validar se um usuário existe, procurando o par <strong>$usuario</strong> + <strong>$senha</strong> no banco de dados... Ele só retornará verdadeiro (<em>true</em>) quando apenas um registro for encontrado.
 Se você reparar logo ali no começo do método, na linha 45, ele usa o método <strong style="background: gray; color: #FFF">__codificaSenha()</strong> que irá encriptar (ou não) a senha... Simples né? :)

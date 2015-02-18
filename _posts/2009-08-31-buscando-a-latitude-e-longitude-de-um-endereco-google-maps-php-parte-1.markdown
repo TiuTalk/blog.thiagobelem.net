@@ -28,7 +28,7 @@ Antes de mais nada você, meu amigo desenvolvedor, precisa de uma <strong>Google
 Tendo sua GMAK em mãos, vamos ver a classe que usaremos para esse e os próximos tutoriais:
 
 
-[code language="php"]
+{% highlight php linenos %}
 /**
  * gMaps Class
  *
@@ -78,12 +78,12 @@ class gMaps {
 		return array('lat' => $latitude, 'lon' => $longitude, 'zoom' => $zoom, 'endereco' => $endereco);
 	}
 }
-[/code]
+{% endhighlight %}
 
 O uso dela é ridiculamente simples:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 // Instancia a classe
 $gmaps = new gMaps('SUA GMAK AQUI');
@@ -95,7 +95,7 @@ $dados = $gmaps->geolocal($endereco);
 // Exibe os dados encontrados:
 print_r($dados);
 ?>
-[/code]
+{% endhighlight %}
 
 Com isso já temos todas as informações necessárias para exibir um mapinha do GoogleMaps com o endereço marcado, o que faremos no [próximo tutorial](/exibindo-mapas-no-seu-site-google-maps-php-parte-2). :)
 

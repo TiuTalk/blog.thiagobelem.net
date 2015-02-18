@@ -74,13 +74,13 @@ Vamos começar com o exemplo da página de contato que atualmente você acessa p
 Vá até a raiz do seu site e edite (ou crie) um arquivo chamado .htaccess ([leia mais aqui](http://en.wikipedia.org/wiki/Htaccess)), e dentro dele coloque as seguintes linhas que explicarei mais a diante:
 
 
-[code language="plain"]
+{% highlight text linenos %}
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 
 	RewriteRule ^contato/?$ /contato.php [NC,L]
 </IfModule>
-[/code]
+{% endhighlight %}
 
 Agora vamos as explicações...
 

@@ -19,7 +19,7 @@ Se alguém aí quiser ler um pouco mais sobre como trabalhar com datas no PHP é
 Vamos ao primeiro exemplo que usa datas no formato <strong>DD/MM/AAAA</strong>:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 // Define os valores a serem usados
@@ -48,7 +48,7 @@ echo "A diferença entre as datas ".$data_inicial." e ".$data_final." é de <str
 // A diferença entre as datas 23/03/2009 e 04/11/2009 é de 225 dias
 
 ?>
-[/code]
+{% endhighlight %}
 
 Vou explicar de forma rápida: Primeiro criamos uma função para gerar o timestamp de uma data usando a função <strong>mktime()</strong> do PHP. Depois nós dividimos o número de segundos <span style="color: #888888;">(diferença das duas datas)</span> pelo número de segundos existentes em um dia <span style="color: #888888;">(60 * 60 * 24 = 86400)</span> e arredondamos o resultado usando a função <strong>floor()</strong>.
 
@@ -61,7 +61,7 @@ Com isso você já consegue calcular a diferença e se usar um pouquinho de cria
 O exemplo do formato <strong>AAAA-MM-DD</strong> é mais simples:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 // Define os valores a serem usados
@@ -84,7 +84,7 @@ echo "A diferença entre as datas ".$data_inicial." e ".$data_final." é de <str
 // A diferença entre as datas 23/03/2009 e 04/11/2009 é de 225 dias
 
 ?>
-[/code]
+{% endhighlight %}
 
 Nesse exemplo não precisamos criar uma função pois a função <strong>strtotime()</strong> do PHP já converte uma data no formato <strong>AAAA-MM-DD</strong> em <em>timestamp</em>.
 

@@ -39,7 +39,7 @@ Que em tradução livre seria:
 Acredito que todos vocês já viram uma conexão e consulta MySQL feita da seguinte forma:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Conecta ao banco de dados
@@ -64,13 +64,13 @@ while ($noticia = mysql_fetch_assoc($query)) {
 echo 'Total de notícias: ' . mysql_num_rows($query);
 
 ?>
-[/code]
+{% endhighlight %}
 Não há nada de especial com esse código... Conectamos ao MySQL e depois procuramos todas as notícias ativas e anteriores ao dia de hoje (inclusive)... O código por si só não é feito nem "mal organizado", mas isso é por que vocês ainda não conhecem o <strong>MySQLi</strong>!
 
 
 <h3>Orientação a Objetos: a beleza programação</h3>
 Agora veja o código que faz a mesma coisa que o anterior, só que em sua versão MySQLi orientada a objetos:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Conecta ao banco de dados
@@ -115,7 +115,7 @@ if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE
 $mysqli->close();
 
 ?>
-[/code]
+{% endhighlight %}
 De primeiro contato sei que muita gente vai achar que o MySQLi é mais complicado, é só ver o número de linhas: quase o dobro.. Mas o MySQLi tem uma vantagem indescutível em cima do MySQL normal: <strong style="color: #B40000">a segurança</strong>.
 
 Primeiro nós <strong>PREPARAMOS</strong> uma consulta com um local para receber um valor variável... É aquela interrogação.
@@ -127,7 +127,7 @@ Depois é só executar, reservar variáveis para o resultado e usá-las com um <
 Vejam um exemplo de consulta com três parâmetros: duas strings e um inteiro:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // "Hoje" em formato SQL
@@ -147,7 +147,7 @@ if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE
 	// ... Todo o resto é igual
 }
 ?>
-[/code]
+{% endhighlight %}
 Nessa consulta nós reservamos espaços para três variáveis... Depois nós passamos os seus tipos e valores usando o método <strong>bind_param()</strong>, o primeiro parâmetro traz os tipos dos valores, no exemplo foi usado "<strong>sis</strong>" que significa: uma <em><strong>s</strong>tring</em>, um <em><strong>i</strong>nteger</em> (inteiro) e uma <em><strong>s</strong>tring</em>... Depois nós passamos os valores normalmente.. :)
 
 Os tipos de valores aceitos pelo MySQLi são:

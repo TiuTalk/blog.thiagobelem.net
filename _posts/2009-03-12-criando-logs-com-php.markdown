@@ -17,7 +17,7 @@ Um recurso muito bom de segurança é a criação de <abbr title="Em computaçã
 O que você vai precisar pra criar um sisteminha simples de LOGs pro seu site é de apenas uma tabela no banco de dados MySQL:
 
 
-[code language="sql"]
+{% highlight text linenos %}
 DROP TABLE IF EXISTS `logs`;
 CREATE TABLE IF NOT EXISTS `logs` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -27,14 +27,14 @@ CREATE TABLE IF NOT EXISTS `logs` (
 PRIMARY KEY (`id`),
 KEY `hora` (`hora`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
-[/code]
+{% endhighlight %}
 
 Vale ressaltar que você não precisa gravar os LOGs especificamente no banco de dados, você pode criar arquivos e pastas pra isso também. Falarei sobre como criar arquivos e pastas dinamicamente (pelo PHP) em outro tópico.
 
 Tendo a tabela já criada no seu banco de dados, você só precisa criar uma função para agilizar as coisas:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 /**
@@ -63,28 +63,28 @@ return false;
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Com essa função você pode registrar qualquer tipo de evento no seu MySQL e depois, organizando-os por data e/ou IP saber exatamente o que aconteceu no seu sistema, vindo de onde, e como aconteceu.
 
 Para usar a função e salvar uma mensagem de LOG, é só fazer assim:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $mensagem= "Nova visita no site";
 salvaLog($mensagem);
 
 ?>
-[/code]
+{% endhighlight %}
 
 Vale lembrar que o script acima só vai funcionar se você abrir uma conexão com o MySQL e o banco de dados antes de tentar salvar uma mensagem de LOG.
 
 A função criada também retorna true ou false (verdadeiro ou falso) para caso você precise fazer uma verificação se o LOG foi salvo com sucesso:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $mensagem = "Nova visita no site";
@@ -95,7 +95,7 @@ echo "Não foi possível salvar o LOG!";
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Sugiro que salvem LOGs - principalmente - de todas as tentativas de login. Salve LOGs também das alterações, cadastros e deleções de registros do sistema (produtos/categorias/lojas/notícias e etc.). Isso vai tornar a sua aplicação mais segura e quando algo der errado você vai poder encontrar "o pai da criança" com mais facilidade.
 

@@ -21,24 +21,24 @@ Para poder usar o cURL no seu site/sistema você precisa que a biblioteca esteja
 
 <h3>Verificando se o cURL está instalado</h3>
 Recomendo que antes de sair tentando instalar a cURL, verifique se ela já não está habilitada no seu servidor... Crie um arquivo .php com o seguinte conteúdo:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 	// Exibe informações relativas ao PHP e suas extensões
 	phpinfo();
 ?>
-[/code]
+{% endhighlight %}
 Acesse esse arquivo pelo seu navegador e procure por "cURl support" se encontrar algo significa que você tem o cURL instalado e pode pular o próximo capitulo.
 
 <h3>Instalando o cURL</h3>
 Para instalá-lo é bem simples, basta acessar o seu arquivo php.ini que geralmente fica dentro da pasta php do seu servidor (sim, você precisa ter acesso a esse arquivo) e procure por essa linha:
-[code language="plain"]
+{% highlight text linenos %}
 ;extension=php_curl.dll
-[/code]
+{% endhighlight %}
 Agora remova o ponto-e-vírgula (;) do começo da linha, reinicie o seu servidor e voila! Você acabou de instalar o cURL no seu sistema. ;)
 
 <h3>Uso básico do cURL</h3>
 Bom, primeiro de tudo, vamos o script mais simples que você pode usar para pegar a resposta de um site (que nesse caso, é o arquivo robots.txt aqui do blog):
-[code language="php"]
+{% highlight php linenos %}
 <?php
 	// Inicia o cURL acessando uma URL
 	$cURL = curl_init('http://blog.thiagobelem.net/robots.txt');
@@ -49,14 +49,14 @@ Bom, primeiro de tudo, vamos o script mais simples que você pode usar para pega
 	// Encerra a conexão com o site
 	curl_close($cURL);
 ?>
-[/code]
+{% endhighlight %}
 Depois de executar esse script, o conteúdo da variável $resultado será exatamente o conteúdo do meu arquivo robots.txt. Você pode usar esse método para pegar o HTML resultado de qualquer site e etc.
 
 A função <strong>curl_setopt()</strong> permite que você defina uma série de opções MUITO úteis para o uso do cURL, recomendo que vocês vejam a [documentação](http://br2.php.net/manual/pt_BR/function.curl-setopt.php) dela para dar uma olhada na lista completa.
 
 <h3>Verificando se um site está no ar e acessível</h3>
 Com o script que vou mostrar agora você vai poder acessar qualquer endereço ou URL pública e descobrir se ele retorna erro 404 (página não encontrada) ou não, baseando-se no código HTTP de resposta:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 	$cURL = curl_init('http://www.sitequenaoexiste.net.br');
 	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
@@ -77,12 +77,12 @@ Com o script que vou mostrar agora você vai poder acessar qualquer endereço ou
 		echo 'Parece que está tudo bem...';
 	}
 ?>
-[/code]
+{% endhighlight %}
 Adicionei também uma opção nova (CURLOPT_FOLLOWLOCATION) que vai permitir que o cURL siga todos os redirects que houverem na URL. Por exemplo, se estivermos usando o TintURL é preciso seguir o redirecionamento depois de acessar a url reduzida para chegar na URL final.
 
 <h3>Enviando dados para formulários (via método POST)</h3>
 Suponhamos que você queira testar o cURL enviando dados para um formulário, como se você tivesse digitando os dados e dando submit no formulário. Você vai precisar de duas coisas: a lista dos nomes (names) dos campos e o action do formulário (que é pra onde os dados são enviados)... Depois é só montar um script parecido com esse:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 	// Aqui entra o action do formulário - pra onde os dados serão enviados
 	$cURL = curl_init('http://www.meusite.com.br/envia.php');
@@ -104,9 +104,9 @@ Suponhamos que você queira testar o cURL enviando dados para um formulário, co
 	$resultado = curl_exec($cURL);
 	curl_close($cURL);
 ?>
-[/code]
+{% endhighlight %}
 Mas suponhamos que você testou o script e reparou que algo deu errado.. E depois de fazer o seu trabalho de casa, descobriu que o site permite apenas dados vindos do próprio site (ou seja, ele verifica o <strong>REFERER</strong> que é o endereço da página na qual os dados foram inseridos). Então, você ajusta o seu script da seguinte maneira:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 	$cURL = curl_init('http://www.meusite.com.br/envia.php');
 	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
@@ -127,7 +127,7 @@ Mas suponhamos que você testou o script e reparou que algo deu errado.. E depoi
 	$resultado = curl_exec($cURL);
 	curl_close($cURL);
 ?>
-[/code]
+{% endhighlight %}
 
 --
 

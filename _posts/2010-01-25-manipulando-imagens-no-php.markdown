@@ -40,16 +40,16 @@ A classe <strong>WideImage</strong> te ajuda manipular imagens salvas no seu sit
 
 <h3>Carregando Imagens para a Memória</h3>
 Quando você for usar a classe para manipular uma imagem você precisa, claro, carregar a imagem antes... Existem duas formas de fazer isso:
-[code language="php"]
+{% highlight php linenos %}
 // Carrega a imagem de um arquivo
 $img = WideImage::load('imagens/minha_foto.jpg');
-[/code]
+{% endhighlight %}
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Carrega a imagem de um arquivo
 $img = WideImage::loadFromFile('imagens/minha_foto.jpg');
-[/code]
+{% endhighlight %}
 
 Feito isso você carregou a imagem para e memória do PHP.
 
@@ -63,18 +63,18 @@ Depois de carregada uma imagem pode ser redimensionada... Existem três tipos de
 <li><strong style="color: #B40000">fill</strong> - A imagem será redimensionada para <strong>preencher por completo</strong> a largura e altura especificada, distorce a imagem se necessário</li>
 </ul>
 
-[code language="php"]
+{% highlight php linenos %}
 // Redimensiona a imagem para caber em um quadrado de 200x200px
 $img = $img->resize(200, 200, 'inside');
-[/code]
+{% endhighlight %}
 
 Isso fará com que a imagem seja redimensionada para caber dentro de um quadrado de 200x200 píxels... A imagem final poderá ter 200x200, 100x200 ou 200x100 pois todos esses tamanhos estão menores ou iguais a 200x200 píxels.
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Redimensiona a imagem para preencher um quadrado de 350x200px
 $img = $img->resize(350, 200, 'outside');
-[/code]
+{% endhighlight %}
 
 Isso fará com que a imagem seja redimensionada para preencher um quadrado de 350x200 píxels... Se as proporcões da imagem forem maiores que essa proporção de 350x200 a imagem final será maior que o 350x200.
 Suponhamos que imagem fosse um quadrado de 500x500, depois de redimensionada ela terá 350x350, pois ela está preenchendo o quadrado de 350x200 mas precisa manter a sua proporção original de 1:1... Se o tipo de redimensionamento fosse "<strong>fill</strong>" a imagem final teria sempre 350x200, mesmo que ela fosse menor antes, pois o <strong>fill</strong> distorce a imagem quando necessário.
@@ -95,63 +95,63 @@ O <strong>crop()</strong> tem quatro parâmetros: <strong>coorenada X</strong> o
 Vamos a alguns exemplos de crop:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Corta um quadrado de 150x150px no canto superior direito da imagem
 $img = $img->crop(0, 0, 150, 150);
-[/code]
+{% endhighlight %}
 
 Mas ninguém quer cortar um pedaço do canto superior direito da imagem... Geralmente precisamos fazer um corte no meio da imagem... É aí que o crop() mostra seu poder:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Corta um quadrado de 100x80px no meio da imagem
 $img = $img->crop('50% - 50', '50% - 40', 100, 80);
-[/code]
+{% endhighlight %}
 
 Veja que interessante: nos dois primeiros parâmetros usamos um posicionamento diferente... dizemos que o crop irá para a metade da imagem (50%) e voltará 50px para lagura e 40px para a altura e depois irá fazer um corte de 100x80... Genial não é? Isso fará um corte de 100x80 no meio da imagem.
 
 E se a imagem for muito grande? Você pode acabar pegando um pedaço da imagem que não serve de nada... É aí que você aprende a usar o resize() em conjunto com o crop():
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Redimensiona a imagem para preencher uma area de 100x80
 $img = $img->resize(100, 80, 'outside');
 // Corta um quadrado de 100x80px no meio da imagem
 $img = $img->crop('50% - 50', '50% - 40', 100, 80);
-[/code]
+{% endhighlight %}
 
 Se você gostar, também pode fazer tudo de uma vez, o que é bem mais interessante:
-[code language="php"]
+{% highlight php linenos %}
 // Redimensiona e corta a imagem
 $img = $img->resize(100, 80, 'outside')->crop('50% - 50', '50% - 40', 100, 80);
-[/code]
+{% endhighlight %}
 
 
 <h4>Salvando Imagens</h4>
 Você já carregou sua imagem, redimensionou e cropou ela.. Agora só falta tirar ela da memória e salvar ela em um arquivo, substituindo (ou não) o anterior... E é assim que você faz isso:
-[code language="php"]
+{% highlight php linenos %}
 // Salva a imagem em um novo arquivo
 $img->saveToFile('/imagens/minha_foto_menor.jpg');
-[/code]
+{% endhighlight %}
 Quando a imagem for salva em JPG você também pode definir a qualidade da imagem, diminuindo assim o tamanho do arquivo:
-[code language="php"]
+{% highlight php linenos %}
 // Salva a imagem em um novo arquivo com 80% de qualidade
 $img->saveToFile('/imagens/minha_foto_menor.jpg', null, 80);
-[/code]
+{% endhighlight %}
 
 <h4>Enviando Imagens para o Navegador</h4>
 Você também pode enviar imagens diretamente para o navegador, isso funciona bem quando você quer manipular uma imagem e exibí-la sem precisar salvá-la em um arquivo novo... É só tirar ela da memória e jogar para o navegador, assim:
-[code language="php"]
+{% highlight php linenos %}
 // Define o tipo de cabeçalho para exibir a imagem corretamente
 header("Content-type: image/jpeg");
 
 // Envia a imagem para o navegador com 80% de qualidade
 $img->asString('jpg', 80);
-[/code]
+{% endhighlight %}
 
 <h4>Outros Exemplos</h4>
 Veja aqui um exemplo onde carregamos uma imagem do HD, redimensionamos, cropamos e salvamos no mesmo local, substituindo a anterior:
-[code language="php"]
+{% highlight php linenos %}
 $arquivo = '/imagens/fotos/tiutalk.jpg';
 
 // Carrega a imagem
@@ -168,16 +168,16 @@ $img->saveToFile($arquivo);
 
 // Limpa a imagem da memória
 $img->destroy();
-[/code]
+{% endhighlight %}
 
 E veja uma versão onde fazemos isso tudo numa linha:
 
 
-[code language="php"]
+{% highlight php linenos %}
 $arquivo = '/imagens/fotos/tiutalk.jpg';
 
 WideImage::load($arquivo)->resize(100, 100, 'outside')->crop('50% - 50', '50% - 50', 100, 100)->saveToFile($arquivo)->destroy();
-[/code]
+{% endhighlight %}
 
 E aí? Gostaram? :)
 

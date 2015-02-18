@@ -18,27 +18,27 @@ Para criar uma pasta exiset a função <strong>mkdir()</strong> que é bem fáci
 Para criarmos uma pasta no mesmo diretório do script atual, fazemos das seguintes maneiras:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 mkdir('/novapasta/'); // Cria uma nova pasta dentro do diretório atual
 ?>
-[/code]
+{% endhighlight %}
 
 Por padrão o CHMOD das pastas criadas pelo PHP é 777... Se quiser criar uma pasta com permissões mais restritas, ou seja, um CHMOD menor, faça dessa forma:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 mkdir('/novapasta/', 0744); // Cria uma nova pasta dentro do diretório atual com permissão CHMOD de 744
 ?>
-[/code]
+{% endhighlight %}
 
 Por motivos maiores o nº do CHMOD (no nosso exemplo: 744) deve ser sempre precedido de um zero e não pode estar entre aspas.
 
 Agora suponhamos que você precise criar duas pastas, mas que seja uma dentro da outra... Você pode fazer de duas formas:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 // Dividindo em duas instruções:
 mkdir('/novapasta/'); // Cria uma nova pasta dentro do diretório atual
@@ -47,7 +47,7 @@ mkdir('/novapasta/outrapasta/'); // Cria uma nova pasta dentro da pasta /novapas
 // Ou, você pode fazer assim:
 mkdir('/novapasta/outrapasta/', 0777, true); // Cria uma pasta dentro da outra (que também e nova) - Criação Recursiva
 ?>
-[/code]
+{% endhighlight %}
 
 Repare que, na segunda forma de se criar uma pasta, definimos o terceiro parâmetro (criação recursiva) como true, isso faz com que o PHP vá criando as pastas, uma a uma, de forma automática caso elas não existam.
 
@@ -57,11 +57,11 @@ Se você quiser deletar pastas é só usar função <strong>rmdir()</strong> par
 Veja um exemplo de como deletar uma das pastas criadas nos exemplos anteriores:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 rmdir('/novapasta/outrapasta/'); // Deleta a pasta /outrapasta/ de dentro da pasta /novapasta/
 ?>
-[/code]
+{% endhighlight %}
 
 Em um futuro próximo ensinarei a manipular arquivos também e você poderá fazer a sua super-função para deletar a pasta e tudo que estiver dentro. Aguarde.
 
@@ -69,11 +69,11 @@ Em um futuro próximo ensinarei a manipular arquivos também e você poderá faz
 Pra renomear pastas também não tem mistério, é só usar a função <strong>rename()</strong> que também pode ser usada para renomear arquivos:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 rename('/novapasta/', '/minhapasta/'); // Renomeia /novapasta/ para /minhapasta/
 ?>
-[/code]
+{% endhighlight %}
 
 <h4>Movendo pastas</h4>
 Não.. Não existe função para "mover" uma pasta por que, na verdade, o que você faz é renomeá-la... Vejamos um exemplo:
@@ -81,11 +81,11 @@ Não.. Não existe função para "mover" uma pasta por que, na verdade, o que vo
 Temos a pasta site e, dentro dela, temos duas pastas: imagens e blog. Queremos mover a pasta blog para fora da pasta site... O script rodado está fora da pasta site também, é só fazermos assim:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 rename('/site/blog/', '/blog/'); // Com isso, "tiramos" a pasta blog de dentro da pasta /site/
 ?>
-[/code]
+{% endhighlight %}
 
 ------
 

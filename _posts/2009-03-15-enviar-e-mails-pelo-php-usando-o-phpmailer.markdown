@@ -23,7 +23,7 @@ Faça o download, descompacte o arquivo e coloque os arquivos <strong>class.phpm
 Agora, vamos ao script que faz o envio do e-mail:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 // Inclui o arquivo class.phpmailer.php localizado na pasta phpmailer
@@ -85,7 +85,7 @@ echo "<b>Informações do erro:</b> " . $mail->ErrorInfo;
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Algumas linhas de código estão comentadas porque são opcionais e dependem também da necessidade de quem vai usar o script. Logo no começo, na parte dos dados do servidor você tem a opção de configurar o login do servidor SMTP caso seja necessário.
 

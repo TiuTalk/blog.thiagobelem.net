@@ -17,7 +17,7 @@ tags:
 Vamos que vamos! Essa é a segunda parte do nosso tutorial "<strong>Criando um sistema de logins com classe no PHP</strong>", na [Parte 1](/criando-um-sistema-de-logins-com-classe-no-php-parte-1) começamos a criar a classe e definimos um método que validava se o usuário existe, agora vamos continuar a classe e criar um método que deixará o usuário logado no sistema usando sessão e cookies.
 
 Primeiro, vamos adicionar algumas novas propriedades que iremos usar nessa parte do tutorial:
-[code language="php"]
+{% highlight php linenos %}
 	/**
 	 * Nomes dos campos que serão pegos da tabela de usuarios e salvos na sessão,
 	 * caso o valor seja false nenhum dado será consultado
@@ -48,7 +48,7 @@ Primeiro, vamos adicionar algumas novas propriedades que iremos usar nessa parte
 	 * @var string
 	 */
 	var $erro = '';
-[/code]
+{% endhighlight %}
 
 Todas as propriedades estão comentadas, é bom vocês irem se acostumando com essa necessidade dos comentários organizados e padronizados, isso vai se tornar um "<em>must have</em>" num futuro não muito distante... Mas isso é assunto pra um outro tutorial.
 
@@ -57,7 +57,7 @@ Reparem que criamos uma propriedade $erro, ela será usada para armazenar as men
 Agora vamos começar a criar o novo, gigantesco e magnífico método que irá salvar o usuário no sistema, mantendo-o logado:
 
 
-[code language="php"]
+{% highlight php linenos %}
 	/**
 	 * Loga um usuário no sistema salvando seus dados na sessão
 	 *
@@ -68,10 +68,10 @@ Agora vamos começar a criar o novo, gigantesco e magnífico método que irá sa
 	function logaUsuario($usuario, $senha) {
 
 	}
-[/code]
+{% endhighlight %}
 
 Primeiro de tudo, precisamos validar os dados passados por parâmetro:
-[code language="php"]
+{% highlight php linenos %}
 		// Verifica se é um usuário válido
 		if ($this->validaUsuario($usuario, $senha)) {
 
@@ -81,18 +81,18 @@ Primeiro de tudo, precisamos validar os dados passados por parâmetro:
 			$this->erro = 'Usuário inválido';
 			return false;
 		}
-[/code]
+{% endhighlight %}
 
 Já sabemos se o usuário foi validado, agora nós vamos verificar se é necessário (e possível) iniciar a sessão:
-[code language="php"]
+{% highlight php linenos %}
 			// Inicia a sessão?
 			if ($this->iniciaSessao AND !isset($_SESSION)) {
 				session_start();
 			}
-[/code]
+{% endhighlight %}
 
 O próximo passo é atrazer (ou não) os dados do banco de dados para a sessão:
-[code language="php"]
+{% highlight php linenos %}
 			// Traz dados da tabela?
 			if ($this->dados != false) {
 				// Adiciona o campo do usuário na lista de dados
@@ -126,7 +126,7 @@ O próximo passo é atrazer (ou não) os dados do banco de dados para a sessão:
 					}
 				}
 			}
-[/code]
+{% endhighlight %}
 
 Da linha 124 até a linha 135 nó montamos a consulta que será usada para fazer a busca no banco de dados, depois disso nós a executamos e, caso a consulta tenha sido bem sucedida, salvamos os dados na sessão.
 
@@ -137,7 +137,7 @@ Mas calma que ainda não acabou!
 Precisamos ainda definir um valor na sessão e criar (caso seja possível) o cookie que irá ajudar na identificação (e segurança) do usuário:
 
 
-[code language="php"]
+{% highlight php linenos %}
 			// Usuário logado com sucesso
 			$_SESSION[$this->prefixoChaves . 'logado'] = true;
 
@@ -154,7 +154,7 @@ Precisamos ainda definir um valor na sessão e criar (caso seja possível) o coo
 
 			// Fim da verificação, retorna true
 			return true;
-[/code]
+{% endhighlight %}
 
 A parte do cookie pode parecer complexa mais não é... Criamos um cookie chamado "usuario_token" contendo informações adicionais do usuário: usuário, IP e informações do navegador... Essas informações serão usadas para proteger o login do usuário caso outros usuários tentem roubar o ID de sessão ou forjar IDs falsos.
 

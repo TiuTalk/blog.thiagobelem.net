@@ -28,7 +28,7 @@ Para se conectar a um servidor FTP você deve usar a função <strong>ftp_connec
 Então, começaremos o nosso arquivo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 /**
 * Conexão via FTP com o PHP
@@ -42,7 +42,7 @@ $servidor = 'thiagobelem.net'; // Endereço
 // Abre a conexão com o servidor FTP
 $ftp = ftp_connect($servidor); // Retorno: true ou false
 ?>
-[/code]
+{% endhighlight %}
 
 Até aqui, nada de misterioso... Vamos continuar.
 
@@ -59,7 +59,7 @@ Para fazer o login você vai usar a função <strong>ftp_login()</strong>, que t
 Então, fazendo algumas alterações no nosso arquivo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 /**
 * Conexão via FTP com o PHP
@@ -78,7 +78,7 @@ $ftp = ftp_connect($servidor); // Retorno: true ou false
 // Faz o login no servidor FTP
 $login = ftp_login($ftp, $usuario, $senha); // Retorno: true ou false
 ?>
-[/code]
+{% endhighlight %}
 
 Vale lembrar que não estou criando nenhuma rotina de debug ou de manipulação de erros, estou partindo da premissa que os dados estão corretos e o servidor FTP está rodando, no ar.
 
@@ -98,7 +98,7 @@ Para fazer upload de arquivos você vai usar a função <strong>ftp_put()</stron
 Então, fazendo algumas alterações no nosso arquivo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 /**
 * Conexão via FTP com o PHP
@@ -126,7 +126,7 @@ $ftp_arquivo = 'documento.doc'; // Nome do arquivo (externo)
 $envio = ftp_put($ftp, $ftp_pasta.$ftp_arquivo, $local_arquivo, FTP_ASCII); // Retorno: true / false
 
 ?>
-[/code]
+{% endhighlight %}
 
 Com isso você já vai poder conectar-se a um FTP e enviar arquivos dinamicamente, o que é muito útil.
 
@@ -144,7 +144,7 @@ Para fazer download de arquivos você vai usar a função <strong>ftp_get()</str
 Então, fazendo algumas alterações no nosso arquivo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 /**
 * Conexão via FTP com o PHP
@@ -184,7 +184,7 @@ $ftp_arquivo = 'planilha.xls'; // Nome do arquivo (externo)
 $recebe = ftp_get($ftp, $ftp_pasta.$ftp_arquivo, $local_arquivo, FTP_ASCII); // Retorno: true / false
 
 ?>
-[/code]
+{% endhighlight %}
 
 » <strong>Veja também:</strong> [Documentação da função ftp_get()](http://br2.php.net/manual/pt_BR/function.ftp-get.php)
 
@@ -194,7 +194,7 @@ Para se desconectar (faça isso, sempre) você vai usar a função <strong>ftp_c
 Então, finalizando o no nosso arquivo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 /**
 * Conexão via FTP com o PHP
@@ -237,7 +237,7 @@ $recebe = ftp_get($ftp, $ftp_pasta.$ftp_arquivo, $local_arquivo, FTP_ASCII); // 
 ftp_close($ftp);
 
 ?>
-[/code]
+{% endhighlight %}
 
 Com esse arquivo você tem exemplos simples de como usar as tarefas básicas de uma conexão via protocolo FTP. É claro que existem várias outras funções relacionadas ao tamanho de arquivos, CHMOD (permissões), pastas e etc... Por isso vale a pena dar uma olhada na lista de funções FTP do PHP.
 

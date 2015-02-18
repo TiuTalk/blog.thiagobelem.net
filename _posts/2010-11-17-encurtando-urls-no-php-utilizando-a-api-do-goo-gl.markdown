@@ -24,7 +24,7 @@ Depois de algumas horas de insônia resolvi fazer uma classe que, creio eu, vai 
 O código da classe é bem simples:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 /**
@@ -152,7 +152,7 @@ class Googl {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Essa classe bem simples possui dois métodos: um para fazer uma requisição HTTP utilizando a biblioteca cURL e outro para encurtar a URL (que utiliza o método de requisição).
 
@@ -164,7 +164,7 @@ Um ponto importante sobre essa classe é a utilização da função [filter_var(
 Veja um exemplo:
 
 
-[code language="php"]
+{% highlight php linenos %}
 $Googl = new Googl();
 
 $url = 'http://blog.thiagobelem.net/vida-pessoal/freelancear-ou-nao-freelancear-eis-a-questao-parte-3/';
@@ -176,7 +176,7 @@ echo "URL encurtada: <strong>". $url_encurtada ."</strong>
 ";
 echo "Diferença: <strong>". (strlen($url) - strlen($url_encurtada)) ."</strong> caracteres
 ";
-[/code]
+{% endhighlight %}
 
 Como resultado desse exemplo você teria uma URL encurtada economizando 75 caracteres!
 
@@ -184,7 +184,7 @@ Como resultado desse exemplo você teria uma URL encurtada economizando 75 carac
 Você também pode criar uma função que faz o trabalho de instanciar a classe pra você!
 
 
-[code language="php"]
+{% highlight php linenos %}
 /**
  * Encurta URLs utilizando a classe de API do goo.gl
  *
@@ -196,14 +196,14 @@ function googl($url) {
 	$Googl = new Googl();
 	return $Googl->shorten($url);
 }
-[/code]
+{% endhighlight %}
 
 Com isso seria só usar:
 
 
-[code language="php"]
+{% highlight php linenos %}
 googl('http://thiagobelem.net/');
-[/code]
+{% endhighlight %}
 
 <h3>Download do código fonte</h3>
 Caso você tenha preguiça de copiar e colar, pode baixar o [arquivo com código fonte](/arquivos/googl.class.phps) dela e sair usando!

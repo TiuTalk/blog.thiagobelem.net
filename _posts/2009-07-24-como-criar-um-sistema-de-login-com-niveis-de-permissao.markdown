@@ -27,7 +27,7 @@ O nosso sistema consistirá em um login simples, validado por usuário e senha (
 
 <h3>Criando a Tabela MySQL</h3>
 Você pode executar esse código MySQL para criar a nossa tabela de usuários que tem 7 campos: id, nome, usuario, senha, niveis, ativo e cadastro:
-[code language="sql"]
+{% highlight sql linenos %}
 CREATE TABLE IF NOT EXISTS `usuarios` (
 	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`nome` VARCHAR( 50 ) NOT NULL ,
@@ -41,13 +41,13 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 	UNIQUE KEY `usuario` (`usuario`),
 	KEY `nivel` (`nivel`)
 ) ENGINE=MyISAM ;
-[/code]
+{% endhighlight %}
 
 Com isso você já tem uma tabela pronta para o nosso tutorial... Rode esse script se quiser alimentar a tabela com alguns usuários de teste:
-[code language="sql"]
+{% highlight sql linenos %}
 INSERT INTO `usuarios` VALUES (NULL, 'Usuário Teste', 'demo', SHA1( 'demo' ), 'usuario@demo.com.br', 1, 1, NOW( ));
 INSERT INTO `usuarios` VALUES (NULL, 'Administrador Teste', 'admin', SHA1( 'admin' ), 'admin@demo.com.br', 2, 1, NOW( ));
-[/code]
+{% endhighlight %}
 
 Como vocês podem perceber, o nosso campo de senha tem 40 caracteres e quando cadastramos os usuários testes usamos <strong style="color: white; background: gray">SHA1('{senha}')</strong> isso significa que usaremos uma senha encriptada... Se você quiser saber mais sobre sha1 veja esse artigo: [Criptografia no PHP usando md5, sha1 e base64](/criptografia-no-php-usando-md5-sha1-e-base64).
 
@@ -57,7 +57,7 @@ Como vocês podem perceber, o nosso campo de senha tem 40 caracteres e quando ca
 Vamos criar agora o nosso formulário que será onde o visitante entrará com os dados e será mandado para a pagina validacao.php onde os dados serão validados (ohh).
 
 
-[code language="html"]
+{% highlight html linenos %}
 <!-- Formulário de Login -->
 <form action="validacao.php" method="post">
 <fieldset>
@@ -70,7 +70,7 @@ Vamos criar agora o nosso formulário que será onde o visitante entrará com os
 	<input type="submit" value="Entrar" />
 </fieldset>
 </form>
-[/code]
+{% endhighlight %}
 Como esse artigo não é uma aula sobre formulários e método POST eu vou pular a parte que fala sobre os names desses inputs e a relação deles com o PHP em si.
 
 
@@ -81,7 +81,7 @@ Já temos o banco de dados e o formulário de login... Agora vamos começar a fa
 Primeiro de tudo nós precisamos verificar se o usuário de fato preencheu algo no formulário, caso contrário mandamos ele de volta para o <strong style="color: white; background: gray">index.php</strong>:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
@@ -90,14 +90,14 @@ if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Com isso, todo código que vier depois desse if estará seguro de que os dados foram preenchidos no formulário.
 
 Agora nós iremos abrir uma conexão com o MySQL mas essa conexão pode ser feita de outra forma, até antes do if se você preferir... Depois de abrir a conexão nós iremos transmitir os dois valores inseridos pelo visitante (usuário e senha) para novas variáveis e usaremos o <strong style="color: orange; background: gray">mysql_real_escape_string()</strong> para evitar erros no MySQL.
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
@@ -114,12 +114,12 @@ $usuario = mysql_real_escape_string($_POST['usuario']);
 $senha = mysql_real_escape_string($_POST['senha']);
 
 ?>
-[/code]
+{% endhighlight %}
 
 Agora é hora de validar os dados contra a tabela de usuários:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
@@ -147,14 +147,14 @@ if (mysql_num_rows($query) != 1) {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Repare que estamos buscando registros que tenham o usuário igual ao digitado pelo visitante e que tenham uma senha igual a versão SHA1 da senha digitada pelo visitante... Também buscamos apenas por registros de usuários que estejam ativos, assim quando você precisar remover um usuário do sistema, mas não pode simplesmente excluir o registro é só trocar o valor da coluna ativo pra zero. ;)
 
 A consulta gerada fica mais ou menos assim:
-[code language="sql"]
+{% highlight sql linenos %}
 SELECT `id`, `nome`, `nivel` FROM `usuarios` WHERE (`usuario` = 'a') AND (`senha` = 'e9d71f5ee7c92d6dc9e92ffdad17b8bd49418f98') AND (`ativo` = 1) LIMIT 1
-[/code]
+{% endhighlight %}
 
 Depois de rodar a consulta (query) nós verificamos se o número de resultados encontrados (ou não) é diferente de um, caso seja é exibida uma mensagem de erro acompanhada de um exit que finaliza o script... Caso ele encontre apenas um resultado nós temos o nosso usuário e já puxamos o seu ID, nome e nível de acesso do banco de dados.
 
@@ -164,7 +164,7 @@ Depois de rodar a consulta (query) nós verificamos se o número de resultados e
 Agora nós precisamos salvar os dados encontrados na sessão pois eles serão utilizados mais tarde, em outras páginas e eles precisam "persistir" até lá... Depois de salvar os dados na sessão nós iremos redirecionar o visitante para uma página restrita:
 
 
-[code language="php"]
+{% highlight php linenos %}
 if (mysql_num_rows($query) != 1) {
 	// Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
 	echo "Login inválido!"; exit;
@@ -184,7 +184,7 @@ if (mysql_num_rows($query) != 1) {
 	header("Location: restrito.php"); exit;
 }
 
-[/code]
+{% endhighlight %}
 
 
 
@@ -192,7 +192,7 @@ if (mysql_num_rows($query) != 1) {
 Nosso sistema de login está quase completo! Agora só precisamos verificar se o usuário está logado no sistema e se o seu o nível de acesso condiz com o da página... Vamos agora escrever um pequeno bloco de PHP no início do arquivo <strong style="color: white; background: gray">restrito.php</strong> (que só deve ser acessado por usuários logados):
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // A sessão precisa ser iniciada em cada página diferente
@@ -210,12 +210,12 @@ if (!isset($_SESSION['UsuarioID'])) {
 
 <h1>Página restrita</h1>
 Olá, <?php echo $_SESSION['UsuarioNome']; ?>!
-[/code]
+{% endhighlight %}
 
 Pronto meu amigo! O seu sistema de login está pronto para funcionar... Só vamos fazer alguns incrementos para ele ficar mais "usável"... Agora você vai ver como fazer a verificação de usuário logado e de nível de acesso, por exemplo para uma página onde apenas os administradores possam ter acesso:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // A sessão precisa ser iniciada em cada página diferente
@@ -232,23 +232,23 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 
 
 <h3>Código de Logout</h3>
 O arquivo <strong style="color: white; background: gray">logout.php</strong> é tão simples que pode ter uma linha só:
-[code language="php"]
+{% highlight php linenos %}
 <?php session_start(); session_destroy(); header("Location: index.php"); exit; ?>
-[/code]
+{% endhighlight %}
 Ou se você preferir, uma versão mais extensa:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 	session_start(); // Inicia a sessão
 	session_destroy(); // Destrói a sessão limpando todos os valores salvos
 	header("Location: index.php"); exit; // Redireciona o visitante
 ?>
-[/code]
+{% endhighlight %}
 
 --
 

@@ -15,7 +15,7 @@ Essa não é uma tarefa muito comum... Mas as vezes precisamos fazer um login au
 Você pode fazer essa "façanha" usando uma biblioteca do PHP chamada cURL ([veja mais sobre o cURL aqui](http://br2.php.net/manual/pt_BR/book.curl.php)), veja um exemplo devidamente comentado e explicado:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 // Inicia o cURL
@@ -49,7 +49,7 @@ $content = curl_exec ($ch);
 curl_close ($ch);
 
 ?>
-[/code]
+{% endhighlight %}
 
 No fim da execução deste script você terá duas variáveis: a <span style="color: #008080;"><strong>$store</strong></span> contendo o HTML da página resultado (depois do submit do login) e a variável <span style="color: #008080;"><strong>$content</strong></span>, contendo o HTML da página chamada na segunda requisição.
 

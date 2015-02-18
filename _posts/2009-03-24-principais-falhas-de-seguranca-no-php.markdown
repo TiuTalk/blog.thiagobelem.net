@@ -21,7 +21,7 @@ Se você se identificar com algumas dessas medidas não saia correndo e se jogue
 Uma falha muito comum são aqueles sites que, tentando usar um sistema "legal", acabam abusando da sorte... São sites que incluem o conteúdo <span style="color: #999999;">(via <strong>include()</strong>)</span> baseado em uma variável do método $_GET. Exemplo:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 	// Verifica se a variável $_GET['pagina'] existe
 	if (isset($_GET['pagina'])) {
@@ -33,7 +33,7 @@ Uma falha muito comum são aqueles sites que, tentando usar um sistema "legal", 
 	}
 	include ($arquivo); // Inclui o arquivo
 ?>
-[/code]
+{% endhighlight %}
 
 E na URL do site ficaria:
 <span style="color: #008080;">http://www.meusite.com.br/?<span style="color: #0000ff;">pagina=contato.php</span></span>
@@ -46,7 +46,7 @@ O seu site incluiria o arquivo normalmente e executaria tudo que existe dentro d
 Evitar que isso aconteça é extremamente simples: é só criar um <em>array </em>contendo os nomes dos arquivos que poderão ser incluídos, dessa forma:
 
 
-[code language="php" wrap="false"]
+{% highlight php linenos %}
 <?php
 	// Define uma lista com os arquivos que poderão ser chamados na URL
 	$permitidos = array('home.php', 'produtos.php', 'contato.php', 'empresa.php');
@@ -61,7 +61,7 @@ Evitar que isso aconteça é extremamente simples: é só criar um <em>array </e
 	}
 	include ($arquivo); // Inclui o arquivo
 ?>
-[/code]
+{% endhighlight %}
 
 Viu? Adicionamos uma única linha e mais uma condição e está tudo resolvido. Com isso, se o atacante colocar lá o site dele na URL do seu site o PHP vai identificar que a variável <strong>$_GET['pagina']</strong> existe mas não está no <em>array </em><strong>$permitidos</strong>, então ele vai incluir o arquivo <strong>home.php</strong>.
 
@@ -76,7 +76,7 @@ ou
 Com isso <span style="color: #999999;">(se você não se preparar) </span>você deixa uma porta aberta para um ataque famoso chamado <strong>SQL-Injection</strong> que nada mais é do que a inserção de um código SQL em um campo de texto ou parâmetro da URL que será enviado diretamente para o banco. Vamos a um exemplo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 // Formato da URL:
 //  http://www.meusite.com.br/produtos.php?id=12
@@ -94,14 +94,14 @@ $query = mysql_query($sql);
 $resultado = mysql_fetch_assoc($query);
 
 ?>
-[/code]
+{% endhighlight %}
 
 A sua consulta ao MySQL ficaria da seguinte forma:
 
 
-[code language="sql"]
+{% highlight text linenos %}
 SELECT * FROM `produtos` WHERE `id` = '12' LIMIT 1
-[/code]
+{% endhighlight %}
 
 Até aqui tudo bem.. Seu script funciona, você tem o que precisa e tá tudo na mais perfeita harmonia... Mas chega um <span style="text-decoration: line-through;">desocupado</span> invasor e modifica a sua URL deixando da seguinte forma:
 
@@ -110,19 +110,19 @@ Até aqui tudo bem.. Seu script funciona, você tem o que precisa e tá tudo na 
 Agora a sua query MySQL fica assim:
 
 
-[code language="sql"]
+{% highlight text linenos %}
 SELECT * FROM `produtos` WHERE `id` = '' OR 1=1 OR '' = '' LIMIT 1
-[/code]
+{% endhighlight %}
 
 Viu o que aconteceu? As possíveis condições para a consulta ser verdadeira são: id igual a vazio, 1 igual a 1 e vazio igual a vazio... Essa consulta vai ser dada como verdadeira e todos os produtos serão retornados. Sim meu amigo, é o fim do mundo.
 
 Mas, como eu disse, não estou aqui para te assustar e sim para mostrar como resolver o pepino... Vamos a uma atitude simples mas que te salvará do Apocalipse... É só mudar uma linha:
 
 
-[code language="php"]
+{% highlight text linenos %}
 // Salva o parâmetro da URL numa variável obrigando-o a ser um valor inteiro
 $produto = (int)$_GET['id'];
-[/code]
+{% endhighlight %}
 
 Com isso eu digo que valor da variável <strong>$produto</strong> será igual ao <strong>valor inteiro</strong> <span style="color: #999999;">(<em>int </em>de integer)</span> da variável <strong>$_GET['id']</strong>. Problema resolvido meus caros!
 
@@ -133,9 +133,9 @@ Peço <span style="color: #ff0000;"><strong>atenção dobrada</strong></span> pa
 Caso você passe parâmetros via URL que são strings e não números inteiros, você pode usar a função <strong>mysql_real_escape_string()</strong> da seguinte forma:
 
 
-[code language="php"]
+{% highlight text linenos %}
 $parametro = mysql_real_escape_string($_GET['nome']);
-[/code]
+{% endhighlight %}
 
 Com isso você evita o uso de aspas e caracteres protegidos do MySQL mantendo a sua <em>query </em>segura. Esse caso também vale para formulários dos quais os dados vão direto para consultas MySQL <span style="color: #999999;">(formulários de login, cadastro e comentários, por exemplo)</span>.
 

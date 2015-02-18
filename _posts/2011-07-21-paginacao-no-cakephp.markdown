@@ -44,7 +44,7 @@ Você vai que precisamos de exatamente <strong>duas linhas</strong> pra fazer um
 <h3>Começando pelo Controller</h3>
 <div>O trabalho da paginação começa no <strong>Controller</strong>... Defina os parâmetros de busca (find) normalmente, como você sempre fez:</div>
 
-[code language="php"]
+{% highlight php linenos %}
 class NoticiasController extends AppController {
 
 	/**
@@ -63,12 +63,12 @@ class NoticiasController extends AppController {
 	}
 
 }
-[/code]
+{% endhighlight %}
 
 Definido os parâmetros de busca, podemos atribuí-los ao atributo <strong>paginate</strong> do <strong>Controller</strong> e rodar a consulta no model <strong>Noticia</strong>:
 
 
-[code language="php"]
+{% highlight php linenos %}
 class NoticiasController extends AppController {
 
 	/**
@@ -94,7 +94,7 @@ class NoticiasController extends AppController {
 	}
 
 }
-[/code]
+{% endhighlight %}
 
 E tá tudo pronto.. agora é só ir pra view mostrar essas notícias e colocar os links de paginação! :)
 
@@ -102,7 +102,7 @@ E tá tudo pronto.. agora é só ir pra view mostrar essas notícias e colocar o
 Um exemplo básico (usando a tag <em>article</em> do <strong>HTML5</strong>) da listagem de notícias:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <article>
 <?php foreach($noticias AS $data): ?>
 	<h1><?php echo $data['Noticia']['titulo'] ?></h1>
@@ -110,16 +110,16 @@ Um exemplo básico (usando a tag <em>article</em> do <strong>HTML5</strong>) da 
 
 <?php endforeach; ?>
 </article>
-[/code]
+{% endhighlight %}
 
 E por ultimo, a listagem dos links de paginação:
 
 
-[code language="php"]
+{% highlight php linenos %}
 echo $this->Paginator->prev('« Mais novas', null, null, array('class' => 'desabilitado'));
 echo $this->Paginator->numbers();
 echo $this->Paginator->next('Mais antigas »', null, null, array('class' => 'desabilitado'));
-[/code]
+{% endhighlight %}
 
 Na linha 1 e 3 nós mostramos os links para a <strong>próxima página</strong> e para a <strong>página anterior</strong>. Já na linha 2 nós mostramos aquela lista de números das páginas:<strong> 1, 2, 3, 4</strong> cada uma com um link!
 

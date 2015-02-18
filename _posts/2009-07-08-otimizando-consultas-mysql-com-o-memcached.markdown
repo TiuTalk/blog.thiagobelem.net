@@ -28,7 +28,7 @@ Vou mostrar pra vocês como armazenar uma consulta na memória e depois pegar es
 
 <h3>Consulta simples</h3>
 Normalmente você faria uma consulta assim:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 $sql = "SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 0, 20";
@@ -38,12 +38,12 @@ while ($dados = mysql_fetch_assoc($query)) {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 É uma consulta normal que, nesse exemplo, não deve pesar muito... Mas imaginemos que essa consulta demore uns 2~3 segundos para ser executada.
 
 <h3>Armazenando o resultado na memória com o Memcached</h3>
 Este exemplo irá armazenar o resultado da consulta na memória, durante 1 hora... No próximo bloco mostrarei como verificar se há um resultado armazenado na memória antes de executar a consulta novamente.
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Inicia o Memcache
@@ -67,11 +67,11 @@ while ($dados = mysql_fetch_assoc($query)) {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 <h3>Consulta otimizada com o Memcached</h3>
 Agora que já sabemos como armazenar o resultado na memória, podemos fazer uma verificação e só executar a consulta sempre que o resultado expirar ou não existir, dessa forma:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 $mem = new Memcache;
@@ -100,14 +100,14 @@ while ($dados = mysql_fetch_assoc($query)) {
 	// Aqui você faz a exibição de cada notícia
 }
 ?>
-[/code]
+{% endhighlight %}
 
 
 <h3>Função de atalho para o Memcache</h3>
 Você ainda poderia fazer uma função para fazer todo esse trabalho por você... Ficaria mais ou menos assim:
 
 
-[code language="php"]
+{% highlight php linenos %}
 function mysql_queryCache($consulta, $tempo = 3600) {
 	$chave = md5($consulta);
 
@@ -122,9 +122,9 @@ function mysql_queryCache($consulta, $tempo = 3600) {
 
 	return $query;
 }
-[/code]
+{% endhighlight %}
 E agora, o exemplo anterior usando a função:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 $sql = "SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC";
@@ -135,7 +135,7 @@ while ($dados = mysql_fetch_assoc($query)) {
 	// Aqui você faz a exibição de cada notícia
 }
 ?>
-[/code]
+{% endhighlight %}
 
 --
 

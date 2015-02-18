@@ -28,7 +28,7 @@ Bom... vamos lá!
 
 <h3>Código (X)HTML do menu</h3>
 
-[code language="html"]
+{% highlight html linenos %}
 <ul id="menu">
 	<li class="header">Menu</li>
 	<li>[Página inicial](#)</li>
@@ -43,13 +43,13 @@ Bom... vamos lá!
 	<li>[Quem somos nós](#)</li>
 	<li>[Contato](#)</li>
 </ul>
-[/code]
+{% endhighlight %}
 
 Vejam que o sub-menu (que irá aparecer) fica dentro do <li> e fora do <a>.
 
 <h3>Código CSS do menu</h3>
 
-[code language="css"]
+{% highlight css linenos %}
 * {
 	margin: 0px;
 	padding: 0px;
@@ -112,11 +112,11 @@ ul#menu li ul.sub-menu li a {
 	padding-left: 15px;
 	color: maroon;
 }
-[/code]
+{% endhighlight %}
 
 <h3>Bloco de código do efeito (jQuery)</h3>
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 $(function() {
 	// Evento de clique do elemento: ul#menu li.parent > a
 	$('ul#menu li.parent > a').click(function() {
@@ -128,7 +128,7 @@ $(function() {
 		return false;
 	});
 });
-[/code]
+{% endhighlight %}
 
 --
 

@@ -18,7 +18,7 @@ Ele tem, normalmente, 3 argumentos: A string que será cortada (1), o início do
 Veja alguns exemplos de uso:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $frase = 'O rato roeu a roupa do Rei de Roma';
@@ -33,7 +33,7 @@ echo substr($frase, 0, -1); // Todos os caracteres, até o penúltimo, a partir 
 // Retorno: O rato roeu a roupa do Rei de Rom
 
 ?>
-[/code]
+{% endhighlight %}
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.substr.php](http://br.php.net/manual/pt_BR/function.substr.php)
@@ -46,7 +46,7 @@ Ele só tem um argumento: A string a ser medida (1).
 Veja alguns exemplos de uso:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $frase = 'O rato roeu a roupa do Rei de Roma';
@@ -60,7 +60,7 @@ echo strlen($frase);
 // Retorno: 12
 
 ?>
-[/code]
+{% endhighlight %}
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.strlen.php](http://br.php.net/manual/pt_BR/function.strlen.php)
@@ -71,7 +71,7 @@ O <strong>strtolower()</strong> serve para você converter toda a string para ca
 Ele só tem um argumento: A string que será convertida (1).
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $frase = 'O RATo rOeu a rOuPa Do Rei de Roma';
@@ -80,7 +80,7 @@ echo strtolower($frase);
 // Retorno: o rato roeu a roupa do rei de roma
 
 ?>
-[/code]
+{% endhighlight %}
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.strtolower.php](http://br.php.net/manual/pt_BR/function.strtolower.php)
@@ -91,7 +91,7 @@ O <strong>strtoupper()</strong> serve para você converter toda a string para ca
 Ele só tem um argumento: A string que será convertida (1).
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $frase = 'O RATo rOeu a rOuPa Do Rei de Roma';
@@ -100,7 +100,7 @@ echo strtolower($frase);
 // Retorno: O RATO ROEU A ROUPA DO REI DE ROMA
 
 ?>
-[/code]
+{% endhighlight %}
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.strtoupper.php](http://br.php.net/manual/pt_BR/function.strtoupper.php)
@@ -111,7 +111,7 @@ O <strong>ucwords()</strong> serve para você deixar a primeira letra de cada pa
 Ele só tem um argumento: A string que será convertida (1).
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $frase = 'jOsé da sILva fErReirA';
@@ -120,7 +120,7 @@ echo strtolower($frase);
 // Retorno: JOsé Da SILva FErReirA
 
 ?>
-[/code]
+{% endhighlight %}
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.ucwords.php](http://br.php.net/manual/pt_BR/function.ucwords.php)
@@ -131,7 +131,7 @@ O <strong>ucfirst()</strong> serve para você deixar a primeira letra de uma str
 Ele só tem um argumento: A string que será convertida (1).
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $frase = 'jOsé da sILva fErReirA';
@@ -140,7 +140,7 @@ echo strtolower($frase);
 // Retorno: JOsé da sILva fErReirA
 
 ?>
-[/code]
+{% endhighlight %}
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.ucfirst.php](http://br.php.net/manual/pt_BR/function.ucfirst.php)
@@ -151,7 +151,7 @@ O <strong>explode()</strong> serve para você dividir uma string, usando um sepa
 Geralmente ele tem dois argumentos: O separador (1) e a string que será convertida (2).
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $separador = '@';
@@ -183,7 +183,7 @@ $partes = explode($separador, $frase);
 // [0] => olá [1] => mundo
 
 ?>
-[/code]
+{% endhighlight %}
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.explode.php](http://br.php.net/manual/pt_BR/function.explode.php)
@@ -194,7 +194,7 @@ O <strong>join()</strong> serve para você juntar os elementos de um array usand
 Geralmente ele tem dois argumentos: A string de união (1) e o array que será unido (2).
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 $uniao = '@';
@@ -223,7 +223,7 @@ echo join($uniao, $partes);
 // Resultado: olá #@ mundo
 
 ?>
-[/code]
+{% endhighlight %}
 
 A função <strong>join()</strong> é um atalho da função <strong>implode()</strong>, ambas fazem a mesma coisa.
 

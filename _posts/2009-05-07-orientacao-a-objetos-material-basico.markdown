@@ -19,7 +19,7 @@ Classes são como funções, só que com variáveis e funções próprias.. Gera
 Primeiro, definimos a classe com nome <strong>MeuSQL</strong>:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 class MeuSQL {
@@ -27,12 +27,12 @@ class MeuSQL {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Agora vamos definir algumas variáveis com valores padrões:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 class MeuSQL {
@@ -46,7 +46,7 @@ class MeuSQL {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Na verdade, devemos chamar estas variáveis como "<strong>propriedades</strong>" (nome que se dá para as variáveis da classe). Toda propriedade de classe, para manter a compatibilidade com o PHP 4, precisa ter a palavra "<strong>var</strong>" antes.
 
@@ -55,7 +55,7 @@ Vale lembrar que, fora da classe, essas propriedades não vão existir.. Nem ap�
 Agora vamos definir o primeiro método. "<strong>Método</strong>" é nome que se dá para uma função dentro de uma classe.
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 class MeuSQL {
@@ -77,7 +77,7 @@ class MeuSQL {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Criamos um método que fará a conexão com o MySQL... Quem já estudou um pouco sobre MySQL sabe que a função <strong>mysql_connect()</strong> precisa de três parâmetros, nessa ordem: o servidor (endereço), o usuário e a senha... Repare que usamos <strong><span style="color: #3366ff;">$this->servidor</span></strong> e não <span style="color: #3366ff;"><strong>$servidor</strong></span>, vou explicar por que:
 
@@ -88,7 +88,7 @@ Quando queremos pegar o valor de uma propriedade de uma classe, fazemos referên
 Agora vamos definir mais três métodos para as outras funções básicas do MySQL:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 class MeuSQL {
@@ -123,12 +123,12 @@ class MeuSQL {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Podemos dizer que a nossa classe está pronta... Salve este arquivo como <span style="color: #ff6600;"><strong>MeuSQL.php</strong></span>. Agora vamos ver um exemplo de uso e depois, comentá-la toda:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 // Inclui o arquivo com a classe
 include("MeuSQL.php");
@@ -155,14 +155,14 @@ while ($dados = $sql->resultado()) {
 	echo "";
 }
 ?>
-[/code]
+{% endhighlight %}
 
 Viu como as classes podem simplificar tudo na sua vida?
 
 Agora, por fim, fiz alguns ajustes e comentei cada método da classe para ficar mais fácil de entender:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 
 /**
@@ -213,7 +213,7 @@ class MeuSQL {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Se quiser, pode fazer o [download](/arquivos/2009/05/classe-meusql.txt) do arquivo com a classe e o exemplo de uso.
 

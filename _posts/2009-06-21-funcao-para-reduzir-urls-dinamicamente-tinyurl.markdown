@@ -24,7 +24,7 @@ A vantagem de usar essa função (e não as que eu achei por aí, buscando no Go
 
 <h3>Código da Função</h3>
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 /**
@@ -72,16 +72,16 @@ function tinyURL($url)
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 <h3>Exemplo de uso <span style="color: #c0c0c0;">(se é que precisa..)</span></h3>
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 	echo tinyURL('http://blog.thiagobelem.net/');
 	// http://tinyurl.com/kwzg4w
 ?>
-[/code]
+{% endhighlight %}
 
 Espero que tenham gostado! :)
 

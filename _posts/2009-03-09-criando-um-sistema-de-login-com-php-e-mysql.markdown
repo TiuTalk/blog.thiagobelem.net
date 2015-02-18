@@ -22,7 +22,7 @@ Vamos ao trabalho:
 O que iremos definir primeiro é a tabela usada para armazenar os usuários do sistema:
 
 
-[code language="sql"]
+{% highlight text linenos %}
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -32,14 +32,14 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 PRIMARY KEY (`id`),
 UNIQUE KEY `usuario` (`usuario`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-[/code]
+{% endhighlight %}
 
 Execute esse bloco SQL no seu banco de dados para criar a tabela usada pelo sistema.
 
 Depois disso, vamos ao formulário de login que você colocará dentro de um arquivo chamado <span style="color: #3366ff;">login.php</span>:
 
 
-[code language="html"]
+{% highlight text linenos %}
 <form method="post" action="valida.php">
 <label>Usuário</label>
 <input type="text" name="usuario" maxlength="50" />
@@ -49,14 +49,14 @@ Depois disso, vamos ao formulário de login que você colocará dentro de um arq
 
 <input type="submit" value="Entrar" />
 </form>
-[/code]
+{% endhighlight %}
 
 Esse formulário, com apenas dois campos, manda pra página <span style="color: #3366ff;">valida.php</span>, que é um pequeno PHP que receberá os dados enviados pelo formulário, fará a validação deles e mandará o visitante ou pra página interna (<span style="color: #3366ff;">index.php</span>) ou de volta pra página de login (<span style="color: #3366ff;">login.php</span>).
 
 Esse é o codigo fonte do arquivo <span style="color: #3366ff;">valida.php</span>:
 
 
-[code language="php"]
+{% highlight text linenos %}
 // Inclui o arquivo com o sistema de segurança
 include("seguranca.php");
 
@@ -77,7 +77,7 @@ header("Location: index.php");
 expulsaVisitante();
 }
 }
-[/code]
+{% endhighlight %}
 
 A estrutura do seu site, até esse ponto, deve estar dessa forma:
 
@@ -88,7 +88,7 @@ A estrutura do seu site, até esse ponto, deve estar dessa forma:
 Agora vamos criar o arquivo <span style="color: #ff0000;">seguranca.php</span> na mesma pasta dos demais arquivos:
 
 
-[code language="php"]
+{% highlight text linenos %}
 /**
 * Sistema de segurança com acesso restrito
 *
@@ -214,7 +214,7 @@ unset($_SESSION['usuarioID'], $_SESSION['usuarioNome'], $_SESSION['usuarioLogin'
 // Manda pra tela de login
 header("Location: ".$_SG['paginaLogin']);
 }
-[/code]
+{% endhighlight %}
 
 Não vou poder explicar todas as funções do arquivo pq é muita coisa.. Mas todas elas estão devidamente comentadas e documentadas... É só olhar.
 
@@ -223,17 +223,17 @@ Com esse arquivos nós já nos conectamos automaticamente ao servidor MySQL, ent
 Agora é só incluir essas linhas no topo de cada arquivo que deverá ter o acesso restrito:
 
 
-[code language="php"]
+{% highlight text linenos %}
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
-[/code]
+{% endhighlight %}
 
 Quando vocês quiserem exibir o nome do usuário logado, é só fazer isso:
 
 
-[code language="php"]
+{% highlight text linenos %}
 echo "Olá, " . $_SESSION['usuarioNome'];
-[/code]
+{% endhighlight %}
 
 Veja mais sobre escrever e pegar valores da sessão (coisa que acontece muito nesse sistema de login) no tópico [Aprendendo a usar sessões no PHP](/aprendendo-a-usar-sessoes-no-php).
 

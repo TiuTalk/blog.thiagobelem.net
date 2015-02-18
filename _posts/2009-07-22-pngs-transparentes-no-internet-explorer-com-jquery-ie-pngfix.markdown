@@ -26,18 +26,18 @@ A vantagem de usar esse script é que ele funciona com IE 5.5, 6 e 7, não atrap
 Para usá-lo no seu site, é muito simples... Primeiro insira o [script do pngFix](http://jquery.andreaseberhard.de/pngFix/jquery.pngFix.js) dentro do <head> do seu site:
 
 
-[code language="html"]
+{% highlight html linenos %}
 <head>
   <title>Meu Site</title>
   <script language="JavaScript" src="jquery.js" type="text/javascript"></script>
   <script language="JavaScript" src="jquery.pngFix.js" type="text/javascript"></script>
 </head>
-[/code]
+{% endhighlight %}
 
 E depois é só inserir um bloco de jQuery que fará a correção em todos os elementos do seu site:
 
 
-[code language="html"]
+{% highlight html linenos %}
 <head>
   <title>Meu Site</title>
   <script language="JavaScript" src="jquery.js" type="text/javascript"></script>
@@ -49,7 +49,7 @@ E depois é só inserir um bloco de jQuery que fará a correção em todos os el
 	});
   </script>
 </head>
-[/code]
+{% endhighlight %}
 
 Pronto.. Já está tudo funcionando perfeitamente! :)
 

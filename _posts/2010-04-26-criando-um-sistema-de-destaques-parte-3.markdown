@@ -27,7 +27,7 @@ Nessa parte do tutorial nós iremos criar um arquivo PHP que irá fazer a conex�
 Para o nosso banco de dados iremos utilizar a seguinte tabela:
 
 
-[code language="sql"]
+{% highlight sql linenos %}
 CREATE TABLE IF NOT EXISTS `destaques` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
   `titulo` VARCHAR(100) NOT NULL ,
@@ -36,19 +36,19 @@ CREATE TABLE IF NOT EXISTS `destaques` (
   `ativo` TINYINT(1)  NOT NULL DEFAULT 1 ,
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM;
-[/code]
+{% endhighlight %}
 
 <h3>0. Transparência</h3>
 Antes da gente começar a codificar a parte três... Vamos colocar uma coisinha no CSS que faltou na Parte 2: a transparência do fundo preto da legenda... Edite o CSS dos destaques e coloque isso:
 
 
-[code language="css"]
+{% highlight css linenos %}
 #blocoDestaques ul li div.fundo {
 	opacity: 0.80;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
-[/code]
+{% endhighlight %}
 
 Isso fará com que a div de fundo fique com 80% de opacidade.
 
@@ -56,16 +56,16 @@ Isso fará com que a div de fundo fique com 80% de opacidade.
 Vamos começar com um arquivo chamado <strong>mysql_destaques.php</strong> e nele colocar um bloco PHP vazio:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 ?>
-[/code]
+{% endhighlight %}
 
 Agora nós iremos definir algumas variáveis de configuração:
 
 
-[code language="php"]
+{% highlight php linenos %}
 /*
  * Configurações do sistema de destaques
  */
@@ -83,7 +83,7 @@ $destaques = array(
 	// Limite máximo de destaques que serão exibidos
 	'limite' => 5
 );
-[/code]
+{% endhighlight %}
 
 <h3>2. Conexão com o MySQL</h3>
 Se o seu site já se conecta ao banco de dados MySQL automaticamente, você pode apagar a parte da conexão ao MySQL e pular para o item três...
@@ -91,7 +91,7 @@ Se o seu site já se conecta ao banco de dados MySQL automaticamente, você pode
 Fazemos a conexão com o banco de dados:
 
 
-[code language="php"]
+{% highlight php linenos %}
 /**
  * Conexão com o MySQL
  *
@@ -100,11 +100,11 @@ Fazemos a conexão com o banco de dados:
  */
 mysql_connect($destaques['mysql']['servidor'], $destaques['mysql']['usuario'], $destaques['mysql']['senha']) OR trigger_error('ERRO: ' . mysql_error());
 mysql_select_db($destaques['mysql']['banco']) OR trigger_error('ERRO: ' . mysql_error());
-[/code]
+{% endhighlight %}
 
 <h3>3. Buscando os dados</h3>
 Agora vai começar a brincadeira... Vamos criar e executar uma consulta para trazer três colunas da tabela <code>`destaques`</code>:
-[code language="php"]
+{% highlight php linenos %}
 /*
  * Busca os dados na tabela de destaques
  */
@@ -114,12 +114,12 @@ $sql = "SELECT `titulo`, `link`, `imagem`
 		ORDER BY `id` DESC
 		LIMIT {$destaques['limite']}";
 $query = mysql_query($sql) OR trigger_error('ERRO: ' . mysql_error());
-[/code]
+{% endhighlight %}
 
 Nós já executamos a consulta e já temos o <em>Resource MySQL</em> (ou resultado)... Precisamos apenas rodar um loop e passar esses dados para um array que será usado mais a diante para montar o nosso HTML.
 
 
-[code language="php"]
+{% highlight php linenos %}
 /**
  * Loop que traz os dados do MySQL e armazena-os em um array $lista_destaques
  */
@@ -127,14 +127,14 @@ $lista_destaques = array();
 while ($registro = mysql_fetch_object($query)) {
 	$lista_destaques[] = $registro;
 }
-[/code]
+{% endhighlight %}
 
 Pronto... Nosso arquivo está pronto! Veja [aqui](/exemplos/destaque/mysql_destaques.phps) como ele ficou.
 
 Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está assim:
 
 
-[code language="html"]
+{% highlight html linenos %}
 <!-- destaques -->
 <div id="blocoDestaques">
 
@@ -170,12 +170,12 @@ Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está ass
 	</ul>
 </div>
 <!-- /destaques -->
-[/code]
+{% endhighlight %}
 
 Vamos fazer algumas modificações no nosso HTML... Vamos começar incluindo o arquivo PHP que acabamos de criar logo antes da div#blocoDestaques e remover os LIs deixando apenas um:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <!-- destaques -->
 <?php require_once('mysql_destaques.php'); ?>
 <div id="blocoDestaques">
@@ -194,12 +194,12 @@ Vamos fazer algumas modificações no nosso HTML... Vamos começar incluindo o a
 	</ul>
 </div>
 <!-- /destaques -->
-[/code]
+{% endhighlight %}
 
 Agora é só criar um loop utilizando o <code>foreach()</code> para gerar um LI para cada destaque que foi encontrado no banco de dados... Vamos também substituir os valores "enchedores de linguiça" por valores dinâmicos:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <!-- destaques -->
 <?php require_once('mysql_destaques.php'); ?>
 <div id="blocoDestaques">
@@ -220,12 +220,12 @@ Agora é só criar um loop utilizando o <code>foreach()</code> para gerar um LI 
 	</ul>
 </div>
 <!-- /destaques -->
-[/code]
+{% endhighlight %}
 
 Podemos ainda adicionar uma condição ao redor da div#blocoDestaques para ter certeza que nosso script irá funcionar e não vai deixar nenhum buraco no site:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <!-- destaques -->
 <?php require_once('mysql_destaques.php'); ?>
 <?php if (isset($lista_destaques) AND !empty($lista_destaques)) { ?>
@@ -248,7 +248,7 @@ Podemos ainda adicionar uma condição ao redor da div#blocoDestaques para ter c
 </div>
 <?php } ?>
 <!-- /destaques -->
-[/code]
+{% endhighlight %}
 
 Com essa condição, se por algum acaso do destino o array <code>$lista_destaques</code> não existir ou for vazio (nenhum destaque encontrado), nós não exibimos nenhum HTML do bloco de destaques, deixando assim o site com um elemento a menos, mas funcionando.
 

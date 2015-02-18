@@ -24,25 +24,25 @@ Essa função é muito útil quando queremos trabalhar com URLs amigáveis e pre
 Veja como é simples usar a função:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Apenas remove os acentos
 echo removeAcentos(' [Resolvido] » Problemas na conversão de página html');
 // [resolvido] » problemas na conversao de pagina html
-[/code]
+{% endhighlight %}
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Cria um slug da string
 echo removeAcentos(' [Resolvido] » Problemas na conversão de página html', '-');
 // resolvido-problemas-na-conversao-de-pagina-html
-[/code]
+{% endhighlight %}
 
 O segundo parâmetro da função é o caractere que será usado no slug substituindo espaços e caracteres especiais.
 
 Vamos ao código da função:
 
 
-[code language="php"]
+{% highlight php linenos %}
 /***
  * Função para remover acentos de uma string
  *
@@ -84,7 +84,7 @@ function removeAcentos($string, $slug = false) {
 
 	return $string;
 }
-[/code]
+{% endhighlight %}
 
 Como vocês podem ver, no começo da função, entre as linhas 9 e 21 é onde definimos os códigos ASCII de cada acento/caractere especial que será convertido por sua letra... Depois nós rodamos um foreach e montamos as ERs (expressões regulares) para a substituição e fazemos toda a troca.
 

@@ -34,7 +34,7 @@ Essa função retornará true para os seguintes casos:
 <li>var $var; (uma variável declarada, sem valor, dentro de uma classe)</li>
 </ul>
 Agora vamos ver um exemplo prático de uso do empty():
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Recebe um campo de um formulário
@@ -46,7 +46,7 @@ if (empty($nome)) {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 
 <h3>A função <span style="color: orange;">isset()</span></h3>
@@ -55,7 +55,7 @@ Ela serve para saber se uma variável existe... Ela retornará true (verdadeiro)
 Veja os exemplos de variáveis vazias no item anterior... Todos eles fazem com que a variável ($var) passe a existir... Para uma variável "não existir" ela não pode ter sido usada/definida em nenhum momento [anterior] do script... Veja um exemplo onde usamos o isset() em conjunto com o empty() e melhoramos o exemplo do item anterior:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Verifica se a variável $_POST não é vazia...
@@ -82,7 +82,7 @@ if (!empty($_POST)) {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Espero que tenham gostado! :)
 

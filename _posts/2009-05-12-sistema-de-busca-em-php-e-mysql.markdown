@@ -22,7 +22,7 @@ Veja [um exemplo](/arquivos/2009/05/busca.jpg) (imagem) de como ficará o result
 Veja o código de criação da tabela:
 
 
-[code language="sql"]
+{% highlight text linenos %}
 CREATE TABLE `noticias` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `titulo` VARCHAR( 255 ) NOT NULL ,
@@ -31,7 +31,7 @@ CREATE TABLE `noticias` (
 `cadastro` DATETIME NOT NULL ,
 INDEX ( `ativa` )
 ) ENGINE = MYISAM
-[/code]
+{% endhighlight %}
 
 As colunas da tabela serão: <strong>id</strong>, <strong>titulo</strong>, <strong>texto</strong>, <strong>ativa</strong><span style="color: #999999;"> (1 ou 0)</span>, e <strong>cadastro</strong> <span style="color: #999999;">(AAAA-MM-DD HH:MM:SS)</span>.
 
@@ -40,7 +40,7 @@ Esta é uma estrutura simples de uma tabela de notícias, e você vai precisar a
 Vamos ao formulário de busca:
 
 
-[code language="html"]
+{% highlight text linenos %}
 <form method="GET" action="http://www.meusite.com.br/busca.php">
 <fieldset>
 <label for="consulta">Buscar:</label>
@@ -48,7 +48,7 @@ Vamos ao formulário de busca:
 <input type="submit" value="OK" />
 </fieldset>
 </form>
-[/code]
+{% endhighlight %}
 
 Não se esqueça de alterar o action para o endereço certo do seu site... Se você preferir, pode definir o action usando caminho relativo, não há diferença.
 
@@ -57,7 +57,7 @@ Passaremos a busca por método GET para ficar mais parecido com o Google. :)
 E agora o arquivo (<span style="color: #ff6600;"><strong>busca.php</strong></span>) que recebe os dados do formulário, faz a conexão ao banco de dados, processa a busca e exibe o resultado (sem paginação):
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 // Conexão com o MySQL
@@ -108,7 +108,7 @@ echo "</li>";
 }
 echo "</ul>";
 ?>
-[/code]
+{% endhighlight %}
 
 Não se esqueça de mudar, dentro da exibição dos resultados, como é definida a variável $link para o formato que o seu site usa ;)
 
@@ -117,7 +117,7 @@ Não se esqueça de mudar, dentro da exibição dos resultados, como é definida
 E pra quem quiser o mesmo script com paginação:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 // Configuração do script
@@ -209,7 +209,7 @@ echo '['.$n.'](?consulta='.$_GET['consulta'].'&pagina='.$n.')&nbsp;&nbsp;';
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Reconheço que o script poderia ser mais simples, mas seu uso ficaria muito limitado (e o código ficaria enorme)... E com paginação fica muito mais legal, além de ser o que todo mundo acaba procurando.
 

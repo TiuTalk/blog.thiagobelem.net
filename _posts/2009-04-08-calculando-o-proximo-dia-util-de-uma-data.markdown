@@ -26,7 +26,7 @@ Fim</span>
 Quando passamos isso pro PHP podemos fazer de uma forma bem simples:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 /**
@@ -54,14 +54,14 @@ return date($saida, $timestamp_final);
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Com essa função você tem um meio rápido de calcular o próximo dia útil de uma data no formato AAAA-MM-DD  (primeiro argumento) e retorná-la no formato que preferir (segundo argumento).
 
 Você poderia usá-la da seguinte forma:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 // Dia 05 de abril de 2009 é um domingo
 $data = '2009-04-05';
@@ -81,7 +81,7 @@ $data = '2009-04-08';
 $data_final = proximoDiaUtil($data);
 // Resultado: 08/04/2009
 ?>
-[/code]
+{% endhighlight %}
 
 Com isso você pode fazer aquele sistema financeiro funcionar melhor e não sair cobrando as pessoas em pleno sabadão. :)
 

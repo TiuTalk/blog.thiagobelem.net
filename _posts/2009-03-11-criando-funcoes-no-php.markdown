@@ -15,7 +15,7 @@ Vamos usar como exemplo a função <strong>substr()</strong> nativa do PHP, ela 
 Vamos ao exemplo de uma função simples:
 
 
-[code language="php"]
+{% highlight text linenos %}
 function calcula_dobro($numero) {
     // Faz o calculo do dobro do $numero
     $resultado = $numero * 2;
@@ -24,7 +24,7 @@ function calcula_dobro($numero) {
 
 echo "O dobro de 3 é: " . calcula_dobro(3);
 // O dobro de 3 é: 6
-[/code]
+{% endhighlight %}
 
 Essa função recebe número por argumento ($numero) e retorna o dobro desse número, é bem simples.
 
@@ -32,7 +32,7 @@ Você pode criar funções para as mais variadas tarefas, como por exemplo, exib
 , ficaria assim:
 
 
-[code language="php"]
+{% highlight text linenos %}
 function paragrafos($texto) {
     $resultado = '
 ' . $texto . '
@@ -45,33 +45,33 @@ echo paragrafos('Este texto está entre parágrafos!');
 //
 Este texto está entre parágrafos!
 
-[/code]
+{% endhighlight %}
 
 Não há limite de argumentos que uma função pode receber, por exemplo, vamos fazer uma função que calcule um número elevado a outro:
 
 
-[code language="php"]
+{% highlight text linenos %}
 function potenciacao($numero, $potencia) {
     return $numero ^ $potencia;
 }
 
 echo "2 elevado a 5ª potencia é: " . potenciacao(2, 5);
 // 2 elevado a 5ª potencia é: 32
-[/code]
+{% endhighlight %}
 
 Repare que dessa vez usamos dois argumentos. Claro que, se você usar uma string como argumento dessa função você provavelmente vai causar um erro no PHP.
 
 Você também pode definir valores padrões para os argumentos da sua função, vamos usar o exemplo da função anterior só que, se não definirmos o segundo argumento, o número vai ser elevado a terceira potencia:
 
 
-[code language="php"]
+{% highlight text linenos %}
 function potenciacao($numero, $potencia = 3) {
     return $numero ^ $potencia;
 }
 
 echo "Usando a função ptenciacao() sem segundo argumento: " . potenciacao(2);
 // Usando a função ptenciacao() sem segundo argumento: 8
-[/code]
+{% endhighlight %}
 
 <blockquote>Um nome de função válido começa com uma letra ou um sublinhado, seguido, seguido por qualquer número de letras, números ou sublinhado. Com uma expressão regular, seria expressado com: <strong>[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*</strong>.
 </blockquote>

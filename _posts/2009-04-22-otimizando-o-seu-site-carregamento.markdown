@@ -19,11 +19,11 @@ Primeiro, o mais simples:
 A codificação com GZip fará o HTML do seu site ser carregado mais rapidamente pelo visitante, é só colocar a seguinte linha no começo do seu PHP, junto do início da sessões, por exemplo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 ob_start("ob_gzhandler");
 ?>
-[/code]
+{% endhighlight %}
 
 --
 
@@ -35,11 +35,11 @@ Se você já terminou o seu site, ele está no ar, as imagens têm nomes diferen
 Edite o arquivo <span style="color: #ff6600;"><strong>.htaccess</strong></span> na raiz do seu site (se o arquivo não existe [veja aqui como criá-lo](/instalando-o-no-www-no-seu-site)) e coloque o seguinte código nele:
 
 
-[code language="html"]
+{% highlight text linenos %}
 <filesMatch ".(ico|jpg|jpeg|png|gif|swf|css|js)$">
 Header set Expires "Sun, 30 Apr 2090 20:00:00 GMT"
 </filesMatch>
-[/code]
+{% endhighlight %}
 
 Aí é só editar na primeira linha quais tipos de arquivos serão cacheados e na segunda linha, até quando eles serão cacheados. Como precisamos definir uma data, coloquei 30 de Abril de 2090, mas acredito que você possa colocar a data que bem entender.
 
@@ -65,7 +65,7 @@ Veja um exemplo:
 Antes o seu HTML estava assim:
 
 
-[code language="html"]
+{% highlight text linenos %}
 <head>
 <title>Meu Site</title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
@@ -79,12 +79,12 @@ Antes o seu HTML estava assim:
 <script language="JavaScript" src="js/jquery.cycle.js" type="text/javascript"></script>
 <script language="JavaScript" src="js/outroscript.js" type="text/javascript"></script>
 </head>
-[/code]
+{% endhighlight %}
 
 Agora, depois de usar o Minify, ele ficou assim:
 
 
-[code language="html"]
+{% highlight text linenos %}
 <head>
 <title>Meu Site</title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
@@ -95,7 +95,7 @@ Agora, depois de usar o Minify, ele ficou assim:
 <!-- JS -->
 <script type="text/javascript" src="/min/f=js/jquery.js,js/jquery.cycle.js,outroscript.js"></script>
 </head>
-[/code]
+{% endhighlight %}
 
 Viu só? Você pode dar uma olhada no [Guia do Usuário](http://code.google.com/p/minify/wiki/UserGuide) do Minify caso tenha alguma dúvida.
 

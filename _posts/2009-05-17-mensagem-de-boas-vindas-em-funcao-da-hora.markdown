@@ -15,7 +15,7 @@ Semana passada algumas pessoas me perguntaram no MSN como poderiam fazer uma men
 Isso é muito simples, veja um exemplo:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Formato 24 horas (de 1 a 24)
@@ -34,7 +34,7 @@ $mensagem = "Boa noite";
 echo $mensagem;
 
 ?>
-[/code]
+{% endhighlight %}
 
 Viram?
 

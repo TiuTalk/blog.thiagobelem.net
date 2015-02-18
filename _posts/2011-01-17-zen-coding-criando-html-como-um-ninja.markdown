@@ -28,11 +28,11 @@ Segundo o próprio site:
 </blockquote>
 <h3>Como assim? O que ele faz?</h3>
 Com o Zen-Coding você digita isso no seu editor:
-[code language="html"]
+{% highlight html linenos %}
 div#page>div.logo+ul#navigation>li*5>a
-[/code]
+{% endhighlight %}
 ... aperta uma combinação de teclas, normalmente CTRL+E, e isso é <strong>automaticamente</strong> transformado em:
-[code language="html"]
+{% highlight html linenos %}
 <div id="page">
 	<div class="logo"></div>
 	<ul id="navigation">
@@ -43,7 +43,7 @@ div#page>div.logo+ul#navigation>li*5>a
 		<li><a href=""></a></li>
 	</ul>
 </div>
-[/code]
+{% endhighlight %}
 
 <h3>Editores com suporte ao Zen-Coding</h3>
 Você pode baixar o plugin do Zen-Coding no [site oficial](http://code.google.com/p/zen-coding/) para os seguintes editores:
@@ -56,11 +56,11 @@ Nem todos são plugins oficiais, mas a maioria sim. :)
 Vejam um exemplo que criei para vocês...
 
 Você pode expandir a seguinte linha:
-[code language="html"]
+{% highlight html linenos %}
 html>(head>title+meta[name="description" content]+meta[name="keywords" content])+(body>(header+(#body>#content+aside#sidebar))+footer)
-[/code]
+{% endhighlight %}
 Em um template de site completo:
-[code language="html"]
+{% highlight html linenos %}
 <html>
 	<head>
 		<title></title>
@@ -76,10 +76,10 @@ Em um template de site completo:
 		<footer></footer>
 	</body>
 </html>
-[/code]
+{% endhighlight %}
 
 Esse é um bom exemplo do que ele é capaz de fazer... Mas não é um uso comum dele... A idéia é você fazer HTML muito rápido, por exemplo quando você digita <code>#menu>ul>li*5>a</code> e "expande", você ganha tempo por não ter que escrever (e organizar/identar), isso tudo:
-[code language="html"]
+{% highlight html linenos %}
 <div id="menu">
 	<ul>
 		<li><a href=""></a></li>
@@ -89,7 +89,7 @@ Esse é um bom exemplo do que ele é capaz de fazer... Mas não é um uso comum 
 		<li><a href=""></a></li>
 	</ul>
 </div>
-[/code]
+{% endhighlight %}
 
 <hr />
 Espero que vocês tenham gostado dessa ferramenta! Ela não é novidade, mas sei que nem todo mundo conhece. ;)

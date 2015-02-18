@@ -24,7 +24,7 @@ Agora, com os namespaces, temos uma terceira (e muito melhor) opção para soluc
 
 <h3>O que faz esse tal de <em>namespace</em>?</h3>
 Imagine que você fez uma função nova para usar no seu site só que ela usa nomes e constantes com nomes genéricos (por exemplo: "user" e "database")... Ela normalmente seria assim:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 function connect() {
@@ -32,12 +32,12 @@ function connect() {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Só que se você usar alguma outra biblioteca/classe/função pronta, pode haver uma colisão de nomes e você vai precisar mudar o nome da sua função pra algo maior... Só que você não quer isso.
 
 Aí, usando a maravilha do namespace, você faz assim:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 namespace MeuProjeto;
@@ -47,10 +47,10 @@ function connect() {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 E quando você precisar chamar a função do MeuProjeto é só fazer assim:
-[code language="php"]
+{% highlight php linenos %}
 <?php
 	// Inclui o arquivo com a função
 	include("conexao-MySQL.php");
@@ -58,11 +58,11 @@ E quando você precisar chamar a função do MeuProjeto é só fazer assim:
 	// Chama a função dentro do namespace
 	MeuProjeto/connect();
 ?>
-[/code]
+{% endhighlight %}
 
 <h3>Sintaxe alternativa</h3>
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 namespace MeuProjeto {
@@ -74,7 +74,7 @@ namespace MeuProjeto {
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 --
 

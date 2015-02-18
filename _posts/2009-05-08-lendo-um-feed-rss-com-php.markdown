@@ -17,7 +17,7 @@ Hoje vou mostrar, como é possível ler o conteúdo de um <abbr title="Really Si
 Vamos ao código:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 $feed = file_get_contents('http://feeds2.feedburner.com/ThiagoBelem/Blog');
 $rss = new SimpleXmlElement($feed);
@@ -29,7 +29,7 @@ echo '
 ';
 }
 ?>
-[/code]
+{% endhighlight %}
 
 Viram só?! Com isso criamos uma lista contendo links para todas as entradas de um Feed RSS. :D
 

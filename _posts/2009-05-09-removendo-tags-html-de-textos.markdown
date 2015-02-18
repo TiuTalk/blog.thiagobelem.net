@@ -25,7 +25,7 @@ O que essa função faz é simples, curto e grosso: acaba, some, oculta, exclui,
 Veja um exempo de uso:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 // Define uma string com código HTML
 $entrada = '
@@ -37,12 +37,12 @@ $saida = strip_tags($entrada);
 echo $saida;
 // Saída: Ahá... eu sou malandrão!
 ?>
-[/code]
+{% endhighlight %}
 
 Você também pode, se quiser, definir TAGs permitidas, que permanecerão na string:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 // Define uma string com código HTML
 $entrada = '
@@ -57,7 +57,7 @@ echo $saida;
 Ahá... eu sou <strong>malandrão!</strong>
 
 ?>
-[/code]
+{% endhighlight %}
 
 » [Documentação da strip_tags()](http://www.php.net/manual/pt_BR/function.strip-tags.php)
 
@@ -67,7 +67,7 @@ A htmlspecialchars não remove as TAGs HTML... Ela escapa o código HTML... Tran
 Exemplo de uso:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 $entrada = 'Eu sou <i>çagaiz</i>!';
 
@@ -75,7 +75,7 @@ $saida = htmlspecialchars($entrada);
 echo $saida;
 // Saída: Eu sou <i>çagaiz</i>! (Aparecerão todos os caracteres, como se o HTML fosse string)
 ?>
-[/code]
+{% endhighlight %}
 
 Com isso você vai poder saber exatamente o que o espertinho tentou inserir no seu código... :)
 
@@ -87,7 +87,7 @@ No quesito segurança, essa é a função mais legal.. Ela serve pra quando voc�
 Vamos dar um exemplo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 < ?php
 $nome = "Fulaninho's";
 
@@ -96,23 +96,23 @@ $nome = mysql_real_escape_string($nome);
 $sql = "INSERT INTO `usuarios` VALUES (NULL, '".$nome."')";
 mysql_query($sql);
 ?>
-[/code]
+{% endhighlight %}
 
 Sem o uso da função, a consulta passada para o MySQL ficaria assim:
 
 
-[code language="sql"]
+{% highlight text linenos %}
 INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho's')
-[/code]
+{% endhighlight %}
 
 Repare que a aspas que fecha o valor a ser inserido, é a que vem depois do "o", e não a que veio depois do "s", que seria o correto... O que daria erro no MySQL ou acabaria resultado no cadastro de dados errados e pela metade.
 
 Já usando a função, ficaria assim:
 
 
-[code language="sql"]
+{% highlight text linenos %}
 INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho\'s')
-[/code]
+{% endhighlight %}
 
 O que fazer com que o nome seja inserido de forma correta, e quando você fizer um <strong>SELECT</strong> para buscar esse dado, ele virá <strong>Fulaninho's</strong> (sem a barra).
 

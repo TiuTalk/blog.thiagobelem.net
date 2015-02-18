@@ -26,27 +26,27 @@ Faça o download da última versão do <strong>jQuery </strong>no site: <a href=
 Insira-os dentro do <head> do seu site, da seguinte forma:
 
 
-[code language="html"]
+{% highlight text linenos %}
 <script src="jquery.js" type="text/javascript"></script>
  <script src="jquery.validate.js" type="text/javascript"></script>
-[/code]
+{% endhighlight %}
 
 Após isso, criamos um pequeno bloco de CSS para estilizar as mensagens de erro:
 
 
-[code language="css"]
+{% highlight text linenos %}
 * { font-family: Verdana; font-size: 96%; }
 label { display: block; margin-top: 10px; }
 label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; font-size: 10px }
 p { clear: both; }
 .submit { margin-top: 1em; }
 em { font-weight: bold; padding-right: 1em; vertical-align: top; }
-[/code]
+{% endhighlight %}
 
 Ainda dentro do <em><strong>head</strong></em>, depois de inserir o <strong>jQuery</strong> e o estilo das mensagens de erro, precisaremos adicionar um bloco de JavaScript contendo instruções para a validação:
 
 
-[code language="javascript"]
+{% highlight text linenos %}
 $(document).ready( function() {
 	$("#formularioContato").validate({
 		// Define as regras
@@ -81,12 +81,12 @@ $(document).ready( function() {
 		}
 	});
 });
-[/code]
+{% endhighlight %}
 
 Por fim, inserimos o HTML do formulário na pagina:
 
 
-[code language="html"]
+{% highlight text linenos %}
 <form id="formularioContato" method="post">
 
 	<label for="nome">Nome</label>
@@ -101,7 +101,7 @@ Por fim, inserimos o HTML do formulário na pagina:
 	<input class="submit" type="submit" value="Enviar" />
 
 </form>
-[/code]
+{% endhighlight %}
 
 Viram como é fácil? O arquivo final ficou [desta](/exemplo2) forma. Se você preferir pode copiar todo esse código JavaScript para um arquivo .js e incluí-lo no <head> do seu site da mesma forma que fizemos no começo da aula.
 

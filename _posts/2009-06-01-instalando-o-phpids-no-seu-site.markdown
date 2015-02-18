@@ -25,7 +25,7 @@ Para instalar ele no seu site é bem fácil:
 3 - Insira o seguinte bloco de código no começo do seu site:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Inclui o arquivo do PHPIDS
 require_once 'IDS/Init.php';
 $request = array(
@@ -43,7 +43,7 @@ if (!$result-&amp;gt;isEmpty()) {
 // Exibe resultados caso sejam encontrados
 echo $result;
 }
-[/code]
+{% endhighlight %}
 
 Com isso ele já vai passar a funcionar... Vale lembrar que esse exemplo apenas avisa (mostra) que algo foi encontrado e bloqueia... Você vai  precisar adaptá-lo as suas necessidades.
 

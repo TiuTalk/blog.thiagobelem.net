@@ -35,37 +35,37 @@ Tá nervoso? Quer ver logo como é esse tal de <em>"djeisón"</em>? Vamos criar 
 Primeiro criamos o objeto sem nada dentro:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 var meuBlog = {}
-[/code]
+{% endhighlight %}
 
 Agora colocamos alguns valores:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 var meuBlog = {
 titulo: 'Thiago Belem / Blog',
 url: 'http://blog.thiagobelem.net/'
 }
-[/code]
+{% endhighlight %}
 
 Caso você queira exibir algum desses valores, usando JavaScript, poderia fazer:
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 alert("Titulo do blog: " + meuBlog.titulo);
-[/code]
+{% endhighlight %}
 
 Para incrementar, vamos colocar um array?
 
 
-[code language="javascript"]
+{% highlight javascript linenos %}
 var meuBlog = {
 titulo: 'Thiago Belem / Blog',
 url: 'http://blog.thiagobelem.net/',
 assuntos: ['PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB']
 }
-[/code]
+{% endhighlight %}
 
 Lembra que eu disse que você provavelmente já viu JSON em algum lugar? Já usou algum plugin de jQuery e precisou mudar as configurações dele? Dá uma olhada na sintaxe usada lá e vê esses últimos exemplos. Tá... Não é JSON, mas são os dois são idênticos por serem objetos JavaScript... A diferença é que o JSON é feito para ser transmitido. :P
 
@@ -77,7 +77,7 @@ Bom... Como eu disse antes, o PHP 5.2+ tem suporte nativo a escrita e leitura de
 Vejamos um exemplo de escrita:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 $meuBlog = array(
@@ -92,14 +92,14 @@ echo $json;
 // Resultado: { titulo: 'Thiago Belem / Blog', url: 'http://blog.thiagobelem.net/', assuntos: ['PHP', 'MySQL', 'jQuery', 'CakePHP', 'Desenvolvimento WEB'] }
 
 ?>
-[/code]
+{% endhighlight %}
 
 É isso mesmo.. Primeiro você cria um array com a formatação correta e todos os valores que serão passados para JSON, depois é só rodar a função json_enconde() no array todo e cabou-se. ;)
 
 Agora a leitura:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Recebe uma string no formato JSON
@@ -111,7 +111,7 @@ echo $meuUsuario['nome']; // Fulano da Silva
 echo $meuUsuario['nascimento']; // 2009/05/12
 
 ?>
-[/code]
+{% endhighlight %}
 
 No segundo argumento da função json_decode() do PHP você define se quer (true) ou não (false) que o objeto JSON recebido seja convertido em array. Caso não especifique o 2º argumento ou defina-o como falso, o objeto criado será outro objeto, só que agora do PHP.
 

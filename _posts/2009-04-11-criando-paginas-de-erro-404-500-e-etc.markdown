@@ -13,13 +13,13 @@ As vezes seu site pode gerar alguns endereços inválidos (404) e você modifica
 Se você já tem esse arquivo no seu servidor, edite-o com o bloco de notas e coloque esse bloco de linhas no começo do arquivo:
 
 
-[code language="html"]
+{% highlight text linenos %}
 ErrorDocument 400 /erro_400.html
 ErrorDocument 401 /erro_401.html
 ErrorDocument 403 /erro_403.html
 ErrorDocument 404 /erro_404.html
 ErrorDocument 500 /erro_500.html
-[/code]
+{% endhighlight %}
 
 E depois é só criar cada um dos arquivos (erro_404.html) dentro da raiz (root) do servidor com a mensagem de erro... Você também pode mudar o nome do arquivo para o que preferir, usar outra extensão e fazer da melhor forma... É só ir mudando e testando.
 

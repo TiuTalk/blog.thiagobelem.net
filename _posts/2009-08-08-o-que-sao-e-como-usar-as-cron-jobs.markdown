@@ -35,35 +35,35 @@ Se o seu site roda em algum servidor especializado e você tem um painel de cont
 A definição de uma cron job consiste em uma linha com 6 valores separados por espaço, assim:
 
 
-[code]
+{% highlight sh linenos %}
 minuto hora dia mes dia-da-semana linha-de-comando
-[/code]
+{% endhighlight %}
 
 Vamos a alguns exemplos de configuração de tempo antes de criar a cron em si:
 
 <h4>Cron Job que rode todo dia as 06:00am</h4>
 
-[code]
+{% highlight sh linenos %}
 0 6 * * * linha-de-comando
-[/code]
+{% endhighlight %}
 
 <h4>Cron Job que rode as 12:30am de segunda e sexta</h4>
 
-[code]
+{% highlight sh linenos %}
 30 12 * * 1,5 linha-de-comando
-[/code]
+{% endhighlight %}
 
 <h4>Cron Job que rode a meia-noite de três em três dias</h4>
 
-[code]
+{% highlight sh linenos %}
 0 0 */3 * * linha-de-comando
-[/code]
+{% endhighlight %}
 
 <h4>Cron Job que rode todo dia a cada duas horas</h4>
 
-[code]
+{% highlight sh linenos %}
 0 */2 * * * linha-de-comando
-[/code]
+{% endhighlight %}
 
 Se você ficou com dificuldade nessa parte do tempo existem alguns [esse aqui](http://www.generateit.net/cron-job/). :)
 
@@ -74,19 +74,19 @@ Se você ficou com dificuldade nessa parte do tempo existem alguns [esse aqui](h
 
 <h3>Instalando suas Cron Jobs</h3>
 Agora é só salvar o conteúdo das suas crons, uma por linha em um arquivo chamado cron.txt e colocar uma linha assim no começo (primeira linha) do arquivo:
-[code]
+{% highlight sh linenos %}
 MAILTO=meuemail@meudominio.com
-[/code]
+{% endhighlight %}
 Isso fará com que os erros sejam enviados para o e-mail determinado.
 
 Depois é só ir no terminal/shell e chamar o comando:
-[code]
+{% highlight sh linenos %}
 crontab cron.txt
-[/code]
+{% endhighlight %}
 Se nada der errado a cron foi instalada com sucesso e você pode vê-la na lista de crons que estão rodando:
-[code]
+{% highlight sh linenos %}
 crontab -l
-[/code]
+{% endhighlight %}
 
 Ufa! :D
 

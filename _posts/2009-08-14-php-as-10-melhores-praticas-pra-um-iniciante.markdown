@@ -69,12 +69,12 @@ Essa é simples: organize seu código para ficar mais fácil de encontrar alguma
 Pra quem ainda não sacou, "indentação" é aquele espaço em branco a esquerda das linhas, criados usando a tecla [TAB] ou espaços em branco, por exemplo:
 
 
-[code language="php"]
+{% highlight php linenos %}
 if ($nota == 10) {
     echo "Parabéns, você passou!";
     exit;
 }
-[/code]
+{% endhighlight %}
 
 No exemplo acima as linhas 2 e 3 estão indentadas pois pertencem ao bloco condicional.
 

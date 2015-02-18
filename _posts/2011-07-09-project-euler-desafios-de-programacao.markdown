@@ -61,7 +61,7 @@ Antes de qualquer coisa, eu não sou um bom matemático... Na maior parte do tem
 Primeiro vamos à minha solução em PHP:
 
 
-[code language="php"]
+{% highlight php linenos %}
 function solucao() {
 	$soma = 0;
 
@@ -72,13 +72,13 @@ function solucao() {
 
 	echo $soma;
 }
-[/code]
+{% endhighlight %}
 
 <h3>Solução em Python</h3>
 E agora, a mesma abordagem em Python:
 
 
-[code language="python"]
+{% highlight python linenos %}
 def solucao():
 	soma = 0;
 
@@ -87,7 +87,7 @@ def solucao():
 			soma += i
 
 	print soma
-[/code]
+{% endhighlight %}
 
 <h3>Conclusão</h3>
 Meu intuito aqui não é comparar as duas linguagens! Pra mim, ambas são excelentes.

@@ -18,39 +18,39 @@ A sessão precisa ser iniciada em cada página que você for usar ou definir um 
 Para abrir a sessão é só usar esse comando no PHP:
 
 
-[code language="php"]
+{% highlight text linenos %}
 session_start(); // Inicia a sessão
-[/code]
+{% endhighlight %}
 
 Depois de iniciada a sessão você pode definir valores dentro dela dessa forma:
 
 
-[code language="php"]
+{% highlight text linenos %}
 $_SESSION['usuario'] = 'Thiago';
-[/code]
+{% endhighlight %}
 
 E quando você precisar exibir o valor salvo na sessão (provavelmente em outras páginas), é só fazer assim:
 
 
-[code language="php"]
+{% highlight text linenos %}
 echo $_SESSION['usuario']; // Resultado: Thiago
-[/code]
+{% endhighlight %}
 
 Você pode salvar quantos valores quiser, pode re-definir os valores e usa-los em echos, argumentos de funções e da forma que preferir.
 
 Para deletar uma variável específica da sessão você usa o <strong>unset()</strong>:
 
 
-[code language="php"]
+{% highlight text linenos %}
 unset($_SESSION['usuario']); // Deleta uma variável da sessão
-[/code]
+{% endhighlight %}
 
 Você também pode destruir toda a sessão de uma só vez, eliminando todas as variáveis salvas nela:
 
 
-[code language="php"]
+{% highlight text linenos %}
 session_destroy(); // Destrói toda sessão
-[/code]
+{% endhighlight %}
 
 Com isso você tem total controle das sessões no seu site e pode salvar, por exemplo, o nome de usuário depois que ele fez o login e salvar outra variável informando que o usuário está logado. Esta é uma prática muito comum em sistemas de autenticação de usuário.
 

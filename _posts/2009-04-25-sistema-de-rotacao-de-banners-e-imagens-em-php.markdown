@@ -16,7 +16,7 @@ Bom, existem dezenas de formas de fazer isso, mas eu vou tentar fazer da forma m
 Vamos criar um arquivo chamado <span style="color: #ff6600;"><strong>banner_superior.php</strong></span> com o seguinte conteúdo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 unset($_ELEMENTOS);
 
@@ -30,7 +30,7 @@ $escolhido = rand(0, $total - 1); // Define um número aleatório
 echo $_ELEMENTOS[$escolhido]; // Exibe o elemento
 
 ?>
-[/code]
+{% endhighlight %}
 
 Depois é só incluir (com <strong>include()</strong>) o arquivo aonde você quer que o banner apareça.
 

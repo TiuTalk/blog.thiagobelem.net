@@ -27,20 +27,20 @@ Se você estiver testando seu script localmente, pode ignorar a segunda consider
 Vamos ao formulário HTML para o usuário escolher o arquivo a ser enviado:
 
 
-[code language="html"]
+{% highlight text linenos %}
 <form method="post" action="recebe_upload.php" enctype="multipart/form-data">
 <label>Arquivo</label>
 <input type="file" name="arquivo" />
 <input type="submit" value="Enviar" />
 </form>
-[/code]
+{% endhighlight %}
 
 Salve este HTML dentro de arquivo com o nome que preferir.
 
 Agora vamos criar o arquivo que irá receber os dados e cuidar de tudo pra você... Salve-o como <span style="color: #99cc00;"><strong>recebe_upload.php</strong></span>:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 // Pasta onde o arquivo vai ser salvo
@@ -105,7 +105,7 @@ echo "Não foi possível enviar o arquivo, tente novamente";
 }
 
 ?>
-[/code]
+{% endhighlight %}
 
 Com isso você já tem um script que recebe os dados enviados pelo formulário e que coloca (ou não) o arquivo na pasta.
 

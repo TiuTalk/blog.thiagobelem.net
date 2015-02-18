@@ -44,7 +44,7 @@ Iremos usar essas tabelas para armazenar notícias que estarão ligadas à categ
 Para criar essas tabelas em seu banco de dados, execute esse código SQL:
 
 
-[code language="sql"]
+{% highlight sql linenos %}
 -- -----------------------------------------------------
 -- Table `categorias`
 -- -----------------------------------------------------
@@ -77,12 +77,12 @@ CREATE  TABLE IF NOT EXISTS `noticias` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = MyISAM;
-[/code]
+{% endhighlight %}
 
 Vamos iniciar o nosso script criando um pequeno script de conexão ao banco de dados:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 /**
  * PHP e MySQL para iniciantes
@@ -110,7 +110,7 @@ if (mysqli_connect_errno())
     trigger_error(mysqli_connect_error(), E_USER_ERROR);
 
 ?>
-[/code]
+{% endhighlight %}
 
 Na linha 21 nós criamos uma instância do MySQLi passando os dados de conexão com o servidor e, logo depois, verificamos se houve algum erro durante a conexão e exibimos a mensagem de erro.
 
@@ -119,7 +119,7 @@ Salve esse script com o nome de <code>mysqli.php</code> em uma pasta chamada <co
 O próximo passo será criar um script que faz uma consulta SQL, vamos começar o arquivo PHP com os comentários de créditos e o <code>[require](http://php.net/manual/en/function.require-once.php)</code> para chamar o arquivo de conexão ao banco de dados:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 /**
  * PHP e MySQL para iniciantes
@@ -136,19 +136,19 @@ O próximo passo será criar um script que faz uma consulta SQL, vamos começar 
 require_once('includes/mysqli.php');
 
 ?>
-[/code]
+{% endhighlight %}
 
 Agora vamos montar uma consulta SQL simples para buscar as 10 últimas notícias ativas:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Monta a consulta SQL para trazer as últimas 10 notícias ativas
 $sql = 'SELECT *
 		FROM `noticias` AS Noticia
 		WHERE Noticia.`ativa` = 1
 		ORDER BY Noticia.`cadastro` DESC
 		LIMIT 10';
-[/code]
+{% endhighlight %}
 
 A consulta montada poderia ser traduzida por:
 
@@ -161,15 +161,15 @@ LIMITADO A 10 resultados
 Agora precisamos executar a consulta utilizando o método <code>[query](http://www.php.net/manual/pt_BR/mysqli.query.php)</code> do MySQLi:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Executa a consulta OU mostra uma mensagem de erro
 $resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
-[/code]
+{% endhighlight %}
 
 E agora só precisamos rodar um loop, e em cada iteração (passada no loop) iremos exibir a notícia encontrada, montando um bloco HTML:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Faz um loop, passando por todos os resultados encontrados
 while ($noticia = $resultado->fetch_object()) {
 	// Exibe a notícia dentro de um bloco HTML
@@ -183,40 +183,40 @@ while ($noticia = $resultado->fetch_object()) {
 
 	<?php
 } // while ($noticia = $resultado->fetch_object())
-[/code]
+{% endhighlight %}
 
 Fazendo isso, para cada notícia encontrada pela consulta, será criado o seguinte bloco HTML:
 
 
-[code language="html"]
+{% highlight html linenos %}
 <h2>Titulo da notícia</h2>
 Descrição da notícia
 
 [Leia mais &raquo;](noticia.php?id=2)
 
-[/code]
+{% endhighlight %}
 
 Depois disso, podemos colocar mais um pequeno bloco de código que irá mostrar o total de registros encontrados com a consulta:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Exibe o total de registros encontrados
 echo "Registros encontrados: {$resultado->num_rows}
 ";
-[/code]
+{% endhighlight %}
 
 E no final de tudo precisamos - <strong>SEMPRE</strong> - liberar o resultado da consulta, limpando espaço na memória e deixando tudo mais organizado:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Libera o resultado para liberar memória
 $resultado->free();
-[/code]
+{% endhighlight %}
 
 O arquivo <code>consulta.php</code> ficou assim:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 /**
  * PHP e MySQL para iniciantes
@@ -264,7 +264,7 @@ echo "Registros encontrados: {$resultado->num_rows}
 $resultado->free();
 
 ?>
-[/code]
+{% endhighlight %}
 
 Por hoje é só! :)
 

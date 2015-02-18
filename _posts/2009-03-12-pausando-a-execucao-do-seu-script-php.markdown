@@ -11,7 +11,7 @@ tags: []
 As vezes o que queremos é que o PHP espere algum tempo antes de continuar... Pode ser medida de segurança (evitar um ataque <abbr title="Em ciência da computação, força bruta (ou busca exaustiva) é uma algoritmo trivial mas de uso muito geral que consiste em enumerar todos os possíveis candidatos de uma solução e verificar se cada um satisfaz o problema.">bruteforce</abbr>) ou criar um delay entre o envio de vários e-mails. As utilizações são várias.
 
 Você pode criar essa pausa no script da seguinte forma:
-[code language="php"]
+{% highlight text linenos %}
 // Exibe a hora atual
 echo date('H:i:s'); // 16:12:16
 
@@ -20,12 +20,12 @@ sleep(3);
 
 // Exibe a hora atual
 echo date('H:i:s'); // 16:12:19
-[/code]
+{% endhighlight %}
 
 Com o usleep() você define uma pausa em milhonésimos de segundos (calcule multiplicando o nº de segundos por 1.000.000).
 
 
-[code language="php"]
+{% highlight text linenos %}
 // Exibe a hora atual
 echo date('H:i:s'); // 16:13:16
 
@@ -34,7 +34,7 @@ usleep(5000000);
 
 // Exibe a hora atual
 echo date('H:i:s'); // 16:13:21
-[/code]
+{% endhighlight %}
 
 Este é um recurso pouco conhecido do PHP mas que tem o seu valor.
 

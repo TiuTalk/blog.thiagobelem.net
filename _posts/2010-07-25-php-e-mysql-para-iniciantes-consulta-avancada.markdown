@@ -24,7 +24,7 @@ Hoje vamos fazer uma consulta semelhante, mas iremos fazer o relacionamento entr
 Começaremos o arquivo <code>consulta-avancada.php</code> da mesma forma que iniciamos o anterior, com um bloco de comentários que explica o arquivo e inclui o arquivo que cria a instância do MySQLi que será usada nesse novo arquivo.
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 /**
  * PHP e MySQL para iniciantes
@@ -41,20 +41,20 @@ Começaremos o arquivo <code>consulta-avancada.php</code> da mesma forma que ini
 require_once('includes/mysqli.php');
 
 ?>
-[/code]
+{% endhighlight %}
 
 Agora iremos definir uma variável contendo o nome da categoria que iremos usar para filtrar as notícias... O conteúdo dessa variável está "<em>hard coded</em>" no arquivo, mas poderia ser dinâmico e vir da uma variável <code>$_GET</code>, por exemplo.
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Iremos buscar apenas as notícias da categoria "Esportes"
 $categoria = "Esportes"; // Essa variável poderia ter vindo, por exemplo, do $_GET
-[/code]
+{% endhighlight %}
 
 Feito isso, montaremos a consulta que será executada no banco de dados:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Monta a consulta SQL para trazer as últimas 10 notícias ativas e que pertençam à categoria específica
 $sql = "SELECT
 			Noticia.id, Noticia.titulo, Noticia.descricao,
@@ -68,7 +68,7 @@ $sql = "SELECT
 			Categoria.`nome` = '{$categoria}'
 		ORDER BY Noticia.`cadastro` DESC
 		LIMIT 10";
-[/code]
+{% endhighlight %}
 
 O interessante dessa consulta é que ela busca os registros da tabela <code>noticia</code> que possuam um relacionamento com os registros da tabela <code>categorias</code> e, o registro correspondente na tabela <code>categorias</code> deve possuir o valor da variável <code>$categoria</code> no campo <code>nome</code>.
 
@@ -77,7 +77,7 @@ Para quem não entendeu a explicação acima, vale a pena a leitura do meu artig
 Continuando o script, rodamos a consulta e exibimos o resultado:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Prepara a consulta OU mostra uma mensagem de erro
 $resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
 
@@ -94,19 +94,19 @@ while ($noticia = $resultado->fetch_object()) {
 
 	<?php
 } // while ($noticia = $resultado->fetch_object())
-[/code]
+{% endhighlight %}
 
 E, para finalizar, exibimos o total de resultados encontrados e limpamos a consulta da memória do PHP:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Exibe o total de registros encontrados
 echo "Registros encontrados: {$resultado->num_rows}
 ";
 
 // Libera o resultado para liberar memória
 $resultado->free();
-[/code]
+{% endhighlight %}
 
 E vocês acabaram de ver um exemplo de consulta complexa usando MySQLi! :)
 

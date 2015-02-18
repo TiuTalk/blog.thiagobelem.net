@@ -21,7 +21,7 @@ Vou mostrar aqui como criar um script simples que vai, além de forçar o downlo
 Veja o script:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 // Define o tempo máximo de execução em 0 para as conexões lentas
 set_time_limit(0);
@@ -55,7 +55,7 @@ header('Expires: 0');
 // Envia o arquivo para o cliente
 readfile($aquivoNome);
 ?>
-[/code]
+{% endhighlight %}
 
 Viram que simples?
 

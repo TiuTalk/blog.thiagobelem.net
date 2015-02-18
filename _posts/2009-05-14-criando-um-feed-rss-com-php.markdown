@@ -34,21 +34,21 @@ Vamos ao que interessa... A classe [SimpleXMLElement](http://www.php.net/manual/
 Primeiro chamamos a classe:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Intanciamos/chamamos a classe
 $rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
 
 ?>
-[/code]
+{% endhighlight %}
 
 Com isso iremos começar a criar uma estrutura XML com o formato que está sendo passado para a classe.
 
 Agora iremos dizer que será um RSS versão 2.0, e para isso precisamos definir um atributo <strong>version</strong> do item <rss>, dessa forma:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 
 // Intanciamos/chamamos a classe
@@ -57,22 +57,22 @@ $rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>')
 $rss->addAttribute('version', '2.0');
 
 ?>
-[/code]
+{% endhighlight %}
 
 Até agora o nosso RSS tem um formato parecido com esse:
 
 
-[code language="xml"]
+{% highlight xml linenos %}
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 
 </rss>
-[/code]
+{% endhighlight %}
 
 O próximo passo é definir o elemento <strong><channel></strong> (canal) que contem todos os dados do RSS e cada um dos itens/notícias... Dentro dele iremos colocar mais três elementos, que são o <strong><title></strong> (titulo do RSS), o <strong><link></strong> (do site ao qual o RSS pertence) e a <strong><description></strong> (descrição do conteúdo RSS):
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 // Intanciamos/chamamos a classe
 $rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
@@ -86,14 +86,14 @@ $canal->addChild('link', 'http://www.meusite.com/');
 $canal->addChild('description', 'Este é o meu primeiro RSS, uha!');
 
 ?>
-[/code]
+{% endhighlight %}
 
 Existem outros sub-elementos de channel, mas são todos opcionais... Veja a lista completa deles [aqui](http://cyber.law.harvard.edu/rss/rss.html#optionalChannelElements).
 
 E com isso, o nosso RSS ficará com um formato assim:
 
 
-[code language="xml"]
+{% highlight xml linenos %}
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
@@ -103,14 +103,14 @@ E com isso, o nosso RSS ficará com um formato assim:
 
 </channel>
 </rss>
-[/code]
+{% endhighlight %}
 
 Estão percebendo a mágica do SimpleXMLElement? Ele vai criando um formato de XML perfeito pra você usar com quase qualquer coisa! :D
 
 Bom... Já temos o formato básico do RSS.. Agora é só adicionar dois itens de exemplo e o nosso RSS estará quase pronto:
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 // Intanciamos/chamamos a classe
 $rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
@@ -139,7 +139,7 @@ $item->addChild('description', 'Esse é um resumo do meu primeiro artigo.');
 $item->addChild('pubDate', date('r'));
 
 ?>
-[/code]
+{% endhighlight %}
 
 Cada <strong><item></strong> representa uma entrada do RSS, seria cada uma das notícias de um site de notícias, ou cada um dos artigos de um blog ou cada um dos apartamentos do site de uma imobiliária. A ordem dos <strong><item>s</strong> deve ser é do mais recente para o mais antigo.
 
@@ -148,7 +148,7 @@ Os três sub-elementos obrigatórios dos <strong><item>s</strong> são: o <stron
 Depois de inserir os dois itens o formato do nosso RSS está concluído, ficando assim:
 
 
-[code language="xml"]
+{% highlight xml linenos %}
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
@@ -171,19 +171,19 @@ Depois de inserir os dois itens o formato do nosso RSS está concluído, ficando
 
 </channel>
 </rss>
-[/code]
+{% endhighlight %}
 
 Agora, para concluir, precisamos apenas passar todo o conteúdo do RSS para o navegador (depois de definir qual será o tipo de conteúdo que ele irá receber), colocando isso depois de definir o <strong>último <item></strong>:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Define o tipo de conteúdo e o charset
 header("content-type: application/rss+xml; charset=utf-8");
 
 // Entrega o conteúdo do RSS completo:
 echo $rss->asXML();
 exit;
-[/code]
+{% endhighlight %}
 
 --
 
@@ -192,7 +192,7 @@ Pode ser que você encontre problemas de <acronym title="Tipo de codificação">
 Se você quiser também pode criar um RSS baseado em uma consulta MySQL, inserindo vários <items> de uma vez... Veja um exemplo:
 
 
-[code language="php"]
+{% highlight php linenos %}
 // Intanciamos/chamamos a classe
 $rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
 $rss->addAttribute('version', '2.0');
@@ -228,7 +228,7 @@ header("content-type: application/rss+xml; charset=utf-8");
 // Entrega o conteúdo do RSS completo:
 echo $rss->asXML();
 exit;
-[/code]
+{% endhighlight %}
 
 --
 

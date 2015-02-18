@@ -25,7 +25,7 @@ Manipular os erros de forma correta, além de deixar o site mais "bonito" faz co
 Para iniciar a manipular os seus erros é só dar um include/require nesse arquivo logo no começo do seu site. E não se esqueça de mudar as configurações entre as linhas 8 e 14.
 
 
-[code language="php"]
+{% highlight php linenos %}
 <?php
 /**
  *  Arquivo para manipulação de erros de forma segura:
@@ -144,7 +144,7 @@ set_error_handler('manipuladorErros');
 
 echo $n;
 ?>
-[/code]
+{% endhighlight %}
 
 Caso você precise mudar a forma com qual o email é enviado, é só alterar ali em cima, entre as linhas 65 e 105.
 
@@ -152,13 +152,13 @@ Caso você precise mudar a forma com qual o email é enviado, é só alterar ali
 Ao executar o seguinte script (exibir uma variável que não existe):
 
 
-[code language="php"]
-<?php echo $n; ?> [/code]
+{% highlight php linenos %}
+<?php echo $n; ?> {% endhighlight %}
 
 Termos a seguinte resposta por email:
 
 
-[code language="plain"]
+{% highlight text linenos %}
 [ ERRO NO PHP ]
 Site: Meu site
 Tipo de erro: NOTICE
@@ -174,14 +174,14 @@ URL: http://127.0.0.1/erro.php
 Referer: http://127.0.0.1/
 
 Data: 11/07/2009 10:40:29
-[/code]
+{% endhighlight %}
 
 E o assunto do e-mail recebido será:
 
 
-[code language="plain"]
+{% highlight text linenos %}
 [NOTICE] Meu site - 11/07/2009 10:40:29
-[/code]
+{% endhighlight %}
 
 Gostaram né? :D
 

@@ -23,7 +23,7 @@ Como dito na definição wikipediana, cookies podem ser usados para armazenar da
 Felizmente você só precisa aprender uma função para manipular cookies! Essa função é a <strong>setcookie()</strong> do PHP. Vamos a alguns exemplos:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 // Cria um cookie chamado 'usuario' com o valor 'Fulano'
@@ -36,7 +36,7 @@ setcookie('usuario', 'Fulano', (time() + (3 * 24 * 3600)));
 setcookie('nome', 'Ciclano', (time() + (2 * 3600)));
 
 ?>
-[/code]
+{% endhighlight %}
 
 Você pode reparar que, nos exemplos acima, que a função teve até três parâmetros: <strong>nome do cookie</strong> (1), <strong>valor do cookie</strong> (2) e <strong>duração do cookie</strong> (3). Existem ainda mais quatro parâmetros (pouco comuns) que você poderá usar ([veja mais aqui](http://us.php.net/setcookie)).
 
@@ -45,7 +45,7 @@ Se você não definir o tempo de vida (duração) de um cookie, ele irá durar o
 Se você quiser pegar o valor de um cookie depois, em outra página do seu site, é só usar esse exemplo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 // Pega o valor do Cookie 'usuario' definido anteriormente:
@@ -55,21 +55,21 @@ $valor = $_COOKIE['usuario']; // Fulano
 $valor = $_COOKIE['nome']; // Ciclano
 
 ?>
-[/code]
+{% endhighlight %}
 
 Vale lembrar que o cookie precisa existir para você pegar o seu valor... Se ele passou da validade (expirou) ele não existe mais, então é sempre bom fazer uma verificação com a função [isset()](http://br2.php.net/manual/pt_BR/function.isset.php) do PHP.
 
 Se por algum motivo você precisar deletar algum cookie é só não definir um valor para ele, fazendo dessa forma:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 
 // Deleta o cookie definido anteriormente
 setcookie('usuario');
 
 ?>
-[/code]
+{% endhighlight %}
 
 Outra forma de deletar um cookie é colocando o seu tempo de vida no passado.
 
@@ -78,11 +78,11 @@ Outra forma de deletar um cookie é colocando o seu tempo de vida no passado.
 Se você quiser saber todos os cookies que estão setados e acessíveis pelo seu site, é só usar a função<strong> print_r()</strong> dessa forma:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 print_r($_COOKIE);
 ?>
-[/code]
+{% endhighlight %}
 
 Ela irá mostrar todos os cookies e seus respectivos valores.
 

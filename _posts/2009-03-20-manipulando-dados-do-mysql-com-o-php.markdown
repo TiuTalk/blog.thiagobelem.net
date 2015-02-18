@@ -27,7 +27,7 @@ Usaremos a tabela 'noticias' nos exemplo desse tópico, ela é composta por uma 
 O código para a criação dessa tabela é o seguinte:
 
 
-[code language="sql"]
+{% highlight text linenos %}
 CREATE TABLE IF NOT EXISTS `noticias` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `titulo` varchar(255) NOT NULL,
@@ -36,13 +36,13 @@ CREATE TABLE IF NOT EXISTS `noticias` (
 PRIMARY KEY (`id`),
 KEY `titulo` (`titulo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-[/code]
+{% endhighlight %}
 
 <h4>Inserindo dados</h4>
 Para inserir dados no MySQL você precisa montar uma consulta SQL (também chamada de <em>query</em>) usando o comando INSERT do MySQL, vejamos o exemplo de como inserir uma notícia na nossa tabela de notícias:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 // Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");
@@ -72,7 +72,7 @@ echo "Não foi possível inserir a notícia, tente novamente.";
 echo "Dados sobre o erro:" . mysql_error();
 }
 ?>
-[/code]
+{% endhighlight %}
 
 A função <strong>mysql_query()</strong> é responsável por executar uma consulta no servidor MySQL e, no caso do comando INSERT, ela retorna true ou false informando se o registro foi ou não inserido.
 
@@ -91,10 +91,10 @@ Você também tem uma segunda opção de sintaxe para o INSERT:
 Se você preferir por esse formato vai precisar definir os valores de TODAS as colunas da tabela, ficando dessa forma:
 
 
-[code language="php"]
+{% highlight text linenos %}
 // Montamos a consulta SQL
 $query = "INSERT INTO `noticias` VALUES (NULL, '".$titulo."', '".$texto."', '".$cadastro."')";
-[/code]
+{% endhighlight %}
 
 A desvantagem desse formato (diferente do primeiro) é que você precisa dizer o valor de cada uma das colunas da tabela ordenadamente para o PHP. Mas eu particularmente prefiro esse segundo formato de INSERT, ainda mais quando temos mais de 10 colunas em uma tabela fica muito ruim escrever o nome de todas elas e depois os valores de cada uma.
 
@@ -106,7 +106,7 @@ Mas fica a seu critério qual formato de INSERT usar.
 Se você quiser deletar dados armazenados no MySQL você pode usar o comando DELETE dentro da consulta SQL. A sua sintaxe é bem simples e a deleção se baseia em uma condição, vejamos dois exemplos:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 // Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");
@@ -125,12 +125,12 @@ echo "Não foi possível deletar as notícia, tente novamente.";
 echo "Dados sobre o erro:" . mysql_error();
 }
 ?>
-[/code]
+{% endhighlight %}
 
 Nesse exemplo condicionamos a deleção apenas dos registros que tiverem o valor da coluna `id` maior ou igual a três.
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 // Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");
@@ -149,7 +149,7 @@ echo "Não foi possível deletar as notícia, tente novamente.";
 echo "Dados sobre o erro:" . mysql_error();
 }
 ?>
-[/code]
+{% endhighlight %}
 
 Nesse exemplo usamos duas condições ao mesmo tempo e buscamos registros em função da sua data de cadastro no sistema.
 
@@ -165,7 +165,7 @@ Você já tem a sua tabela cheia de notícias e sabe inserir e deletar as notíc
 Ai você descobre que existe o UPDATE do MySQL, que serve exatamente para isso! Vamos ao exemplo:
 
 
-[code language="php"]
+{% highlight text linenos %}
 <?php
 // Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");
@@ -194,7 +194,7 @@ echo "Não foi possível atualizar as notícia, tente novamente.";
 echo "Dados sobre o erro:" . mysql_error();
 }
 ?>
-[/code]
+{% endhighlight %}
 
 Repare que no exemplo, além de atualizar o titulo da notícia, atualizamos também a sua "data de cadastro" para ela ser considerada uma notícia que foi alterada recentemente. Você pode usar o UPDATE em quantas colunas do registro você preferir e também pode brincar com a condição depois do WHERE da forma que achar melhor.
 
