@@ -15,7 +15,7 @@ Esse contador salva no banco de dados as visitas únicas (<em>uniques</em>) e as
 Antes de tudo, rode esse código SQL no banco de dados do seu site para criar a tabela que o sistema usa:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 DROP TABLE IF EXISTS `visitas`;
 CREATE TABLE IF NOT EXISTS `visitas` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `visitas` (
 Agora copie o código desse script PHP e salve-o como <strong>contadorVisitas.php</strong> em algum diretório do seu site:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 /**
  * Sistema de contador de visitas
  *
@@ -157,7 +157,7 @@ Pronto, você já tem a tabela no banco e o script dentro do site, agora é só 
 Quando você quiser pegar o total de visitas é só usar um desses exemplos:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
     // Pega o total de visitas únicas de hoje
     $total = pegaVisitas();
 

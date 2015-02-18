@@ -14,7 +14,7 @@ Hoje vou falar sobre algumas funções muito utilizadas no PHP: repetições e l
 Com o for você pode, por exemplo, repetir um ou mais comandos durante X vezes.. Por exemplo:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 $limite = 10;
 for ($n = 1; $n <= $limite; $n++) {
@@ -39,7 +39,7 @@ Veja mais: [Documentação do for()](http://br2.php.net/manual/pt_BR/control-str
 O <strong>foreach()</strong> é extremamente útil, pois com ele você executa um grupo de comandos para cada elemento de um array:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 $nomes = array('Thiago', 'João', 'Ricardo', 'Paula');
 foreach ($nomes as $indice => $valor) {
@@ -54,7 +54,7 @@ Uma tradução simples para o foreach() é "<em>para cada elemento do array X ex
 No começo de cada execução do loop duas variáveis serão definidas: $indice que conterá o índice/chave do elemento (0, 1, 2 e etc.) e $valor que conterá o valor do elemento (Thiago, João, Ricardo e etc.).
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 $nomes = array('Thiago', 'João', 'Ricardo', 'Paula');
 foreach ($nomes as $indice => $valor) {
@@ -73,7 +73,7 @@ Veja mais: [Documentação do foreach()](http://br2.php.net/manual/pt_BR/control
 O while() pode ser usado (ou não) da mesma forma que o for()... A diferença é que nele só é especificado a condição, veja um exemplo:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 $n = 1;
 $limite = 10;
@@ -92,7 +92,7 @@ O comando <em>while </em>pede que o PHP execute os comandos aninhados repetidame
 O while também é amplamente usado quando estamos retornando uma busca (SELECT) no MySQL:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 // Define a consulta MySQL
 $busca = "SELECT `nome`, `preco` FROM `produtos` LIMIT 10";

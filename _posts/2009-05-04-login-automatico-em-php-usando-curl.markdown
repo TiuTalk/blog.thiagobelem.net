@@ -15,8 +15,8 @@ Essa não é uma tarefa muito comum... Mas as vezes precisamos fazer um login au
 Você pode fazer essa "façanha" usando uma biblioteca do PHP chamada cURL ([veja mais sobre o cURL aqui](http://br2.php.net/manual/pt_BR/book.curl.php)), veja um exemplo devidamente comentado e explicado:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 // Inicia o cURL
 $ch = curl_init();

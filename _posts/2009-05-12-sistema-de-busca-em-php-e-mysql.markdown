@@ -22,7 +22,7 @@ Veja [um exemplo](/arquivos/2009/05/busca.jpg) (imagem) de como ficará o result
 Veja o código de criação da tabela:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 CREATE TABLE `noticias` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `titulo` VARCHAR( 255 ) NOT NULL ,
@@ -40,7 +40,7 @@ Esta é uma estrutura simples de uma tabela de notícias, e você vai precisar a
 Vamos ao formulário de busca:
 
 
-{% highlight text linenos %}
+{% highlight html linenos %}
 <form method="GET" action="http://www.meusite.com.br/busca.php">
 <fieldset>
 <label for="consulta">Buscar:</label>
@@ -57,7 +57,7 @@ Passaremos a busca por método GET para ficar mais parecido com o Google. :)
 E agora o arquivo (<span style="color: #ff6600;"><strong>busca.php</strong></span>) que recebe os dados do formulário, faz a conexão ao banco de dados, processa a busca e exibe o resultado (sem paginação):
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 // Conexão com o MySQL
@@ -117,7 +117,7 @@ Não se esqueça de mudar, dentro da exibição dos resultados, como é definida
 E pra quem quiser o mesmo script com paginação:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 // Configuração do script

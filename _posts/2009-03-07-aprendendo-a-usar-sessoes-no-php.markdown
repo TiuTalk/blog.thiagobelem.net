@@ -18,21 +18,21 @@ A sessão precisa ser iniciada em cada página que você for usar ou definir um 
 Para abrir a sessão é só usar esse comando no PHP:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 session_start(); // Inicia a sessão
 {% endhighlight %}
 
 Depois de iniciada a sessão você pode definir valores dentro dela dessa forma:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 $_SESSION['usuario'] = 'Thiago';
 {% endhighlight %}
 
 E quando você precisar exibir o valor salvo na sessão (provavelmente em outras páginas), é só fazer assim:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 echo $_SESSION['usuario']; // Resultado: Thiago
 {% endhighlight %}
 
@@ -41,14 +41,14 @@ Você pode salvar quantos valores quiser, pode re-definir os valores e usa-los e
 Para deletar uma variável específica da sessão você usa o <strong>unset()</strong>:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 unset($_SESSION['usuario']); // Deleta uma variável da sessão
 {% endhighlight %}
 
 Você também pode destruir toda a sessão de uma só vez, eliminando todas as variáveis salvas nela:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 session_destroy(); // Destrói toda sessão
 {% endhighlight %}
 

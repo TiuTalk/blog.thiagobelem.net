@@ -22,7 +22,7 @@ Vamos ao trabalho:
 O que iremos definir primeiro é a tabela usada para armazenar os usuários do sistema:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -39,7 +39,7 @@ Execute esse bloco SQL no seu banco de dados para criar a tabela usada pelo sist
 Depois disso, vamos ao formulário de login que você colocará dentro de um arquivo chamado <span style="color: #3366ff;">login.php</span>:
 
 
-{% highlight text linenos %}
+{% highlight html linenos %}
 <form method="post" action="valida.php">
 <label>Usuário</label>
 <input type="text" name="usuario" maxlength="50" />
@@ -56,7 +56,7 @@ Esse formulário, com apenas dois campos, manda pra página <span style="color: 
 Esse é o codigo fonte do arquivo <span style="color: #3366ff;">valida.php</span>:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 // Inclui o arquivo com o sistema de segurança
 include("seguranca.php");
 
@@ -88,7 +88,7 @@ A estrutura do seu site, até esse ponto, deve estar dessa forma:
 Agora vamos criar o arquivo <span style="color: #ff0000;">seguranca.php</span> na mesma pasta dos demais arquivos:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 /**
 * Sistema de segurança com acesso restrito
 *
@@ -223,7 +223,7 @@ Com esse arquivos nós já nos conectamos automaticamente ao servidor MySQL, ent
 Agora é só incluir essas linhas no topo de cada arquivo que deverá ter o acesso restrito:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
 {% endhighlight %}
@@ -231,7 +231,7 @@ protegePagina(); // Chama a função que protege a página
 Quando vocês quiserem exibir o nome do usuário logado, é só fazer isso:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 echo "Olá, " . $_SESSION['usuarioNome'];
 {% endhighlight %}
 

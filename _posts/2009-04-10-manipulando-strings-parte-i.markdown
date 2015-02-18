@@ -18,7 +18,7 @@ Ele tem, normalmente, 3 argumentos: A string que será cortada (1), o início do
 Veja alguns exemplos de uso:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 $frase = 'O rato roeu a roupa do Rei de Roma';
@@ -46,7 +46,7 @@ Ele só tem um argumento: A string a ser medida (1).
 Veja alguns exemplos de uso:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 $frase = 'O rato roeu a roupa do Rei de Roma';
@@ -71,7 +71,7 @@ O <strong>strtolower()</strong> serve para você converter toda a string para ca
 Ele só tem um argumento: A string que será convertida (1).
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 $frase = 'O RATo rOeu a rOuPa Do Rei de Roma';
@@ -91,7 +91,7 @@ O <strong>strtoupper()</strong> serve para você converter toda a string para ca
 Ele só tem um argumento: A string que será convertida (1).
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 $frase = 'O RATo rOeu a rOuPa Do Rei de Roma';
@@ -111,7 +111,7 @@ O <strong>ucwords()</strong> serve para você deixar a primeira letra de cada pa
 Ele só tem um argumento: A string que será convertida (1).
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 $frase = 'jOsé da sILva fErReirA';
@@ -131,7 +131,7 @@ O <strong>ucfirst()</strong> serve para você deixar a primeira letra de uma str
 Ele só tem um argumento: A string que será convertida (1).
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 $frase = 'jOsé da sILva fErReirA';
@@ -151,7 +151,7 @@ O <strong>explode()</strong> serve para você dividir uma string, usando um sepa
 Geralmente ele tem dois argumentos: O separador (1) e a string que será convertida (2).
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 $separador = '@';
@@ -194,7 +194,7 @@ O <strong>join()</strong> serve para você juntar os elementos de um array usand
 Geralmente ele tem dois argumentos: A string de união (1) e o array que será unido (2).
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 $uniao = '@';

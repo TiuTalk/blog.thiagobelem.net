@@ -27,7 +27,7 @@ Se você estiver testando seu script localmente, pode ignorar a segunda consider
 Vamos ao formulário HTML para o usuário escolher o arquivo a ser enviado:
 
 
-{% highlight text linenos %}
+{% highlight html linenos %}
 <form method="post" action="recebe_upload.php" enctype="multipart/form-data">
 <label>Arquivo</label>
 <input type="file" name="arquivo" />
@@ -40,7 +40,7 @@ Salve este HTML dentro de arquivo com o nome que preferir.
 Agora vamos criar o arquivo que irá receber os dados e cuidar de tudo pra você... Salve-o como <span style="color: #99cc00;"><strong>recebe_upload.php</strong></span>:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 // Pasta onde o arquivo vai ser salvo

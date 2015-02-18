@@ -28,8 +28,8 @@ Para se conectar a um servidor FTP você deve usar a função <strong>ftp_connec
 Então, começaremos o nosso arquivo:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009
@@ -59,8 +59,8 @@ Para fazer o login você vai usar a função <strong>ftp_login()</strong>, que t
 Então, fazendo algumas alterações no nosso arquivo:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009
@@ -98,8 +98,8 @@ Para fazer upload de arquivos você vai usar a função <strong>ftp_put()</stron
 Então, fazendo algumas alterações no nosso arquivo:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009
@@ -144,8 +144,8 @@ Para fazer download de arquivos você vai usar a função <strong>ftp_get()</str
 Então, fazendo algumas alterações no nosso arquivo:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009
@@ -194,8 +194,8 @@ Para se desconectar (faça isso, sempre) você vai usar a função <strong>ftp_c
 Então, finalizando o no nosso arquivo:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 /**
 * Conexão via FTP com o PHP
 * 05 de maio de 2009

@@ -76,7 +76,7 @@ ou
 Com isso <span style="color: #999999;">(se você não se preparar) </span>você deixa uma porta aberta para um ataque famoso chamado <strong>SQL-Injection</strong> que nada mais é do que a inserção de um código SQL em um campo de texto ou parâmetro da URL que será enviado diretamente para o banco. Vamos a um exemplo:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 // Formato da URL:
 //  http://www.meusite.com.br/produtos.php?id=12
@@ -99,7 +99,7 @@ $resultado = mysql_fetch_assoc($query);
 A sua consulta ao MySQL ficaria da seguinte forma:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 SELECT * FROM `produtos` WHERE `id` = '12' LIMIT 1
 {% endhighlight %}
 
@@ -110,7 +110,7 @@ Até aqui tudo bem.. Seu script funciona, você tem o que precisa e tá tudo na 
 Agora a sua query MySQL fica assim:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 SELECT * FROM `produtos` WHERE `id` = '' OR 1=1 OR '' = '' LIMIT 1
 {% endhighlight %}
 
@@ -119,7 +119,7 @@ Viu o que aconteceu? As possíveis condições para a consulta ser verdadeira s�
 Mas, como eu disse, não estou aqui para te assustar e sim para mostrar como resolver o pepino... Vamos a uma atitude simples mas que te salvará do Apocalipse... É só mudar uma linha:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 // Salva o parâmetro da URL numa variável obrigando-o a ser um valor inteiro
 $produto = (int)$_GET['id'];
 {% endhighlight %}
@@ -133,7 +133,7 @@ Peço <span style="color: #ff0000;"><strong>atenção dobrada</strong></span> pa
 Caso você passe parâmetros via URL que são strings e não números inteiros, você pode usar a função <strong>mysql_real_escape_string()</strong> da seguinte forma:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 $parametro = mysql_real_escape_string($_GET['nome']);
 {% endhighlight %}
 

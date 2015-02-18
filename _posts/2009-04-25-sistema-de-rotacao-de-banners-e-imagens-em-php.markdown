@@ -16,7 +16,7 @@ Bom, existem dezenas de formas de fazer isso, mas eu vou tentar fazer da forma m
 Vamos criar um arquivo chamado <span style="color: #ff6600;"><strong>banner_superior.php</strong></span> com o seguinte conteúdo:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 unset($_ELEMENTOS);
 

@@ -19,8 +19,8 @@ Classes são como funções, só que com variáveis e funções próprias.. Gera
 Primeiro, definimos a classe com nome <strong>MeuSQL</strong>:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 class MeuSQL {
 
@@ -32,8 +32,8 @@ class MeuSQL {
 Agora vamos definir algumas variáveis com valores padrões:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 class MeuSQL {
   // Propriedades padrões
@@ -55,8 +55,8 @@ Vale lembrar que, fora da classe, essas propriedades não vão existir.. Nem ap�
 Agora vamos definir o primeiro método. "<strong>Método</strong>" é nome que se dá para uma função dentro de uma classe.
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 class MeuSQL {
   // Propriedades padrões
@@ -88,8 +88,8 @@ Quando queremos pegar o valor de uma propriedade de uma classe, fazemos referên
 Agora vamos definir mais três métodos para as outras funções básicas do MySQL:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 class MeuSQL {
   // Propriedades padrões
@@ -128,8 +128,8 @@ class MeuSQL {
 Podemos dizer que a nossa classe está pronta... Salve este arquivo como <span style="color: #ff6600;"><strong>MeuSQL.php</strong></span>. Agora vamos ver um exemplo de uso e depois, comentá-la toda:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 // Inclui o arquivo com a classe
 include("MeuSQL.php");
 
@@ -162,8 +162,8 @@ Viu como as classes podem simplificar tudo na sua vida?
 Agora, por fim, fiz alguns ajustes e comentei cada método da classe para ficar mais fácil de entender:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 /**
 * MeuSQL

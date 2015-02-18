@@ -11,7 +11,7 @@ tags: []
 Hoje vou ensinar como criar uma planilha do Excel (.xls) e enviá-la para Download com um script bem simples.
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 /*
 * Criando e exportando planilhas do Excel

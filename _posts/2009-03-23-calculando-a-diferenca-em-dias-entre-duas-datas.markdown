@@ -19,7 +19,7 @@ Se alguém aí quiser ler um pouco mais sobre como trabalhar com datas no PHP é
 Vamos ao primeiro exemplo que usa datas no formato <strong>DD/MM/AAAA</strong>:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 // Define os valores a serem usados
@@ -61,7 +61,7 @@ Com isso você já consegue calcular a diferença e se usar um pouquinho de cria
 O exemplo do formato <strong>AAAA-MM-DD</strong> é mais simples:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 // Define os valores a serem usados

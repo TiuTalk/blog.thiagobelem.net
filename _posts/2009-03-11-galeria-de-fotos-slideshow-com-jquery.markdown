@@ -25,7 +25,7 @@ Pra aula de hoje você vai precisar de - <strong>apenas</strong> - duas coisas:
 Depois de ter feito o download dos dois arquivos .js é só incluí-los no seu site assim:
 
 
-{% highlight text linenos %}
+{% highlight html linenos %}
 <head>
 <script src="_pasta_/jquery.js" type="text/javascript"></script>
 <script src="_pasta_/jcycle.js" type="text/javascript"></script>
@@ -37,7 +37,7 @@ Lembrando que esse código deve ir entre as TAGs <head> e </head> do seu site.
 Depois disso, você cria uma div com o id que quiser (vamos usar #slideshow como exemplo) e dentro dela coloca as fotos do seu slideshow, por exemplo:
 
 
-{% highlight text linenos %}
+{% highlight html linenos %}
 <div id="slideShow">
 <img src="imagens/foto1.jpg" alt="Primeira Foto" width="300" height="200" />
 <img src="imagens/foto2.jpg" alt="Segunda Foto" width="300" height="200" />
@@ -48,7 +48,7 @@ Depois disso, você cria uma div com o id que quiser (vamos usar #slideshow como
 Depois é só voltar lá dentro do <head> do seu site e colocar o seguinte bloco de javascript:
 
 
-{% highlight text linenos %}
+{% highlight html linenos %}
 <script type="text/javascript">
 <!--
 $(function() {

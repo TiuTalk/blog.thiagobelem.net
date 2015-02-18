@@ -26,7 +26,7 @@ AddType application/x-httpd-php.css
 Depois é só editar o seu arquivo .css e inserir códigos PHP da forma que bem entender... Lembrando apenas de que o retorno (via echo) deve ser a mesma formatação de um CSS... Exemplo:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 $cor_fundo = '#CCCCFF';
 $cor_texto = '#003333';
@@ -54,7 +54,7 @@ background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;
 A outra forma eu considero um pouco mais simples: Você renomeará o seu arquivo <strong>.css</strong> trocando a extensão para <strong>.php</strong> e adicionará apenas uma linha logo no começo:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 // Define que o arquivo terá a codificação de saída no formato CSS
 header("Content-type: text/css");

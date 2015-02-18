@@ -16,7 +16,7 @@ Tudo se resume a criar uma entrada única no banco para cada visitante e apagá-
 Primeiro, criamos as tabelas no MySQL para armazenamento dos dados, são duas tabelas: uma para os visitantes onlines e outra para registro dos recordes... Veja os códigos:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 CREATE TABLE IF NOT EXISTS `visitas_online` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ip` varchar(15) NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `visitas_record` (
 Depois criamos um arquivo chamado <span style="color: #ff6600;"><strong>visitantes-online.php</strong></span> com o seguinte conteúdo:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 /**
 * Sistema de contador de visitantes online
@@ -205,7 +205,7 @@ Com essa função você vai receber um array, contendo dois elementos: primeiro 
 Para usá-la você precisará fazer da seguinte forma:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php $dados = visitantesRecorde(); ?>
 O máximo de visitantes online foi em <?php echo $dados[0]; ?>, com <?php echo $dados[1]; ?> visitantes.
 

@@ -28,7 +28,7 @@ Infelizmente o md5 tem um "problema"... Você pode, com muita dificuldade (prest
 Pra usar o md5 no PHP é só usar da seguinte forma:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 $string = 'O rato reu a ropa do rei de Roma';
 $codificada = md5($string);
 echo "Resultado da codificação usando md5: " . $codificada;
@@ -41,7 +41,7 @@ A outra <strong>hash</strong> de mão única é o <abbr title="SHA: Secure Hash 
 Usar o sha1 no PHP é exatamente a mesma coisa que o md5, só que mudando o nome da função:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 $string = 'O rato reu a ropa do rei de Roma';
 $codificada = sha1($string);
 echo "Resultado da codificação usando sha1: " . $codificada;
@@ -54,7 +54,7 @@ echo "Resultado da codificação usando sha1: " . $codificada;
 Para usar ela no PHP você tem as duas formas:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 $string = 'O rato reu a ropa do rei de Roma';
 
 $codificada = base64_encode($string);

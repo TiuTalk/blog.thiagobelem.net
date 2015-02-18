@@ -27,7 +27,7 @@ Usaremos a tabela 'noticias' nos exemplo desse tópico, ela é composta por uma 
 O código para a criação dessa tabela é o seguinte:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 CREATE TABLE IF NOT EXISTS `noticias` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `titulo` varchar(255) NOT NULL,
@@ -42,7 +42,7 @@ KEY `titulo` (`titulo`)
 Para inserir dados no MySQL você precisa montar uma consulta SQL (também chamada de <em>query</em>) usando o comando INSERT do MySQL, vejamos o exemplo de como inserir uma notícia na nossa tabela de notícias:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 // Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");
@@ -91,7 +91,7 @@ Você também tem uma segunda opção de sintaxe para o INSERT:
 Se você preferir por esse formato vai precisar definir os valores de TODAS as colunas da tabela, ficando dessa forma:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 // Montamos a consulta SQL
 $query = "INSERT INTO `noticias` VALUES (NULL, '".$titulo."', '".$texto."', '".$cadastro."')";
 {% endhighlight %}
@@ -106,7 +106,7 @@ Mas fica a seu critério qual formato de INSERT usar.
 Se você quiser deletar dados armazenados no MySQL você pode usar o comando DELETE dentro da consulta SQL. A sua sintaxe é bem simples e a deleção se baseia em uma condição, vejamos dois exemplos:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 // Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");
@@ -130,7 +130,7 @@ echo "Dados sobre o erro:" . mysql_error();
 Nesse exemplo condicionamos a deleção apenas dos registros que tiverem o valor da coluna `id` maior ou igual a três.
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 // Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");
@@ -165,7 +165,7 @@ Você já tem a sua tabela cheia de notícias e sabe inserir e deletar as notíc
 Ai você descobre que existe o UPDATE do MySQL, que serve exatamente para isso! Vamos ao exemplo:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 // Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");

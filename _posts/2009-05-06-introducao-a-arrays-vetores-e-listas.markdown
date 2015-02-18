@@ -34,8 +34,8 @@ Por isso existem os arrays: armazenar valores e/ou variáveis referentes a um me
 Criar arrays no PHP é extremamente simples, veja dois exemplos onde criamos a nossa lista de compras:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 // Definição simples e rápida
 $lista = array('Pão', 'Ovos', 'Carne', 'Macarrão');
@@ -69,8 +69,8 @@ E por fim, no terceiro exemplo, fazemos a mesma coisa que fizemos no segundo, s�
 Você também pode definir índices (também chamados de <em>keys</em> ou chaves)  como <em>strings</em>, veja um bom exemplo de uso:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 // Definição longa
 $carro = array();
@@ -88,8 +88,8 @@ $carro = array('cor' => 'Vermelho', 'modelo' => 'CrossFox', 'fabricante' => 'Vol
 Quando você for exibir um elemento, é só seguir a mesma sintaxe da declaração longa:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 // Carro
 $carro = array();
@@ -119,8 +119,8 @@ Veja também:
 Não vou me aprofundar no assunto... mas você pode definir um array onde um ou mais elementos sejam arrays. Nesse caso o array não pode mais ser chamado de <strong>lista</strong>, e deve ser chamado de <strong>vetor</strong> ou <strong>array</strong> mesmo. Veja um exemplo básico de definição e exibição:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 
 // Carro
 $carro = array();

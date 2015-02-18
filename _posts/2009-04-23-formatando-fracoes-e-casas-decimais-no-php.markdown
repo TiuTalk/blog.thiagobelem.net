@@ -15,7 +15,7 @@ Você já deve ter percebido que números reais (frações) usam ponto como sepa
 A função <strong>number_format()</strong> serve exatamente para isso, veja exemplos:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 $numero = 1234.56;

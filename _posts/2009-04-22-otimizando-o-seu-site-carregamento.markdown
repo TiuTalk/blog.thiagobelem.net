@@ -19,7 +19,7 @@ Primeiro, o mais simples:
 A codificação com GZip fará o HTML do seu site ser carregado mais rapidamente pelo visitante, é só colocar a seguinte linha no começo do seu PHP, junto do início da sessões, por exemplo:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 ob_start("ob_gzhandler");
 ?>
@@ -65,7 +65,7 @@ Veja um exemplo:
 Antes o seu HTML estava assim:
 
 
-{% highlight text linenos %}
+{% highlight html linenos %}
 <head>
 <title>Meu Site</title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
@@ -84,7 +84,7 @@ Antes o seu HTML estava assim:
 Agora, depois de usar o Minify, ele ficou assim:
 
 
-{% highlight text linenos %}
+{% highlight html linenos %}
 <head>
 <title>Meu Site</title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />

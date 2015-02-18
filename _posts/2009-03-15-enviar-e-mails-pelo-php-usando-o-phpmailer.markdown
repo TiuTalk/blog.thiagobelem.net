@@ -23,7 +23,7 @@ Faça o download, descompacte o arquivo e coloque os arquivos <strong>class.phpm
 Agora, vamos ao script que faz o envio do e-mail:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 // Inclui o arquivo class.phpmailer.php localizado na pasta phpmailer

@@ -13,7 +13,7 @@ Eu estava lendo o meu último post que fala [como calcular a diferença (em dias
 Suponhamos que você queira saber com precisão que dia será daqui... 28 dias. Você pode usar a poderosa função srttotime() do PHP e conseguir fazer isso com facilidade, veja:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 /*
 * Calculando datas no futuro com o PHP
@@ -45,7 +45,7 @@ echo date('d/m/Y H:i', $timestamp); // 24/03/2009 06:02
 Nesse exemplo todas as datas serão calculadas a partir da data atual... Mas e se você quiser fazer esse calculo baseado em uma data do banco de dados (no formato MySQL)? Você pode fazer assim:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 /*
 * Calculando datas no futuro com o PHP a partir de datas definidas

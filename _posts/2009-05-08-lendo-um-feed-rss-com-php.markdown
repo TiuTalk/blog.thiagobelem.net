@@ -17,8 +17,8 @@ Hoje vou mostrar, como é possível ler o conteúdo de um <abbr title="Really Si
 Vamos ao código:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 $feed = file_get_contents('http://feeds2.feedburner.com/ThiagoBelem/Blog');
 $rss = new SimpleXmlElement($feed);
 

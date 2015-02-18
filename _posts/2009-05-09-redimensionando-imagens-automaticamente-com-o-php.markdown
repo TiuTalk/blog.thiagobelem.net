@@ -20,7 +20,7 @@ Existe uma classe pronta de PHP que eu gosto muito, chama [WideImage](http://wid
 
 <h3>Redimensionando imagens</h3>
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 // Chama o arquivo com a classe WideImage
@@ -40,7 +40,7 @@ $image->saveToFile('/caminho/nova_foto.jpg');
 
 <h3>Cortando imagens</h3>
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 // Chama o arquivo com a classe WideImage
@@ -61,7 +61,7 @@ $image->saveToFile('/caminho/nova_foto.jpg');
 
 <h3>Mudando a qualidade de imagens</h3>
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 // Chama o arquivo com a classe WideImage

@@ -26,7 +26,7 @@ Fim</span>
 Quando passamos isso pro PHP podemos fazer de uma forma bem simples:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 
 /**
@@ -61,7 +61,7 @@ Com essa função você tem um meio rápido de calcular o próximo dia útil de 
 Você poderia usá-la da seguinte forma:
 
 
-{% highlight text linenos %}
+{% highlight php linenos %}
 <?php
 // Dia 05 de abril de 2009 é um domingo
 $data = '2009-04-05';

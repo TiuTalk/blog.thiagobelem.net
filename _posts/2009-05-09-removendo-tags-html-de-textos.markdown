@@ -25,8 +25,8 @@ O que essa função faz é simples, curto e grosso: acaba, some, oculta, exclui,
 Veja um exempo de uso:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 // Define uma string com código HTML
 $entrada = '
 Ahá... [eu](mailto: fulaninho@uol.com.br) sou <strong>malandrão!</strong>
@@ -42,8 +42,8 @@ echo $saida;
 Você também pode, se quiser, definir TAGs permitidas, que permanecerão na string:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 // Define uma string com código HTML
 $entrada = '
 Ahá... [eu](mailto: fulaninho@uol.com.br) sou <strong>malandrão!</strong>
@@ -67,8 +67,8 @@ A htmlspecialchars não remove as TAGs HTML... Ela escapa o código HTML... Tran
 Exemplo de uso:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 $entrada = 'Eu sou <i>çagaiz</i>!';
 
 $saida = htmlspecialchars($entrada);
@@ -87,8 +87,8 @@ No quesito segurança, essa é a função mais legal.. Ela serve pra quando voc�
 Vamos dar um exemplo:
 
 
-{% highlight text linenos %}
-< ?php
+{% highlight php linenos %}
+<?php
 $nome = "Fulaninho's";
 
 $nome = mysql_real_escape_string($nome);
@@ -101,7 +101,7 @@ mysql_query($sql);
 Sem o uso da função, a consulta passada para o MySQL ficaria assim:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho's')
 {% endhighlight %}
 
@@ -110,7 +110,7 @@ Repare que a aspas que fecha o valor a ser inserido, é a que vem depois do "o",
 Já usando a função, ficaria assim:
 
 
-{% highlight text linenos %}
+{% highlight sql linenos %}
 INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho\'s')
 {% endhighlight %}
 
