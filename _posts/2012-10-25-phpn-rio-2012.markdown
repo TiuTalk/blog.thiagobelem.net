@@ -1,0 +1,41 @@
+---
+layout: post
+status: publish
+published: true
+title: PHPn' Rio 2012
+author:
+  display_name: Thiago Belem
+  login: thiago.belem
+  email: contato@thiagobelem.net
+  url: http://thiagobelem.net/
+author_login: thiago.belem
+author_email: contato@thiagobelem.net
+author_url: http://thiagobelem.net/
+excerpt: O PHPn’ Rio é um evento carioca organizado por membros da comunidade PHP
+  local. Ele reúne desenvolvedores, designers, empresários e estudantes. Mais do que
+  uma conferência formal, é uma oportunidade de compartilhar experiências.
+wordpress_id: 2712
+wordpress_url: http://blog.thiagobelem.net/?p=2712
+date: '2012-10-25 13:52:25 -0200'
+date_gmt: '2012-10-25 15:52:25 -0200'
+categories:
+- Desenvolvimento
+- PHP
+- Eventos
+tags:
+- PHP
+- evento
+- PHPnRio
+---
+<p>O <a href="http://phpnrio.com.br/" target="_blank">PHPn' Rio</a> é um evento carioca organizado por membros da comunidade PHP local. Ele reúne desenvolvedores, designers, empresários e estudantes. Mais do que uma conferência formal, é uma oportunidade de <strong>compartilhar experiências</strong>. O <strong>PHP’n Rio 2012</strong> vai proporcionar diversas sessões de palestras, oficinas e atividades com profissionais proeminentes no cenário de desenvolvimento de software, principalmente Web, além disso a oportunidade de networking e bate-papo com toda os participantes.</p>
+<p>O evento é realizado desde 2009, com um público sempre crescente. No PHPn' Rio 2011, edição passada, alcançamos um público com mais de 350 participantes. A estimativa para o PHP’n Rio 2012 é de 450 conferencistas.</p>
+<p>Vejam algumas fotos do <strong>PHPn' Rio 2011</strong>:</p>
+<p><img class="aligncenter size-thumbnail wp-image-2713" title="Auditório 1" src="http://blog.thiagobelem.net/wp-content/uploads/2012/10/auditorio1-624x351.jpg" alt="" width="624" height="351" /></p>
+<p><img class="aligncenter size-thumbnail wp-image-2716" title="Desconferência" src="http://blog.thiagobelem.net/wp-content/uploads/2012/10/desconferencia-624x468.jpg" alt="" width="624" height="468" /></p>
+<p>Para 2012, preparamos cinco espaços para as atividades: Dois auditórios com palestras de diversos níveis, dois laboratórios com capacidade para 20 (vinte) participantes, sendo oferecidas duas oficinas* de 3 (três) horas cada. Para finalizar os cincos ambientes, teremos uma área de desconferência, aberta para os participantes utilizarem para mini-palestras, dinâmicas de programação, dojos, apresentação de trabalhos acadêmicos, e atividades afim.</p>
+<p>Este ano, o evento será realizado dia <strong>10 de novembro de 2012</strong>, no <strong>CEFET-RJ</strong>.</p>
+<p>E é claro que estarei lá, participando do evento, dessa vez com a minha oficina <a href="http://phpnrio.com.br/2012/assando-uma-loja-virtual-em-2h30-com-cakephp" target="_blank">Assando uma loja virtual em 2h30 com CakePHP</a>, onde irei mostrar como é fácil e rápido de desenvolver projetos de pequeno e médio porte, usando o <strong>CakePHP</strong>.</p>
+<p>Aqui você pode ver quão lotada ficou a sala na minha oficina do ano passado:</p>
+<p><img class="aligncenter size-thumbnail wp-image-2717" title="Laboratório" src="http://blog.thiagobelem.net/wp-content/uploads/2012/10/Laboratório-624x468.jpg" alt="" width="624" height="468" /></p>
+<p>Veja a grade do evento:</p>
+<p><a href="http://phpnrio.com.br/"><img class="aligncenter  wp-image-2719" title="Banner PHP'n Rio 2012" src="http://blog.thiagobelem.net/wp-content/uploads/2012/10/banner_web_phpinrio2012-721x1024.jpg" alt="" width="625" height="887" /></a></p>

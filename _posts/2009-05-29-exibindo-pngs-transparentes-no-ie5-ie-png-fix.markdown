@@ -1,0 +1,44 @@
+---
+layout: post
+status: publish
+published: true
+title: Exibindo PNGs transparentes no IE5 – IE PNG Fix
+author:
+  display_name: Thiago Belem
+  login: thiago.belem
+  email: contato@thiagobelem.net
+  url: http://thiagobelem.net/
+author_login: thiago.belem
+author_email: contato@thiagobelem.net
+author_url: http://thiagobelem.net/
+wordpress_id: 505
+wordpress_url: http://blog.thiagobelem.net/?p=505
+date: '2009-05-29 00:08:07 -0300'
+date_gmt: '2009-05-29 03:08:07 -0300'
+categories:
+- HTML
+- Tutoriais
+tags: []
+---
+<p>Muita gente que tá começando agora têm problemas quando usa imagens (com transparência e PNGs semi-transparentes) no Internet Explorer 5 e posteriores (até o 6).</p>
+<p>Sei que parece loucura (pra alguns) se preocupar com o IE5 e 6, mas infelizmente esses navegadores ainda representam de 20% a 30% do mercado mundial atual, no Brasil então ele é muito mais comum.</p>
+<p>Foi por causa disso que inventaram um tal de "PNG Fix", que é um arquivinho que você inclui no seu site e o IE5+ passa a "ler" os PNGs transparentes e semi-transparentes como se fosse um IE7. Para usar esse recurso é só seguir o passo-a-passo a seguir:</p>
+<p>1 - Acesse o <a href="http://www.twinhelix.com/css/iepngfix/" target="_blank">site do IE PNG Fix</a> e faça o <a href="http://www.twinhelix.com/css/iepngfix/iepngfix.zip" target="_blank">download</a> do zip contendo os arquivos que serão usados.</p>
+<p>2 - Coloque os arquivos <span style="color: #ff6600;"><strong>iepngfix.htc</strong></span> e <strong><span style="color: #ff6600;">blank.gif</span></strong> na pasta do seu site.</p>
+<p>3 - Insira o seguinte código HTML dentro do &lt;head&gt; do seu site:<br />
+[code='html']<br />
+<style type="text/css">
+img, div { behavior: url(iepngfix.htc) }<br />
+</style>
+<p>[/code]</p>
+<p>Vale lembrar que se você usar PNGs transparentes como fundo de outros elementos, você também precisa incluí-los na lista<span style="color: #999999;"> (img, div, input e etc.)</span>.</p>
+<p>4 - Divirta-se.</p>
+<p>Se você colocou os arquivos (.htc e .gif) em outras pastas você precisa alterar os caminhos corretamente, tanto no bloco de CSS (que vai dentro deo HTML, do passo 3) quanto dentro do HTC, que diz onde fica a imagem blank.gif.</p>
+<p>Veja agora algumas vantagens do script listadas no site do script:</p>
+<ul>
+<li>Ativação automática de transparência para os PNGs das página.</li>
+<li>Suporta para os elementos <strong>&lt;img src="" /&gt;</strong>.</li>
+<li>Suporta PNGs usados como fundo (background)</li>
+<li>Suporta mudanças dinâmicas do SRC de uma imagem bem como mudanças de IDs e classes</li>
+<li>Script muito pequeno (carregamento rápido)</li>
+</ul>
