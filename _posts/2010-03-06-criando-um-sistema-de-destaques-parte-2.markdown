@@ -68,7 +68,7 @@ Continuaremos o nosso código na linha 5, mas parem um pouco para observar esse 
 Agora nós iremos inserir o código que faz o jQuery Cycle agir sobre a lista de slides (destaques) que temos:
 
 
-[code language="javascript" firstline="6"]
+[code language="javascript"]
 	$(document).ready(function() {
 
 		/**
@@ -94,7 +94,7 @@ Agora vamos ao 1% faltante que são três tarefas bastante simples:
 Para inserir os paginadores precisaremos antes criar um container para recebê-los, fazemos isso com esse código:
 
 
-[code language="javascript" firstline="8"]
+[code language="javascript"]
 	// Cria uma div.paginas que receberá os paginadores
 	var div = $('<div></div>').addClass('paginas');
 	// Insere a div criada antes da lista de destaques
@@ -106,7 +106,7 @@ Deveremos inserir esse código dentro do document.ready mas antes do código que
 Com esse código inserido o nosso document.ready() ficará assim:
 
 
-[code language="javascript" firstline="6"]
+[code language="javascript"]
 	$(document).ready(function() {
 
 		// Cria uma div.paginas que receberá os paginadores
@@ -130,7 +130,7 @@ Perceba que colocamos também um par de chaves dentro da chamada do jQuery Cycle
 Agora nós já temos o container que receberá os paginadores, vamos inserir o código que criará os links de cada página, já funcionando:
 
 
-[code language="javascript" firstline="17"]
+[code language="javascript"]
 		$('#blocoDestaques ul').cycle({
 			pager: 'div.paginas', // Paginadores
 		});
@@ -186,7 +186,7 @@ Nossos paginadores estão prontos! :D
 Vamos inserir mais duas opções que farão o slideshow pausar a transição se você estiver com o mouse sobre ele:
 
 
-[code language="javascript" firstline="17"]
+[code language="javascript"]
 		$('#blocoDestaques ul').cycle({
 			pager: 'div.paginas', // Paginadores
 			pause: true, // Pausa ao passar o mouse sobre ele?
@@ -198,7 +198,7 @@ Vamos inserir mais duas opções que farão o slideshow pausar a transição se 
 Agora nós vamos inserir uma opção que tem comportamento de <em>callback</em>, que são funções/métodos que são chamados logo após outras ações... Um bom exemplo de <em>callback</em> seria um redirecionamento após um login bem sucedido... Vamos inserir o código de <em>callback</em> que executará uma função antes de cada troca de slide:
 
 
-[code language="javascript" firstline="22"]
+[code language="javascript"]
 			// Executa uma função antes de cada troca de slide
 			before: function(atual, proximo, opcoes, avancando) {
 
@@ -210,7 +210,7 @@ Você não precisa se preocupar com o formato usado na declaração dessa funç�
 E dentro dela vamos colocar o código que esconde a barrinha preta de titulo do slide atual antes de trocar para o próximo slide:
 
 
-[code language="javascript" firstline="24"]
+[code language="javascript"]
 				/**
 				 * Esconde o parágrafo E a div.fundo que estão dentro do slide atual
 				 */
@@ -220,7 +220,7 @@ E dentro dela vamos colocar o código que esconde a barrinha preta de titulo do 
 A nossa função de <em>callback</em> ficará assim:
 
 
-[code language="javascript" firstline="22"]
+[code language="javascript"]
 			// Executa uma função antes de cada troca de slide
 			before: function(atual, proximo, opcoes, avancando) {
 				/**
@@ -233,7 +233,7 @@ A nossa função de <em>callback</em> ficará assim:
 Vamos também criar o <em>callback</em> que será chamado após a troca de slides:
 
 
-[code language="javascript" firstline="30"]
+[code language="javascript"]
 			// Executa uma função depois de cada troca de slide
 			after: function(atual, proximo, opcoes, avancando) {
 				/**
@@ -249,7 +249,7 @@ E agora a nossa barrinha de destaques está subindo e descendo como o planejado!
 O link da etiqueta deverá ser atualizado logo após a troca de slides, então vamos modificar o callback after para isso:
 
 
-[code language="javascript" firstline="30"]
+[code language="javascript"]
 			// Executa uma função depois de cada troca de slide
 			after: function(atual, proximo, opcoes, avancando) {
 				/**

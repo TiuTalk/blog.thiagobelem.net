@@ -201,7 +201,7 @@ function googl($url) {
 Com isso seria só usar:
 
 
-[code language="php" light="true"]
+[code language="php"]
 googl('http://thiagobelem.net/');
 [/code]
 

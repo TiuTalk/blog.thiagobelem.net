@@ -17,7 +17,7 @@ Hoje vou mostrar, como é possível ler o conteúdo de um <abbr title="Really Si
 Vamos ao código:
 
 
-[code='php']
+[code language="php"]
 < ?php
 $feed = file_get_contents('http://feeds2.feedburner.com/ThiagoBelem/Blog');
 $rss = new SimpleXmlElement($feed);

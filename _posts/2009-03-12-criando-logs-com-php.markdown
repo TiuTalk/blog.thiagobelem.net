@@ -17,7 +17,7 @@ Um recurso muito bom de segurança é a criação de <abbr title="Em computaçã
 O que você vai precisar pra criar um sisteminha simples de LOGs pro seu site é de apenas uma tabela no banco de dados MySQL:
 
 
-[code='sql']
+[code language="sql"]
 DROP TABLE IF EXISTS `logs`;
 CREATE TABLE IF NOT EXISTS `logs` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -34,7 +34,7 @@ Vale ressaltar que você não precisa gravar os LOGs especificamente no banco de
 Tendo a tabela já criada no seu banco de dados, você só precisa criar uma função para agilizar as coisas:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 /**
@@ -70,7 +70,7 @@ Com essa função você pode registrar qualquer tipo de evento no seu MySQL e de
 Para usar a função e salvar uma mensagem de LOG, é só fazer assim:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 $mensagem= "Nova visita no site";
@@ -84,7 +84,7 @@ Vale lembrar que o script acima só vai funcionar se você abrir uma conexão co
 A função criada também retorna true ou false (verdadeiro ou falso) para caso você precise fazer uma verificação se o LOG foi salvo com sucesso:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 $mensagem = "Nova visita no site";

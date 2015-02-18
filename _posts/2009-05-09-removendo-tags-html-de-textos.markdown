@@ -25,7 +25,7 @@ O que essa função faz é simples, curto e grosso: acaba, some, oculta, exclui,
 Veja um exempo de uso:
 
 
-[code='php']
+[code language="php"]
 < ?php
 // Define uma string com código HTML
 $entrada = '
@@ -42,7 +42,7 @@ echo $saida;
 Você também pode, se quiser, definir TAGs permitidas, que permanecerão na string:
 
 
-[code='php']
+[code language="php"]
 < ?php
 // Define uma string com código HTML
 $entrada = '
@@ -67,7 +67,7 @@ A htmlspecialchars não remove as TAGs HTML... Ela escapa o código HTML... Tran
 Exemplo de uso:
 
 
-[code='php']
+[code language="php"]
 < ?php
 $entrada = 'Eu sou <i>çagaiz</i>!';
 
@@ -87,7 +87,7 @@ No quesito segurança, essa é a função mais legal.. Ela serve pra quando voc�
 Vamos dar um exemplo:
 
 
-[code='php']
+[code language="php"]
 < ?php
 $nome = "Fulaninho's";
 
@@ -101,7 +101,7 @@ mysql_query($sql);
 Sem o uso da função, a consulta passada para o MySQL ficaria assim:
 
 
-[code='sql']
+[code language="sql"]
 INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho's')
 [/code]
 
@@ -110,7 +110,7 @@ Repare que a aspas que fecha o valor a ser inserido, é a que vem depois do "o",
 Já usando a função, ficaria assim:
 
 
-[code='sql']
+[code language="sql"]
 INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho\'s')
 [/code]
 

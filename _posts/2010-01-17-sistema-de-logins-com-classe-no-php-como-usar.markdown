@@ -126,7 +126,7 @@ Há! Pensou que tinha acabado?
 Para exibir dados do usuário logado, como o nome ou e-mail, você precisa inserir um simples <strong>echo</strong> puxando os dados da sessão, assim:
 
 
-[code language="php" light="true"]
+[code language="php"]
 Seja bem vindo(a), <?php echo $_SESSION['usuario_nome']; ?>!
 [/code]
 

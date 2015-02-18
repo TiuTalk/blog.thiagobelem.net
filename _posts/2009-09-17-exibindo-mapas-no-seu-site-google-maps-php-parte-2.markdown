@@ -25,7 +25,7 @@ Se você ainda não tiver uma Google Maps API Key (ou GMAK) acesse esse endereç
 Agora, dentro do <strong><head></strong> do seu site, insira o seguinte código:
 
 
-[code language="html" light="true"]
+[code language="html"]
 <script src="http://maps.google.com/maps?file=api&v=2&key={GMAK}" type="text/javascript"></script>
 [/code]
 
@@ -34,7 +34,7 @@ Não se esqueça de substituir o <strong style="background: gray; color: orange"
 Agora você precisa criar um elemento HTML onde o mapa irá aparecer, exemplo:
 
 
-[code language="html" light="true"]
+[code language="html"]
 <div id="googleMap"></div>
 [/code]
 

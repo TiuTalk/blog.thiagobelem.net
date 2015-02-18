@@ -86,7 +86,7 @@ if (mysql_num_rows($query) > 0) {
 Agora é só redirecionar o visitante para outra página/endereço:
 
 
-[code language="php" firstline="13" highlight="18"]
+[code language="php"]
 // Verifica se o visitante está banido
 $sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip_visitante ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";
 $query = mysql_query($sql);

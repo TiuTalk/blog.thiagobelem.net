@@ -21,7 +21,7 @@ Após a instalação do MySQL (se você não fizer nada), o usuário padrão ser
 2. Navegue até o diretório <strong>bin</strong> dentro da pasta onde o MySQL está instalado, pode ser <strong style="background: gray; color: orange">C:\mysql\bin</strong> ou se você estiver usando o XAMPP será <strong style="background: gray; color: orange">C:\xampp\mysql\bin</strong>
 
 3. Digite os seguintes comandos:
-[code language="shell" light="true"]
+[code language="shell"]
 mysql -u root mysql
 
 SET PASSWORD FOR root@localhost=PASSWORD('NOVASENHA');
@@ -33,11 +33,11 @@ Pronto, a senha foi modificada... Não se esqueça de mudar a senha do phpMyAdmi
 
 <h3>Mudando a senha do <em>root</em> no Linux</h3>
 Se você está mudando a senha pela primeira vez é só acessar o terminal e digitar:
-[code language="shell" light="true"]
+[code language="shell"]
 mysqladmin -u root password 'NOVASENHA'
 [/code]
 Caso você esteja trocando a senha do root é só usar o comando:
-[code language="shell" light="true"]
+[code language="shell"]
 mysqladmin -u root -p 'SENHAANTIGA' password 'NOVASENHA'
 [/code]
 Para esses comandos funcionarem você precisa do <strong>mysqladmin</strong> instalado. ;)

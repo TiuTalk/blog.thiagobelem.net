@@ -25,7 +25,7 @@ Vou explicar o passo-a-passo pra criar a função que permitirá uma criação p
 Primeiro, definimos uma função vazia com alguns parâmetros (e seus valores padrões):
 
 
-[code='php']
+[code language="php"]
 <?php
 
 function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
@@ -41,7 +41,7 @@ Como pode ver, por padrão a senha gerada terá 8 caracteres, letras (minúscula
 Agora definimos algumas variáveis que serão usadas pela função:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
@@ -63,7 +63,7 @@ $caracteres = '';
 Agora começa a brincadeira.. Vamos alimentar a variável $caracteres com todos os caracteres que poderão ser usados na senha:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
@@ -93,7 +93,7 @@ Agora, pra finalizar, contamos com quantos caracteres a variável $caracteres fi
 Depois é só retornar a variável contendo a senha criada:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
@@ -138,7 +138,7 @@ Veja exemplos de uso no fim do artigo.
 Fiz também uma versão mais compacta, sem comentários e com créditos:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 /**
@@ -182,7 +182,7 @@ return $retorno;
 
 <h3>Exemplos de uso</h3>
 
-[code='php']
+[code language="php"]
 <?php
 // Gera uma senha com 10 carecteres: letras (min e mai), números
 $senha = geraSenha(10);

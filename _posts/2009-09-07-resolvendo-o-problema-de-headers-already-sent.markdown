@@ -35,7 +35,8 @@ Realmente, se você não usa nenhuma função de manipulação de headers, você
 Em se tratando de PHP (e acredito que o mesmo ocorra com todas as outras linguagens WEB que precisam ser lidas por um parseador), o header começa a ser enviado logo que você insira o primeiro caractere no HTML final da página... Seja fora do código PHP com HTML normal, seja dentro do código PHP com um <strong>echo</strong> ou <strong>print()</strong>.
 
 
-[code language="php"] <?php
+[code language="php"]
+<?php
 $numero = 3;
 $dobro = $numero * 2; // 6
 ?>

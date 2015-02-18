@@ -82,7 +82,7 @@ ENGINE = MyISAM;
 Vamos iniciar o nosso script criando um pequeno script de conexão ao banco de dados:
 
 
-[code language="php" highlight="21"]
+[code language="php"]
 <?php
 /**
  * PHP e MySQL para iniciantes
@@ -141,7 +141,7 @@ require_once('includes/mysqli.php');
 Agora vamos montar uma consulta SQL simples para buscar as 10 últimas notícias ativas:
 
 
-[code language="php" firstline="17"]
+[code language="php"]
 // Monta a consulta SQL para trazer as últimas 10 notícias ativas
 $sql = 'SELECT *
 		FROM `noticias` AS Noticia
@@ -161,7 +161,7 @@ LIMITADO A 10 resultados
 Agora precisamos executar a consulta utilizando o método <code><a href="http://www.php.net/manual/pt_BR/mysqli.query.php">query</a></code> do MySQLi:
 
 
-[code language="php" firstline="24"]
+[code language="php"]
 // Executa a consulta OU mostra uma mensagem de erro
 $resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
 [/code]
@@ -169,7 +169,7 @@ $resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR)
 E agora só precisamos rodar um loop, e em cada iteração (passada no loop) iremos exibir a notícia encontrada, montando um bloco HTML:
 
 
-[code language="php" firstline="27"]
+[code language="php"]
 // Faz um loop, passando por todos os resultados encontrados
 while ($noticia = $resultado->fetch_object()) {
 	// Exibe a notícia dentro de um bloco HTML
@@ -199,7 +199,7 @@ Descrição da notícia
 Depois disso, podemos colocar mais um pequeno bloco de código que irá mostrar o total de registros encontrados com a consulta:
 
 
-[code language="php" firstline="39"]
+[code language="php"]
 // Exibe o total de registros encontrados
 echo "Registros encontrados: {$resultado->num_rows}
 ";
@@ -208,7 +208,7 @@ echo "Registros encontrados: {$resultado->num_rows}
 E no final de tudo precisamos - <strong>SEMPRE</strong> - liberar o resultado da consulta, limpando espaço na memória e deixando tudo mais organizado:
 
 
-[code language="php" firstline="42"]
+[code language="php"]
 // Libera o resultado para liberar memória
 $resultado->free();
 [/code]

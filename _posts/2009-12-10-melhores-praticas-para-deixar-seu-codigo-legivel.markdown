@@ -135,11 +135,11 @@ Se você vai usar uma variável para incremento, contador ou só para armazenar 
 
 <h3>7. Evidencie os termos especiais do SQL</h3>
 Cansei de ver pessoas escrevendo consultas SQL assim:
-[code language="sql" light="true"]
+[code language="sql"]
 select nome from produtos where preco > 10 limit 1
 [/code]
 Quando não evidenciamos os termos especiais (protegidos) fica dificil entender com facilidade o que a consulta faz... Seria muito mais produtivo fazer algo assim:
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT `nome` FROM `produtos` WHERE `preco` > 10 LIMIT 1
 [/code]
 Onde as palavras protegidas do SQL são deixadas em maiúscula e os nomes de colunas e tabelas são colocados entre crases.

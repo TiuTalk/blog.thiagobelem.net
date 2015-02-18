@@ -36,13 +36,13 @@ Em ambos os casos você precisa inserir o script dentro do <code><head></code> d
 
 <h4>Inserindo o jQuery local (salvo no seu site)</h4>
 
-[code language="html" light="true"]
+[code language="html"]
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 [/code]
 
 <h4>Inserindo o jQuery hospedado no Google</h4>
 
-[code language="html" light="true"]
+[code language="html"]
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 [/code]
 
@@ -78,7 +78,7 @@ A maioria dos scripts de jQuery são executados após o carregamento do site, o 
 Crie um arquivo <code>jquery.init.js</code> (o nome do arquivo não é obrigatório) e insira-o no seu site logo após o jQuery:
 
 
-[code language="html" light="true"]
+[code language="html"]
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/jquery.init.js"></script>
 [/code]
@@ -117,7 +117,7 @@ Criado o nosso evento, podemos começar a desenvolver o nosso efeito de foco na 
 Precisamos então, criar um um evento de hover nas imagens:
 
 
-[code language="javascript" firstline="6"]
+[code language="javascript"]
 // Quando passarmos o mouse me cima das imagens
 $('ul.lista-imagens li img').hover(function() {
 
@@ -141,7 +141,7 @@ E por fim, na parte em <span style="background: lime;">verde</span>, temos o pri
 Continuando o nosso código, vamos inserir a linha que irá escurecer (apagar / diminuir a opacidade / esmaecer) todas as imagens da lista... Para isso usaremos o método <a href="http://api.jquery.com/fadeTo/">.fadeTo()</a> do jQuery.
 
 
-[code language="javascript" firstline="6"]
+[code language="javascript"]
 // Quando passarmos o mouse me cima das imagens
 $('ul.lista-imagens li img').hover(function() {
 
@@ -160,7 +160,7 @@ Com esse efeito, todas as imagens da lista ficarão com 30% de opacidade (70% tr
 Agora precisamos "filtrar" esse efeito de escurecer e fazer com que ele afete todas as imagens <strong>exceto a imagem que estamos com o mouse em cima</strong>:
 
 
-[code language="javascript" firstline="9"]
+[code language="javascript"]
 // Escurecemos todas as OUTRAS imagens da lista
 $('ul.lista-imagens li img').not(this).fadeTo('fast', 0.3);
 [/code]
@@ -174,7 +174,7 @@ Se você <a href="http://jsbin.com/odaga3/2/">testar o script</a> que fizemos at
 Precisamos adicionar o segundo parâmetro do <code>.hover()</code>, este segundo parâmetro é executado quando tiramos o mouse do elemento que ativou o efeito.
 
 
-[code language="javascript" firstline="6"]
+[code language="javascript"]
 // Quando passarmos o mouse me cima das imagens
 $('ul.lista-imagens li img').hover(function() {
 
@@ -193,7 +193,7 @@ $('ul.lista-imagens li img').hover(function() {
 Agora só precisamos inserir o mesmo código que usamos para escurecer as imagens, sem precisar filtar o <code>this</code>, e mudando a opacidade para 1:
 
 
-[code language="javascript" firstline="6"]
+[code language="javascript"]
 // Quando passarmos o mouse me cima das imagens
 $('ul.lista-imagens li img').hover(function() {
 
@@ -215,7 +215,7 @@ Você provavelmente vai notar que o efeito fica "enfileirado", ou seja, se passa
 Sabendo disso, precisamos fazer todos os efeitos "pararem" antes de começar um novo, isso vai fazer com que, cada vez que passarmos o mouse sobre uma imagem, o efeito seja executado imediatamente e, se houverem outros efeitos na fila, eles sejam sobrepostos... Fazemos isso usando o método <a href="http://api.jquery.com/stop/">.stop()</a> antes do <code>.fadeTo()</code>:
 
 
-[code language="javascript" firstline="6"]
+[code language="javascript"]
 // Quando passarmos o mouse me cima das imagens
 $('ul.lista-imagens li img').hover(function() {
 

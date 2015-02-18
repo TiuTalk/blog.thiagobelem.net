@@ -15,7 +15,7 @@ A lógica desse script é bem simples: primeiro você armazena um valor de tempo
 Veja como é a função que usaremos pra isso:
 
 
-[code='php']
+[code language="php"]
 function tempoExecucao($start = null) {
     // Calcula o microtime atual
     $mtime = microtime(); // Pega o microtime
@@ -41,7 +41,7 @@ Pra usar ela é bem simples:
 Inclua essa função no seu site, de preferência antes de qualquer script. Logo no começo da execução do php, antes de conectar a banco de dados, abrir sessões e etc.. Coloque essa linha:
 
 
-[code='php']
+[code language="php"]
 // Define uma constante contendo o microtime atual
 define('mTIME', tempoExecucao());
 [/code]
@@ -51,7 +51,7 @@ Isso vai fazer com que o PHP defina uma constante (é como uma variável que só
 Depois faça tudo o que você deve fazer no seu site... Exiba as coisas, conecte o banco, envie e retorne resultados, faça e aconteça... Aí, depois de todo o site, é hora de descobrir quanto tempo isso demorou, é só usar essa outra linha:
 
 
-[code='php']
+[code language="php"]
 // Salva numa variável o valor arredondado do tempo de carregamento
 $tempo = tempoExecucao(mTIME);
 [/code]

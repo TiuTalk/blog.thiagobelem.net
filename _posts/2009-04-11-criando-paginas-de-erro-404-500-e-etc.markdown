@@ -13,7 +13,7 @@ As vezes seu site pode gerar alguns endereços inválidos (404) e você modifica
 Se você já tem esse arquivo no seu servidor, edite-o com o bloco de notas e coloque esse bloco de linhas no começo do arquivo:
 
 
-[code='html']
+[code language="html"]
 ErrorDocument 400 /erro_400.html
 ErrorDocument 401 /erro_401.html
 ErrorDocument 403 /erro_403.html

@@ -15,7 +15,7 @@ Semana passada algumas pessoas me perguntaram no MSN como poderiam fazer uma men
 Isso é muito simples, veja um exemplo:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 // Formato 24 horas (de 1 a 24)

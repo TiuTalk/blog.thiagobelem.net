@@ -76,7 +76,7 @@ ou
 Com isso <span style="color: #999999;">(se você não se preparar) </span>você deixa uma porta aberta para um ataque famoso chamado <strong>SQL-Injection</strong> que nada mais é do que a inserção de um código SQL em um campo de texto ou parâmetro da URL que será enviado diretamente para o banco. Vamos a um exemplo:
 
 
-[code language="php" highlight="9"]
+[code language="php"]
 <?php
 // Formato da URL:
 //  http://www.meusite.com.br/produtos.php?id=12
@@ -99,7 +99,7 @@ $resultado = mysql_fetch_assoc($query);
 A sua consulta ao MySQL ficaria da seguinte forma:
 
 
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT * FROM `produtos` WHERE `id` = '12' LIMIT 1
 [/code]
 
@@ -110,7 +110,7 @@ Até aqui tudo bem.. Seu script funciona, você tem o que precisa e tá tudo na 
 Agora a sua query MySQL fica assim:
 
 
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT * FROM `produtos` WHERE `id` = '' OR 1=1 OR '' = '' LIMIT 1
 [/code]
 

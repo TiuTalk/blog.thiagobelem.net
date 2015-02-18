@@ -26,7 +26,7 @@ A coisa que vocês mais vão ver no jQuery é a própria função <code>jQuery()
 Veja alguns exemplos:
 
 
-[code language="javascript" light="true"]
+[code language="javascript"]
 $('p'); // Retorna uma lista de todos os parágrafos na página
 $('a.azul'); // Retorna uma lista de todos os links com classe "azul"
 $('form input[type="text"]'); // Retorna uma lista de todos os inputs (que sejam type="text") e estejam dentro de um formulário
@@ -35,7 +35,7 @@ $('form input[type="text"]'); // Retorna uma lista de todos os inputs (que sejam
 Como vocês podem ver, os seletores de jQuery se assemelham muito aos seletores de CSS, e existem formas de você selecionar praticamente qualquer elemento de seu HTML... Lembra que eu disse que jQuery é como uma conversa? Suponhamos que você precise selecionar todos os <code>p</code>, que estão dentro e uma <code>div</code> com classe a "links", e que não possuam um link dentro desse <code>p</code>... O seletor ficaria assim:
 
 
-[code language="javascript" light="true"]
+[code language="javascript"]
 $('div.links p:not(:has(a))');
 [/code]
 
@@ -55,7 +55,7 @@ Vamos supor que vocês queiram criar aquele efeito legal de abrir e fechar um el
 Vamos criar o seguinte HTML de exemplo:
 
 
-[code language="html" light="true"]
+[code language="html"]
 <div class="box">
 	<h2>Meus links</h2>
 	<a href="#" title="Abrir ou fechar" class="trocar">abrir/fechar</a>
@@ -128,7 +128,7 @@ Mas o jQuery não é esperto (ou seria maleducado?) o suficiente para substituir
 Existem duas formas de evitar o comportamento padrão de um clique em um link quando se trabalha com o método <code>click()</code>: no mais deselegante é retornado <em>false</em> (falso) na função que está no clique. A outra forma, mais correta e elegante, é assim:
 
 
-[code language="javascript" highlight="3"]
+[code language="javascript"]
 $(document).ready(function() {
 	$('div.box a.trocar').click(function(evento) {
 		evento.preventDefault();
@@ -144,7 +144,7 @@ Veja um exemplo do código acima funcionando: <a href="http://jsbin.com/upuxa3/3
 Agora nós podemos continuar nosso exemplo selecionando a lista de links com classe "conteudo" (<code>ul.conteudo</code>) que esta logo após o link que foi clicado:
 
 
-[code language="javascript" highlight="4"]
+[code language="javascript"]
 $(document).ready(function() {
 	$('div.box a.trocar').click(function(evento) {
 		evento.preventDefault();
@@ -162,7 +162,7 @@ Documentação do método <code>next()</code>: <a href="http://api.jquery.com/ne
 Mas, como foi dito anteriormente, não adianta nada selecionar um elemento se não fizermos nada com ele... Já conseguimos encontrar a lista de links e agora precisamos fazer ela aparecer e sumir a cada clique... Fazemos isso dessa forma:
 
 
-[code language="javascript" highlight="4"]
+[code language="javascript"]
 $(document).ready(function() {
 	$('div.box a.trocar').click(function(evento) {
 		evento.preventDefault();
@@ -180,7 +180,7 @@ Poderíamos parar por aqui... Mas se você for um usuário chato, vai clicar 300
 Para evitar esse tipo de comportamento precisamos filtrar o seletor e evitar rodar o <code>slideToggle()</code> enquanto ainda esteja acontecendo uma animação... Ou seja: executamos o método <code>slideToggle()</code> apenas na lista que não (<em>not</em>) estiver animada (<em>animated</em>):
 
 
-[code language="javascript" highlight="4"]
+[code language="javascript"]
 $(document).ready(function() {
 	$('div.box a.trocar').click(function(evento) {
 		evento.preventDefault();

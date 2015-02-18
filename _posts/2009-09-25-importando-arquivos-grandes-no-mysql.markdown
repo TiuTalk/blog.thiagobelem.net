@@ -27,14 +27,14 @@ Primeiro você deve abrir o seu client do MySQL... Se você estiver usando Windo
 Se você estiver usando XAMPP essa pasta é:
 
 
-[code light="true"]
+[code]
 C:\xampp\mysql\bin\
 [/code]
 
 Dentro dessa pasta você vai acessar o client, dessa forma:
 
 
-[code light="true" language="sql"]
+[code language="sql"]
 mysql -u USUARIO -p
 [/code]
 
@@ -45,7 +45,7 @@ Aí você irá digitar a sua senha, por padrão ela é vazia e é só dar ok.
 Agora que você está dentro do client MySQL é só digitar o comando acompanhado do caminho do arquivo que você quer importar:
 
 
-[code light="true" language="sql"]
+[code language="sql"]
 source C:\servidor\bancodedados.sql
 [/code]
 

@@ -37,7 +37,7 @@ function connect() {
 Só que se você usar alguma outra biblioteca/classe/função pronta, pode haver uma colisão de nomes e você vai precisar mudar o nome da sua função pra algo maior... Só que você não quer isso.
 
 Aí, usando a maravilha do namespace, você faz assim:
-[code language="php" highlight="3"]
+[code language="php"]
 <?php
 
 namespace MeuProjeto;

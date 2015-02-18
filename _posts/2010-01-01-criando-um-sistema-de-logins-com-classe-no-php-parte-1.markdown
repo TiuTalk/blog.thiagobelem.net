@@ -54,7 +54,7 @@ class Usuario {
 Agora vamos começar a inserir algumas propriedades (variáveis) que serão usadas pela classe ao longo do projeto...
 
 
-[code language="php" firstline="4"]
+[code language="php"]
 	/**
 	 * Nome do banco de dados onde está a tabela de usuários
 	 */
@@ -80,7 +80,7 @@ São com essas propriedades da classe que você vai poder customizar a classe pa
 Agora vamos definir o primeiro método da nossa classe:
 
 
-[code language="php" firstline="23"]
+[code language="php"]
 	/**
 	 * Usa algum tipo de encriptação para codificar uma senha
 	 *
@@ -97,7 +97,7 @@ Agora vamos definir o primeiro método da nossa classe:
 [/code]
 
 Esse método cuidará da encriptação da senha (caso ela exista, claro)... Se o seu sistema não usar nenhum tipo de criptografia, pode deixar esse método do jeito que está, mas caso você use, por exemplo, o SHA1, você precisa mudar ali na linha 34 e colocar, por exemplo:
-[code language="php" firstline="34"]
+[code language="php"]
 return sha1($senha);
 [/code]
 Caso você use outro tipo de encriptação, você vai precisar modificar esse método... O importante é você receber a senha pura/plana como parâmetro ($senha) e retornar a senha encriptada.
@@ -105,7 +105,7 @@ Caso você use outro tipo de encriptação, você vai precisar modificar esse m�
 Agora vamos criar o segundo método da classe e o último método dessa parte do tutorial:
 
 
-[code language="php" firstline="37"]
+[code language="php"]
 	/**
 	 * Valida se um usuário existe
 	 *

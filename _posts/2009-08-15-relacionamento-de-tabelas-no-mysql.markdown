@@ -92,7 +92,7 @@ Agora vamos montar uma consulta que <strong>DE UMA SÓ VEZ</strong> irá pegar o
 Mas antes de mostrar o script vou ajudar a vocês entenderem como a relação é feita... Antes a nossa consulta que pega apenas os produtos era assim:
 
 
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT * FROM `produtos` ORDER BY `nome` ASC
 [/code]
 Sua tradução seria: <strong style="color: navy">SELECIONAR todas as colunas da TABELA `produtos` ORDENADO PELO `nome` ASCENDETEMENTE</strong>
@@ -103,7 +103,7 @@ Agora usaremos uma nova "palavra" do MySQL que é o <strong style="background: g
 Existem três tipos de JOIN mas não vou falar dos outros dois pois eles são MUITO pouco usados... Falaremos do "<strong style="background: gray; color: white">INNER JOIN</strong>" que exige que haja um registro que corresponda a relação nas duas tabelas, ou seja: se houver um produto sem categoria ou a categoria não existir na tabela categorias esse produto é omitido dos resultados.
 
 A nossa consulta ficará assim:
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT `produtos`.* FROM `produtos` INNER JOIN `categorias` ON `produtos`.`categoria_id` = `categorias`.`id` ORDER BY `produtos`.`nome` ASC
 [/code]
 Sua tradução seria: <strong style="color: navy">SELECIONAR todas as colunas [da tabela produtos] da TABELA `produtos` UNINDO A TABELA `categorias` ONDE a coluna `categoria_id` [da tabela produtos] É IGUAL a coluna `id` [da tabela categorias] ORDENADO PELO `nome` [da tabela produtos] ASCENDETEMENTE</strong>
@@ -116,20 +116,20 @@ Pra quem ainda não entendeu, o ON é como o WHERE de uma consulta normal... É 
 Repare que agora precisamos usar um formato diferente para identificar as colunas usando: <strong style="color: red">`tabela`.`coluna`</strong>... Isso é necessário pois agora estamos trabalhando com duas tabelas.
 
 Da forma que a nossa consulta está ainda não estamos pegando o nome da categoria... fazemos isso adicionando mais um campo na parte do SELECT, assim:
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT `produtos`.*, `categorias`.`nome` FROM `produtos` INNER JOIN `categorias` ON `produtos`.`categoria_id` = `categorias`.`id` ORDER BY `produtos`.`nome` ASC
 [/code]
 Agora estamos pegando também o valor da coluna <strong>"nome"</strong> do registro encontrado (pela relação) na tabela <strong>"categorias"</strong>.
 <center><img src="http://blog.thiagobelem.net/arquivos/2009/08/relacionamento2.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>
 
 Só que agora temos um novo problema... Nas duas tabelas existe uma coluna chamada "nome", e quando estivermos lá no PHP, dentro do while, não teríamos como identificar de qual tabela pegamos as informações (veja a próxima imagem), pois as duas seriam <strong>$produto['nome']</strong>... Precisamos então renomear esse novo campo que adicionamos a busca, assim:
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT `produtos`.*, `categorias`.`nome` AS categoria FROM `produtos` INNER JOIN `categorias` ON `produtos`.`categoria_id` = `categorias`.`id` ORDER BY `produtos`.`nome` ASC
 [/code]
 Agora o resultado de `categorias`.`nome` estará presente nos resultados como "categoria" e não "nome"... Sei que parece complicado de início mas vocês vão entender já já.
 
 E por fim, faremos mais uma modificação, pra evitar ficar usando `tabela`.`coluna` também podemos renomear as tabelas, e com isso diminuir otamanho da consulta:
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT p.*, c.`nome` AS categoria FROM `produtos` AS p INNER JOIN `categorias` AS c ON p.`categoria_id` = c.`id` ORDER BY p.`nome` ASC
 [/code]
 Nesse caso <strong>p</strong> representará a tabela "produtos" e <strong>c</strong> representará a "categorias".
@@ -138,7 +138,7 @@ Nesse caso <strong>p</strong> representará a tabela "produtos" e <strong>c</str
 Sei que parece uma consulta maior e mais complicada... Mas você fará o MySQL trabalhar <u>muito menos</u> se fizer assim, com JOINS, do que fazer uma 2ª consulta dentro do while... Essa é a forma mais correta de fazer consultas quando precisamos de informações vindas de mais de uma tabela.
 
 Agora vamos ao nosso novo script de PHP que, sem dúvidas, é bem mais prático e eficiente:
-[code language="php" highlight="4,10"]
+[code language="php"]
 <?php
 
 // Consulta que pega todos os produtos e o nome da categoria de cada um
@@ -166,7 +166,7 @@ O uso desses outros tipos de JOIN é muito raro e acho que não vale a pena fica
 
 <h3>E a relação com mais de duas tabelas?</h3>
 Só pra exemplo, essa seria a consulta que pega os produtos, as categorias e o nome do usuário que cadastrou o produto e filtrando apenas pelos produtos ativos:
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT p.*, c.`nome` AS categoria, u.`nome` AS usuario FROM `produtos` AS p INNER JOIN `categorias` AS c ON p.`categoria_id` = c.`id` INNER JOIN `usuarios` AS u ON p.`usuario_id` = u.`id` WHERE (p.`ativo` = 1) ORDER BY p.`nome` ASC
 [/code]
 <center><img src="http://blog.thiagobelem.net/arquivos/2009/08/relacionamento4.jpg" alt="" style="border: 1px solid silver; margin-bottom: 5px" /></center>

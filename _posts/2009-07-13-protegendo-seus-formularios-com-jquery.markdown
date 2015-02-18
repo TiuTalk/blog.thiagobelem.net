@@ -37,7 +37,7 @@ $(function() {
 Mas há um probleminha com esse código: se você usar algum tipo de validação por JavaScript (também ativado pelo submit do formulário) o codigo não vai funcinar caso o usuário tenha digitado algo que invalide o formulário.
 
 Uma solução seria chamar essa função de validação dentro desse código jQuery, da seguinte forma:
-[code language="javascript" highlight="3"]
+[code language="javascript"]
 $(function() {
 	$("form").submit(function() {
 		if (minhaFuncao() == true) {

@@ -24,7 +24,7 @@ A vantagem de usar essa função (e não as que eu achei por aí, buscando no Go
 
 <h3>Código da Função</h3>
 
-[code lang="php"]
+[code language="php"]
 <?php
 
 /**
@@ -76,7 +76,7 @@ function tinyURL($url)
 
 <h3>Exemplo de uso <span style="color: #c0c0c0;">(se é que precisa..)</span></h3>
 
-[code lang="php"]
+[code language="php"]
 <?php
 	echo tinyURL('http://blog.thiagobelem.net/');
 	// http://tinyurl.com/kwzg4w

@@ -40,7 +40,7 @@ Vamos a um exemplo simpes... Uma <strong>regexp </strong>pra verificar um nome d
 Sacaram? O nome desse 'bloco' da regexp é chamado <strong>pattern</strong>, ou padrão. Ao validar uma string você compara um pattern com uma string, e se ela validar, ou seja, cumprir as condições, a string está dentro do formato.
 
 Agora vamos ao código de validação de e-mail, ele é bem simples:
-[code='php']
+[code language="php"]
 // Define uma função que poderá ser usada para validar e-mails usando regexp
 function validaEmail($email) {
 $conta = "^[a-zA-Z0-9\._-]+@";

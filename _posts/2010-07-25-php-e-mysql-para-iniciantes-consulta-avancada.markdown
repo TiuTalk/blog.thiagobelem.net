@@ -46,7 +46,7 @@ require_once('includes/mysqli.php');
 Agora iremos definir uma variável contendo o nome da categoria que iremos usar para filtrar as notícias... O conteúdo dessa variável está "<em>hard coded</em>" no arquivo, mas poderia ser dinâmico e vir da uma variável <code>$_GET</code>, por exemplo.
 
 
-[code language="php" firstline="16"]
+[code language="php"]
 // Iremos buscar apenas as notícias da categoria "Esportes"
 $categoria = "Esportes"; // Essa variável poderia ter vindo, por exemplo, do $_GET
 [/code]
@@ -54,7 +54,7 @@ $categoria = "Esportes"; // Essa variável poderia ter vindo, por exemplo, do $_
 Feito isso, montaremos a consulta que será executada no banco de dados:
 
 
-[code language="php" firstline="22"]
+[code language="php"]
 // Monta a consulta SQL para trazer as últimas 10 notícias ativas e que pertençam à categoria específica
 $sql = "SELECT
 			Noticia.id, Noticia.titulo, Noticia.descricao,
@@ -77,7 +77,7 @@ Para quem não entendeu a explicação acima, vale a pena a leitura do meu artig
 Continuando o script, rodamos a consulta e exibimos o resultado:
 
 
-[code language="php" firstline="36"]
+[code language="php"]
 // Prepara a consulta OU mostra uma mensagem de erro
 $resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
 
@@ -99,7 +99,7 @@ while ($noticia = $resultado->fetch_object()) {
 E, para finalizar, exibimos o total de resultados encontrados e limpamos a consulta da memória do PHP:
 
 
-[code language="php" firstline="51"]
+[code language="php"]
 // Exibe o total de registros encontrados
 echo "Registros encontrados: {$resultado->num_rows}
 ";

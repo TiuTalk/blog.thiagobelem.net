@@ -22,7 +22,7 @@ Fiz uma classe que vocês vão poder usar para pegar o resultado de busca do Goo
 
 <h3>A Classe - Versão 1.1</h3>
 
-[code language="php" wraplines="false"]
+[code language="php"]
 <?php
 
 /**

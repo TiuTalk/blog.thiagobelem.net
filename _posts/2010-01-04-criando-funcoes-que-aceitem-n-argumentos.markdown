@@ -40,7 +40,7 @@ Perceba que, na definição da função, não colocamos nada no lugar dos parâm
 Agora vamos pegar o total e a lista de argumentos passados para a função:
 
 
-[code language="php" firstline="7"]
+[code language="php"]
 	// Total de argumentos passados
 	$total = func_num_args();
 	// Array com cada um dos argumentos passados
@@ -50,7 +50,7 @@ Agora vamos pegar o total e a lista de argumentos passados para a função:
 Feito isso, vamos precisar fazer uma verificação, só por segurança, da quantidade de argumentos passados... Não há lógica em tentar calcular a média de 0 numeros, não é mesmo?
 
 
-[code language="php" firstline="12"]
+[code language="php"]
 	// Verifica se foi passado pelo menos 1 número
 	if ($total < 1) {
 		trigger_error('Não é possível calcular a média de menos de 1 número!');
@@ -61,7 +61,7 @@ Feito isso, vamos precisar fazer uma verificação, só por segurança, da quant
 E por final, caso tenha sido passado pelo menos um argumento, calculamos a somatória dos números e retornamos a média:
 
 
-[code language="php" firstline="16"]
+[code language="php"]
 	} else {
 		// Calcula a somatória de todos os números passados
 		$soma = array_sum($numeros);

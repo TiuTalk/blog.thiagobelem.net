@@ -19,7 +19,7 @@ Por exemplo: Se você estiver acessando o site pelo 127.0.0.1 ele usa a configur
 Vamos ao script:
 
 
-[code='php']
+[code language="php"]
 /**
 *  Arquivo de conexão ao MySQL usando servidor local e externo
 */
@@ -75,7 +75,7 @@ mysql_select_db($MySQL[$usar]['banco'], $MySQL['link']) or die("Não foi possív
 Pra criar mais uma configuração de conexão é só duplicar esse bloco:
 
 
-[code='php']
+[code language="php"]
 $n++;
 $MySQL[$n]['dominios']  = array('thiagobelem.net', 'thiagobelem.com.br');
 $MySQL[$n]['servidor']  = '127.0.0.1'; // Servidor MySQL

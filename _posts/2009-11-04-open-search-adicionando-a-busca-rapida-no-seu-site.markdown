@@ -17,7 +17,7 @@ Fala gente,
 Semana passada falei sobre a <strong>busca rápida</strong > (ou <em>Open Search</em>)... Muita gente ficou interessada em como poderiam incluir esse recurso em seus sites então eu fiz um scriptzinho pra facilitar a vida de vocês.
 
 Pra você poder usar esse recurso no seu site o mesmo precisa ter suporte a busca via método GET... Método GET é quando os parâmetros são enviados na URL, veja o exemplo do Google:
-[code light="true"]
+[code]
 http://www.google.com.br/search?q=Thiago+Belem
 [/code]
 
@@ -30,7 +30,7 @@ Sem mais baboseiras, vamos direto ao ponto:
 Primeiro você precisa inserir um código HTML dentro do <head> do seu site que irá avisar os outros sites, sistemas e navegadores que o seu site tem um Open Search:
 
 
-[code language="html" light="true"]
+[code language="html"]
 <link rel="search" type="application/opensearchdescription+xml" href="http://www.meusite.com.br/opensearch.php" title="Meu Site" />
 [/code]
 
@@ -101,12 +101,12 @@ Agora preste atenção no bloco de configuração no começo do arquivo!
 Dê atenção a parte que tem "endereco_busca"... É ali que você precisa colocar a URL da sua página de busca (resultado de busca) e colocar <strong>{searchTerms}</strong> no lugar que irão os parâmetros de busca... Vamos voltar ao exemplo da busca do Google:
 
 Se eu buscar por "Thiago Belem" a url de resultado vai ficar mais ou menos assim:
-[code light="true"]
+[code]
 http://www.google.com.br/search?q=Thiago+Belem
 [/code]
 
 Então, criando um open search pra essa mesma busca do Google, teríamos isso na parte "endereco_busca":
-[code light="true"]
+[code]
 http://www.google.com.br/search?q={searchTerms}
 [/code]
 

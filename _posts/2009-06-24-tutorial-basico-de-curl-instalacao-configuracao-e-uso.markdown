@@ -21,7 +21,7 @@ Para poder usar o cURL no seu site/sistema você precisa que a biblioteca esteja
 
 <h3>Verificando se o cURL está instalado</h3>
 Recomendo que antes de sair tentando instalar a cURL, verifique se ela já não está habilitada no seu servidor... Crie um arquivo .php com o seguinte conteúdo:
-[code lang="php"]
+[code language="php"]
 <?php
 	// Exibe informações relativas ao PHP e suas extensões
 	phpinfo();
@@ -31,14 +31,14 @@ Acesse esse arquivo pelo seu navegador e procure por "cURl support" se encontrar
 
 <h3>Instalando o cURL</h3>
 Para instalá-lo é bem simples, basta acessar o seu arquivo php.ini que geralmente fica dentro da pasta php do seu servidor (sim, você precisa ter acesso a esse arquivo) e procure por essa linha:
-[code lang="plain"]
+[code language="plain"]
 ;extension=php_curl.dll
 [/code]
 Agora remova o ponto-e-vírgula (;) do começo da linha, reinicie o seu servidor e voila! Você acabou de instalar o cURL no seu sistema. ;)
 
 <h3>Uso básico do cURL</h3>
 Bom, primeiro de tudo, vamos o script mais simples que você pode usar para pegar a resposta de um site (que nesse caso, é o arquivo robots.txt aqui do blog):
-[code lang="php"]
+[code language="php"]
 <?php
 	// Inicia o cURL acessando uma URL
 	$cURL = curl_init('http://blog.thiagobelem.net/robots.txt');
@@ -56,7 +56,7 @@ A função <strong>curl_setopt()</strong> permite que você defina uma série de
 
 <h3>Verificando se um site está no ar e acessível</h3>
 Com o script que vou mostrar agora você vai poder acessar qualquer endereço ou URL pública e descobrir se ele retorna erro 404 (página não encontrada) ou não, baseando-se no código HTTP de resposta:
-[code lang="php"]
+[code language="php"]
 <?php
 	$cURL = curl_init('http://www.sitequenaoexiste.net.br');
 	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
@@ -82,7 +82,7 @@ Adicionei também uma opção nova (CURLOPT_FOLLOWLOCATION) que vai permitir que
 
 <h3>Enviando dados para formulários (via método POST)</h3>
 Suponhamos que você queira testar o cURL enviando dados para um formulário, como se você tivesse digitando os dados e dando submit no formulário. Você vai precisar de duas coisas: a lista dos nomes (names) dos campos e o action do formulário (que é pra onde os dados são enviados)... Depois é só montar um script parecido com esse:
-[code lang="php"]
+[code language="php"]
 <?php
 	// Aqui entra o action do formulário - pra onde os dados serão enviados
 	$cURL = curl_init('http://www.meusite.com.br/envia.php');

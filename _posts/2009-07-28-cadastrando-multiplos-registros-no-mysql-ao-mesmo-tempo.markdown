@@ -51,7 +51,7 @@ echo 'Usuários cadastrados: ' . $cadastrados;
 [/code]
 
 As consultas passadas para o MySQL ficariam mais ou menos assim:
-[code language="sql" light="true"]
+[code language="sql"]
 INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Thiago', 'contato@thiagobelem.net');
 INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Fulano da Silva', 'fulano@email.com');
 INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Ciclano', 'ciclano@uol.com.br');
@@ -95,7 +95,7 @@ echo 'Usuários cadastrados: ' . $cadastrados;
 [/code]
 
 A nossa consulta ficaria mais ou menos assim:
-[code language="sql" light="true"]
+[code language="sql"]
 INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, 'Thiago', 'contato@thiagobelem.net'), (NULL, 'Fulano da Silva', 'fulano@email.com'), (NULL, 'Ciclano', 'ciclano@uol.com.br')
 [/code]
 

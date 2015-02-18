@@ -18,7 +18,7 @@ O seu uso consiste em agrupar, na mesma linha, a condição, os comandos para tr
 Vamos ao velho exemplo de condições (if) que todo mundo já viu:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 $nota = 4;
@@ -35,7 +35,7 @@ echo "Você não passou!";
 Agora veja a versão ternária desse mesmo código:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 $nota = 4;
@@ -52,7 +52,7 @@ A sintaxe do operador ternário é a seguinte:
 Veja outro exemplo de uso do operador ternário:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 // Atribuição de um valor padrão a uma variável

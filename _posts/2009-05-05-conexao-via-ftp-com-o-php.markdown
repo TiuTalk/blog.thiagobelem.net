@@ -28,7 +28,7 @@ Para se conectar a um servidor FTP você deve usar a função <strong>ftp_connec
 Então, começaremos o nosso arquivo:
 
 
-[code='php']
+[code language="php"]
 < ?php
 /**
 * Conexão via FTP com o PHP
@@ -59,7 +59,7 @@ Para fazer o login você vai usar a função <strong>ftp_login()</strong>, que t
 Então, fazendo algumas alterações no nosso arquivo:
 
 
-[code='php']
+[code language="php"]
 < ?php
 /**
 * Conexão via FTP com o PHP
@@ -98,7 +98,7 @@ Para fazer upload de arquivos você vai usar a função <strong>ftp_put()</stron
 Então, fazendo algumas alterações no nosso arquivo:
 
 
-[code='php']
+[code language="php"]
 < ?php
 /**
 * Conexão via FTP com o PHP
@@ -144,7 +144,7 @@ Para fazer download de arquivos você vai usar a função <strong>ftp_get()</str
 Então, fazendo algumas alterações no nosso arquivo:
 
 
-[code='php']
+[code language="php"]
 < ?php
 /**
 * Conexão via FTP com o PHP
@@ -194,7 +194,7 @@ Para se desconectar (faça isso, sempre) você vai usar a função <strong>ftp_c
 Então, finalizando o no nosso arquivo:
 
 
-[code='php']
+[code language="php"]
 < ?php
 /**
 * Conexão via FTP com o PHP

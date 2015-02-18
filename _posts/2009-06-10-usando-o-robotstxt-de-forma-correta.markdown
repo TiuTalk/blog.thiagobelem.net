@@ -22,7 +22,7 @@ Imagine o robots.txt como uma lista de convidados para uma festa... Se não tá 
 Suponhamos que você tenha um arquivo chamado confidencial.html na raiz do seu site e você não quer que os indexadores dos sistemas de buscas e nenhum outro tipo de robô tenha acesso a esse arquivo... É só colocar isso aqui no seu robots.txt:
 
 
-[code='html']
+[code language="html"]
 User-agent: *
 Disallow: /confidencial.html
 [/code]
@@ -30,7 +30,7 @@ Disallow: /confidencial.html
 Isso fará com que nenhum robot consiga acessar o arquivo especificado... Mas você também quer bloquear uma pasta do seu site para que nenhum robozinho possa entrar e ver algum arquivo dentro dela, então é só fazer assim:
 
 
-[code='html']
+[code language="html"]
 User-agent: *
 Disallow: /confidencial.html
 Disallow: /minhapasta/
@@ -40,7 +40,7 @@ Disallow: /minhapasta/
 Se você é uma pessoa <span style="text-decoration: line-through;">metódica</span> organizada e quer colocar comentários no seu robots é só usar o caractere "tralha" (#) para isso, dessa forma:
 
 
-[code='html']
+[code language="html"]
 # A regra servirá para todos os tipos de robôs
 User-agent: *
 # Meu arquivo de senhas ultra-secretas que ninguém pode saber
@@ -53,7 +53,7 @@ Disallow: /minhapasta/
 Tá com a pá virada e quer bloquear o acesso completo de todos os robôs ao seu site? Não precisa tirar ele do ar, e só fazer isso:
 
 
-[code='html']
+[code language="html"]
 # Adios~
 User-agent: *
 Disallow: /
@@ -63,7 +63,7 @@ Disallow: /
 Tem gente que prefere bloquear todo mundo e permitir só alguns, e com o robots.txt não é diferente:
 
 
-[code='html']
+[code language="html"]
 # Permitindo apenas dois arquivos e uma pasta:
 User-agent: *
 Allow: /meu_arquivo.html

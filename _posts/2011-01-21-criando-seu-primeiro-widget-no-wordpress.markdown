@@ -54,7 +54,7 @@ Lembrando que a sua classe DEVE estender a classe <strong>WP_Widget</strong>, do
 Agora vamos inserir quatro métodos vazios para deixar a estrutura da classe pronta:
 
 
-[code language="php" firstline="11"]
+[code language="php"]
 	/**
 	 * Construtor
 	 */
@@ -96,7 +96,7 @@ Agora vamos começar pelo método form(), que exibe o formulário... Esse widget
 O nosso método form() ficará da seguinte forma:
 
 
-[code language="php" firstline="38"]
+[code language="php"]
 	/**
 	 * Formulário para os dados do widget (exibido no painel de controle)
 	 *
@@ -121,7 +121,7 @@ Agora vamos partir para o método update(), que salva os dados e configurações
 Esse método precisará retornar os dados a serem salvos no banco de dados, ficando assim:
 
 
-[code language="php" firstline="28"]
+[code language="php"]
 	/**
 	 * Salva os dados do widget no banco de dados
 	 *
@@ -147,7 +147,7 @@ Esse método será responsável por mostrar os dados (HTML) do widget na lateral
 Esse widget irá funcionar apenas nas páginas de post... então precisamos evitar que ele seja exibido nas outras páginas, dessa forma:
 
 
-[code language="php" firstline="24"]
+[code language="php"]
 	public function widget($argumentos, $instancia) {
 		if (!is_single()) return;
 	}
@@ -156,7 +156,7 @@ Esse widget irá funcionar apenas nas páginas de post... então precisamos evit
 Agora vamos trazer alguns dados sobre o autor:
 
 
-[code language="php" firstline="27"]
+[code language="php"]
 		$autor = array(
 			'nome' => get_the_author_meta('display_name'),
 			'email' => get_the_author_meta('user_email'),
@@ -166,7 +166,7 @@ Agora vamos trazer alguns dados sobre o autor:
 [/code]
 
 Feito isso é só começar a exibir o HTML do Widget:
-[code language="php" firstline="34"]
+[code language="php"]
 		// Exibe o HTML do Widget
 		echo $argumentos['before_widget'];
 		echo $argumentos['before_title'] . $argumentos['widget_name'] . $argumentos['after_title'];

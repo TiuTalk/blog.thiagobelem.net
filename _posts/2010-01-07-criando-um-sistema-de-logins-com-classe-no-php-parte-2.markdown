@@ -17,7 +17,7 @@ tags:
 Vamos que vamos! Essa é a segunda parte do nosso tutorial "<strong>Criando um sistema de logins com classe no PHP</strong>", na <a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" title="Criando um sistema de logins com classe no PHP - Parte 1" target="_blank">Parte 1</a> começamos a criar a classe e definimos um método que validava se o usuário existe, agora vamos continuar a classe e criar um método que deixará o usuário logado no sistema usando sessão e cookies.
 
 Primeiro, vamos adicionar algumas novas propriedades que iremos usar nessa parte do tutorial:
-[code language="php" firstline="32"]
+[code language="php"]
 	/**
 	 * Nomes dos campos que serão pegos da tabela de usuarios e salvos na sessão,
 	 * caso o valor seja false nenhum dado será consultado
@@ -57,7 +57,7 @@ Reparem que criamos uma propriedade $erro, ela será usada para armazenar as men
 Agora vamos começar a criar o novo, gigantesco e magnífico método que irá salvar o usuário no sistema, mantendo-o logado:
 
 
-[code language="php" firstline="106"]
+[code language="php"]
 	/**
 	 * Loga um usuário no sistema salvando seus dados na sessão
 	 *
@@ -71,7 +71,7 @@ Agora vamos começar a criar o novo, gigantesco e magnífico método que irá sa
 [/code]
 
 Primeiro de tudo, precisamos validar os dados passados por parâmetro:
-[code language="php" firstline="114"]
+[code language="php"]
 		// Verifica se é um usuário válido
 		if ($this->validaUsuario($usuario, $senha)) {
 
@@ -84,7 +84,7 @@ Primeiro de tudo, precisamos validar os dados passados por parâmetro:
 [/code]
 
 Já sabemos se o usuário foi validado, agora nós vamos verificar se é necessário (e possível) iniciar a sessão:
-[code language="php" firstline="117"]
+[code language="php"]
 			// Inicia a sessão?
 			if ($this->iniciaSessao AND !isset($_SESSION)) {
 				session_start();
@@ -92,7 +92,7 @@ Já sabemos se o usuário foi validado, agora nós vamos verificar se é necess�
 [/code]
 
 O próximo passo é atrazer (ou não) os dados do banco de dados para a sessão:
-[code language="php" firstline="122"]
+[code language="php"]
 			// Traz dados da tabela?
 			if ($this->dados != false) {
 				// Adiciona o campo do usuário na lista de dados
@@ -137,7 +137,7 @@ Mas calma que ainda não acabou!
 Precisamos ainda definir um valor na sessão e criar (caso seja possível) o cookie que irá ajudar na identificação (e segurança) do usuário:
 
 
-[code language="php" firstline="156"]
+[code language="php"]
 			// Usuário logado com sucesso
 			$_SESSION[$this->prefixoChaves . 'logado'] = true;
 

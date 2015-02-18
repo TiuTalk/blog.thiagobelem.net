@@ -23,7 +23,7 @@ Como dito na definição wikipediana, cookies podem ser usados para armazenar da
 Felizmente você só precisa aprender uma função para manipular cookies! Essa função é a <strong>setcookie()</strong> do PHP. Vamos a alguns exemplos:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 // Cria um cookie chamado 'usuario' com o valor 'Fulano'
@@ -45,7 +45,7 @@ Se você não definir o tempo de vida (duração) de um cookie, ele irá durar o
 Se você quiser pegar o valor de um cookie depois, em outra página do seu site, é só usar esse exemplo:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 // Pega o valor do Cookie 'usuario' definido anteriormente:
@@ -62,7 +62,7 @@ Vale lembrar que o cookie precisa existir para você pegar o seu valor... Se ele
 Se por algum motivo você precisar deletar algum cookie é só não definir um valor para ele, fazendo dessa forma:
 
 
-[code='php']
+[code language="php"]
 <?php
 
 // Deleta o cookie definido anteriormente
@@ -78,7 +78,7 @@ Outra forma de deletar um cookie é colocando o seu tempo de vida no passado.
 Se você quiser saber todos os cookies que estão setados e acessíveis pelo seu site, é só usar a função<strong> print_r()</strong> dessa forma:
 
 
-[code='php']
+[code language="php"]
 <?php
 print_r($_COOKIE);
 ?>

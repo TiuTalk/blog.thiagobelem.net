@@ -40,7 +40,7 @@ Estou desde ontem revisando a classe e fazendo algumas pequenas correções... N
 
 <h3>Novas Propriedades</h3>
 Para a nossa nova funcionalidade precisamos criar uma nova propriedade na nossa classe:
-[code language="php" firstline="99"]
+[code language="php"]
 	/**
 	 * Quantidade (em dias) que o sistema lembrará os dados do usuário ("Lembrar minha senha")
 	 *
@@ -56,7 +56,7 @@ Se vocês lerem o comentário vão perceber que um terceiro parâmetro foi adici
 
 <h3>Novo Método - <span style="color: #B40000">lembrarDados()</span></h3>
 Vamos criar agora o método lembrarDados() que irá salvar os dados do usuário, criptografados, em cookies:
-[code language="php" firstline="391"]
+[code language="php"]
 	/**
 	 * Salva os dados do usuário em cookies ("Lembrar minha senha")
 	 *
@@ -73,19 +73,19 @@ Vamos criar agora o método lembrarDados() que irá salvar os dados do usuário,
 [/code]
 
 Primeiro nós vamos calcular o <a href="http://pt.wikipedia.org/wiki/Era_Unix" title="UNIX Timestamp">UNIX Timestamp</a> que será a data exata de quando os cookies irão expirar:
-[code language="php" firstline="402"]
+[code language="php"]
 		// Calcula o timestamp final para os cookies expirarem
 		$tempo = strtotime("+{$this->lembrarTempo} day", time());
 [/code]
 Agora nós iremos encriptar os dados do usuário usando <a href="http://pt.wikipedia.org/wiki/Base64" title="base64">base64</a> e adicionar um caractere no início da string criptografada para impedir que ela seja decriptografada pelo usuário (caso ele encontre o valor do cookie):
-[code language="php" firstline="405"]
+[code language="php"]
 		// Encripta os dados do usuário usando base64
 		// O rand(1, 9) cria um digito no início da string que impede a descriptografia
 		$usuario = rand(1, 9) . base64_encode($usuario);
 		$senha = rand(1, 9) . base64_encode($senha);
 [/code]
 Agora é só criar os dois cookies e o método está pronto:
-[code language="php" firstline="410"]
+[code language="php"]
 		// Cria um cookie com o usuário
 		setcookie($this->prefixoChaves . 'lu', $usuario, $tempo, $this->cookiePath);
 		// Cria um cookie com a senha
@@ -99,7 +99,7 @@ Agora nós vamos precisar criar um método que verifica os dados (usuario e senh
 Esse método é muito importante pois ele verificará os dados salvos nos cookies <strong>tentando logar o usuário</strong>! Esse método só será chamado quando o usuário tentar acessar uma página protegida e não estiver logado... O proprio método <strong>usuarioLogado()</strong> já fará isso!
 
 Vamos começar:
-[code language="php" firstline="416"]
+[code language="php"]
 	/**
 	 * Verifica os dados do cookie (caso eles existam)
 	 *
@@ -114,7 +114,7 @@ Vamos começar:
 	}
 [/code]
 Primeiro nós precisamos verificar se os cookies existem, caso eles não existam os dados não foram encontrados e, obviamente, são "inválidos".
-[code language="php" firstline="426"]
+[code language="php"]
 		// Os cookies de "Lembrar minha senha" existem?
 		if (isset($_COOKIE[$this->prefixoChaves . 'lu']) AND isset($_COOKIE[$this->prefixoChaves . 'ls'])) {
 			// Continuaremos aqui...
@@ -124,7 +124,7 @@ Primeiro nós precisamos verificar se os cookies existem, caso eles não existam
 		return false;
 [/code]
 O próximo passo é que faz toda a mágica do método: ele remove o caractere adicionado no início da string criptogafada, descriptografa a string e verifica se os dados são válidos tentando logar o usuário:
-[code language="php" firstline="428"]
+[code language="php"]
 			// Pega os valores salvos nos cookies removendo o digito e desencriptando
 			$usuario = base64_decode(substr($_COOKIE[$this->prefixoChaves . 'lu'], 1));
 			$senha = base64_decode(substr($_COOKIE[$this->prefixoChaves . 'ls'], 1));
@@ -140,7 +140,7 @@ Nossa nova funcionalidade está quase pronta.. Só falta uma coisinha: um métod
 
 <h3>Novo Método - <span style="color: #B40000">limpaDadosLembrados()</span></h3>
 Para deletar um cookie você deve definir o seu valor como nulo ou falso e definir a sua data de expiração no passado... O método fica asssim:
-[code language="php" firstline="410"]
+[code language="php"]
 	/**
 	 * Limpa os dados lembrados dos cookies ("Lembrar minha senha")
 	 *

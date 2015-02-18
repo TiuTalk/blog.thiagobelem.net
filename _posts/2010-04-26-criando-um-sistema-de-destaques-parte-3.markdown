@@ -65,7 +65,7 @@ Vamos começar com um arquivo chamado <strong>mysql_destaques.php</strong> e nel
 Agora nós iremos definir algumas variáveis de configuração:
 
 
-[code language="php" firstline="3"]
+[code language="php"]
 /*
  * Configurações do sistema de destaques
  */
@@ -91,7 +91,7 @@ Se o seu site já se conecta ao banco de dados MySQL automaticamente, você pode
 Fazemos a conexão com o banco de dados:
 
 
-[code language="php" firstline="21"]
+[code language="php"]
 /**
  * Conexão com o MySQL
  *
@@ -104,7 +104,7 @@ mysql_select_db($destaques['mysql']['banco']) OR trigger_error('ERRO: ' . mysql_
 
 <h3>3. Buscando os dados</h3>
 Agora vai começar a brincadeira... Vamos criar e executar uma consulta para trazer três colunas da tabela <code>`destaques`</code>:
-[code language="php" firstline="30"]
+[code language="php"]
 /*
  * Busca os dados na tabela de destaques
  */
@@ -119,7 +119,7 @@ $query = mysql_query($sql) OR trigger_error('ERRO: ' . mysql_error());
 Nós já executamos a consulta e já temos o <em>Resource MySQL</em> (ou resultado)... Precisamos apenas rodar um loop e passar esses dados para um array que será usado mais a diante para montar o nosso HTML.
 
 
-[code language="php" firstline="40"]
+[code language="php"]
 /**
  * Loop que traz os dados do MySQL e armazena-os em um array $lista_destaques
  */

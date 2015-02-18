@@ -20,7 +20,7 @@ A lógica é bem simples: uma data pode vir em vários formatos: AAAA-MM-DD, DD/
 A função poderia ser assim:
 
 
-[code='php']
+[code language="php"]
 <?php
 /**
 * Validate a date
@@ -83,7 +83,7 @@ Em cada case nós temos uma forma de "quebrar" a data e pegar cada uma das suas 
 Por fim, a função retorna verdadeiro (true) ou falso (false)... Então podemos usá-la da seguinte maneira:
 
 
-[code='php']
+[code language="php"]
 <?php
 if (validaData('12/04/2009', 'DD/MM/AAAA')) {
 echo "Data valida!";

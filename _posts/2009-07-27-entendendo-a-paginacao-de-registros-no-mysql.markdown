@@ -22,23 +22,23 @@ Não vim mostrar nenhum script pronto... Vou apenas falar como é a "lógica de 
 Suponhamos que você tenha uma tabela de notícias e quer colocar uma paginação na listagem de notícias.
 
 Normalmente a sua consulta seria assim:
-[code language="sql" light="true"]
+[code language="sql"]
 -- Busca as notícias ativas ordenadas pela data de forma decrescente
 SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC
 [/code]
 
 Agora vamos definir a regra da sua paginação.. Vamos exibir apenas 15 resultados "por página", então a consulta para pegar a primeira página de resultados seria assim:
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 0, 15
 [/code]
 
 Perceba que adicionamos um <strong style="background: gray; color: white">LIMIT 0, 15</strong> no final, isso significa que começaremos na <strong>posição 0</strong> (que é antes do 1° registro) e apanharemos os próximos 15 registros... Sabendo disso nós podemos criar a consulta (<em>query</em>) para a segunda e terceira páginas:
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 15, 15
 [/code]
 
 
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 30, 15
 [/code]
 

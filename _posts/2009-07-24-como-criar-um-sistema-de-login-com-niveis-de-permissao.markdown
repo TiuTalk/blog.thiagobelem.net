@@ -152,7 +152,7 @@ if (mysql_num_rows($query) != 1) {
 Repare que estamos buscando registros que tenham o usuário igual ao digitado pelo visitante e que tenham uma senha igual a versão SHA1 da senha digitada pelo visitante... Também buscamos apenas por registros de usuários que estejam ativos, assim quando você precisar remover um usuário do sistema, mas não pode simplesmente excluir o registro é só trocar o valor da coluna ativo pra zero. ;)
 
 A consulta gerada fica mais ou menos assim:
-[code language="sql" light="true"]
+[code language="sql"]
 SELECT `id`, `nome`, `nivel` FROM `usuarios` WHERE (`usuario` = 'a') AND (`senha` = 'e9d71f5ee7c92d6dc9e92ffdad17b8bd49418f98') AND (`ativo` = 1) LIMIT 1
 [/code]
 
@@ -164,7 +164,7 @@ Depois de rodar a consulta (query) nós verificamos se o número de resultados e
 Agora nós precisamos salvar os dados encontrados na sessão pois eles serão utilizados mais tarde, em outras páginas e eles precisam "persistir" até lá... Depois de salvar os dados na sessão nós iremos redirecionar o visitante para uma página restrita:
 
 
-[code language="php" firstline="19"]
+[code language="php"]
 if (mysql_num_rows($query) != 1) {
 	// Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
 	echo "Login inválido!"; exit;
@@ -192,7 +192,7 @@ if (mysql_num_rows($query) != 1) {
 Nosso sistema de login está quase completo! Agora só precisamos verificar se o usuário está logado no sistema e se o seu o nível de acesso condiz com o da página... Vamos agora escrever um pequeno bloco de PHP no início do arquivo <strong style="color: white; background: gray">restrito.php</strong> (que só deve ser acessado por usuários logados):
 
 
-[code language="php" highlight="7"]
+[code language="php"]
 <?php
 
 // A sessão precisa ser iniciada em cada página diferente
@@ -215,7 +215,7 @@ Olá, <?php echo $_SESSION['UsuarioNome']; ?>!
 Pronto meu amigo! O seu sistema de login está pronto para funcionar... Só vamos fazer alguns incrementos para ele ficar mais "usável"... Agora você vai ver como fazer a verificação de usuário logado e de nível de acesso, por exemplo para uma página onde apenas os administradores possam ter acesso:
 
 
-[code language="php" highlight="6,9"]
+[code language="php"]
 <?php
 
 // A sessão precisa ser iniciada em cada página diferente

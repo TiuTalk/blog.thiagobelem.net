@@ -15,7 +15,7 @@ Vamos usar como exemplo a função <strong>substr()</strong> nativa do PHP, ela 
 Vamos ao exemplo de uma função simples:
 
 
-[code='php']
+[code language="php"]
 function calcula_dobro($numero) {
     // Faz o calculo do dobro do $numero
     $resultado = $numero * 2;
@@ -32,7 +32,7 @@ Você pode criar funções para as mais variadas tarefas, como por exemplo, exib
 , ficaria assim:
 
 
-[code='php']
+[code language="php"]
 function paragrafos($texto) {
     $resultado = '
 ' . $texto . '
@@ -50,7 +50,7 @@ Este texto está entre parágrafos!
 Não há limite de argumentos que uma função pode receber, por exemplo, vamos fazer uma função que calcule um número elevado a outro:
 
 
-[code='php']
+[code language="php"]
 function potenciacao($numero, $potencia) {
     return $numero ^ $potencia;
 }
@@ -64,7 +64,7 @@ Repare que dessa vez usamos dois argumentos. Claro que, se você usar uma string
 Você também pode definir valores padrões para os argumentos da sua função, vamos usar o exemplo da função anterior só que, se não definirmos o segundo argumento, o número vai ser elevado a terceira potencia:
 
 
-[code='php']
+[code language="php"]
 function potenciacao($numero, $potencia = 3) {
     return $numero ^ $potencia;
 }

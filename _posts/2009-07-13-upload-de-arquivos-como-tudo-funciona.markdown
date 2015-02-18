@@ -213,7 +213,7 @@ Muita gente tem problemas com o tamanho de arquivo enviado pelos usuários pois,
 Caso você queira armazenar o arquivo enviado com outro nome, mas manter a extensão do mesmo, é só fazer assim:
 
 
-[code language="php" highlight="33"]
+[code language="php"]
 <?php
 	// Lista de tipos de arquivos permitidos
 	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');

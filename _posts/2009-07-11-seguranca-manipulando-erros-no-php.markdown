@@ -152,13 +152,13 @@ Caso você precise mudar a forma com qual o email é enviado, é só alterar ali
 Ao executar o seguinte script (exibir uma variável que não existe):
 
 
-[code language="php" light="true"]
+[code language="php"]
 <?php echo $n; ?> [/code]
 
 Termos a seguinte resposta por email:
 
 
-[code language="plain" light="true"]
+[code language="plain"]
 [ ERRO NO PHP ]
 Site: Meu site
 Tipo de erro: NOTICE
@@ -179,7 +179,7 @@ Data: 11/07/2009 10:40:29
 E o assunto do e-mail recebido será:
 
 
-[code language="plain" light="true"]
+[code language="plain"]
 [NOTICE] Meu site - 11/07/2009 10:40:29
 [/code]
 

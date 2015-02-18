@@ -25,7 +25,7 @@ Vim falar sobre a função ereg e eregi que são muito usadas (pelo menos por mi
 Antigamente faríamos assim:
 
 
-[code lang="php"]
+[code language="php"]
 &lt;?php
 
 $palavra = '(casa|carro)';
@@ -43,7 +43,7 @@ if (ereg($palavra, $frase)) {
 Agora, com o PHP 5.3.0 precisamos usar a função <strong>preg_match()</strong>, dessa forma:
 
 
-[code lang="php"]
+[code language="php"]
 &lt;?php
 
 $palavra = '/(casa|carro)/';
@@ -64,7 +64,7 @@ Repare que entrou uma barra (pra direita) antes e depois da expressão regular.
 E pra quem usava o eregi, é só adicionar um "i" no final da expressão regular, dessa forma:
 
 
-[code lang="php"]
+[code language="php"]
 &lt;?php
 
 $palavra = '/(casa|carro)/i';

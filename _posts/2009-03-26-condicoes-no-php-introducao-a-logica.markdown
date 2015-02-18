@@ -38,7 +38,7 @@ Para o PHP o resultado de uma proposição lógica é <em><strong>true </strong>
 Vejamos um exemplo de condição lógica no PHP:
 
 
-[code='php']
+[code language="php"]
 <?php
 if (2 > 3) {
 echo "2 é maior que 3";
@@ -53,7 +53,7 @@ Ou seja: O primeiro echo só será executado se (<strong><em>if</em></strong>) a
 Podemos fazer uma condição um pouco mais útil, usando variáveis:
 
 
-[code='php']
+[code language="php"]
 <?php
 $nota = 3;
 if ($nota >= 7) {
@@ -73,7 +73,7 @@ Os operadores de comparação que podemos usar nessas afirmações são:
 Vejamos alguns outros exemplos:
 
 
-[code='php']
+[code language="php"]
 <?php
 $nota = 3;
 if ($nota != 10) {
@@ -85,7 +85,7 @@ echo "Você tirou 10, parabéns!";
 [/code]
 
 
-[code='php']
+[code language="php"]
 <?php
 $nome = 'Thiago';
 if ($nome == 'Thiago') {
@@ -97,7 +97,7 @@ echo "Olá, Visitante";
 [/code]
 
 
-[code='php']
+[code language="php"]
 <?php
 $nota = 3;
 // Verifica se a afirmação ($nota >= 7) é falsa (false)
@@ -112,7 +112,7 @@ echo "Você foi aprovado";
 Nas condições do PHP também podemos usar os operadores lógicos "e" e "ou" da mesma forma que eles foram explicados anteriormente, só que as palavras mudam para "<span style="color: #ff6600;"><strong>AND</strong></span><span style="color: #ff6600;"><strong></strong></span>" e "<strong><span style="color: #ff6600;">OR</span></strong>" respectivamente, vejamos alguns exemplos:
 
 
-[code='php']
+[code language="php"]
 <?php
 $nota = 3;
 if ( ($nota >= 0) AND ($nota <= 10) ) {
@@ -126,7 +126,7 @@ echo "A sua nota é inválida";
 Repare que, ao usar o <strong>AND</strong>, cada afirmação ficou <span style="text-decoration: underline;">entre parêntesis</span> e a afirmação completa também está entre parêntesis: <strong><span style="color: #ff0000;">( </span><span style="color: #0000ff;">(...)</span></strong> <span style="color: #ff6600;"><strong>AND </strong></span><strong><span style="color: #0000ff;">(...)</span></strong> <strong><span style="color: #ff0000;">)</span></strong>. O mesmo vale para o <strong>OR</strong>:
 
 
-[code='php']
+[code language="php"]
 <?php
 $nota = 3;
 if ( ($nota < 0) OR ($nota > 10) ) {
@@ -142,7 +142,7 @@ Por causa do <strong>OR</strong> essa condição só será inválida se nenhuma 
 Você também pode unir um if { ... } a um else { ... } de outro if { ... } <span style="color: #999999;">(hein?!)</span>, veja o exemplo:
 
 
-[code='php']
+[code language="php"]
 <?php
 $nota = 3;
 if ( ($nota < 0) OR ($nota > 10) ) {

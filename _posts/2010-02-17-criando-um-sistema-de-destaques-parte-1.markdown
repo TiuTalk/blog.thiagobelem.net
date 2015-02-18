@@ -45,7 +45,7 @@ Antes de mais nada, precisamos criar o HTML do nosso bloco de destaque... Começ
 Agora, dentro de cada item, vamos adicionar uma imagem (IMG) com um link (A):
 
 
-[code language="html" firstline="4"]
+[code language="html"]
 		<li>
 			<a href="#" title="Destaque 1">
 				<img src="img/destaque1.jpg" alt="Destaque 1" />
@@ -68,7 +68,7 @@ Agora, dentro de cada item, vamos adicionar uma imagem (IMG) com um link (A):
 Agora vamos inserir, após as imagens com links, parágrafos (P) contendo a descrição (ou titulo) do destaque e que também estão com link (A) para o destaque:
 
 
-[code language="html" firstline="4"]
+[code language="html"]
 		<li>
 			<a href="#" title="Destaque 1">
 				<img src="img/destaque1.jpg" alt="Destaque 1" />

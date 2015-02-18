@@ -32,7 +32,7 @@ print_r($this->Session->read());
 [/code]
 
 Se você não criou nem alterou algum valor da sessão o que será exibido vais e paracer com isso:
-[code language="php" light="true"]
+[code language="php"]
 Array ( [Config] => Array ( [rand] => 262820453 [time] => 1161876896 [userAgent] => c7f575cbe5a4b7ad0efb748d54124611 ) )
 [/code]
 
