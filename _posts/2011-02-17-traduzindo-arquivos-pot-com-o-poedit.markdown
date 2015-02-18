@@ -34,7 +34,7 @@ tags:
 <li>Quando você der OK ele irá pedir um lugar para salvar o arquivo <strong>.po</strong> que ele irá gerar, escolha a mesma pasta onde está o arquivo <strong>.pot</strong>.</li>
 </ol>
 <h3>Interface de tradução</h3>
-<p>[caption id="attachment_1421" align="alignright" width="259" caption="Interface do PoEdit"]<a href="/assets/uploads/2011/02/poedit.png"><img class="size-medium wp-image-1421" title="PoEdit" src="/assets/uploads/2011/02/poedit.png" alt="" width="259" /></a>[/caption]</p>
+<p><a href="/assets/uploads/2011/02/poedit.png"><img class="size-medium wp-image-1421" title="PoEdit" src="/assets/uploads/2011/02/poedit.png" alt="" width="259" /></a></p>
 <p>A interface do PoEdit é bem simples... Você verá uma lista de <em>strings</em> (frases) a esquerda que são as frases no idioma original... A direita vão aparecer as traduções de cada uma dessas frases.</p>
 <p>Quando você clica sobre uma frase, ela irá aparecer na primeira caixa de texto da parte inferior da tela, na segunda caixa de texto você vai inserir a tradução daquela frase.</p>
 <p>Na parte mais inferior da tela (status bar) você pode ver o progresso da tradução: quantas frases foram traduzidas, quantas ainda não foram traduzidas e etc.</p>

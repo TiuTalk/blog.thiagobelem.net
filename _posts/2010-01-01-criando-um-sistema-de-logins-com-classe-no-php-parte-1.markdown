@@ -20,7 +20,7 @@ tags:
 <p>Outro detalhe importante sobre o sistema é que ele irá funcionar nas versões 4 e 5 do PHP e do MySQL, então, se a sua hospedagem é uma vergonha, não se preocupe! :D</p>
 <h3>A Tabela de Usuários</h3>
 <p>Se você já tem uma tabela de usuários pode pular essa parte... Se não, vamos criar a seguinte tabela no banco de dados do seu site:
-[caption id="attachment_664" align="aligncenter" width="163" caption="Tabela de Usuários"]<img src="http://blog.thiagobelem.net/arquivos/2009/12/tabela_usuarios.jpg" alt="Tabela de Usuários" title="Tabela de Usuários" width="163" height="146" class="size-full wp-image-664" />[/caption]
+<img src="http://blog.thiagobelem.net/arquivos/2009/12/tabela_usuarios.jpg" alt="Tabela de Usuários" title="Tabela de Usuários" width="163" height="146" class="size-full wp-image-664" />
 Para criar essa tabela, você poderá usar o seguinte código SQL:
 [code language="SQL"]
 CREATE TABLE `usuarios` (

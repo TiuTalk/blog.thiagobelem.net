@@ -32,7 +32,7 @@ tags:
 <p>Infelizmente eu cheguei no evento um pouquinho tarde, então perdi as duas primeiras palestras... Mas vamos às que eu assisti:</p>
 <h3>Desbravando o HTML5 Boilerplate - Zeno Rocha</h3>
 <p><a href="http://www.slideshare.net/zenorocha/desbravando-o-html5-boilerplate">http://www.slideshare.net/zenorocha/desbravando-o-html5-boilerplate</a></p>
-<p>[caption id="" align="alignright" width="100" caption="HTML5 Boilerplate"]<img title="HTML5 Boilerplate" src="http://cmstutorials.org/sources/tutorials/653224824html5_boilerplate.jpg" alt="HTML5 Boilerplate" width="100" height="100" />[/caption]</p>
+<p><img title="HTML5 Boilerplate" src="http://cmstutorials.org/sources/tutorials/653224824html5_boilerplate.jpg" alt="HTML5 Boilerplate" width="100" height="100" /></p>
 <p>Mais uma vez o meu amigo <a href="http://zenorocha.com/">Zeno Rocha</a> palestrou em um evento grande, e dessa vez ele mostrou pra todo mundo o poder do <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.</p>
 <p>Ele começou a <a href="http://www.slideshare.net/zenorocha/desbravando-o-html5-boilerplate">palestra</a> falando sobre o desenvolvimento front end de forma geral, mostrando todos os passos, ferramentas e necessidade de um projeto atual que utilize HTML 5 e CSS 3.</p>
 <p>Na segunda parte da palestra ele apresentou o <strong>Boilerplate</strong> e, sem entrar muito em detalhes, mostrou como ele já está preparado e te ajuda a utilizar todas essas funcionalidades e recursos, sendo um ótimo ponto de partida para um projeto em HTML 5.</p>

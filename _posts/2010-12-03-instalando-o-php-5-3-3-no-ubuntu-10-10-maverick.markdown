@@ -41,7 +41,7 @@ tags:
 <p>Depois disso instalamos o <strong>MySQL 5.1</strong> com o seguinte comando, que irá fazer um download de 20MB:</p>
 <p>[shell]$ sudo aptitude install mysql-client mysql-client-5.1 mysql-common mysql-server mysql-server-5.1 mysql-server-core-5.1[/shell]</p>
 <p>Durante o final da instalação uma janela aparecerá perguntando a senha padrão do MySQL:</p>
-<p>[caption id="attachment_1023" align="aligncenter" width="632"]<img class="size-full wp-image-1023  " title="Configuração de senha do MySQL 5.1" src="http://blog.thiagobelem.net/arquivos/2010/12/mysql.png" alt="" width="632" height="266" /> Configuração de senha do MySQL 5.1[/caption]</p>
+<p><img class="size-full wp-image-1023  " title="Configuração de senha do MySQL 5.1" src="http://blog.thiagobelem.net/arquivos/2010/12/mysql.png" alt="" width="632" height="266" /> Configuração de senha do MySQL 5.1</p>
 <h2 id="php">Terceiro passo - Download e compilação do <strong>PHP 5.3.3</strong></h2>
 <h3>Bibliotecas necessárias</h3>
 <p>Para conseguir compilar o PHP precisaremos que algumas bibliotecas estejam instaladas, insale-as com esse comando:</p>
