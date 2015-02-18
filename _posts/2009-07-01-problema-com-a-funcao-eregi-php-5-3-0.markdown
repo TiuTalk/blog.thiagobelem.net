@@ -26,36 +26,36 @@ Antigamente faríamos assim:
 
 
 [code language="php"]
-&lt;?php
+<?php
 
 $palavra = '(casa|carro)';
 $frase = 'Eu fui pra casa ontem!';
 
 if (ereg($palavra, $frase)) {
-	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;
+	echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
 } else {
-	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;
+	echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
 }
 
-?&gt;
+?>
 [/code]
 
 Agora, com o PHP 5.3.0 precisamos usar a função <strong>preg_match()</strong>, dessa forma:
 
 
 [code language="php"]
-&lt;?php
+<?php
 
 $palavra = '/(casa|carro)/';
 $frase = 'Eu fui pra casa ontem!';
 
 if (preg_match($palavra, $frase)) {
-	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;
+	echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
 } else {
-	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;
+	echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
 }
 
-?&gt;
+?>
 [/code]
 
 Repare que entrou uma barra (pra direita) antes e depois da expressão regular.
@@ -65,18 +65,18 @@ E pra quem usava o eregi, é só adicionar um "i" no final da expressão regular
 
 
 [code language="php"]
-&lt;?php
+<?php
 
 $palavra = '/(casa|carro)/i';
 $frase = 'Eu fui pra CasA ontem!';
 
 if (preg_match($palavra, $frase)) {
-	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;
+	echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
 } else {
-	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;
+	echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
 }
 
-?&gt;
+?>
 [/code]
 
 --
