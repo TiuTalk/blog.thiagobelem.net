@@ -38,7 +38,7 @@ tags:
 <p>Viu? eu disse que era simples, por enquanto nosso formulário não faz nada, alem de verificar se o que inserimos nele é valido.</p>
 <p><strong>Atenção:</strong> não é recomendado definir eventos DOM (onclick, onsubmit e etc.) diretamente no HTML, o ideal seria fazer esse vínculo através do Javascript também, vide:</p>
 <ul>
-<li><span style="line-height: 14px;"><a href="http://stackoverflow.com/questions/1796141/properly-bind-javascript-events">http://stackoverflow.com/questions/1796141/properly-bind-javascript-events</a><br />
+<li><span style="line-height: 14px;"><a href="http://stackoverflow.com/questions/1796141/properly-bind-javascript-events">http://stackoverflow.com/questions/1796141/properly-bind-javascript-events</a>
 </span></li>
 <li><a href="http://robertnyman.com/2008/11/20/why-inline-css-and-javascript-code-is-such-a-bad-thing/">http://robertnyman.com/2008/11/20/why-inline-css-and-javascript-code-is-such-a-bad-thing/</a></li>
 </ul>

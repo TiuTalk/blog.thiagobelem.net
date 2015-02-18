@@ -13,16 +13,16 @@ tags: []
 <p>Semana passada algumas pessoas me perguntaram no MSN como poderiam fazer uma mensagem de boas-vindas em função da hora...</p>
 <p>Isso é muito simples, veja um exemplo:</p>
 <p>[code='php']<?php</p>
-<p>// Formato 24 horas (de 1 a 24)<br />
+<p>// Formato 24 horas (de 1 a 24)
 $hora = date('G');</p>
-<p>if (($hora >= 0) AND ($hora < 6)) {<br />
-$mensagem = "Boa madrugada";<br />
-} else if (($hora >= 6) AND ($hora < 12)) {<br />
-$mensagem = "Bom dia";<br />
-} else if (($hora >= 12) AND ($hora < 18)) {<br />
-$mensagem = "Boa tarde";<br />
-} else {<br />
-$mensagem = "Boa noite";<br />
+<p>if (($hora >= 0) AND ($hora < 6)) {
+$mensagem = "Boa madrugada";
+} else if (($hora >= 6) AND ($hora < 12)) {
+$mensagem = "Bom dia";
+} else if (($hora >= 12) AND ($hora < 18)) {
+$mensagem = "Boa tarde";
+} else {
+$mensagem = "Boa noite";
 }</p>
 <p>echo $mensagem;</p>
 <p>?>[/code]</p>

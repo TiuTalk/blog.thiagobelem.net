@@ -25,136 +25,136 @@ tags:
 <h3>E como é esse arquivo?</h3>
 <p>Existem vários <strong>CSS Reset</strong> rolando pela Internet... Todos funcionam da mesma forma mas alguns atingem mais elementos que outros... Mas teoricamente não há diferença.</p>
 <p>Esse aqui é o que eu uso no meu <a href="http://thiagobelem.net/" target="_blank">site pessoal</a>:</p>
-<p>[code language="css"]html, body, div, span, applet, object, iframe,<br />
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,<br />
-a, abbr, acronym, address, big, cite, code,<br />
-del, dfn, em, font, img, ins, kbd, q, s, samp,<br />
-small, strike, strong, sub, sup, tt, var,<br />
-b, u, i, center,<br />
-dl, dt, dd, ol, ul, li,<br />
-fieldset, form, label, legend,<br />
-table, caption, tbody, tfoot, thead, tr, th, td {<br />
-	margin: 0;<br />
-	padding: 0;<br />
-	border: 0;<br />
-	outline: 0;<br />
-	font-size: 100%;<br />
-	vertical-align: baseline;<br />
-	background: transparent;<br />
-}<br />
-body {<br />
-	line-height: 1;<br />
-}<br />
-ol, ul {<br />
-	list-style: none;<br />
-}<br />
-blockquote, q {<br />
-	quotes: none;<br />
-}<br />
-blockquote:before, blockquote:after,<br />
-q:before, q:after {<br />
-	content: '';<br />
-	content: none;<br />
+<p>[code language="css"]html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }</p>
-<p>:focus {<br />
-	outline: 0;<br />
+<p>:focus {
+	outline: 0;
 }</p>
-<p>ins {<br />
-	text-decoration: none;<br />
-}<br />
-del {<br />
-	text-decoration: line-through;<br />
+<p>ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
 }</p>
-<p>table {<br />
-	border-collapse: collapse;<br />
-	border-spacing: 0;<br />
-}[/code]<br />
-<br />
-Se você preferir, existe um CSS da Yahoo mesmo, chamado de YUI CSS Reset:<br />
+<p>table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}[/code]
+
+Se você preferir, existe um CSS da Yahoo mesmo, chamado de YUI CSS Reset:
 <a href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css" target="_blank">http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css</a></p>
-<p>[code language="css"]/*<br />
-Copyright (c) 2009, Yahoo! Inc. All rights reserved.<br />
-Code licensed under the BSD License:<br />
-http://developer.yahoo.net/yui/license.txt<br />
-version: 2.7.0<br />
-*/<br />
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea ,p,blockquote,th,td {<br />
-	margin:0;<br />
-	padding:0;<br />
-}<br />
-table {<br />
-	border-collapse:collapse;<br />
-	border-spacing:0;<br />
-}<br />
-fieldset,img {<br />
-	border:0;<br />
-}<br />
-address,caption,cite,code,dfn,em,strong,th,var {<br />
-	font-style:normal;<br />
-	font-weight:normal;<br />
-}<br />
-ol,ul {<br />
-	list-style:none;<br />
-}<br />
-caption,th {<br />
-	text-align:left;<br />
-}<br />
-h1,h2,h3,h4,h5,h6 {<br />
-	font-size:100%;<br />
-	font-weight:normal;<br />
-}<br />
-q:before,q:after {<br />
-	content:'';<br />
-}<br />
-abbr,acronym {<br />
-	border:0;<br />
-}<br />
+<p>[code language="css"]/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea ,p,blockquote,th,td {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img {
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym {
+	border:0;
+}
 [/code]</p>
-<p>E existe um <strong>CSS Reset Reloaded</strong> criado por <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/" target="_blank">Eric Meyer</a>:<br />
-[code language="css"]html, body, div, span, applet, object, iframe,<br />
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,<br />
-a, abbr, acronym, address, big, cite, code,<br />
-del, dfn, em, font, img, ins, kbd, q, s, samp,<br />
-small, strike, strong, sub, sup, tt, var,<br />
-dl, dt, dd, ol, ul, li,<br />
-fieldset, form, label, legend,<br />
-table, caption, tbody, tfoot, thead, tr, th, td {<br />
-	margin: 0;<br />
-	padding: 0;<br />
-	border: 0;<br />
-	outline: 0;<br />
-	font-weight: inherit;<br />
-	font-style: inherit;<br />
-	font-size: 100%;<br />
-	font-family: inherit;<br />
-	vertical-align: baseline;<br />
-}<br />
-/* remember to define focus styles! */<br />
-:focus {<br />
-	outline: 0;<br />
-}<br />
-body {<br />
-	line-height: 1;<br />
-	color: black;<br />
-	background: white;<br />
-}<br />
-ol, ul {<br />
-	list-style: none;<br />
-}<br />
-/* tables still need 'cellspacing="0"' in the markup */<br />
-table {<br />
-	border-collapse: separate;<br />
-	border-spacing: 0;<br />
-}<br />
-caption, th, td {<br />
-	text-align: left;<br />
-	font-weight: normal;<br />
-}<br />
-blockquote:before, blockquote:after,<br />
-q:before, q:after {<br />
-	content: "";<br />
-}<br />
-blockquote, q {<br />
-	quotes: "" "";<br />
+<p>E existe um <strong>CSS Reset Reloaded</strong> criado por <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/" target="_blank">Eric Meyer</a>:
+[code language="css"]html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
 }[/code]</p>
 <p>Espero que tenham gostado! :)</p>

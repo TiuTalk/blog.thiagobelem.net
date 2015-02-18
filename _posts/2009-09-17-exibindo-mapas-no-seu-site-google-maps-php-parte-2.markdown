@@ -25,20 +25,20 @@ tags:
 <p>[code language="html" light="true"]<div id="googleMap"></div>[/code]</p>
 <p>Aí você pode definir a largura e altura dele no CSS do seu site ou até mesmo in-line... Não tem diferença.</p>
 <p>Depois é só charmar esse código JavaScript, pode ser no fim da página, antes do body:</p>
-<p>[code language="javascript"]	if (GBrowserIsCompatible()) {<br />
-		var map = new GMap2(document.getElementById("googleMap"));<br />
-		var lat = {LATITUDE}; // Latitude do marcador<br />
-		var lon = {LONGITUDE}; // Longitude do marcador<br />
+<p>[code language="javascript"]	if (GBrowserIsCompatible()) {
+		var map = new GMap2(document.getElementById("googleMap"));
+		var lat = {LATITUDE}; // Latitude do marcador
+		var lon = {LONGITUDE}; // Longitude do marcador
 		var zoom = {ZOOM}; // Zoom</p>
-<p>		map.addControl(new GMapTypeControl());<br />
-		map.addControl(new GLargeMapControl());<br />
+<p>		map.addControl(new GMapTypeControl());
+		map.addControl(new GLargeMapControl());
 		map.setCenter(new GLatLng(lat, lon), zoom);</p>
 <p>		var marker = new GMarker(new GLatLng(lat,lon));</p>
-<p>		GEvent.addListener(marker, "click", function() {<br />
-			marker.openInfoWindowHtml("<h2>Minha marca</h2><p>Meu texto!</p>");<br />
+<p>		GEvent.addListener(marker, "click", function() {
+			marker.openInfoWindowHtml("<h2>Minha marca</h2><p>Meu texto!</p>");
 		});</p>
-<p>		map.addOverlay(marker);<br />
-		map.setCenter(point, zoom);<br />
+<p>		map.addOverlay(marker);
+		map.setCenter(point, zoom);
 	}[/code]</p>
 <p>Agora é só substituir o <strong style="background: gray; color: orange">{LATITUDE}</strong>, <strong style="background: gray; color: orange">{LONGITUDE}</strong> e <strong style="background: gray; color: orange">{ZOOM}</strong> (nas linhas 3, 4 e 5) pelas informações que você conseguiu pegar usando o passo-a-passo do <a href="http://blog.thiagobelem.net/php/buscando-a-latitude-e-longitude-de-um-endereco-google-maps-php-parte-1/" target="_blank">outro artigo</a>.</p>
 <p>Espero que tenham gostado! :)</p>

@@ -15,11 +15,11 @@ tags: []
 <p>Segundo a descriçaõ da Wikipédia sobre o WWW:</p>
 <blockquote><p>A <em><strong>W</strong>orld <strong>W</strong>ide <strong>W</strong>eb</em> (que em português significa, "Rede de alcance mundial"; também conhecida como Web e WWW) é um sistema de documentos em hipermídia que são interligados e executados na Internet.</p></blockquote>
 <p>Muita gente diz que o no-www é 'modinha' e não tem uma real utilidade. Eu apoio e vou ensinar a vocês como instalá-lo no seu site.. é bem simples:</p>
-<p>Primeiro abra o bloco de notas (notepad) do seu computador e escreva o seguinte pedaço de texto:<br />
-[code language="shell"]<br />
-RewriteEngine On<br />
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]<br />
-RewriteRule ^(.*)$ http://%1/$1 [R=301,L]<br />
+<p>Primeiro abra o bloco de notas (notepad) do seu computador e escreva o seguinte pedaço de texto:
+[code language="shell"]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 [/code]</p>
 <p>Salve este arquivo com o nome de '.htaccess'... Isso mesmo, o arquivo não tem nome, só uma extensão grande de 8 letras.</p>
 <p>Depois, faça upload desse arquivo para o seu site, na mesma pasta onde fica o <em>index</em> do seu site (chamado de <em>root </em>ou <strong>raiz </strong>do site).</p>

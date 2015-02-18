@@ -40,54 +40,54 @@ tags:
 </ol>
 <h3>Começando pelo Controller</h3>
 <div>O trabalho da paginação começa no <strong>Controller</strong>... Defina os parâmetros de busca (find) normalmente, como você sempre fez:</div>
-<p>[code language="php"]<br />
+<p>[code language="php"]
 class NoticiasController extends AppController {</p>
-<p>	/**<br />
-	 * Lista as notícias utilizando paginação<br />
-	 */<br />
+<p>	/**
+	 * Lista as notícias utilizando paginação
+	 */
 	public function lista() {</p>
-<p>		$options = array(<br />
-			'fields' => array('Noticia.titulo', 'Noticia.resumo'),<br />
+<p>		$options = array(
+			'fields' => array('Noticia.titulo', 'Noticia.resumo'),
 			'conditions' => array('Noticia.active' => true),</p>
-<p>			'order' => array('Noticia.created' => 'DESC'),<br />
-			'limit' => 10<br />
+<p>			'order' => array('Noticia.created' => 'DESC'),
+			'limit' => 10
 		);</p>
 <p>	}</p>
-<p>}<br />
+<p>}
 [/code]</p>
 <p>Definido os parâmetros de busca, podemos atribuí-los ao atributo <strong>paginate</strong> do <strong>Controller</strong> e rodar a consulta no model <strong>Noticia</strong>:</p>
 <p>[code language="php"]class NoticiasController extends AppController {</p>
-<p>	/**<br />
-	 * Lista as notícias utilizando paginação<br />
-	 */<br />
+<p>	/**
+	 * Lista as notícias utilizando paginação
+	 */
 	public function lista() {</p>
-<p>		$options = array(<br />
-			'fields' => array('Noticia.titulo', 'Noticia.resumo'),<br />
+<p>		$options = array(
+			'fields' => array('Noticia.titulo', 'Noticia.resumo'),
 			'conditions' => array('Noticia.active' => true),</p>
-<p>			'order' => array('Noticia.created' => 'DESC'),<br />
-			'limit' => 10<br />
+<p>			'order' => array('Noticia.created' => 'DESC'),
+			'limit' => 10
 		);</p>
 <p>		$this->paginate = $options;</p>
-<p>		// Roda a consulta, já trazendo os resultados paginados<br />
+<p>		// Roda a consulta, já trazendo os resultados paginados
 		$noticias = $this->paginate('Noticia');</p>
-<p>		// Envia os dados pra view<br />
-		$this->set('noticias', $noticias);<br />
+<p>		// Envia os dados pra view
+		$this->set('noticias', $noticias);
 	}</p>
 <p>}[/code]</p>
 <p>E tá tudo pronto.. agora é só ir pra view mostrar essas notícias e colocar os links de paginação! :)</p>
 <h3>Paginação na View</h3>
 <p>Um exemplo básico (usando a tag <em>article</em> do <strong>HTML5</strong>) da listagem de notícias:</p>
-<p>[code language="php"]<article><br />
-<?php foreach($noticias AS $data): ?><br />
-	<h1><?php echo $data['Noticia']['titulo'] ?></h1><br />
-	<p><?php echo $data['Noticia']['resumo'] ?></p><br />
-<?php endforeach; ?><br />
+<p>[code language="php"]<article>
+<?php foreach($noticias AS $data): ?>
+	<h1><?php echo $data['Noticia']['titulo'] ?></h1>
+	<p><?php echo $data['Noticia']['resumo'] ?></p>
+<?php endforeach; ?>
 </article>[/code]</p>
 <p>E por ultimo, a listagem dos links de paginação:</p>
-<p>[code language="php"]<br />
-echo $this->Paginator->prev('« Mais novas', null, null, array('class' => 'desabilitado'));<br />
-echo $this->Paginator->numbers();<br />
-echo $this->Paginator->next('Mais antigas »', null, null, array('class' => 'desabilitado'));<br />
+<p>[code language="php"]
+echo $this->Paginator->prev('« Mais novas', null, null, array('class' => 'desabilitado'));
+echo $this->Paginator->numbers();
+echo $this->Paginator->next('Mais antigas »', null, null, array('class' => 'desabilitado'));
 [/code]</p>
 <p>Na linha 1 e 3 nós mostramos os links para a <strong>próxima página</strong> e para a <strong>página anterior</strong>. Já na linha 2 nós mostramos aquela lista de números das páginas:<strong> 1, 2, 3, 4</strong> cada uma com um link!</p>
 <p>O <strong>PaginatorHelper</strong> tem muitas outras opções e customizações, não deixe de consultar a <a href="http://api.cakephp.org/class/paginator-helper">documentação</a>.</p>

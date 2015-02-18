@@ -20,53 +20,53 @@ tags:
 <p>A vantagem de usar essa função (e não as que eu achei por aí, buscando no Google) é que ela identifica qual é o melhor método pra fazer a requisição à essa API, usando a biblioteca <strong>cURL</strong>, <strong>file_get_contents()</strong> ou <strong>fopen()</strong>+<strong>fgets()</strong>. ;D</p>
 <h3>Código da Função</h3>
 <p>[code lang="php"]<?php</p>
-<p>/**<br />
-* Função para criar versões reduzidas das URLs<br />
-*<br />
-* @author    Thiago Belem <contato@thiagobelem.net><br />
-*<br />
-* @param string $url O endereço a ser reduzido<br />
-* @return string A nova URL (usando o TinyURL)<br />
-*/<br />
-function tinyURL($url)<br />
-{<br />
-	define('TINYURL_API', 'http://tinyurl.com/api-create.php?url=%s');<br />
+<p>/**
+* Função para criar versões reduzidas das URLs
+*
+* @author    Thiago Belem <contato@thiagobelem.net>
+*
+* @param string $url O endereço a ser reduzido
+* @return string A nova URL (usando o TinyURL)
+*/
+function tinyURL($url)
+{
+	define('TINYURL_API', 'http://tinyurl.com/api-create.php?url=%s');
 	$requestURL = sprintf(TINYURL_API, $url);</p>
-<p>	// Checa a existência da biblioteca cURL<br />
-	$curl = (bool) function_exists('curl_init');<br />
-	// Checa a variável allow_url_fopen no php.ini<br />
+<p>	// Checa a existência da biblioteca cURL
+	$curl = (bool) function_exists('curl_init');
+	// Checa a variável allow_url_fopen no php.ini
 	$allow_url = (bool) ini_get('allow_url_fopen');</p>
-<p>	// Verifica se a biblioteca cURL existe e se não é possível usar URLs no fopen<br />
-	if ($curl AND !$allow_url) {<br />
-		// Caso exista, usa o cURL para fazer a requisição<br />
-		$ch = curl_init($requestURL);<br />
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);<br />
-		$resultado = curl_exec($ch);<br />
-		curl_close($ch);<br />
-	// Caso não possa usar o cURL ou possa usar URLs no fopen<br />
-	} else if ($allow_url) {<br />
-		// Tenta usar o file_get_contents<br />
-		$resultado = file_get_contents($requestURL);<br />
-		// Se algo der errado, tenta com o fopen<br />
-		if (!$resultado) {<br />
-			$handle = @fopen($requestURL, "r");<br />
-			$resultado = '';<br />
-			if ($handle) while (!feof($handle)) $resultado .= fgets($handle, 4096);<br />
-		}<br />
-	// Caso não possa usar nenhum dos dois<br />
-	} else {<br />
-		// Exibe uma mensagem de erro<br />
-		trigger_error('tinyURL: Não é possível usar o cURL nem URLs com fopen!', E_USER_ERROR);<br />
-	}<br />
-	// Retorna o resultado sem espaços adicionais ou a URL original caso algo tenha dado errado<br />
-	return ((isset($resultado) AND !empty($resultado)) ? trim($resultado) : $url);<br />
+<p>	// Verifica se a biblioteca cURL existe e se não é possível usar URLs no fopen
+	if ($curl AND !$allow_url) {
+		// Caso exista, usa o cURL para fazer a requisição
+		$ch = curl_init($requestURL);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$resultado = curl_exec($ch);
+		curl_close($ch);
+	// Caso não possa usar o cURL ou possa usar URLs no fopen
+	} else if ($allow_url) {
+		// Tenta usar o file_get_contents
+		$resultado = file_get_contents($requestURL);
+		// Se algo der errado, tenta com o fopen
+		if (!$resultado) {
+			$handle = @fopen($requestURL, "r");
+			$resultado = '';
+			if ($handle) while (!feof($handle)) $resultado .= fgets($handle, 4096);
+		}
+	// Caso não possa usar nenhum dos dois
+	} else {
+		// Exibe uma mensagem de erro
+		trigger_error('tinyURL: Não é possível usar o cURL nem URLs com fopen!', E_USER_ERROR);
+	}
+	// Retorna o resultado sem espaços adicionais ou a URL original caso algo tenha dado errado
+	return ((isset($resultado) AND !empty($resultado)) ? trim($resultado) : $url);
 }</p>
 <p>?>[/code]</p>
 <h3>Exemplo de uso <span style="color: #c0c0c0;">(se é que precisa..)</span></h3>
-<p>[code lang="php"]<br />
-<?php<br />
-	echo tinyURL('http://blog.thiagobelem.net/');<br />
-	// http://tinyurl.com/kwzg4w<br />
-?><br />
+<p>[code lang="php"]
+<?php
+	echo tinyURL('http://blog.thiagobelem.net/');
+	// http://tinyurl.com/kwzg4w
+?>
 [/code]</p>
 <p>Espero que tenham gostado! :)</p>

@@ -26,37 +26,37 @@ tags:
 <h3>Repositório local</h3>
 <p>Se você já possui um repositório local, pule para o pŕoximo passo.</p>
 <p>Tudo começa com a criação de um repositório Git simples:</p>
-<p>[code language="bash"]<br />
-$ mkdir website && cd website<br />
-$ git init<br />
-Initialized empty Git repository in /home/thiagobelem/website/.git/<br />
-$ echo 'Olá, mundo!' > index.html<br />
-$ git add index.html<br />
-$ git commit -q -m "Iniciando o repositório"<br />
+<p>[code language="bash"]
+$ mkdir website && cd website
+$ git init
+Initialized empty Git repository in /home/thiagobelem/website/.git/
+$ echo 'Olá, mundo!' > index.html
+$ git add index.html
+$ git commit -q -m "Iniciando o repositório"
 [/code]</p>
 <p>Agora que seu repositório local está pronto, o index.html foi criado e o primeiro commit feito, vamos criar o repositório remoto no ambiente de produção (servidor onde o site está/vai rodar).</p>
 <h3>Repositório remoto</h3>
 <p>Partindo do princípio que o seu site vai rodar em um servidor que você possui <a href="http://blog.thiagobelem.net/login-automatico-no-ssh-no-linux/" target="_blank">acesso SSH facilitado</a>, vamos criar o repositório lá que será uma cópia do servidor local:</p>
-<p>[code language="bash"]<br />
-$ mkdir website.git && cd website.git<br />
-$ git init --bare<br />
-Initialized empty Git repository in /home/thiagobelem/website.git/<br />
+<p>[code language="bash"]
+$ mkdir website.git && cd website.git
+$ git init --bare
+Initialized empty Git repository in /home/thiagobelem/website.git/
 [/code]</p>
 <p>Agora começa a parte interessante.. Você acabou de criar um repositório <strong>bare</strong>!</p>
 <p>Um repositório bare é um repositório que tem <strong>apenas os arquivos versionados</strong>, mas não inclui a pasta .git e todos os arquivos de informações e configurações do repositório. Não é um <em>working copy directory</em>.</p>
 <p>Agora vamos começar a criar o git-hook que será responsável por copiar todos os arquivos - do repositório bare - para a pasta onde o site vai rodar, no ambiente de produção:</p>
-<p>[code language="bash"]<br />
-$ cat > hooks/post-receive<br />
-#!/bin/sh<br />
-GIT_WORK_TREE=/var/www/meusite.com.br git checkout -f<br />
-$ chmod +x hooks/post-receive<br />
+<p>[code language="bash"]
+$ cat > hooks/post-receive
+#!/bin/sh
+GIT_WORK_TREE=/var/www/meusite.com.br git checkout -f
+$ chmod +x hooks/post-receive
 [/code]</p>
 <p>O git-hook post-receive será ativado sempre que o seu repositório receber atualizações (que você enviará da sua máquina) e executará os commandos que você definiu.</p>
 <p>Veja que primeiro definimos a variável de ambiente GIT_WORK_TREE como a raíz do site e depois executamos um <code>git checkout -f</code> que irá mover os arquivos sem nenhum vestígio do seu repositório Git.</p>
 <p>Agora é só voltar para a sua máquina e adicionar o repositório remoto:</p>
-<p>[code language="bash"]<br />
-$ git remote add web ssh://meusite.com.br/home/thiagobelem/website.git<br />
-$ git push web +master:refs/heads/master<br />
+<p>[code language="bash"]
+$ git remote add web ssh://meusite.com.br/home/thiagobelem/website.git
+$ git push web +master:refs/heads/master
 [/code]</p>
 <p>Esses dois comandos irão adicionar o repositório externo ao repositório local e enviar os arquivos locais para o servidor.</p>
 <p>Após os dois comandos o servidor vai conter uma cópia dos arquivos locais.</p>

@@ -13,52 +13,52 @@ tags: []
 <h4>Criando pastas</h4>
 <p>Para criar uma pasta exiset a função <strong>mkdir()</strong> que é bem fácil de usar... O caminho da pasta a ser criada é - normalmente - relativo ao script atual, e durante a criação você pode definir os níveis de permissões da pasta (CHMOD) e se essa criação vai ser <em>recursive</em> (veja mais a diante).</p>
 <p>Para criarmos uma pasta no mesmo diretório do script atual, fazemos das seguintes maneiras:</p>
-<p>[code='php']<br />
-<?php<br />
-mkdir('/novapasta/'); // Cria uma nova pasta dentro do diretório atual<br />
-?><br />
+<p>[code='php']
+<?php
+mkdir('/novapasta/'); // Cria uma nova pasta dentro do diretório atual
+?>
 [/code]</p>
 <p>Por padrão o CHMOD das pastas criadas pelo PHP é 777... Se quiser criar uma pasta com permissões mais restritas, ou seja, um CHMOD menor, faça dessa forma:</p>
-<p>[code='php']<br />
-<?php<br />
-mkdir('/novapasta/', 0744); // Cria uma nova pasta dentro do diretório atual com permissão CHMOD de 744<br />
-?><br />
+<p>[code='php']
+<?php
+mkdir('/novapasta/', 0744); // Cria uma nova pasta dentro do diretório atual com permissão CHMOD de 744
+?>
 [/code]</p>
 <p>Por motivos maiores o nº do CHMOD (no nosso exemplo: 744) deve ser sempre precedido de um zero e não pode estar entre aspas.</p>
 <p>Agora suponhamos que você precise criar duas pastas, mas que seja uma dentro da outra... Você pode fazer de duas formas:</p>
-<p>[code='php']<br />
-<?php<br />
-// Dividindo em duas instruções:<br />
-mkdir('/novapasta/'); // Cria uma nova pasta dentro do diretório atual<br />
+<p>[code='php']
+<?php
+// Dividindo em duas instruções:
+mkdir('/novapasta/'); // Cria uma nova pasta dentro do diretório atual
 mkdir('/novapasta/outrapasta/'); // Cria uma nova pasta dentro da pasta /novapasta/ que está dentro do diretório atual</p>
-<p>// Ou, você pode fazer assim:<br />
-mkdir('/novapasta/outrapasta/', 0777, true); // Cria uma pasta dentro da outra (que também e nova) - Criação Recursiva<br />
-?><br />
+<p>// Ou, você pode fazer assim:
+mkdir('/novapasta/outrapasta/', 0777, true); // Cria uma pasta dentro da outra (que também e nova) - Criação Recursiva
+?>
 [/code]</p>
 <p>Repare que, na segunda forma de se criar uma pasta, definimos o terceiro parâmetro (criação recursiva) como true, isso faz com que o PHP vá criando as pastas, uma a uma, de forma automática caso elas não existam.</p>
 <h4>Deletando pastas</h4>
 <p>Se você quiser deletar pastas é só usar função <strong>rmdir()</strong> para isso. Porém você precisa tomar um cuidado antes: a pasta precisa estar vazia (não conter outros arquivos e/ou pastas dentro dela) e você precisa ter a permissão de usuário (CHMOD) necessária para essa operação.</p>
 <p>Veja um exemplo de como deletar uma das pastas criadas nos exemplos anteriores:</p>
-<p>[code='php']<br />
-<?php<br />
-rmdir('/novapasta/outrapasta/'); // Deleta a pasta /outrapasta/ de dentro da pasta /novapasta/<br />
-?><br />
+<p>[code='php']
+<?php
+rmdir('/novapasta/outrapasta/'); // Deleta a pasta /outrapasta/ de dentro da pasta /novapasta/
+?>
 [/code]</p>
 <p>Em um futuro próximo ensinarei a manipular arquivos também e você poderá fazer a sua super-função para deletar a pasta e tudo que estiver dentro. Aguarde.</p>
 <h4>Renomeando pastas</h4>
 <p>Pra renomear pastas também não tem mistério, é só usar a função <strong>rename()</strong> que também pode ser usada para renomear arquivos:</p>
-<p>[code='php']<br />
-<?php<br />
-rename('/novapasta/', '/minhapasta/'); // Renomeia /novapasta/ para /minhapasta/<br />
-?><br />
+<p>[code='php']
+<?php
+rename('/novapasta/', '/minhapasta/'); // Renomeia /novapasta/ para /minhapasta/
+?>
 [/code]</p>
 <h4>Movendo pastas</h4>
 <p>Não.. Não existe função para "mover" uma pasta por que, na verdade, o que você faz é renomeá-la... Vejamos um exemplo:</p>
 <p>Temos a pasta site e, dentro dela, temos duas pastas: imagens e blog. Queremos mover a pasta blog para fora da pasta site... O script rodado está fora da pasta site também, é só fazermos assim:</p>
-<p>[code='php']<br />
-<?php<br />
-rename('/site/blog/', '/blog/'); // Com isso, "tiramos" a pasta blog de dentro da pasta /site/<br />
-?><br />
+<p>[code='php']
+<?php
+rename('/site/blog/', '/blog/'); // Com isso, "tiramos" a pasta blog de dentro da pasta /site/
+?>
 [/code]</p>
 <p>------</p>
 <p>E aí.. gostaram? Comentem!</p>

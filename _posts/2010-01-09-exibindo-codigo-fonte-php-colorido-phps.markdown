@@ -23,14 +23,14 @@ tags:
 <p>Hoje vou ensiná-los como habilitar isso em seus servidores rodando Apache e PHP... São apenas dois passos!</p>
 <h3>Passo 1</h3>
 <p>Vá na raiz do seu site e edite (ou crie se necessário) o seu arquivo .htaccess e adicione as seguintes linhas:</p>
-<p>[code]Action php-source /php-source.php<br />
-AddHandler php-source .phps[/code]<br />
-Com isso você cria uma nova "ação" no apache e diz que os arquivos .phps serão "lidos" por essa "ação"... Você vai entender melhor no segundo passo:<br />
-<br />
+<p>[code]Action php-source /php-source.php
+AddHandler php-source .phps[/code]
+Com isso você cria uma nova "ação" no apache e diz que os arquivos .phps serão "lidos" por essa "ação"... Você vai entender melhor no segundo passo:
+
 <h3>Passo 2</h3>
 <p>Ainda na raiz do seu site, crie um arquivo chamado "<strong>php-source.php</strong>" e coloque o seguinte conteúdo nele:</p>
-<p>[code language="php"]<?php<br />
-highlight_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["PATH_INFO"]);<br />
+<p>[code language="php"]<?php
+highlight_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["PATH_INFO"]);
 ?> [/code]</p>
 <p>Isso fará com que esse arquivo criado pegue o caminho do arquvo requisitado (com extensão .phps) e use a função <a href="http://www.php.net/manual/pt_BR/function.highlight-file.php" title="highlight_file()" target="_blank">highlight_file()</a> do PHP para exibir o seu código-fonte com sintaxe coloria.</p>
 <p>Pronto! :D</p>

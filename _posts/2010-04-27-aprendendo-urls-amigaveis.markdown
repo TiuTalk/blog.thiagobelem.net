@@ -20,12 +20,12 @@ tags:
 <p>Hoje resolvi falar sobre um assunto bem legal: URLs amigáveis!</p>
 <p style="color: gray;"><strong>Atualização 30/04/10</strong>: Adicionei algumas informações extras e fiz algumas correções nas RewriteRules.</p>
 <p>Sabe aqueles sites que usam urls como:</p>
-<p><code>http://www.meusite.com.br/<span style="color: green;">contato/</span></code><br />
-<code>http://www.meusite.com.br/<span style="color: green;">produtos/camisetas/</span></code><br />
+<p><code>http://www.meusite.com.br/<span style="color: green;">contato/</span></code>
+<code>http://www.meusite.com.br/<span style="color: green;">produtos/camisetas/</span></code>
 <code>http://www.meusite.com.br/<span style="color: green;">noticias/minha-noticia/2/</span></code></p>
 <p>Esse recurso é chamado de URL amigável... Amigável com os sistemas de busca e com o visitante que não precisa olhar para a URL de um link ou do navegador e ver coisas estranhas e complicadas de entender como essas:</p>
-<p><code>http://www.meusite.com.br/<span style="color: red;">contato.php</span></code><br />
-<code>http://www.meusite.com.br/<span style="color: red;">produtos.php?categoria=5</span></code><br />
+<p><code>http://www.meusite.com.br/<span style="color: red;">contato.php</span></code>
+<code>http://www.meusite.com.br/<span style="color: red;">produtos.php?categoria=5</span></code>
 <code>http://www.meusite.com.br/<span style="color: red;">noticia.php?id=2</span></code></p>
 <p>As URLs amigáveis são muito mais fáceis de usar e entender... Antes de clicar no link você já sabe do que se trata só de olhar pro endereço e os sistemas de busca aumenta a pontuação dessas páginas pois o endereço é relevante (por conter palavras que fazem parte do título e/ou conteúdo da página).</p>
 <p>Para começar a usar esse recurso você precisa antes entender o que acontece quando você tenta acessar um endereço com o seu navegador:</p>
@@ -36,11 +36,11 @@ tags:
 <p>A grosso modo, usando o exemplo do contato, quando você acessar o endereço <code>http://www.meusite.com.br/contato/</code> o servidor (usando os códigos que você definir) será instruído a usar o arquivo <code>contato.php</code> para responder por essa requisição, sem pra isso precisar redirecionar o visitante ou apresentar uma página de <strong>erro 404</strong> (que é o que normalmente aconteceria).</p>
 <h3>Começando o trabalho</h3>
 <p>Você precisa, antes de tudo, anotar em um papel os endereços atuais do seu site e como você quer que eles fiquem... De alguma forma você precisa seguir um padrão e manter as mesmas informações que você tinha antes... Vamos ver alguns exemplos:</p>
-<p><code>http://meusite.com/<span style="background: yellow;">contato</span>.php</code> (A URL atual)<br />
+<p><code>http://meusite.com/<span style="background: yellow;">contato</span>.php</code> (A URL atual)
 <code>http://meusite.com/<span style="background: yellow;">contato</span>/</code> (A nova URL)</p>
-<p><code>http://meusite.com/<span style="background: yellow;">produtos</span>.php?id=<span style="background: lime;">2</span></code> (A URL atual)<br />
+<p><code>http://meusite.com/<span style="background: yellow;">produtos</span>.php?id=<span style="background: lime;">2</span></code> (A URL atual)
 <code>http://meusite.com/<span style="background: yellow;">produtos</span>/camiseta-rosa/<span style="background: lime;">2</span>/</code> (A nova URL)</p>
-<p><code>http://meusite.com/<span style="background: yellow;">livros</span>.php?categoria=<span style="background: lime;">suspense</span>&pagina=<span style="background: orange;">3</span></code> (A URL atual)<br />
+<p><code>http://meusite.com/<span style="background: yellow;">livros</span>.php?categoria=<span style="background: lime;">suspense</span>&pagina=<span style="background: orange;">3</span></code> (A URL atual)
 <code>http://meusite.com/<span style="background: yellow;">livros</span>/<span style="background: lime;">suspense</span>/pagina-<span style="background: orange;">3</span>/</code> (A nova URL)</p>
 <p>Perceba que em todos os novos formatos temos as mesmas informações que possuíamos no formato anterior, e em alguns casos adicionamos novas informações que, para o servidor, poderão ou não fazer diferença...</p>
 <p>Todos esses formatos são definidos por você, mas você vai perceber que é preciso seguir um padrão para que uma regra não acabe atrapalhando a outra.</p>
@@ -50,11 +50,11 @@ tags:
 <p>Recomendo que, antes de mais nada, se você entende um mínimo de inglês e quer realmente conseguir usar URLs Amigáveis da melhor forma no seu site, leia a <a title="Documentação do mod_rewrite" href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html" target="_blank">documentação do mod_rewrite</a> no site da Apache, e acredite: essa documentação é realmente importante e significativa.</p>
 <p>Vamos começar com o exemplo da página de contato que atualmente você acessa pelo endereço <code>http://www.meusite.com.br/contato.php</code>.</p>
 <p>Vá até a raiz do seu site e edite (ou crie) um arquivo chamado .htaccess (<a title=".htaccess - Wikipédia" href="http://en.wikipedia.org/wiki/Htaccess" target="_blank">leia mais aqui</a>), e dentro dele coloque as seguintes linhas que explicarei mais a diante:</p>
-<p>[code language="plain"]<br />
-<IfModule mod_rewrite.c><br />
+<p>[code language="plain"]
+<IfModule mod_rewrite.c>
 	RewriteEngine On</p>
-<p>	RewriteRule ^contato/?$ /contato.php [NC,L]<br />
-</IfModule><br />
+<p>	RewriteRule ^contato/?$ /contato.php [NC,L]
+</IfModule>
 [/code]</p>
 <p>Agora vamos as explicações...</p>
 <h4>O que é um arquivo .htaccess?</h4>

@@ -14,8 +14,8 @@ tags: []
 <p>Não vou nem me atrever a filosofar sobre o assunto desse artigo, vou deixar que todos vocês leiam e entendam... Mas posso dizer que ele trata do mesmo assunto que falei no meu outro artigo, <a title="Codificadores e Programadores" href="http://blog.thiagobelem.net/vida-pessoal/codificadores-e-programadores/" target="_blank">Codificadores e Programadores</a>. :)</p>
 <p>--</p>
 <p>Quem nunca encontrou um "sobrinho" diante do caminho e que nunca precisou refazer um trabalho dele que atire a primeira pedra.</p>
-<p style="padding-left: 30px;">-         Estou precisando fazer um web site. Quando você cobra?<br />
--         Depende do que precisa. Com design, banco de dados, dinâmico e etc... uns quatro mil.<br />
+<p style="padding-left: 30px;">-         Estou precisando fazer um web site. Quando você cobra?
+-         Depende do que precisa. Com design, banco de dados, dinâmico e etc... uns quatro mil.
 -         Nossa, tudo isso? Então deixe que vou pedir para meu sobrinho fazer.</p>
 <p>Quem nunca passou por esta situação? Tanto no desenvolvimento quando na criação, sobrinhos são como pragas que infestam lavouras e fazem o profissional perder a paciência em todos os sentidos. Perde-se tempo montando uma proposta de serviços, perde-se tempo pesquisando, perde-se tempo no telefone e depois, lá adiante, perde-se novamente todo este tempo novamente para arrumar o que o sobrinho fez errado.</p>
 <h3>Mas quem é o sobrinho afinal?</h3>

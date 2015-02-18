@@ -14,38 +14,38 @@ tags: []
 <p>Existe uma forma diferente de se trabalhar com condições no PHP... Se chama <strong>Operador Ternário</strong> e ele deixa o código mais resumido, e mais otimizado.</p>
 <p>O seu uso consiste em agrupar, na mesma linha, a condição, os comandos para true (verdadeiro) e os comandos para false (falso).</p>
 <p>Vamos ao velho exemplo de condições (if) que todo mundo já viu:</p>
-<p>[code='php']<br />
+<p>[code='php']
 <?php</p>
 <p>$nota = 4;</p>
-<p>if ($nota >= 7) {<br />
-echo "Você passou!";<br />
-} else {<br />
-echo "Você não passou!";<br />
+<p>if ($nota >= 7) {
+echo "Você passou!";
+} else {
+echo "Você não passou!";
 }</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>Agora veja a versão ternária desse mesmo código:</p>
-<p>[code='php']<br />
+<p>[code='php']
 <?php</p>
 <p>$nota = 4;</p>
 <p>echo ($nota >= 7) ? "Você passou!" : "Você não passou!";</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>A sintaxe do operador ternário é a seguinte:</p>
 <p><span style="color: #000000;">(</span><span style="color: #ff6600;"><condição></span><span style="color: #000000;">) ? </span><span style="color: #0000ff;"><instruções para <strong>verdadeiro</strong>></span><span style="color: #000000;"> : </span><span style="color: #ff0000;"><instruções para <strong>falso</strong>></span><span style="color: #000000;">;</span></p>
 <p>Veja outro exemplo de uso do operador ternário:</p>
-<p>[code='php']<br />
+<p>[code='php']
 <?php</p>
 <p>// Atribuição de um valor padrão a uma variável</p>
-<p>// Versão "padrão"<br />
-if (!isset($variavel)) {<br />
-$variavel = 'valor padrão';<br />
-} else {<br />
-$variavel = $variavel;<br />
+<p>// Versão "padrão"
+if (!isset($variavel)) {
+$variavel = 'valor padrão';
+} else {
+$variavel = $variavel;
 }</p>
-<p>// Versão usando operador ternário<br />
+<p>// Versão usando operador ternário
 $variavel = (!isset($variavel)) ? 'valor padrão' : $variavel;</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>Não se esqueçam de ver a <a href="http://br2.php.net/manual/pt_BR/language.operators.comparison.php" target="_blank">documentação oficial sobre operadores de comparação</a>, dentre os quais está o operador ternário.</p>
 <p>Espero que tenham gostado! :)</p>

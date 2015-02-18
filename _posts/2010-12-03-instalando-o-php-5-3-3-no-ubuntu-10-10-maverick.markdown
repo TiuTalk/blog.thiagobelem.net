@@ -49,8 +49,8 @@ tags:
 <p>Após os 10MB de download você já pode partir para o download do código-fonte do PHP.</p>
 <h3>Download do código-fonte do PHP</h3>
 <p>Para fazer o download (13MB) e descompactar o código-fonte do PHP 5.3.3, execute os seguintes comandos:</p>
-<p>[shell]$ cd ~<br />
-$ wget http://br.php.net/distributions/php-5.3.3.tar.gz<br />
+<p>[shell]$ cd ~
+$ wget http://br.php.net/distributions/php-5.3.3.tar.gz
 $ tar xvfz php-5.3.3.tar.gz[/shell]</p>
 <p>Feito isso você já tem o código fonte do PHP e é hora de configurar o compilador.</p>
 <h3>Compilando o código-fonte do PHP</h3>
@@ -67,13 +67,13 @@ $ tar xvfz php-5.3.3.tar.gz[/shell]</p>
 
 Thank you for using PHP.</pre>
 <p>E agora é hora de compilar, utilize os seguintes comandos:</p>
-<p>[shell]$ sudo make<br />
+<p>[shell]$ sudo make
 $ sudo make -i install[/shell]</p>
 <p>A compilação demora mas é necessária... É isso que vai fazer o PHP funcionar no seu computador.</p>
 <p>Quando tudo terminar, você pode digitar o comando <code>php -v</code> para ver a versão atual do PHP instalado no computador:</p>
-<p>[shell]$ php -v<br />
-PHP 5.3.3 (cli) (built: Dec  3 2010 16:08:11)<br />
-Copyright (c) 1997-2010 The PHP Group<br />
+<p>[shell]$ php -v
+PHP 5.3.3 (cli) (built: Dec  3 2010 16:08:11)
+Copyright (c) 1997-2010 The PHP Group
 Zend Engine v2.3.0, Copyright (c) 1998-2010 Zend Technologies[/shell]</p>
 <p>Pronto! Seu PHP foi instalado com sucesso! :)</p>
 <p>Não se esqueça de copiar o php.ini de desenvolvimento para a pasta do PHP:</p>
@@ -84,16 +84,16 @@ Zend Engine v2.3.0, Copyright (c) 1998-2010 Zend Technologies[/shell]</p>
 <p>Agora crie um arquivo chamado <strong>php5.load</strong> e coloque isso dentro dele:</p>
 <p>[shell]LoadModule php5_module /usr/lib/apache2/modules/libphp5.so[/shell]</p>
 <p>Salve o arquivo <strong>php5.load</strong> e crie outro arquivo, agora chamado <strong>php5.conf</strong>, com o seguinte conteúdo:</p>
-<p>[shell]AddType application/x-httpd-php .php .phtml .php3<br />
+<p>[shell]AddType application/x-httpd-php .php .phtml .php3
 AddType application/x-httpd-php-source .phps[/shell]</p>
 <p>Pronto… Terminamos… Só precisamos habilitar o módulo PHP no Apache e reiniciar o servidor, usaremos esses dois comandos:</p>
-<p>[shell]$ sudo a2enmod php5<br />
+<p>[shell]$ sudo a2enmod php5
 $ sudo /etc/init.d/apache2 restart[/shell]</p>
 <h2 id="phpunit">Bônus - Instalação do <strong>PHPUnit</strong></h2>
 <p>O <a title="PHPUnit" href="http://www.phpunit.de/" target="_blank">PHPUnit</a> é uma ótima ferramenta de teste unitário que ajuda muito no desenvolvimento, mas isso é assunto para outro artigo. Vamos usar o <strong>Pear</strong>, que foi instalado junto com o PHP, par instalá-lo da seguinte maneira:</p>
-<p>[shell]$ sudo pear channel-discover pear.phpunit.de<br />
-$ sudo pear channel-discover components.ez.no<br />
-$ sudo pear channel-discover pear.symfony-project.com<br />
+<p>[shell]$ sudo pear channel-discover pear.phpunit.de
+$ sudo pear channel-discover components.ez.no
+$ sudo pear channel-discover pear.symfony-project.com
 $ sudo pear install phpunit/PHPUnit[/shell]</p>
 <p>Com isso você instalou o <strong>PHPUnit</strong> com sucesso e já pode passar a usá-lo. Caso você ainda não conheça a ferramenta, aguarde alguns dias que postarei um tutorial sobre o PHPUnit.</p>
 <p>Um grande abraço a todos! :)</p>

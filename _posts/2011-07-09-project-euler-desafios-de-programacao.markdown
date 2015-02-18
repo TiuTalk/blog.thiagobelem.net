@@ -43,20 +43,20 @@ tags:
 <h3>Solução em PHP</h3>
 <p>Antes de qualquer coisa, eu não sou um bom matemático... Na maior parte do tempo eu não vejo "coisas" quando olho para um monte de números... Provavelmente existem soluções mais elegantes que essa.</p>
 <p>Primeiro vamos à minha solução em PHP:</p>
-<p>[code language="php"]function solucao() {<br />
+<p>[code language="php"]function solucao() {
 	$soma = 0;</p>
-<p>	for ($i = 1; $i < 1000; $i++) {<br />
-		if (!($i % 3) || !($i % 5))<br />
-			$soma += $i;<br />
+<p>	for ($i = 1; $i < 1000; $i++) {
+		if (!($i % 3) || !($i % 5))
+			$soma += $i;
 	}</p>
-<p>	echo $soma;<br />
+<p>	echo $soma;
 }[/code]</p>
 <h3>Solução em Python</h3>
 <p>E agora, a mesma abordagem em Python:</p>
-<p>[code language="python"]def solucao():<br />
+<p>[code language="python"]def solucao():
 	soma = 0;</p>
-<p>	for i in range(1, 1000):<br />
-		if not (i % 3) or not (i % 5):<br />
+<p>	for i in range(1, 1000):
+		if not (i % 3) or not (i % 5):
 			soma += i</p>
 <p>	print soma[/code]</p>
 <h3>Conclusão</h3>

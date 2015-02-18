@@ -24,36 +24,36 @@ tags:
 <p>No cliente, vá até a linha de comando e digite:</p>
 <p>[code language="shell"]$ ssh-keygen -t rsa[/code]</p>
 <p>Você verá a seguinte resposta:</p>
-<p>[code language="plain"]<br />
-Generating public/private dsa key pair.<br />
-Enter file in which to save the key (/home/usuario/.ssh/id_dsa):<br />
+<p>[code language="plain"]
+Generating public/private dsa key pair.
+Enter file in which to save the key (/home/usuario/.ssh/id_dsa):
 [/code]</p>
 <p>Dê ENTER sem digitar nada</p>
-<p>[code language="plain"]<br />
-Enter passphrase (empty for no passphrase):<br />
+<p>[code language="plain"]
+Enter passphrase (empty for no passphrase):
 [/code]</p>
 <p>Dê ENTER sem digitar nada</p>
-<p>[code language="plain"]<br />
-Enter same passphrase again:<br />
+<p>[code language="plain"]
+Enter same passphrase again:
 [/code]</p>
 <p>Dê ENTER sem digitar nada</p>
-<p>[code language="plain"]<br />
-Your identification has been saved in /home/usuario/.ssh/id_dsa.<br />
-Your public key has been saved in /home/usuario/.ssh/id_dsa.pub.<br />
-The key fingerprint is:<br />
-01:e0:d4:57:44:a5:5d:7c:f3:ed:bb:0d:fc:cb:2d:eb usuario@cliente<br />
-The key's randomart image is:<br />
-+--[ DSA 1024]----+<br />
-|    oo.  ++....  |<br />
-|   o  ...  o ....|<br />
-|    .  .. . .  .+|<br />
-|         .      o|<br />
-|        S      . |<br />
-|             .  .|<br />
-|              o .|<br />
-|              o+o|<br />
-|             .E**|<br />
-+-----------------+<br />
+<p>[code language="plain"]
+Your identification has been saved in /home/usuario/.ssh/id_dsa.
+Your public key has been saved in /home/usuario/.ssh/id_dsa.pub.
+The key fingerprint is:
+01:e0:d4:57:44:a5:5d:7c:f3:ed:bb:0d:fc:cb:2d:eb usuario@cliente
+The key's randomart image is:
++--[ DSA 1024]----+
+|    oo.  ++....  |
+|   o  ...  o ....|
+|    .  .. . .  .+|
+|         .      o|
+|        S      . |
+|             .  .|
+|              o .|
+|              o+o|
+|             .E**|
++-----------------+
 [/code]</p>
 <p>Feito isso, você criou uma <strong>chave pública</strong> e esse arquivo <code>~/.ssh/id_dsa.pub</code> pode ser enviado para o servidor ao qual você deseja se conectar que, quando você tentar fazer login, ele irá ler o arquivo e te identificar, permitindo o login automático.</p>
 <h3>Enviando a sua chave pública para o <strong>servidor</strong></h3>
@@ -63,10 +63,10 @@ The key's randomart image is:<br />
 <p>Feito isso, você precisa habilitar a chave pública.</p>
 <h3>Habilitando a sua chave pública no <strong>servidor</strong></h3>
 <p>Faça login via SSH no seu servidor, e execute os seguintes comandos:</p>
-<p>[code language="shell"]<br />
-$ cd ~/.ssh/<br />
-$ cat id_dsa.pub >> authorized_keys<br />
-$ chmod 644 authorized_keys<br />
+<p>[code language="shell"]
+$ cd ~/.ssh/
+$ cat id_dsa.pub >> authorized_keys
+$ chmod 644 authorized_keys
 [/code]</p>
 <p>Se o arquivo <code>authorized_keys</code> já existir, você pode criar o <code>authorized_keys2</code> ou <code>authorized_keys3</code>.</p>
 <p>Feito isso, é so você deslogar do servidor e, da próxima vez que você tentar fazer o login [via SSH] já entrará automaticamente, sem digitar a senha! :)</p>

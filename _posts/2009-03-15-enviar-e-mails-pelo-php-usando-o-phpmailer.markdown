@@ -15,55 +15,55 @@ tags: []
 <p><strong>Nota: </strong>Nesse tutorial usarei a versão 2.3 (<a href="http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/Previous%20Versions/PHPMailer%20v2.3%20for%20PHP5_6/phpMailer_v2.3.zip/download" target="_blank">download</a>) do <strong>PHPMailer </strong>que é a última versão até agora.</p>
 <p>Faça o download, descompacte o arquivo e coloque os arquivos <strong>class.phpmailer.php</strong> e <strong>class.smtp.php</strong> em uma pasta chamada <strong>phpmailer</strong> dentro do seu site.</p>
 <p>Agora, vamos ao script que faz o envio do e-mail:</p>
-<p>[code='php']<br />
+<p>[code='php']
 <?php</p>
-<p>// Inclui o arquivo class.phpmailer.php localizado na pasta phpmailer<br />
+<p>// Inclui o arquivo class.phpmailer.php localizado na pasta phpmailer
 require("phpmailer/class.phpmailer.php");</p>
-<p>// Inicia a classe PHPMailer<br />
+<p>// Inicia a classe PHPMailer
 $mail = new PHPMailer();</p>
-<p>// Define os dados do servidor e tipo de conexão<br />
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br />
-$mail->IsSMTP(); // Define que a mensagem será SMTP<br />
-$mail->Host = "smtp.dominio.net"; // Endereço do servidor SMTP<br />
-//$mail->SMTPAuth = true; // Usa autenticação SMTP? (opcional)<br />
-//$mail->Username = 'seumail@dominio.net'; // Usuário do servidor SMTP<br />
+<p>// Define os dados do servidor e tipo de conexão
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mail->IsSMTP(); // Define que a mensagem será SMTP
+$mail->Host = "smtp.dominio.net"; // Endereço do servidor SMTP
+//$mail->SMTPAuth = true; // Usa autenticação SMTP? (opcional)
+//$mail->Username = 'seumail@dominio.net'; // Usuário do servidor SMTP
 //$mail->Password = 'senha'; // Senha do servidor SMTP</p>
-<p>// Define o remetente<br />
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br />
-$mail->From = "seumail@dominio.net"; // Seu e-mail<br />
+<p>// Define o remetente
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mail->From = "seumail@dominio.net"; // Seu e-mail
 $mail->FromName = "Joãozinho"; // Seu nome</p>
-<p>// Define os destinatário(s)<br />
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br />
-$mail->AddAddress('fulano@dominio.com.br', 'Fulano da Silva');<br />
-$mail->AddAddress('ciclano@site.net');<br />
-//$mail->AddCC('ciclano@site.net', 'Ciclano'); // Copia<br />
+<p>// Define os destinatário(s)
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mail->AddAddress('fulano@dominio.com.br', 'Fulano da Silva');
+$mail->AddAddress('ciclano@site.net');
+//$mail->AddCC('ciclano@site.net', 'Ciclano'); // Copia
 //$mail->AddBCC('fulano@dominio.com.br', 'Fulano da Silva'); // Cópia Oculta</p>
-<p>// Define os dados técnicos da Mensagem<br />
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br />
-$mail->IsHTML(true); // Define que o e-mail será enviado como HTML<br />
+<p>// Define os dados técnicos da Mensagem
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mail->IsHTML(true); // Define que o e-mail será enviado como HTML
 //$mail->CharSet = 'iso-8859-1'; // Charset da mensagem (opcional)</p>
-<p>// Define a mensagem (Texto e Assunto)<br />
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br />
-$mail->Subject  = "Mensagem Teste"; // Assunto da mensagem<br />
-$mail->Body = "Este é o corpo da mensagem de teste, em <b>HTML</b>! <br /> :)";<br />
+<p>// Define a mensagem (Texto e Assunto)
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mail->Subject  = "Mensagem Teste"; // Assunto da mensagem
+$mail->Body = "Este é o corpo da mensagem de teste, em <b>HTML</b>!  :)";
 $mail->AltBody = "Este é o corpo da mensagem de teste, em Texto Plano! \r\n :)";</p>
-<p>// Define os anexos (opcional)<br />
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br />
+<p>// Define os anexos (opcional)
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 //$mail->AddAttachment("c:/temp/documento.pdf", "novo_nome.pdf");  // Insere um anexo</p>
-<p>// Envia o e-mail<br />
+<p>// Envia o e-mail
 $enviado = $mail->Send();</p>
-<p>// Limpa os destinatários e os anexos<br />
-$mail->ClearAllRecipients();<br />
+<p>// Limpa os destinatários e os anexos
+$mail->ClearAllRecipients();
 $mail->ClearAttachments();</p>
-<p>// Exibe uma mensagem de resultado<br />
-if ($enviado) {<br />
-echo "E-mail enviado com sucesso!";<br />
-} else {<br />
+<p>// Exibe uma mensagem de resultado
+if ($enviado) {
+echo "E-mail enviado com sucesso!";
+} else {
 echo "Não foi possível enviar o e-mail.</p>
-<p>";<br />
-echo "<b>Informações do erro:</b> <br />" . $mail->ErrorInfo;<br />
+<p>";
+echo "<b>Informações do erro:</b> " . $mail->ErrorInfo;
 }</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>Algumas linhas de código estão comentadas porque são opcionais e dependem também da necessidade de quem vai usar o script. Logo no começo, na parte dos dados do servidor você tem a opção de configurar o login do servidor SMTP caso seja necessário.</p>
 <p>Repare que, na parte na qual definimos a mensagem e o assunto do e-mail, temos duas formas de "corpo de e-mail": formato HTML e formato Texto Plano... É bom que você também defina o <a title="Descrição de texto plano na Wikipédia" href="http://pt.wikipedia.org/wiki/Texto_plano" target="_blank">texto plano</a> (que nada mais é do que um texto sem as tags HTML parecido com o conteúdo de um arquivo .txt) por que muitos leitores de e-mail não têm suporte a e-mails em HTML (seja por configuração do usuário ou por falta de funcionalidade mesmo).</p>

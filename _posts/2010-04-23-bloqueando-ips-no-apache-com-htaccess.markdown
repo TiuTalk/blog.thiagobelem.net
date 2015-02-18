@@ -21,13 +21,13 @@ tags:
 <p>Aproveitei o ritmo e resolvi ensinar à vocês como fazer isso... Já falei antes sobre <a href="http://blog.thiagobelem.net/mysql/bloqueando-visitantes-pelo-ip-com-mysql-e-php/" title="Bloqueando visitantes pelo IP com MySQL e PHP">como bloquear visitantes pelo IP utilizando PHP e MySQL</a> só que o bloqueio com <strong>.htaccess</strong> é muito mais eficiente pois ele bloqueia logo no começo da requisição e exibe uma página de erro das mais feias.</p>
 <h3>Bloqueando IPs</h3>
 <p>Edite (ou crie) o arquivo <strong>.htaccess</strong> na raíz do seu servidor e coloque o seguinte código:</p>
-<p>[code language="shell"]<br />
-# Bloqueia uma lista de IPs<br />
-order allow, deny<br />
-deny from 210.140.98.160<br />
-deny from 69.197.132.70<br />
-deny from 74.14.13.236<br />
-allow from all<br />
+<p>[code language="shell"]
+# Bloqueia uma lista de IPs
+order allow, deny
+deny from 210.140.98.160
+deny from 69.197.132.70
+deny from 74.14.13.236
+allow from all
 [/code]</p>
 <p>Perceba a lista de IPs que temos, para cada novo IP que você deseja bloquear é só colocar mais uma linha com "deny from <strong>{IP}</strong>" e esse IP não conseguirá acessar mais nada no seu site! :D</p>
 <h3>"Bloquear ou não bloquear?", eis a questão</h3>

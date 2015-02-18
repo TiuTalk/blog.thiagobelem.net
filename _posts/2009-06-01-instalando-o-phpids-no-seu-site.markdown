@@ -18,21 +18,21 @@ tags: []
 <p>1 - Faça o download dele no <a href="http://phpids.org/downloads/" target="_blank">site oficial</a>.</p>
 <p>2 - Descompacte a pasta <strong>../libs/IDS</strong> na raiz (<em>root</em>) seu site (mantendo a pasta IDS).</p>
 <p>3 - Insira o seguinte bloco de código no começo do seu site:</p>
-<p>[code language="php"]// Inclui o arquivo do PHPIDS<br />
-require_once 'IDS/Init.php';<br />
-$request = array(<br />
-'REQUEST' =&amp;gt; $_REQUEST,<br />
-'GET' =&amp;gt; $_GET,<br />
-'POST' =&amp;gt; $_POST,<br />
-'COOKIE' =&amp;gt; $_COOKIE<br />
-);<br />
-// Inicia o PHPIDS<br />
-$init = IDS_Init::init('IDS/Config/Config.ini');<br />
-$ids = new IDS_Monitor($request, $init);<br />
+<p>[code language="php"]// Inclui o arquivo do PHPIDS
+require_once 'IDS/Init.php';
+$request = array(
+'REQUEST' =&amp;gt; $_REQUEST,
+'GET' =&amp;gt; $_GET,
+'POST' =&amp;gt; $_POST,
+'COOKIE' =&amp;gt; $_COOKIE
+);
+// Inicia o PHPIDS
+$init = IDS_Init::init('IDS/Config/Config.ini');
+$ids = new IDS_Monitor($request, $init);
 $result = $ids-&amp;gt;run();</p>
-<p>if (!$result-&amp;gt;isEmpty()) {<br />
-// Exibe resultados caso sejam encontrados<br />
-echo $result;<br />
+<p>if (!$result-&amp;gt;isEmpty()) {
+// Exibe resultados caso sejam encontrados
+echo $result;
 }[/code]</p>
 <p>Com isso ele já vai passar a funcionar... Vale lembrar que esse exemplo apenas avisa (mostra) que algo foi encontrado e bloqueia... Você vai  precisar adaptá-lo as suas necessidades.</p>
 <p>Para configurar suas funções e usá-lo da melhor forma, recomendo que você dê uma olhada no arquivo Config.ini e/ou veja a <span class="removed_link" title="http://php-ids.org/faq/">página de FAQs</span>.</p>

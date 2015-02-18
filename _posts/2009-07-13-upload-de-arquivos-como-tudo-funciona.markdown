@@ -17,14 +17,14 @@ tags:
 <p>Como exemplo usarei um formulário onde o visitante enviará o seu nome e uma foto para um "perfil" de um rede social.</p>
 <h3>1.0 - O formulário HTML</h3>
 <p>Todo upload, geralmente, começa com um formulário onde o usuário insere o arquivo que será enviado e <strong>manipulado</strong> para o servidor. Veja o nosso exemplo de formulário:</p>
-<p>[code language="html"]<form method="post" action="recebe.php" enctype="multipart/form-data"><br />
-<fieldset><br />
-	<label for="txNome">Seu nome</label><br />
+<p>[code language="html"]<form method="post" action="recebe.php" enctype="multipart/form-data">
+<fieldset>
+	<label for="txNome">Seu nome</label>
 	<input type="text" name="nome" id="txNome" /></p>
-<p>	<label for="txFoto">Sua foto</label><br />
+<p>	<label for="txFoto">Sua foto</label>
 	<input type="file" name="arquivo" id="txFoto" /></p>
-<p>	<input type="submit" value="Salvar Dados" /><br />
-</fieldset><br />
+<p>	<input type="submit" value="Salvar Dados" />
+</fieldset>
 </form>[/code]</p>
 <p>É um formulário simples, com dois campos e um submit... O que importa nesse formulário são três coisas:</p>
 <ul>
@@ -47,18 +47,18 @@ tags:
 <p>Só pra lembrar: $_POST é um array e os seus índices serão as propriedades "name" dos inputs.</p>
 <h3>2.1 - A variável <span style="color: green">$_FILES</span></h3>
 <p>Ao enviar um arquivo pelo formulário acima é criada uma nova variável (além da $_POST) que é chamada $_FILES... Essa variável funciona da mesma forma que a $_POST e é identificada pela propriedade <strong>name</strong> do input. A diferença é que o $_FILES traz várias informações sobre o arquivo enviado.</p>
-<p>Veja um exemplo onde pegamos todas essas informações e salvamos em novas variáveis:<br />
+<p>Veja um exemplo onde pegamos todas essas informações e salvamos em novas variáveis:
 [code language="php"]<?php</p>
 <p>	$nome = $_POST['nome'];</p>
-<p>	// O nome original do arquivo no computador do usuário<br />
-	$arqName = $_FILES['arquivo']['name'];<br />
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"<br />
-	$arqType = $_FILES['arquivo']['type'];<br />
-	// O tamanho, em bytes, do arquivo<br />
-	$arqSize = $_FILES['arquivo']['size'];<br />
-	// O nome temporário do arquivo, como foi guardado no servidor<br />
-	$arqTemp = $_FILES['arquivo']['tmp_name'];<br />
-	// O código de erro associado a este upload de arquivo<br />
+<p>	// O nome original do arquivo no computador do usuário
+	$arqName = $_FILES['arquivo']['name'];
+	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+	$arqType = $_FILES['arquivo']['type'];
+	// O tamanho, em bytes, do arquivo
+	$arqSize = $_FILES['arquivo']['size'];
+	// O nome temporário do arquivo, como foi guardado no servidor
+	$arqTemp = $_FILES['arquivo']['tmp_name'];
+	// O código de erro associado a este upload de arquivo
 	$arqError = $_FILES['arquivo']['error'];</p>
 <p>?>[/code]</p>
 <p>Preste atenção que a parte <strong style="color: red">['arquivo']</strong> se deve a propriedade name do input file no lá formulário HTML.</p>
@@ -68,19 +68,19 @@ tags:
 <p>Agora iremos mover o arquivo para a pasta correta caso o upload tenha ocorrido sem problemas:</p>
 <p>[code language="php"]<?php</p>
 <p>	$nome = $_POST['nome'];</p>
-<p>	// O nome original do arquivo no computador do usuário<br />
-	$arqName = $_FILES['arquivo']['name'];<br />
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"<br />
-	$arqType = $_FILES['arquivo']['type'];<br />
-	// O tamanho, em bytes, do arquivo<br />
-	$arqSize = $_FILES['arquivo']['size'];<br />
-	// O nome temporário do arquivo, como foi guardado no servidor<br />
-	$arqTemp = $_FILES['arquivo']['tmp_name'];<br />
-	// O código de erro associado a este upload de arquivo<br />
+<p>	// O nome original do arquivo no computador do usuário
+	$arqName = $_FILES['arquivo']['name'];
+	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+	$arqType = $_FILES['arquivo']['type'];
+	// O tamanho, em bytes, do arquivo
+	$arqSize = $_FILES['arquivo']['size'];
+	// O nome temporário do arquivo, como foi guardado no servidor
+	$arqTemp = $_FILES['arquivo']['tmp_name'];
+	// O código de erro associado a este upload de arquivo
 	$arqError = $_FILES['arquivo']['error'];</p>
-<p>	if ($arqError == 0) {<br />
-		$pasta = '/uploads/';<br />
-		$upload = move_uploaded_file($arqTemp, $pasta . $arqName);<br />
+<p>	if ($arqError == 0) {
+		$pasta = '/uploads/';
+		$upload = move_uploaded_file($arqTemp, $pasta . $arqName);
 	}</p>
 <p>?>[/code]</p>
 <p>Com isso, após verificar se não houve nenhum erro, iremos mover o arquivo que está na pasta temporária do PHP para a pasta <strong>/uploads/</strong> do seu site.</p>
@@ -90,98 +90,98 @@ tags:
 <h3>3.0 - Validando o tipo de arquivo enviado</h3>
 <p>Usando a variável $arqType poderemos identificar qual é o tipo do arquivo... Esse tipo é chamado de <strong>mime-type</strong>.</p>
 <p>Vamos criar uma lista com todos os <strong>mime-types</strong> permitidos e verificar se foi enviado um arquivo com o tipo correto:</p>
-<p>[code language="php"]<?php<br />
-	// Lista de tipos de arquivos permitidos<br />
+<p>[code language="php"]<?php
+	// Lista de tipos de arquivos permitidos
 	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');</p>
 <p>	$nome = $_POST['nome'];</p>
-<p>	// O nome original do arquivo no computador do usuário<br />
-	$arqName = $_FILES['arquivo']['name'];<br />
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"<br />
-	$arqType = $_FILES['arquivo']['type'];<br />
-	// O tamanho, em bytes, do arquivo<br />
-	$arqSize = $_FILES['arquivo']['size'];<br />
-	// O nome temporário do arquivo, como foi guardado no servidor<br />
-	$arqTemp = $_FILES['arquivo']['tmp_name'];<br />
-	// O código de erro associado a este upload de arquivo<br />
+<p>	// O nome original do arquivo no computador do usuário
+	$arqName = $_FILES['arquivo']['name'];
+	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+	$arqType = $_FILES['arquivo']['type'];
+	// O tamanho, em bytes, do arquivo
+	$arqSize = $_FILES['arquivo']['size'];
+	// O nome temporário do arquivo, como foi guardado no servidor
+	$arqTemp = $_FILES['arquivo']['tmp_name'];
+	// O código de erro associado a este upload de arquivo
 	$arqError = $_FILES['arquivo']['error'];</p>
-<p>	if ($arqError == 0) {<br />
-		// Verifica o tipo de arquivo enviado<br />
-		if (array_search($arqType, $tiposPermitidos) === false) {<br />
-			echo 'O tipo de arquivo enviado é inválido!';<br />
-		// Não houveram erros, move o arquivo<br />
-		} else {<br />
-			$pasta = '/uploads/';<br />
-			$upload = move_uploaded_file($arqTemp, $pasta . $arqName);<br />
-		}<br />
+<p>	if ($arqError == 0) {
+		// Verifica o tipo de arquivo enviado
+		if (array_search($arqType, $tiposPermitidos) === false) {
+			echo 'O tipo de arquivo enviado é inválido!';
+		// Não houveram erros, move o arquivo
+		} else {
+			$pasta = '/uploads/';
+			$upload = move_uploaded_file($arqTemp, $pasta . $arqName);
+		}
 	}</p>
 <p>?>[/code]</p>
 <p>Se precisar você ver aqui uma <a href="http://en.wikipedia.org/wiki/Internet_media_type" target="_blank">lista de mime-types</a> usados por cada tipo de arquivo.</p>
 <h3>4.0 - Validando o tamanho do arquivo enviado</h3>
 <p>Muita gente tem problemas com o tamanho de arquivo enviado pelos usuários pois, dependendo da quantidade e do tipo de arquivo, você rapidamente vai ter GBs e GBs de lixo no seu servidor. Se quiser fazer essa validação, é só fazer assim:</p>
-<p>[code language="php"]<?php<br />
-	// Lista de tipos de arquivos permitidos<br />
-	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');<br />
-	// Tamanho máximo (em bytes)<br />
+<p>[code language="php"]<?php
+	// Lista de tipos de arquivos permitidos
+	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
+	// Tamanho máximo (em bytes)
 	$tamanhoPermitido = 1024 * 500; // 500 Kb</p>
 <p>	$nome = $_POST['nome'];</p>
-<p>	// O nome original do arquivo no computador do usuário<br />
-	$arqName = $_FILES['arquivo']['name'];<br />
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"<br />
-	$arqType = $_FILES['arquivo']['type'];<br />
-	// O tamanho, em bytes, do arquivo<br />
-	$arqSize = $_FILES['arquivo']['size'];<br />
-	// O nome temporário do arquivo, como foi guardado no servidor<br />
-	$arqTemp = $_FILES['arquivo']['tmp_name'];<br />
-	// O código de erro associado a este upload de arquivo<br />
+<p>	// O nome original do arquivo no computador do usuário
+	$arqName = $_FILES['arquivo']['name'];
+	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+	$arqType = $_FILES['arquivo']['type'];
+	// O tamanho, em bytes, do arquivo
+	$arqSize = $_FILES['arquivo']['size'];
+	// O nome temporário do arquivo, como foi guardado no servidor
+	$arqTemp = $_FILES['arquivo']['tmp_name'];
+	// O código de erro associado a este upload de arquivo
 	$arqError = $_FILES['arquivo']['error'];</p>
-<p>	if ($arqError == 0) {<br />
-        // Verifica o tipo de arquivo enviado<br />
-		if (array_search($arqType, $tiposPermitidos) === false) {<br />
-			echo 'O tipo de arquivo enviado é inválido!';<br />
-		// Verifica o tamanho do arquivo enviado<br />
-		} else if ($arqSize > $tamanhoPermitido) {<br />
-			echo 'O tamanho do arquivo enviado é maior que o limite!';<br />
-		// Não houveram erros, move o arquivo<br />
-		} else {<br />
-			$pasta = '/uploads/';<br />
-			$upload = move_uploaded_file($arqTemp, $pasta . $arqName);<br />
-		}<br />
+<p>	if ($arqError == 0) {
+        // Verifica o tipo de arquivo enviado
+		if (array_search($arqType, $tiposPermitidos) === false) {
+			echo 'O tipo de arquivo enviado é inválido!';
+		// Verifica o tamanho do arquivo enviado
+		} else if ($arqSize > $tamanhoPermitido) {
+			echo 'O tamanho do arquivo enviado é maior que o limite!';
+		// Não houveram erros, move o arquivo
+		} else {
+			$pasta = '/uploads/';
+			$upload = move_uploaded_file($arqTemp, $pasta . $arqName);
+		}
 	}</p>
 <p>?>[/code]</p>
 <h3>5.0 - Renomeando o arquivo enviado</h3>
 <p>Caso você queira armazenar o arquivo enviado com outro nome, mas manter a extensão do mesmo, é só fazer assim:</p>
-<p>[code language="php" highlight="33"]<?php<br />
-	// Lista de tipos de arquivos permitidos<br />
-	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');<br />
-	// Tamanho máximo (em bytes)<br />
+<p>[code language="php" highlight="33"]<?php
+	// Lista de tipos de arquivos permitidos
+	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
+	// Tamanho máximo (em bytes)
 	$tamanhoPermitido = 1024 * 500; // 500 Kb</p>
 <p>	$nome = $_POST['nome'];</p>
-<p>	// O nome original do arquivo no computador do usuário<br />
-	$arqName = $_FILES['arquivo']['name'];<br />
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"<br />
-	$arqType = $_FILES['arquivo']['type'];<br />
-	// O tamanho, em bytes, do arquivo<br />
-	$arqSize = $_FILES['arquivo']['size'];<br />
-	// O nome temporário do arquivo, como foi guardado no servidor<br />
-	$arqTemp = $_FILES['arquivo']['tmp_name'];<br />
-	// O código de erro associado a este upload de arquivo<br />
+<p>	// O nome original do arquivo no computador do usuário
+	$arqName = $_FILES['arquivo']['name'];
+	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+	$arqType = $_FILES['arquivo']['type'];
+	// O tamanho, em bytes, do arquivo
+	$arqSize = $_FILES['arquivo']['size'];
+	// O nome temporário do arquivo, como foi guardado no servidor
+	$arqTemp = $_FILES['arquivo']['tmp_name'];
+	// O código de erro associado a este upload de arquivo
 	$arqError = $_FILES['arquivo']['error'];</p>
-<p>	if ($arqError == 0) {<br />
-        // Verifica o tipo de arquivo enviado<br />
-		if (array_search($arqType, $tiposPermitidos) === false) {<br />
-			echo 'O tipo de arquivo enviado é inválido!';<br />
-		// Verifica o tamanho do arquivo enviado<br />
-		} else if ($arqSize > $tamanhoPermitido) {<br />
-			echo 'O tamanho do arquivo enviado é maior que o limite!';<br />
-		// Não houveram erros, move o arquivo<br />
-		} else {<br />
-			$pasta = '/uploads/';<br />
-			// Pega a extensão do arquivo enviado<br />
-			$extensao = strtolower(end(explode('.', $arqName)));<br />
-			// Define o novo nome do arquivo usando um UNIX TIMESTAMP<br />
+<p>	if ($arqError == 0) {
+        // Verifica o tipo de arquivo enviado
+		if (array_search($arqType, $tiposPermitidos) === false) {
+			echo 'O tipo de arquivo enviado é inválido!';
+		// Verifica o tamanho do arquivo enviado
+		} else if ($arqSize > $tamanhoPermitido) {
+			echo 'O tamanho do arquivo enviado é maior que o limite!';
+		// Não houveram erros, move o arquivo
+		} else {
+			$pasta = '/uploads/';
+			// Pega a extensão do arquivo enviado
+			$extensao = strtolower(end(explode('.', $arqName)));
+			// Define o novo nome do arquivo usando um UNIX TIMESTAMP
 			$nome = time() . '.' . $extensao;</p>
-<p>			$upload = move_uploaded_file($arqTemp, $pasta . $nome);<br />
-		}<br />
+<p>			$upload = move_uploaded_file($arqTemp, $pasta . $nome);
+		}
 	}</p>
 <p>?>[/code]</p>
 <p>Na linha 31 pegamos a extensão do arquivo enviado e na linha 33 criamos um novo nome para ele usando um UNIX TIMESTAMP e a extensão original.</p>
@@ -190,50 +190,50 @@ tags:
 <p>Agora vamos salvar os dados recebidos no banco de dados apenas para concluir o exemplo da criação de um perfil em uma rede social:</p>
 <p>[code language="php"]<?php</p>
 <p>	// Aqui você faz a conexão com o banco de dados</p>
-<p>	// Lista de tipos de arquivos permitidos<br />
-	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');<br />
-	// Tamanho máximo (em bytes)<br />
+<p>	// Lista de tipos de arquivos permitidos
+	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
+	// Tamanho máximo (em bytes)
 	$tamanhoPermitido = 1024 * 500; // 500 Kb</p>
-<p>	// O nome original do arquivo no computador do usuário<br />
-	$arqName = $_FILES['arquivo']['name'];<br />
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"<br />
-	$arqType = $_FILES['arquivo']['type'];<br />
-	// O tamanho, em bytes, do arquivo<br />
-	$arqSize = $_FILES['arquivo']['size'];<br />
-	// O nome temporário do arquivo, como foi guardado no servidor<br />
-	$arqTemp = $_FILES['arquivo']['tmp_name'];<br />
-	// O código de erro associado a este upload de arquivo<br />
+<p>	// O nome original do arquivo no computador do usuário
+	$arqName = $_FILES['arquivo']['name'];
+	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+	$arqType = $_FILES['arquivo']['type'];
+	// O tamanho, em bytes, do arquivo
+	$arqSize = $_FILES['arquivo']['size'];
+	// O nome temporário do arquivo, como foi guardado no servidor
+	$arqTemp = $_FILES['arquivo']['tmp_name'];
+	// O código de erro associado a este upload de arquivo
 	$arqError = $_FILES['arquivo']['error'];</p>
-<p>	if ($arqError == 0) {<br />
-        // Verifica o tipo de arquivo enviado<br />
-		if (array_search($arqType, $tiposPermitidos) === false) {<br />
-			echo 'O tipo de arquivo enviado é inválido!';<br />
-		// Verifica o tamanho do arquivo enviado<br />
-		} else if ($arqSize > $tamanhoPermitido) {<br />
-			echo 'O tamanho do arquivo enviado é maior que o limite!';<br />
-		// Não houveram erros, move o arquivo<br />
-		} else {<br />
-			$pasta = '/uploads/';<br />
-			// Pega a extensão do arquivo enviado<br />
-			$extensao = strtolower(end(explode('.', $arqName)));<br />
-			// Define o novo nome do arquivo usando um UNIX TIMESTAMP<br />
+<p>	if ($arqError == 0) {
+        // Verifica o tipo de arquivo enviado
+		if (array_search($arqType, $tiposPermitidos) === false) {
+			echo 'O tipo de arquivo enviado é inválido!';
+		// Verifica o tamanho do arquivo enviado
+		} else if ($arqSize > $tamanhoPermitido) {
+			echo 'O tamanho do arquivo enviado é maior que o limite!';
+		// Não houveram erros, move o arquivo
+		} else {
+			$pasta = '/uploads/';
+			// Pega a extensão do arquivo enviado
+			$extensao = strtolower(end(explode('.', $arqName)));
+			// Define o novo nome do arquivo usando um UNIX TIMESTAMP
 			$nome = time() . '.' . $extensao;</p>
-<p>			// Escapa os caracteres protegidos do MySQL (para o nome do usuário)<br />
+<p>			// Escapa os caracteres protegidos do MySQL (para o nome do usuário)
 			$nomeMySQL = mysql_real_escape_string($_POST['nome']);</p>
 <p>			$upload = move_uploaded_file($arqTemp, $pasta . $nome);</p>
-<p>			// Verifica se o arquivo foi movido com sucesso<br />
-			if ($upload == true) {<br />
-				// Cria uma query MySQL<br />
-				$sql = "INSERT INTO `contas` (`id`, `nome`, `foto`) VALUES (NULL, '". $nomeMySQL ."', '". $nome ."')";<br />
-				// Executa a consulta<br />
+<p>			// Verifica se o arquivo foi movido com sucesso
+			if ($upload == true) {
+				// Cria uma query MySQL
+				$sql = "INSERT INTO `contas` (`id`, `nome`, `foto`) VALUES (NULL, '". $nomeMySQL ."', '". $nome ."')";
+				// Executa a consulta
 				$query = mysql_query($sql);</p>
-<p>				if ($query == true) {<br />
-                    echo 'Usuário inserido com sucesso!';<br />
-                }<br />
-			}<br />
-		}<br />
-	} else {<br />
-		echo 'Ocorreu algum erro com o upload, por favor tente novamente!';<br />
+<p>				if ($query == true) {
+                    echo 'Usuário inserido com sucesso!';
+                }
+			}
+		}
+	} else {
+		echo 'Ocorreu algum erro com o upload, por favor tente novamente!';
 	}</p>
 <p>?>[/code]</p>
 <p>--</p>

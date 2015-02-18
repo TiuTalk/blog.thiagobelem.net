@@ -19,30 +19,30 @@ tags: []
 <li>Última versão do plugin <strong>jCycle</strong> para jQuery: <a href="http://malsup.com/jquery/cycle/" target="_blank">http://malsup.com/jquery/cycle/</a></li>
 </ol>
 <p>Depois de ter feito o download dos dois arquivos .js é só incluí-los no seu site assim:</p>
-<p>[code language="html"]<br />
-<head><br />
-<script src="_pasta_/jquery.js" type="text/javascript"></script><br />
-<script src="_pasta_/jcycle.js" type="text/javascript"></script><br />
-</head><br />
+<p>[code language="html"]
+<head>
+<script src="_pasta_/jquery.js" type="text/javascript"></script>
+<script src="_pasta_/jcycle.js" type="text/javascript"></script>
+</head>
 [/code]</p>
 <p>Lembrando que esse código deve ir entre as TAGs <head> e </head> do seu site.</p>
 <p>Depois disso, você cria uma div com o id que quiser (vamos usar #slideshow como exemplo) e dentro dela coloca as fotos do seu slideshow, por exemplo:</p>
-<p>[code language="html"]<br />
-<div id="slideShow"><br />
-<img src="imagens/foto1.jpg" alt="Primeira Foto" width="300" height="200" /><br />
-<img src="imagens/foto2.jpg" alt="Segunda Foto" width="300" height="200" /><br />
-<img src="imagens/foto3.jpg" alt="Terceira Foto" width="300" height="200" /><br />
-</div><br />
+<p>[code language="html"]
+<div id="slideShow">
+<img src="imagens/foto1.jpg" alt="Primeira Foto" width="300" height="200" />
+<img src="imagens/foto2.jpg" alt="Segunda Foto" width="300" height="200" />
+<img src="imagens/foto3.jpg" alt="Terceira Foto" width="300" height="200" />
+</div>
 [/code]</p>
 <p>Depois é só voltar lá dentro do <head> do seu site e colocar o seguinte bloco de javascript:</p>
-<p>[code language="html"]<br />
-<script type="text/javascript"><br />
-<!--<br />
-$(function() {<br />
-$('#slideShow').cycle({ fx: 'fade' });<br />
-});<br />
-// --><br />
-</script><br />
+<p>[code language="html"]
+<script type="text/javascript">
+<!--
+$(function() {
+$('#slideShow').cycle({ fx: 'fade' });
+});
+// -->
+</script>
 [/code]</p>
 <p>Com isso você definiu qual a div que contem o slideshow (repare que o ID da div vai ali no começo da terceira linha) e o jQuery inicia o efeito sozinho.</p>
 <p>Mas só isso? Sim. Você já tem um slideshow, automático, com efeito de transição <em>fade</em> pronto pra ser usado!</p>

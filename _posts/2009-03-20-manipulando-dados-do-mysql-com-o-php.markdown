@@ -18,42 +18,42 @@ tags: []
 <p>Usaremos a tabela 'noticias' nos exemplo desse tópico, ela é composta por uma tabela simples de quatro colunas: id, titulo, texto e cadastro. O campo id é numérico (inteiro), do tipo <strong>INT</strong> e possui <em>incremento automático</em>, e contem o índice de cada notícia na tabela, o campo titulo é alfa-numérico, do tipo <strong>VARCHAR</strong>, e pode ter até 255 caracteres, o campo texto, do tipo <strong>LONGTEXT</strong>, aceita qualquer valor existente em um texto e pode ter muitos (eu disse <strong>muitos</strong>) caracteres, o suficiente para algumas longas dezenas de páginas a4 se necessário... e por último, mas não menos importante, temos o campo cadastro que é do tipo <strong>DATETIME </strong>e guarda a data e hora de cadastro da notícia no sistema.</p>
 <p><span style="color: #993300;"><strong>Nota: </strong></span>não use espaços ou acentos nos nomes nas tabelas e bancos MySQL.</p>
 <p>O código para a criação dessa tabela é o seguinte:</p>
-<p>[code language="sql"]<br />
-CREATE TABLE IF NOT EXISTS `noticias` (<br />
-`id` int(11) NOT NULL AUTO_INCREMENT,<br />
-`titulo` varchar(255) NOT NULL,<br />
-`texto` longtext NOT NULL,<br />
-`cadastro` datetime NOT NULL,<br />
-PRIMARY KEY (`id`),<br />
-KEY `titulo` (`titulo`)<br />
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;<br />
+<p>[code language="sql"]
+CREATE TABLE IF NOT EXISTS `noticias` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`titulo` varchar(255) NOT NULL,
+`texto` longtext NOT NULL,
+`cadastro` datetime NOT NULL,
+PRIMARY KEY (`id`),
+KEY `titulo` (`titulo`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 [/code]</p>
 <h4>Inserindo dados</h4>
 <p>Para inserir dados no MySQL você precisa montar uma consulta SQL (também chamada de <em>query</em>) usando o comando INSERT do MySQL, vejamos o exemplo de como inserir uma notícia na nossa tabela de notícias:</p>
-<p>[code language="php"]<br />
-<?php<br />
-// Inclui o arquivo que faz a conexão ao MySQL<br />
+<p>[code language="php"]
+<?php
+// Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");</p>
-<p>// Definição das variáveis para montar a query<br />
-$titulo = 'Vandalismo mata 10 mil árvores por ano no Rio';<br />
-$texto = '<p>Não fosse privilegiada pela natureza, com a vasta extensão da Mata Atlântica, a paisagem do Rio seria desértica.</p>';<br />
-$cadastro = date('Y-m-d H:i:s'); // Formato de data padrão do MySQL<br />
+<p>// Definição das variáveis para montar a query
+$titulo = 'Vandalismo mata 10 mil árvores por ano no Rio';
+$texto = '<p>Não fosse privilegiada pela natureza, com a vasta extensão da Mata Atlântica, a paisagem do Rio seria desértica.</p>';
+$cadastro = date('Y-m-d H:i:s'); // Formato de data padrão do MySQL
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-<p>// Manipulamos as variáveis para evitar problemas com aspas e outros caracteres protegidos do MySQL<br />
-$titulo = mysql_escape_string($titulo);<br />
+<p>// Manipulamos as variáveis para evitar problemas com aspas e outros caracteres protegidos do MySQL
+$titulo = mysql_escape_string($titulo);
 $texto = mysql_escape_string($texto);</p>
-<p>// Montamos a consulta SQL<br />
+<p>// Montamos a consulta SQL
 $query = "INSERT INTO `noticias` (`titulo`, `texto`, `cadastro`) VALUES ('".$titulo."', '".$texto."', '".$cadastro."')";</p>
-<p>// Executa a query<br />
+<p>// Executa a query
 $inserir = mysql_query($query);</p>
-<p>if ($inserir) {<br />
-echo "Notícia inserida com sucesso!";<br />
-} else {<br />
-echo "Não foi possível inserir a notícia, tente novamente.";<br />
-// Exibe dados sobre o erro:<br />
-echo "<br />Dados sobre o erro:" . mysql_error();<br />
-}<br />
-?><br />
+<p>if ($inserir) {
+echo "Notícia inserida com sucesso!";
+} else {
+echo "Não foi possível inserir a notícia, tente novamente.";
+// Exibe dados sobre o erro:
+echo "Dados sobre o erro:" . mysql_error();
+}
+?>
 [/code]</p>
 <p>A função <strong>mysql_query()</strong> é responsável por executar uma consulta no servidor MySQL e, no caso do comando INSERT, ela retorna true ou false informando se o registro foi ou não inserido.</p>
 <p>A sintaxe padrão do INSERT no MySQL é mais ou menos a seguinte:</p>
@@ -63,49 +63,49 @@ echo "<br />Dados sobre o erro:" . mysql_error();<br />
 <p>Você também tem uma segunda opção de sintaxe para o INSERT:</p>
 <p><strong>INSERT INTO <span style="color: #ff9900;">%tabela%</span> VALUES (<span style="color: #3366ff;">%valores%</span>)</strong></p>
 <p>Se você preferir por esse formato vai precisar definir os valores de TODAS as colunas da tabela, ficando dessa forma:</p>
-<p>[code language="php"]<br />
-// Montamos a consulta SQL<br />
-$query = "INSERT INTO `noticias` VALUES (NULL, '".$titulo."', '".$texto."', '".$cadastro."')";<br />
+<p>[code language="php"]
+// Montamos a consulta SQL
+$query = "INSERT INTO `noticias` VALUES (NULL, '".$titulo."', '".$texto."', '".$cadastro."')";
 [/code]</p>
 <p>A desvantagem desse formato (diferente do primeiro) é que você precisa dizer o valor de cada uma das colunas da tabela ordenadamente para o PHP. Mas eu particularmente prefiro esse segundo formato de INSERT, ainda mais quando temos mais de 10 colunas em uma tabela fica muito ruim escrever o nome de todas elas e depois os valores de cada uma.</p>
 <p>Usamos <strong>NULL</strong> (repare a falta de aspas) no valor da coluna ID por que queremos que o MySQL use o seu <strong>incremento automático</strong> para gerar o ID do próximo registro da tabela de forma natural. Exemplo: se o ID da última notícia cadastrada é 5 e inserirmos uma nova notícia usando NULL, ela terá 6 como ID. <strong>Convenciona-se</strong> que toda tabela MySQL deva ter uma coluna ID com auto incremento.</p>
 <p>Mas fica a seu critério qual formato de INSERT usar.</p>
 <h4>Deletando dados</h4>
 <p>Se você quiser deletar dados armazenados no MySQL você pode usar o comando DELETE dentro da consulta SQL. A sua sintaxe é bem simples e a deleção se baseia em uma condição, vejamos dois exemplos:</p>
-<p>[code language="php"]<br />
-<?php<br />
-// Inclui o arquivo que faz a conexão ao MySQL<br />
+<p>[code language="php"]
+<?php
+// Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");</p>
-<p>// Montamos a consulta SQL para deletar a(s) notícia(s) com ID maior ou igual a três<br />
+<p>// Montamos a consulta SQL para deletar a(s) notícia(s) com ID maior ou igual a três
 $query = "DELETE FROM `noticias` WHERE (`id` >= 3)";</p>
-<p>// Executa a query<br />
+<p>// Executa a query
 $deletar = mysql_query($query);</p>
-<p>if ($deletar) {<br />
-echo "As notícias foram deletadas com sucesso!";<br />
-} else {<br />
-echo "Não foi possível deletar as notícia, tente novamente.";<br />
-// Exibe dados sobre o erro:<br />
-echo "<br />Dados sobre o erro:" . mysql_error();<br />
-}<br />
-?><br />
+<p>if ($deletar) {
+echo "As notícias foram deletadas com sucesso!";
+} else {
+echo "Não foi possível deletar as notícia, tente novamente.";
+// Exibe dados sobre o erro:
+echo "Dados sobre o erro:" . mysql_error();
+}
+?>
 [/code]</p>
 <p>Nesse exemplo condicionamos a deleção apenas dos registros que tiverem o valor da coluna `id` maior ou igual a três.</p>
-<p>[code language="php"]<br />
-<?php<br />
-// Inclui o arquivo que faz a conexão ao MySQL<br />
+<p>[code language="php"]
+<?php
+// Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");</p>
-<p>// Montamos a consulta SQL para deletar notícias que não sejam desse ano<br />
+<p>// Montamos a consulta SQL para deletar notícias que não sejam desse ano
 $query = "DELETE FROM `noticias` WHERE (`cadastro` < '2009-01-01 00:00:00') OR (`cadastro` > '2009-12-31 23:23:59')";</p>
-<p>// Executa a query<br />
+<p>// Executa a query
 $deletar = mysql_query($query);</p>
-<p>if ($deletar) {<br />
-echo "As notícias de outros anos foram deletadas com sucesso!";<br />
-} else {<br />
-echo "Não foi possível deletar as notícia, tente novamente.";<br />
-// Exibe dados sobre o erro:<br />
-echo "<br />Dados sobre o erro:" . mysql_error();<br />
-}<br />
-?><br />
+<p>if ($deletar) {
+echo "As notícias de outros anos foram deletadas com sucesso!";
+} else {
+echo "Não foi possível deletar as notícia, tente novamente.";
+// Exibe dados sobre o erro:
+echo "Dados sobre o erro:" . mysql_error();
+}
+?>
 [/code]</p>
 <p>Nesse exemplo usamos duas condições ao mesmo tempo e buscamos registros em função da sua data de cadastro no sistema.</p>
 <p>Podemos resumir a sintaxe da <em>query </em>de deleção da seguinte forma:</p>
@@ -114,29 +114,29 @@ echo "<br />Dados sobre o erro:" . mysql_error();<br />
 <h4>Atualizando dados em registros</h4>
 <p>Você já tem a sua tabela cheia de notícias e sabe inserir e deletar as notícias... Mas você repara que uma delas tem aquele erro boçal de ortografia no titulo da notícia. O que você faz? Você pode dar uma de português e deletar a notícia e cadastrar outra notícia com o formato correto... OU você pode simplesmente editar o titulo da notícia!  :-D</p>
 <p>Ai você descobre que existe o UPDATE do MySQL, que serve exatamente para isso! Vamos ao exemplo:</p>
-<p>[code language="php"]<br />
-<?php<br />
-// Inclui o arquivo que faz a conexão ao MySQL<br />
+<p>[code language="php"]
+<?php
+// Inclui o arquivo que faz a conexão ao MySQL
 include("conexao.php");</p>
-<p>// Id da notícia a ser editada<br />
+<p>// Id da notícia a ser editada
 $id = 3;</p>
-<p>// Novo título da notícia<br />
-$titulo = 'Vandalismo mata 10 mil árvores por ano no Rio de Janeiro';<br />
+<p>// Novo título da notícia
+$titulo = 'Vandalismo mata 10 mil árvores por ano no Rio de Janeiro';
 $cadastro = date('Y-m-d H:i:s'); // Formato de data padrão do MySQL</p>
-<p>// Manipulamos as variáveis para evitar problemas com aspas e outros caracteres protegidos do MySQL<br />
+<p>// Manipulamos as variáveis para evitar problemas com aspas e outros caracteres protegidos do MySQL
 $titulo = mysql_escape_string($titulo);</p>
-<p>// Montamos a consulta SQL para deletar a(s) notícia(s) com ID maior ou igual a três<br />
+<p>// Montamos a consulta SQL para deletar a(s) notícia(s) com ID maior ou igual a três
 $query = "UPDATE `noticias` SET `titulo` = '".$titulo."', `cadastro` = '".$cadastro."' WHERE (`id` = ".$id.")";</p>
-<p>// Executa a query<br />
+<p>// Executa a query
 $atualiza = mysql_query($query);</p>
-<p>if ($atualiza) {<br />
-echo "A notícia foi atualizada com sucesso!";<br />
-} else {<br />
-echo "Não foi possível atualizar as notícia, tente novamente.";<br />
-// Exibe dados sobre o erro:<br />
-echo "<br />Dados sobre o erro:" . mysql_error();<br />
-}<br />
-?><br />
+<p>if ($atualiza) {
+echo "A notícia foi atualizada com sucesso!";
+} else {
+echo "Não foi possível atualizar as notícia, tente novamente.";
+// Exibe dados sobre o erro:
+echo "Dados sobre o erro:" . mysql_error();
+}
+?>
 [/code]</p>
 <p>Repare que no exemplo, além de atualizar o titulo da notícia, atualizamos também a sua "data de cadastro" para ela ser considerada uma notícia que foi alterada recentemente. Você pode usar o UPDATE em quantas colunas do registro você preferir e também pode brincar com a condição depois do WHERE da forma que achar melhor.</p>
 <p>A sintaxe <em>normal </em>do UPDATE é a seguinte:</p>

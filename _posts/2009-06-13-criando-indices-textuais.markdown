@@ -19,78 +19,78 @@ tags:
 <p>Existe uma função pronta <span style="color: #808080;">(que encontrei <a rel="nofollow" href="http://kevin.vanzonneveld.net/techblog/article/create_short_ids_with_php_like_youtube_or_tinyurl/" target="_blank">aqui</a>, criada pelo Kevin Zonneveld)</span> e que usa técnicas de encriptação para fazer o trabalho de converter números em letras e vice-e-versa.</p>
 <h3>Código da função</h3>
 <p>Vamos ao código da função e depois eu explico como usá-la:</p>
-<p>[code='php']<br />
-<?php<br />
-/**<br />
-* Traduz números para texto e vice-e-versa<br />
-*<br />
-* Traduz qualquer número (até 9007199254740992)<br />
-* para uma versão menor, usando letras:<br />
-* 9007199254740989 --> PpQXn7COf<br />
-*<br />
-* Especificando o segundo parâmetro como true temos:<br />
-* PpQXn7COf --> 9007199254740989<br />
-*<br />
-* @author    Kevin van Zonneveld <kevin@vanzonneveld.net><br />
-* @copyright 2008 Kevin van Zonneveld (http://kevin.vanzonneveld.net)<br />
-* @license   http://www.opensource.org/licenses/bsd-license.php New BSD Licence<br />
-* @version   SVN: Release: $Id: alphaID.inc.php 344 2009-06-10 17:43:59Z kevin $<br />
-*<br />
-* @param mixed   $in     String or long input to translate<br />
-* @param boolean $to_num Reverses translation when true<br />
-* @param mixed   $pad_up Number or boolean padds the result up to a specified length<br />
-*<br />
-* @return mixed string or long<br />
+<p>[code='php']
+<?php
+/**
+* Traduz números para texto e vice-e-versa
+*
+* Traduz qualquer número (até 9007199254740992)
+* para uma versão menor, usando letras:
+* 9007199254740989 --> PpQXn7COf
+*
+* Especificando o segundo parâmetro como true temos:
+* PpQXn7COf --> 9007199254740989
+*
+* @author    Kevin van Zonneveld <kevin@vanzonneveld.net>
+* @copyright 2008 Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+* @license   http://www.opensource.org/licenses/bsd-license.php New BSD Licence
+* @version   SVN: Release: $Id: alphaID.inc.php 344 2009-06-10 17:43:59Z kevin $
+*
+* @param mixed   $in     String or long input to translate
+* @param boolean $to_num Reverses translation when true
+* @param mixed   $pad_up Number or boolean padds the result up to a specified length
+*
+* @return mixed string or long
 */</p>
-<p>function alphaID($in, $to_num = false, $pad_up = false) {<br />
-// Letras que serão usadas no índice textual<br />
-$index = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br />
+<p>function alphaID($in, $to_num = false, $pad_up = false) {
+// Letras que serão usadas no índice textual
+$index = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 $base  = strlen($index);</p>
-<p>if ($to_num) {<br />
-// Tradução de texto para número<br />
-$in  = strrev($in);<br />
-$out = 0;<br />
-$len = strlen($in) - 1;<br />
-for ($t = 0; $t <= $len; $t++) {<br />
-$bcpow = bcpow($base, $len - $t);<br />
-$out   = $out + strpos($index, substr($in, $t, 1)) * $bcpow;<br />
+<p>if ($to_num) {
+// Tradução de texto para número
+$in  = strrev($in);
+$out = 0;
+$len = strlen($in) - 1;
+for ($t = 0; $t <= $len; $t++) {
+$bcpow = bcpow($base, $len - $t);
+$out   = $out + strpos($index, substr($in, $t, 1)) * $bcpow;
 }</p>
-<p>if (is_numeric($pad_up)) {<br />
-$pad_up--;<br />
-if ($pad_up > 0) {<br />
-$out -= pow($base, $pad_up);<br />
-}<br />
-}<br />
-} else {<br />
-// Tradução de número para texto<br />
-if (is_numeric($pad_up)) {<br />
-$pad_up--;<br />
-if ($pad_up > 0) {<br />
-$in += pow($base, $pad_up);<br />
-}<br />
+<p>if (is_numeric($pad_up)) {
+$pad_up--;
+if ($pad_up > 0) {
+$out -= pow($base, $pad_up);
+}
+}
+} else {
+// Tradução de número para texto
+if (is_numeric($pad_up)) {
+$pad_up--;
+if ($pad_up > 0) {
+$in += pow($base, $pad_up);
+}
 }</p>
-<p>$out = "";<br />
-for ($t = floor(log10($in) / log10($base)); $t >= 0; $t--) {<br />
-$a   = floor($in / bcpow($base, $t));<br />
-$out = $out . substr($index, $a, 1);<br />
-$in  = $in - ($a * bcpow($base, $t));<br />
-}<br />
-$out = strrev($out);<br />
+<p>$out = "";
+for ($t = floor(log10($in) / log10($base)); $t >= 0; $t--) {
+$a   = floor($in / bcpow($base, $t));
+$out = $out . substr($index, $a, 1);
+$in  = $in - ($a * bcpow($base, $t));
+}
+$out = strrev($out);
 }</p>
-<p>return $out;<br />
-}<br />
+<p>return $out;
+}
 ?>[/code]</p>
 <p>Se você quiser, pode fazer o <a title="Download do arquivo" href="http://blog.thiagobelem.net/arquivos/2009/06/idtextual.txt" target="_blank">download do arquivo (.txt) com a função</a> (com a indentação correta).</p>
 <h3>Usando a função</h3>
 <p>Para usar a função é bem simples, veja a conversão de número em texto:</p>
-<p>[code='php']<?php<br />
-echo alphaID(9007199254740989);<br />
-// Retorno: PpQXn7COf<br />
+<p>[code='php']<?php
+echo alphaID(9007199254740989);
+// Retorno: PpQXn7COf
 ?>[/code]</p>
 <p>E se usarmos o texto como argumento, definindo o segundo parâmetro como true, teremos o ID novamente:</p>
-<p>[code='php']<?php<br />
-echo alphaID('PpQXn7COf', true);<br />
-// Retorno: 9007199254740989<br />
+<p>[code='php']<?php
+echo alphaID('PpQXn7COf', true);
+// Retorno: 9007199254740989
 ?>[/code]</p>
 <p>--</p>
 <p>Essa função é bem legal pois além de deixar o sistema mais <strong>seguro</strong> (não é só mudar de 58 pra 57 na URL pra tentar acessar outro registro do banco) deixa o sistema mais <strong>profissional</strong> (não é todo mundo que mostra IDs textuais por aí). ;)</p>

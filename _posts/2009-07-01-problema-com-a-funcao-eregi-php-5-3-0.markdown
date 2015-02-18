@@ -21,34 +21,34 @@ tags:
 <p>Vim falar sobre a função ereg e eregi que são muito usadas (pelo menos por mim) e que precisam ser trocadas por uma versão em Pearl.</p>
 <p>Antigamente faríamos assim:</p>
 <p>[code lang="php"]&lt;?php</p>
-<p>$palavra = '(casa|carro)';<br />
+<p>$palavra = '(casa|carro)';
 $frase = 'Eu fui pra casa ontem!';</p>
-<p>if (ereg($palavra, $frase)) {<br />
-	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;<br />
-} else {<br />
-	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;<br />
+<p>if (ereg($palavra, $frase)) {
+	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;
+} else {
+	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;
 }</p>
 <p>?&gt;[/code]</p>
 <p>Agora, com o PHP 5.3.0 precisamos usar a função <strong>preg_match()</strong>, dessa forma:</p>
 <p>[code lang="php"]&lt;?php</p>
-<p>$palavra = '/(casa|carro)/';<br />
+<p>$palavra = '/(casa|carro)/';
 $frase = 'Eu fui pra casa ontem!';</p>
-<p>if (preg_match($palavra, $frase)) {<br />
-	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;<br />
-} else {<br />
-	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;<br />
+<p>if (preg_match($palavra, $frase)) {
+	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;
+} else {
+	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;
 }</p>
 <p>?&gt;[/code]</p>
 <p>Repare que entrou uma barra (pra direita) antes e depois da expressão regular.</p>
 <h3>eregi()</h3>
 <p>E pra quem usava o eregi, é só adicionar um "i" no final da expressão regular, dessa forma:</p>
 <p>[code lang="php"]&lt;?php</p>
-<p>$palavra = '/(casa|carro)/i';<br />
+<p>$palavra = '/(casa|carro)/i';
 $frase = 'Eu fui pra CasA ontem!';</p>
-<p>if (preg_match($palavra, $frase)) {<br />
-	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;<br />
-} else {<br />
-	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;<br />
+<p>if (preg_match($palavra, $frase)) {
+	echo &quot;A palavra 'casa' ou 'carro' foi encontrada na frase&quot;;
+} else {
+	echo &quot;A palavra 'casa' ou 'carro' não foi encontrada na frase&quot;;
 }</p>
 <p>?&gt;[/code]</p>
 <p>--</p>

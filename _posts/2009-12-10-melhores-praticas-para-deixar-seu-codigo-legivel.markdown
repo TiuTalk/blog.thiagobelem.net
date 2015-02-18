@@ -23,61 +23,61 @@ tags:
 <h3>2. Indentação Consistente</h3>
 <p>Indentação é, sem dúvida, a parte mais importante desse artigo... Sem uma boa indentação o código perde toda a hierarquia de comandos... Existem várias formas de indentar o seu código, todas elas são válidas, mas algumas são mais recomendadas. Veja dois exemplos dos estilos de indentação mais utilizados:</p>
 <p>[code language="php"]<?php</p>
-<p>if ($nota >= 7) {<br />
-	echo 'Você foi aprovado!';<br />
-} else {<br />
-	if ($nota > 3) {<br />
-		echo 'Você precisa fazer prova final!';<br />
-	} else {<br />
-		echo 'Você foi reprovado!';<br />
-	}<br />
+<p>if ($nota >= 7) {
+	echo 'Você foi aprovado!';
+} else {
+	if ($nota > 3) {
+		echo 'Você precisa fazer prova final!';
+	} else {
+		echo 'Você foi reprovado!';
+	}
 }</p>
-<p>?>[/code]<br />
+<p>?>[/code]
 [code language="php"]<?php</p>
-<p>if ($nota >= 7)<br />
-{<br />
-	echo 'Você foi aprovado!';<br />
-}<br />
-else<br />
-{<br />
-	if ($nota > 3)<br />
-	{<br />
-		echo 'Você precisa fazer prova final!';<br />
-	}<br />
-	else<br />
-	{<br />
-		echo 'Você foi reprovado!';<br />
-	}<br />
+<p>if ($nota >= 7)
+{
+	echo 'Você foi aprovado!';
+}
+else
+{
+	if ($nota > 3)
+	{
+		echo 'Você precisa fazer prova final!';
+	}
+	else
+	{
+		echo 'Você foi reprovado!';
+	}
 }</p>
-<p>?>[/code]<br />
+<p>?>[/code]
 Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é tão dificil assim perceber onde começa e termina cada bloco... Há um <a href="http://en.wikipedia.org/wiki/Indent_style" title="Estilos de Indentação" target="_blank">artigo na Wikipédia</a> que mostra os vários estilos de indentação.</p>
 <p><br/></p>
 <h3>3. Evite comentários óbvios</h3>
 <p>Comentar o seu código é sempre bom... Comentários só pesam no tamanho do arquivo. E não é só por isso que vamos sair comentando todas as nossas linhas... Além de duplicar (ou triplicar) o nosso tempo de desenvolvimento, nosso codigo vai ficar muito poluído e explicitar o óbivio... Vejamos alguns exemplos que não precisam nem ser comentados (literalmente):</p>
 <p>[code language="php"]<?php</p>
-<p>// Se o $nome for igual a Thiago<br />
-if ($nome == 'Thiago')  {<br />
-	// Exibe uma mensagem de boas vindas<br />
-	echo 'Olá Thiago!';<br />
-	// Calcula a idade da pessoa<br />
-	$idade = calculaIdade($nome);<br />
+<p>// Se o $nome for igual a Thiago
+if ($nome == 'Thiago')  {
+	// Exibe uma mensagem de boas vindas
+	echo 'Olá Thiago!';
+	// Calcula a idade da pessoa
+	$idade = calculaIdade($nome);
 }</p>
 <p>?>[/code]</p>
 <p><br/></p>
 <h3>4. Agrupamento de código</h3>
 <p>Muitas vezes fazemos isso sem perceber... E é uma ótima prática! Agrupe as linhas de código por suas funções/tarefas... Veja um exemplo:</p>
 <p>[code language="php"]<?php</p>
-<p>// Lista os produtos em destaque<br />
-$sql = "SELECT * FROM `produtos` WHERE `destaque` = 1";<br />
-$query = mysql_query($sql);<br />
-while ($produto = mysql_fetch_assoc($query)) {<br />
-	echo $produto['nome'] . '<br />';<br />
+<p>// Lista os produtos em destaque
+$sql = "SELECT * FROM `produtos` WHERE `destaque` = 1";
+$query = mysql_query($sql);
+while ($produto = mysql_fetch_assoc($query)) {
+	echo $produto['nome'] . '';
 }</p>
-<p>// Lista o apelido dos usuários online<br />
-$sql = "SELECT `apelido` FROM `usuarios` WHERE `online` = 1";<br />
-$query = mysql_query($sql);<br />
-while ($usuario = mysql_fetch_assoc($query)) {<br />
-	echo '»' . $usuario['apelido'] . '<br />';<br />
+<p>// Lista o apelido dos usuários online
+$sql = "SELECT `apelido` FROM `usuarios` WHERE `online` = 1";
+$query = mysql_query($sql);
+while ($usuario = mysql_fetch_assoc($query)) {
+	echo '»' . $usuario['apelido'] . '';
 }</p>
 <p>?>[/code]</p>
 <p><br/></p>
@@ -92,10 +92,10 @@ while ($usuario = mysql_fetch_assoc($query)) {<br />
 <p>Se você vai usar uma variável para incremento, contador ou só para armazenar um valor que será usado nas próximas linhas, ainda mais quando se trata de valores inteiros, não há necessidade de usar nomes grandes e descritivos... É muito comum usar <strong>$i</strong>, <strong>$k</strong> e <strong>$j</strong> para contadores em <strong>for</strong>/<strong>while</strong>, por exemplo.</p>
 <p><br/></p>
 <h3>7. Evidencie os termos especiais do SQL</h3>
-<p>Cansei de ver pessoas escrevendo consultas SQL assim:<br />
-[code language="sql" light="true"]select nome from produtos where preco > 10 limit 1[/code]<br />
-Quando não evidenciamos os termos especiais (protegidos) fica dificil entender com facilidade o que a consulta faz... Seria muito mais produtivo fazer algo assim:<br />
-[code language="sql" light="true"]SELECT `nome` FROM `produtos` WHERE `preco` > 10 LIMIT 1[/code]<br />
+<p>Cansei de ver pessoas escrevendo consultas SQL assim:
+[code language="sql" light="true"]select nome from produtos where preco > 10 limit 1[/code]
+Quando não evidenciamos os termos especiais (protegidos) fica dificil entender com facilidade o que a consulta faz... Seria muito mais produtivo fazer algo assim:
+[code language="sql" light="true"]SELECT `nome` FROM `produtos` WHERE `preco` > 10 LIMIT 1[/code]
 Onde as palavras protegidas do SQL são deixadas em maiúscula e os nomes de colunas e tabelas são colocados entre crases.</p>
 <p><br/></p>
 <h3>8. Refatoração de código</h3>

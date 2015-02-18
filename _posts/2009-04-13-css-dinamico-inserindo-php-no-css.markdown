@@ -17,45 +17,45 @@ tags: []
 <p>A primeira, um pouco mais complicada, é fazendo o <em>parser</em> (interpretador) do PHP ler os arquivos .css antes de enviá-los para o visitante. Você pode fazê-lo da seguinte forma: crie/edite um arquivo chamado .htaccess dentro do root (raiz) do seu servidor e insira essa linha nele:</p>
 <p>[code language="html"]AddType application/x-httpd-php.css[/code]</p>
 <p>Depois é só editar o seu arquivo .css e inserir códigos PHP da forma que bem entender... Lembrando apenas de que o retorno (via echo) deve ser a mesma formatação de um CSS... Exemplo:</p>
-<p>[code language="php"]<?php<br />
-$cor_fundo = '#CCCCFF';<br />
-$cor_texto = '#003333';<br />
-$imagem_link = '../img/link.jpg'<br />
+<p>[code language="php"]<?php
+$cor_fundo = '#CCCCFF';
+$cor_texto = '#003333';
+$imagem_link = '../img/link.jpg'
 ?></p>
-<p>body {<br />
-background: <?php echo $cor_fundo; ?>;<br />
+<p>body {
+background: <?php echo $cor_fundo; ?>;
 }</p>
-<p>p.texto {<br />
-font-family: Verdana, Arial, serif;<br />
-color: <?php echo $cor_texto; ?>;<br />
-font-size: 12px;<br />
+<p>p.texto {
+font-family: Verdana, Arial, serif;
+color: <?php echo $cor_texto; ?>;
+font-size: 12px;
 }</p>
-<p>a.especial {<br />
-text-decoration: none;<br />
-background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;<br />
+<p>a.especial {
+text-decoration: none;
+background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;
 }[/code]</p>
 <p>--</p>
 <p>A outra forma eu considero um pouco mais simples: Você renomeará o seu arquivo <strong>.css</strong> trocando a extensão para <strong>.php</strong> e adicionará apenas uma linha logo no começo:</p>
-<p>[code language="php"]<br />
-<?php<br />
-// Define que o arquivo terá a codificação de saída no formato CSS<br />
+<p>[code language="php"]
+<?php
+// Define que o arquivo terá a codificação de saída no formato CSS
 header("Content-type: text/css");</p>
-<p>$cor_fundo = '#CCCCFF';<br />
-$cor_texto = '#003333';<br />
-$imagem_link = '../img/link.jpg'<br />
+<p>$cor_fundo = '#CCCCFF';
+$cor_texto = '#003333';
+$imagem_link = '../img/link.jpg'
 ?></p>
-<p>body {<br />
-background: <?php echo $cor_fundo; ?>;<br />
+<p>body {
+background: <?php echo $cor_fundo; ?>;
 }</p>
-<p>p.texto {<br />
-font-family: Verdana, Arial, serif;<br />
-color: <?php echo $cor_texto; ?>;<br />
-font-size: 12px;<br />
+<p>p.texto {
+font-family: Verdana, Arial, serif;
+color: <?php echo $cor_texto; ?>;
+font-size: 12px;
 }</p>
-<p>a.especial {<br />
-text-decoration: none;<br />
-background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;<br />
-}<br />
+<p>a.especial {
+text-decoration: none;
+background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;
+}
 [/code]</p>
 <p>Não esqueça também de mudar o HTML que inclui a folha de estilos:</p>
 <p>[code language="html"]<link rel="stylesheet" href="estilo.php" type="text/css" />[/code]</p>

@@ -22,7 +22,7 @@ tags:
 <p style="color: gray;"><strong>Atualização 30/04/10</strong>: Adicionei algumas informações extras e fiz algumas correções nas RewriteRules.</p>
 <h3>Reescrevendo URLs que possuem parâmetros</h3>
 <p>Continuando o nosso exemplo, faremos agora a reescrita de URL do seguinte caso:</p>
-<p><code>http://meusite.com/<span style="background: yellow;">produtos</span>.php?id=<span style="background: lime;">2</span></code> (A URL atual)<br />
+<p><code>http://meusite.com/<span style="background: yellow;">produtos</span>.php?id=<span style="background: lime;">2</span></code> (A URL atual)
 <code>http://meusite.com/<span style="background: yellow;">produtos</span>/camiseta-rosa/<span style="background: lime;">2</span>/</code> (A nova URL)</p>
 <p>Nesse caso temos dois termos importantes na URL:</p>
 <p>O termo marcado em <span style="background: yellow;"> amarelo </span> identifica de qual URL estamos tratando, no nosso caso será a URL de exibição de um produto (um possível caso pra uma loja-virtual) o que poderia ser o mesmo caso da exibição de uma notícia ou artigo em um site com esse tipo de conteúdo.</p>
@@ -31,14 +31,14 @@ tags:
 <p>Você precisa entender que essa informação adicional, a princípio, <strong>não faz diferença alguma pro funcionamento do seu site</strong>, é apenas um bônus já que o seu sistema continuará identificando o produto pelo seu ID que está na última parte da URL.</p>
 <h3>Reescrevendo a URL</h3>
 <p>O nosso <code>.htaccess</code> para reescrever a URL anterior (da página de contato) e essa nova URL mais complexa, ficará assim:</p>
-<p>[code language="shell"]<br />
-<IfModule mod_rewrite.c><br />
+<p>[code language="shell"]
+<IfModule mod_rewrite.c>
 	RewriteEngine On</p>
-<p>	# Página de contato<br />
-	RewriteRule ^contato/?$ /contato.php [NC,L]<br />
-	# Página de exibição de um produto<br />
-	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]<br />
-</IfModule><br />
+<p>	# Página de contato
+	RewriteRule ^contato/?$ /contato.php [NC,L]
+	# Página de exibição de um produto
+	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]
+</IfModule>
 [/code]</p>
 <p>Agora vamos separar a regra de reescrita em três partes e explicar uma por uma:</p>
 <p><code>RewriteRule <span style="background: yellow;">^produtos/([a-z0-9-]+)/([0-9]+)/?$</span> <span style="background: lime;">/produtos.php?id=$2&nome=$1</span> <span style="background: cyan;">[NC]</span></code></p>
@@ -72,12 +72,12 @@ tags:
 <p>E temos <code style="background: lime;">$1</code> no parâmetro <code>nome</code>, esse "sifrao um" significa a primeira "variável" encontrada na URL, que nesse caso é a parte <code style="background: yellow;">([a-z0-9-]+)</code> da expressão regular, que conterá o nome do produto! :)</p>
 <p>Com isso tudo, ao chamar a URL <code>/produtos/camiseta-azul/2/</code> o Apache irá, malandramente e internamente, direcionar a requisição para o caminho <code>/produtos.php?id=2&nome=camiseta-azul</code>.</p>
 <p>Perceba que os valores (<strong>2</strong> e <strong>camiseta-azul</strong>) foram passados para o "antigo" arquivo, cada um em seu devido lugar... Com isso, ao executar o arquivo <code>/produtos.php</code> você terá acesso aos dois valores que foram passados na URL Amigável utilizando a super-global <code>$_GET</code>:</p>
-<p>[code language="php"]<br />
+<p>[code language="php"]
 <?php</p>
-<p>echo 'ID do produto: ' . $_GET['id']; // 2<br />
-echo '<br />';<br />
+<p>echo 'ID do produto: ' . $_GET['id']; // 2
+echo '';
 echo 'Nome (slug) do produto: ' . $_GET['nome']; // camiseta-azul</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>Quer coisa melhor que isso minha gente?!</p>
 <h4>Terceira parte</h4>
@@ -86,18 +86,18 @@ echo 'Nome (slug) do produto: ' . $_GET['nome']; // camiseta-azul</p>
 <p>Só para reforçar para quem ainda não pegou a essência da coisa: Na primeira parte temos uma <strong>expressão regular</strong> que, se ela validar a URL que o visitante está acessando, a requisição vai ser redirecionada para o <strong>caminho</strong> especificado na segunda parte.</p>
 <h3>Mais exemplos de URLs Amigáveis</h3>
 <p>Vamos ver mais alguns exemplos que podemos colocar no nosso <code>.htaccess</code> e o entendimento de cada uma das regras, fica por sua conta:</p>
-<p>[code language="shell"]<br />
-<IfModule mod_rewrite.c><br />
+<p>[code language="shell"]
+<IfModule mod_rewrite.c>
 	RewriteEngine On</p>
-<p>	# Página de contato<br />
-	RewriteRule ^contato/?$ /contato.php [NC,L]<br />
-	# Página de exibição de um produto<br />
-	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]<br />
-	# Página de exibição de uma categoria de livros<br />
-	RewriteRule ^livro/([a-z0-9-]+)/?$ /livros.php?categoria=$1 [NC,L]<br />
-	# Página de exibição de um artigo com a data na URL<br />
-	RewriteRule ^artigo/([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-z0-9-]+)/([0-9]+)/?$ /artigo.php?id=$5&nome=$4&data=$1-$2-$3 [NC]<br />
-</IfModule><br />
+<p>	# Página de contato
+	RewriteRule ^contato/?$ /contato.php [NC,L]
+	# Página de exibição de um produto
+	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]
+	# Página de exibição de uma categoria de livros
+	RewriteRule ^livro/([a-z0-9-]+)/?$ /livros.php?categoria=$1 [NC,L]
+	# Página de exibição de um artigo com a data na URL
+	RewriteRule ^artigo/([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-z0-9-]+)/([0-9]+)/?$ /artigo.php?id=$5&nome=$4&data=$1-$2-$3 [NC]
+</IfModule>
 [/code]</p>
 <p>Uma ferramenta que pode ajudá-los a testar expressões regulares é a <a title="RegExr: Online Regular Expression Testing Tool" rel="nofollow" href="http://gskinner.com/RegExr/" target="_blank">RegExr: Online Regular Expression Testing Tool</a>.</p>
 <p>Espero realmente que vocês tenham gostado... Amanhã vou tentar abordar outros assuntos e, dependendo do retorno e das dúvidas que vocês deixarem nos comentários, faço outro artigo sobre URLs Amigáveis.</p>

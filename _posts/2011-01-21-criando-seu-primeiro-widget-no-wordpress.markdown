@@ -27,118 +27,118 @@ tags:
 <li>Um método que será usado para salvar os dados vindos desse formulário</li>
 </ul>
 <p>Sabendo disso.. vamos começar a nossa classe:</p>
-<p>[code language="php"]<br />
+<p>[code language="php"]
 <?php</p>
-<p>/**<br />
- * Widget de Sobre o Autor<br />
- *<br />
- * @author Thiago Belem <contato@thiagobelem.net><br />
- * @link http://blog.thiagobelem.net/criando-seu-primeiro-widget-no-wordpress/<br />
- */<br />
+<p>/**
+ * Widget de Sobre o Autor
+ *
+ * @author Thiago Belem <contato@thiagobelem.net>
+ * @link http://blog.thiagobelem.net/criando-seu-primeiro-widget-no-wordpress/
+ */
 class SobreAutorWidget extends WP_Widget {</p>
 <p>}</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>Lembrando que a sua classe DEVE estender a classe <strong>WP_Widget</strong>, do próprio WordPress.</p>
 <p>Agora vamos inserir quatro métodos vazios para deixar a estrutura da classe pronta:</p>
-<p>[code language="php" firstline="11"]<br />
-	/**<br />
-	 * Construtor<br />
-	 */<br />
+<p>[code language="php" firstline="11"]
+	/**
+	 * Construtor
+	 */
 	public function SobreAutorWidget() { parent::WP_Widget(false, $name = 'Sobre o autor'); }</p>
-<p>	/**<br />
-	 * Exibição final do Widget (já no sidebar)<br />
-	 *<br />
-	 * @param array $argumentos Argumentos passados para o widget<br />
-	 * @param array $instancia Instância do widget<br />
-	 */<br />
+<p>	/**
+	 * Exibição final do Widget (já no sidebar)
+	 *
+	 * @param array $argumentos Argumentos passados para o widget
+	 * @param array $instancia Instância do widget
+	 */
 	public function widget($argumentos, $instancia) {</p>
 <p>	}</p>
-<p>	/**<br />
-	 * Salva os dados do widget no banco de dados<br />
-	 *<br />
-	 * @param array $nova_instancia Os novos dados do widget (a serem salvos)<br />
-	 * @param array $instancia_antiga Os dados antigos do widget<br />
-	 */<br />
+<p>	/**
+	 * Salva os dados do widget no banco de dados
+	 *
+	 * @param array $nova_instancia Os novos dados do widget (a serem salvos)
+	 * @param array $instancia_antiga Os dados antigos do widget
+	 */
 	public function update($nova_instancia, $instancia_antiga) {			</p>
 <p>	}</p>
-<p>	/**<br />
-	 * Formulário para os dados do widget (exibido no painel de controle)<br />
-	 *<br />
-	 * @param array $instancia Instância do widget<br />
-	 */<br />
+<p>	/**
+	 * Formulário para os dados do widget (exibido no painel de controle)
+	 *
+	 * @param array $instancia Instância do widget
+	 */
 	public function form($instancia) {	</p>
-<p>	}<br />
+<p>	}
 [/code]</p>
 <h3>Método form()</h3>
 <p>Agora vamos começar pelo método form(), que exibe o formulário... Esse widget não precisaria de formulário e opções pois ele não tem nenhum tipo de configuração, mas vamos deixar uma coisa opcional como exibir o link do site do autor.</p>
 <p>O nosso método form() ficará da seguinte forma:</p>
-<p>[code language="php" firstline="38"]<br />
-	/**<br />
-	 * Formulário para os dados do widget (exibido no painel de controle)<br />
-	 *<br />
-	 * @param array $instancia Instância do widget<br />
-	 */<br />
-	public function form($instancia) {<br />
-		$widget['link_autor'] = (boolean)$instancia['link_autor'];<br />
-		?><br />
-		<p><label for="<?php echo $this->get_field_id('link_autor'); ?>"><input id="<?php echo $this->get_field_id('link_autor'); ?>" name="<?php echo $this->get_field_name('link_autor'); ?>" type="checkbox" value="1" <?php if ($widget['link_autor']) echo 'checked="checked"'; ?> /> <?php _e('Exibe o link do autor'); ?></label></p><br />
-		<?php<br />
+<p>[code language="php" firstline="38"]
+	/**
+	 * Formulário para os dados do widget (exibido no painel de controle)
+	 *
+	 * @param array $instancia Instância do widget
+	 */
+	public function form($instancia) {
+		$widget['link_autor'] = (boolean)$instancia['link_autor'];
+		?>
+		<p><label for="<?php echo $this->get_field_id('link_autor'); ?>"><input id="<?php echo $this->get_field_id('link_autor'); ?>" name="<?php echo $this->get_field_name('link_autor'); ?>" type="checkbox" value="1" <?php if ($widget['link_autor']) echo 'checked="checked"'; ?> /> <?php _e('Exibe o link do autor'); ?></label></p>
+		<?php
 	}[/code]</p>
 <p>Eu sei que parece complicado, mas estamos apenas criando um parágrafo com um checkbox e um label... Para definir o ID e o name do input utilizamos recursos do próprio WordPress, assim não caímos no problema de usar um name que já exista... O resultado é um checkbox onde você pode decidir se exibe ou não o link do autor no widget.</p>
 <p>Logo no começo do método pegamos uma informação da instância atual do widget, assim caso estejamos editando um widget, saberemos a opção salva no banco de dados.</p>
 <h3>Método update()</h3>
 <p>Agora vamos partir para o método update(), que salva os dados e configurações do widget (nesse caso, apenas o checkbox) no banco de dados.</p>
 <p>Esse método precisará retornar os dados a serem salvos no banco de dados, ficando assim:</p>
-<p>[code language="php" firstline="28"]<br />
-	/**<br />
-	 * Salva os dados do widget no banco de dados<br />
-	 *<br />
-	 * @param array $nova_instancia Os novos dados do widget (a serem salvos)<br />
-	 * @param array $instancia_antiga Os dados antigos do widget<br />
-	 *<br />
-	 * @return array $instancia Dados atualizados a serem salvos no banco de dados<br />
-	 */<br />
-	public function update($nova_instancia, $instancia_antiga) {<br />
+<p>[code language="php" firstline="28"]
+	/**
+	 * Salva os dados do widget no banco de dados
+	 *
+	 * @param array $nova_instancia Os novos dados do widget (a serem salvos)
+	 * @param array $instancia_antiga Os dados antigos do widget
+	 *
+	 * @return array $instancia Dados atualizados a serem salvos no banco de dados
+	 */
+	public function update($nova_instancia, $instancia_antiga) {
 		$instancia = array_merge($instancia_antiga, $nova_instancia);</p>
-<p>		return $instancia;<br />
+<p>		return $instancia;
 	}[/code]</p>
 <p>Mais uma vez, não tem mistério: sobrescrevemos os valores de <code>$instancia_antiga</code> (o que estava salvo no banco de dados) com os valores de <code>$nova_instancia</code> e retornamos esses dados "mesclados" para serem salvos no banco de dados.</p>
 <p>E pra finalizar, o método mais importante...</p>
 <h3>Método widget()</h3>
 <p>Esse método será responsável por mostrar os dados (HTML) do widget na lateral do seu blog... Vamos fazê-lo passo-a-passo:</p>
 <p>Esse widget irá funcionar apenas nas páginas de post... então precisamos evitar que ele seja exibido nas outras páginas, dessa forma:</p>
-<p>[code language="php" firstline="24"]<br />
-	public function widget($argumentos, $instancia) {<br />
-		if (!is_single()) return;<br />
-	}<br />
+<p>[code language="php" firstline="24"]
+	public function widget($argumentos, $instancia) {
+		if (!is_single()) return;
+	}
 [/code]</p>
 <p>Agora vamos trazer alguns dados sobre o autor:</p>
-<p>[code language="php" firstline="27"]<br />
-		$autor = array(<br />
-			'nome' => get_the_author_meta('display_name'),<br />
-			'email' => get_the_author_meta('user_email'),<br />
-			'descricao' => get_the_author_meta('description'),<br />
-			'link' => get_the_author_meta('user_url')<br />
-		);<br />
+<p>[code language="php" firstline="27"]
+		$autor = array(
+			'nome' => get_the_author_meta('display_name'),
+			'email' => get_the_author_meta('user_email'),
+			'descricao' => get_the_author_meta('description'),
+			'link' => get_the_author_meta('user_url')
+		);
 [/code]</p>
-<p>Feito isso é só começar a exibir o HTML do Widget:<br />
-[code language="php" firstline="34"]<br />
-		// Exibe o HTML do Widget<br />
-		echo $argumentos['before_widget'];<br />
-		echo $argumentos['before_title'] . $argumentos['widget_name'] . $argumentos['after_title'];<br />
-		echo get_avatar($autor['email'], $size = '59');<br />
-		echo "<h4>{$autor['nome']}</h4>";<br />
-		echo "<p>{$autor['descricao']}</p>";<br />
-		if (isset($instancia['link_autor']) && $instancia['link_autor']) {<br />
-			echo '<p>Visite o <a href="'. $autor['link'] .'" title="'. $autor['nome'] .'" rel="nofollow" target="_blank">site do autor</a></p>';<br />
-		}<br />
-		echo $argumentos['after_widget'];<br />
+<p>Feito isso é só começar a exibir o HTML do Widget:
+[code language="php" firstline="34"]
+		// Exibe o HTML do Widget
+		echo $argumentos['before_widget'];
+		echo $argumentos['before_title'] . $argumentos['widget_name'] . $argumentos['after_title'];
+		echo get_avatar($autor['email'], $size = '59');
+		echo "<h4>{$autor['nome']}</h4>";
+		echo "<p>{$autor['descricao']}</p>";
+		if (isset($instancia['link_autor']) && $instancia['link_autor']) {
+			echo '<p>Visite o <a href="'. $autor['link'] .'" title="'. $autor['nome'] .'" rel="nofollow" target="_blank">site do autor</a></p>';
+		}
+		echo $argumentos['after_widget'];
 [/code]</p>
 <p>E o nosso widget está pronto!</p>
-<p>Agora você precisa de apenas uma linha para habilitá-lo no seu painel de controle:<br />
-[code language="php"]<br />
-add_action('widgets_init', create_function('', 'return register_widget("SobreAutorWidget");'));<br />
+<p>Agora você precisa de apenas uma linha para habilitá-lo no seu painel de controle:
+[code language="php"]
+add_action('widgets_init', create_function('', 'return register_widget("SobreAutorWidget");'));
 [/code]</p>
 <p>[caption id="attachment_1389" align="aligncenter" width="263" caption="Widget em funcionamento"]<img src="/assets/uploads/2011/01/1295580557334.png" alt="" title="Widget sobre o autor" width="263" height="120" class="size-full wp-image-1389" />[/caption]</p>
 <p>Espero que tenham gostado! Agora é só você editar o CSS do seu blog para deixar o widget bem apresentável. ;)</p>

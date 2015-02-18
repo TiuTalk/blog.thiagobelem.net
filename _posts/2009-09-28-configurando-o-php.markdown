@@ -30,7 +30,7 @@ tags:
 <p>Mesmo que você tenha definido uma lista de erros que devem ser reportados pelo PHP você não quer que os visitantes/usuários os vejam! Essa configuração fará exatamente isso: esconder os erros e salvá-los em um arquivo de log de erros. Deixar essa variável ligada é outra brecha de segurança enorme que você não vai querer ter no seu sistema.</p>
 <h3>session.gc_maxlifetime = <span style="color: blue;">28800</span></h3>
 <p>Essa configuração determina quanto tempo (em segundos) uma sessão irá durar no seu sistema. O valor padrão é 1140, o que dá cerca de 24 minutos e é muito pouco caso o seu usuário esteja lendo um artigo/notícia grande. 28800 segundos equivale a 8 horas.</p>
-<h3>upload_max_filesize = <span style="color: blue;">10M</span><br />post_max_size = <span style="color: blue;">11M</span></h3>
+<h3>upload_max_filesize = <span style="color: blue;">10M</span>post_max_size = <span style="color: blue;">11M</span></h3>
 <p>Essas configurações tratam do tamanho das requisições POST que você faz ao php... A primeira determina o tamanho máximo de UPLOAD e a segunda determina o tamanho máximo da requisição... É sempre bom deixar esses valores um pouco maiores do que são por padrão (2M & 8M) pois normalmente você precisa de um upload maior que 2Mb.</p>
 <p>--</p>
 <h3>Mudando uma configuração do PHP via arquivos .htaccess</h3>

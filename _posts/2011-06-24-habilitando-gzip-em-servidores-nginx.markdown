@@ -30,17 +30,17 @@ tags:
 <p>[code]/etc/nginx/sites-available/{arquivo}[/code]</p>
 <p>Mas isso pode variar no seu servidor.</p>
 <p>Encontrado o arquivo, é só colocar algo do tipo dentro do bloco de configuração do seu site:</p>
-<p>[code language="shell"]# Habilita o gzip<br />
-gzip			on;<br />
-gzip_http_version	1.1;<br />
-gzip_vary		on;<br />
-gzip_comp_level	6;<br />
+<p>[code language="shell"]# Habilita o gzip
+gzip			on;
+gzip_http_version	1.1;
+gzip_vary		on;
+gzip_comp_level	6;
 gzip_proxied	any;</p>
-<p># Mime-types que serão compactados<br />
+<p># Mime-types que serão compactados
 gzip_types		text/html text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;</p>
-<p># http://blog.leetsoft.com/2007/7/25/nginx-gzip-ssl<br />
+<p># http://blog.leetsoft.com/2007/7/25/nginx-gzip-ssl
 gzip_buffers	16	8k;</p>
-<p># Desabilita o gzip para alguns navegadores<br />
+<p># Desabilita o gzip para alguns navegadores
 gzip_disable	"MSIE [1-6].(?!.*SV1)";[/code]</p>
 <p>Gist: <a href="https://gist.github.com/1045708" target="_blank">https://gist.github.com/1045708</a></p>
 <p>Depois é só reiniciar o seu servidor:</p>

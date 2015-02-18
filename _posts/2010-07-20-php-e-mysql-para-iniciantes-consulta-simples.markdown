@@ -32,167 +32,167 @@ tags:
 <p style="margin-bottom: 0px;">A imagem acima foi criada utilizando o <a href="http://wb.mysql.com/">MySQL Workbench</a>, uma ótima ferramenta de <a title="modelagem de banco de dados" href="http://blog.thiagobelem.net/mysql/modelagem-de-banco-de-dados/">modelagem de banco de dados</a>.</p>
 </div>
 <p>Para criar essas tabelas em seu banco de dados, execute esse código SQL:</p>
-<p>[code language="sql"]<br />
--- -----------------------------------------------------<br />
--- Table `categorias`<br />
--- -----------------------------------------------------<br />
+<p>[code language="sql"]
+-- -----------------------------------------------------
+-- Table `categorias`
+-- -----------------------------------------------------
 DROP TABLE IF EXISTS `categorias` ;</p>
-<p>CREATE  TABLE IF NOT EXISTS `categorias` (<br />
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,<br />
-  `nome` VARCHAR(50) NOT NULL ,<br />
-  PRIMARY KEY (`id`) )<br />
+<p>CREATE  TABLE IF NOT EXISTS `categorias` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `nome` VARCHAR(50) NOT NULL ,
+  PRIMARY KEY (`id`) )
 ENGINE = MyISAM;</p>
-<p>-- -----------------------------------------------------<br />
--- Table `noticias`<br />
--- -----------------------------------------------------<br />
+<p>-- -----------------------------------------------------
+-- Table `noticias`
+-- -----------------------------------------------------
 DROP TABLE IF EXISTS `noticias` ;</p>
-<p>CREATE  TABLE IF NOT EXISTS `noticias` (<br />
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,<br />
-  `categoria_id` INT UNSIGNED NOT NULL ,<br />
-  `titulo` VARCHAR(100) NOT NULL ,<br />
-  `descricao` TEXT NOT NULL ,<br />
-  `texto` LONGTEXT NOT NULL ,<br />
-  `ativa` TINYINT(1)  NOT NULL DEFAULT 1 ,<br />
-  `cadastro` DATETIME NOT NULL ,<br />
-  PRIMARY KEY (`id`) ,<br />
-  INDEX `CATEGORIA` (`categoria_id` ASC) ,<br />
-  CONSTRAINT `FK_CATEGORIA`<br />
-    FOREIGN KEY (`categoria_id` )<br />
-    REFERENCES `categorias` (`id` )<br />
-    ON DELETE NO ACTION<br />
-    ON UPDATE NO ACTION)<br />
-ENGINE = MyISAM;<br />
+<p>CREATE  TABLE IF NOT EXISTS `noticias` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `categoria_id` INT UNSIGNED NOT NULL ,
+  `titulo` VARCHAR(100) NOT NULL ,
+  `descricao` TEXT NOT NULL ,
+  `texto` LONGTEXT NOT NULL ,
+  `ativa` TINYINT(1)  NOT NULL DEFAULT 1 ,
+  `cadastro` DATETIME NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `CATEGORIA` (`categoria_id` ASC) ,
+  CONSTRAINT `FK_CATEGORIA`
+    FOREIGN KEY (`categoria_id` )
+    REFERENCES `categorias` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = MyISAM;
 [/code]</p>
 <p>Vamos iniciar o nosso script criando um pequeno script de conexão ao banco de dados:</p>
-<p>[code language="php" highlight="21"]<br />
-<?php<br />
-/**<br />
- * PHP e MySQL para iniciantes<br />
- *<br />
- * Arquivo que faz a conexão com o banco de dados utilizando MySQLi<br />
- *<br />
- * PHP 5+, MySQL 4.1+<br />
- *<br />
- * @author Thiago Belem <contato@thiagobelem.net><br />
- * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/<br />
+<p>[code language="php" highlight="21"]
+<?php
+/**
+ * PHP e MySQL para iniciantes
+ *
+ * Arquivo que faz a conexão com o banco de dados utilizando MySQLi
+ *
+ * PHP 5+, MySQL 4.1+
+ *
+ * @author Thiago Belem <contato@thiagobelem.net>
+ * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
  */</p>
-<p>// Dados de acesso ao servidor MySQL<br />
-$MySQL = array(<br />
-	'servidor' => '127.0.0.1',	// Endereço do servidor<br />
-	'usuario' => 'root',		// Usuário<br />
-	'senha' => '',				// Senha<br />
-	'banco' => 'meu_site'		// Nome do banco de dados<br />
+<p>// Dados de acesso ao servidor MySQL
+$MySQL = array(
+	'servidor' => '127.0.0.1',	// Endereço do servidor
+	'usuario' => 'root',		// Usuário
+	'senha' => '',				// Senha
+	'banco' => 'meu_site'		// Nome do banco de dados
 );</p>
 <p>$MySQLi = new MySQLi($MySQL['servidor'], $MySQL['usuario'], $MySQL['senha'], $MySQL['banco']);</p>
-<p>// Verifica se ocorreu um erro e exibe a mensagem de erro<br />
-if (mysqli_connect_errno())<br />
+<p>// Verifica se ocorreu um erro e exibe a mensagem de erro
+if (mysqli_connect_errno())
     trigger_error(mysqli_connect_error(), E_USER_ERROR);</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>Na linha 21 nós criamos uma instância do MySQLi passando os dados de conexão com o servidor e, logo depois, verificamos se houve algum erro durante a conexão e exibimos a mensagem de erro.</p>
 <p>Salve esse script com o nome de <code>mysqli.php</code> em uma pasta chamada <code>includes</code>.</p>
 <p>O próximo passo será criar um script que faz uma consulta SQL, vamos começar o arquivo PHP com os comentários de créditos e o <code><a href="http://php.net/manual/en/function.require-once.php">require</a></code> para chamar o arquivo de conexão ao banco de dados:</p>
-<p>[code language="php"]<br />
-<?php<br />
-/**<br />
- * PHP e MySQL para iniciantes<br />
- *<br />
- * Arquivo com um exemplo de consulta ao banco de dados MySQL<br />
- *<br />
- * PHP 5+, MySQL 4.1+<br />
- *<br />
- * @author Thiago Belem <contato@thiagobelem.net><br />
- * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/<br />
+<p>[code language="php"]
+<?php
+/**
+ * PHP e MySQL para iniciantes
+ *
+ * Arquivo com um exemplo de consulta ao banco de dados MySQL
+ *
+ * PHP 5+, MySQL 4.1+
+ *
+ * @author Thiago Belem <contato@thiagobelem.net>
+ * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
  */</p>
-<p>// Inclui o arquivo que faz a conexão ao banco de dados<br />
+<p>// Inclui o arquivo que faz a conexão ao banco de dados
 require_once('includes/mysqli.php');</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>Agora vamos montar uma consulta SQL simples para buscar as 10 últimas notícias ativas:</p>
-<p>[code language="php" firstline="17"]<br />
-// Monta a consulta SQL para trazer as últimas 10 notícias ativas<br />
-$sql = 'SELECT *<br />
-		FROM `noticias` AS Noticia<br />
-		WHERE Noticia.`ativa` = 1<br />
-		ORDER BY Noticia.`cadastro` DESC<br />
-		LIMIT 10';<br />
+<p>[code language="php" firstline="17"]
+// Monta a consulta SQL para trazer as últimas 10 notícias ativas
+$sql = 'SELECT *
+		FROM `noticias` AS Noticia
+		WHERE Noticia.`ativa` = 1
+		ORDER BY Noticia.`cadastro` DESC
+		LIMIT 10';
 [/code]</p>
 <p>A consulta montada poderia ser traduzida por:</p>
-<blockquote><p>SELECIONE todas as colunas<br />
-DA TABELA `noticias`<br />
-ONDE `ativa` for igual a 1<br />
-ORDENANDO PELO `cadastro` DECRESCENTEMENTE<br />
+<blockquote><p>SELECIONE todas as colunas
+DA TABELA `noticias`
+ONDE `ativa` for igual a 1
+ORDENANDO PELO `cadastro` DECRESCENTEMENTE
 LIMITADO A 10 resultados</p></blockquote>
 <p>Agora precisamos executar a consulta utilizando o método <code><a href="http://www.php.net/manual/pt_BR/mysqli.query.php">query</a></code> do MySQLi:</p>
-<p>[code language="php" firstline="24"]<br />
-// Executa a consulta OU mostra uma mensagem de erro<br />
-$resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);<br />
+<p>[code language="php" firstline="24"]
+// Executa a consulta OU mostra uma mensagem de erro
+$resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
 [/code]</p>
 <p>E agora só precisamos rodar um loop, e em cada iteração (passada no loop) iremos exibir a notícia encontrada, montando um bloco HTML:</p>
-<p>[code language="php" firstline="27"]<br />
-// Faz um loop, passando por todos os resultados encontrados<br />
-while ($noticia = $resultado->fetch_object()) {<br />
-	// Exibe a notícia dentro de um bloco HTML<br />
+<p>[code language="php" firstline="27"]
+// Faz um loop, passando por todos os resultados encontrados
+while ($noticia = $resultado->fetch_object()) {
+	// Exibe a notícia dentro de um bloco HTML
 	?></p>
-<p>	<h2><?php echo $noticia->titulo; ?></h2><br />
-	<p><?php echo $noticia->descricao; ?></p><br />
+<p>	<h2><?php echo $noticia->titulo; ?></h2>
+	<p><?php echo $noticia->descricao; ?></p>
 	<p><a href="noticia.php?id=<?php echo $noticia->id; ?>" title="Continue lendo essa notícia">Leia mais &raquo;</a></p></p>
-<p>	<?php<br />
-} // while ($noticia = $resultado->fetch_object())<br />
+<p>	<?php
+} // while ($noticia = $resultado->fetch_object())
 [/code]</p>
 <p>Fazendo isso, para cada notícia encontrada pela consulta, será criado o seguinte bloco HTML:</p>
-<p>[code language="html"]<br />
-<h2>Titulo da notícia</h2><br />
-<p>Descrição da notícia</p><br />
-<p><a href="noticia.php?id=2" title="Continue lendo essa notícia">Leia mais &raquo;</a></p><br />
+<p>[code language="html"]
+<h2>Titulo da notícia</h2>
+<p>Descrição da notícia</p>
+<p><a href="noticia.php?id=2" title="Continue lendo essa notícia">Leia mais &raquo;</a></p>
 [/code]</p>
 <p>Depois disso, podemos colocar mais um pequeno bloco de código que irá mostrar o total de registros encontrados com a consulta:</p>
-<p>[code language="php" firstline="39"]<br />
-// Exibe o total de registros encontrados<br />
-echo "<p>Registros encontrados: {$resultado->num_rows}</p>";<br />
+<p>[code language="php" firstline="39"]
+// Exibe o total de registros encontrados
+echo "<p>Registros encontrados: {$resultado->num_rows}</p>";
 [/code]</p>
 <p>E no final de tudo precisamos - <strong>SEMPRE</strong> - liberar o resultado da consulta, limpando espaço na memória e deixando tudo mais organizado:</p>
-<p>[code language="php" firstline="42"]<br />
-// Libera o resultado para liberar memória<br />
-$resultado->free();<br />
+<p>[code language="php" firstline="42"]
+// Libera o resultado para liberar memória
+$resultado->free();
 [/code]</p>
 <p>O arquivo <code>consulta.php</code> ficou assim:</p>
-<p>[code language="php"]<br />
-<?php<br />
-/**<br />
- * PHP e MySQL para iniciantes<br />
- *<br />
- * Arquivo com um exemplo de consulta ao banco de dados MySQL<br />
- *<br />
- * PHP 5+, MySQL 4.1+<br />
- *<br />
- * @author Thiago Belem <contato@thiagobelem.net><br />
- * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/<br />
+<p>[code language="php"]
+<?php
+/**
+ * PHP e MySQL para iniciantes
+ *
+ * Arquivo com um exemplo de consulta ao banco de dados MySQL
+ *
+ * PHP 5+, MySQL 4.1+
+ *
+ * @author Thiago Belem <contato@thiagobelem.net>
+ * @link http://blog.thiagobelem.net/mysql/php-e-mysql-para-iniciantes-consulta-simples/
  */</p>
-<p>// Inclui o arquivo que faz a conexão ao banco de dados<br />
+<p>// Inclui o arquivo que faz a conexão ao banco de dados
 require_once('includes/mysqli.php');</p>
-<p>// Monta a consulta SQL para trazer as últimas 10 notícias ativas<br />
-$sql = 'SELECT *<br />
-		FROM `noticias` AS Noticia<br />
-		WHERE Noticia.`ativa` = 1<br />
-		ORDER BY Noticia.`cadastro` DESC<br />
+<p>// Monta a consulta SQL para trazer as últimas 10 notícias ativas
+$sql = 'SELECT *
+		FROM `noticias` AS Noticia
+		WHERE Noticia.`ativa` = 1
+		ORDER BY Noticia.`cadastro` DESC
 		LIMIT 10';</p>
-<p>// Executa a consulta OU mostra uma mensagem de erro<br />
+<p>// Executa a consulta OU mostra uma mensagem de erro
 $resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);</p>
-<p>// Faz um loop, passando por todos os resultados encontrados<br />
-while ($noticia = $resultado->fetch_object()) {<br />
-	// Exibe a notícia dentro de um bloco HTML<br />
+<p>// Faz um loop, passando por todos os resultados encontrados
+while ($noticia = $resultado->fetch_object()) {
+	// Exibe a notícia dentro de um bloco HTML
 	?></p>
-<p>	<h2><?php echo $noticia->titulo; ?></h2><br />
-	<p><?php echo $noticia->descricao; ?></p><br />
+<p>	<h2><?php echo $noticia->titulo; ?></h2>
+	<p><?php echo $noticia->descricao; ?></p>
 	<p><a href="noticia.php?id=<?php echo $noticia->id; ?>" title="Continue lendo essa notícia">Leia mais &raquo;</a></p></p>
-<p>	<?php<br />
+<p>	<?php
 } // while ($noticia = $resultado->fetch_object())</p>
-<p>// Exibe o total de registros encontrados<br />
+<p>// Exibe o total de registros encontrados
 echo "<p>Registros encontrados: {$resultado->num_rows}</p>";</p>
-<p>// Libera o resultado para liberar memória<br />
+<p>// Libera o resultado para liberar memória
 $resultado->free();</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>Por hoje é só! :)</p>
 <p>Faça o download de todos os arquivos desse tutorial: <a href="http://blog.thiagobelem.net/arquivos/2010/07/PHP-e-MySQL-Consulta-Simples.zip">PHP-e-MySQL-Consulta-Simples.zip</a></p>

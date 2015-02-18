@@ -23,84 +23,84 @@ tags:
 <p><a href="http://blog.thiagobelem.net/exemplo3/" target="_blank">Veja aqui um exemplo de como vai ficar o menu.</a></p>
 <p>Bom... vamos lá!</p>
 <h3>Código (X)HTML do menu</h3>
-<p>[code lang="html"]<ul id="menu"><br />
-	<li class="header">Menu</li><br />
-	<li><a href="#" title="">Página inicial</a></li><br />
-	<li><a href="#" title="">Notícias</a></li><br />
-	<li class="parent"><a href="#" title="">Produtos</a><br />
-		<ul class="sub-menu"><br />
-			<li><a href="#" title="">Camisetas</a></li><br />
-			<li><a href="#" title="">Calças</a></li><br />
-			<li><a href="#" title="">Livros</a></li><br />
-		</ul><br />
-	</li><br />
-	<li><a href="#" title="">Quem somos nós</a></li><br />
-	<li><a href="#" title="">Contato</a></li><br />
+<p>[code lang="html"]<ul id="menu">
+	<li class="header">Menu</li>
+	<li><a href="#" title="">Página inicial</a></li>
+	<li><a href="#" title="">Notícias</a></li>
+	<li class="parent"><a href="#" title="">Produtos</a>
+		<ul class="sub-menu">
+			<li><a href="#" title="">Camisetas</a></li>
+			<li><a href="#" title="">Calças</a></li>
+			<li><a href="#" title="">Livros</a></li>
+		</ul>
+	</li>
+	<li><a href="#" title="">Quem somos nós</a></li>
+	<li><a href="#" title="">Contato</a></li>
 </ul>[/code]</p>
 <p>Vejam que o sub-menu (que irá aparecer) fica dentro do <li> e fora do <a>.</p>
 <h3>Código CSS do menu</h3>
-<p>[code lang="css"]* {<br />
-	margin: 0px;<br />
-	padding: 0px;<br />
+<p>[code lang="css"]* {
+	margin: 0px;
+	padding: 0px;
 }</p>
-<p>body {<br />
-	font-family: Verdana, Arial, sans-serif;<br />
-	font-size: 11px;<br />
-	margin: 20px;<br />
+<p>body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 11px;
+	margin: 20px;
 }</p>
-<p>ul {<br />
-	list-style: none;<br />
+<p>ul {
+	list-style: none;
 }</p>
-<p>ul#menu {<br />
-	width: 170px;<br />
-	border: 1px solid silver;<br />
-	margin-top: 20px;<br />
+<p>ul#menu {
+	width: 170px;
+	border: 1px solid silver;
+	margin-top: 20px;
 }</p>
-<p>ul#menu li {<br />
-	color: black;<br />
-	line-height: 19px;<br />
-	background: #F4F4F4;<br />
+<p>ul#menu li {
+	color: black;
+	line-height: 19px;
+	background: #F4F4F4;
 }</p>
-<p>ul#menu li.header {<br />
-	background: #DFDFDF;<br />
-	font-weight: bolder;<br />
-	padding: 0px 3px;<br />
-	font-size: 12px;<br />
+<p>ul#menu li.header {
+	background: #DFDFDF;
+	font-weight: bolder;
+	padding: 0px 3px;
+	font-size: 12px;
 }</p>
-<p>ul#menu li a {<br />
-	color: black;<br />
-	text-decoration: none;<br />
-	display: block;<br />
-	padding: 0px 3px;<br />
-	outline: none;<br />
+<p>ul#menu li a {
+	color: black;
+	text-decoration: none;
+	display: block;
+	padding: 0px 3px;
+	outline: none;
 }</p>
-<p>ul#menu li.parent > a {<br />
-	background: transparent url('../img/down.gif') right center no-repeat;<br />
+<p>ul#menu li.parent > a {
+	background: transparent url('../img/down.gif') right center no-repeat;
 }</p>
-<p>ul#menu li.aberto > a {<br />
-	background: transparent url('../img/up.gif') right center no-repeat;<br />
+<p>ul#menu li.aberto > a {
+	background: transparent url('../img/up.gif') right center no-repeat;
 }</p>
-<p>ul#menu li a:hover {<br />
-	background-color: #EAEEFF;<br />
+<p>ul#menu li a:hover {
+	background-color: #EAEEFF;
 }</p>
-<p>ul#menu li ul.sub-menu {<br />
-  	display: none;<br />
+<p>ul#menu li ul.sub-menu {
+  	display: none;
 }</p>
-<p>ul#menu li ul.sub-menu li a {<br />
-	padding-left: 15px;<br />
-	color: maroon;<br />
+<p>ul#menu li ul.sub-menu li a {
+	padding-left: 15px;
+	color: maroon;
 }[/code]</p>
 <h3>Bloco de código do efeito (jQuery)</h3>
-<p>[code lang="javascript"]$(function() {<br />
-	// Evento de clique do elemento: ul#menu li.parent > a<br />
-	$('ul#menu li.parent > a').click(function() {<br />
-		// Expande ou retrai o elemento ul.sub-menu dentro do elemento pai (ul#menu li.parent)<br />
-		$('ul.sub-menu', $(this).parent()).slideToggle('fast', function() {<br />
-			// Depois de expandir ou retrair, troca a classe 'aberto' do <a> clicado<br />
-			$(this).parent().toggleClass('aberto');<br />
-		});<br />
-		return false;<br />
-	});<br />
+<p>[code lang="javascript"]$(function() {
+	// Evento de clique do elemento: ul#menu li.parent > a
+	$('ul#menu li.parent > a').click(function() {
+		// Expande ou retrai o elemento ul.sub-menu dentro do elemento pai (ul#menu li.parent)
+		$('ul.sub-menu', $(this).parent()).slideToggle('fast', function() {
+			// Depois de expandir ou retrair, troca a classe 'aberto' do <a> clicado
+			$(this).parent().toggleClass('aberto');
+		});
+		return false;
+	});
 });[/code]</p>
 <p>--</p>
 <p>É só juntar todas as peças (como foi feito no exemplo) e o seu menu irá funcionar que é uma maravilha! :D</p>

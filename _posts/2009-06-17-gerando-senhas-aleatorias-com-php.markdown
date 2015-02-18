@@ -21,71 +21,71 @@ tags:
 <p>Vou explicar o passo-a-passo pra criar a função que permitirá uma criação personalizada de senhas contendo números, letras (minúsculas e maiúscuslas) e símbolos... Todos opcionais.</p>
 <p>Primeiro, definimos uma função vazia com alguns parâmetros (e seus valores padrões):</p>
 <p>[code='php']<?php</p>
-<p>function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)<br />
+<p>function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
 {</p>
 <p>}</p>
 <p>?>[/code]</p>
 <p>Como pode ver, por padrão a senha gerada terá 8 caracteres, letras (minúsculas e maiúsculas) e números... Mas repito: todos esses parâmetros poderão ser modificados e manipulados (veremos isso depois).</p>
 <p>Agora definimos algumas variáveis que serão usadas pela função:</p>
 <p>[code='php']<?php</p>
-<p>function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)<br />
-{<br />
-// Caracteres de cada tipo<br />
-$lmin = 'abcdefghijklmnopqrstuvwxyz';<br />
-$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';<br />
-$num = '1234567890';<br />
+<p>function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
+{
+// Caracteres de cada tipo
+$lmin = 'abcdefghijklmnopqrstuvwxyz';
+$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$num = '1234567890';
 $simb = '!@#$%*-';</p>
-<p>// Variaveis internas<br />
-$retorno = '';<br />
-$caracteres = '';<br />
+<p>// Variaveis internas
+$retorno = '';
+$caracteres = '';
 }</p>
 <p>?>[/code]</p>
 <p>Agora começa a brincadeira.. Vamos alimentar a variável $caracteres com todos os caracteres que poderão ser usados na senha:</p>
 <p>[code='php']<?php</p>
-<p>function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)<br />
-{<br />
-// Caracteres de cada tipo<br />
-$lmin = 'abcdefghijklmnopqrstuvwxyz';<br />
-$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';<br />
-$num = '1234567890';<br />
+<p>function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
+{
+// Caracteres de cada tipo
+$lmin = 'abcdefghijklmnopqrstuvwxyz';
+$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$num = '1234567890';
 $simb = '!@#$%*-';</p>
-<p>// Variáveis internas<br />
-$retorno = '';<br />
+<p>// Variáveis internas
+$retorno = '';
 $caracteres = '';</p>
-<p>// Agrupamos todos os caracteres que poderão ser utilizados<br />
-$caracteres .= $lmin;<br />
-if ($maiusculas) $caracteres .= $lmai;<br />
-if ($numeros) $caracteres .= $num;<br />
-if ($simbolos) $caracteres .= $simb;<br />
+<p>// Agrupamos todos os caracteres que poderão ser utilizados
+$caracteres .= $lmin;
+if ($maiusculas) $caracteres .= $lmai;
+if ($numeros) $caracteres .= $num;
+if ($simbolos) $caracteres .= $simb;
 }</p>
 <p>?>[/code]</p>
 <p>Agora, pra finalizar, contamos com quantos caracteres a variável $caracteres ficou e usamos uma estrutura de repetição (<em>loop</em>) que se repetirá pra cada um dos caracteres finais da senha (variável $tamanho).</p>
 <p>Depois é só retornar a variável contendo a senha criada:</p>
 <p>[code='php']<?php</p>
-<p>function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)<br />
-{<br />
-// Caracteres de cada tipo<br />
-$lmin = 'abcdefghijklmnopqrstuvwxyz';<br />
-$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';<br />
-$num = '1234567890';<br />
+<p>function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
+{
+// Caracteres de cada tipo
+$lmin = 'abcdefghijklmnopqrstuvwxyz';
+$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$num = '1234567890';
 $simb = '!@#$%*-';</p>
-<p>// Variáveis internas<br />
-$retorno = '';<br />
+<p>// Variáveis internas
+$retorno = '';
 $caracteres = '';</p>
-<p>// Agrupamos todos os caracteres que poderão ser utilizados<br />
-$caracteres .= $lmin;<br />
-if ($maiusculas) $caracteres .= $lmai;<br />
-if ($numeros) $caracteres .= $num;<br />
+<p>// Agrupamos todos os caracteres que poderão ser utilizados
+$caracteres .= $lmin;
+if ($maiusculas) $caracteres .= $lmai;
+if ($numeros) $caracteres .= $num;
 if ($simbolos) $caracteres .= $simb;</p>
-<p>// Calculamos o total de caracteres possíveis<br />
+<p>// Calculamos o total de caracteres possíveis
 $len = strlen($caracteres);</p>
-<p>for ($n = 1; $n <= $tamanho; $n++) {<br />
-// Criamos um número aleatório de 1 até $len para pegar um dos caracteres<br />
-$rand = mt_rand(1, $len);<br />
-// Concatenamos um dos caracteres na variável $retorno<br />
-$retorno .= $caracteres[$rand-1];<br />
+<p>for ($n = 1; $n <= $tamanho; $n++) {
+// Criamos um número aleatório de 1 até $len para pegar um dos caracteres
+$rand = mt_rand(1, $len);
+// Concatenamos um dos caracteres na variável $retorno
+$retorno .= $caracteres[$rand-1];
 }</p>
-<p>return $retorno;<br />
+<p>return $retorno;
 }</p>
 <p>?>[/code]</p>
 <p>O código acima já é a função completa e pronta pra usar! :D</p>
@@ -93,53 +93,53 @@ $retorno .= $caracteres[$rand-1];<br />
 <h3>Código final da função</h3>
 <p>Fiz também uma versão mais compacta, sem comentários e com créditos:</p>
 <p>[code='php']<?php</p>
-<p>/**<br />
-* Função para gerar senhas aleatórias<br />
-*<br />
-* @author    Thiago Belem <contato@thiagobelem.net><br />
-*<br />
-* @param integer $tamanho Tamanho da senha a ser gerada<br />
-* @param boolean $maiusculas Se terá letras maiúsculas<br />
-* @param boolean $numeros Se terá números<br />
-* @param boolean $simbolos Se terá símbolos<br />
-*<br />
-* @return string A senha gerada<br />
-*/<br />
-function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)<br />
-{<br />
-$lmin = 'abcdefghijklmnopqrstuvwxyz';<br />
-$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';<br />
-$num = '1234567890';<br />
-$simb = '!@#$%*-';<br />
-$retorno = '';<br />
+<p>/**
+* Função para gerar senhas aleatórias
+*
+* @author    Thiago Belem <contato@thiagobelem.net>
+*
+* @param integer $tamanho Tamanho da senha a ser gerada
+* @param boolean $maiusculas Se terá letras maiúsculas
+* @param boolean $numeros Se terá números
+* @param boolean $simbolos Se terá símbolos
+*
+* @return string A senha gerada
+*/
+function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
+{
+$lmin = 'abcdefghijklmnopqrstuvwxyz';
+$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$num = '1234567890';
+$simb = '!@#$%*-';
+$retorno = '';
 $caracteres = '';</p>
-<p>$caracteres .= $lmin;<br />
-if ($maiusculas) $caracteres .= $lmai;<br />
-if ($numeros) $caracteres .= $num;<br />
+<p>$caracteres .= $lmin;
+if ($maiusculas) $caracteres .= $lmai;
+if ($numeros) $caracteres .= $num;
 if ($simbolos) $caracteres .= $simb;</p>
-<p>$len = strlen($caracteres);<br />
-for ($n = 1; $n <= $tamanho; $n++) {<br />
-$rand = mt_rand(1, $len);<br />
-$retorno .= $caracteres[$rand-1];<br />
-}<br />
-return $retorno;<br />
+<p>$len = strlen($caracteres);
+for ($n = 1; $n <= $tamanho; $n++) {
+$rand = mt_rand(1, $len);
+$retorno .= $caracteres[$rand-1];
+}
+return $retorno;
 }</p>
 <p>?>[/code]</p>
 <p>--</p>
 <h3>Exemplos de uso</h3>
-<p>[code='php']<?php<br />
-// Gera uma senha com 10 carecteres: letras (min e mai), números<br />
-$senha = geraSenha(10);<br />
+<p>[code='php']<?php
+// Gera uma senha com 10 carecteres: letras (min e mai), números
+$senha = geraSenha(10);
 // gfUgF3e5m7</p>
-<p>// Gera uma senha com 9 carecteres: letras (min e mai)<br />
-$senha = geraSenha(9, true, false);<br />
+<p>// Gera uma senha com 9 carecteres: letras (min e mai)
+$senha = geraSenha(9, true, false);
 // BJnCYupsN</p>
-<p>// Gera uma senha com 6 carecteres: letras minúsculas e números<br />
-$senha = geraSenha(6, false, true);<br />
+<p>// Gera uma senha com 6 carecteres: letras minúsculas e números
+$senha = geraSenha(6, false, true);
 // sowz0g</p>
-<p>// Gera uma senha com 15 carecteres de números, letras e símbolos<br />
-$senha = geraSenha(15, true, true, true);<br />
-// fnwX@dGO7P0!iWM<br />
+<p>// Gera uma senha com 15 carecteres de números, letras e símbolos
+$senha = geraSenha(15, true, true, true);
+// fnwX@dGO7P0!iWM
 ?>[/code]</p>
 <p>--</p>
 <p>Essa função pode ser usada em vários tipos e sistemas e em vários casos... Se você quiser, pode modificar as variáveis que definem os caracteres de cada tipo, tirando o zero (0) e o "o" (letra), um (1) e o l (L minúsculo) e etc. para evitar conflitos visuais.</p>

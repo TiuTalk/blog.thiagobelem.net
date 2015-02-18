@@ -17,31 +17,31 @@ tags:
 <p>Essa é uma dúvida um pouco comum quando temos um sistema que envia arquivos para download e você não quer que o arquivo seja aberto pelo navegador (Ex: JPG, PDF, TXT e etc).</p>
 <p>Vou mostrar aqui como criar um script simples que vai, além de forçar o download, permitir que você faça um contador de downloads do arquivo, proteger o nome real do arquivo ou protegê-lo por uma sessão (apenas usuários logados).</p>
 <p>Veja o script:</p>
-<p>[code language="php"]<?php<br />
-// Define o tempo máximo de execução em 0 para as conexões lentas<br />
+<p>[code language="php"]<?php
+// Define o tempo máximo de execução em 0 para as conexões lentas
 set_time_limit(0);</p>
 <p>// Arqui você faz as validações e/ou pega os dados do banco de dados</p>
-<p>$aquivoNome = 'imagem.jpg'; // nome do arquivo que será enviado p/ download<br />
+<p>$aquivoNome = 'imagem.jpg'; // nome do arquivo que será enviado p/ download
 $arquivoLocal = '/pasta/do/arquivo/'.$aquivoNome; // caminho absoluto do arquivo</p>
-<p>// Verifica se o arquivo não existe<br />
-if (!file_exists($arquivoLocal)) {<br />
-// Exiba uma mensagem de erro caso ele não exista<br />
-exit;<br />
+<p>// Verifica se o arquivo não existe
+if (!file_exists($arquivoLocal)) {
+// Exiba uma mensagem de erro caso ele não exista
+exit;
 }</p>
 <p>// Aqui você pode aumentar o contador de downloads</p>
-<p>// Definimos o novo nome do arquivo<br />
+<p>// Definimos o novo nome do arquivo
 $novoNome = 'imagem_nova.jpg';</p>
-<p>// Configuramos os headers que serão enviados para o browser<br />
-header('Content-Description: File Transfer');<br />
-header('Content-Disposition: attachment; filename="'.$novoNome.'"');<br />
-header('Content-Type: application/octet-stream');<br />
-header('Content-Transfer-Encoding: binary');<br />
-header('Content-Length: ' . filesize($aquivoNome));<br />
-header('Cache-Control: must-revalidate, post-check=0, pre-check=0');<br />
-header('Pragma: public');<br />
+<p>// Configuramos os headers que serão enviados para o browser
+header('Content-Description: File Transfer');
+header('Content-Disposition: attachment; filename="'.$novoNome.'"');
+header('Content-Type: application/octet-stream');
+header('Content-Transfer-Encoding: binary');
+header('Content-Length: ' . filesize($aquivoNome));
+header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+header('Pragma: public');
 header('Expires: 0');</p>
-<p>// Envia o arquivo para o cliente<br />
-readfile($aquivoNome);<br />
+<p>// Envia o arquivo para o cliente
+readfile($aquivoNome);
 ?>[/code]</p>
 <p>Viram que simples?</p>
 <p>Esse script foi testado no Firefox 2 e 3, Internet Explorer 6 e 7, Google Chrome e Safari e funcionou perfeitamente.</p>

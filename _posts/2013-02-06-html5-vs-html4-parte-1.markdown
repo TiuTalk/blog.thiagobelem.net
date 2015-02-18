@@ -20,7 +20,7 @@ tags:
 - HTML4
 ---
 <p>Ola pessoal, eu sou o <strong>Ruan Nunes</strong>, o novo colaborador aqui do blog.</p>
-<p><span style="line-height: 1.714285714; font-size: 1rem;">Nesse post vou começar a apresentar algumas comparações entre o HTML4, e o HTML5, faremos isso desenvolvendo a </span><strong style="line-height: 1.714285714; font-size: 1rem;">PowerCalc</strong><span style="line-height: 1.714285714; font-size: 1rem;">, uma calculadora para </span><strong style="line-height: 1.714285714; font-size: 1rem;">equações de segundo grau</strong>.<span style="line-height: 1.714285714; font-size: 1rem;"><br />
+<p><span style="line-height: 1.714285714; font-size: 1rem;">Nesse post vou começar a apresentar algumas comparações entre o HTML4, e o HTML5, faremos isso desenvolvendo a </span><strong style="line-height: 1.714285714; font-size: 1rem;">PowerCalc</strong><span style="line-height: 1.714285714; font-size: 1rem;">, uma calculadora para </span><strong style="line-height: 1.714285714; font-size: 1rem;">equações de segundo grau</strong>.<span style="line-height: 1.714285714; font-size: 1rem;">
 </span></p>
 <p>Eu vou ensinar o seu desenvolvimento com linguagens de desenvolvimento para web: <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>Javascript</strong>, <strong>PHP</strong> e talvez alguma outra coisa, por enquanto é isso.</p>
 <h3>Requisitos</h3>

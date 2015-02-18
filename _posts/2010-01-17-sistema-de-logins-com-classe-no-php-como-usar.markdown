@@ -33,58 +33,58 @@ tags:
 <p>Vocês devem incluir o arquivo <strong>usuarios.class.php</strong> (usando <a href="http://br.php.net/manual/pt_BR/function.require-once.php" target="_blank">require_once()</a> ou <a href="http://br.php.net/manual/pt_BR/function.include-once.php" target="_blank">include_once()</a>) em todas as páginas que terão <strong>alguma ligação</strong> com o sistema de login... Provavelmente serão apenas as páginas que eu listei ali em cima.</p>
 <h3>2. Validar o login</h3>
 <p>Depois de inserir a classe em todos os arquivos vamos na página que recebe e valida os dados do login (<strong>valida_login.php</strong>) e, logo após "<em>includar</em>" a classe <strong>no começo do arquivo</strong> colocamos também o seguinte código:</p>
-<p>[code language="php"]<?php<br />
-// Inclui o arquivo com a classe de login<br />
-require_once("includes/classes/usuarios.class.php");<br />
-// Instancia a classe<br />
+<p>[code language="php"]<?php
+// Inclui o arquivo com a classe de login
+require_once("includes/classes/usuarios.class.php");
+// Instancia a classe
 $userClass = new Usuario();</p>
-<p>// Pega os dados vindos do formulário<br />
-$usuario = $_POST['usuario'];<br />
-$senha = $_POST['senha'];<br />
-// Se o campo "lembrar" não existir, o script funcionará normalmente<br />
+<p>// Pega os dados vindos do formulário
+$usuario = $_POST['usuario'];
+$senha = $_POST['senha'];
+// Se o campo "lembrar" não existir, o script funcionará normalmente
 $lembrar = (isset($_POST['lembrar']) AND !empty($_POST['lembrar']));</p>
-<p>// Tenta logar o usuário com os dados<br />
-if ( $userClass->logaUsuario( $usuario, $senha, $lembrar ) ) {<br />
-	// Usuário logado com sucesso, redireciona ele para a página restrita<br />
-	header("Location: pagina_restrita.php");<br />
-	exit;<br />
-} else {<br />
-	// Não foi possível logar o usuário, exibe a mensagem de erro<br />
-	echo "<strong>Erro: </strong>" . $userClass->erro;<br />
-}<br />
+<p>// Tenta logar o usuário com os dados
+if ( $userClass->logaUsuario( $usuario, $senha, $lembrar ) ) {
+	// Usuário logado com sucesso, redireciona ele para a página restrita
+	header("Location: pagina_restrita.php");
+	exit;
+} else {
+	// Não foi possível logar o usuário, exibe a mensagem de erro
+	echo "<strong>Erro: </strong>" . $userClass->erro;
+}
 ?>[/code]</p>
 <p>Primeiro nós instanciamos a classe e depois, nas <strong>linhas 8 e 9</strong>, nós pegamos os dados vindos do <strong>formulário de login</strong> (<strong>login.php</strong>) via POST... Após pegar os dados nós tentamos logar o usuário com esses dados, a própria classe já se encarrega de validar os dados, criar a sessão, os cookies e tudo mais... A condição da <strong>linha 12</strong> será válida se o sistema conseguir logar o usuário e falsa se algo der errado ou os dados forem incorretos.</p>
 <p>Caso o usuário tenha sido logado com sucesso, o próximo passo seria redirecioná-lo para a página restrita, e foi isso o que fizemos na <strong>linha 14</strong>... :)</p>
 <h3>3. Proteger a(s) página(s) restrita(s)</h3>
 <p>Agora que nosso login já está sendo validado e redirecionado, precisamos proteger a página registra (ou as páginas, isso depende do seu site)... Vamos novamente no começo do arquivo (<strong>pagina_restrita.php</strong>) e vamos inserir o seguinte código:</p>
-<p>[code language="php"]<?php<br />
-// Inclui o arquivo com a classe de login<br />
-require_once("includes/classes/usuarios.class.php");<br />
-// Instancia a classe<br />
+<p>[code language="php"]<?php
+// Inclui o arquivo com a classe de login
+require_once("includes/classes/usuarios.class.php");
+// Instancia a classe
 $userClass = new Usuario();</p>
-<p>// Verifica se não há um usuário logado<br />
-if ( $userClass->usuarioLogado() === false ) {<br />
-	// Não há um usuário logado, redireciona pra tela de login<br />
-	header("Location: login.php");<br />
-	exit;<br />
-}<br />
+<p>// Verifica se não há um usuário logado
+if ( $userClass->usuarioLogado() === false ) {
+	// Não há um usuário logado, redireciona pra tela de login
+	header("Location: login.php");
+	exit;
+}
 ?>[/code]</p>
 <p>Mas é só isso!? Sim! :)</p>
 <p>A classe verifica se há um usuário logado, caso não exista um usuário logado ele é redirecionado pro formulário de login.</p>
 <h3>4. Página de logout</h3>
 <p>Vocês já fizeram a validação do login e a proteção da página restrita... Agora só falta a página de logout!</p>
 <p>Vamos criar um arquivo chamado <strong>logout.php</strong> que será acessado quando o usuário quiser sair do sistema, nele inserimos apenas o seguinte código:</p>
-<p>[code language="php"]<?php<br />
-// Inclui o arquivo com a classe de login<br />
-require_once("includes/classes/usuarios.class.php");<br />
-// Instancia a classe<br />
+<p>[code language="php"]<?php
+// Inclui o arquivo com a classe de login
+require_once("includes/classes/usuarios.class.php");
+// Instancia a classe
 $userClass = new Usuario();</p>
-<p>// Usuário fez logout com sucesso?<br />
-if ( $userClass->logout() ) {<br />
-	// Redireciona pra tela de login<br />
-	header("Location: login.php");<br />
-	exit;<br />
-}<br />
+<p>// Usuário fez logout com sucesso?
+if ( $userClass->logout() ) {
+	// Redireciona pra tela de login
+	header("Location: login.php");
+	exit;
+}
 ?>[/code]</p>
 <p>O código fará com que o usuário seja deslogado e redirecionado para a tela de login... Quer mais moleza que isso?</p>
 <h3>5. Exibindo dados do usuário</h3>

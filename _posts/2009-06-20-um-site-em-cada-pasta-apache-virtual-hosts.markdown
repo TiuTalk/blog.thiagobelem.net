@@ -18,17 +18,17 @@ tags:
 <p>Com eles você pode ter vários sites, no mesmo servidor, cada um rodando em uma pasta diferente! Isso permite uma melhor organização das suas coisas e, por que não, mais segurança pros seus sistemas. Outro detalhe relevante é que ele permite que você arquive sites fora do seu <strong>document root</strong> (raiz) padrão.</p>
 <h3>Tá, mas como isso funciona?</h3>
 <p>É só localizar o arquivo <span style="color: #ff6600;"><strong>httpd.conf </strong></span>que geralmente fica na pasta <span style="color: #3366ff;"><strong>.../apache/conf/</strong></span> e colocar o seguinte bloco de código (no final do arquivo):</p>
-<p>[code lang="plain"]<br />
-<VirtualHost site1.com www.site.com><br />
-	DocumentRoot C:\htdocs\site1<br />
-	ServerName site1.com<br />
-	ServerAdmin thiagobelem@site1.com<br />
+<p>[code lang="plain"]
+<VirtualHost site1.com www.site.com>
+	DocumentRoot C:\htdocs\site1
+	ServerName site1.com
+	ServerAdmin thiagobelem@site1.com
 </VirtualHost></p>
-<p><VirtualHost site2.com www.site2.com site1.site2.com><br />
-	DocumentRoot C:\htdocs\site2<br />
-	ServerName site1.com<br />
-	ServerAdmin fulano@site2.com<br />
-</VirtualHost><br />
+<p><VirtualHost site2.com www.site2.com site1.site2.com>
+	DocumentRoot C:\htdocs\site2
+	ServerName site1.com
+	ServerAdmin fulano@site2.com
+</VirtualHost>
 [/code]</p>
 <p>Com esse exemplo nós criamos 2 hosts virtuais pra alguns casos especiais:</p>
 <ul>

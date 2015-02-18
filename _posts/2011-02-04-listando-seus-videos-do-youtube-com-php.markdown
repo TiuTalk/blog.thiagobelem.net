@@ -31,47 +31,47 @@ tags:
 <blockquote><p>Fatal error: Call to undefined function curl_init()</p></blockquote>
 <h3>O código</h3>
 <p>O código para pegar os vídeos é bem simples, por isso vou colocá-lo inteiro sem explicá-lo passo-a-passo:</p>
-<p>[code language="php"]<br />
-<?php<br />
-// Seu usuário do YouTube<br />
+<p>[code language="php"]
+<?php
+// Seu usuário do YouTube
 $usuario = 'videosimprovaveis';</p>
-<p>// URL do Feed RSS de vídeos de um usuário<br />
+<p>// URL do Feed RSS de vídeos de um usuário
 $youTube_UserFeedURL = 'http://gdata.youtube.com/feeds/base/users/%s/uploads?orderby=updated&v=2';</p>
-<p>// Usa cURL para pegar o XML do feed<br />
-$cURL = curl_init(sprintf($youTube_UserFeedURL, $usuario));<br />
-curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);<br />
-curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, true);<br />
-$resultado = curl_exec($cURL);<br />
+<p>// Usa cURL para pegar o XML do feed
+$cURL = curl_init(sprintf($youTube_UserFeedURL, $usuario));
+curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, true);
+$resultado = curl_exec($cURL);
 curl_close($cURL);</p>
-<p>// Inicia o parseamento do XML com o SimpleXML<br />
+<p>// Inicia o parseamento do XML com o SimpleXML
 $xml = new SimpleXMLElement($resultado);</p>
 <p>$videos = array();</p>
-<p>// Passa por todos vídeos no RSS<br />
-foreach ($xml->entry AS $video) {<br />
+<p>// Passa por todos vídeos no RSS
+foreach ($xml->entry AS $video) {
 	$url = (string)$video->link['href'];</p>
-<p>	// Quebra a URL do vídeo para pegar o ID<br />
-	parse_str(parse_url($url, PHP_URL_QUERY), $params);<br />
+<p>	// Quebra a URL do vídeo para pegar o ID
+	parse_str(parse_url($url, PHP_URL_QUERY), $params);
 	$id = $params['v'];</p>
-<p>	// Monta um array com os dados do vídeo<br />
-	$videos[] = array(<br />
-		'id' => $id,<br />
-		'titulo' => (string)$video->title,<br />
-		'thumbnail' => 'http://i' . rand(1, 4) .'.ytimg.com/vi/'. $id .'/hqdefault.jpg',<br />
-		'url' => $url<br />
-	);<br />
+<p>	// Monta um array com os dados do vídeo
+	$videos[] = array(
+		'id' => $id,
+		'titulo' => (string)$video->title,
+		'thumbnail' => 'http://i' . rand(1, 4) .'.ytimg.com/vi/'. $id .'/hqdefault.jpg',
+		'url' => $url
+	);
 }</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>Ao final desse código teremos o array <code>$videos</code> com a lista de vídeos do usuário... Para exibir o thumbnail de cada um dos vídeos devidamente linkado para o vídeo (no YouTube), podemos fazer assim:</p>
-<p>[code language="php"]<br />
+<p>[code language="php"]
 <h1>Meus Vídeos</h1></p>
-<p><ul><br />
-	<?php foreach ($videos AS $video) { ?><br />
-	<li><br />
-		<a href="<?php echo $video['url'] ?>" title="<?php echo $video['titulo'] ?>"><img src="<?php echo $video['thumbnail'] ?>" alt="<?php echo $video['titulo'] ?>" width="150" /></a><br />
-	</li><br />
-	<?php } ?><br />
-</ul><br />
+<p><ul>
+	<?php foreach ($videos AS $video) { ?>
+	<li>
+		<a href="<?php echo $video['url'] ?>" title="<?php echo $video['titulo'] ?>"><img src="<?php echo $video['thumbnail'] ?>" alt="<?php echo $video['titulo'] ?>" width="150" /></a>
+	</li>
+	<?php } ?>
+</ul>
 [/code]</p>
 <p>Código-fonte do arquivo desse tutorial: <a href="http://snipplr.com/view/48433/listando-seus-vdeos-do-youtube-com-php/">Snipplr</a></p>
 <p>Espero que tenham gostado!</p>

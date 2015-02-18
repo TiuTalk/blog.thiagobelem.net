@@ -13,16 +13,16 @@ tags: []
 <p>Graças ao PHP 5 podemos ler XMLs com muita facilidade. Isso sempre foi possível, mas antes exigia mais códigos e mais trabalho... Mas hoje em dia, com a classe <strong>SimpleXML</strong>, ficou tudo incrivelmente mais simples.</p>
 <p>Hoje vou mostrar, como é possível ler o conteúdo de um <abbr title="Really Simple Syndication"><em>Feed RSS</em></abbr> usando <strong>apenas</strong> três linhas de código!</p>
 <p>Vamos ao código:</p>
-<p>[code='php']<br />
-< ?php<br />
-$feed = file_get_contents('http://feeds2.feedburner.com/ThiagoBelem/Blog');<br />
+<p>[code='php']
+< ?php
+$feed = file_get_contents('http://feeds2.feedburner.com/ThiagoBelem/Blog');
 $rss = new SimpleXmlElement($feed);</p>
-<p>foreach($rss->channel->item as $entrada) {<br />
+<p>foreach($rss->channel->item as $entrada) {
 echo '
 <p><a href="' . $entrada->link . '" title="' . $entrada->title . '">' . $entrada->title . '</a></p>
-<p>';<br />
-}<br />
-?><br />
+<p>';
+}
+?>
 [/code]</p>
 <p>Viram só?! Com isso criamos uma lista contendo links para todas as entradas de um Feed RSS. :D</p>
 <ol>
@@ -33,9 +33,9 @@ echo '
 <p>Dentro do loop, teremos <span style="color: #99cc00;"><strong>$entrada</strong></span> (um objeto) que contém os dados de cada <item> do RSS: title, description, link, pubDate e etc.</p>
 <p>Como diria o meu professor de física do colegial: "<em>Mel na chupeta!</em>"</p>
 <p>Vamos aos links de referências, para aqueles que não são <a href="http://blog.thiagobelem.net/vida-pessoal/codificadores-e-programadores/" target="_parent">codificadores</a> e gostam de saber o porquê das coisas:</p>
-<p>» <strong>SimpleXML (Documentação)</strong> - <a href="http://www.php.net/manual/pt_BR/book.simplexml.php" target="_blank">http://www.php.net/manual/pt_BR/book.simplexml.php</a><br />
-» <strong>RSS (Wikipédia)</strong> - <a href="http://pt.wikipedia.org/wiki/RSS" target="_blank">http://pt.wikipedia.org/wiki/RSS<br />
-</a>» <strong>Feed (Wikipédia) </strong>- <a href="http://pt.wikipedia.org/wiki/Feed" target="_blank">http://pt.wikipedia.org/wiki/Feed<br />
+<p>» <strong>SimpleXML (Documentação)</strong> - <a href="http://www.php.net/manual/pt_BR/book.simplexml.php" target="_blank">http://www.php.net/manual/pt_BR/book.simplexml.php</a>
+» <strong>RSS (Wikipédia)</strong> - <a href="http://pt.wikipedia.org/wiki/RSS" target="_blank">http://pt.wikipedia.org/wiki/RSS
+</a>» <strong>Feed (Wikipédia) </strong>- <a href="http://pt.wikipedia.org/wiki/Feed" target="_blank">http://pt.wikipedia.org/wiki/Feed
 </a>» <strong>Validador de XMLs</strong> - <a href="http://validator.w3.org/feed/" target="_blank">http://validator.w3.org/feed/</a></p>
 <p>Ah.. Detalhe: Você também pode criar XMLs (Feed RSS também) usando essa classe... E é tão fácil quanto ler. ;)</p>
 <p>Abraços e até a próxima!</p>

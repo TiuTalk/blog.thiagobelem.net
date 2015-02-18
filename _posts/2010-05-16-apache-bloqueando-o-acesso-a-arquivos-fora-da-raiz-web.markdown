@@ -22,34 +22,34 @@ tags:
 <p>Edite o arquivo <strong>httpd.conf</strong> do seu servidor, em servidores Linux ele provavelmente fica em <code>/usr/apache2/</code> e em servidores Windows o local pode ser em <code>C:/Arquivos de Programas/Apache Group/Apache/conf/</code>, se não encontrar, faça uma busca em <code>httpd.conf</code> que você encontrará. :)</p>
 <p>Neste arquivo, adicione o seguinte bloco de código:</p>
 <p><strong>Linux</strong></p>
-<p>[code language="shell"]<br />
-# Todo o servidor<br />
-<Directory /><br />
-	Order deny,allow<br />
-	Deny from all<br />
-	AllowOverride None<br />
-	Options None<br />
+<p>[code language="shell"]
+# Todo o servidor
+<Directory />
+	Order deny,allow
+	Deny from all
+	AllowOverride None
+	Options None
 </Directory></p>
-<p># Raíz do servidor (opcional)<br />
-<Directory /var/www/><br />
-	Order allow,deny<br />
-	Allow from all<br />
-</Directory><br />
+<p># Raíz do servidor (opcional)
+<Directory /var/www/>
+	Order allow,deny
+	Allow from all
+</Directory>
 [/code]</p>
 <p><strong>Windows</strong></p>
-<p>[code language="shell"]<br />
-# Todo o servidor<br />
-<Directory C:/><br />
-	Order deny,allow<br />
-	Deny from all<br />
-	AllowOverride None<br />
-	Options None<br />
+<p>[code language="shell"]
+# Todo o servidor
+<Directory C:/>
+	Order deny,allow
+	Deny from all
+	AllowOverride None
+	Options None
 </Directory></p>
-<p># Raíz do servidor (opcional)<br />
-<Directory C:/webroot/><br />
-	Order allow,deny<br />
-	Allow from all<br />
-</Directory><br />
+<p># Raíz do servidor (opcional)
+<Directory C:/webroot/>
+	Order allow,deny
+	Allow from all
+</Directory>
 [/code]</p>
 <p>A segunda parte (raíz do servidor) é opcional... As chances de já existir um bloco desses no arquivo <code>httpd.conf</code> é muito grande. Coloquei-a ali em cima apenas para vocês poderem testar. E não se esqueça de mudar a letra do drive e o caminho da raíz do servidor se necessário.</p>
 <h3>Saiba mais (documentação)</h3>

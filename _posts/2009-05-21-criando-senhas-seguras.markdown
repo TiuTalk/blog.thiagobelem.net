@@ -55,9 +55,9 @@ tags: []
 <p>Tenha em mente que nenhuma senha é infalível... Em 1998 uma senha de 56 bits foi quebrada: eram 2^56 possibilidades, 72.057.594.037.927.936 combinações (mais de 72 quadrilhões)... E sabe quanto tempo a máquina demorou? 56 horas.</p>
 <p>A segurança do sistema depende só de você, desenvolvedor... Tempo e dinheiro todo mundo tem e tudo isso "passa" com o tempo... Mas o problema que você vai ter caso um sistema de alta-segurança seja invadido, pode durar pra vida toda.</p>
 <p>Abraços :D</p>
-<p>Pra quem tiver endeço, ficam alguns links de medidores de força de senha:<br />
-» <a href="http://www.passwordmeter.com/" target="_blank">http://www.passwordmeter.com/</a><br />
-» <a href="http://passwordstrength.net/" target="_blank">http://passwordstrength.net/</a><br />
+<p>Pra quem tiver endeço, ficam alguns links de medidores de força de senha:
+» <a href="http://www.passwordmeter.com/" target="_blank">http://www.passwordmeter.com/</a>
+» <a href="http://passwordstrength.net/" target="_blank">http://passwordstrength.net/</a>
 » <a href="https://www.microsoft.com/protect/fraud/passwords/checker.aspx?WT.mc_id=Site_Link" target="_blank">http://www.microsoft.com/protect/yourself/password/checker.mspx</a></p>
 <p>--</p>
 <p>Artigo baseado no post de <span class="removed_link" title="http://www.phpro.org/articles/Creating-Secure-Passwords.html">Kevin Waterson</span>.</p>

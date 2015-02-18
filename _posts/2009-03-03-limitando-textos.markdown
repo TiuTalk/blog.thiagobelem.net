@@ -10,38 +10,38 @@ tags: []
 ---
 <p>Espero que tenham gostado da nova aparência blog... Nesse novo blog eu vou postar alguns scripts prontos de PHP para vocês conhecerem novas formas de resolver os problemas do dia-a-adia.</p>
 <p>Hoje, nesse post de abertura vou mostrar pra vocês como fazer um script que limita textos, muito usado quando você precisa exibir até X caracteres de uma frase e colocar um <span style="color: #ff6600;"><strong>...</strong></span> depois.</p>
-<p>Vamos ao script:<br />
-[code language="php"]function limita_caracteres($texto, $limite, $quebra = true) {<br />
+<p>Vamos ao script:
+[code language="php"]function limita_caracteres($texto, $limite, $quebra = true) {
     $tamanho = strlen($texto);</p>
-<p>    // Verifica se o tamanho do texto é menor ou igual ao limite<br />
-    if ($tamanho <= $limite) {<br />
-        $novo_texto = $texto;<br />
-    // Se o tamanho do texto for maior que o limite<br />
-    } else {<br />
-        // Verifica a opção de quebrar o texto<br />
-        if ($quebra == true) {<br />
-            $novo_texto = trim(substr($texto, 0, $limite)).'...';<br />
-        // Se não, corta $texto na última palavra antes do limite<br />
-        } else {<br />
-            // Localiza o útlimo espaço antes de $limite<br />
-            $ultimo_espaco = strrpos(substr($texto, 0, $limite), ' ');<br />
-            // Corta o $texto até a posição localizada<br />
-            $novo_texto = trim(substr($texto, 0, $ultimo_espaco)).'...';<br />
-        }<br />
+<p>    // Verifica se o tamanho do texto é menor ou igual ao limite
+    if ($tamanho <= $limite) {
+        $novo_texto = $texto;
+    // Se o tamanho do texto for maior que o limite
+    } else {
+        // Verifica a opção de quebrar o texto
+        if ($quebra == true) {
+            $novo_texto = trim(substr($texto, 0, $limite)).'...';
+        // Se não, corta $texto na última palavra antes do limite
+        } else {
+            // Localiza o útlimo espaço antes de $limite
+            $ultimo_espaco = strrpos(substr($texto, 0, $limite), ' ');
+            // Corta o $texto até a posição localizada
+            $novo_texto = trim(substr($texto, 0, $ultimo_espaco)).'...';
+        }
     }</p>
-<p>    // Retorna o valor formatado<br />
-    return $novo_texto;<br />
-}[/code]<br />
+<p>    // Retorna o valor formatado
+    return $novo_texto;
+}[/code]
 E aí? O que me dizem? Bem legal né?</p>
-<p>Pra usar essa função é bem simples, você só precisa definir dois dos três argumentos dela:<br />
-[code language="php"]echo limita_caracteres("Esta é uma frase muito longa!", 10);<br />
-// Irá exibir apenas os 10 primeiros caracteres da frase, cortando<br />
-//    qualquer palavra no meio se necessário<br />
+<p>Pra usar essa função é bem simples, você só precisa definir dois dos três argumentos dela:
+[code language="php"]echo limita_caracteres("Esta é uma frase muito longa!", 10);
+// Irá exibir apenas os 10 primeiros caracteres da frase, cortando
+//    qualquer palavra no meio se necessário
 // Resultado: Esta é uma fras...</p>
-<p>// Você tambem pode setar a terceira opção em 'false':<br />
-echo limita_caracteres("Esta é uma frase muito longa!", 10, false);<br />
-// Irá até a última palavra completa antes de estourar o limite de 10<br />
-// Resultado: Esta é uma...[/code]<br />
+<p>// Você tambem pode setar a terceira opção em 'false':
+echo limita_caracteres("Esta é uma frase muito longa!", 10, false);
+// Irá até a última palavra completa antes de estourar o limite de 10
+// Resultado: Esta é uma...[/code]
 O código está todo comentado, quem tiver alguma dúvida é só comentar e responderei assim que possível.</p>
 <h4>Documentação Oficial:</h4>
 <ul>

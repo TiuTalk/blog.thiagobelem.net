@@ -17,32 +17,32 @@ tags:
 <p>Imagine o robots.txt como uma lista de convidados para uma festa... Se não tá na lista não entra. A única diferenças é que com o robots.txt não há penetras. Você pode bloquear tanto o site inteiro como documentos e arquivos específicos, facilitando assim o controle de "quem entra" no seu site.</p>
 <h3>Criando o seu robots.txt</h3>
 <p>Suponhamos que você tenha um arquivo chamado confidencial.html na raiz do seu site e você não quer que os indexadores dos sistemas de buscas e nenhum outro tipo de robô tenha acesso a esse arquivo... É só colocar isso aqui no seu robots.txt:</p>
-<p>[code='html']User-agent: *<br />
+<p>[code='html']User-agent: *
 Disallow: /confidencial.html[/code]</p>
 <p>Isso fará com que nenhum robot consiga acessar o arquivo especificado... Mas você também quer bloquear uma pasta do seu site para que nenhum robozinho possa entrar e ver algum arquivo dentro dela, então é só fazer assim:</p>
-<p>[code='html']User-agent: *<br />
-Disallow: /confidencial.html<br />
+<p>[code='html']User-agent: *
+Disallow: /confidencial.html
 Disallow: /minhapasta/[/code]</p>
 <h3>Comentários no robots.txt</h3>
 <p>Se você é uma pessoa <span style="text-decoration: line-through;">metódica</span> organizada e quer colocar comentários no seu robots é só usar o caractere "tralha" (#) para isso, dessa forma:</p>
-<p>[code='html']# A regra servirá para todos os tipos de robôs<br />
-User-agent: *<br />
-# Meu arquivo de senhas ultra-secretas que ninguém pode saber<br />
-Disallow: /confidencial.html<br />
-# Bloqueando a minha pasta cheia de fotos ;X<br />
+<p>[code='html']# A regra servirá para todos os tipos de robôs
+User-agent: *
+# Meu arquivo de senhas ultra-secretas que ninguém pode saber
+Disallow: /confidencial.html
+# Bloqueando a minha pasta cheia de fotos ;X
 Disallow: /minhapasta/[/code]</p>
 <h3>Bloqueando um site inteiro</h3>
 <p>Tá com a pá virada e quer bloquear o acesso completo de todos os robôs ao seu site? Não precisa tirar ele do ar, e só fazer isso:</p>
-<p>[code='html']# Adios~<br />
-User-agent: *<br />
+<p>[code='html']# Adios~
+User-agent: *
 Disallow: /[/code]</p>
 <h3>Criando a lista VIP da festa</h3>
 <p>Tem gente que prefere bloquear todo mundo e permitir só alguns, e com o robots.txt não é diferente:</p>
-<p>[code='html']# Permitindo apenas dois arquivos e uma pasta:<br />
-User-agent: *<br />
-Allow: /meu_arquivo.html<br />
-Allow: /pasta/contato.html<br />
-Allow: /imagens/<br />
+<p>[code='html']# Permitindo apenas dois arquivos e uma pasta:
+User-agent: *
+Allow: /meu_arquivo.html
+Allow: /pasta/contato.html
+Allow: /imagens/
 Disallow: /[/code]</p>
 <p>Isso fará com que apenas os dois arquivos especificados e a pasta sejam acessíveis, o restante será bloqueado.</p>
 <p>--</p>

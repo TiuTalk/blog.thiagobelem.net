@@ -41,14 +41,14 @@ tags:
 <h3>A linha-de-comando</h3>
 <p>É um comando que você usaria normalmente para iniciar um script ou chamar um wget. :)</p>
 <h3>Instalando suas Cron Jobs</h3>
-<p>Agora é só salvar o conteúdo das suas crons, uma por linha em um arquivo chamado cron.txt e colocar uma linha assim no começo (primeira linha) do arquivo:<br />
-[code light="true"]MAILTO=meuemail@meudominio.com[/code]<br />
+<p>Agora é só salvar o conteúdo das suas crons, uma por linha em um arquivo chamado cron.txt e colocar uma linha assim no começo (primeira linha) do arquivo:
+[code light="true"]MAILTO=meuemail@meudominio.com[/code]
 Isso fará com que os erros sejam enviados para o e-mail determinado.</p>
-<p>Depois é só ir no terminal/shell e chamar o comando:<br />
-[code light="true"]crontab cron.txt[/code]<br />
-Se nada der errado a cron foi instalada com sucesso e você pode vê-la na lista de crons que estão rodando:<br />
+<p>Depois é só ir no terminal/shell e chamar o comando:
+[code light="true"]crontab cron.txt[/code]
+Se nada der errado a cron foi instalada com sucesso e você pode vê-la na lista de crons que estão rodando:
 [code light="true"]crontab -l[/code]</p>
 <p>Ufa! :D</p>
-<p>Pra quem gostou e/ou quer saber mais ficam aqui alguns links:<br />
-» <a href="http://www.thesitewizard.com/general/set-cron-job.shtml" target="_blank">http://www.thesitewizard.com/general/set-cron-job.shtml</a><br />
+<p>Pra quem gostou e/ou quer saber mais ficam aqui alguns links:
+» <a href="http://www.thesitewizard.com/general/set-cron-job.shtml" target="_blank">http://www.thesitewizard.com/general/set-cron-job.shtml</a>
 » <a href="http://www.aota.net/Script_Installation_Tips/cronhelp.php3" target="_blank">http://www.aota.net/Script_Installation_Tips/cronhelp.php3</a></p>

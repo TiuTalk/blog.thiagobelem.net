@@ -13,10 +13,10 @@ tags: []
 <p>Foi por causa disso que inventaram um tal de "PNG Fix", que é um arquivinho que você inclui no seu site e o IE5+ passa a "ler" os PNGs transparentes e semi-transparentes como se fosse um IE7. Para usar esse recurso é só seguir o passo-a-passo a seguir:</p>
 <p>1 - Acesse o <a href="http://www.twinhelix.com/css/iepngfix/" target="_blank">site do IE PNG Fix</a> e faça o <a href="http://www.twinhelix.com/css/iepngfix/iepngfix.zip" target="_blank">download</a> do zip contendo os arquivos que serão usados.</p>
 <p>2 - Coloque os arquivos <span style="color: #ff6600;"><strong>iepngfix.htc</strong></span> e <strong><span style="color: #ff6600;">blank.gif</span></strong> na pasta do seu site.</p>
-<p>3 - Insira o seguinte código HTML dentro do <head> do seu site:<br />
-[code='html']<br />
+<p>3 - Insira o seguinte código HTML dentro do <head> do seu site:
+[code='html']
 <style type="text/css">
-img, div { behavior: url(iepngfix.htc) }<br />
+img, div { behavior: url(iepngfix.htc) }
 </style>
 <p>[/code]</p>
 <p>Vale lembrar que se você usar PNGs transparentes como fundo de outros elementos, você também precisa incluí-los na lista<span style="color: #999999;"> (img, div, input e etc.)</span>.</p>

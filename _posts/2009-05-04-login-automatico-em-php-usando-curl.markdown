@@ -12,29 +12,29 @@ tags: []
 ---
 <p>Essa não é uma tarefa muito comum... Mas as vezes precisamos fazer um login automático (usando PHP) em outro site para pegar algumas informações dinamicamente.</p>
 <p>Você pode fazer essa "façanha" usando uma biblioteca do PHP chamada cURL (<a title="Documentação Oficial do cURL" href="http://br2.php.net/manual/pt_BR/book.curl.php" target="_blank">veja mais sobre o cURL aqui</a>), veja um exemplo devidamente comentado e explicado:</p>
-<p>[code='php']<br />
+<p>[code='php']
 < ?php</p>
-<p>// Inicia o cURL<br />
+<p>// Inicia o cURL
 $ch = curl_init();</p>
-<p>// Define a URL original (do formulário de login)<br />
+<p>// Define a URL original (do formulário de login)
 curl_setopt($ch, CURLOPT_URL, 'http://www.site.com/login.php');</p>
-<p>// Habilita o protocolo POST<br />
+<p>// Habilita o protocolo POST
 curl_setopt ($ch, CURLOPT_POST, 1);</p>
-<p>// Define os parâmetros que serão enviados (usuário e senha por exemplo)<br />
+<p>// Define os parâmetros que serão enviados (usuário e senha por exemplo)
 curl_setopt ($ch, CURLOPT_POSTFIELDS, 'usuario=fulano&senha=12345');</p>
-<p>// Imita o comportamento patrão dos navegadores: manipular cookies<br />
+<p>// Imita o comportamento patrão dos navegadores: manipular cookies
 curl_setopt ($ch, CURLOPT_COOKIEJAR, 'cookie.txt');</p>
-<p>// Define o tipo de transferência (Padrão: 1)<br />
+<p>// Define o tipo de transferência (Padrão: 1)
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);</p>
-<p>// Executa a requisição<br />
+<p>// Executa a requisição
 $store = curl_exec ($ch);</p>
-<p>// Define uma nova URL para ser chamada (após o login)<br />
+<p>// Define uma nova URL para ser chamada (após o login)
 curl_setopt($ch, CURLOPT_URL, 'http://www.site.com/minha_conta.php');</p>
-<p>// Executa a segunda requisição<br />
+<p>// Executa a segunda requisição
 $content = curl_exec ($ch);</p>
-<p>// Encerra o cURL<br />
+<p>// Encerra o cURL
 curl_close ($ch);</p>
-<p>?><br />
+<p>?>
 [/code]</p>
 <p>No fim da execução deste script você terá duas variáveis: a <span style="color: #008080;"><strong>$store</strong></span> contendo o HTML da página resultado (depois do submit do login) e a variável <span style="color: #008080;"><strong>$content</strong></span>, contendo o HTML da página chamada na segunda requisição.</p>
 <p>O uso dele é bem simples, vale a pena tentar.</p>

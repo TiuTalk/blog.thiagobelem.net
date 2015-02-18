@@ -21,37 +21,37 @@ tags:
 <p>Veja um exemplo de scripts onde faremos todas as operações comuns do MySQL:</p>
 <h3>Conectando-se ao MySQL</h3>
 <p>[code language="php"]<?php</p>
-<p>$servidor = 'localhost';<br />
-$usuario = 'root';<br />
-$senha = '';<br />
+<p>$servidor = 'localhost';
+$usuario = 'root';
+$senha = '';
 $banco = 'mydb';</p>
-<p>// Conecta-se ao banco de dados MySQL<br />
+<p>// Conecta-se ao banco de dados MySQL
 $mysqli = new mysqli($servidor, $usuario, $senha, $banco);</p>
-<p>// Caso algo tenha dado errado, exibe uma mensagem de erro<br />
+<p>// Caso algo tenha dado errado, exibe uma mensagem de erro
 if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());</p>
 <p>?>[/code]</p>
 <p></p>
 <h3>Executando uma consulta do tipo SELECT</h3>
 <p>[code language="php"]<?php</p>
-<p>// Aqui você se conecta ao banco<br />
+<p>// Aqui você se conecta ao banco
 $mysqli = new mysqli('localhost', 'root', '', 'mydb');</p>
-<p>// Executa uma consulta que pega cinco notícias<br />
-$sql = "SELECT `id`, `titulo` FROM `noticias` LIMIT 5";<br />
-$query = $mysqli->query($sql);<br />
-while ($dados = $query->mysqli_fetch_array()) {<br />
-	echo 'ID: ' . $dados['id'] . '<br />';<br />
-	echo 'Título: ' . $dados['titulo'] . '<br /><br />';<br />
-}<br />
+<p>// Executa uma consulta que pega cinco notícias
+$sql = "SELECT `id`, `titulo` FROM `noticias` LIMIT 5";
+$query = $mysqli->query($sql);
+while ($dados = $query->mysqli_fetch_array()) {
+	echo 'ID: ' . $dados['id'] . '';
+	echo 'Título: ' . $dados['titulo'] . '';
+}
 echo 'Registros encontrados: ' . $query->num_rows;</p>
 <p>?>[/code]</p>
 <p></p>
 <h3>Executando uma consulta simples, do tipo DELETE ou UPDATE</h3>
 <p>[code language="php"]<?php</p>
-<p>// Aqui você se conecta ao banco<br />
+<p>// Aqui você se conecta ao banco
 $mysqli = new mysqli('localhost', 'root', '', 'mydb');</p>
-<p>// Executa uma consulta que deleta uma notícia<br />
-$sql = "DELETE FROM FROM `noticias` WHERE `id` = 2";<br />
-$query = $mysqli->query($sql);<br />
+<p>// Executa uma consulta que deleta uma notícia
+$sql = "DELETE FROM FROM `noticias` WHERE `id` = 2";
+$query = $mysqli->query($sql);
 echo 'Registros afetados: ' . $query->affected_rows;</p>
 <p>?>[/code]</p>
 <p>Como vocês podem ver a sintaxe dos comandos SQL não mudam em nada... O que muda são apenas as funções do PHP mesmo. ;)</p>

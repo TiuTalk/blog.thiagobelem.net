@@ -25,59 +25,59 @@ tags:
 <p>Para baixar o GAPI é simples.. Como diria meu professor de física do colegial: "é mel na chupeta!"... Acesse a <a href="http://code.google.com/p/gapi-google-analytics-php-interface/" title="Google Analytics PHP Interaface" target="_blank">página oficial do projeto</a> dentro do Google Code e (logo ali na lateral direita) faça o download da última versão.</p>
 <p>Para poder usar a classe você só precisa ter o hárduo trabalho de incluir o arquivo <span style="color: orange"><strong>gapi.class.php</strong></span> no seu site.</p>
 <h3>Exemplo de uso - Autenticação</h3>
-<p>Da mesma forma que você precisa fazer o login com a sua conta Google para ter acesso aos perfis de sites, e posteriormente aos relatórios desses perfis, você também precisa fazer o login autenticando seus dados de acesso... Veja como é dificil fazer isso:<br />
-[code lang="php"]<?php<br />
+<p>Da mesma forma que você precisa fazer o login com a sua conta Google para ter acesso aos perfis de sites, e posteriormente aos relatórios desses perfis, você também precisa fazer o login autenticando seus dados de acesso... Veja como é dificil fazer isso:
+[code lang="php"]<?php
 	require_once("gapi.class.php");</p>
-<p>	// Autenticação<br />
-	$ga = new gapi('SEU E-MAIL', 'SUA SENHA');<br />
+<p>	// Autenticação
+	$ga = new gapi('SEU E-MAIL', 'SUA SENHA');
 ?>[/code]</p>
 <p>--</p>
 <h3>Exemplo de uso - Listando os perfis de site</h3>
-<p>Para listar todos os perfis de site que você tem na sua conta você pode fazer assim:<br />
-[code lang="php"]<?php<br />
+<p>Para listar todos os perfis de site que você tem na sua conta você pode fazer assim:
+[code lang="php"]<?php
 	require_once("gapi.class.php");</p>
-<p>	// Autenticação<br />
+<p>	// Autenticação
 	$ga = new gapi('SEU E-MAIL', 'SUA SENHA');</p>
-<p>	// Pega os dados da conta e perfis de site<br />
+<p>	// Pega os dados da conta e perfis de site
 	$ga->requestAccountData();</p>
-<p>	// Pra cada resultado encontrado...<br />
-	foreach ($ga->getResults() as $perfil) {<br />
-		// Exibe os dados de cada um dos perfis de site<br />
-		echo $perfil . ' (' . $perfil->getProfileId() . ')<br />';<br />
-	}<br />
-?>[/code]<br />
+<p>	// Pra cada resultado encontrado...
+	foreach ($ga->getResults() as $perfil) {
+		// Exibe os dados de cada um dos perfis de site
+		echo $perfil . ' (' . $perfil->getProfileId() . ')';
+	}
+?>[/code]
 O código acima irá exibir uma pequena lista dos sites que você tem na sua conta do Analytics... Usarei como exemplo o ID <strong>12345</strong> que é um ID fictício.</p>
 <h3>Exemplo de uso - Pegando dados</h3>
 <p>Agora você já fez o login e tem o ID do perfil do site que você quer pegar os resultados... Vamos fazer duas consultas de exemplo e pegar os dados necessários para fazer um relatório completo sobre as visitas e pageviews do mês passado:</p>
-<p>[code lang="php"]<?php<br />
+<p>[code lang="php"]<?php
 	require_once("gapi.class.php");</p>
-<p>	// Autenticação<br />
+<p>	// Autenticação
 	$ga = new gapi('SEU EMAIL', 'SUA SENHA');</p>
-<p>	// ID do perfil do site<br />
+<p>	// ID do perfil do site
 	$id = '12345';</p>
-<p>	// Define o periodo do relatório<br />
-	$inicio = date('Y-m-01', strtotime('-1 month')); // 1° dia do mês passado<br />
+<p>	// Define o periodo do relatório
+	$inicio = date('Y-m-01', strtotime('-1 month')); // 1° dia do mês passado
 	$fim = date('Y-m-t', strtotime('-1 month')); // Último dia do mês passado</p>
-<p>	// Busca os pageviews e visitas (total do mês passado)<br />
-	$ga->requestReportData($id, 'month', array('pageviews', 'visits'), null, null, $inicio, $fim);<br />
-	foreach ($ga->getResults() as $dados) {<br />
-		echo 'Mês ' . $dados . ': ' . $dados->getVisits() . ' Visita(s) e ' . $dados->getPageviews() . ' Pageview(s)<br />';<br />
+<p>	// Busca os pageviews e visitas (total do mês passado)
+	$ga->requestReportData($id, 'month', array('pageviews', 'visits'), null, null, $inicio, $fim);
+	foreach ($ga->getResults() as $dados) {
+		echo 'Mês ' . $dados . ': ' . $dados->getVisits() . ' Visita(s) e ' . $dados->getPageviews() . ' Pageview(s)';
 	}</p>
-<p>	echo '<br />';</p>
-<p>	// Busca os pageviews e visitas de cada dia do último mês<br />
-	$ga->requestReportData($id, 'day', array('pageviews', 'visits'), 'day', null, $inicio, $fim, 1, 50);<br />
-	foreach ($ga->getResults() as $dados) {<br />
-		echo 'Dia ' . $dados . ': ' . $dados->getVisits() . ' Visita(s) e ' . $dados->getPageviews() . ' Pageview(s)<br />';<br />
-	}<br />
-?>[/code]<br />
+<p>	echo '';</p>
+<p>	// Busca os pageviews e visitas de cada dia do último mês
+	$ga->requestReportData($id, 'day', array('pageviews', 'visits'), 'day', null, $inicio, $fim, 1, 50);
+	foreach ($ga->getResults() as $dados) {
+		echo 'Dia ' . $dados . ': ' . $dados->getVisits() . ' Visita(s) e ' . $dados->getPageviews() . ' Pageview(s)';
+	}
+?>[/code]
 É claro que esse codigo parece um pouco complexo pra quem está começando.. Vou tentar explicar os argumentos do método requestReportData:</p>
-<p>1 - Primeiro tempos o ID do perfil do site que você já pegou antes usando o requestAccountData()<br />
-2 - Aqui temos a lista de dimensões que estamos buscando. No primeiro exemplo usamos 'month' para pegar o total de cada mês do período especificado, e no segundo usamos 'day' para pegar o total referente a cada dia do período. Veja aqui a <a href="http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html" target="_blank">lista completa</a> de dimensões que podem ser usadas.<br />
-3 - No terceiro parâmetro temos as métricas, que são os valores que estamos buscando... Nos dois casos usamos 'pageviews' e 'visits'. Veja aqui uma <a href="http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html" target="_blank">lista completa</a> de métricas que podem ser usadas.<br />
-4 - O quarto parâmetro é a ordem dos resultados.<br />
-5 - O quinto parâmetro é o filtro. (Raramente usado)<br />
-6 e 7 - São os parâmetros que definem o período dos relatórios no formato AAAA-MM-DD.<br />
-8 - No oitavo parâmetro você define o n° do primeiro registro (usado para paginação de resultados).<br />
+<p>1 - Primeiro tempos o ID do perfil do site que você já pegou antes usando o requestAccountData()
+2 - Aqui temos a lista de dimensões que estamos buscando. No primeiro exemplo usamos 'month' para pegar o total de cada mês do período especificado, e no segundo usamos 'day' para pegar o total referente a cada dia do período. Veja aqui a <a href="http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html" target="_blank">lista completa</a> de dimensões que podem ser usadas.
+3 - No terceiro parâmetro temos as métricas, que são os valores que estamos buscando... Nos dois casos usamos 'pageviews' e 'visits'. Veja aqui uma <a href="http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html" target="_blank">lista completa</a> de métricas que podem ser usadas.
+4 - O quarto parâmetro é a ordem dos resultados.
+5 - O quinto parâmetro é o filtro. (Raramente usado)
+6 e 7 - São os parâmetros que definem o período dos relatórios no formato AAAA-MM-DD.
+8 - No oitavo parâmetro você define o n° do primeiro registro (usado para paginação de resultados).
 9 - No nono (e último) parâmetro você define o n° do último registro (usado para paginação de resultados).</p>
 <p>Os únicos argumentos obrigatórios são os três primeiros.</p>
 <p>Sei que é muita coisa... Mas isso te permite um controle total dos relatórios que serão gerados.</p>

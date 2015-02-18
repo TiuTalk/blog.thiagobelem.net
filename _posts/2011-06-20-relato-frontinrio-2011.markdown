@@ -48,19 +48,19 @@ tags:
 <p>Acompanhei a "vibe" que o Solano deixou sobre técnicas de otimização de carregamento de sites e comecei a falar mal das fucking requisições!</p>
 <p>Mostrei exemplos os maiores vilões do carregamento: slideshows, fotos no fim da página, vários arquivos de pluginsa e etc.</p>
 <p>Depois comecei a mostrar algumas ferramentas interessantíssimas como o <a href="http://yepnopejs.com/">yepnope.js</a> e <a href="http://www.modernizr.com/">Modernizr</a>... De tudo o que falei acredito que a parte mais interessante foi o <strong>carregamento condicional</strong> de plugins de jQuery utilizando o <strong>yepnope.js</strong>:</p>
-<p>[code language="javascript"]<br />
-// Só vamos carregar o plugin quando for necessário!<br />
-yepnope({<br />
-        // Teste: Existe um elemento com a classe "datepicker"?<br />
+<p>[code language="javascript"]
+// Só vamos carregar o plugin quando for necessário!
+yepnope({
+        // Teste: Existe um elemento com a classe "datepicker"?
         test: $('.datepicker').length,</p>
-<p>        // Carrega o CSS e o JS do plugin de datepicker<br />
+<p>        // Carrega o CSS e o JS do plugin de datepicker
         yep: ['js/datepicker/style.css', 'js/datepicker/datepicker.js'],</p>
-<p>        // Quando terminar de carregar o CSS e o JS, executa a função...<br />
+<p>        // Quando terminar de carregar o CSS e o JS, executa a função...
         complete: function() {</p>
-<p>                // ... que ativa a funcionalidade no elemento encontrado<br />
-                $('.datepicker').datepicker();<br />
-        }<br />
-});<br />
+<p>                // ... que ativa a funcionalidade no elemento encontrado
+                $('.datepicker').datepicker();
+        }
+});
 [/code]</p>
 <p>E terminei a palestra (bem antes do horário esperado) batendo um papo sobre as técnicas de otimização com o pessoal que estava assistindo.</p>
 <p>Após a palestra recebi um feedback muito positivo de todo mundo que assistiu e do pessoal que estava organizando o evento, acredito que comecei - com essa palestra - uma coisa muito importante pro meu futuro (como pessoa) e como desenvolvedor ;)</p>

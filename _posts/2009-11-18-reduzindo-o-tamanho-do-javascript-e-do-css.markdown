@@ -27,30 +27,30 @@ tags:
 <p>Trago pra vocês o link do <strong>Yahoo YUI Online Compressor</strong>: <a href="http://www.refresh-sf.com/yui/" target="_blank" title="Yahoo YUI Online Compressor">http://www.refresh-sf.com/yui/</a></p>
 <p>Com ele você faz o Upload dos seus JS ou CSS e ele junta todos os arquivos em um só, bem mais level e limpo... Aí é só trocar todas as chamadas dos arquivos pela chamada (HTML) ao arquivo que ele criou e pronto! Seu site tá mais leve! :)</p>
 <p>Veja um exemplo da compressão que ele faz em um CSS:</p>
-<p>Antes:<br />
-[code language="css"]html {<br />
-	background-color: #f7f6f1;<br />
+<p>Antes:
+[code language="css"]html {
+	background-color: #f7f6f1;
 }</p>
-<p>* html input,<br />
-* html .widget {<br />
-    border-color: #8cbdd5;<br />
+<p>* html input,
+* html .widget {
+    border-color: #8cbdd5;
 }</p>
-<p>textarea,<br />
-input,<br />
-select {<br />
-	border-color: #dfdfdf;<br />
+<p>textarea,
+input,
+select {
+	border-color: #dfdfdf;
 }</p>
-<p>kbd,<br />
-code {<br />
-	background: #eaeaea;<br />
+<p>kbd,
+code {
+	background: #eaeaea;
 }</p>
-<p>input[readonly] {<br />
-	background-color: #eee;<br />
+<p>input[readonly] {
+	background-color: #eee;
 }</p>
-<p>.find-box-search {<br />
-	border-color: #dfdfdf;<br />
-	background-color: #f1f1f1;<br />
+<p>.find-box-search {
+	border-color: #dfdfdf;
+	background-color: #f1f1f1;
 }[/code]</p>
-<p>Depois:<br />
+<p>Depois:
 [code language="css"]html{background-color:#f7f6f1;}* html input,* html .widget{border-color:#8cbdd5;}textarea,input,select{border-color:#dfdfdf;}kbd,code{background:#eaeaea;}input[readonly]{background-color:#eee;}.find-box-search{border-color:#dfdfdf;background-color:#f1f1f1;}[/code]</p>
 <p>Espero que tenham gostado! :)</p>
