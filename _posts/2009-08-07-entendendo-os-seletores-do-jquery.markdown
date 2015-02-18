@@ -13,7 +13,7 @@ tags:
 - jQuery
 - Seletores
 ---
-Hoje vou falar sobre uma parte bem simples mas de enorme importância no uso do jQuery: os <a href="http://api.jquery.com/category/selectors/" target="_blank">seletores</a>.
+Hoje vou falar sobre uma parte bem simples mas de enorme importância no uso do jQuery: os [seletores](http://api.jquery.com/category/selectors/).
 
 Através dos seletores você escolhe com qual elemento do HTML irá trabalhar e/ou interagir.
 
@@ -75,5 +75,5 @@ Isso vai afetar todos os <td> que estão dentro dos <strong><tr> ímpares</stron
 
 Percebam que o único exemplo de função/método que eu usei foi o css(), mas existem dezenas e dezenas de outras funções legais no jQuery e a maioria deve estar associada a um seletor.
 
-Espero que tenham gostado e não deixem de ler a <a href="http://api.jquery.com/category/selectors/" target="_blank">documentação oficial sobre os seletores</a>!
+Espero que tenham gostado e não deixem de ler a [documentação oficial sobre os seletores](http://api.jquery.com/category/selectors/)!
 

@@ -14,7 +14,7 @@ O processo é bem simples e se resume a criar o <abbr title="Quantidade de segun
 
 Vou mostrar como fazer o processo de duas formas pois, normalmente, trabalhos com datas em dois formatos: <strong>DD/MM/AAAA</strong> (padrão brasileiro) e <strong>AAAA-MM-DD</strong> (formato do MySQL).
 
-Se alguém aí quiser ler um pouco mais sobre como trabalhar com datas no PHP é só dar uma olhada nesse post: <a href="/trabalhando-com-datas-no-php">Trabalhando com datas no PHP</a>.
+Se alguém aí quiser ler um pouco mais sobre como trabalhar com datas no PHP é só dar uma olhada nesse post: [Trabalhando com datas no PHP](/trabalhando-com-datas-no-php).
 
 Vamos ao primeiro exemplo que usa datas no formato <strong>DD/MM/AAAA</strong>:
 
@@ -96,8 +96,8 @@ Até a próxima
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br.php.net/explode" target="_blank">explode()</a></strong> » Divide uma string usando um separador</li>
-<li><strong>Função <a href="http://br.php.net/mktime" target="_blank">mktime()</a></strong> » Gera um timestamp de uma data especificada</li>
-<li><strong>Função <a href="http://br.php.net/floor" target="_blank">floor()</a></strong> » Arredonda valores fracionados para baixo</li>
-<li><strong>Função <a href="http://br.php.net/strtotime" target="_blank">strtotime()</a></strong> » Converte datas textuais em timestamps</li>
+<li><strong>Função [explode()](http://br.php.net/explode)</strong> » Divide uma string usando um separador</li>
+<li><strong>Função [mktime()](http://br.php.net/mktime)</strong> » Gera um timestamp de uma data especificada</li>
+<li><strong>Função [floor()](http://br.php.net/floor)</strong> » Arredonda valores fracionados para baixo</li>
+<li><strong>Função [strtotime()](http://br.php.net/strtotime)</strong> » Converte datas textuais em timestamps</li>
 </ul>

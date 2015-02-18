@@ -15,7 +15,7 @@ tags:
 - Desenvolvedor
 - Cientista da Computação
 ---
-Li hoje um artigo muito interessante no <a href="http://www.skorks.com/2010/03/the-difference-between-a-developer-a-programmer-and-a-computer-scientist/" title="The Difference Between A Developer, A Programmer And A Computer Scientist" target="_blank">Sworks</a> e resolvi trazê-lo aqui para vocês.
+Li hoje um artigo muito interessante no [Sworks](http://www.skorks.com/2010/03/the-difference-between-a-developer-a-programmer-and-a-computer-scientist/) e resolvi trazê-lo aqui para vocês.
 
 O fato é que todos nós somos um pouco de programador, um pouco de desenvolvedor e um pouco de cientista da computação. Mas cada um de nós tende a uma dessas três "categorias" e é muito difícil conseguir distingui-las.
 

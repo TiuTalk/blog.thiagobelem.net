@@ -20,15 +20,15 @@ tags:
 - MVC
 - View
 ---
-<blockquote><b>Model–view–controller</b> (<b>MVC</b>) is a <a title="Software architecture" href="http://en.wikipedia.org/wiki/Software_architecture">software architecture</a> pattern that separates the representation of information from the user's interaction with it.
+<blockquote><b>Model–view–controller</b> (<b>MVC</b>) is a [software architecture](http://en.wikipedia.org/wiki/Software_architecture) pattern that separates the representation of information from the user's interaction with it.
 
--- <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Wikipedia</a>
+-- [Wikipedia](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 </blockquote>
 <strong>MVC</strong> é um padrão de arquitetura de software que separa a informação (e as suas regras de negócio) da interface com a qual o usuário interage.
 
 É uma forma de estruturar seu projeto/aplicação de forma que a interface de interação (<strong>view</strong>) esteja separada do controle da informação em si (<strong>models</strong>), separação essa que é intermediada por uma outra camada controladora (<strong>controllers</strong>).
 
-Não vou entrar em detalhes profundos sobre a arquitetura de um sistema baseado no MVC nem vou - por enquanto! - mostrar como criar um MVC do zero, mas vou tentar explicar cada uma das três camadas e dar exemplos de código do <a href="http://cakephp.org">CakePHP</a>, que é um <a title="Frameworks no PHP: O que, quando, porque e qual?" href="/frameworks-no-php-o-que-quando-porque-e-qual">framework de PHP</a> que - ao meu ver - faz um bom uso do MVC.
+Não vou entrar em detalhes profundos sobre a arquitetura de um sistema baseado no MVC nem vou - por enquanto! - mostrar como criar um MVC do zero, mas vou tentar explicar cada uma das três camadas e dar exemplos de código do [framework de PHP](/frameworks-no-php-o-que-quando-porque-e-qual) que - ao meu ver - faz um bom uso do MVC.
 
 <h2>Model <span style="color: #999999;">(ou modelo)</span></h2>
 O model é a camada que <strong>representa os seus dados</strong>, provendo meios de acesso (leitura e escrita) à esses dados.
@@ -49,7 +49,7 @@ Somente através desse model será possível cadastrar e buscar produtos, e quan
 <li>A descrição não pode ser vazia nem ter menos de 100 caracteres</li>
 <li>O preço precisa ser no formato decimal, com 2 casas decimais</li>
 </ul>
-Para saber mais sobre models no CakePHP, consulte a documentação: <a href="http://book.cakephp.org/2.0/en/models.html">http://book.cakephp.org/2.0/en/models.html</a>
+Para saber mais sobre models no CakePHP, consulte a documentação: [http://book.cakephp.org/2.0/en/models.html](http://book.cakephp.org/2.0/en/models.html)
 
 Agora podemos partir para a camada que vai fazer uso desse model, pedindo uma lista de produtos..
 
@@ -72,7 +72,7 @@ Aqui temos duas actons:
 <li><span style="line-height: 14px;">Uma action (<strong>index</strong>) vai pedir (para o model) a lista de produtos mais recentes;</span></li>
 <li>Outra action (<strong>view</strong>) vai pedir (para o model) os dados de um único produto.</li>
 </ul>
-Para saber mais sobre controllers no CakePHP, consulte a documentação: <a href="http://book.cakephp.org/2.0/en/controllers.html">http://book.cakephp.org/2.0/en/controllers.html</a>
+Para saber mais sobre controllers no CakePHP, consulte a documentação: [http://book.cakephp.org/2.0/en/controllers.html](http://book.cakephp.org/2.0/en/controllers.html)
 
 Agora podemos exibir esses dados na camada responsável por isso...
 
@@ -88,9 +88,9 @@ Mas a view não faz nenhum tipo de escrita/persistência no seu sistema... ela n
 Vamos ver então um exemplo de listagem dos produtos, no arquivo <strong>index.ctp</strong>:
 
 <div data-gist-id="4610943" data-gist-show-loading="false"></div>
-Aqui temos uma mistura de HTML e PHP, e também fazemos uso do <a href="http://book.cakephp.org/2.0/en/core-libraries/helpers/number.html">NumberHelper</a>, um Helper do CakePHP para ajudar na formatação de números.
+Aqui temos uma mistura de HTML e PHP, e também fazemos uso do [NumberHelper](http://book.cakephp.org/2.0/en/core-libraries/helpers/number.html), um Helper do CakePHP para ajudar na formatação de números.
 
-Se você quiser saber mais sobre views no CakePHP, consulte a documentação: <a href="http://book.cakephp.org/2.0/en/views.html">http://book.cakephp.org/2.0/en/views.html</a>
+Se você quiser saber mais sobre views no CakePHP, consulte a documentação: [http://book.cakephp.org/2.0/en/views.html](http://book.cakephp.org/2.0/en/views.html)
 
 <h2>Conclusão</h2>
 Com o MVC você conseguirá organizar seu projeto de forma que tudo tenha seu lugar, e cada camada com sua responsabilidade, permitindo um trabalho muitos mais "centrado" e modularizado.
@@ -98,9 +98,9 @@ Com o MVC você conseguirá organizar seu projeto de forma que tudo tenha seu lu
 Espero que você tenha gostado dessa breve explicação sobre o MVC, e que ela tenha despertado a fagulha de curiosidade/interesse que vai fazer você correr atrás de mais conteúdo sobre o assunto... Te garanto que isso é só a ponta do iceberg.
 
 <h2>Momento jabá!</h2>
-<a href="http://assando-sites.com.br/"><img class="alignright  wp-image-3002" style="box-shadow: none;" alt="Assando Sites, curso online de CakePHP" src="/assets/uploads/2013/01/bolo-topo-gnomo-direita-175x300.png" width="82" height="140" /></a>
+[](http://assando-sites.com.br/)
 
 Gostou dos exemplos e quer aprender um pouco mais sobre <strong>CakePHP</strong>? E se eu te disser que tenho um curso que é <strong>online e ao vivo</strong>, e você aprende sem sair de casa?
 
-Gostou? Então inscreva-se na próxima turma e aprenda a <strong>assar sites</strong> como um cozinheiro de primeira: <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br/">Assando Sites, curso online de CakePHP</a>
+Gostou? Então inscreva-se na próxima turma e aprenda a <strong>assar sites</strong> como um cozinheiro de primeira: [Assando Sites, curso online de CakePHP](http://assando-sites.com.br/)
 

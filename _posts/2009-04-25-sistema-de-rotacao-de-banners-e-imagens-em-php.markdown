@@ -9,7 +9,7 @@ categories:
 - Tutoriais
 tags: []
 ---
-Essa é uma dúvida comum entre os iniciantes e aqueles que não conhecem nenhum <em><abbr title="Gerenciador de Anúncios">ad manager</abbr></em> que nem o <a title="Google Ad Manager" href="https://www.google.com/dfp/login/pt_BR/index.html" target="_blank">Google Ad Manager</a>: como criar um sistema de rotação de banners (ou imagens) em PHP? Aquela funcionalidade que faz com que, cada vez que você carrague o site (<em>refresh</em>), apareça uma imagem diferente em um local.
+Essa é uma dúvida comum entre os iniciantes e aqueles que não conhecem nenhum <em>[Google Ad Manager](https://www.google.com/dfp/login/pt_BR/index.html): como criar um sistema de rotação de banners (ou imagens) em PHP? Aquela funcionalidade que faz com que, cada vez que você carrague o site (<em>refresh</em>), apareça uma imagem diferente em um local.
 
 Bom, existem dezenas de formas de fazer isso, mas eu vou tentar fazer da forma mais simples possível.
 
@@ -20,9 +20,9 @@ Vamos criar um arquivo chamado <span style="color: #ff6600;"><strong>banner_supe
 <?php
 unset($_ELEMENTOS);
 
-$_ELEMENTOS[] = '<a href="http://site.com/"><img src="site.jpg" alt="" width="10" height="10" /></a>';
-$_ELEMENTOS[] = '<a href="http://orkut.com/"><img src="orkut.jpg" alt="" width="10" height="10" /></a>';
-$_ELEMENTOS[] = '<a href="http://forum.com/"><img src="forum.jpg" alt="" width="10" height="10" /></a>';
+$_ELEMENTOS[] = '[](http://site.com/)';
+$_ELEMENTOS[] = '[](http://orkut.com/)';
+$_ELEMENTOS[] = '[](http://forum.com/)';
 
 $total = count($_ELEMENTOS); // Calcula o total de elementos
 $escolhido = rand(0, $total - 1); // Define um número aleatório

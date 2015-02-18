@@ -75,5 +75,5 @@ Monta uma rotina que carrega um array de codeblocks para insultar o dragão, can
 <h3>ANALISTA DE PROCESSOS</h3>
 Chega ao dragão com duas toneladas de documentação desenvolvida sobre o processo de se matar um dragão genérico, desenvolve um fluxograma super complexo para libertar a princesa e se casar com ela, convence o dragão que aquilo vai ser bom pra ele e que não será doloroso. Ao executar o processo ele estima o esforço e o tamanho do estrago que isso vai causar, consegue o aval do papa, do Buda e do Raul Seixas para o plano, e então compra 2 bombas nucleares, 45 canhões, 1 porta aviões, contrata 300 homens armados até os dentes, quandona verdade necessitaria apenas da espada que estava na sua mão o tempo todo.
 
-<p style="text-align: right; font-size: 10px"><a href="http://blogandotek.blogspot.com/2009/07/linguagens-de-programacao-como-matar-o.html" target="_blank">Fonte</a>
+<p style="text-align: right; font-size: 10px">[Fonte](http://blogandotek.blogspot.com/2009/07/linguagens-de-programacao-como-matar-o.html)
 

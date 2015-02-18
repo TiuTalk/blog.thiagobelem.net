@@ -19,12 +19,12 @@ tags:
 ---
 Tá na hora de continuar com a segunda parte do tutorial de destaques... Muita gente pediu e eu não vou deixar vocês esperando! :)
 
-Pra quem não lembra, na <a title="Criando um sistema de destaques - Parte 1" href="/criando-um-sistema-de-destaques-parte-1">Parte 1</a> criamos todo o HTML e CSS do destaque (o resultado ficou <a title="Criando um sistema de destaques - Exemplo da Parte 1" href="/exemplos/destaque/parte1/">assim</a>) e hoje, como prometido, vamos criar o jQuery que dará o efeito de transição dos destaques.
+Pra quem não lembra, na [assim](/exemplos/destaque/parte1/)) e hoje, como prometido, vamos criar o jQuery que dará o efeito de transição dos destaques.
 
 <h3>1. Inserindo o jQuery</h3>
 Se você já tem jQuery 1.4.2 (ou superior) inserido no seu site, pule essa parte... Caso você não tenha o jQuery ou seja uma versão antiga, recomendo que continue lendo.
 
-Vá ao site do <a href="http://jquery.com/">jQuery</a> e baixe a última versão (até agora é a <a title="jQuery v1.4.2" href="http://code.jquery.com/jquery-1.4.2.min.js">1.4.2</a>) e coloque o arquivo com o nome de <strong>jquery-1.4.2.min.js</strong> em uma pasta no seu site.
+Vá ao site do [1.4.2](http://code.jquery.com/jquery-1.4.2.min.js)) e coloque o arquivo com o nome de <strong>jquery-1.4.2.min.js</strong> em uma pasta no seu site.
 
 Feito isso nós podemos inserir o jQuery no site utilizando a seguinte linha:
 
@@ -36,9 +36,9 @@ Feito isso nós podemos inserir o jQuery no site utilizando a seguinte linha:
 Essa linha deve ser inserida dentro da tag <strong><head></strong> do seu site e o nome do arquivo ou a sua pasta não fazem a mínima diferença... Contanto que você acerte o arquivo, tá tudo certo.
 
 <h3>2. Inserindo o jQuery Cycle</h3>
-Agora nós iremos inserir o plugin de jQuery mais útil que existe, o <a title="jQuery Cycle" href="http://www.malsup.com/jquery/cycle/">jQuery Cycle</a>, que serve para realizar um efeito de transição entre elementos dentro de um mesmo container... Em outras palavras: você faz <em>slideshows</em> com ele. Já falei um pouco sobre ele em um outro tutorial sobre <a title="Galeria de fotos (slideshow) com jQuery" href="/galeria-de-fotos-slideshow-com-jquery">galerias de fotos (slideshow) com jQuery</a>).
+Agora nós iremos inserir o plugin de jQuery mais útil que existe, o [galerias de fotos (slideshow) com jQuery](/galeria-de-fotos-slideshow-com-jquery)).
 
-Vá até o site do jQuery Cycle, baixe a última versão (até agora é a <a href="http://www.malsup.com/jquery/cycle/release/jquery.cycle.zip?v2.80">2.80</a>) e insira-a no seu da mesma forma que você fez com o jQuery, apenas mudando o nome do arquivo e, se necessário, a pasta.
+Vá até o site do jQuery Cycle, baixe a última versão (até agora é a [2.80](http://www.malsup.com/jquery/cycle/release/jquery.cycle.zip?v2.80)) e insira-a no seu da mesma forma que você fez com o jQuery, apenas mudando o nome do arquivo e, se necessário, a pasta.
 
 Quando você fizer o download encontrará vários arquivos, mas você só precisa do <strong>jquery.cycle.all.min.js</strong>... Insira-o no <strong><head></strong> do seu site <strong style="color: red">APÓS o código do jQuery</strong>:
 
@@ -125,7 +125,7 @@ Com esse código inserido o nosso document.ready() ficará assim:
 	});
 [/code]
 
-Perceba que colocamos também um par de chaves dentro da chamada do jQuery Cycle... Ali dentro nós iremos definir as <a href="http://www.malsup.com/jquery/cycle/options.html" title="jQuery Cycle - Opções">opções</a> para modificar e interagir com o jQuery Cycle (veja mais a diante).
+Perceba que colocamos também um par de chaves dentro da chamada do jQuery Cycle... Ali dentro nós iremos definir as [opções](http://www.malsup.com/jquery/cycle/options.html) para modificar e interagir com o jQuery Cycle (veja mais a diante).
 
 Agora nós já temos o container que receberá os paginadores, vamos inserir o código que criará os links de cada página, já funcionando:
 
@@ -268,13 +268,13 @@ O link da etiqueta deverá ser atualizado logo após a troca de slides, então v
 			}
 [/code]
 
-Pra quem quiser dar uma olhada no jquery.destaques.js completo: <a href="http://pastie.org/857733" target="_blank">Pastie</a>
+Pra quem quiser dar uma olhada no jquery.destaques.js completo: [Pastie](http://pastie.org/857733)
 
 Pronto! Terminamos o nosso sistema de destaques! :D
 
-Muita gente pode parar por aqui e ir fazer o seu sistema de destaques, mas sei que muitos de você, como eu, vão preferir que esse seja um bloco de destaques dinâmico, vindo direto do banco de dados... Então aguardem mais um pouco pela <a href="/criando-um-sistema-de-destaques-parte-3" title="Criando um sistema de destaques – Parte 3"><strong>Parte 3</strong></a>, onde criaremos o arquivo PHP que fará a conexão com o banco de dados e trará os dados (titulo e link) de uma tabela do MySQL. :)
+Muita gente pode parar por aqui e ir fazer o seu sistema de destaques, mas sei que muitos de você, como eu, vão preferir que esse seja um bloco de destaques dinâmico, vindo direto do banco de dados... Então aguardem mais um pouco pela [](/criando-um-sistema-de-destaques-parte-3), onde criaremos o arquivo PHP que fará a conexão com o banco de dados e trará os dados (titulo e link) de uma tabela do MySQL. :)
 
-Quer ver como ficou o sistema de destaques até agora? Veja <a target="_blank" title="Sistema de Destaques - Parte 2" href="/exemplos/destaque/parte2/">online</a> ou faça download do <a target="_blank" title="Sistema de Destaques - Parte 2 (RAR)" href="/exemplos/destaque/parte2.rar">RAR</a> com os arquivos.
+Quer ver como ficou o sistema de destaques até agora? Veja [RAR](/exemplos/destaque/parte2.rar) com os arquivos.
 
 Abraços e até a próxima!
 

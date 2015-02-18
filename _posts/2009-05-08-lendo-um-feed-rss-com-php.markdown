@@ -24,7 +24,7 @@ $rss = new SimpleXmlElement($feed);
 
 foreach($rss->channel->item as $entrada) {
 echo '
-<a href="' . $entrada->link . '" title="' . $entrada->title . '">' . $entrada->title . '</a>
+[title . '](' . $entrada->link . ')
 
 ';
 }
@@ -42,12 +42,12 @@ Dentro do loop, teremos <span style="color: #99cc00;"><strong>$entrada</strong><
 
 Como diria o meu professor de física do colegial: "<em>Mel na chupeta!</em>"
 
-Vamos aos links de referências, para aqueles que não são <a href="/codificadores-e-programadores" target="_parent">codificadores</a> e gostam de saber o porquê das coisas:
+Vamos aos links de referências, para aqueles que não são [codificadores](/codificadores-e-programadores) e gostam de saber o porquê das coisas:
 
-» <strong>SimpleXML (Documentação)</strong> - <a href="http://www.php.net/manual/pt_BR/book.simplexml.php" target="_blank">http://www.php.net/manual/pt_BR/book.simplexml.php</a>
+» <strong>SimpleXML (Documentação)</strong> - [http://www.php.net/manual/pt_BR/book.simplexml.php](http://www.php.net/manual/pt_BR/book.simplexml.php)
 » <strong>RSS (Wikipédia)</strong> - <a href="http://pt.wikipedia.org/wiki/RSS" target="_blank">http://pt.wikipedia.org/wiki/RSS
 </a>» <strong>Feed (Wikipédia) </strong>- <a href="http://pt.wikipedia.org/wiki/Feed" target="_blank">http://pt.wikipedia.org/wiki/Feed
-</a>» <strong>Validador de XMLs</strong> - <a href="http://validator.w3.org/feed/" target="_blank">http://validator.w3.org/feed/</a>
+</a>» <strong>Validador de XMLs</strong> - [http://validator.w3.org/feed/](http://validator.w3.org/feed/)
 
 Ah.. Detalhe: Você também pode criar XMLs (Feed RSS também) usando essa classe... E é tão fácil quanto ler. ;)
 

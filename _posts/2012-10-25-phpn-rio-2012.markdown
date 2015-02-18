@@ -15,7 +15,7 @@ tags:
 - evento
 - PHPnRio
 ---
-O <a href="http://phpnrio.com.br/" target="_blank">PHPn' Rio</a> é um evento carioca organizado por membros da comunidade PHP local. Ele reúne desenvolvedores, designers, empresários e estudantes. Mais do que uma conferência formal, é uma oportunidade de <strong>compartilhar experiências</strong>. O <strong>PHP’n Rio 2012</strong> vai proporcionar diversas sessões de palestras, oficinas e atividades com profissionais proeminentes no cenário de desenvolvimento de software, principalmente Web, além disso a oportunidade de networking e bate-papo com toda os participantes.
+O [PHPn' Rio](http://phpnrio.com.br/) é um evento carioca organizado por membros da comunidade PHP local. Ele reúne desenvolvedores, designers, empresários e estudantes. Mais do que uma conferência formal, é uma oportunidade de <strong>compartilhar experiências</strong>. O <strong>PHP’n Rio 2012</strong> vai proporcionar diversas sessões de palestras, oficinas e atividades com profissionais proeminentes no cenário de desenvolvimento de software, principalmente Web, além disso a oportunidade de networking e bate-papo com toda os participantes.
 
 O evento é realizado desde 2009, com um público sempre crescente. No PHPn' Rio 2011, edição passada, alcançamos um público com mais de 350 participantes. A estimativa para o PHP’n Rio 2012 é de 450 conferencistas.
 
@@ -29,7 +29,7 @@ Para 2012, preparamos cinco espaços para as atividades: Dois auditórios com pa
 
 Este ano, o evento será realizado dia <strong>10 de novembro de 2012</strong>, no <strong>CEFET-RJ</strong>.
 
-E é claro que estarei lá, participando do evento, dessa vez com a minha oficina <a href="http://phpnrio.com.br/2012/assando-uma-loja-virtual-em-2h30-com-cakephp" target="_blank">Assando uma loja virtual em 2h30 com CakePHP</a>, onde irei mostrar como é fácil e rápido de desenvolver projetos de pequeno e médio porte, usando o <strong>CakePHP</strong>.
+E é claro que estarei lá, participando do evento, dessa vez com a minha oficina [Assando uma loja virtual em 2h30 com CakePHP](http://phpnrio.com.br/2012/assando-uma-loja-virtual-em-2h30-com-cakephp), onde irei mostrar como é fácil e rápido de desenvolver projetos de pequeno e médio porte, usando o <strong>CakePHP</strong>.
 
 Aqui você pode ver quão lotada ficou a sala na minha oficina do ano passado:
 
@@ -37,5 +37,5 @@ Aqui você pode ver quão lotada ficou a sala na minha oficina do ano passado:
 
 Veja a grade do evento:
 
-<a href="http://phpnrio.com.br/"><img class="aligncenter  wp-image-2719" title="Banner PHP'n Rio 2012" src="/assets/uploads/2012/10/banner_web_phpinrio2012-721x1024.jpg" alt="" width="625" height="887" /></a>
+[](http://phpnrio.com.br/)
 

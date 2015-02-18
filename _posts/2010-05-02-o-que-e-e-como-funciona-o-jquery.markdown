@@ -17,20 +17,20 @@ tags:
 No artigo de hoje iremos ver o que é e como funciona o jQuery, a ferramenta que veio pra ficar e, arrisco dizer, "só jQuery expulsa o Flash das pessoas!".
 
 <h3>Mas hein?! jQuery? Que bicho é esse?</h3>
-Pra quem ainda não conhece, o <a title="Site oficial do jQuery" href="http://jquery.com/">jQuery</a> é um framework de Javascript.
+Pra quem ainda não conhece, o [jQuery](http://jquery.com/) é um framework de Javascript.
 
 Um <strong>framework</strong>, de forma bem resumida, é uma coleção de funções e métodos prontos para serem utilizados, amplamente testados e que devem ser usados de forma pré-definida para tudo correr bem.
 
 Em alguns casos um framework chega a ser um estilo completamente novo de programar em certa linguagem, no caso do Javascript, o jQuery é, sem dúvida, um estilo novo, atrativo, fácil e interessantíssimo de programar.
 
-Existem inúmeros outros frameworks de Javascript como o <a title="MooTools" href="http://mootools.net/">MooTools</a> ou <a title="ExtJS" href="http://www.extjs.com/">ExtJS</a> mas eu sempre vou puxar a sardinha pro lado do jQuery por que ele realmente merece!
+Existem inúmeros outros frameworks de Javascript como o [ExtJS](http://www.extjs.com/) mas eu sempre vou puxar a sardinha pro lado do jQuery por que ele realmente merece!
 
 O jQuery foi criado sob o mantra do "<strong>Write less, do more</strong>" (Escreva menos, faça mais) e é exatamente por causa disso que ele é tão surpreendente, com algumas poucas linhas de código você consegue fazer os mais variados efeitos que antes custavam dezenas de linhas de código com Javascript puro ou algumas horas de trabalho em Flash.
 
 <h3>E onde eu uso isso?</h3>
 Você pode usar o jQuery para fazer praticamente qualquer efeito legal, ou requisições em AJAX ou até mudanças na página após o seu carregamento.
 
-Para poder utlizar o jQuery você precisa sempre inserí-lo no seu HTML, você pode fazer o <a title="download do arquivo .js no site oficial" href="http://code.jquery.com/jquery-1.4.2.min.js">download do arquivo .js no site oficial</a> e chama-lo no seu HTML ou usar uma <a href="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">versão hospedada pelo Google</a>.
+Para poder utlizar o jQuery você precisa sempre inserí-lo no seu HTML, você pode fazer o [versão hospedada pelo Google](http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js).
 
 Em ambos os casos você precisa inserir o script dentro do <code><head></code> do seu site ou logo antes do <strong></body></strong>, veja a seguir a linha que insere o script pra cada um dos casos:
 
@@ -132,13 +132,13 @@ Na parte em <span style="background: cyan;">azul</span> temos uma chamada à fun
 
 Na parte em <span style="background: yellow;">amarela</span> temos o seletor, que segue o mesmo padão de seletores CSS e serve para nos ajudar a localizar o evento ao qual aplicaremos o efeito, evento ou método. Nesse caso, estamos procurando as os elementos <code>img</code> que estejam dentro de um <code>li</code>, que por sua vez estejam dentro de uma <code>ul</code> com classe <code>lista-imagens</code>, o que no CSS seria exatamente o seletor que usamos: <code style="background: yellow;">ul.lista-imagens li img</code>.
 
-Na parte em <span style="background: orange;">laranja</span> temos uma chamada ao método <code>hover()</code> este método é ativado sempre que passamos o mouse sobre o elemento identificado no seletor (parte amarela). O método <a href="http://api.jquery.com/hover/">.hover()</a> possui dois parâmetros: primeiro o que será executado quando o mouse "entrar" no elemento e o segundo quando o mouse "sair" do elemento.
+Na parte em <span style="background: orange;">laranja</span> temos uma chamada ao método <code>hover()</code> este método é ativado sempre que passamos o mouse sobre o elemento identificado no seletor (parte amarela). O método [.hover()](http://api.jquery.com/hover/) possui dois parâmetros: primeiro o que será executado quando o mouse "entrar" no elemento e o segundo quando o mouse "sair" do elemento.
 
 E por fim, na parte em <span style="background: lime;">verde</span>, temos o primeiro parâmetro do método <code>hover()</code>... Tudo que estiver dentro dessa parte será executado ao passar o mouse no elemento identificado pelo seletor.
 
 <blockquote>Todas as imagens se apagam...
 </blockquote>
-Continuando o nosso código, vamos inserir a linha que irá escurecer (apagar / diminuir a opacidade / esmaecer) todas as imagens da lista... Para isso usaremos o método <a href="http://api.jquery.com/fadeTo/">.fadeTo()</a> do jQuery.
+Continuando o nosso código, vamos inserir a linha que irá escurecer (apagar / diminuir a opacidade / esmaecer) todas as imagens da lista... Para isso usaremos o método [.fadeTo()](http://api.jquery.com/fadeTo/) do jQuery.
 
 
 [code language="javascript"]
@@ -165,9 +165,9 @@ Agora precisamos "filtrar" esse efeito de escurecer e fazer com que ele afete to
 $('ul.lista-imagens li img').not(this).fadeTo('fast', 0.3);
 [/code]
 
-Perceba que inserimos o <code>.not(this)</code>, esse método <a href="http://api.jquery.com/not/">.not()</a> faz com que, [nesse caso] depois de selecionar todas as imagens da lista, nós excluímos o <code>this</code> que faz referência ao elemento que ativou o efeito.
+Perceba que inserimos o <code>.not(this)</code>, esse método [.not()](http://api.jquery.com/not/) faz com que, [nesse caso] depois de selecionar todas as imagens da lista, nós excluímos o <code>this</code> que faz referência ao elemento que ativou o efeito.
 
-Se você <a href="http://jsbin.com/odaga3/2/">testar o script</a> que fizemos até agora, perceberá que as imagens estão apagando corretamente, mas não estão acendendo novamente quando tiramos o mouse de uma das imagens.
+Se você [testar o script](http://jsbin.com/odaga3/2/) que fizemos até agora, perceberá que as imagens estão apagando corretamente, mas não estão acendendo novamente quando tiramos o mouse de uma das imagens.
 
 <blockquote>Ao tirar o mouse de cima da imagem
 </blockquote>
@@ -208,11 +208,11 @@ $('ul.lista-imagens li img').hover(function() {
 });
 [/code]
 
-Com esse código o nosso efeito já está pronto, <a href="http://jsbin.com/odaga3/3/">veja aqui ele funcionando</a>.
+Com esse código o nosso efeito já está pronto, [veja aqui ele funcionando](http://jsbin.com/odaga3/3/).
 
 Você provavelmente vai notar que o efeito fica "enfileirado", ou seja, se passarmos o mouse sobre várias imagens rapidamente o efeito vai ficar acontecendo um depois do outro como se o código estivesse agindo sozinho.
 
-Sabendo disso, precisamos fazer todos os efeitos "pararem" antes de começar um novo, isso vai fazer com que, cada vez que passarmos o mouse sobre uma imagem, o efeito seja executado imediatamente e, se houverem outros efeitos na fila, eles sejam sobrepostos... Fazemos isso usando o método <a href="http://api.jquery.com/stop/">.stop()</a> antes do <code>.fadeTo()</code>:
+Sabendo disso, precisamos fazer todos os efeitos "pararem" antes de começar um novo, isso vai fazer com que, cada vez que passarmos o mouse sobre uma imagem, o efeito seja executado imediatamente e, se houverem outros efeitos na fila, eles sejam sobrepostos... Fazemos isso usando o método [.stop()](http://api.jquery.com/stop/) antes do <code>.fadeTo()</code>:
 
 
 [code language="javascript"]
@@ -230,7 +230,7 @@ $('ul.lista-imagens li img').hover(function() {
 });
 [/code]
 
-Agora sim nosso efeito ficou <a href="http://jsbin.com/odaga3/4/">completo</a> e, pasmem, com apenas cinco linhas:
+Agora sim nosso efeito ficou [completo](http://jsbin.com/odaga3/4/) e, pasmem, com apenas cinco linhas:
 
 
 [code language="javascript"]
@@ -243,8 +243,8 @@ $('ul.lista-imagens li img').hover(function() {
 
 Este é apenas um pequeno exemplo do poder do jQuery, amanhã irei escrever mais sobre ele, com outros efeitos legais e tão simples quanto esse que você viu aqui. :)
 
-Espero que você tenha gostado! Deixe seu comentário com sua dúvida ou elogio. E não deixe de <a title="@tiutalk" href="http://twitter.com/tiutalk">me seguir no Twitter</a> para ficar sabendo dos artigos aqui do blog em tempo real!
+Espero que você tenha gostado! Deixe seu comentário com sua dúvida ou elogio. E não deixe de [me seguir no Twitter](http://twitter.com/tiutalk) para ficar sabendo dos artigos aqui do blog em tempo real!
 
 <h3>Quer ver o passo-a-passo do seu efeito em jQuery?</h3>
-É simples: <a title="@tiutalk" href="http://twitter.com/tiutalk">Siga-me no Twitter</a>, dê um RT (retweet) com um link para este artigo e descreva o seu efeito em um comentário nesse artigo. :)
+É simples: [Siga-me no Twitter](http://twitter.com/tiutalk), dê um RT (retweet) com um link para este artigo e descreva o seu efeito em um comentário nesse artigo. :)
 

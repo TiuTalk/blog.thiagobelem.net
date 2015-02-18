@@ -15,7 +15,7 @@ tags: []
 
 Irei explicar de forma mais abrangente como ficam as operações que fazem a manipulação desses dados... Em outro tópico explicarei como fazer para pegar e manipular dados vindos de formulários HTML. Meu intuito é que você entenda como usar cada uma dessas operações da melhor forma possível pro seu sistema... por isso darei mais de um exemplo pra cada uma.
 
-Pularei a parte que explica como fazer uma conexão ao banco de dados MySQL por que já fiz isso <a title="Conectando-se ao MySQL" href="/conexao-mysql-servidor-local-e-externo" target="_blank">nesse tópico</a>. Farei a conexão com o servidor usando include no arquivo <span style="color: #99cc00;"><strong>conexao.php</strong></span> que - apenas - faz a conexão o MySQL.
+Pularei a parte que explica como fazer uma conexão ao banco de dados MySQL por que já fiz isso [nesse tópico](/conexao-mysql-servidor-local-e-externo). Farei a conexão com o servidor usando include no arquivo <span style="color: #99cc00;"><strong>conexao.php</strong></span> que - apenas - faz a conexão o MySQL.
 
 Usarei como exemplo os dados <span class="removed_link" title="http://jbonline.terra.com.br/pextra/2009/03/16/e160323614.asp">dessa notícia</span>, publicada no site do Jornal do Brasil em 16/03/2009 as 23:26.
 

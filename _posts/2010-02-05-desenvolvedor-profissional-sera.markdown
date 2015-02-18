@@ -36,5 +36,5 @@ Mas como podemos identificar a diferença entre desenvolvedores profissionais e 
 
 E ai, você é amador ou profissional?
 
-<p style="text-align: right; font-size: 10px;"><a href="http://www.linhadecodigo.com.br/Artigo.aspx?id=2777" rel="nofollow">Artigo original</a> por <strong>Rafael Helm</strong>
+<p style="text-align: right; font-size: 10px;">[Artigo original](http://www.linhadecodigo.com.br/Artigo.aspx?id=2777) por <strong>Rafael Helm</strong>
 

@@ -17,7 +17,7 @@ tags:
 ---
 Há muito pouco tempo começaram a surgir boatos por aí de que estamos entrando na Web 3.0, ou a "Web Semântica"... E hoje eu vim falar um pouquinho, pra vocês, sobre essa nova tendência.
 
-Como meu amigo <a href="http://bernarddeluna.com/" target="_blank">Bernard De Luna</a> (especialista em (X)HTML, CSS e semântica) disse: "<em>Não existem versões... Existe a tendência a uma evolução natural das coisas... Nós simplesmente percebemos essa mudança de vento e queremos dar um nome pra ela.</em>"... Não exatamente com essas palavras, mas sei que foi isso que ele quis dizer.
+Como meu amigo [Bernard De Luna](http://bernarddeluna.com/) (especialista em (X)HTML, CSS e semântica) disse: "<em>Não existem versões... Existe a tendência a uma evolução natural das coisas... Nós simplesmente percebemos essa mudança de vento e queremos dar um nome pra ela.</em>"... Não exatamente com essas palavras, mas sei que foi isso que ele quis dizer.
 
 Estamos entrando numa época onde cada vez mais sites e mais domínios são comprados, publicados e jogados na Internet, e diga-se de passagem: sem nenhum cuidado, planejamento ou organização. E é esse o pilar da tal Web 3.0: <strong>organização</strong>. Cada vez mais informações (verdadeiras ou falsas) estão sendo publicadas na Internet... Isso se deve ao boom da Web 2.0 onde a contribuição do visitante é o bem mais valioso de um site. São comentários, fóruns, notícias, muitos blogs, fotos, vídeos, Twitters e por aí vai... É um mundo de possibilidades onde você pode criar o seu conteúdo, da forma e cor que desejar.
 

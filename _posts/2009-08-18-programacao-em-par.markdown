@@ -43,5 +43,5 @@ Algumas vantagens que você pode esperar são: um código melhor (organização,
 <li>O que torna um par bom ou ruim é a tenção e respeito que se dá ao colega... Se o seu observador está falando algo sobre o seu código, não vá ver o seu e-mail ou minimizar a janela do MSN... E se o seu executador está concluindo algo, preste atenção total na tela e nas linhas que ele está criando.. não coma uma batata frita ou veja TV. Vocês estão trabalhando junto, dando o máximo de si, focando o máximo de atenção, no mesmo computador e no mesmo projeto.</li>
 <li>Aquele que sabe menos sobre a linguagem de programação/técnica que está sendo usada no sistema deve ser, normalmente, o executador pois se aprende mais com as mãos do que com os olhos.</li>
 </ul>
-<p style="font-size: 10px; text-align: right">Fonte: <a href="http://www.wikihow.com/Pair-Program">http://www.wikihow.com/Pair-Program</a>
+<p style="font-size: 10px; text-align: right">Fonte: [http://www.wikihow.com/Pair-Program](http://www.wikihow.com/Pair-Program)
 

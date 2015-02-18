@@ -20,7 +20,7 @@ Fala gente,
 
 Essa semana usei um recurso novo aqui no blog, são os arquivos phps ou PHP Source, normalmente eles não são interpretados pelo servidor, mas quando são acontece algo diferente com eles: ao invés do servidor executar seu código como PHP normal, ele exibe o código fonte, todo colorido, pra quem acessar.
 
-<strong>Veja um exemplo:</strong> <a href="/arquivos/2010/01/usuarios.class.parte1.phps" target="_blank">http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.phps</a>
+<strong>Veja um exemplo:</strong> [http://blog.thiagobelem.net/arquivos/2010/01/usuarios.class.parte1.phps](/arquivos/2010/01/usuarios.class.parte1.phps)
 
 Isso é bem útil quando temos um site de tutoriais/compartilhamento de código/programação.
 
@@ -45,7 +45,7 @@ Ainda na raiz do seu site, crie um arquivo chamado "<strong>php-source.php</stro
 highlight_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["PATH_INFO"]);
 ?> [/code]
 
-Isso fará com que esse arquivo criado pegue o caminho do arquvo requisitado (com extensão .phps) e use a função <a href="http://www.php.net/manual/pt_BR/function.highlight-file.php" title="highlight_file()" target="_blank">highlight_file()</a> do PHP para exibir o seu código-fonte com sintaxe coloria.
+Isso fará com que esse arquivo criado pegue o caminho do arquvo requisitado (com extensão .phps) e use a função [highlight_file()](http://www.php.net/manual/pt_BR/function.highlight-file.php) do PHP para exibir o seu código-fonte com sintaxe coloria.
 
 Pronto! :D
 

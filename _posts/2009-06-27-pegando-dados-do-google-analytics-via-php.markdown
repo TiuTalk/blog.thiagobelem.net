@@ -26,7 +26,7 @@ O GAPI é uma classe que te ajudará a fazer todo o trabalho de login, encontrar
 Com a API do Google Analytics você pode ter acesso a QUALQUER dado/relatório que teria acessando normalmente sua conta pelo site.
 
 <h3>Download e "Instalação"</h3>
-Para baixar o GAPI é simples.. Como diria meu professor de física do colegial: "é mel na chupeta!"... Acesse a <a href="http://code.google.com/p/gapi-google-analytics-php-interface/" title="Google Analytics PHP Interaface" target="_blank">página oficial do projeto</a> dentro do Google Code e (logo ali na lateral direita) faça o download da última versão.
+Para baixar o GAPI é simples.. Como diria meu professor de física do colegial: "é mel na chupeta!"... Acesse a [página oficial do projeto](http://code.google.com/p/gapi-google-analytics-php-interface/) dentro do Google Code e (logo ali na lateral direita) faça o download da última versão.
 
 Para poder usar a classe você só precisa ter o hárduo trabalho de incluir o arquivo <span style="color: orange"><strong>gapi.class.php</strong></span> no seu site.
 
@@ -100,8 +100,8 @@ Agora você já fez o login e tem o ID do perfil do site que você quer pegar os
 É claro que esse codigo parece um pouco complexo pra quem está começando.. Vou tentar explicar os argumentos do método requestReportData:
 
 1 - Primeiro tempos o ID do perfil do site que você já pegou antes usando o requestAccountData()
-2 - Aqui temos a lista de dimensões que estamos buscando. No primeiro exemplo usamos 'month' para pegar o total de cada mês do período especificado, e no segundo usamos 'day' para pegar o total referente a cada dia do período. Veja aqui a <a href="http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html" target="_blank">lista completa</a> de dimensões que podem ser usadas.
-3 - No terceiro parâmetro temos as métricas, que são os valores que estamos buscando... Nos dois casos usamos 'pageviews' e 'visits'. Veja aqui uma <a href="http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html" target="_blank">lista completa</a> de métricas que podem ser usadas.
+2 - Aqui temos a lista de dimensões que estamos buscando. No primeiro exemplo usamos 'month' para pegar o total de cada mês do período especificado, e no segundo usamos 'day' para pegar o total referente a cada dia do período. Veja aqui a [lista completa](http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html) de dimensões que podem ser usadas.
+3 - No terceiro parâmetro temos as métricas, que são os valores que estamos buscando... Nos dois casos usamos 'pageviews' e 'visits'. Veja aqui uma [lista completa](http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html) de métricas que podem ser usadas.
 4 - O quarto parâmetro é a ordem dos resultados.
 5 - O quinto parâmetro é o filtro. (Raramente usado)
 6 e 7 - São os parâmetros que definem o período dos relatórios no formato AAAA-MM-DD.

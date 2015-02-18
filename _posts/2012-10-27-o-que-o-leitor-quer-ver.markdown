@@ -7,7 +7,7 @@ categories:
 - Sem categoria
 tags: []
 ---
-Pessoal, o post <a title="Opinião do leitor: O que você gostaria de ver por aqui?" href="/opiniao-do-leitor-o-que-voce-gostaria-de-ver-por-aqui">Opinião do leitor: O que você gostaria de ver por aqui?</a> já recebeu um número bom de comentários, então segue o "<strong>Top 5</strong>" de assuntos que o pessoal anda pedindo:
+Pessoal, o post [Opinião do leitor: O que você gostaria de ver por aqui?](/opiniao-do-leitor-o-que-voce-gostaria-de-ver-por-aqui) já recebeu um número bom de comentários, então segue o "<strong>Top 5</strong>" de assuntos que o pessoal anda pedindo:
 
 <ul>
 <li>MVC no PHP +++++++++++</li>
@@ -24,5 +24,5 @@ Além desses assuntos, aqui vão outros assuntos que eu gostaria de abordar:
 </ul>
 Não prometo que vou tratar de todos esses assuntos, mas isso vai me ajudar bastante à ter idéias para futuros artigos! :)
 
-Outra coisa que eu planejo fazer é revisar/atualizar alguns artigos antigos como <a href="/criando-um-sistema-de-login-com-php-e-mysql" data-bump-view="tp">Criando um sistema de login com PHP e MySQL</a> e outros artigos.
+Outra coisa que eu planejo fazer é revisar/atualizar alguns artigos antigos como [Criando um sistema de login com PHP e MySQL](/criando-um-sistema-de-login-com-php-e-mysql) e outros artigos.
 

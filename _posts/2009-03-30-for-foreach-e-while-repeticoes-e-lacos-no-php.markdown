@@ -33,7 +33,7 @@ Durante a execução de qualquer repetição você pode usar o comando<strong> <
 
 O <strong>for()</strong> pode ser usado, por exemplo, para montar a exibição de um calendário.
 
-Veja mais: <a href="http://br2.php.net/manual/pt_BR/control-structures.for.php" target="_blank">Documentação do for()</a>
+Veja mais: [Documentação do for()](http://br2.php.net/manual/pt_BR/control-structures.for.php)
 
 <h4>Usando o foreach()</h4>
 O <strong>foreach()</strong> é extremamente útil, pois com ele você executa um grupo de comandos para cada elemento de um array:
@@ -67,7 +67,7 @@ echo $valor . "";
 
 O exemplo acima irá "pular" o elemento que tiver o valor igual a "João", exibindo apenas Thiago, Ricardo e Paula.
 
-Veja mais: <a href="http://br2.php.net/manual/pt_BR/control-structures.foreach.php" target="_blank">Documentação do foreach()</a>
+Veja mais: [Documentação do foreach()](http://br2.php.net/manual/pt_BR/control-structures.foreach.php)
 
 <h4>Usando o while()</h4>
 O while() pode ser usado (ou não) da mesma forma que o for()... A diferença é que nele só é especificado a condição, veja um exemplo:
@@ -105,7 +105,7 @@ echo $dados['nome'].""; // Exibe o valor da coluna `nome`
 ?>
 [/code]
 
-Veja mais: <a href="http://br2.php.net/manual/pt_BR/control-structures.while.php" target="_blank">Documentação do while()</a>
+Veja mais: [Documentação do while()](http://br2.php.net/manual/pt_BR/control-structures.while.php)
 
 --
 

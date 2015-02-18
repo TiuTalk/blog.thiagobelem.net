@@ -15,15 +15,15 @@ tags:
 - bcrypt
 - auth
 ---
-Recentemente escrevi um pequeno artigo falando sobre as <a title="Criptografando senhas no PHP usando bcrypt (Blowfish)" href="/criptografando-senhas-no-php-usando-bcrypt-blowfish">vantagens e utilização do bcrypt</a> em projetos PHP.
+Recentemente escrevi um pequeno artigo falando sobre as [vantagens e utilização do bcrypt](/criptografando-senhas-no-php-usando-bcrypt-blowfish) em projetos PHP.
 
-E agora gostaria de mostrar pra vocês como é fácil hashear senhas usando o <strong>bcrypt</strong> dentro do <a href="/cakephp">CakePHP</a>.
+E agora gostaria de mostrar pra vocês como é fácil hashear senhas usando o <strong>bcrypt</strong> dentro do [CakePHP](/cakephp).
 
 <h2>Versão 2.3+</h2>
-O <a href="https://github.com/cakephp/cakephp/blob/2.3/lib/Cake/Controller/Component/Auth/BlowfishAuthenticate.php" target="_blank">BlowfishAuthenticate</a> é um "objeto" de autenticação que está disponível apenas a partir da <a href="https://github.com/cakephp/cakephp/tree/2.3" target="_blank">versão 2.3 do CakePHP</a>, que hoje (20/11) ainda está em desenvolvimento.
+O [versão 2.3 do CakePHP](https://github.com/cakephp/cakephp/tree/2.3), que hoje (20/11) ainda está em desenvolvimento.
 
 <h2>Habilitando e configurando o AuthComponent</h2>
-A primeira coisa que você precisa fazer, é configurar o <a href="http://book.cakephp.org/2.0/en/core-libraries/components/authentication.html" target="_blank">AuthComponent</a> pra usar o seu model de usuários e o <strong>BlowfishAuthenticate</strong> (ao invés do FormAuthenticate):
+A primeira coisa que você precisa fazer, é configurar o [AuthComponent](http://book.cakephp.org/2.0/en/core-libraries/components/authentication.html) pra usar o seu model de usuários e o <strong>BlowfishAuthenticate</strong> (ao invés do FormAuthenticate):
 
 <div data-gist-id="4119002" data-gist-show-loading="false"></div>
 Feito isso, o <strong>AuthComponent</strong> já vai <em>hashaear</em> a senha do usuário automáticamente usando <strong>bcrypt</strong> (baseado no algoritmo blowfish, por isso o nome).

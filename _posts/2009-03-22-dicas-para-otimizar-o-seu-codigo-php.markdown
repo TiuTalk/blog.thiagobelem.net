@@ -43,7 +43,7 @@ Se você usar essas dicas você pode ter certeza que está contribuindo para um 
 
 Todas essas dicas se tornam inuteis se você não fez um bom planejamento antes de começar a trabalhar a sua aplicação. "Ir fazendo" nunca é melhor do que "Já saber o que precisa(rá) ser feito". Guardem essa dica!
 
-Veja mais algumas várias dicas (em inglês) aqui: <a title="PHP Bench" href="http://www.phpbench.com/404/" target="_blank">http://www.phpbench.com/</a>
+Veja mais algumas várias dicas (em inglês) aqui: [http://www.phpbench.com/](http://www.phpbench.com/404/)
 
 Quem tiver alguma outra dica para deixar um script mais rápido e eficiente é só falar.
 

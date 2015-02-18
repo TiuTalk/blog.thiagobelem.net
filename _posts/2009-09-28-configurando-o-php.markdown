@@ -17,7 +17,7 @@ tags:
 ---
 Fala gente,
 
-Hoje vi um ótimo post no blog do <a href="http://www.brandonsavage.net/" target="_blank">Brandon Savage</a> e resolvi traduzir ele aqui pra vocês... ;)
+Hoje vi um ótimo post no blog do [Brandon Savage](http://www.brandonsavage.net/) e resolvi traduzir ele aqui pra vocês... ;)
 
 <h3>Configurando o PHP - Ajustes essenciais no INI</h3>
 Quando se está instalando e criando um servidor para PHP existem várias diretrizes de configuração que devem ser levadas em conta. É sempre bom atentar para essas configurações e verificá-las antes de começar a usar o servidor.
@@ -31,7 +31,7 @@ A opção <strong>register_globals</strong> é de longe a mais polêmica e a mai
 Essa é outra opção muito usada para manter sistemas antigos funcionando. Ela, quando ligada, coloca uma contra-barra antes de cada aspa que estiver presente no conteúdo das variáveis $_GET, $_POST e $_COOKIE. Ao contrário do que alguns acreditam essa variável não deixa o sistema mais seguro.
 
 <h3>error_reporting = <span style="color: orange;">E_ALL | E_STRICT</span></h3>
-Aqui você define os <a href="http://www.php.net/manual/en/errorfunc.constants.php" target="_blank">tipos de erros</a> que o PHP irá relatar pra você. Isso te ajudará a encontrar erros no seu código mesmo em modo de produção.
+Aqui você define os [tipos de erros](http://www.php.net/manual/en/errorfunc.constants.php) que o PHP irá relatar pra você. Isso te ajudará a encontrar erros no seu código mesmo em modo de produção.
 
 <h3>display_errors = <span style="color: red;">off</span></h3>
 Mesmo que você tenha definido uma lista de erros que devem ser reportados pelo PHP você não quer que os visitantes/usuários os vejam! Essa configuração fará exatamente isso: esconder os erros e salvá-los em um arquivo de log de erros. Deixar essa variável ligada é outra brecha de segurança enorme que você não vai querer ter no seu sistema.

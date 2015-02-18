@@ -15,7 +15,7 @@ tags:
 ---
 Bom dia pessoal!
 
-Continuando com algumas dicas tiradas do <a title="Apache Cookbook, O'Reilly" href="http://oreilly.com/catalog/9780596001919">Apache Cookbook</a> do O'Reilly, hoje vou ensinar como mudar a página de erro "Não encontrado" (404) do seu servidor.
+Continuando com algumas dicas tiradas do [Apache Cookbook](http://oreilly.com/catalog/9780596001919) do O'Reilly, hoje vou ensinar como mudar a página de erro "Não encontrado" (404) do seu servidor.
 
 <h3>O Problema</h3>
 Seus visitantes quando tentam acessar um endereço ou arquivo que não exista recebem a página de erro "feia" e padrão do Apache e você quer que eles sejam redirecionados para uma outra página, onde poderão continuar navegando no seu site.
@@ -37,8 +37,8 @@ Uma boa idéia é mandar para a página inicial do seu site. :)
 
 <h3>Saiba mais (documentação)</h3>
 <ul>
-<li><a title="Apache - Error Document" href="http://httpd.apache.org/docs/2.2/mod/core.html#errordocument">http://httpd.apache.org/docs/2.2/mod/core.html#errordocument</a></li>
-<li><a title="Apache - mod_dir" href="http://httpd.apache.org/docs/2.2/mod/mod_dir.html">http://httpd.apache.org/docs/2.2/mod/mod_dir.html</a></li>
+<li>[http://httpd.apache.org/docs/2.2/mod/core.html#errordocument](http://httpd.apache.org/docs/2.2/mod/core.html#errordocument)</li>
+<li>[http://httpd.apache.org/docs/2.2/mod/mod_dir.html](http://httpd.apache.org/docs/2.2/mod/mod_dir.html)</li>
 </ul>
 Se existir algum assunto relacionado a configuração do Apache que você tem dúvida, deixe seu comentário e tentarei falar sobre nos próximos artigos.
 

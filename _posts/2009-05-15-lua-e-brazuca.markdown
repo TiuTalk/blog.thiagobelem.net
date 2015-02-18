@@ -11,7 +11,7 @@ categories:
 - Artigos
 tags: []
 ---
-Eu sei.. É uma vergonha eu assumir isso publicamente.. Mas descobri essa semana que a linguagem de progração <a title="Site oficial" href="http://lua.org" target="_blank">Lua</a> é brasileira! :D
+Eu sei.. É uma vergonha eu assumir isso publicamente.. Mas descobri essa semana que a linguagem de progração [Lua](http://lua.org) é brasileira! :D
 
 Ela foi criada na PUC-Rio pra um projeto da Petrobras... Mas por que eu to falando isso aqui? Ah.. Pq eu conheço um pouquinho de Lua e é uma linguagem muito amigável... E agora sabendo que ela é brasileira, e tendo que aprender por causa de um certo projeto pessoal, vai ser tudo mais legal.. Quem sabe em breve eu não começo a falar de Lua aqui tbm?
 
@@ -29,9 +29,9 @@ function</span> fact<span class="br0">(</span>n<span class="br0">)</span>
 
 [ <strong>Wikipédia</strong> ]
 
-Lua foi criada por um time de desenvolvedores do <span class="removed_link" title="http://www.tecgraf.puc-rio.br/">Tecgraf</span> da <a class="external text" title="http://PUC-Rio.br" rel="nofollow" href="http://www.puc-rio.br/">PUC-Rio</a>, a princípio, para ser usada em um projeto da <a title="Petrobras" href="http://pt.wikipedia.org/wiki/Petrobras">Petrobras</a>. Devido à sua eficiência, clareza e facilidade de aprendizado, passou a ser usada em diversos ramos da programação, como no desenvolvimento de jogos (a <a class="external text" title="http://www.lucasarts.com/" rel="nofollow" href="http://www.lucasarts.com/">Lucas Arts</a>, por exemplo, usou a linguagem no jogo Escape from Monkey Island), controle de robôs, processamento de texto, etc. Também é freqüentemente usada como uma linguagem de propósito geral.
+Lua foi criada por um time de desenvolvedores do <span class="removed_link" title="http://www.tecgraf.puc-rio.br/">Tecgraf</span> da [Lucas Arts](http://www.lucasarts.com/), por exemplo, usou a linguagem no jogo Escape from Monkey Island), controle de robôs, processamento de texto, etc. Também é freqüentemente usada como uma linguagem de propósito geral.
 
-Lua combina programação procedural com poderosas construções para descrição de dados, baseadas em tabelas associativas e semântica extensível. É tipada dinamicamente, interpretada a partir de <a title="Bytecode" href="http://pt.wikipedia.org/wiki/Bytecode">bytecodes</a>, e tem gerenciamento automático de memória com coleta de lixo. Essas características fazem de Lua uma linguagem ideal para configuração, automação (scripting) e prototipagem rápida.
+Lua combina programação procedural com poderosas construções para descrição de dados, baseadas em tabelas associativas e semântica extensível. É tipada dinamicamente, interpretada a partir de [bytecodes](http://pt.wikipedia.org/wiki/Bytecode), e tem gerenciamento automático de memória com coleta de lixo. Essas características fazem de Lua uma linguagem ideal para configuração, automação (scripting) e prototipagem rápida.
 
 (...)
 
@@ -39,5 +39,5 @@ Lua é normalmente descrito como uma linguagem de múltiplos paradigmas, oferece
 
 Lua é uma linguagem que suporta apenas um pequeno número de estruturas, tais como dados atômicos, valores booleanos, números (dupla precisão em ponto flutuante por padrão), e strings. As estruturas de dados comuns, tais como matrizes, conjuntos, tabelas, listas, e registros podem ser representados por meio da Lua. Lua não foi construída com suporte para programação orientada a objeto.
 
-<a href="http://pt.wikipedia.org/wiki/Lua_(linguagem_de_programa%C3%A7%C3%A3o)">http://pt.wikipedia.org/wiki/Lua_(linguagem_de_programação)</a>
+[http://pt.wikipedia.org/wiki/Lua_(linguagem_de_programação)](http://pt.wikipedia.org/wiki/Lua_(linguagem_de_programa%C3%A7%C3%A3o))
 

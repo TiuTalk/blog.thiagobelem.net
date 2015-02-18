@@ -15,14 +15,14 @@ tags:
 - Javascript
 - Bower
 ---
-Hoje vou replicar aqui um <a href="http://helabs.com.br/blog/2013/07/08/gerenciando-assets-com-o-bower/">post que publiquei no blog da HE:labs</a>.
+Hoje vou replicar aqui um [post que publiquei no blog da HE:labs](http://helabs.com.br/blog/2013/07/08/gerenciando-assets-com-o-bower/).
 
-O Bower (<a href="http://bower.io/">bower.io</a>), criado pelo galerê do <strong>Twitter</strong>, é um “gerenciador de pacotes para web”, mas especificamente para pacotes de Front-end.
+O Bower ([bower.io](http://bower.io/)), criado pelo galerê do <strong>Twitter</strong>, é um “gerenciador de pacotes para web”, mas especificamente para pacotes de Front-end.
 
 A ideia por trás dele é bem simples: você lista as dependências de JS (jQuery, jQuery Highlight, Backbone e etc.) em um arquivo <code>bower.json</code> que fica dentro do seu projeto, e controla a instalação/atualização desses pacotes por linha de comando.
 
 <h3>Intalando o Bower</h3>
-Antes de tudo, você vai precisar do <a href="http://nodejs.org/">Node.js</a> e do <a href="http://npmjs.org/">NPM</a> instalados na sua máquina.
+Antes de tudo, você vai precisar do [NPM](http://npmjs.org/) instalados na sua máquina.
 
 Agora é só usar o NPM para instalar o Bower globalmente no seu sistema:
 

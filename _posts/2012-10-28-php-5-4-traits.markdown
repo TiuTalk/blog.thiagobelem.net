@@ -14,9 +14,9 @@ tags:
 - PHP 5.4
 - Traits
 ---
-Este artigo faz parte de uma série de outros arquivos sobre as <a title="PHP 5.4 – Novas funcionalidades" href="/php-5-4-novas-funcionalidades" target="_blank">novidades do PHP 5.4</a>.
+Este artigo faz parte de uma série de outros arquivos sobre as [novidades do PHP 5.4](/php-5-4-novas-funcionalidades).
 
-Documentação oficial: <a href="http://php.net/traits" target="_blank">http://php.net/traits</a>
+Documentação oficial: [http://php.net/traits](http://php.net/traits)
 
 Traits são mecanismos que ajudam (e muito) a <strong>reutilização de código</strong>, e servem perfeitamente para resolver o problema da falta de <strong>herança múltipla</strong>.
 
@@ -40,7 +40,7 @@ E manter o comportamento das nossas classes, de forma bem mais simples:
 Podemos usar o método log() diretamente (sem a necessidade de instanciar um objeto de Log) pois nossas classes adquiriram as características (métodos e atributos) de Log! :)
 
 <h3>Conclusão</h3>
-Traits são de fato recursos bem interessantes e muitos <a title="O CakePHP 3.0 já está no forno!" href="/o-cakephp-3-0-ja-esta-no-forno">frameworks estão se adaptando</a> à esse poderoso recurso.
+Traits são de fato recursos bem interessantes e muitos [frameworks estão se adaptando](/o-cakephp-3-0-ja-esta-no-forno) à esse poderoso recurso.
 
 Espero que você tenha gostado (e faça um bom uso) desse novo recurso! :)
 

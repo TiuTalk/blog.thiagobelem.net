@@ -16,7 +16,7 @@ As vezes, dependendo do site, precisamos que as imagens sejam redimensionadas au
 
 Mas porque perder tempo com isso? Não é melhor limitar o upload de imagens, permitindo apenas uma resolução? Sim.. É mais fácil pra você.. mas não pro <em><abbr title="Usuário final - Quem usará o site/sistema">end-user</abbr></em>. É melhor você perder uma ou duas horas e fazer um sistema muito mais fácil de ser usado e facilitar a vida do usuário... Vai ser melhor pra você e pra ele, acredite.
 
-Existe uma classe pronta de PHP que eu gosto muito, chama <a href="http://wideimage.sourceforge.net/" target="_blank">WideImage</a>... Vou mostrar aqui como usá-la para redimensionar (<em>resize</em>) e cortar (<em>crop</em>) imagens automaticamente, gerando (ou não) arquivos novos. Para um sistema que gera miniaturas (<em>thumbs</em>) isso é mais do que o suficiente.
+Existe uma classe pronta de PHP que eu gosto muito, chama [WideImage](http://wideimage.sourceforge.net/)... Vou mostrar aqui como usá-la para redimensionar (<em>resize</em>) e cortar (<em>crop</em>) imagens automaticamente, gerando (ou não) arquivos novos. Para um sistema que gera miniaturas (<em>thumbs</em>) isso é mais do que o suficiente.
 
 <h3>Redimensionando imagens</h3>
 
@@ -76,7 +76,7 @@ $image->saveToFile('/caminho/nova_foto.jpg', null, 80);
 ?>
 [/code]
 
-Estes foram apenas alguns exemplos... A classe pode fazer muito mais: tons de cinza, marca d'agua, rotacionar, flip, espelho, filtros PNG e muito mais... Acesse o <a href="http://wideimage.sourceforge.net/" target="_blank">site da classe</a> para ver outros exemplos e a documentação dos métodos dela.
+Estes foram apenas alguns exemplos... A classe pode fazer muito mais: tons de cinza, marca d'agua, rotacionar, flip, espelho, filtros PNG e muito mais... Acesse o [site da classe](http://wideimage.sourceforge.net/) para ver outros exemplos e a documentação dos métodos dela.
 
 Espero que tenham gostado! ;)
 

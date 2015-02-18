@@ -46,5 +46,5 @@ Podemos passar os seguintes argumentos pra ela:
 
 Vira como é facil?
 
-Dêem uma olhada na <a href="http://www.php.net/manual/pt_BR/function.number-format.php" target="_blank">documentação oficial</a> para tirar qualquer dúvida e não se esqueçam de deixar o seu comentário.
+Dêem uma olhada na [documentação oficial](http://www.php.net/manual/pt_BR/function.number-format.php) para tirar qualquer dúvida e não se esqueçam de deixar o seu comentário.
 

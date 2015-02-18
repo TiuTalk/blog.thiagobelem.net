@@ -22,9 +22,9 @@ tags:
 ---
 Vejamos, esta na hora da segunda parte deste tutorial!
 
-Para encurtar os posts, irei colocar apenas os trechos do código necessários, vocês devem acompanhar com uma copia dos arquivos no seu PC, de preferência. No futuro, vou manter os códigos com suas ultimas atualizações em um repositório no <a title="GitHub" href="http://github.com" target="_blank">GitHub</a>.
+Para encurtar os posts, irei colocar apenas os trechos do código necessários, vocês devem acompanhar com uma copia dos arquivos no seu PC, de preferência. No futuro, vou manter os códigos com suas ultimas atualizações em um repositório no [GitHub](http://github.com).
 
-Na <a title="HTML5 vs HTML4 – Parte 1" href="/html5-vs-html4-parte-1" target="_blank">primeira parte</a>, construímos o arquivo <strong>HTML</strong>, vazio, hoje começaremos a mexer no body do documento, e colocar tudo que aparecera no site.
+Na [primeira parte](/html5-vs-html4-parte-1), construímos o arquivo <strong>HTML</strong>, vazio, hoje começaremos a mexer no body do documento, e colocar tudo que aparecera no site.
 
 Como sou muito fã das novidades do <strong>HTML5</strong>, vou continuar postando códigos comparativos, ainda mais na parte de formulários, onde vejo as mais belas inovações, apesar de pouco compatíveis por enquanto.
 
@@ -50,9 +50,9 @@ Viu? eu disse que era simples, por enquanto nosso formulário não faz nada, ale
 <strong>Atenção:</strong> não é recomendado definir eventos DOM (onclick, onsubmit e etc.) diretamente no HTML, o ideal seria fazer esse vínculo através do Javascript também, vide:
 
 <ul>
-<li><span style="line-height: 14px;"><a href="http://stackoverflow.com/questions/1796141/properly-bind-javascript-events">http://stackoverflow.com/questions/1796141/properly-bind-javascript-events</a>
+<li><span style="line-height: 14px;">[http://stackoverflow.com/questions/1796141/properly-bind-javascript-events](http://stackoverflow.com/questions/1796141/properly-bind-javascript-events)
 </span></li>
-<li><a href="http://robertnyman.com/2008/11/20/why-inline-css-and-javascript-code-is-such-a-bad-thing/">http://robertnyman.com/2008/11/20/why-inline-css-and-javascript-code-is-such-a-bad-thing/</a></li>
+<li>[http://robertnyman.com/2008/11/20/why-inline-css-and-javascript-code-is-such-a-bad-thing/](http://robertnyman.com/2008/11/20/why-inline-css-and-javascript-code-is-such-a-bad-thing/)</li>
 </ul>
 <h3>Novidades no HTML5</h3>
 Agora, vamos ao nosso mesmo formulário, só que em <strong>HTML5</strong>:
@@ -67,7 +67,7 @@ Para nossa infelicidade, por enquanto o tipo number <strong>ainda não é compa
 <li><strong>Color</strong>: cria uma paleta de cores para o usuário escolher alguma;</li>
 <li><strong>Date</strong>: cria um calendário onde o usuário seleciona uma data especifica, muito útil;</li>
 </ul>
-<span style="line-height: 1.714285714; font-size: 1rem;">Entre muitos outros... Recomendo a leitura dos artigos sobre HTML5 na </span><a style="line-height: 1.714285714; font-size: 1rem;" title="w3schools, html5 form input types" href="http://www.w3schools.com/html/html5_form_input_types.asp" target="_blank">W3Schools</a><span style="line-height: 1.714285714; font-size: 1rem;">, mas atenção: <span style="color: #ff0000;">use o W3Schools com muito cuidado</span>! Vide: </span><a style="line-height: 1.714285714; font-size: 1rem;" href="http://w3fools.com/">http://w3fools.com/</a>
+<span style="line-height: 1.714285714; font-size: 1rem;">Entre muitos outros... Recomendo a leitura dos artigos sobre HTML5 na </span>[http://w3fools.com/](http://w3fools.com/)
 
 Sobre a questão de <strong>compatibilidade</strong> dos recursos do HTML5, procure sobre <strong>Modernizr</strong>, <strong>HTML5Shiv</strong> e <strong>Polyfills</strong>.
 

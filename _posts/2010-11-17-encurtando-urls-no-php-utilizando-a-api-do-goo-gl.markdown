@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Encurtando URLs no PHP utilizando a API do goo.gl
-excerpt: Aprenda a encurtar URLs pelo PHP utilizando a classe de API do <a href="http://goo.gl/">goo.gl</a>,
+excerpt: Aprenda a encurtar URLs pelo PHP utilizando a classe de API do [goo.gl](http://goo.gl/),
   o serviço de encurtamento de URLs do Google.
 
 date: '2010-11-17 01:37:09 -0200'
@@ -18,7 +18,7 @@ tags:
 ---
 Boa madrugada pra todos!
 
-Depois de algumas horas de insônia resolvi fazer uma classe que, creio eu, vai ser útil pra algumas pessoas por ai: uma classe para encurtar URLs utilizando a API do "novo" serviço de encurtamento do <strong>Google</strong>, o <a href="http://goo.gl/" target="_blank">goo.gl</a>.
+Depois de algumas horas de insônia resolvi fazer uma classe que, creio eu, vai ser útil pra algumas pessoas por ai: uma classe para encurtar URLs utilizando a API do "novo" serviço de encurtamento do <strong>Google</strong>, o [goo.gl](http://goo.gl/).
 <a id="more"></a><a id="more-991"></a>
 
 O código da classe é bem simples:
@@ -158,7 +158,7 @@ Essa classe bem simples possui dois métodos: um para fazer uma requisição HTT
 
 O retorno do método <code>Googl::shorten()</code> vai ser a URL encurtada ou um array de URLs encurtadas (caso você passe um array como parâmetro).
 
-Um ponto importante sobre essa classe é a utilização da função <a href="http://www.php.net/manual/en/function.filter-var.php">filter_var()</a> para verificar se uma URL é válida antes de tentar encurtar ela... Essa é uma função muito útil para verificar o conteúdo de variáveis.
+Um ponto importante sobre essa classe é a utilização da função [filter_var()](http://www.php.net/manual/en/function.filter-var.php) para verificar se uma URL é válida antes de tentar encurtar ela... Essa é uma função muito útil para verificar o conteúdo de variáveis.
 
 <h2>Como usar essa classe?</h2>
 Veja um exemplo:
@@ -206,7 +206,7 @@ googl('http://thiagobelem.net/');
 [/code]
 
 <h3>Download do código fonte</h3>
-Caso você tenha preguiça de copiar e colar, pode baixar o <a title="Código-fonte da classe Googl" href="/arquivos/googl.class.phps" target="_blank">arquivo com código fonte</a> dela e sair usando!
+Caso você tenha preguiça de copiar e colar, pode baixar o [arquivo com código fonte](/arquivos/googl.class.phps) dela e sair usando!
 
 Espero que tenham gostado! :)
 

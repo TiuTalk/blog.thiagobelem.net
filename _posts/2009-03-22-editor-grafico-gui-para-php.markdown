@@ -12,7 +12,7 @@ Não são apenas os designers que precisam de um programa bom (PS?) para trabalh
 
 Já usei vários editores gráficos (os famosos <acronym title="O acrônimo GUI, (do inglês Graphical User Interface) é um tipo de interface do utilizador que permite a interação com dispositivos digitais através de elementos gráficos como ícones e outros indicadores visuais, em contraste a interface de linha de comando.">GUIs</acronym>) e recentemente "descobri" um novo... Eu já conhecia ele mas nunca tinha usado para o PHP.
 
-<a href="http://netbeans.org/" target="_blank"><img class="alignright size-full wp-image-370" title="NetBeans" src="http://blog.thiagobelem.net/arquivos/2009/03/netbeans_logo_ok-300x150.jpg" alt="NetBeans" width="191" height="90" /></a>Estamos falando do <strong>NetBeans</strong>... O famoso editor Java que briga (feio) com o Eclipse (outro editor que também tem suporte a PHP).
+[](http://netbeans.org/)Estamos falando do <strong>NetBeans</strong>... O famoso editor Java que briga (feio) com o Eclipse (outro editor que também tem suporte a PHP).
 
 Ele é um editor feito em Java, portanto é <em>cross-plataform</em>, ou seja: roda em qualquer sistema operacional com suporte a Java (leia-se<strong> todos</strong>).
 
@@ -28,7 +28,7 @@ Outra boa vantagem dele é o <em>debug </em>em tempo real que te diz até se voc
 
 Não adianta eu ficar aqui falando, não sou um <em>formador de opiniões</em>, recomendo que vocês façam o download e testem.. é "de grátis" e não mata ninguém:
 
-<p style="text-align: left;"><a href="http://netbeans.org/" target="_blank">http://www.netbeans.org/</a>
+<p style="text-align: left;">[http://www.netbeans.org/](http://netbeans.org/)
 
 <p style="text-align: left;">Quem tiver uma sugestão de outro GUI bom é só falar. ;)
 

@@ -52,7 +52,7 @@ Bom, primeiro de tudo, vamos o script mais simples que você pode usar para pega
 [/code]
 Depois de executar esse script, o conteúdo da variável $resultado será exatamente o conteúdo do meu arquivo robots.txt. Você pode usar esse método para pegar o HTML resultado de qualquer site e etc.
 
-A função <strong>curl_setopt()</strong> permite que você defina uma série de opções MUITO úteis para o uso do cURL, recomendo que vocês vejam a <a href="http://br2.php.net/manual/pt_BR/function.curl-setopt.php" target="_blank">documentação</a> dela para dar uma olhada na lista completa.
+A função <strong>curl_setopt()</strong> permite que você defina uma série de opções MUITO úteis para o uso do cURL, recomendo que vocês vejam a [documentação](http://br2.php.net/manual/pt_BR/function.curl-setopt.php) dela para dar uma olhada na lista completa.
 
 <h3>Verificando se um site está no ar e acessível</h3>
 Com o script que vou mostrar agora você vai poder acessar qualquer endereço ou URL pública e descobrir se ele retorna erro 404 (página não encontrada) ou não, baseando-se no código HTTP de resposta:

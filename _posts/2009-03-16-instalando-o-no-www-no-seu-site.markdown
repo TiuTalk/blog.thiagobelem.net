@@ -31,7 +31,7 @@ Salve este arquivo com o nome de '.htaccess'... Isso mesmo, o arquivo não tem n
 
 Depois, faça upload desse arquivo para o seu site, na mesma pasta onde fica o <em>index</em> do seu site (chamado de <em>root </em>ou <strong>raiz </strong>do site).
 
-Tente acessar o seu site usando www na frente da URL como de costume, por exemplo: <a href="http://thiagobelem.net/" target="_blank">http://thiagobelem.net/</a> se o site se redirecionar automaticamente pra url sem o www você fez a instalação com sucesso.
+Tente acessar o seu site usando www na frente da URL como de costume, por exemplo: [http://thiagobelem.net/](http://thiagobelem.net/) se o site se redirecionar automaticamente pra url sem o www você fez a instalação com sucesso.
 
 Se algo der errado, aparecer alguma mensagem de erro de servidor, é só excluir o arquivo <strong>.htaccess</strong> de lá que tudo volta ao normal.
 

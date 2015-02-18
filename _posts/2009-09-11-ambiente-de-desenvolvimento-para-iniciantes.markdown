@@ -31,26 +31,26 @@ O ambiente do qual falarei é para <strong>Windows</strong> (preferencialmente X
 <li><strong>MySQL</strong> 5.1+</li>
 <li><strong>phpMyAdmin</strong> 3.2+</li>
 </ul>
-Esses são os componentes principais de um ambiente de desenvolvimento... Todos eles podem ser instalados facilmente com o <a href="http://www.apachefriends.org/en/xampp.html" target="_blank">XAMPP</a> (que tem versões tanto para Windows quanto para Linux).
+Esses são os componentes principais de um ambiente de desenvolvimento... Todos eles podem ser instalados facilmente com o [XAMPP](http://www.apachefriends.org/en/xampp.html) (que tem versões tanto para Windows quanto para Linux).
 
 <strong>Atenção:</strong> as versões ali em cima são as <strong>atuais</strong> e recomendadas HOJE... Amanhã pode vir coisa nova pela frente e isso mudar.
 
 Existem também outros programas que eu uso e facilitam (muito) a minha vida...
 
 <h3>MySQL Workbench</h3>
-O <a href="http://wb.mysql.com/" target="_blank">MySQL Workbench</a> (<em>free</em>) é um programa para planejamento e design de banco de dados, muito útil quando temos dificuldade de imaginar como ficaria aquele emaranhado de tabelas e relações do banco de dados de um site maiorzinho. Falei sobre ele <a href="/modelagem-de-banco-de-dados" target="_blank">nesse post</a>.
+O [nesse post](/modelagem-de-banco-de-dados).
 
 <h3>Eclipse Galileo</h3>
-Comecei a usar o <a href="http://www.eclipse.org/galileo/" target="_blank">Eclipse Galileo</a> (<em>free</em>) recentemente como IDE de desenvolvimento para PHP... Adorei! Ele é leve, altamente configurável e tem a capacidade de "ler" todos os arquivos do seu PHP e te ajudar a informar onde cada variável foi definida, ou quais são os argumentos daquela função que você criou a semanas atrás e nem lembra mais onde fica.
+Comecei a usar o [Eclipse Galileo](http://www.eclipse.org/galileo/) (<em>free</em>) recentemente como IDE de desenvolvimento para PHP... Adorei! Ele é leve, altamente configurável e tem a capacidade de "ler" todos os arquivos do seu PHP e te ajudar a informar onde cada variável foi definida, ou quais são os argumentos daquela função que você criou a semanas atrás e nem lembra mais onde fica.
 
 <h3>HeidiSQL</h3>
-O <a href="http://www.heidisql.com/" target="_blank">HeidiSQL</a> (<em>free</em>) é um "<em>MySQL front-end</em>", seria como um phpMyAdmin via programa (executável) para Windows e Linux... Geralmente uso ele para me conectar a banco de dados remotos que não possuam o phpMyAdmin no servidor.
+O [HeidiSQL](http://www.heidisql.com/) (<em>free</em>) é um "<em>MySQL front-end</em>", seria como um phpMyAdmin via programa (executável) para Windows e Linux... Geralmente uso ele para me conectar a banco de dados remotos que não possuam o phpMyAdmin no servidor.
 
 <h3>Visual SVN Server</h3>
-Também uso muito o <a href="http://www.visualsvn.com/" target="_blank">Visual SVN Server</a> (<em>free</em>) que é um servidor <a href="http://pt.wikipedia.org/wiki/Svn" target="_blank">SVN</a> para ser instalado no seu computador (e acessado remotamente) para um controle de versão de arquivos e projetos... Ótimo para quando se trabalha em equipe ou se usa mais de um computador pra desenvolver o mesmo projeto.
+Também uso muito o [SVN](http://pt.wikipedia.org/wiki/Svn) para ser instalado no seu computador (e acessado remotamente) para um controle de versão de arquivos e projetos... Ótimo para quando se trabalha em equipe ou se usa mais de um computador pra desenvolver o mesmo projeto.
 
 <h3>Tortoise SVN</h3>
-Mesmo o Visual SVN tendo a opção de instalação de um <em>SVN Client</em> eu recomendo o uso do <a href="http://tortoisesvn.tigris.org/" target="_blank">Tortoise SVN</a> (<em>free</em>) para se conectar, receber e enviar arquivos do seu servidor SVN. O Tortoise é o <em>SVN Client</em> mais usado do mundo. Ele se integra perfeitamente ao <em>shell</em> do Windows (menu que aparece quando se usa o botão direito nas pastas/arquivos).
+Mesmo o Visual SVN tendo a opção de instalação de um <em>SVN Client</em> eu recomendo o uso do [Tortoise SVN](http://tortoisesvn.tigris.org/) (<em>free</em>) para se conectar, receber e enviar arquivos do seu servidor SVN. O Tortoise é o <em>SVN Client</em> mais usado do mundo. Ele se integra perfeitamente ao <em>shell</em> do Windows (menu que aparece quando se usa o botão direito nas pastas/arquivos).
 
 --
 

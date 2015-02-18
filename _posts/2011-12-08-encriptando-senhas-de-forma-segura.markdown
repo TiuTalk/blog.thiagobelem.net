@@ -20,7 +20,7 @@ Fala pessoal, tudo bom?
 
 Volta e meia gosto de vir aqui falar um pouquinho sobre "Segurança" e uma das coisas que acho mais interessante - nessa área - e a encriptação de senhas.
 
-Hoje li <a href="http://net.tutsplus.com/tutorials/php/understanding-hash-functions-and-keeping-passwords-safe/" title="Understanding Hash Functions and Keeping Passwords Safe" target="_blank">um artigo muito bom</a> (bem antigo por sinal) no NetTuts+ e achei legal trazer algumas informações pra cá, de forma bem resumida e direta, porém recomendo muito a leitura do artigo original.
+Hoje li [um artigo muito bom](http://net.tutsplus.com/tutorials/php/understanding-hash-functions-and-keeping-passwords-safe/) (bem antigo por sinal) no NetTuts+ e achei legal trazer algumas informações pra cá, de forma bem resumida e direta, porém recomendo muito a leitura do artigo original.
 
 <h3>Hashing</h3>
 <blockquote><em>Hashing</em> consiste em proteger dados (strings, números), convertendo-os em um novo dado, geralmente menor e em formato de string ou inteiro.
@@ -33,7 +33,7 @@ Estamos acostumados a usar hashes como <strong>MD5</strong> e <strong>SHA1</stro
 <div data-gist-id="1447464" data-gist-show-loading="false"></div>
 No caso do MD5, resultado final é sempre uma string de 32 caracteres alfa-numéricos (128 bits).
 
-Você pode usar o MD5 e pensar que está seguro, mas existe uma coisa chamada <a href="http://pt.wikipedia.org/wiki/Rainbow_table" target="_blank">Rainbow Tables</a>, onde um atacante gera uma tabela com o resultado da encriptação de todas as palavras de um dicionário, combinando palavras e até adicionando símbolos e dígitos à essas palavras.... Com essa Rainbow Table fica muito fácil (partindo do resultado final da encriptação) descobrir a senha original (olá mundo).
+Você pode usar o MD5 e pensar que está seguro, mas existe uma coisa chamada [Rainbow Tables](http://pt.wikipedia.org/wiki/Rainbow_table), onde um atacante gera uma tabela com o resultado da encriptação de todas as palavras de um dicionário, combinando palavras e até adicionando símbolos e dígitos à essas palavras.... Com essa Rainbow Table fica muito fácil (partindo do resultado final da encriptação) descobrir a senha original (olá mundo).
 
 <h3>A solução simples: salts</h3>
 A solução mais simples é utilizar um "salt" que é uma string complexa que será concatenada a toda e qualquer senha antes de encriptá-la, por exemplo:
@@ -68,7 +68,7 @@ Precisamos então trocar de algoritmo ou atrasar o nosso script...
 Agora qualquer ataque de força-bruta irá demorar 1000x mais para conseguir chegar até sua senha original, o que é excelente!
 
 <h3>Finalizando...</h3>
-O <a href="http://net.tutsplus.com/tutorials/php/understanding-hash-functions-and-keeping-passwords-safe/" title="Understanding Hash Functions and Keeping Passwords Safe" target="_blank">artigo original</a> não termina por aqui, ele sugere a utilização de um algoritmo chamado BLOWFISH que recebe um parâmetro onde você determina o "custo", que está ligado à demora/ciclos de encriptação... quanto maior, mais demorado.
+O [artigo original](http://net.tutsplus.com/tutorials/php/understanding-hash-functions-and-keeping-passwords-safe/) não termina por aqui, ele sugere a utilização de um algoritmo chamado BLOWFISH que recebe um parâmetro onde você determina o "custo", que está ligado à demora/ciclos de encriptação... quanto maior, mais demorado.
 
 Espero que tenham entendido a idéia geral e tenham gostado! :)
 

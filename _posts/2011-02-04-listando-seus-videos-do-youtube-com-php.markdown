@@ -24,12 +24,12 @@ Hoje trago até vocês um tutorial bem simples: como listar seus últimos vídeo
 Vamos precisar de um servidor com as seguintes extensões habilitadas:
 
 <ul>
-<li><a href="http://php.net/manual/book.curl.php">cURL</a></li>
-<li><a href="http://php.net/manual/book.simplexml.php">SimpleXML</a></li>
+<li>[cURL](http://php.net/manual/book.curl.php)</li>
+<li>[SimpleXML](http://php.net/manual/book.simplexml.php)</li>
 </ul>
 O <strong>SimpleXML</strong> já vem habilitado no PHP, mas o <strong>cURL</strong> normalmente não.. Se você contratou uma hospedagem compartilhada provavelmente ambos já estão habilitados.
 
-Pra quem não conhece o <strong>cURL</strong> (ou precisa habilitá-lo), recomendo a leitura: <a href="/tutorial-basico-de-curl-instalacao-configuracao-e-uso">Tutorial básico de cURL – Instalação, configuração e uso</a>
+Pra quem não conhece o <strong>cURL</strong> (ou precisa habilitá-lo), recomendo a leitura: [Tutorial básico de cURL – Instalação, configuração e uso](/tutorial-basico-de-curl-instalacao-configuracao-e-uso)
 
 Se você receber a seguinte mensagem de erro, significa que seu cURL não está habilitado:
 
@@ -88,13 +88,13 @@ Ao final desse código teremos o array <code>$videos</code> com a lista de víde
 <ul>
 	<?php foreach ($videos AS $video) { ?>
 	<li>
-		<a href="<?php echo $video['url'] ?>" title="<?php echo $video['titulo'] ?>"><img src="<?php echo $video['thumbnail'] ?>" alt="<?php echo $video['titulo'] ?>" width="150" /></a>
+		[](<?php echo $video['url'] ?>)
 	</li>
 	<?php } ?>
 </ul>
 [/code]
 
-Código-fonte do arquivo desse tutorial: <a href="http://snipplr.com/view/48433/listando-seus-vdeos-do-youtube-com-php/">Snipplr</a>
+Código-fonte do arquivo desse tutorial: [Snipplr](http://snipplr.com/view/48433/listando-seus-vdeos-do-youtube-com-php/)
 
 Espero que tenham gostado!
 

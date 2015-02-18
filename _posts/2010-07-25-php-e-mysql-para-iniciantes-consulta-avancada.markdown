@@ -72,7 +72,7 @@ $sql = "SELECT
 
 O interessante dessa consulta é que ela busca os registros da tabela <code>noticia</code> que possuam um relacionamento com os registros da tabela <code>categorias</code> e, o registro correspondente na tabela <code>categorias</code> deve possuir o valor da variável <code>$categoria</code> no campo <code>nome</code>.
 
-Para quem não entendeu a explicação acima, vale a pena a leitura do meu artigo <a title="Relacionamento de Tabelas no MySQL" href="/relacionamento-de-tabelas-no-mysql">Relacionamento de Tabelas no MySQL</a>.
+Para quem não entendeu a explicação acima, vale a pena a leitura do meu artigo [Relacionamento de Tabelas no MySQL](/relacionamento-de-tabelas-no-mysql).
 
 Continuando o script, rodamos a consulta e exibimos o resultado:
 
@@ -89,7 +89,7 @@ while ($noticia = $resultado->fetch_object()) {
 	<h2><?php echo $noticia->categoria; ?> - <?php echo $noticia->titulo; ?></h2>
 	<?php echo $noticia->descricao; ?>
 
-	<a href="noticia.php?id=<?php echo $noticia->id; ?>" title="Continue lendo essa notícia">Leia mais &raquo;</a>
+	[Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
 
 
 	<?php
@@ -110,7 +110,7 @@ $resultado->free();
 
 E vocês acabaram de ver um exemplo de consulta complexa usando MySQLi! :)
 
-Faça o download dos arquivos desse tutorial aqui: <a href="/arquivos/2010/07/PHP-e-MySQL-Consulta-Avançada.zip">PHP-e-MySQL-Consulta-Avançada.zip</a>
+Faça o download dos arquivos desse tutorial aqui: [PHP-e-MySQL-Consulta-Avançada.zip](/arquivos/2010/07/PHP-e-MySQL-Consulta-Avançada.zip)
 
 Abraços e até a próxima!
 

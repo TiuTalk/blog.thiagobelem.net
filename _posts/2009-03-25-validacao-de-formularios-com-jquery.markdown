@@ -16,12 +16,12 @@ Ohay!  :-D
 Hoje vou demonstrar como vocês podem criar uma validação de campos (inputs) usando <strong>jQuery </strong>(JavaScript) e um plugin dele. Vamos verificar, por exemplo, se todos os campos foram preenchidos ou não.. ou se os seus valores estão ok.
 
 Veja um exemplo do que será aprendido nessa aula:
-<a href="/exemplo2" target="_blank">http://blog.thiagobelem.net/exemplo2/</a>
+[http://blog.thiagobelem.net/exemplo2/](/exemplo2)
 
 Usarei como exemplo um formulário de contato que é o mais comum por ai... Vamos ao passo-a-passo:
 
 Faça o download da última versão do <strong>jQuery </strong>no site: <a href="http://jquery.com/" target="_blank">http://jquery.com/
-</a>Faça o download do plugin <strong>Validation </strong>no site: <a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" target="_blank">http://bassistance.de/jquery-plugins/jquery-plugin-validation/</a>
+</a>Faça o download do plugin <strong>Validation </strong>no site: [http://bassistance.de/jquery-plugins/jquery-plugin-validation/](http://bassistance.de/jquery-plugins/jquery-plugin-validation/)
 
 Insira-os dentro do <head> do seu site, da seguinte forma:
 
@@ -103,17 +103,17 @@ Por fim, inserimos o HTML do formulário na pagina:
 </form>
 [/code]
 
-Viram como é fácil? O arquivo final ficou <a href="/exemplo2" target="_blank">desta</a> forma. Se você preferir pode copiar todo esse código JavaScript para um arquivo .js e incluí-lo no <head> do seu site da mesma forma que fizemos no começo da aula.
+Viram como é fácil? O arquivo final ficou [desta](/exemplo2) forma. Se você preferir pode copiar todo esse código JavaScript para um arquivo .js e incluí-lo no <head> do seu site da mesma forma que fizemos no começo da aula.
 
 Coloquei alguns comentários na parte das instruções de validação para facilitar o entendimento.
 
 Com isso você faz uma validação <em>client-side</em> que ajuda a evitar dados inválidos e campos vazios. Mas preciso lembrar que, por ser <em>client-side</em>, essa validação acontece apenas no computador do visitante e o mesmo pode desativar o JavaScript e a validação toda não irá funcionar. Então não se esqueça de fazer a mesma validação dentro do PHP quando receber os dados.
 
 Veja o exemplo desta aula funcionando:
-<a href="/exemplo2" target="_blank">http://blog.thiagobelem.net/exemplo2/</a>
+[http://blog.thiagobelem.net/exemplo2/](/exemplo2)
 
 Mais exemplos de validações diferentes podem ser encontrados no site do plugin:
-<a href="http://jquery.bassistance.de/validate/demo/" target="_blank">http://jquery.bassistance.de/validate/demo/</a>
+[http://jquery.bassistance.de/validate/demo/](http://jquery.bassistance.de/validate/demo/)
 
 Abraços e até a próxima! :)
 

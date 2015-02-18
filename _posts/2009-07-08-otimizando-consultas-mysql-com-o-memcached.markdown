@@ -22,7 +22,7 @@ Hoje falarei sobre o <strong>Memcached</strong>, um recurso indispensável para 
 <h3>Quando usar o Memcache?</h3>
 Suponhamos que você tenha um site que faz várias e várias consultas ao MySQL para exibir uma página e, algumas delas, demoram mais de 1 seguro para ser executada... Isso significa que o seu site não está otimizado e, obviamente, está mais lento do que poderia ser.
 
-A maioria dos servidores - de qualidade - hoje em dia, já vêm com ele instalado... Caso você precise instalar ele no seu, recomendo dar uma olhada no <a href="http://www.danga.com/memcached/" target="_blank">site oficial</a> para maiores detalhes.
+A maioria dos servidores - de qualidade - hoje em dia, já vêm com ele instalado... Caso você precise instalar ele no seu, recomendo dar uma olhada no [site oficial](http://www.danga.com/memcached/) para maiores detalhes.
 
 Vou mostrar pra vocês como armazenar uma consulta na memória e depois pegar esses dados, sem precisar executar a <em>query</em> novamente... Vale lembrar que só vale a pena usar o Memcached para consultas que pesam no seu sistema, pois foi pra esse propósito que ele foi feito.
 

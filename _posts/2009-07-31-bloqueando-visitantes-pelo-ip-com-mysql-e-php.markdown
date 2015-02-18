@@ -17,7 +17,7 @@ tags:
 - MySQL
 - IP
 ---
-Essa semana vou falar um pouquinho sobre cada técnica de segurança que falei no "<a href="/criando-sistemas-seguros-parte-1" target="blank">Criando Sistemas Seguros - Parte 1</a>" e hoje é a vez do "<strong>Banindo IPs por um bem maior</strong>"... Vamos lá:
+Essa semana vou falar um pouquinho sobre cada técnica de segurança que falei no "[Criando Sistemas Seguros - Parte 1](/criando-sistemas-seguros-parte-1)" e hoje é a vez do "<strong>Banindo IPs por um bem maior</strong>"... Vamos lá:
 
 Banir um visitante de vez, baseando-se no IP dele é, sem dúvida, uma das formas mais simples e eficazes (a curto prazo) de evitar que alguém fique brincando com o seu sistema... Claro que o visitante pode mudar o seu IP sem muito esforço, mas em 99% dos casos isso exigiria pelo menos 1 ou 2 minutos dele... E dependendo da rede e dos conhecimentos dele isso pode não ser possível...
 

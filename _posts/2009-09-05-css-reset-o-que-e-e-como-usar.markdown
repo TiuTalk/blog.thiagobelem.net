@@ -31,7 +31,7 @@ Se você inserir em um site pronto você pode ver seu site se desfigurar todo, i
 <h3>E como é esse arquivo?</h3>
 Existem vários <strong>CSS Reset</strong> rolando pela Internet... Todos funcionam da mesma forma mas alguns atingem mais elementos que outros... Mas teoricamente não há diferença.
 
-Esse aqui é o que eu uso no meu <a href="http://thiagobelem.net/" target="_blank">site pessoal</a>:
+Esse aqui é o que eu uso no meu [site pessoal](http://thiagobelem.net/):
 
 
 [code language="css"]
@@ -85,7 +85,7 @@ table {
 [/code]
 
 Se você preferir, existe um CSS da Yahoo mesmo, chamado de YUI CSS Reset:
-<a href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css" target="_blank">http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css</a>
+[http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css](http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css)
 
 
 [code language="css"]
@@ -128,7 +128,7 @@ abbr,acronym {
 }
 [/code]
 
-E existe um <strong>CSS Reset Reloaded</strong> criado por <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/" target="_blank">Eric Meyer</a>:
+E existe um <strong>CSS Reset Reloaded</strong> criado por [Eric Meyer](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/):
 [code language="css"]
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

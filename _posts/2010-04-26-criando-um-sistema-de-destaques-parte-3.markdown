@@ -129,7 +129,7 @@ while ($registro = mysql_fetch_object($query)) {
 }
 [/code]
 
-Pronto... Nosso arquivo está pronto! Veja <a href="/exemplos/destaque/mysql_destaques.phps">aqui</a> como ele ficou.
+Pronto... Nosso arquivo está pronto! Veja [aqui](/exemplos/destaque/mysql_destaques.phps) como ele ficou.
 
 Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está assim:
 
@@ -138,7 +138,7 @@ Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está ass
 <!-- destaques -->
 <div id="blocoDestaques">
 
-	<a class="faixa" href="#" title=""><!-- --></a>
+	[](#)
 
 	<ul>
 		<li>
@@ -146,7 +146,7 @@ Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está ass
 				<img src="img/destaque1.jpg" alt="Destaque 1" />
 			</a>
 			<div class="fundo"><!--  --></div>
-			<a href="#" title="Destaque 1">Destaque 1 - Muita coisa boa!</a>
+			[Destaque 1 - Muita coisa boa!](#)
 
 		</li>
 
@@ -155,7 +155,7 @@ Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está ass
 				<img src="img/destaque2.jpg" alt="Destaque 2" />
 			</a>
 			<div class="fundo"><!--  --></div>
-			<a href="#" title="Destaque 2">Destaque 2 - Nem tão bom assim...</a>
+			[Destaque 2 - Nem tão bom assim...](#)
 
 		</li>
 
@@ -164,7 +164,7 @@ Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está ass
 				<img src="img/destaque3.jpg" alt="Destaque 3" />
 			</a>
 			<div class="fundo"><!--  --></div>
-			<a href="#" title="Destaque 3">Destaque 3 - Agora sim... bem melhor!</a>
+			[Destaque 3 - Agora sim... bem melhor!](#)
 
 		</li>
 	</ul>
@@ -180,7 +180,7 @@ Vamos fazer algumas modificações no nosso HTML... Vamos começar incluindo o a
 <?php require_once('mysql_destaques.php'); ?>
 <div id="blocoDestaques">
 
-	<a class="faixa" href="#" title=""><!-- --></a>
+	[](#)
 
 	<ul>
 		<li>
@@ -188,7 +188,7 @@ Vamos fazer algumas modificações no nosso HTML... Vamos começar incluindo o a
 				<img src="img/destaque1.jpg" alt="Destaque 1" />
 			</a>
 			<div class="fundo"><!--  --></div>
-			<a href="#" title="Destaque 1">Destaque 1 - Muita coisa boa!</a>
+			[Destaque 1 - Muita coisa boa!](#)
 
 		</li>
 	</ul>
@@ -204,7 +204,7 @@ Agora é só criar um loop utilizando o <code>foreach()</code> para gerar um LI 
 <?php require_once('mysql_destaques.php'); ?>
 <div id="blocoDestaques">
 
-	<a class="faixa" href="#" title=""><!-- --></a>
+	[](#)
 
 	<ul>
 		<?php foreach ($lista_destaques AS $destaque) { ?>
@@ -213,7 +213,7 @@ Agora é só criar um loop utilizando o <code>foreach()</code> para gerar um LI 
 				<img src="<?php echo $destaque->imagem; ?>" alt="<?php echo $destaque->titulo; ?>" />
 			</a>
 			<div class="fundo"><!--  --></div>
-			<a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>"><?php echo $destaque->titulo; ?></a>
+			[](<?php echo $destaque->link; ?>)
 
 		</li>
 		<?php } ?>
@@ -231,7 +231,7 @@ Podemos ainda adicionar uma condição ao redor da div#blocoDestaques para ter c
 <?php if (isset($lista_destaques) AND !empty($lista_destaques)) { ?>
 <div id="blocoDestaques">
 
-	<a class="faixa" href="#" title=""><!-- --></a>
+	[](#)
 
 	<ul>
 		<?php foreach ($lista_destaques AS $destaque) { ?>
@@ -240,7 +240,7 @@ Podemos ainda adicionar uma condição ao redor da div#blocoDestaques para ter c
 				<img src="<?php echo $destaque->imagem; ?>" alt="<?php echo $destaque->titulo; ?>" />
 			</a>
 			<div class="fundo"><!--  --></div>
-			<a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>"><?php echo $destaque->titulo; ?></a>
+			[](<?php echo $destaque->link; ?>)
 
 		</li>
 		<?php } ?>

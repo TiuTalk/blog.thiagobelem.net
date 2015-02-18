@@ -235,15 +235,15 @@ Quando vocês quiserem exibir o nome do usuário logado, é só fazer isso:
 echo "Olá, " . $_SESSION['usuarioNome'];
 [/code]
 
-Veja mais sobre escrever e pegar valores da sessão (coisa que acontece muito nesse sistema de login) no tópico <a href="/aprendendo-a-usar-sessoes-no-php" target="_blank">Aprendendo a usar sessões no PHP</a>.
+Veja mais sobre escrever e pegar valores da sessão (coisa que acontece muito nesse sistema de login) no tópico [Aprendendo a usar sessões no PHP](/aprendendo-a-usar-sessoes-no-php).
 
 Viram como é fácil?
 
-Pra quem quiser um tutorial mais explicado e detalhado recomendo: <a href="/como-criar-um-sistema-de-login-com-niveis-de-permissao" target="_blank">Como criar um Sistema de Login com Níveis de Permissão</a> (passo-a-passo).
+Pra quem quiser um tutorial mais explicado e detalhado recomendo: [Como criar um Sistema de Login com Níveis de Permissão](/como-criar-um-sistema-de-login-com-niveis-de-permissao) (passo-a-passo).
 
-<blockquote><strong>Nota:</strong> Alguns de vocês devem ter notado que durante essa semana, no post <a href="/criando-sistemas-seguros-parte-1" target="_blank">Criando Sistemas Seguros</a>, falei sobre <strong>não usar</strong> nomes óbvios para tabelas de usuários. Mas esse exemplo é apenas explicativo, você pode mudar o nome da tabela de usuários se preferir e depois é só alterar a variável no bloco de configurações dentro do <span style="color: #ff0000;">seguranca.php</span>.
+<blockquote><strong>Nota:</strong> Alguns de vocês devem ter notado que durante essa semana, no post [Criando Sistemas Seguros](/criando-sistemas-seguros-parte-1), falei sobre <strong>não usar</strong> nomes óbvios para tabelas de usuários. Mas esse exemplo é apenas explicativo, você pode mudar o nome da tabela de usuários se preferir e depois é só alterar a variável no bloco de configurações dentro do <span style="color: #ff0000;">seguranca.php</span>.
 </blockquote>
 --
 
-Veja <a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" title="Criando um sistema de logins com classe no PHP" target="_blank">aqui</a> como criar um <strong>sistema de login usando classes</strong> (Orientação a Objetos) e que funciona no PHP 4 e PHP 5.
+Veja [aqui](/criando-um-sistema-de-logins-com-classe-no-php-parte-1) como criar um <strong>sistema de login usando classes</strong> (Orientação a Objetos) e que funciona no PHP 4 e PHP 5.
 

@@ -93,7 +93,7 @@ E aí.. gostaram? Comentem!
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br.php.net/mkdir" target="_blank">mkdir()</a></strong> » Cria uma pasta</li>
-<li><strong>Função <a href="http://br.php.net/rmdir" target="_blank">rmdir()</a></strong> » Deleta uma pasta</li>
-<li><strong>Função <a href="http://br.php.net/rename" target="_blank">rename()</a></strong> » Renomeia uma pasta ou arquivo</li>
+<li><strong>Função [mkdir()](http://br.php.net/mkdir)</strong> » Cria uma pasta</li>
+<li><strong>Função [rmdir()](http://br.php.net/rmdir)</strong> » Deleta uma pasta</li>
+<li><strong>Função [rename()](http://br.php.net/rename)</strong> » Renomeia uma pasta ou arquivo</li>
 </ul>

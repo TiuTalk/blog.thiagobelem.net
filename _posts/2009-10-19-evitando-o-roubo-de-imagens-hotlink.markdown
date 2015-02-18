@@ -57,5 +57,5 @@ Viram que simples?
 
 Abraços e um ótimo início de semana!
 
-<p style="font-size: 10px; text-align: right">Agradecimentos ao <a target="_blank" rel="nofollow" href="http://altlab.com/htaccess_tutorial.html">altlab.com</a>.
+<p style="font-size: 10px; text-align: right">Agradecimentos ao [altlab.com](http://altlab.com/htaccess_tutorial.html).
 

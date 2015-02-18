@@ -124,7 +124,7 @@ foreach ($gs->resultadoSites() as $item) {
 	echo "<h3>" . $item['title'] . "</h3>";
 	echo "" . $item['content'] . "
 ";
-	echo '<a href="' . $item['unescapedUrl'] . '">' . $item['visibleUrl'] . "</a>";
+	echo '[' . $item['visibleUrl'] . "](' . $item['unescapedUrl'] . ')";
 }
 
 echo "<hr />";
@@ -135,7 +135,7 @@ if (($pagina - 5) > 1) echo '...&nbsp;';
 
 for ($n = 1; $n <= ceil($total / 8); $n++) {
 	if (($n < ($pagina - 5)) OR ($n > ($pagina + 5))) continue;
-	echo '<a href="?q='.$keywords.'&p='.$n.'">'.$n.'</a>&nbsp;';
+	echo '['.$n.'](?q='.$keywords.'&p='.$n.')&nbsp;';
 }
 
 if (($pagina + 5) < $total) echo '...';

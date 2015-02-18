@@ -61,7 +61,7 @@ Obrigue o usuário a usar senhas com tamanho mínimo de 12 a 16 caracteres... A 
 As senhas devem ser um misto de letras minúsculas e maiúsculas, com no mínimo três números e/ou caracteres especiais... Essa regra também vale para as senhas dos administradores do sistema e não apenas os usuários.
 
 <h3>Armazenando senhas no banco de dados</h3>
-<strong>Nunca</strong> salve uma senha no banco de dados sem encripta-la antes... Veja mais sobre criptografia neste artigo: <a href="/criptografia-no-php-usando-md5-sha1-e-base64" target="_blank">Criptografia no PHP usando md5, sha1 e base64</a>. Se você salvar as senhas como texto plano e alguém conseguir invadir o seu banco de dados terá acesso a TODAS as contas... E acredite, você não quer que isso aconteça.
+<strong>Nunca</strong> salve uma senha no banco de dados sem encripta-la antes... Veja mais sobre criptografia neste artigo: [Criptografia no PHP usando md5, sha1 e base64](/criptografia-no-php-usando-md5-sha1-e-base64). Se você salvar as senhas como texto plano e alguém conseguir invadir o seu banco de dados terá acesso a TODAS as contas... E acredite, você não quer que isso aconteça.
 
 <h3>Mudança de senhas</h3>
 Peça que (ou obrigue) o usuário a mudar sua senha a cada trinta dias... Mesmo que a senha seja extremamente forte e segura, ele pode tê-la anotado em algum papel e outra pessoa pode descobrir.
@@ -84,9 +84,9 @@ A segurança do sistema depende só de você, desenvolvedor... Tempo e dinheiro 
 Abraços :D
 
 Pra quem tiver endeço, ficam alguns links de medidores de força de senha:
-» <a href="http://www.passwordmeter.com/" target="_blank">http://www.passwordmeter.com/</a>
-» <a href="http://passwordstrength.net/" target="_blank">http://passwordstrength.net/</a>
-» <a href="https://www.microsoft.com/protect/fraud/passwords/checker.aspx?WT.mc_id=Site_Link" target="_blank">http://www.microsoft.com/protect/yourself/password/checker.mspx</a>
+» [http://www.passwordmeter.com/](http://www.passwordmeter.com/)
+» [http://passwordstrength.net/](http://passwordstrength.net/)
+» [http://www.microsoft.com/protect/yourself/password/checker.mspx](https://www.microsoft.com/protect/fraud/passwords/checker.aspx?WT.mc_id=Site_Link)
 
 --
 

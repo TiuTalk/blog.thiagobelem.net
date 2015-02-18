@@ -20,7 +20,7 @@ tags:
 - development
 - wp
 ---
-Opa opa! Estou de volta, e dessa vez vou fazer algo que meu amigo <a href="http://thiagogonzalez.com/" target="_blank">Thiago Gonzalez</a> já está pedindo a bastante tempo: <strong>mostrar o passo-a-passo da criação de um tema de WordPress</strong>.
+Opa opa! Estou de volta, e dessa vez vou fazer algo que meu amigo [Thiago Gonzalez](http://thiagogonzalez.com/) já está pedindo a bastante tempo: <strong>mostrar o passo-a-passo da criação de um tema de WordPress</strong>.
 
 Como eu não gosto de reinventar a roda nem de fazer coisas muito genéricas, vou documentar um caso de uso do mundo real: a reformulação do tema do meu blog, este que você está lendo agora.
 
@@ -28,9 +28,9 @@ Irei mostrar pra vocês o passo-a-passo de todo o processo: Desde a criação da
 
 Se tudo der certo, o último post da série vai ao ar junto com o lançamento do novo layout do blog. :)
 
-Quem quiser acompanhar o projeto está no GitHub: <a href="https://github.com/TiuTalk/blog.thiagobelem.net" target="_blank">https://github.com/TiuTalk/blog.thiagobelem.net</a>
+Quem quiser acompanhar o projeto está no GitHub: [https://github.com/TiuTalk/blog.thiagobelem.net](https://github.com/TiuTalk/blog.thiagobelem.net)
 
-Recomendo à todos uma leitura por alto do artigo <a href="http://codex.wordpress.org/Theme_Development" target="_blank">Theme Development</a> no Codex... É de lá que eu tiro a maior parte das dúvidas sobre o processo de criação de temas.
+Recomendo à todos uma leitura por alto do artigo [Theme Development](http://codex.wordpress.org/Theme_Development) no Codex... É de lá que eu tiro a maior parte das dúvidas sobre o processo de criação de temas.
 
 <h3>Passo 1 - Estrutura inicial do tema</h3>
 Iremos criar um tema totalmente do zero, sem herdar ou usar códigos de outros temas.
@@ -51,7 +51,7 @@ Com isso o tema já aparece na nossa lista de temas dentro do Painel de Controle
 
 Nosso tema já pode ser habilitado, e quando você acessar o blog já estará vendo o conteúdo do arquivo <code>index.php</code> que você criou antes: uma tela em branco! :)
 
-No <a href="/criando-um-tema-para-wordpress-parte-2">próximo artigo</a> vamos começar a criar o HTML da página inicial..
+No [próximo artigo](/criando-um-tema-para-wordpress-parte-2) vamos começar a criar o HTML da página inicial..
 
 Até a próxima!
 

@@ -33,5 +33,5 @@ Seria muito mais honesto e <strong>decente </strong>responder que <span style="c
 
 Lembre-se: você é um programador, não um mágico ou vidente.
 
-<p style="text-align: right;"><span style="color: #c0c0c0;"><span style="font-size: x-small;">Baseado no <a rel="nofollow" href="http://www.linhadecodigo.com.br/Artigo.aspx?id=2332" target="_blank">artigo do Joselito Nascimento</a></span></span>
+<p style="text-align: right;"><span style="color: #c0c0c0;"><span style="font-size: x-small;">Baseado no [artigo do Joselito Nascimento](http://www.linhadecodigo.com.br/Artigo.aspx?id=2332)</span></span>
 

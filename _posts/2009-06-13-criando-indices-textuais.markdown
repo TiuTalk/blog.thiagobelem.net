@@ -18,7 +18,7 @@ Sabe quando estamos vendo um vídeo no YouTube e olhamos o ID do vídeo no link 
 
 Esse tipo de índice é muito mais amigável, pois quando temos muitos registros no banco de dados fica "feio" mostrar <strong>18713543</strong> na URL.
 
-Existe uma função pronta <span style="color: #808080;">(que encontrei <a rel="nofollow" href="http://kevin.vanzonneveld.net/techblog/article/create_short_ids_with_php_like_youtube_or_tinyurl/" target="_blank">aqui</a>, criada pelo Kevin Zonneveld)</span> e que usa técnicas de encriptação para fazer o trabalho de converter números em letras e vice-e-versa.
+Existe uma função pronta <span style="color: #808080;">(que encontrei [aqui](http://kevin.vanzonneveld.net/techblog/article/create_short_ids_with_php_like_youtube_or_tinyurl/), criada pelo Kevin Zonneveld)</span> e que usa técnicas de encriptação para fazer o trabalho de converter números em letras e vice-e-versa.
 
 <h3>Código da função</h3>
 Vamos ao código da função e depois eu explico como usá-la:
@@ -92,7 +92,7 @@ return $out;
 ?>
 [/code]
 
-Se você quiser, pode fazer o <a title="Download do arquivo" href="/arquivos/2009/06/idtextual.txt" target="_blank">download do arquivo (.txt) com a função</a> (com a indentação correta).
+Se você quiser, pode fazer o [download do arquivo (.txt) com a função](/arquivos/2009/06/idtextual.txt) (com a indentação correta).
 
 <h3>Usando a função</h3>
 Para usar a função é bem simples, veja a conversão de número em texto:
@@ -121,5 +121,5 @@ Essa função é bem legal pois além de deixar o sistema mais <strong>seguro</s
 
 Espero que tenham gostado!
 
-Não se esqueçam de assinar o <a title="RSS do Blog" href="http://feeds2.feedburner.com/ThiagoBelem/Blog" target="_blank">RSS do Blog</a> e/ou me seguirem no <a title="TiuTalk Twitter" href="http://twitter.com/tiutalk" target="_blank">Twitter</a> para ter acesso à todas as novidades em tempo real.
+Não se esqueçam de assinar o [Twitter](http://twitter.com/tiutalk) para ter acesso à todas as novidades em tempo real.
 

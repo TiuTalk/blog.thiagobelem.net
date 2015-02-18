@@ -16,7 +16,7 @@ tags:
 ---
 Fala pessoal!
 
-Como estou sem muito tempo para escrever coisas aqui para o blog, passarei para vocês algumas dicas rápidas sobre Apache de um livro que tenho aqui em casa: <a title="Apache Cookbook, O'Reilly" href="http://oreilly.com/catalog/9780596001919">Apache Cookbook</a> do O'Reilly.
+Como estou sem muito tempo para escrever coisas aqui para o blog, passarei para vocês algumas dicas rápidas sobre Apache de um livro que tenho aqui em casa: [Apache Cookbook](http://oreilly.com/catalog/9780596001919) do O'Reilly.
 
 <h3>O Problema</h3>
 Você deseja se certificar de que os arquivos fora do seu diretório WEB não sejam acessíveis através do site.
@@ -68,8 +68,8 @@ A segunda parte (raíz do servidor) é opcional... As chances de já existir um 
 
 <h3>Saiba mais (documentação)</h3>
 <ul>
-<li><a title="Apache - mod_access" href="http://httpd.apache.org/docs/mod/mod_access.html">http://httpd.apache.org/docs/mod/mod_access.html</a></li>
-<li><a title="Apache - Configuração" href="http://httpd.apache.org/docs/2.2/pt-br/configuring.html">http://httpd.apache.org/docs/2.2/pt-br/configuring.html</a></li>
+<li>[http://httpd.apache.org/docs/mod/mod_access.html](http://httpd.apache.org/docs/mod/mod_access.html)</li>
+<li>[http://httpd.apache.org/docs/2.2/pt-br/configuring.html](http://httpd.apache.org/docs/2.2/pt-br/configuring.html)</li>
 </ul>
 Se existir algum assunto relacionado a configuração do Apache que você tem dúvida, deixe seu comentário e tentarei falar sobre nos próximos artigos.
 

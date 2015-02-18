@@ -16,7 +16,7 @@ tags:
 ---
 Opa opa opa! Vamos continuar hoje com a terceira parte do nosso tutorial de "Criando um sistema de logins com classe no PHP"...
 
-Já passamos vitoriosos pela <a title="Criando um sistema de logins com classe no PHP - Parte 1" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" target="_blank">Parte 1</a> e <a title="Criando um sistema de logins com classe no PHP - Parte 2" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-2" target="_blank">Parte 2</a> e hoje vamos fazer o método que usaremos para verificar se um usuário está logado e o método que usaremos para deslogar o usuário... A boa notícia é que depois da aula de hoje a classe estará pronta para vocês usarem em vossos sites, lembrando sempre que o importante aqui é que vocês aprendam como fazer e não apenas copiem o código e usem.
+Já passamos vitoriosos pela [Parte 2](/criando-um-sistema-de-logins-com-classe-no-php-parte-2) e hoje vamos fazer o método que usaremos para verificar se um usuário está logado e o método que usaremos para deslogar o usuário... A boa notícia é que depois da aula de hoje a classe estará pronta para vocês usarem em vossos sites, lembrando sempre que o importante aqui é que vocês aprendam como fazer e não apenas copiem o código e usem.
 
 Vamos começar fazendo uma correção  que o <em>Leo Baiano</em> sugeriu no método <strong>validaUsuario()</strong> criado na <strong>Parte 1</strong>... A mudança vai acontecer entre a linha 87 e a linha 96:
 

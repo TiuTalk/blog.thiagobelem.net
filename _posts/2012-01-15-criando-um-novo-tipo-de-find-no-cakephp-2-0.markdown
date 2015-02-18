@@ -19,7 +19,7 @@ Recentemente comecei a trabalhar num projeto onde a maior parte dos models tem u
 
 Foi aqui que tive a idéia de criar o <code>$Model->find('published')</code>, que funciona da mesma forma que o <code>$Model->find('all')</code> mas inclui a condição internamente.
 
-A <a href="http://book.cakephp.org/2.0/en/models/retrieving-your-data.html#creating-custom-find-types" title="Creating custom find types" target="_blank">documentação</a> é bem simples, e o resultado da minha implementação (que estou usando no meu projeto) é mais ou menos assim:
+A [documentação](http://book.cakephp.org/2.0/en/models/retrieving-your-data.html#creating-custom-find-types) é bem simples, e o resultado da minha implementação (que estou usando no meu projeto) é mais ou menos assim:
 
 <div data-gist-id="1630250" data-gist-show-loading="false"></div>
 A lógica é bem simples.. precisamos:
@@ -31,7 +31,7 @@ A lógica é bem simples.. precisamos:
 </ol>
 Agora eu posso buscar apenas os posts publicados de uma forma bem mais padronizada e elegante: <code>$this->Post->find('published');</code>
 
-O método <code>escapeField(field)</code> (<a href="http://book.cakephp.org/2.0/en/models/additional-methods-and-properties.html#model-escapefield-string-field-null-string-alias-null" target="_blank">doc</a>) recebe um nome de coluna e retorna no formato <strong>Model.coluna</strong>, no meu exemplo ficaria algo como <strong>Post.published</strong>.
+O método <code>escapeField(field)</code> ([doc](http://book.cakephp.org/2.0/en/models/additional-methods-and-properties.html#model-escapefield-string-field-null-string-alias-null)) recebe um nome de coluna e retorna no formato <strong>Model.coluna</strong>, no meu exemplo ficaria algo como <strong>Post.published</strong>.
 
 Com isso você pode criar vários tipos de find, como por exemplo: <code>$Model->find('active')</code>, <code>$Model->find('inactive')</code> ou até <code>$Model->find('urgent')</code>, manipulando as condições extras internamente e deixando a sua aplicação muito mais organizada.
 

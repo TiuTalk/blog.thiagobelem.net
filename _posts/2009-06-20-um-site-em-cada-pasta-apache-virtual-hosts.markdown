@@ -48,9 +48,9 @@ Viram? :)
 <h3>Desenvolvimento local</h3>
 Há um porém (que eu chamaria de vantagem): você pode usar esse esquema quando desenvolver localmente também!
 
-Por exemplo: você pode configurar vários <a href="http://www.no-ip.com/" target="_blank">No-IP</a> para serem ouvidos (<em>listen</em>) pelo Apache e usar isso para separar seus sites. Ou você pode configurar seu arquivo de <strong>hosts</strong> (do Windows) para redirecionar os domínios escolhidos para o ip local (<em>localhost</em>).
+Por exemplo: você pode configurar vários [No-IP](http://www.no-ip.com/) para serem ouvidos (<em>listen</em>) pelo Apache e usar isso para separar seus sites. Ou você pode configurar seu arquivo de <strong>hosts</strong> (do Windows) para redirecionar os domínios escolhidos para o ip local (<em>localhost</em>).
 
 Espero que tenham gostado! :)
 
-Vejam mais sobre os Virtual Hosts na <a href="http://httpd.apache.org/docs/2.0/mod/core.html#virtualhost" target="_blank">documentação oficial do Apache</a>.
+Vejam mais sobre os Virtual Hosts na [documentação oficial do Apache](http://httpd.apache.org/docs/2.0/mod/core.html#virtualhost).
 

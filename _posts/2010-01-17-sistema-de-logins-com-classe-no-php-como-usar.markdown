@@ -18,11 +18,11 @@ tags:
 ---
 Fala gente,
 
-Hoje, domingão, vou mostrar pra vocês como é fácil usar o <a title="Busca: Sistema de logins com classe no PHP" href="/?s=Sistema+de+logins+com+classe+no+PHP">Sistema de logins com classe no PHP</a> que ensinei a fazer durante as últimas semanas.
+Hoje, domingão, vou mostrar pra vocês como é fácil usar o [Sistema de logins com classe no PHP](/?s=Sistema+de+logins+com+classe+no+PHP) que ensinei a fazer durante as últimas semanas.
 
 Antes de mais nada vocês devem criar um arquivo chamado <strong>usuarios.class.php</strong> em algum lugar do seu site, de preferência dentro de uma pasta chamada "<strong>includes</strong>" ou "<strong>inclues/classes</strong>" pra ficar mais organizado.
 
-Dentro desse arquivo você insere o conteúdo da classe criada durante a <a title="Criando um sistema de logins com classe no PHP – Parte 1" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" target="_blank">Parte 1</a>, <a title="Criando um sistema de logins com classe no PHP – Parte 2" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-2" target="_blank">Parte 2</a>, <a title="Criando um sistema de logins com classe no PHP – Parte 3" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-3" target="_blank">Parte 3</a> e <a title="Criando um sistema de logins com classe no PHP – Parte 4" href="/criando-um-sistema-de-logins-com-classe-no-php-parte-4" target="_blank">Parte 4</a> do tutorial.
+Dentro desse arquivo você insere o conteúdo da classe criada durante a [Parte 4](/criando-um-sistema-de-logins-com-classe-no-php-parte-4) do tutorial.
 
 Para que todo mundo entenda como é essa instalação vamos criar uma situação hipotética onde vocês tem um site, nesse site existem as seguintes páginas:
 
@@ -37,7 +37,7 @@ Os nomes desses arquivos não são obrigatórios, o que importa é que você ent
 Agora vamos ao passo-a-passo de como usar a classe:
 
 <h3>1. Incluir a classe nas páginas importantes</h3>
-Vocês devem incluir o arquivo <strong>usuarios.class.php</strong> (usando <a href="http://br.php.net/manual/pt_BR/function.require-once.php" target="_blank">require_once()</a> ou <a href="http://br.php.net/manual/pt_BR/function.include-once.php" target="_blank">include_once()</a>) em todas as páginas que terão <strong>alguma ligação</strong> com o sistema de login... Provavelmente serão apenas as páginas que eu listei ali em cima.
+Vocês devem incluir o arquivo <strong>usuarios.class.php</strong> (usando [include_once()](http://br.php.net/manual/pt_BR/function.include-once.php)) em todas as páginas que terão <strong>alguma ligação</strong> com o sistema de login... Provavelmente serão apenas as páginas que eu listei ali em cima.
 
 <h3>2. Validar o login</h3>
 Depois de inserir a classe em todos os arquivos vamos na página que recebe e valida os dados do login (<strong>valida_login.php</strong>) e, logo após "<em>includar</em>" a classe <strong>no começo do arquivo</strong> colocamos também o seguinte código:

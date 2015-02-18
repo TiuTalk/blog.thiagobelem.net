@@ -28,11 +28,11 @@ A funcionalidade "Lembrar minha senha" funciona basicamente da seguinte forma: a
 Estou desde ontem revisando a classe e fazendo algumas pequenas correções... Não vou listar todas aqui pois acho mais fácil vocês pegarem o PHPs final e darem uma olhada... Prefiro listar aqui rapidamente o que foi preciso fazer e vocês vão dando uma olhada no código:
 
 <ul>
-<li>Aumentar as informações nos blocos de comentário (seguindo o padrão do <a href="http://www.phpdoc.org/" title="PHPDoc">PHPDoc</a>);</li>
+<li>Aumentar as informações nos blocos de comentário (seguindo o padrão do [PHPDoc](http://www.phpdoc.org/));</li>
 <li>Remover o prefixo "__" dos métodos protegidos (agora todos os métodos são <strong>públicos</strong>);</li>
 <li>Documentar em qual versão a propriedade ou método apareceu na classe;</li>
 <li>Ajustar os métodos <strong>usuarioLogado()</strong> e <strong>logaUsuario()</strong> para atender ao sistema de "Lembrar minha senha";</li>
-<li>Criar a propriedade <strong>filtraDados</strong> que permite o uso do <a href="http://br.php.net/manual/en/function.mysql-real-escape-string.php" title="mysql_real_escape_string()">mysql_real_escape_string()</a> e evita <strong>SQL Injection</strong>;</li>
+<li>Criar a propriedade <strong>filtraDados</strong> que permite o uso do [mysql_real_escape_string()](http://br.php.net/manual/en/function.mysql-real-escape-string.php) e evita <strong>SQL Injection</strong>;</li>
 <li>Criar a propriedade <strong>caseSensitive</strong> que diferencia "casa" de "CaSa" ou "CASA".</li>
 <li>Criar a propriedade <strong>cookiePath</strong> que será usada sempre que um cookie for criado ou deletado.</li>
 </ul>
@@ -72,12 +72,12 @@ Vamos criar agora o método lembrarDados() que irá salvar os dados do usuário,
 	}
 [/code]
 
-Primeiro nós vamos calcular o <a href="http://pt.wikipedia.org/wiki/Era_Unix" title="UNIX Timestamp">UNIX Timestamp</a> que será a data exata de quando os cookies irão expirar:
+Primeiro nós vamos calcular o [UNIX Timestamp](http://pt.wikipedia.org/wiki/Era_Unix) que será a data exata de quando os cookies irão expirar:
 [code language="php"]
 		// Calcula o timestamp final para os cookies expirarem
 		$tempo = strtotime("+{$this->lembrarTempo} day", time());
 [/code]
-Agora nós iremos encriptar os dados do usuário usando <a href="http://pt.wikipedia.org/wiki/Base64" title="base64">base64</a> e adicionar um caractere no início da string criptografada para impedir que ela seja decriptografada pelo usuário (caso ele encontre o valor do cookie):
+Agora nós iremos encriptar os dados do usuário usando [base64](http://pt.wikipedia.org/wiki/Base64) e adicionar um caractere no início da string criptografada para impedir que ela seja decriptografada pelo usuário (caso ele encontre o valor do cookie):
 [code language="php"]
 		// Encripta os dados do usuário usando base64
 		// O rand(1, 9) cria um digito no início da string que impede a descriptografia
@@ -168,10 +168,10 @@ Nossa nova funcionalidade está devidamente implementada! :)
 Pra quem quiser, o download do script completo:
 
 <ul>
-<li><strong>Parte 1</strong> » <a href="/arquivos/2010/01/usuarios.class.parte1.phps" title="usuarios.class.parte1.phps (Parte 1)" target="_blank">PHP</a>, <a href="/arquivos/2010/01/usuarios.class.parte1.rar" title="usuarios.class.parte1.rar (Parte 1)" target="_blank">RAR</a> ou <a href="http://pastie.org/826194" title="Pastie (Parte 1)" target="_blank">Pastie</a></li>
-<li><strong>Parte 2</strong> » <a href="/arquivos/2010/01/usuarios.class.parte2.phps" title="usuarios.class.parte2.phps (Parte 2)" target="_blank">PHP</a>, <a href="/arquivos/2010/01/usuarios.class.parte2.rar" title="usuarios.class.parte2.rar (Parte 2)" target="_blank">RAR</a> ou <a href="http://pastie.org/826197" title="Pastie (Parte 2)" target="_blank">Pastie</a> (Inclui a parte 1)</li>
-<li><strong>Parte 3</strong> » <a href="/arquivos/2010/01/usuarios.class.parte3.phps" title="usuarios.class.parte3.phps (Parte 3)" target="_blank">PHP</a>, <a href="/arquivos/2010/01/usuarios.class.parte3.rar" title="usuarios.class.parte3.rar (Parte 3)" target="_blank">RAR</a> ou <a href="http://pastie.org/826200" title="Pastie (Parte 3)" target="_blank">Pastie</a> (Inclui as partes 1 e 2)</li>
-<li><strong>Parte 4</strong> » <a href="/arquivos/2010/01/usuarios.class.parte4.phps" title="usuarios.class.parte4.phps (Parte 4)" target="_blank">PHP</a>, <a href="/arquivos/2010/01/usuarios.class.parte4.rar" title="usuarios.class.parte4.rar (Parte 4)" target="_blank">RAR</a> ou <a href="http://pastie.org/826208" title="Pastie (Parte 4)" target="_blank">Pastie</a> (Inclui as partes 1, 2 e 3)</li>
+<li><strong>Parte 1</strong> » [Pastie](http://pastie.org/826194)</li>
+<li><strong>Parte 2</strong> » [Pastie](http://pastie.org/826197) (Inclui a parte 1)</li>
+<li><strong>Parte 3</strong> » [Pastie](http://pastie.org/826200) (Inclui as partes 1 e 2)</li>
+<li><strong>Parte 4</strong> » [Pastie](http://pastie.org/826208) (Inclui as partes 1, 2 e 3)</li>
 </ul>
 <h3>Como usar a nova funcionalidade</h3>
 Agora vamos fazer alguns mínimos ajustes aos códigos mostados no <a href="/sistema-de-logins-com-classe-no-php-como-usar" title="Sistema de logins com classe no PHP â

@@ -13,7 +13,7 @@ tags:
 - Programador
 - Desenvolvedor
 ---
-Eu estava assistindo o <a href="http://code.google.com/intl/de-DE/events/io/2009/sessions/MythGeniusProgrammer.html" target="_blank">vídeo da conferência Google I/O</a>. Durante o vídeo um dos palestrantes diz que "É nosso instinto natural tentar ser um gênio, mas nós precisamos lutar contra isso."
+Eu estava assistindo o [vídeo da conferência Google I/O](http://code.google.com/intl/de-DE/events/io/2009/sessions/MythGeniusProgrammer.html). Durante o vídeo um dos palestrantes diz que "É nosso instinto natural tentar ser um gênio, mas nós precisamos lutar contra isso."
 
 Eles falam principalmente sobre a tendência dos desenvolvedores tentarem programar isoladamente, de tentar acobertar falhas, não ser receptivo para os feedbacks, tentar elimitar qualquer possibilidade de vulnerabilidade, resumindo, tentarem ser heróis, ou programadores rockstars.
 

@@ -17,7 +17,7 @@ tags:
 ---
 Fala pessoal!
 
-Hoje acordei cedo e resolvi criar um novo artigo explicando como se faz um sistema de login passo-a-passo, que nem eu fiz o tutorial sobre <a href="/upload-de-arquivos-como-tudo-funciona">como funciona o upload e validação de arquivos</a> no PHP.
+Hoje acordei cedo e resolvi criar um novo artigo explicando como se faz um sistema de login passo-a-passo, que nem eu fiz o tutorial sobre [como funciona o upload e validação de arquivos](/upload-de-arquivos-como-tudo-funciona) no PHP.
 
 O meu intuito nesse artigo não é entregar um script pronto mas sim te mostrar o "caminho das pedras" enquanto <strong>você</strong> é quem criará o seu próprio sistema.
 
@@ -49,7 +49,7 @@ INSERT INTO `usuarios` VALUES (NULL, 'Usuário Teste', 'demo', SHA1( 'demo' ), '
 INSERT INTO `usuarios` VALUES (NULL, 'Administrador Teste', 'admin', SHA1( 'admin' ), 'admin@demo.com.br', 2, 1, NOW( ));
 [/code]
 
-Como vocês podem perceber, o nosso campo de senha tem 40 caracteres e quando cadastramos os usuários testes usamos <strong style="color: white; background: gray">SHA1('{senha}')</strong> isso significa que usaremos uma senha encriptada... Se você quiser saber mais sobre sha1 veja esse artigo: <a href="/criptografia-no-php-usando-md5-sha1-e-base64" target="_blank">Criptografia no PHP usando md5, sha1 e base64</a>.
+Como vocês podem perceber, o nosso campo de senha tem 40 caracteres e quando cadastramos os usuários testes usamos <strong style="color: white; background: gray">SHA1('{senha}')</strong> isso significa que usaremos uma senha encriptada... Se você quiser saber mais sobre sha1 veja esse artigo: [Criptografia no PHP usando md5, sha1 e base64](/criptografia-no-php-usando-md5-sha1-e-base64).
 
 
 
@@ -254,9 +254,9 @@ Ou se você preferir, uma versão mais extensa:
 
 Quem não conseguir fazer um sistema de login depois dessa aula não vai ganhar batata frita no fim do dia! :D
 
-Pra quem quiser, aqui tem um <a href="/arquivos/2009/07/login20090724.rar" target="_blank">RAR para download</a> com os arquivos desse artigo.
+Pra quem quiser, aqui tem um [RAR para download](/arquivos/2009/07/login20090724.rar) com os arquivos desse artigo.
 
 --
 
-Veja <a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-1" title="Criando um sistema de logins com classe no PHP" target="_blank">aqui</a> como criar um <strong>sistema de login usando classes</strong> (Orientação a Objetos) e que funciona no PHP 4 e PHP 5.
+Veja [aqui](/criando-um-sistema-de-logins-com-classe-no-php-parte-1) como criar um <strong>sistema de login usando classes</strong> (Orientação a Objetos) e que funciona no PHP 4 e PHP 5.
 

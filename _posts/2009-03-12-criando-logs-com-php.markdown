@@ -99,7 +99,7 @@ echo "Não foi possível salvar o LOG!";
 
 Sugiro que salvem LOGs - principalmente - de todas as tentativas de login. Salve LOGs também das alterações, cadastros e deleções de registros do sistema (produtos/categorias/lojas/notícias e etc.). Isso vai tornar a sua aplicação mais segura e quando algo der errado você vai poder encontrar "o pai da criança" com mais facilidade.
 
-Se você já tiver feito um sistema de login no seu site (se não, <a href="/criando-um-sistema-de-login-com-php-e-mysql" target="_blank">veja aqui como fazer um</a>), salve também o usuário atual, como por exemplo:
+Se você já tiver feito um sistema de login no seu site (se não, [veja aqui como fazer um](/criando-um-sistema-de-login-com-php-e-mysql)), salve também o usuário atual, como por exemplo:
 
 <p style="text-align: center;"><span style="color: #000000;">"<strong>[ Usuário: Fulano ] Cadastrou uma notícia</strong>"</span>
 
@@ -109,7 +109,7 @@ Até a próxima!
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br2.php.net/manual/en/function.date.php" target="_blank">date()</a></strong> » Função para formatar datas</li>
-<li><strong>Função <a href="http://br.php.net/mysql_escape_string" target="_blank">mysql_escape_string()</a></strong> » Prepara uma string para o MySQL</li>
-<li><strong>Função <a href="http://br.php.net/mysql_query" target="_blank">mysql_query()</a></strong> » Executa uma query (consulta SQL)</li>
+<li><strong>Função [date()](http://br2.php.net/manual/en/function.date.php)</strong> » Função para formatar datas</li>
+<li><strong>Função [mysql_escape_string()](http://br.php.net/mysql_escape_string)</strong> » Prepara uma string para o MySQL</li>
+<li><strong>Função [mysql_query()](http://br.php.net/mysql_query)</strong> » Executa uma query (consulta SQL)</li>
 </ul>

@@ -34,12 +34,12 @@ Hoje vamos continuar com a Parte 4 do nosso tema! :)
 Se você ainda não está acompanhando, veja as outras partes dessa sequência de artigos:
 
 <ul>
-<li><a title="Criando um tema para WordPress – Parte 1" href="/criando-um-tema-para-wordpress" target="_blank">Parte 1 - Estrutura inicial do tema</a></li>
-<li><a title="Criando um tema para WordPress – Parte 2" href="/criando-um-tema-para-wordpress-parte-2" target="_blank">Parte 2 - HTML5, Funções básicas do WordPress, Feed RSS e Atom</a></li>
-<li><a title="Criando um tema para WordPress – Parte 3" href="/criando-um-tema-para-wordpress-parte-3" target="_blank">Parte 3 - Topo e listagem de posts</a></li>
+<li>[Parte 1 - Estrutura inicial do tema](/criando-um-tema-para-wordpress)</li>
+<li>[Parte 2 - HTML5, Funções básicas do WordPress, Feed RSS e Atom](/criando-um-tema-para-wordpress-parte-2)</li>
+<li>[Parte 3 - Topo e listagem de posts](/criando-um-tema-para-wordpress-parte-3)</li>
 </ul>
 <h2>Parte 4 - Separando o tema em blocos reutilizáveis</h2>
-Na <a title="Criando um tema para WordPress – Parte 3" href="/criando-um-tema-para-wordpress-parte-3" target="_blank">Parte 3</a> criamos o template básico da home (<strong>index.php</strong>) que ficou mais ou menos assim:
+Na [Parte 3](/criando-um-tema-para-wordpress-parte-3) criamos o template básico da home (<strong>index.php</strong>) que ficou mais ou menos assim:
 
 <div data-gist-id="2353682" data-gist-show-loading="false"></div>
 Agora vamos separar as partes do nosso tema!
@@ -59,8 +59,8 @@ Depois de salvar esses dois arquivos, é só fazer o "include" dentro do nosso <
 Acabamos de usar duas funções novas:
 
 <ul>
-<li><a href="http://codex.wordpress.org/Function_Reference/get_header" target="_blank">get_header()</a> - Incluir o topo padrão do site (<strong>header.php</strong>)</li>
-<li><a href="http://codex.wordpress.org/Function_Reference/get_footer" target="_blank">get_footer()</a> - Inclui o rodapé padrão do site (<strong>footer.php</strong>)</li>
+<li>[get_header()](http://codex.wordpress.org/Function_Reference/get_header) - Incluir o topo padrão do site (<strong>header.php</strong>)</li>
+<li>[get_footer()](http://codex.wordpress.org/Function_Reference/get_footer) - Inclui o rodapé padrão do site (<strong>footer.php</strong>)</li>
 </ul>
 Percebam que eu chamei de "topo padrão" e "rodapé padrão" pois se você fizer uma chamada do tipo:<strong> get_header('especial')</strong> ele vai incluir o arquivo <strong>header-especial.php</strong> ao invés de <strong>header.php</strong>. .. O mesmo vale pro footer :)
 
@@ -70,7 +70,7 @@ Por enquanto não temos um conteúdo pra lateral, mas o elemento (sidebar) já e
 Primeiro criamos um arquivo sidebar.php com a marcação da lateral:
 
 <div data-gist-id="2353760" data-gist-show-loading="false"></div>
-Depois incluímos ele no template usando a função <a href="http://codex.wordpress.org/Function_Reference/get_sidebar" target="_blank">get_sidebar()</a> que funciona exatamente como as funções <a href="http://codex.wordpress.org/Function_Reference/get_header" target="_blank">get_header()</a> e <a href="http://codex.wordpress.org/Function_Reference/get_footer" target="_blank">get_footer()</a>, assim:
+Depois incluímos ele no template usando a função [get_footer()](http://codex.wordpress.org/Function_Reference/get_footer), assim:
 
 <div data-gist-id="2353770" data-gist-show-loading="false"></div>
 Com isso nosso template contém só o conteúdo/miolo daquela página e podemos ter páginas com formatos diferentes, que incluam ou não a lateral e que possam usar topos ou rodapés diferentes do padrão (que não vai ser o caso desse blog).
@@ -84,9 +84,9 @@ Agora nosso template já tem a estrutura básica (e recomendada) de um template 
 <li><strong>sidebar.php</strong> - Lateral do site</li>
 <li><strong>index.php</strong> - Template da <strong>página inicial</strong> (listagem de posts)</li>
 </ul>
-Na <a title="Criando um tema para WordPress – Parte 5" href="/criando-um-tema-para-wordpress-parte-5">Parte 5</a> iremos criar o <strong>single.php</strong> que é justamente o template que mostra todo o <strong>conteúdo do post</strong> (texto completo).
+Na [Parte 5](/criando-um-tema-para-wordpress-parte-5) iremos criar o <strong>single.php</strong> que é justamente o template que mostra todo o <strong>conteúdo do post</strong> (texto completo).
 
-Acompanhe o template que estou criando pro meu blog, com mais algumas coisinhas (que não coloquei aqui), no GitHub: <a href="https://github.com/TiuTalk/blog.thiagobelem.net" target="_blank">https://github.com/TiuTalk/blog.thiagobelem.net</a>
+Acompanhe o template que estou criando pro meu blog, com mais algumas coisinhas (que não coloquei aqui), no GitHub: [https://github.com/TiuTalk/blog.thiagobelem.net](https://github.com/TiuTalk/blog.thiagobelem.net)
 
 Gostou? Então comenta, compartilha e recomenda! <img src="http://blog.thiagobelem.net/wp-includes/images/smilies/icon_smile.gif" alt=":)" />
 

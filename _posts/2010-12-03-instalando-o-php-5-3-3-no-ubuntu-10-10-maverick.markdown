@@ -32,10 +32,10 @@ Meses atrás fiz um artigo ensinando a <span class="removed_link" title="http://
 A instalação é dividada em quatro passos, sendo o último um bônus:
 
 <ol>
-<li><a title="Instalação do Apache" href="#apache">Instalação do <strong>Apache 2</strong></a> - Servidor</li>
-<li><a title="Instalação do MySQL e PostgreSQL" href="#database">Instalação do <strong>MySQL</strong> e <strong>PostgreSQL</strong></a> - Bancos de dados</li>
-<li><a title="Download e compilação do PHP" href="#php">Download e compilação do <strong>PHP 5.3.3</strong></a></li>
-<li><a title="Instalação do PHPUnit" href="#phpunit">Instalação do <strong>PHPUnit</strong></a> - Ferramenta de teste de código</li>
+<li>[](#apache) - Servidor</li>
+<li>[](#database) - Bancos de dados</li>
+<li>[](#php)</li>
+<li>[](#phpunit) - Ferramenta de teste de código</li>
 </ol>
 <h2 id="apache">Primeiro passo - Instalação do <strong>Apache 2</strong></h2>
 Para instalar o <strong>Apache 2</strong> vamos rodar o seguinte comando no terminal:
@@ -44,7 +44,7 @@ Para instalar o <strong>Apache 2</strong> vamos rodar o seguinte comando no term
 
 Essa comando vai fazer um download de cerca de 16MB e instalar o <strong>Apache 2</strong> no seu computador.
 
-Feito isso você já pode abrir seu navegador e acessar o endereço <a href="http://127.0.0.1/">http://127.0.0.1/</a> e verá a tela do "<strong>It works!</strong>" que informa que o Apache foi instalado com sucesso.
+Feito isso você já pode abrir seu navegador e acessar o endereço [http://127.0.0.1/](http://127.0.0.1/) e verá a tela do "<strong>It works!</strong>" que informa que o Apache foi instalado com sucesso.
 
 <h2 id="database">Segundo passo - Instalação do <strong>MySQL</strong> e <strong>PostgreSQL</strong></h2>
 Primeiro instalamos o <strong>PostgreSQL 8.4</strong> com o seguinte comando, que vai fazer um download de 5MB:
@@ -131,7 +131,7 @@ Pronto… Terminamos… Só precisamos habilitar o módulo PHP no Apache e reini
 $ sudo /etc/init.d/apache2 restart[/shell]
 
 <h2 id="phpunit">Bônus - Instalação do <strong>PHPUnit</strong></h2>
-O <a title="PHPUnit" href="http://www.phpunit.de/" target="_blank">PHPUnit</a> é uma ótima ferramenta de teste unitário que ajuda muito no desenvolvimento, mas isso é assunto para outro artigo. Vamos usar o <strong>Pear</strong>, que foi instalado junto com o PHP, par instalá-lo da seguinte maneira:
+O [PHPUnit](http://www.phpunit.de/) é uma ótima ferramenta de teste unitário que ajuda muito no desenvolvimento, mas isso é assunto para outro artigo. Vamos usar o <strong>Pear</strong>, que foi instalado junto com o PHP, par instalá-lo da seguinte maneira:
 
 [shell]$ sudo pear channel-discover pear.phpunit.de
 $ sudo pear channel-discover components.ez.no

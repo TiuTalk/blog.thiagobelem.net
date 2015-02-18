@@ -17,9 +17,9 @@ Desde a versão 5.2 o PHP já tem suporte a leitura e escrita de dados no format
 
 Descrição de JSON da Wikipédia:
 
-<p style="padding-left: 30px;"><span style="color: #003366;"><em><strong>JSON</strong> (com a pronuncia </em><em>djeisón), um <a class="mw-redirect" title="Acrônimo" href="http://pt.wikipedia.org/wiki/Acr%C3%B4nimo">acrônimo</a> para "<a title="JavaScript" href="http://pt.wikipedia.org/wiki/JavaScript"><strong>J</strong>ava<strong>S</strong>cript</a> <a title="Objeto" href="http://pt.wikipedia.org/wiki/Objeto"><strong>O</strong>bject</a> <a title="Notação" href="http://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o"><strong>N</strong>otation</a>", é um formato leve para intercâmbio de dados computacionais. <strong>JSON</strong> é um subconjunto da notação de objeto de JavaScript, mas seu uso não requer Javascript exclusivamente.</em></span>
+<p style="padding-left: 30px;"><span style="color: #003366;"><em><strong>JSON</strong> (com a pronuncia </em><em>djeisón), um [otation](http://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o)", é um formato leve para intercâmbio de dados computacionais. <strong>JSON</strong> é um subconjunto da notação de objeto de JavaScript, mas seu uso não requer Javascript exclusivamente.</em></span>
 
-<p style="padding-left: 30px;"><span style="color: #008080;"><em><span style="color: #003366;">A simplicidade de JSON tem resultado em seu uso difundido, especialmente como uma alternativa para <a title="XML" href="http://pt.wikipedia.org/wiki/XML">XML</a> em <a title="AJAX (programação)" href="http://pt.wikipedia.org/wiki/AJAX_%28programa%C3%A7%C3%A3o%29">AJAX</a>. Uma das vantagens reivindicadas de <strong>JSON</strong> sobre <a title="XML" href="http://pt.wikipedia.org/wiki/XML">XML</a> como um formato para intercâmbio de dados neste contexto, é o fato de ser muito mais fácil escrever um analisador JSON. Em JavaScript mesmo, JSON pode ser analisado trivialmente usando a função <code><a class="new" title="Eval (página não existe)" href="http://pt.wikipedia.org/w/index.php?title=Eval&action=edit&redlink=1">eval</a>()</code>. Isto foi importante para a aceitação de JSON dentro da comunidade AJAX devido a presença deste recurso de JavaScript em todos os <a class="mw-redirect" title="Navegador web" href="http://pt.wikipedia.org/wiki/Navegador_web">navegadores web</a> atuais</span>.</em></span>
+<p style="padding-left: 30px;"><span style="color: #008080;"><em><span style="color: #003366;">A simplicidade de JSON tem resultado em seu uso difundido, especialmente como uma alternativa para [navegadores web](http://pt.wikipedia.org/wiki/Navegador_web) atuais</span>.</em></span>
 
 --
 
@@ -122,7 +122,7 @@ Mas perai... O JSON não é usado para formatar os dados que estão sendo compar
 
 Espero que tenham gostado desse pequeno artigo.
 
-Ahh.. E pra quem não tem PHP 5.2 ou superior, no site (feio/medonho) do <a href="http://www.json.org/" target="_blank">JSON</a>, existem guias de integração e classe pronta para uso (o mesmo vale para outras linguagens que não têm suporte nativo a ele).
+Ahh.. E pra quem não tem PHP 5.2 ou superior, no site (feio/medonho) do [JSON](http://www.json.org/), existem guias de integração e classe pronta para uso (o mesmo vale para outras linguagens que não têm suporte nativo a ele).
 
 Abraços! E uma boa noite.
 

@@ -36,7 +36,7 @@ echo substr($frase, 0, -1); // Todos os caracteres, até o penúltimo, a partir 
 [/code]
 
 Veja a documentação oficial:
-<a href="http://br.php.net/manual/pt_BR/function.substr.php" target="_blank">http://br.php.net/manual/pt_BR/function.substr.php</a>
+[http://br.php.net/manual/pt_BR/function.substr.php](http://br.php.net/manual/pt_BR/function.substr.php)
 
 <h4>Função strlen()</h4>
 O <strong>strlen()</strong> serve para você saber quantos caracteres uma string tem.
@@ -63,7 +63,7 @@ echo strlen($frase);
 [/code]
 
 Veja a documentação oficial:
-<a href="http://br.php.net/manual/pt_BR/function.strlen.php" target="_blank">http://br.php.net/manual/pt_BR/function.strlen.php</a>
+[http://br.php.net/manual/pt_BR/function.strlen.php](http://br.php.net/manual/pt_BR/function.strlen.php)
 
 <h4>Função strtolower()</h4>
 O <strong>strtolower()</strong> serve para você converter toda a string para caixa-baixa (minúsculas).
@@ -83,7 +83,7 @@ echo strtolower($frase);
 [/code]
 
 Veja a documentação oficial:
-<a href="http://br.php.net/manual/pt_BR/function.strtolower.php" target="_blank">http://br.php.net/manual/pt_BR/function.strtolower.php</a>
+[http://br.php.net/manual/pt_BR/function.strtolower.php](http://br.php.net/manual/pt_BR/function.strtolower.php)
 
 <h4>Função strtoupper()</h4>
 O <strong>strtoupper()</strong> serve para você converter toda a string para caixa-alta (maiúsculas).
@@ -103,7 +103,7 @@ echo strtolower($frase);
 [/code]
 
 Veja a documentação oficial:
-<a href="http://br.php.net/manual/pt_BR/function.strtoupper.php" target="_blank">http://br.php.net/manual/pt_BR/function.strtoupper.php</a>
+[http://br.php.net/manual/pt_BR/function.strtoupper.php](http://br.php.net/manual/pt_BR/function.strtoupper.php)
 
 <h4>Função ucwords()</h4>
 O <strong>ucwords()</strong> serve para você deixar a primeira letra de cada palavra da string em caixa-alta (maiúsculas).
@@ -123,7 +123,7 @@ echo strtolower($frase);
 [/code]
 
 Veja a documentação oficial:
-<a href="http://br.php.net/manual/pt_BR/function.ucwords.php" target="_blank">http://br.php.net/manual/pt_BR/function.ucwords.php</a>
+[http://br.php.net/manual/pt_BR/function.ucwords.php](http://br.php.net/manual/pt_BR/function.ucwords.php)
 
 <h4>Função ucfirst()</h4>
 O <strong>ucfirst()</strong> serve para você deixar a primeira letra de uma string em caixa-alta (maiúsculas).
@@ -143,7 +143,7 @@ echo strtolower($frase);
 [/code]
 
 Veja a documentação oficial:
-<a href="http://br.php.net/manual/pt_BR/function.ucfirst.php" target="_blank">http://br.php.net/manual/pt_BR/function.ucfirst.php</a>
+[http://br.php.net/manual/pt_BR/function.ucfirst.php](http://br.php.net/manual/pt_BR/function.ucfirst.php)
 
 <h4>Função explode()</h4>
 O <strong>explode()</strong> serve para você dividir uma string, usando um separador, e criando um array com o resultado.
@@ -186,7 +186,7 @@ $partes = explode($separador, $frase);
 [/code]
 
 Veja a documentação oficial:
-<a href="http://br.php.net/manual/pt_BR/function.explode.php" target="_blank">http://br.php.net/manual/pt_BR/function.explode.php</a>
+[http://br.php.net/manual/pt_BR/function.explode.php](http://br.php.net/manual/pt_BR/function.explode.php)
 
 <h4>Função join()</h4>
 O <strong>join()</strong> serve para você juntar os elementos de um array usando uma string como cola/união. Ele faz o trabalho inverso do <strong>explode()</strong>.
@@ -228,7 +228,7 @@ echo join($uniao, $partes);
 A função <strong>join()</strong> é um atalho da função <strong>implode()</strong>, ambas fazem a mesma coisa.
 
 Veja a documentação oficial:
-<a href="http://br.php.net/manual/pt_BR/function.implode.php" target="_blank">http://br.php.net/manual/pt_BR/function.implode.php</a>
+[http://br.php.net/manual/pt_BR/function.implode.php](http://br.php.net/manual/pt_BR/function.implode.php)
 
 ---
 

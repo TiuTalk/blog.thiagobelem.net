@@ -58,7 +58,7 @@ Espero que tenham gostado e adoraria que usassem o que aprenderam aqui.
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br.php.net/session_start" target="_blank">session_start()</a></strong> » Inicia a sessão</li>
-<li><strong>Função <a href="http://us.php.net/unset" target="_blank">unset()</a></strong> » Deleta uma variável do PHP</li>
-<li><strong>Função <a href="http://us.php.net/session_destroy" target="_blank">session_destroy()</a></strong> » Destrói toda uma sessão e suas variáveis</li>
+<li><strong>Função [session_start()](http://br.php.net/session_start)</strong> » Inicia a sessão</li>
+<li><strong>Função [unset()](http://us.php.net/unset)</strong> » Deleta uma variável do PHP</li>
+<li><strong>Função [session_destroy()](http://us.php.net/session_destroy)</strong> » Destrói toda uma sessão e suas variáveis</li>
 </ul>

@@ -79,6 +79,6 @@ E então? Agora vocês já podem criar as próprias funções e adiantar a sua v
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong><a href="http://www.php.net/manual/pt_BR/functions.user-defined.php" target="_blank">Funções definidas pelo usuário</a></strong> » Sobre criação e exemplos de '<em>funções pessoais</em>'</li>
-<li><strong>Função <a href="http://www.php.net/manual/pt_BR/function.return.php" target="_blank">return()</a></strong> » Usada pra retornar valores para fora da função</li>
+<li><strong>[Funções definidas pelo usuário](http://www.php.net/manual/pt_BR/functions.user-defined.php)</strong> » Sobre criação e exemplos de '<em>funções pessoais</em>'</li>
+<li><strong>Função [return()](http://www.php.net/manual/pt_BR/function.return.php)</strong> » Usada pra retornar valores para fora da função</li>
 </ul>

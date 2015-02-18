@@ -44,10 +44,10 @@ O <span class="removed_link" title="http://www.cakephp.com.br/">CakePHP</span> �
 Eu <strong>pessoalmente</strong> recomendo o CakePHP... Minha vida de programador mudou depois que eu comecei a usar ele. :)
 
 <h3 style="color: #ACC95E">Zend Framework</h3>
-O <a href="http://framework.zend.com/" target="_blank">Zend Framework</a> é um framework focado no desenvolvimento de aplicações pra web 2.0. Ele tem um grande número de seguidores, fontes de suporte e uma comunidade cheia de usuários ativos e participativos. O Zend é o framework mais famoso hoje em dia, ele é robusto e permite a criação de aplicações <em>enterprise</em> (de grande porte) mas seu uso exige um conhecimento vasto do PHP.
+O [Zend Framework](http://framework.zend.com/) é um framework focado no desenvolvimento de aplicações pra web 2.0. Ele tem um grande número de seguidores, fontes de suporte e uma comunidade cheia de usuários ativos e participativos. O Zend é o framework mais famoso hoje em dia, ele é robusto e permite a criação de aplicações <em>enterprise</em> (de grande porte) mas seu uso exige um conhecimento vasto do PHP.
 
 <h3 style="color: #FE3404">CodeIgniter</h3>
 Já o <span class="removed_link" title="http://www.codeigniter.com.br/">CodeIgniter</span> é bastante conhecido pela sua facilidade de uso, performance e rapidez. É ideal para aplicações rodando em servidores compartilhados. Ele oferece soluções simples e de pequeno porte, com um grande número de tutoriais em vídeo, fóruns e wikis.
 
-<p style="float: right; font-size: 10px"><a href="http://www.noupe.com/php/discussing-php-frameworks.html" target="_blank">Fonte</a>
+<p style="float: right; font-size: 10px">[Fonte](http://www.noupe.com/php/discussing-php-frameworks.html)
 

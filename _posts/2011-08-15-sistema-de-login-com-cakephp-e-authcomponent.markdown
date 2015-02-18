@@ -23,7 +23,7 @@ tags:
 ---
 Fala pessoal, tudo bom?
 
-Hoje vou tentar explicar pra vocês como configurar o <a href="http://book.cakephp.org/pt/view/1250/Autentica%C3%A7%C3%A3o" title="AuthComponent" target="_blank">AuthComponent</a> do <strong>CakePHP</strong> pra criar um sistema de login bem simples mas muito eficiente.
+Hoje vou tentar explicar pra vocês como configurar o [AuthComponent](http://book.cakephp.org/pt/view/1250/Autentica%C3%A7%C3%A3o) do <strong>CakePHP</strong> pra criar um sistema de login bem simples mas muito eficiente.
 
 Na minha opinião, o maior problemas de usar o Auth em um sistema/aplicação em português é que seu <strong>Model</strong> de usuários vai se chamar "Usuario", "Cliente" ou "Administrador" <strong style="color: red">*</strong> e não "User", então você precisa mudar algumas configurações pra ele [o Auth] funcione de acordo.
 
@@ -186,7 +186,7 @@ Perceba que utilizamos o método <strong>Auth->password()</strong> que faz exata
 <h3>Protegendo apenas um prefixo <span style="color: gray">(opcional)</span></h3>
 Agora todo o seu sistema estará "bloqueado", e você precisa fazer login para acessar qualquer tela.
 
-Caso você queira proteger apenas um <a href="http://book.cakephp.org/pt/view/950/Roteando-prefixos" target="_blank">prefixo</a> (como por exemplo: admin) e não exigir login enquanto o usuário não estiver acessando um action com esse prefixo, coloque o seguinte código após a configuração do AuthComponent:
+Caso você queira proteger apenas um [prefixo](http://book.cakephp.org/pt/view/950/Roteando-prefixos) (como por exemplo: admin) e não exigir login enquanto o usuário não estiver acessando um action com esse prefixo, coloque o seguinte código após a configuração do AuthComponent:
 
 
 [code language="php"]
@@ -228,13 +228,13 @@ Essa mudança é necessária pois você precisa sair e entrar do prefixo "admin"
 Parabéns, você acaba de fazer um sistema de login utilizando CakePHP! Onde o maior trabalho (na minha opinião) foi criar o usuário, pois configurar o <strong>AuthComponent</strong> e criar o formulário de login é extremamente simples.
 
 <h3>Quer saber mais sobre o CakePHP?</h3>
-<a href="http://assando-sites.com.br/"><img src="/assets/uploads/2011/07/cookie.png" alt="Assando Sites, curso online de CakePHP" title="Assando Sites, curso online de CakePHP" width="128" height="128" class="alignright size-full wp-image-1737" /></a>
+[](http://assando-sites.com.br/)
 
-Inscreva-se no meu <strong>curso online</strong> de CakePHP, o <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br" target="_blank">Assando Sites</a>!
+Inscreva-se no meu <strong>curso online</strong> de CakePHP, o [Assando Sites](http://assando-sites.com.br)!
 
 Você aprende sem sair de casa, aos domingos ou quando preferir assistir os vídeos gravados em aula. :)
 
-Para saber mais informações sobre o curso, <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br" target="_blank">acesse o site</a> ou leia <a title="Curso online de CakePHP" href="/curso-online-de-cakephp" target="_blank">este post aqui no blog</a>.
+Para saber mais informações sobre o curso, [este post aqui no blog](/curso-online-de-cakephp).
 
 Um grande abraço e até a próxima!
 

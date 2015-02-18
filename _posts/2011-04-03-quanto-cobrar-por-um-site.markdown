@@ -15,7 +15,7 @@ tags:
 - Hora
 - Trabalho
 ---
-Muita gente me pergunta quanto cobrar por um site e qual a formula pra isso... O meu amigo <a title="João Neto" href="http://twitter.com/lifeatweb" target="_blank">João Neto</a> me convenceu a fazer um artigo sobre isso, e aqui vamos nós:
+Muita gente me pergunta quanto cobrar por um site e qual a formula pra isso... O meu amigo [João Neto](http://twitter.com/lifeatweb) me convenceu a fazer um artigo sobre isso, e aqui vamos nós:
 
 Antes de tudo, tenha uma coisa na sua cabeça: <strong>não existe preço, tabela de preço, um preço base ou coisa do tipo!</strong> Cada site é único, cada cliente é único.
 
@@ -49,7 +49,7 @@ O difícil aqui é calcular o tal do "salário ideal", pois esse deveria ser um 
 
 Outro ponto que você deve tomar muito cuidado é que é praticamente impossível você trabalhar 5h por dia, 5 dias por semana, todas as semanas do mês... Isso não vai acontecer, você vai acabar trabalhando menos do que espera pois se você trabalhar em "carga máxima" os projetos vão terminar muito rápido ou o cliente não vai querer pagar tanto em tão "pouco tempo".
 
-Eu pessoalmente acho que um trabalho de programador que tenha um mínimo de cuidado com o código não deva custar menos de R$ 1.000,00... tem gente que <a href="http://www.hardware.com.br/comunidade/cobrar-homepages/198624/#post1513847" target="_blank">faz todas as etapas do site por R$ 200,00</a> e eu acho isso um absurdo. Claro que o preço varia pra cada lugar, mas as pessoas (clientes) precisam entender que esse é um trabalho puramente intelectual: não há matéria prima, e a qualidade é estritamente ligada ao seu conhecimento.
+Eu pessoalmente acho que um trabalho de programador que tenha um mínimo de cuidado com o código não deva custar menos de R$ 1.000,00... tem gente que [faz todas as etapas do site por R$ 200,00](http://www.hardware.com.br/comunidade/cobrar-homepages/198624/#post1513847) e eu acho isso um absurdo. Claro que o preço varia pra cada lugar, mas as pessoas (clientes) precisam entender que esse é um trabalho puramente intelectual: não há matéria prima, e a qualidade é estritamente ligada ao seu conhecimento.
 
 <h3>Quanto vale o que você sabe?</h3>
 Quanto vale todas as horas de sono que você perdeu na frente do computador tentando debugar aquele código que não roda? O que você sabe não pode ser colocado num HD ou pendrive e vendido na esquina, ninguém tira isso de você... E isso <strong>não tem preço</strong>.

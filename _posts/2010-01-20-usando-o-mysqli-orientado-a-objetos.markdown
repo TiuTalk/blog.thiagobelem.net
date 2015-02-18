@@ -20,13 +20,13 @@ tags:
 ---
 Fala minha gente!
 
-Hoje vou mostrar para vocês como usar a extensão <a href="http://br.php.net/manual/pt_BR/book.mysqli.php" title="MySQLi">MySQLi</a> (<em>MySQL Improved</em> ou MySQL Melhorado) do MySQL.
+Hoje vou mostrar para vocês como usar a extensão [MySQLi](http://br.php.net/manual/pt_BR/book.mysqli.php) (<em>MySQL Improved</em> ou MySQL Melhorado) do MySQL.
 
-Já falei um pouco sobre o MySQLi <a href="/guia-pratico-de-mysqli-no-php" title="Guia prÃ¡tico de MySQLi no PHP">nesse post</a>, mas foi sobre o método procedural, e hoje vamos falar sobre o método orientado a objetos.
+Já falei um pouco sobre o MySQLi [nesse post](/guia-pratico-de-mysqli-no-php), mas foi sobre o método procedural, e hoje vamos falar sobre o método orientado a objetos.
 
 Antes de mais nada: o MySQLi só está presente na <strong>versão 4.1.3+ do MySQL</strong> e na <strong>versão 5 do PHP</strong>, se você tem um servidor que não tenha alguma dessas versões, se mate. :)
 
-E vejam que coisa interessante está escrita na <a href="http://br.php.net/manual/pt_BR/mysqli.overview.php" title="MySQLi overview">Overview do MySQLi</a>:
+E vejam que coisa interessante está escrita na [Overview do MySQLi](http://br.php.net/manual/pt_BR/mysqli.overview.php):
 
 <blockquote><strong>Note:</strong> If you are using MySQL versions 4.1.3 or later it is strongly recommended that you use this extension.
 </blockquote>
@@ -56,7 +56,7 @@ $query = mysql_query($sql);
 // Para cada resultado encontrado...
 while ($noticia = mysql_fetch_assoc($query)) {
 	// Exibe um link com a notícia
-	echo '<a href="'. $noticia['link'] .'" title="'. $noticia['titulo'] .'">'. $noticia['titulo'] .'</a>';
+	echo '['. $noticia['titulo'] .']('. $noticia['link'] .')';
 	echo '';
 } // fim while
 
@@ -100,7 +100,7 @@ if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE
 	// Para cada resultado encontrado...
 	while ($sql->fetch()) {
 		// Exibe um link com a notícia
-		echo '<a href="'. $link .'" title="'. $titulo .'">'. $titulo .'</a>';
+		echo '['. $titulo .']('. $link .')';
 		echo '';
 	} // fim while
 
@@ -120,7 +120,7 @@ De primeiro contato sei que muita gente vai achar que o MySQLi é mais complicad
 
 Primeiro nós <strong>PREPARAMOS</strong> uma consulta com um local para receber um valor variável... É aquela interrogação.
 
-Depois nós dizemos que o local reservado receberá um conteúdo do tipo string (s) com valor $data.. Ou seja, se <strong>$data</strong> fosse um inteiro ou booleando a consulta daria um erro, ela só aceitará strings, e digo mais: strings que não modifiquem a consulta... se for uma <a href="/?s=SQL+Injection" title="SQL Injection"><em>SQL Injection</em></a> o <strong>MySQLi</strong> irá escapá-la e ele [o ataque] não funcionará!
+Depois nós dizemos que o local reservado receberá um conteúdo do tipo string (s) com valor $data.. Ou seja, se <strong>$data</strong> fosse um inteiro ou booleando a consulta daria um erro, ela só aceitará strings, e digo mais: strings que não modifiquem a consulta... se for uma [](/?s=SQL+Injection) o <strong>MySQLi</strong> irá escapá-la e ele [o ataque] não funcionará!
 
 Depois é só executar, reservar variáveis para o resultado e usá-las com um <strong>fetch()</strong> normal.. ;)
 
@@ -158,7 +158,7 @@ Os tipos de valores aceitos pelo MySQLi são:
 <li><strong style="color: #B40000">d</strong> para <em>double</em> (decimal)</li>
 <li><strong style="color: #B40000">b</strong> para <em>blob</em></li>
 </ul>
-Quem quiser saber um pouco mais sobre MySQLi, é só checar a documentação no <a href="http://php.net/">php.net</a>, e não se esqueça de deixar o seu comentário agradecendo (ou reclamando o.O)!
+Quem quiser saber um pouco mais sobre MySQLi, é só checar a documentação no [php.net](http://php.net/), e não se esqueça de deixar o seu comentário agradecendo (ou reclamando o.O)!
 
 Espero que tenham gostado! :)
 

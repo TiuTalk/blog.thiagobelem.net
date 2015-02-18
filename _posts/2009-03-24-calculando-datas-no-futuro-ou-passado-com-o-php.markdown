@@ -8,7 +8,7 @@ categories:
 - Tutoriais
 tags: []
 ---
-Eu estava lendo o meu último post que fala <a href="/calculando-a-diferenca-em-dias-entre-duas-datas" target="_parent">como calcular a diferença (em dias) entre duas datas</a> e lembrei que outra coisa muito necessitada por ai é calcular uma data <strong>no futuro</strong> (ou passado) em função de um número X de dias, horas ou meses por exemplo.
+Eu estava lendo o meu último post que fala [como calcular a diferença (em dias) entre duas datas](/calculando-a-diferenca-em-dias-entre-duas-datas) e lembrei que outra coisa muito necessitada por ai é calcular uma data <strong>no futuro</strong> (ou passado) em função de um número X de dias, horas ou meses por exemplo.
 
 Suponhamos que você queira saber com precisão que dia será daqui... 28 dias. Você pode usar a poderosa função srttotime() do PHP e conseguir fazer isso com facilidade, veja:
 
@@ -87,5 +87,5 @@ Até mais ver! :)
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br.php.net/strtotime" target="_blank">strtotime()</a></strong> » Calcula um timestamp baseando-se em uma string</li>
+<li><strong>Função [strtotime()](http://br.php.net/strtotime)</strong> » Calcula um timestamp baseando-se em uma string</li>
 </ul>

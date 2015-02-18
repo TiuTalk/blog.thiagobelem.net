@@ -32,7 +32,7 @@ Todos os elementos de um site podem ser cacheados (salvos no computador do visit
 
 Se você já terminou o seu site, ele está no ar, as imagens têm nomes diferentes e você quer economizar <em>bandwidth</em> (tráfego mensal), essa dica é pra você.
 
-Edite o arquivo <span style="color: #ff6600;"><strong>.htaccess</strong></span> na raiz do seu site (se o arquivo não existe <a href="/instalando-o-no-www-no-seu-site" target="_blank">veja aqui como criá-lo</a>) e coloque o seguinte código nele:
+Edite o arquivo <span style="color: #ff6600;"><strong>.htaccess</strong></span> na raiz do seu site (se o arquivo não existe [veja aqui como criá-lo](/instalando-o-no-www-no-seu-site)) e coloque o seguinte código nele:
 
 
 [code language="html"]
@@ -50,7 +50,7 @@ Você terminou o seu site cheio de folhas de estilos e arquivos JS com vários s
 
 Existe um recurso chamado <strong>Minify</strong>: ele compacta arquivos CSS e JS tirando quebras de linhas e espaços para deixar o arquivo muito menor.. E o melhor, além de juntar todos os arquivos em um só, ele faz isso sem alterar o código fonte deles.
 
-1 - Faça o download do Minify aqui: <a title="Minify Project" href="http://code.google.com/p/minify/" target="_blank">http://code.google.com/p/minify/</a>
+1 - Faça o download do Minify aqui: [http://code.google.com/p/minify/](http://code.google.com/p/minify/)
 
 2 - Coloque a pasta <span style="color: #99cc00;"><strong>/min/</strong></span> dentro da raiz do seu site
 
@@ -97,7 +97,7 @@ Agora, depois de usar o Minify, ele ficou assim:
 </head>
 [/code]
 
-Viu só? Você pode dar uma olhada no <a href="http://code.google.com/p/minify/wiki/UserGuide" target="_blank">Guia do Usuário</a> do Minify caso tenha alguma dúvida.
+Viu só? Você pode dar uma olhada no [Guia do Usuário](http://code.google.com/p/minify/wiki/UserGuide) do Minify caso tenha alguma dúvida.
 
 --
 

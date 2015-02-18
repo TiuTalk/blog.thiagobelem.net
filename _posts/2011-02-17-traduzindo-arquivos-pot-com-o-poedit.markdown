@@ -16,14 +16,14 @@ tags:
 - tradução
 - translation
 ---
-Hoje vou fazer um pequeno tutorial explicando como traduzir arquivos <strong>.pot</strong> utilizando um programa chamado <a href="http://www.poedit.net/">PoEdit</a>.
+Hoje vou fazer um pequeno tutorial explicando como traduzir arquivos <strong>.pot</strong> utilizando um programa chamado [PoEdit](http://www.poedit.net/).
 
-Os arquivos <strong>.po</strong> e <strong>.pot</strong> são arquivos utilizados em um sistema de tradução chamado <a href="http://en.wikipedia.org/wiki/GNU_gettext">gettext</a>, sobre o qual falarei em um próximo post.
+Os arquivos <strong>.po</strong> e <strong>.pot</strong> são arquivos utilizados em um sistema de tradução chamado [gettext](http://en.wikipedia.org/wiki/GNU_gettext), sobre o qual falarei em um próximo post.
 
 <h3>Download e Instalação</h3>
-Faça o <a href="http://www.poedit.net/download.php">download</a> do programa correto para o seu sistema operacional e instale-o.
+Faça o [download](http://www.poedit.net/download.php) do programa correto para o seu sistema operacional e instale-o.
 
-No Linux você pode instalar o pacote <a href="apt:poedit">poedit</a> (clicando nesse link).
+No Linux você pode instalar o pacote [poedit](apt:poedit) (clicando nesse link).
 
 Quando você abrir o PoEdit pela primeira vez ele pedirá o seu nome e e-mail, esses dados serão inseridos nos arquivos gerados por ele no final do processo.
 
@@ -39,7 +39,7 @@ Quando você abrir o PoEdit pela primeira vez ele pedirá o seu nome e e-mail, e
 <li>Quando você der OK ele irá pedir um lugar para salvar o arquivo <strong>.po</strong> que ele irá gerar, escolha a mesma pasta onde está o arquivo <strong>.pot</strong>.</li>
 </ol>
 <h3>Interface de tradução</h3>
-<a href="/assets/uploads/2011/02/poedit.png"><img class="size-medium wp-image-1421" title="PoEdit" src="/assets/uploads/2011/02/poedit.png" alt="" width="259" /></a>
+[](/assets/uploads/2011/02/poedit.png)
 
 A interface do PoEdit é bem simples... Você verá uma lista de <em>strings</em> (frases) a esquerda que são as frases no idioma original... A direita vão aparecer as traduções de cada uma dessas frases.
 

@@ -33,9 +33,9 @@ tags:
 ---
 Fala minha gente! :)
 
-Essa semana abriram as inscrições para o curso <a title="Assando sites com CakePHP" href="http://curso-cakephp.com.br/" target="_blank">Assando sites com CakePHP</a>, um curso online que eu criei a alguns meses.
+Essa semana abriram as inscrições para o curso [Assando sites com CakePHP](http://curso-cakephp.com.br/), um curso online que eu criei a alguns meses.
 
-Inscrições abertas até <strong>31 de julho</strong>: <a href="http://curso-cakephp.com.br/inscreva-se">http://curso-cakephp.com.br/inscreva-se</a>
+Inscrições abertas até <strong>31 de julho</strong>: [http://curso-cakephp.com.br/inscreva-se](http://curso-cakephp.com.br/inscreva-se)
 
 <h3>Para quem é o curso?</h3>
 Se você sabe o básico do PHP e conhece os conceitos de <strong>Orientação à Objetos</strong>, este curso foi feito pra você! :)
@@ -47,7 +47,7 @@ Alguns alunos me fizeram essa pergunta, e a minha resposta é curta e direta: pa
 
 O <strong>CakePHP</strong> foi criado com o preceito de que construir sites deve ser fácil e rápido, assim você pode usar o seu tempo coma s coisas que realmente importam.
 
-O <strong>ganho de produtividade</strong> que o <a title="CakePHP" href="http://cakephp.org" target="_blank">CakePHP</a> te proporciona vai fazer com que você crie sites de forma mais rápida e segura, o que te trará mais dinheiro me menos tempo. :)
+O <strong>ganho de produtividade</strong> que o [CakePHP](http://cakephp.org) te proporciona vai fazer com que você crie sites de forma mais rápida e segura, o que te trará mais dinheiro me menos tempo. :)
 
 Trabalho utilizando o <strong>CakePHP</strong> como <em>framework</em> de desenvolvimento a mais de três anos, e posso dizer que ele mudou a minha forma de entender e criar web.
 
@@ -56,7 +56,7 @@ O curso foi montado em uma agenda de <strong>cinco aulas</strong>, de <strong>tr
 
 Após esse período você ainda terá a sua disposição um canal de comunicação direto comigo e com os outros participantes do curso para tirar qualquer dúvida ou compartilhar seu progresso.
 
-As aulas da <a title="Próxima Turma - Curso CakePHP" href="http://curso-cakephp.com.br/inscreva-se" target="_blank">próxima turma</a> serão entre os dias <strong>07 de agosto</strong> e <strong>04 de setembro</strong>.
+As aulas da [próxima turma](http://curso-cakephp.com.br/inscreva-se) serão entre os dias <strong>07 de agosto</strong> e <strong>04 de setembro</strong>.
 
 <h3>E o que você vai ensinar?</h3>
 O meu objetivo com esse curso é ensinar todo o necessário para você <strong>desenvolver um site utilizando CakePHP</strong> de forma correta e segura, de forma extremamente rápida.
@@ -66,7 +66,7 @@ Passarei por todas as funcionalidades e facilidades que o <strong>CakePHP</stron
 Um dos fatos mais interessantes do curso é que você vai conseguir <strong>publicar o seu primeiro site</strong> logo após a primeira aula, ou seja, em apenas três horas!
 
 <h2>Garanta já sua vaga na próxima turma!</h2>
-As <a title="Inscrições Abertas - Curso de CakePHP" href="http://curso-cakephp.com.br/" target="_blank">inscrições estarão abertas</a> até o <strong>final de julho</strong> ou enquanto durarem as vagas.
+As [inscrições estarão abertas](http://curso-cakephp.com.br/) até o <strong>final de julho</strong> ou enquanto durarem as vagas.
 
 Aproveite a promoção e ganhe desconto até <strong>13 de julho</strong>.
 

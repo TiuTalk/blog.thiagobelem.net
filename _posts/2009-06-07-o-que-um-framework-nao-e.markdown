@@ -11,7 +11,7 @@ categories:
 - Artigos
 tags: []
 ---
-Esse é um artigo que vi a muito tempo no blog do meu amigo <a rel="nofollow" href="http://www.tuliofaria.net/" target="_blank">Túlio Faria</a>.
+Esse é um artigo que vi a muito tempo no blog do meu amigo [Túlio Faria](http://www.tuliofaria.net/).
 
 Sempre deparo com pessoas me perguntando se devem usar o CakePHP ou não... Ou qual a vantagem de usar o CakePHP ao invés do Wordpress ou Joomla (pergunta estranha né).  Tentando esclarecer ainda mais o que é um framework, resolvi escrever o queum framework não é. Vou criar uma lista e explicar o porquê.
 

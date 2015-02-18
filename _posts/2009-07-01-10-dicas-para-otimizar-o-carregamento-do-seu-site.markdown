@@ -17,7 +17,7 @@ tags:
 - CSS
 - Javascript
 ---
-A alguns meses fiz um artigo sobre <a href="/otimizando-o-seu-site-carregamento" target="_blank">como otimizar o carregamento do seu site</a> no qual eu falava sobre headers, compactação de resposta HTTP dentre outros.
+A alguns meses fiz um artigo sobre [como otimizar o carregamento do seu site](/otimizando-o-seu-site-carregamento) no qual eu falava sobre headers, compactação de resposta HTTP dentre outros.
 
 Hoje vou falar sobre algumas outras dicas que fazem muito efeito tanto no carregamento do site quanto do bandwidth mensal que você vai usar.
 
@@ -33,7 +33,7 @@ Imagine que você vai fazer o papel de uma peça de teatro e lá pela terceira p
 <h3>2. Arquivos JavaScript, uni-vos!</h3>
 Falei sobre isso no outro artigo mas vale repetir: muita gente usa um site que, por exemplo, chama o jQuery mais três plugins e um script criado com os efeitos do site.. Isso dá um total de cinco arquivos, cinco requisições diferentes que o seu servidor recebe, organiza, manipula e redireciona só pra inserir o JavaScript do seu site.
 
-Una (junte) todos os códigos JavaScript do seu site em um arquivo só, e sé isso for te dar muita dor-de-cabeça, veja sobre o <a href="http://code.google.com/p/minify/" title="Google Minify" target="_blank">Google Minify</a>
+Una (junte) todos os códigos JavaScript do seu site em um arquivo só, e sé isso for te dar muita dor-de-cabeça, veja sobre o [Google Minify](http://code.google.com/p/minify/)
 
 <h3>3. Acabe com o Flash</h3>
 Antes que você, designer, levante uma tocha e inicie uma caçada contra mim, essa dica vale para a exibição de conteúdo... Não daquele topo fofinho que você fez pro seu site.

@@ -215,7 +215,7 @@ class MeuSQL {
 ?>
 [/code]
 
-Se quiser, pode fazer o <a rel="nofollow" href="/arquivos/2009/05/classe-meusql.txt" target="_blank">download</a> do arquivo com a classe e o exemplo de uso.
+Se quiser, pode fazer o [download](/arquivos/2009/05/classe-meusql.txt) do arquivo com a classe e o exemplo de uso.
 
 Não falei nem 1/10 do poder da orientação a objetos, mas fique certo de que o seu uso é recomendado, e deixa o código mais seguro além de mais rápido e (pra alguns) mais bonito.
 

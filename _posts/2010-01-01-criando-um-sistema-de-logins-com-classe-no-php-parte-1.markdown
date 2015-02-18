@@ -139,15 +139,15 @@ Agora vamos criar o segundo método da classe e o último método dessa parte do
 Esse método, como o comentário explica, cuidará de validar se um usuário existe, procurando o par <strong>$usuario</strong> + <strong>$senha</strong> no banco de dados... Ele só retornará verdadeiro (<em>true</em>) quando apenas um registro for encontrado.
 Se você reparar logo ali no começo do método, na linha 45, ele usa o método <strong style="background: gray; color: #FFF">__codificaSenha()</strong> que irá encriptar (ou não) a senha... Simples né? :)
 
-Então é isso gente... Por hoje vamos ficar por aqui. Em breve postarei a <a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-2" title="Parte 2" target="_blank">Parte 2</a>, onde iremos criar os métodos que deixam um usuário logado (usando sessões E cookies)... E antes que alguém reclame, <strong>essa classe ainda não está usável</strong>... Ela é apenas a 1ª parte de uma classe que vamos fazendo ao longo dessa sequencia de tutoriais.
+Então é isso gente... Por hoje vamos ficar por aqui. Em breve postarei a [Parte 2](/criando-um-sistema-de-logins-com-classe-no-php-parte-2), onde iremos criar os métodos que deixam um usuário logado (usando sessões E cookies)... E antes que alguém reclame, <strong>essa classe ainda não está usável</strong>... Ela é apenas a 1ª parte de uma classe que vamos fazendo ao longo dessa sequencia de tutoriais.
 
-Pra quem quiser, o <strong>download</strong> do script completo da Parte 1: <a href="/arquivos/2010/01/usuarios.class.parte1.phps" title="usuarios.class.parte1.phps (Parte 1)" target="_blank">PHP</a> ou <a href="/arquivos/2010/01/usuarios.class.parte1.rar" title=usuarios.class.parte1.rar (Parte 1)" target="_blank">RAR</a>.
+Pra quem quiser, o <strong>download</strong> do script completo da Parte 1: [RAR](/arquivos/2010/01/usuarios.class.parte1.rar).
 
 Não deixem de dar uma olhada nas outras partes:
 
 <ul>
-<li><a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-2" title="Criando um sistema de logins com classe no PHP - Parte 2" target="_blank">Criando um sistema de logins com classe no PHP - Parte 2</a></li>
-<li><a href="/criando-um-sistema-de-logins-com-classe-no-php-parte-3" title="Criando um sistema de logins com classe no PHP - Parte 3" target="_blank">Criando um sistema de logins com classe no PHP - Parte 3</a></li>
+<li>[Criando um sistema de logins com classe no PHP - Parte 2](/criando-um-sistema-de-logins-com-classe-no-php-parte-2)</li>
+<li>[Criando um sistema de logins com classe no PHP - Parte 3](/criando-um-sistema-de-logins-com-classe-no-php-parte-3)</li>
 </ul>
 Um grande abraço, feliz ano novo e até a próxima!
 

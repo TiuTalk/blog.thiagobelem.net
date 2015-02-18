@@ -20,9 +20,9 @@ Hoje consegui um tempinho para voltar a postar no blog e resolvi voltar um com u
 
 Nessa primeira parte vamos criar um script que irá resgatar as notícias de um banco de dados e fazer mais alguns procedimentos.
 
-<div style="background: #FFF7D9; border: 1px dashed #FFE294; padding: 5px; margin-bottom: 10px;">Vamos usar <a href="http://www.php.net/manual/pt_BR/book.mysqli.php">MySQLi</a> ao invés de MySQL. Mesmo sendo um recurso <em>avançado</em> para alguns, é bom ensinar uma forma correta e segura de trabalhar pra quem tá começando. :)
+<div style="background: #FFF7D9; border: 1px dashed #FFE294; padding: 5px; margin-bottom: 10px;">Vamos usar [MySQLi](http://www.php.net/manual/pt_BR/book.mysqli.php) ao invés de MySQL. Mesmo sendo um recurso <em>avançado</em> para alguns, é bom ensinar uma forma correta e segura de trabalhar pra quem tá começando. :)
 
-<p style="margin-bottom: 0px;">• Saiba mais sobre o MySQLi <a title="Usando o MySQLi Orientado a Objetos" href="/usando-o-mysqli-orientado-a-objetos">aqui</a> e <a title="Guia prático de MySQLi no PHP" href="/guia-pratico-de-mysqli-no-php">aqui</a>
+<p style="margin-bottom: 0px;">• Saiba mais sobre o MySQLi [aqui](/guia-pratico-de-mysqli-no-php)
 
 <p style="margin-bottom: 0px;">• Os recursos utilizando aqui (MySQLi) só funcionam em <strong>PHP 5+</strong> e <strong>MySQL 4.1+</strong>
 
@@ -38,7 +38,7 @@ Iremos usar essas tabelas para armazenar notícias que estarão ligadas à categ
 <li>Cada <strong>categoria</strong> contém zero ou mais <strong>notícias</strong></li>
 </ul>
 <div style="background: #FFF7D9; border: 1px dashed #FFE294; padding: 5px; margin-bottom: 10px;">
-<p style="margin-bottom: 0px;">A imagem acima foi criada utilizando o <a href="http://wb.mysql.com/">MySQL Workbench</a>, uma ótima ferramenta de <a title="modelagem de banco de dados" href="/modelagem-de-banco-de-dados">modelagem de banco de dados</a>.
+<p style="margin-bottom: 0px;">A imagem acima foi criada utilizando o [modelagem de banco de dados](/modelagem-de-banco-de-dados).
 
 </div>
 Para criar essas tabelas em seu banco de dados, execute esse código SQL:
@@ -116,7 +116,7 @@ Na linha 21 nós criamos uma instância do MySQLi passando os dados de conexão 
 
 Salve esse script com o nome de <code>mysqli.php</code> em uma pasta chamada <code>includes</code>.
 
-O próximo passo será criar um script que faz uma consulta SQL, vamos começar o arquivo PHP com os comentários de créditos e o <code><a href="http://php.net/manual/en/function.require-once.php">require</a></code> para chamar o arquivo de conexão ao banco de dados:
+O próximo passo será criar um script que faz uma consulta SQL, vamos começar o arquivo PHP com os comentários de créditos e o <code>[require](http://php.net/manual/en/function.require-once.php)</code> para chamar o arquivo de conexão ao banco de dados:
 
 
 [code language="php"]
@@ -158,7 +158,7 @@ ONDE `ativa` for igual a 1
 ORDENANDO PELO `cadastro` DECRESCENTEMENTE
 LIMITADO A 10 resultados
 </blockquote>
-Agora precisamos executar a consulta utilizando o método <code><a href="http://www.php.net/manual/pt_BR/mysqli.query.php">query</a></code> do MySQLi:
+Agora precisamos executar a consulta utilizando o método <code>[query](http://www.php.net/manual/pt_BR/mysqli.query.php)</code> do MySQLi:
 
 
 [code language="php"]
@@ -178,7 +178,7 @@ while ($noticia = $resultado->fetch_object()) {
 	<h2><?php echo $noticia->titulo; ?></h2>
 	<?php echo $noticia->descricao; ?>
 
-	<a href="noticia.php?id=<?php echo $noticia->id; ?>" title="Continue lendo essa notícia">Leia mais &raquo;</a>
+	[Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
 
 
 	<?php
@@ -192,7 +192,7 @@ Fazendo isso, para cada notícia encontrada pela consulta, será criado o seguin
 <h2>Titulo da notícia</h2>
 Descrição da notícia
 
-<a href="noticia.php?id=2" title="Continue lendo essa notícia">Leia mais &raquo;</a>
+[Leia mais &raquo;](noticia.php?id=2)
 
 [/code]
 
@@ -250,7 +250,7 @@ while ($noticia = $resultado->fetch_object()) {
 	<h2><?php echo $noticia->titulo; ?></h2>
 	<?php echo $noticia->descricao; ?>
 
-	<a href="noticia.php?id=<?php echo $noticia->id; ?>" title="Continue lendo essa notícia">Leia mais &raquo;</a>
+	[Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
 
 
 	<?php
@@ -268,7 +268,7 @@ $resultado->free();
 
 Por hoje é só! :)
 
-Faça o download de todos os arquivos desse tutorial: <a href="/arquivos/2010/07/PHP-e-MySQL-Consulta-Simples.zip">PHP-e-MySQL-Consulta-Simples.zip</a>
+Faça o download de todos os arquivos desse tutorial: [PHP-e-MySQL-Consulta-Simples.zip](/arquivos/2010/07/PHP-e-MySQL-Consulta-Simples.zip)
 
 Nas próximas partes desse tutorial iremos ver uma consulta mais complexa (ligando as duas tabelas) e outros scripts para cadastrar e editar notícias.
 

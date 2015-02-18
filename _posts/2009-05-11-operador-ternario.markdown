@@ -70,7 +70,7 @@ $variavel = (!isset($variavel)) ? 'valor padrão' : $variavel;
 ?>
 [/code]
 
-Não se esqueçam de ver a <a href="http://br2.php.net/manual/pt_BR/language.operators.comparison.php" target="_blank">documentação oficial sobre operadores de comparação</a>, dentre os quais está o operador ternário.
+Não se esqueçam de ver a [documentação oficial sobre operadores de comparação](http://br2.php.net/manual/pt_BR/language.operators.comparison.php), dentre os quais está o operador ternário.
 
 Espero que tenham gostado! :)
 

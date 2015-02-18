@@ -90,7 +90,7 @@ Veja um exemplo onde pegamos todas essas informações e salvamos em novas vari�
 Preste atenção que a parte <strong style="color: red">['arquivo']</strong> se deve a propriedade name do input file no lá formulário HTML.
 
 <h3>2.2 - Erros de upload</h3>
-Quando algo der errado com o upload em questão você vai poder verificar o que aconteceu baseando-se no valor da variável $_FILES['arquivo']['error']... Quando ela for diferente de zero é que algo de errado aconteceu e você pode verificar <a href="http://br2.php.net/manual/pt_BR/features.file-upload.errors.php" target="_blank">aqui</a> possíveis valores de erro no upload.
+Quando algo der errado com o upload em questão você vai poder verificar o que aconteceu baseando-se no valor da variável $_FILES['arquivo']['error']... Quando ela for diferente de zero é que algo de errado aconteceu e você pode verificar [aqui](http://br2.php.net/manual/pt_BR/features.file-upload.errors.php) possíveis valores de erro no upload.
 
 <h3>2.3 - Movendo o arquivo para a pasta certa</h3>
 Agora iremos mover o arquivo para a pasta correta caso o upload tenha ocorrido sem problemas:
@@ -166,7 +166,7 @@ Vamos criar uma lista com todos os <strong>mime-types</strong> permitidos e veri
 ?>
 [/code]
 
-Se precisar você ver aqui uma <a href="http://en.wikipedia.org/wiki/Internet_media_type" target="_blank">lista de mime-types</a> usados por cada tipo de arquivo.
+Se precisar você ver aqui uma [lista de mime-types](http://en.wikipedia.org/wiki/Internet_media_type) usados por cada tipo de arquivo.
 
 <h3>4.0 - Validando o tamanho do arquivo enviado</h3>
 Muita gente tem problemas com o tamanho de arquivo enviado pelos usuários pois, dependendo da quantidade e do tipo de arquivo, você rapidamente vai ter GBs e GBs de lixo no seu servidor. Se quiser fazer essa validação, é só fazer assim:

@@ -22,7 +22,7 @@ Sua principal função é mostrar ao usuário uma mensagem e um botão de confir
 
 <div data-gist-id="3959649" data-gist-show-loading="false"></div>
 <h3>Confirmações</h3>
-A função de confirmação é um pouco diferente da função <a href="http://www.linhadecodigo.com.br/artigo/3593/alert-em-javascript.aspx" target="_blank">alert em Javascript</a>, dessa vez são exibidos dois botões, um de OK e outro de CANCELAR, separados por valores true(verdadeiro) e false(falso).
+A função de confirmação é um pouco diferente da função [alert em Javascript](http://www.linhadecodigo.com.br/artigo/3593/alert-em-javascript.aspx), dessa vez são exibidos dois botões, um de OK e outro de CANCELAR, separados por valores true(verdadeiro) e false(falso).
 
 <div data-gist-id="3959658" data-gist-show-loading="false"></div>
 <h3>Prompt</h3>
@@ -31,7 +31,7 @@ O prompt é um pouco diferente do alert() e do confirm(), pois ele necessita que
 Para chamarmos a função utilizamos o prompt(), o qual irá receber uma string(mensagem) que será exibida, normalmente em forma de pergunta, ao usuário.
 
 <div data-gist-id="3959665" data-gist-show-loading="false"></div>
-Você pode ver o código acima, funcionando aqui: <a href="http://jsfiddle.net/58VBG/embedded/result/" target="_blank">http://jsfiddle.net/58VBG/embedded/result/</a>
+Você pode ver o código acima, funcionando aqui: [http://jsfiddle.net/58VBG/embedded/result/](http://jsfiddle.net/58VBG/embedded/result/)
 
-<p style="text-align: center;"><a title="Alert em Javascript" href="http://www.linhadecodigo.com.br/artigo/3593/alert-em-javascript.aspx" target="_blank"><img class="aligncenter" style="box-shadow: none; margin-bottom: 40px;" title="Artigo original - Linha de Código" alt="" src="http://www.linhadecodigo.com.br/img/logolc.png" width="261" height="47" /></a>
+<p style="text-align: center;">[](http://www.linhadecodigo.com.br/artigo/3593/alert-em-javascript.aspx)
 

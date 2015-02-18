@@ -15,7 +15,7 @@ tags:
 - Programador
 - Desenvolvedor
 ---
-Reparei que muita gente aprovou o <a title=""Freelancear ou não freelancear?", eis a questão" href="/freelancear-ou-nao-freelancear-eis-a-questao">artigo anterior</a> mas, depois de lê-lo algumas vezes, percebi que deixei alguns pontos de fora.
+Reparei que muita gente aprovou o [artigo anterior](/freelancear-ou-nao-freelancear-eis-a-questao) mas, depois de lê-lo algumas vezes, percebi que deixei alguns pontos de fora.
 
 <h3>Nem tudo são flores...</h3>
 Vida de freelancer é duzera... Por ser sócio de um coletivo e coordenador de uma equipe, o meus últimos dias (de umas duas semanas pra cá) se resumiram em resolver problemas [dos outros]. Passo o dia respondendo e-mails, tirando dúvidas (não sei por que os programadores são os GURUS da informática, mas isso é assunto pra outro artigo) e principalmente: apontando erros e correções no trabalho dos outros.

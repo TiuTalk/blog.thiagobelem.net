@@ -29,7 +29,7 @@ Veja um exempo de uso:
 < ?php
 // Define uma string com código HTML
 $entrada = '
-Ahá... <a href="mailto: fulaninho@uol.com.br">eu</a> sou <strong>malandrão!</strong>
+Ahá... [eu](mailto: fulaninho@uol.com.br) sou <strong>malandrão!</strong>
 
 ';
 
@@ -46,7 +46,7 @@ Você também pode, se quiser, definir TAGs permitidas, que permanecerão na str
 < ?php
 // Define uma string com código HTML
 $entrada = '
-Ahá... <a href="mailto: fulaninho@uol.com.br">eu</a> sou <strong>malandrão!</strong>
+Ahá... [eu](mailto: fulaninho@uol.com.br) sou <strong>malandrão!</strong>
 
 ';
 
@@ -59,7 +59,7 @@ Ahá... eu sou <strong>malandrão!</strong>
 ?>
 [/code]
 
-» <a href="http://www.php.net/manual/pt_BR/function.strip-tags.php" target="_blank">Documentação da strip_tags()</a>
+» [Documentação da strip_tags()](http://www.php.net/manual/pt_BR/function.strip-tags.php)
 
 <h3>Função htmlspecialchars()</h3>
 A htmlspecialchars não remove as TAGs HTML... Ela escapa o código HTML... Transformando-o em códigos/entidades para exibição... Ou seja, se existe um <span style="color: #888888;"><strong><b></strong></span>Hahá!<span style="color: #888888;"><strong></b></strong></span> na string, vai aparecer tudo, inclusive o <span style="color: #888888;"><strong><b></strong><span style="color: #000000;">...</span><strong></b></strong></span> (e não negrito).
@@ -79,7 +79,7 @@ echo $saida;
 
 Com isso você vai poder saber exatamente o que o espertinho tentou inserir no seu código... :)
 
-» <a href="http://www.php.net/manual/pt_BR/function.htmlspecialchars.php" target="_blank">Documentação da htmlspecialchars()</a>
+» [Documentação da htmlspecialchars()](http://www.php.net/manual/pt_BR/function.htmlspecialchars.php)
 
 <h3>Função mysql_real_escape_string()</h3>
 No quesito segurança, essa é a função mais legal.. Ela serve pra quando você for inserir aquele código malicioso (que o usuário postou) no seu banco de dados... A função escapa todos os caracteres que o MySQL possa vir a usar e se confundir achando que faz parte da sua query...
@@ -116,7 +116,7 @@ INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho\'s')
 
 O que fazer com que o nome seja inserido de forma correta, e quando você fizer um <strong>SELECT</strong> para buscar esse dado, ele virá <strong>Fulaninho's</strong> (sem a barra).
 
-» <a href="http://www.php.net/manual/pt_BR/function.mysql-real-escape-string.php" target="_blank">Documentação da mysql_real_escape_string()</a>
+» [Documentação da mysql_real_escape_string()](http://www.php.net/manual/pt_BR/function.mysql-real-escape-string.php)
 
 ---
 

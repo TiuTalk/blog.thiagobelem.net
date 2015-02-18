@@ -56,8 +56,8 @@ O código está todo comentado, quem tiver alguma dúvida é só comentar e resp
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://us2.php.net/strlen" target="_blank">strlen()</a></strong> » Mede quantos caracteres tem uma string</li>
-<li><strong>Função <a href="http://us2.php.net/trim" target="_blank">trim()</a></strong> » Retira os espaços a esquerda e a direita de uma string</li>
-<li><strong>Função <a href="http://us.php.net/substr" target="_blank">substr()</a></strong> » Corta uma string de X caracteres</li>
-<li><strong>Função <a href="http://us.php.net/strrpos" target="_blank">strrpos()</a></strong> » Encontra a última posição (a partir do início da string) de um(ns) caractere(s) na string</li>
+<li><strong>Função [strlen()](http://us2.php.net/strlen)</strong> » Mede quantos caracteres tem uma string</li>
+<li><strong>Função [trim()](http://us2.php.net/trim)</strong> » Retira os espaços a esquerda e a direita de uma string</li>
+<li><strong>Função [substr()](http://us.php.net/substr)</strong> » Corta uma string de X caracteres</li>
+<li><strong>Função [strrpos()](http://us.php.net/strrpos)</strong> » Encontra a última posição (a partir do início da string) de um(ns) caractere(s) na string</li>
 </ul>

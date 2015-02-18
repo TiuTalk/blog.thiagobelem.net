@@ -65,7 +65,7 @@ Vamos a alguns exemplos de configuração de tempo antes de criar a cron em si:
 0 */2 * * * linha-de-comando
 [/code]
 
-Se você ficou com dificuldade nessa parte do tempo existem alguns <a href="http://www.google.com.br/search?q=cron+job+generator" target="_blank">geradores online de cron jobs</a> que pode te ajudar como <a href="http://www.generateit.net/cron-job/" target="_blank">esse aqui</a>. :)
+Se você ficou com dificuldade nessa parte do tempo existem alguns [esse aqui](http://www.generateit.net/cron-job/). :)
 
 
 
@@ -91,6 +91,6 @@ crontab -l
 Ufa! :D
 
 Pra quem gostou e/ou quer saber mais ficam aqui alguns links:
-» <a href="http://www.thesitewizard.com/general/set-cron-job.shtml" target="_blank">http://www.thesitewizard.com/general/set-cron-job.shtml</a>
-» <a href="http://www.aota.net/Script_Installation_Tips/cronhelp.php3" target="_blank">http://www.aota.net/Script_Installation_Tips/cronhelp.php3</a>
+» [http://www.thesitewizard.com/general/set-cron-job.shtml](http://www.thesitewizard.com/general/set-cron-job.shtml)
+» [http://www.aota.net/Script_Installation_Tips/cronhelp.php3](http://www.aota.net/Script_Installation_Tips/cronhelp.php3)
 

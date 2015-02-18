@@ -91,9 +91,9 @@ Abraços
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong><a href="http://www.php.net/manual/pt_BR/function.array.php" target="_blank">Arrays</a></strong> » Cria um array (matriz com vários elementos)</li>
-<li><strong>Função <a href="http://us3.php.net/strpos" target="_blank">strpos()</a></strong> » Encontra a primeira ocorrencia de uma string em outra string</li>
-<li><strong>Função <a href="http://us3.php.net/mysql_connect" target="_blank">mysql_connect()</a></strong> » Abre uma conexão com o servidor MySQL</li>
-<li><strong>Função <a href="http://us.php.net/mysql_pconnect" target="_blank">mysql_pconnect()</a></strong> » Abre uma conexão <strong>persistente</strong> com o servidor MySQL</li>
-<li><strong>Função <a href="http://us.php.net/mysql_select_db" target="_blank">mysql_select_db()</a></strong> » Conecta-se a um banco de dados disponível no servidor MySQL</li>
+<li><strong>[Arrays](http://www.php.net/manual/pt_BR/function.array.php)</strong> » Cria um array (matriz com vários elementos)</li>
+<li><strong>Função [strpos()](http://us3.php.net/strpos)</strong> » Encontra a primeira ocorrencia de uma string em outra string</li>
+<li><strong>Função [mysql_connect()](http://us3.php.net/mysql_connect)</strong> » Abre uma conexão com o servidor MySQL</li>
+<li><strong>Função [mysql_pconnect()](http://us.php.net/mysql_pconnect)</strong> » Abre uma conexão <strong>persistente</strong> com o servidor MySQL</li>
+<li><strong>Função [mysql_select_db()](http://us.php.net/mysql_select_db)</strong> » Conecta-se a um banco de dados disponível no servidor MySQL</li>
 </ul>

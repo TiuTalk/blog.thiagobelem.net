@@ -16,7 +16,7 @@ tags:
 - Desenvolvedor
 - featured
 ---
-Atendendo ao pedido do <a href="http://twitter.com/hugollm">@hugollm</a>, hoje vou falar pra vocês um pouco sobre a minha vida de Freelancer e como sobreviver nessa selva.
+Atendendo ao pedido do [@hugollm](http://twitter.com/hugollm), hoje vou falar pra vocês um pouco sobre a minha vida de Freelancer e como sobreviver nessa selva.
 
 Como alguns sabem, tenho 21 anos e não estou há muito tempo na estrada... Programo desde os 12 anos e, profissionalmente, a cerca de 4~5 anos.
 
@@ -49,10 +49,10 @@ Qual o problema? Os projetos nunca duram o tempo planejado: o cliente atrasa ou 
 
 No fim das contas eu <strong>consigo tirar, por mês, uns R$ 700~1500 como freelancer</strong>, mesmo trabalhando em quatro ou cinco projetos ao mesmo tempo, como estou agora.
 
-Você precisa se organizar e gerenciar seu dinheiro se quer viver dessa vida. Pra mim o freelancer é um "plus" já que eu me baseio mesmo no meu salário de PJ como Coordenador de Desenvolvimento na <a href="http://www.funarte.gov.br/">Funarte</a>. No total o dinheiro mal dá pra manter minha casa e minha noiva, mas também não falta.
+Você precisa se organizar e gerenciar seu dinheiro se quer viver dessa vida. Pra mim o freelancer é um "plus" já que eu me baseio mesmo no meu salário de PJ como Coordenador de Desenvolvimento na [Funarte](http://www.funarte.gov.br/). No total o dinheiro mal dá pra manter minha casa e minha noiva, mas também não falta.
 
 <h3>Estudo não é tudo, mas é o que te faz sobreviver na selva das inovações</h3>
-Outra dica pra você, jovem aspirante a desenvolvedor e pra você, desenvolvedor cascudo é: estude. Estude muito! Use todo seu tempo livre pra estudar. Acompanhe as novidades, aprenda as mudanças, atualize seus softwares e mantenha-se na crista da onda pra não perder um emprego ou trabalho por que você não sabe atender ao pedido ou responder a pergunta do cliente. Exemplo? Um cliente que queira um projeto usando o "<a href="http://developers.facebook.com/blog/post/358">PHP Hip-hop</a>", você sabe o que é isso?
+Outra dica pra você, jovem aspirante a desenvolvedor e pra você, desenvolvedor cascudo é: estude. Estude muito! Use todo seu tempo livre pra estudar. Acompanhe as novidades, aprenda as mudanças, atualize seus softwares e mantenha-se na crista da onda pra não perder um emprego ou trabalho por que você não sabe atender ao pedido ou responder a pergunta do cliente. Exemplo? Um cliente que queira um projeto usando o "[PHP Hip-hop](http://developers.facebook.com/blog/post/358)", você sabe o que é isso?
 
 <h3>Negue quando não conseguir aprender ou delegar aquilo que você não sabe</h3>
 O que fazer quando você não sabe a tecnologia exigida pelo projeto? Normalmente temos três opções: aprender, delegar ou negar. Ou você aprende a nova tecnologia e agrega mais valor ao seu trabalho, ou você contrata uma pessoa que saiba e delega a tarefa. Ou você nega o serviço, o que nessa vida é perfeitamente aceitável.

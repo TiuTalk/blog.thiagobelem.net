@@ -17,7 +17,7 @@ tags:
 ---
 Fala pessoal! Finalmente de volta com o blog. :)
 
-Hoje trago até vocês uma coisinha muito da legal: o <a href="http://code.google.com/p/zen-coding/" target="_blank">Zen-Coding</a>, apresentado à mim pelo meu amigo implementador <a title="Implementador, HTML e CSS" href="http://www.bernarddeluna.com/" target="_blank">Bernard de Luna</a>.
+Hoje trago até vocês uma coisinha muito da legal: o [Bernard de Luna](http://www.bernarddeluna.com/).
 
 <h3>O que é o Zen-Coding?</h3>
 Segundo o próprio site:
@@ -46,7 +46,7 @@ div#page>div.logo+ul#navigation>li*5>a
 [/code]
 
 <h3>Editores com suporte ao Zen-Coding</h3>
-Você pode baixar o plugin do Zen-Coding no <a href="http://code.google.com/p/zen-coding/" target="_blank">site oficial</a> para os seguintes editores:
+Você pode baixar o plugin do Zen-Coding no [site oficial](http://code.google.com/p/zen-coding/) para os seguintes editores:
 
 <blockquote>Aptana/Eclipse, TextMate (Mac), Coda (Mac), Espresso (Mac), Komodo Edit/IDE, Notepad++ (Windows), PSPad (Windows), <textarea> (browser), editArea (browser), CodeMirror (browser), Dreamweaver (Windows, Mac), Sublime Text (Windows), UltraEdit (Windows), TopStyle (Windows), GEdit, BBEdit/TextWrangler (Mac), Visual Studio (Windows), EmEditor (Windows), Sakura Editor (Windows), NetBeans, IntelliJ IDEA/WebStorm/PHPStorm, Emacs, Vim e Visual Studio
 </blockquote>

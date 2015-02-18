@@ -12,7 +12,7 @@ tags: []
 ---
 Fala pessoal!
 
-Este é o meu primeiro artigo (de muitos) sobre o <a href="http://cakephp.org/" target="_blank"><strong><span style="color: #ff6600;">CakePHP</span></strong></a> aqui no blog... Não vou entrar em detalhes (ainda) sobre o que é e como usar o Cake, mas vou falar de um probleminha que tive por muito tempo e só encontrei a "<span style="color: #000000;">perfeita solução</span>" pra ele esses dias: traduzir o nome dos meses (para inputs de datas) sem alterar o core.
+Este é o meu primeiro artigo (de muitos) sobre o [](http://cakephp.org/) aqui no blog... Não vou entrar em detalhes (ainda) sobre o que é e como usar o Cake, mas vou falar de um probleminha que tive por muito tempo e só encontrei a "<span style="color: #000000;">perfeita solução</span>" pra ele esses dias: traduzir o nome dos meses (para inputs de datas) sem alterar o core.
 
 Essa tradução consiste em usar o sistema de localização que já vem no Cake... Bom, vamos lá:
 

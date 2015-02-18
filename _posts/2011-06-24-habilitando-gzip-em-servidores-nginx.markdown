@@ -22,12 +22,12 @@ Fala pessoal!
 
 Já faz um tempão que não posto um artigo "técnico" aqui, não é mesmo?
 
-Hoje precisei habilitar o <a title="gzip" href="http://www.gzip.org/">gzip</a> na minha VPS que roda <a title="Nginx" href="http://nginx.org/">Nginx</a> (um servidor web <strong>parrudão</strong> que veio pra cutucar o <strong>Apache</strong>)... Depois de pesquisar um pouco, cheguei à uma solução e resolvi repassar. :)
+Hoje precisei habilitar o [Nginx](http://nginx.org/) (um servidor web <strong>parrudão</strong> que veio pra cutucar o <strong>Apache</strong>)... Depois de pesquisar um pouco, cheguei à uma solução e resolvi repassar. :)
 
 <h3>gzoque?</h3>
 Pra quem não sabe, o <strong>gzip</strong> é um método de compressão de arquivos (lembram do ZIP e do RAR?) utilizando também no mundo WEB.. O seu navegador consegue receber um arquivo .js compactado com <strong>gzip</strong> e utilizá-lo da mesma forma.
 
-<a href="http://pt.wikipedia.org/wiki/Gzip">http://pt.wikipedia.org/wiki/Gzip</a>
+[http://pt.wikipedia.org/wiki/Gzip](http://pt.wikipedia.org/wiki/Gzip)
 
 Na maioria dos casos a compressão em gzip atinge uma <strong>redução de 50% do tamanho original</strong>... Por isso ela é muito recomendada na hora de otimizar o carregamento dos sites.
 
@@ -62,7 +62,7 @@ gzip_buffers	16	8k;
 gzip_disable	"MSIE [1-6].(?!.*SV1)";
 [/code]
 
-Gist: <a href="https://gist.github.com/1045708" target="_blank">https://gist.github.com/1045708</a>
+Gist: [https://gist.github.com/1045708](https://gist.github.com/1045708)
 
 Depois é só reiniciar o seu servidor:
 

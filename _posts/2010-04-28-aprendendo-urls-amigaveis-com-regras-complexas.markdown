@@ -18,7 +18,7 @@ tags:
 - Friendly URLs
 - htaccess
 ---
-Como prometido, hoje vou continuar o <a title="Aprendendo URLs amigáveis (Friendly URLs)" href="/aprendendo-urls-amigaveis">tutorial sobre URLs amigáveis</a>... Ontem fizemos uma introdução e explicação básica sobre as regras simples e hoje vamos falar sobre regras mais complexas que usam expressões regulares.
+Como prometido, hoje vou continuar o [tutorial sobre URLs amigáveis](/aprendendo-urls-amigaveis)... Ontem fizemos uma introdução e explicação básica sobre as regras simples e hoje vamos falar sobre regras mais complexas que usam expressões regulares.
 
 <p style="color: gray;"><strong>Atualização 30/04/10</strong>: Adicionei algumas informações extras e fiz algumas correções nas RewriteRules.
 
@@ -82,7 +82,7 @@ Sabendo disso, podemos entender que a expressão regular <code>^[0-9]{3,9}-(.*)$
 
 Poderiamos modificar a expressão regular para: <code>^[0-9]{3,9}-</code> e ela teria o mesmo comportamento pois só precisamos verificar o começo da string... :)
 
-Recomendo que você pare um pouquinho para ler o <a title="Guia de Expressões Regulares" href="http://guia-er.sourceforge.net/">Guia de Expressões Regulares</a>, é muito bom e vai te ajudar a entender melhor uma das sete maravilhas da Informática que é uma Expressão Regular.
+Recomendo que você pare um pouquinho para ler o [Guia de Expressões Regulares](http://guia-er.sourceforge.net/), é muito bom e vai te ajudar a entender melhor uma das sete maravilhas da Informática que é uma Expressão Regular.
 
 Agora vamos voltar a nossa URL Amigável:
 
@@ -153,7 +153,7 @@ Vamos ver mais alguns exemplos que podemos colocar no nosso <code>.htaccess</cod
 </IfModule>
 [/code]
 
-Uma ferramenta que pode ajudá-los a testar expressões regulares é a <a title="RegExr: Online Regular Expression Testing Tool" rel="nofollow" href="http://gskinner.com/RegExr/" target="_blank">RegExr: Online Regular Expression Testing Tool</a>.
+Uma ferramenta que pode ajudá-los a testar expressões regulares é a [RegExr: Online Regular Expression Testing Tool](http://gskinner.com/RegExr/).
 
 Espero realmente que vocês tenham gostado... Amanhã vou tentar abordar outros assuntos e, dependendo do retorno e das dúvidas que vocês deixarem nos comentários, faço outro artigo sobre URLs Amigáveis.
 

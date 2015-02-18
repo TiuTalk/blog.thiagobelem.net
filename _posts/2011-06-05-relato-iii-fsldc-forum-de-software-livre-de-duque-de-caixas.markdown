@@ -27,7 +27,7 @@ tags:
 ---
 <p style="text-align: left;">Ontem foi dia de evento, e evento grande!
 
-Acordei cedo e peguei o trem, saí da cidade do Rio de Janeiro e cheguei em Duque de Caxias para o <a href="http://forumsoftwarelivre.com.br/2011/">3º Fórum de Software Livre de Duque de Caixas</a>.
+Acordei cedo e peguei o trem, saí da cidade do Rio de Janeiro e cheguei em Duque de Caxias para o [3º Fórum de Software Livre de Duque de Caixas](http://forumsoftwarelivre.com.br/2011/).
 
 Dessa vez não encontrei tantos conhecidos, mas o evento foi muito bom.
 
@@ -38,15 +38,15 @@ Dessa vez não encontrei tantos conhecidos, mas o evento foi muito bom.
 
 Na primeira palestra do dia conheci o Maddog, o diretor executivo da Linux International... O cara é um gênio de primeira... Sabe MUITO sobre computadores, Linux e etc.
 
-A palestra dele foi sobre o <a href="http://www.projectcaua.org/">Project Cauã</a>, que visa levar computadores eficientes, funcionais, leves e baratos para residências e empresas, usando antigo modelo dos <em>mainframes</em>, onde havia uma grande central de processamento e vários pequenos "clients" que fariam uso dessa central. A ideia em si não é ruim, seria um mundo muito melhor, porém acho-a um tanto quanto <strong>utópica</strong>.
+A palestra dele foi sobre o [Project Cauã](http://www.projectcaua.org/), que visa levar computadores eficientes, funcionais, leves e baratos para residências e empresas, usando antigo modelo dos <em>mainframes</em>, onde havia uma grande central de processamento e vários pequenos "clients" que fariam uso dessa central. A ideia em si não é ruim, seria um mundo muito melhor, porém acho-a um tanto quanto <strong>utópica</strong>.
 
 <h3>eLua - Desenvolvimento Embedded - Dado Sutter</h3>
-A segunda palestra que assisti (logo após o Coding Dojo) foi sobre desenvolvimento embarcado utilizando <a href="http://www.lua.org/portugues.html">Lua</a>, ou seja, pequenos sistemas feitos em Lua rodando em qualquer dispositivo ou aparelho: de coisas pequenas como <a href="http://pt.wikipedia.org/wiki/Arduino">Arduinos</a> até carros ou aviões.
+A segunda palestra que assisti (logo após o Coding Dojo) foi sobre desenvolvimento embarcado utilizando [Arduinos](http://pt.wikipedia.org/wiki/Arduino) até carros ou aviões.
 
 Eu tenho uma simpatia muito grande por Lua por ser uma linguagem leve, rápida e - pricipalmente - por ter sido <strong>criada no Brasil</strong> e utilizada por todo o mundo.
 
 <h3>Android - Oscar Marques</h3>
-<a href="/assets/uploads/2011/06/android.png"><img class="alignright size-thumbnail wp-image-1572" title="Android" src="/assets/uploads/2011/06/android-150x150.png" alt="" width="150" height="150" /></a>
+[](/assets/uploads/2011/06/android.png)
 
 O Oscar Marques (do <span class="removed_link" title="http://www.androidinrio.com.br/">Android In Rio</span>) é um cara genial, que entende muito de Segurança de Informação, Linux, Android e por último mas não menos importante, armas!
 
@@ -55,23 +55,23 @@ Na palestra ele deu um overview sobre a história e a situação atual do Androi
 <h3>Integração Contínua com Software Livre - Rodrigo Carvalho</h3>
 Outra palestra interessante foi sobre Integração Contínua, uma técnica que agiliza, facilita (e torna muito mais seguro) o <em>deploy</em> (publicação) de software.
 
-O <a href="http://www.rodrigocarvalho.blog.br/">Rodrigo Carvalho</a> nos mostrou algumas ferramentas interessantes para facilitar essa terefa, desde o <em>build</em>, passando pelos testes e até a publicação automática.
+O [Rodrigo Carvalho](http://www.rodrigocarvalho.blog.br/) nos mostrou algumas ferramentas interessantes para facilitar essa terefa, desde o <em>build</em>, passando pelos testes e até a publicação automática.
 
 Infelizmente essa é uma área que eu negligenciei por muito tempo, e tenho vergonha de dizer que ainda faço deploy de alguns sites via FTP, algo que pretendo mudar no futuro.
 
 <h3>Desenvolvimento de aplicações mobile com Python e Android - Tatiana Al Chueyr</h3>
 Essa pra mim foi a segunda melhor palestra do evento, e não seria pra menos:
 
-Nela <a href="http://twitter.com/tati_alchueyr">a palestrante</a>, mostrou (na prática) que dá pra desenvolver aplicativos pra Android <strong>utilizando Python</strong>! Logo eu, que estou extremamente empolgado com Python e morrendo de vontade de aprender a trabalhar com Android?
+Nela [a palestrante](http://twitter.com/tati_alchueyr), mostrou (na prática) que dá pra desenvolver aplicativos pra Android <strong>utilizando Python</strong>! Logo eu, que estou extremamente empolgado com Python e morrendo de vontade de aprender a trabalhar com Android?
 
-Durante a palestra dela, onde ela mostrou alguns exemplos de código Python rodando direto no Android dela, instalei o <a href="http://code.google.com/p/android-scripting/">Scripting Layer for Android (SL4A)</a> no meu Optimus One e comecei a brincar com os scripts de teste.
+Durante a palestra dela, onde ela mostrou alguns exemplos de código Python rodando direto no Android dela, instalei o [Scripting Layer for Android (SL4A)](http://code.google.com/p/android-scripting/) no meu Optimus One e comecei a brincar com os scripts de teste.
 
 <h3>PHP - Rasmus Lerdorf</h3>
-<a href="/assets/uploads/2011/06/DSC08724.jpg"><img class="size-thumbnail wp-image-1578 " title="Rasmus Lerdorf, o criador do PHP" src="/assets/uploads/2011/06/DSC08724-150x150.jpg" alt="" width="150" height="150" /></a>
+[](/assets/uploads/2011/06/DSC08724.jpg)
 
-Preciso dizer que essa foi a melhor <a href="http://talks.php.net/show/fsldc/">palestra</a> do dia? O criador falando sobre sua criação!
+Preciso dizer que essa foi a melhor [palestra](http://talks.php.net/show/fsldc/) do dia? O criador falando sobre sua criação!
 
-Na palestra o <a href="http://twitter.com/rasmus">Rasmus</a> contou a vida dele: onde ele nasceu (Groelândia), onde ele estudou e o mais interessante, onde foi o primeiro emprego dele após sair da faculdade: Porto Alegre, sim minha gente, antes do cara criar o PHP ele tava aqui, no Brasil.
+Na palestra o [Rasmus](http://twitter.com/rasmus) contou a vida dele: onde ele nasceu (Groelândia), onde ele estudou e o mais interessante, onde foi o primeiro emprego dele após sair da faculdade: Porto Alegre, sim minha gente, antes do cara criar o PHP ele tava aqui, no Brasil.
 
 Depois ele falou sobre a história do PHP, como surgiu, como era a primeira versão e o desenvolvimento da linguagem ao longo do tempo. Mostrou também as vantagens do PHP 5.3 e o que estão planejando para a versão 5.4, mostrou algumas features interessantes que muita gente ainda não usa: <em>namespaces</em>, <em>lambda functions</em> e <em>ternary shortcuts</em>.
 
@@ -83,7 +83,7 @@ Durante a parte das perguntas eu fiz uma pergunta e a resposta dele foi surpreen
 
 <em>Eu tenho uma relação muito boa com os criadores dessas linguagens, e sempre que nos encontramos não ficamos discutindo sobre qual é melhor ou pior, e sim como cada um resolveu o problema X e como o pensamento aplicado nas outras linguagens pode ajudar na minha linguagem.</em>
 </blockquote>
-O evento em si foi fantástico, e esse encontro vai ficar na lembrança... O próximo [evento] é o <a href="http://www.devinrio.com.br/">DevInRio</a> e que venham muitos outros!
+O evento em si foi fantástico, e esse encontro vai ficar na lembrança... O próximo [evento] é o [DevInRio](http://www.devinrio.com.br/) e que venham muitos outros!
 
 Vou ficar por aqui pois o post acabou ficando maior do que imaginei. ;)
 

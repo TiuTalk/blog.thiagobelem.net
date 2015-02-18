@@ -28,7 +28,7 @@ Eu vou ensinar o seu desenvolvimento com linguagens de desenvolvimento para web:
 
 <h3>Requisitos</h3>
 <ul>
-<li><span style="font-size: 1rem; line-height: 1.714285714;">Um editor de texto de sua preferência (pode ser até o bloco de notas) sugiro algum com numeração de linhas, e se possível com marcação de código (ficam coloridos xD), eu uso o <a title="Sublime Text 2" href="http://www.sublimetext.com/2">Sublime Text 2</a>, recomendo muito, suporta diversas linguagens, é muito leve e tem algumas opções bem divertidas</span></li>
+<li><span style="font-size: 1rem; line-height: 1.714285714;">Um editor de texto de sua preferência (pode ser até o bloco de notas) sugiro algum com numeração de linhas, e se possível com marcação de código (ficam coloridos xD), eu uso o [Sublime Text 2](http://www.sublimetext.com/2), recomendo muito, suporta diversas linguagens, é muito leve e tem algumas opções bem divertidas</span></li>
 <li><span style="font-size: 1rem; line-height: 1.714285714;">Um conhecimento relativamente pequeno sobre HTML e CSS, basicamente as principais tags e estruturação de uma pagina.</span></li>
 <li><span style="font-size: 1rem; line-height: 1.714285714;">Muita boa vontade e esforço</span></li>
 </ul>

@@ -15,13 +15,13 @@ tags:
 ---
 Fala pessoal, tudo bom? Quanto tempo!
 
-Recentemente tenho trabalho muito em vários projetos e estou com duas turmas do <a title="Assando Sites - Curso online de CakePHP" href="http://assando-sites.com.br/">Assando Sites</a>, o que me deixa praticamente sem tempo pro blog ou qualquer outra coisa.
+Recentemente tenho trabalho muito em vários projetos e estou com duas turmas do [Assando Sites](http://assando-sites.com.br/), o que me deixa praticamente sem tempo pro blog ou qualquer outra coisa.
 
 Na última semana, comecei a ler o livro <strong>TDD - Desenvolvimento Guiado por Testes</strong>, escrito por <strong>Kent Beck</strong> e publicado pela <strong>Bookman</strong>.
 
 <ul>
-<li><a href="http://www.amazon.com/Test-Driven-Development-By-Example/dp/0321146530/">http://www.amazon.com/Test-Driven-Development-By-Example/dp/0321146530/</a></li>
-<li><a href="http://duckduckgo.com/?q=9788577807246">http://duckduckgo.com/?q=9788577807246</a></li>
+<li>[http://www.amazon.com/Test-Driven-Development-By-Example/dp/0321146530/](http://www.amazon.com/Test-Driven-Development-By-Example/dp/0321146530/)</li>
+<li>[http://duckduckgo.com/?q=9788577807246](http://duckduckgo.com/?q=9788577807246)</li>
 </ul>
 O livro é sensacional, na primeira parte ele mostra o passo a passo do desenvolvimento (baseado em TDD, claro) de um mecanismo de conversão monetária. Na segunda parte do livro ele me surpreendeu: começa a criar um framework de testes, usando TDD (claro), porém usando o PRÓPRIO framework de testes pra testar a si mesmo.
 
@@ -35,11 +35,11 @@ Eu adoraria, mas ainda não consegui aplicar TDD em cada projeto que trabalho. C
 <h2>Mas afinal, que diabos é TDD?</h2>
 Me surpreende que a maioria dos desenvolvedores e programadores por ai não saibam o que é TDD... eu mesmo não sabia muito TDD uns 2 anos atrás... e já estou no mercado a mais de 10 anos, imagina quem está começando agora.
 
-Segundo a <a href="https://pt.wikipedia.org/wiki/Test_Driven_Development">Wikipédia</a>, TDD é:
+Segundo a [Wikipédia](https://pt.wikipedia.org/wiki/Test_Driven_Development), TDD é:
 
-<blockquote><strong>Test Driven Development</strong> (TDD) ou em português <strong>Desenvolvimento <del>dirigido</del> guiado por testes</strong> é uma técnica de <a title="Desenvolvimento de software" href="https://pt.wikipedia.org/wiki/Desenvolvimento_de_software">desenvolvimento de software</a> que baseia em um ciclo curto de repetições:
+<blockquote><strong>Test Driven Development</strong> (TDD) ou em português <strong>Desenvolvimento <del>dirigido</del> guiado por testes</strong> é uma técnica de [desenvolvimento de software](https://pt.wikipedia.org/wiki/Desenvolvimento_de_software) que baseia em um ciclo curto de repetições:
 
-Primeiramente o desenvolvedor escreve um <a title="Caso de teste" href="https://pt.wikipedia.org/wiki/Caso_de_teste">caso de teste</a> automatizado que define uma melhoria desejada ou uma nova funcionalidade. Então, é produzido código que possa ser validado pelo teste para posteriormente o código ser <a title="Refatoração" href="https://pt.wikipedia.org/wiki/Refatora%C3%A7%C3%A3o">refatorado</a> para um código sob padrões aceitáveis.
+Primeiramente o desenvolvedor escreve um [refatorado](https://pt.wikipedia.org/wiki/Refatora%C3%A7%C3%A3o) para um código sob padrões aceitáveis.
 
 <strong>Kent Beck</strong>, considerado o criador ou o 'descobridor' da técnica, declarou em 2003 que TDD encoraja designs de código simples e inspira confiança.
 </blockquote>
@@ -53,7 +53,7 @@ Mas por via das dúvidas, pesquisem mais sobre o assunto, tem um mundo por trás
 
 Vamos direto ao ponto e vamos ver um pequeno exemplo de como criar uma função baseada em TDD... e vamos começar pelo exemplo mais simples e usado por todos: o famoso <strong>Fizz Buzz</strong>, que segundo a nossa amiga Wikipédia é:
 
-<blockquote><strong>Bizz buzz</strong> (also known as <strong>fizz buzz</strong>, or simply <strong>buzz</strong>) is a group word game frequently encountered as a <a title="Drinking game" href="https://en.wikipedia.org/wiki/Drinking_game">drinking game</a>. Players take turns to count incrementally, replacing any number divisible by three with the word "bizz", and any number divisible by five with the word "buzz".
+<blockquote><strong>Bizz buzz</strong> (also known as <strong>fizz buzz</strong>, or simply <strong>buzz</strong>) is a group word game frequently encountered as a [drinking game](https://en.wikipedia.org/wiki/Drinking_game). Players take turns to count incrementally, replacing any number divisible by three with the word "bizz", and any number divisible by five with the word "buzz".
 
 Tradução deste que vos fala:
 
@@ -82,7 +82,7 @@ Essas não são todas as regras do jogo, mas já é um bom começo... Cada um de
 Ao longo desse artigo irei copiar essa lista diversas vezes, marcando com <strong>negrito</strong> os itens que iremos atacar, e <del>riscando</del> os itens que forem concluídos.
 
 <h2>Mas peraí... e a linguagem?</h2>
-Verdade... temos que decidir uma linguagem, e como eu falo MUITO de PHP aqui no blog vamos fazer esse FizzBuzz em <strong>Python</strong>, que já vem com um <strong>framework de testes</strong> embutido na linguagem, pra quem quiser brincar de <strong>testes unitários</strong> no PHP recomendo muito o <a href="https://github.com/sebastianbergmann/phpunit/">PHPUnit</a>.
+Verdade... temos que decidir uma linguagem, e como eu falo MUITO de PHP aqui no blog vamos fazer esse FizzBuzz em <strong>Python</strong>, que já vem com um <strong>framework de testes</strong> embutido na linguagem, pra quem quiser brincar de <strong>testes unitários</strong> no PHP recomendo muito o [PHPUnit](https://github.com/sebastianbergmann/phpunit/).
 
 <h3>Baby steps, ou "Passos de bebê"</h3>
 Uma das maiores características do desenvolvimento orientado à testes é que você sempre tente dar passos menores que suas pernas, não significa que você não possa dar uma corrida se o projeto exigir, mas sempre avance com pequenos passos, nada de escrever 100 linhas de código sem testar (com testes)... e eu vou tentar seguir essa metodologia aqui.
@@ -358,6 +358,6 @@ Enfim... TDD é isso!
 Espero que vocês tenham gostado. :D
 
 <ul>
-<li>Versão final do código: <a href="https://gist.github.com/2877917">https://gist.github.com/2877917</a></li>
-<li>Versão final dos testes: <a href="https://gist.github.com/2878018">https://gist.github.com/2878018</a></li>
+<li>Versão final do código: [https://gist.github.com/2877917](https://gist.github.com/2877917)</li>
+<li>Versão final dos testes: [https://gist.github.com/2878018](https://gist.github.com/2878018)</li>
 </ul>

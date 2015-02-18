@@ -18,7 +18,7 @@ tags:
 <p style="padding-left: 30px;"><em>O <strong>WordPress</strong> é uma plataforma semântica de vanguarda para publicação pessoal, com foco na estética, nos Padrões Web e na usabilidade. O WordPress é ao mesmo tempo um software livre e gratuito. Em outras palavras, o WordPress é o que você usa quando você quer trabalhar e não lutar com seu software de publicação de blogs.</em>
 
 <h3>Download do WordPress</h3>
-Para fazer o download é só acessar o <a title="WordPress" href="http://br.wordpress.org/" target="_blank">site ofical do WordPress</a> e fazer o download do arquivo .zip... A última versão - em <strong>português do Brasil</strong> - até a criação desse tópico (<a href="http://br.wordpress.org/wordpress-2.8-pt_BR.zip" target="_blank">2.7</a>) tem só 2.5Mb!
+Para fazer o download é só acessar o [2.7](http://br.wordpress.org/wordpress-2.8-pt_BR.zip)) tem só 2.5Mb!
 
 <h3>Pre-requisitos</h3>
 <span style="color: #888888;">(In)</span>felizmente o WordPress só roda <span style="text-decoration: line-through;">bem</span> no  <strong>Apache</strong> com suporte ao <strong>mod_rewrite</strong> e com <strong>PHP 5.0</strong> ou superior. Acredito que alguns de vocês não sabem o que isso significa, recomendo que tentem instalar e vejam se funciona e/ou perguntem pro pessoal da sua hospedagem. Se o seu servidor for Linux pode ficar tranquilo que vai correr tudo bem.

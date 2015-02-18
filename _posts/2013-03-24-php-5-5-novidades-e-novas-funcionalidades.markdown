@@ -15,14 +15,14 @@ tags:
 - password api
 - yeld
 ---
-O <strong>PHP 5.5</strong> entrou em <a href="http://php.net/archive/2013.php#id2013-03-21-1">estado beta</a> no dia 21 desse mês, e deve ser lançada nos próximos dias.
+O <strong>PHP 5.5</strong> entrou em [estado beta](http://php.net/archive/2013.php#id2013-03-21-1) no dia 21 desse mês, e deve ser lançada nos próximos dias.
 
-Vamos à um resumão das mais interessantes <a href="http://www.php.net/manual/en/migration55.new-features.php">novas funcionalidades</a> que virão com essa atualização.
+Vamos à um resumão das mais interessantes [novas funcionalidades](http://www.php.net/manual/en/migration55.new-features.php) que virão com essa atualização.
 
 Todas essa novidades vão permitir a criação de sistemas e frameworks mais simples e eficientes, pois recursos desse tipo contribuem e muito para um código mais limpo e inteligente! :)
 
 <h2>Generators (ou geradores)</h2>
-<a href="http://www.php.net/manual/en/language.generators.overview.php">Generators</a> são bem comuns em outras linguagens (como Python), eles básicamente te permitem iterar em uma lista que não precisa ser alocada previamente.
+[Generators](http://www.php.net/manual/en/language.generators.overview.php) são bem comuns em outras linguagens (como Python), eles básicamente te permitem iterar em uma lista que não precisa ser alocada previamente.
 
 Por exemplo: você precisa listar todos os números primos de 1 até 1.000.000, uma forma mais simples seria criar uma lista com todos sesses números e depois ir iterando nela, fazendo verificações se esses números são primos e imprimindo-os.. O problema aqui é que você terá uma lista de 1.000.000 de números em memória, o que pode ser custoso pra alguns sistemas.
 
@@ -34,7 +34,7 @@ Veja um exemplo disso funcionando:
 Pra cada iteração o número "da vez" será entregue pelo <strong>yeld</strong>... No exemplo acima o "generator" é a função criada com o nome de <strong>xrange</strong>.
 
 <h2>Foreach com suporte ao método list</h2>
-Agora a função <a href="http://www.php.net/manual/en/control-structures.foreach.php">foreach</a> tem suporte à "desempacotamento" através da função list, veja um exemplo:
+Agora a função [foreach](http://www.php.net/manual/en/control-structures.foreach.php) tem suporte à "desempacotamento" através da função list, veja um exemplo:
 
 <div data-gist-id="5232923" data-gist-show-loading="false"></div>
 <h2>Dereferencing de arrays e strings literais</h2>
@@ -42,5 +42,5 @@ Agora é possível indexar arrays e strings literais, por exemplo:
 
 <div data-gist-id="5232943" data-gist-show-loading="false"></div>
 <h2>API oficial de senhas</h2>
-E por último mas não menos importante, a nova e inédia <a href="/php-5-5-api-de-senhas">API de hashing de senhas</a>, algo bem interessante e que irá "padronizar" de uma vez por todas a questão de hashing/segurança de senhas... E por isso ela merece <a href="/php-5-5-api-de-senhas">um artigo</a> só pra ela.
+E por último mas não menos importante, a nova e inédia [um artigo](/php-5-5-api-de-senhas) só pra ela.
 

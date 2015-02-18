@@ -12,7 +12,7 @@ Fala pessoal!
 
 Estou de volta e hoje vou ensinar pra vocês como manipular os <abbr title="Cookie é um grupo de dados trocados entre o navegador e o servidor de páginas, colocado num arquivo (ficheiro) de texto criado no computador do utilizador."><em>cookies</em></abbr> do seu site usando o PHP.
 
-Antes, vamos à definição de cookie da <a href="http://pt.wikipedia.org/wiki/Cookies" target="_blank">Wikipédia</a>:
+Antes, vamos à definição de cookie da [Wikipédia](http://pt.wikipedia.org/wiki/Cookies):
 
 <blockquote>Cookie é um grupo de dados trocados entre o navegador e o servidor de páginas, colocado num arquivo (ficheiro) de texto criado no computador do utilizador. A sua função principal é a de manter a persistência de sessões HTTP. (...)
 
@@ -38,7 +38,7 @@ setcookie('nome', 'Ciclano', (time() + (2 * 3600)));
 ?>
 [/code]
 
-Você pode reparar que, nos exemplos acima, que a função teve até três parâmetros: <strong>nome do cookie</strong> (1), <strong>valor do cookie</strong> (2) e <strong>duração do cookie</strong> (3). Existem ainda mais quatro parâmetros (pouco comuns) que você poderá usar (<a href="http://us.php.net/setcookie" target="_blank">veja mais aqui</a>).
+Você pode reparar que, nos exemplos acima, que a função teve até três parâmetros: <strong>nome do cookie</strong> (1), <strong>valor do cookie</strong> (2) e <strong>duração do cookie</strong> (3). Existem ainda mais quatro parâmetros (pouco comuns) que você poderá usar ([veja mais aqui](http://us.php.net/setcookie)).
 
 Se você não definir o tempo de vida (duração) de um cookie, ele irá durar o tempo que o browser permanecer aberto. Para definir o tempo de vida do cookie é só somar o número de segundos desejados ao resultado da função time(), por exemplo: cinco horas são 18000 segundos, então ficaria: <strong>18000 + time()</strong>, ou <strong>(3600 * 5) + time()</strong>. Uma dica: cada hora tem 3600 segundos e cada dia tem 86400 segundos.
 
@@ -57,7 +57,7 @@ $valor = $_COOKIE['nome']; // Ciclano
 ?>
 [/code]
 
-Vale lembrar que o cookie precisa existir para você pegar o seu valor... Se ele passou da validade (expirou) ele não existe mais, então é sempre bom fazer uma verificação com a função <a title="Documentação da função isset()" href="http://br2.php.net/manual/pt_BR/function.isset.php" target="_blank">isset()</a> do PHP.
+Vale lembrar que o cookie precisa existir para você pegar o seu valor... Se ele passou da validade (expirou) ele não existe mais, então é sempre bom fazer uma verificação com a função [isset()](http://br2.php.net/manual/pt_BR/function.isset.php) do PHP.
 
 Se por algum motivo você precisar deletar algum cookie é só não definir um valor para ele, fazendo dessa forma:
 
@@ -94,7 +94,7 @@ Até a próxima ;-)
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br.php.net/setcookie" target="_blank">setcookie()</a></strong> » Cria e deleta cookies</li>
-<li><strong>Função <a href="http://br.php.net/isset" target="_blank">isset()</a></strong> » Verifica se uma variável existe</li>
-<li><strong>Função <a href="http://br.php.net/print_r" target="_blank">print_r()</a></strong> » Exibe todos os elementos e valores de um array</li>
+<li><strong>Função [setcookie()](http://br.php.net/setcookie)</strong> » Cria e deleta cookies</li>
+<li><strong>Função [isset()](http://br.php.net/isset)</strong> » Verifica se uma variável existe</li>
+<li><strong>Função [print_r()](http://br.php.net/print_r)</strong> » Exibe todos os elementos e valores de um array</li>
 </ul>

@@ -10,7 +10,7 @@ tags: []
 ---
 Fala pessoal!
 
-<a href="/arquivos/2009/04/wb_diagam_zoomed_out_small1.png"><img class="size-medium wp-image-408" title="mysql-workbench" src="http://blog.thiagobelem.net/arquivos/2009/04/wb_diagam_zoomed_out_small1-300x238.png" alt="MySQL Workbench" width="200" height="158" /></a>
+[](/arquivos/2009/04/wb_diagam_zoomed_out_small1.png)
 
 Às vezes precisamos estruturar o banco de dados de um site que médio/grande porte e começamos a nos perder em tantas tabelas e dados relacionados... Isso é mais comum do que parece, não se assuste. :)
 
@@ -20,7 +20,7 @@ O MySQL Workbench (também conhecido como <strong>DBDesigner</strong>)  é uma 
 
 É bem fácil trabalhar com ele. Depois de criar tudo você exporta um arquivo <strong>.sql</strong> com o código SQL para criar todas as tabelas, relações e etc... vai no seu servidor e importa o arquivo e voi-la! Está tudo lá, criado e organizado pra você.
 
-Pra quem quiser fazer o download do MySQL Workbench é só ir no <a title="MySQL Workbench" rel="nofollow" href="http://wb.mysql.com/" target="_blank">site dele</a>, no <a title="MySQL" rel="nofollow" href="http://www.mysql.com/" target="_blank">site da MySQL</a> ou direto a <a rel="nofollow" href="http://dev.mysql.com/downloads/workbench/5.1.html" target="_blank">página de downloads</a>.
+Pra quem quiser fazer o download do MySQL Workbench é só ir no [página de downloads](http://dev.mysql.com/downloads/workbench/5.1.html).
 
 Espero que tenham gostado da dica. ;)
 

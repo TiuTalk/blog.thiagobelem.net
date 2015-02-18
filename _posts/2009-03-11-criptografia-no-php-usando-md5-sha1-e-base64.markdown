@@ -9,7 +9,7 @@ categories:
 - Segurança
 tags: []
 ---
-Veja um artigo mais atualizado em: <a href="/criptografando-senhas-no-php-usando-bcrypt-blowfish" title="Criptografando senhas no PHP usando bcrypt (Blowfish)">Criptografando senhas no PHP usando bcrypt (Blowfish)</a>
+Veja um artigo mais atualizado em: [Criptografando senhas no PHP usando bcrypt (Blowfish)](/criptografando-senhas-no-php-usando-bcrypt-blowfish)
 
 <hr />
 Hoje vou falar sobre três tipos de codificação/criptografia (na verdade, <strong>hash</strong>) muito usados no PHP.
@@ -80,8 +80,8 @@ No próximo post explicarei como criar as suas próprias funções no PHP. Até 
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br.php.net/md5" target="_blank">md5()</a></strong> » Hash de mão única</li>
-<li><strong>Função <a href="http://br.php.net/sha1" target="_blank">sha1()</a></strong> » Hash de mão única</li>
-<li><strong>Função <a href="http://br.php.net/base64_encode" target="_blank">base64_encode()</a></strong> » Função para codificar strings usando base64</li>
-<li><strong>Função <a href="http://br.php.net/base64_decode" target="_blank">base64_decode()</a></strong> » Função para decodificar strings usando base64</li>
+<li><strong>Função [md5()](http://br.php.net/md5)</strong> » Hash de mão única</li>
+<li><strong>Função [sha1()](http://br.php.net/sha1)</strong> » Hash de mão única</li>
+<li><strong>Função [base64_encode()](http://br.php.net/base64_encode)</strong> » Função para codificar strings usando base64</li>
+<li><strong>Função [base64_decode()](http://br.php.net/base64_decode)</strong> » Função para decodificar strings usando base64</li>
 </ul>

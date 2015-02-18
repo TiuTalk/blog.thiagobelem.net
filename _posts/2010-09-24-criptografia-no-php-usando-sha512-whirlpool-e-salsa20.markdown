@@ -23,10 +23,10 @@ Todos os três são criptografias de alto nível que geram strings de 128 caract
 
 Todos os três são criptografias de mão única, ou seja, a única coisa que você pode fazer com a string depois de criptografada é comparar com outra string para ver as duas são iguais... Não há como "descriptografar" a string gerada por esses algoritmos.
 
-Para usar esses métodos de encriptação você precisará usar a função <a title="hash()" href="http://br2.php.net/manual/pt_BR/function.hash.php" target="_blank">hash()</a> do PHP.
+Para usar esses métodos de encriptação você precisará usar a função [hash()](http://br2.php.net/manual/pt_BR/function.hash.php) do PHP.
 
 <h3>SHA-512</h3>
-O <a href="http://en.wikipedia.org/wiki/SHA-2">SHA-512</a> é a versão melhorada do SHA-265, que por sua vez é uma versão muito melhor do SHA-1.
+O [SHA-512](http://en.wikipedia.org/wiki/SHA-2) é a versão melhorada do SHA-265, que por sua vez é uma versão muito melhor do SHA-1.
 
 Para encriptar uma string usando <strong>SHA-512</strong>, no PHP, você pode fazer assim:
 
@@ -51,7 +51,7 @@ O resultado dessa encriptação com SHA-512 é algo assim (quebrei em três linh
 6d252aa5272cbf1b1ec44978e302d5f7b7cd4641
 </blockquote>
 <h3>Whirlpool</h3>
-O <a href="http://en.wikipedia.org/wiki/Whirlpool_(cryptography)">Whirlpool</a> é um pouco mais lento que o SHA-512 e, conseqüentemente, mais "entrópico", ou seja: mais seguro.
+O [Whirlpool](http://en.wikipedia.org/wiki/Whirlpool_(cryptography)) é um pouco mais lento que o SHA-512 e, conseqüentemente, mais "entrópico", ou seja: mais seguro.
 
 Para encriptar uma string usando <strong>Whirlpool</strong>, no PHP, você pode fazer assim:
 
@@ -74,7 +74,7 @@ c07c7843bf91a86f4374d3697924e3c396cfeb777b56
 d38700c41e032c21c4fce52d5f59024969536c74
 </blockquote>
 <h3>Salsa20</h3>
-E por fim, mas tão poderoso quanto, o <a href="http://en.wikipedia.org/wiki/Salsa20">Salsa20</a> é outro algoritmo de encriptação que irá gerar uma string de 128 caracteres. O Salsa20 foi criado para encriptação de stremings/transmissões, mas pode ser usado com strings simples também.
+E por fim, mas tão poderoso quanto, o [Salsa20](http://en.wikipedia.org/wiki/Salsa20) é outro algoritmo de encriptação que irá gerar uma string de 128 caracteres. O Salsa20 foi criado para encriptação de stremings/transmissões, mas pode ser usado com strings simples também.
 
 Para encriptar uma string usando <strong>Salsa20</strong>, no PHP, você pode fazer assim:
 

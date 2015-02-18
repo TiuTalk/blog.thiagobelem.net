@@ -42,6 +42,6 @@ Até a próxima. ;-)
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br.php.net/sleep" target="_blank">sleep()</a></strong> » Pausa o script em segundos</li>
-<li><strong>Função <a href="http://br.php.net/usleep" target="_blank">usleep()</a></strong> » Pausa o script em milhonésimos de segundos</li>
+<li><strong>Função [sleep()](http://br.php.net/sleep)</strong> » Pausa o script em segundos</li>
+<li><strong>Função [usleep()](http://br.php.net/usleep)</strong> » Pausa o script em milhonésimos de segundos</li>
 </ul>

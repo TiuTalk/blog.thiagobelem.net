@@ -12,7 +12,7 @@ tags:
 - PHP 5.4
 - servidor interno
 ---
-Uma das <a title="PHP 5.4 – Novidades e novas funcionalidades" href="/php-5-4-novas-funcionalidades">funcionalidades implementadas do PHP 5.4</a> é o servidor interno, que permite que você teste e desenvolva sites localmente sem a necessidade de servidores como <strong>Apache</strong> ou <strong>Nginx</strong>.
+Uma das [funcionalidades implementadas do PHP 5.4](/php-5-4-novas-funcionalidades) é o servidor interno, que permite que você teste e desenvolva sites localmente sem a necessidade de servidores como <strong>Apache</strong> ou <strong>Nginx</strong>.
 
 Este é um recurso que eu já havia visto em linguagens como <strong>Python</strong> e <strong>Ruby</strong>, mas (até onde eu sei) nunca haviam criado algo do tipo para PHP.
 
@@ -35,7 +35,7 @@ Isso fará com que todas as requisições sejam redirecionadas para o arquivo <s
 <div data-gist-id="4029806" data-gist-show-loading="false"></div>
 Espero que vocês tenham gostado (e façam um bom uso) dessa nova funcionalidade que o <strong>PHP 5.4</strong> nos trouxe. :)
 
-Não se esqueça de ler a documentação oficial: <a href="http://php.net/manual/features.commandline.webserver.php" target="_blank">http://php.net/manual/features.commandline.webserver.php</a>
+Não se esqueça de ler a documentação oficial: [http://php.net/manual/features.commandline.webserver.php](http://php.net/manual/features.commandline.webserver.php)
 
 <h2>Não use em produção!</h2>
 <blockquote>This web server is designed for developmental purposes only, and should not be used in production.

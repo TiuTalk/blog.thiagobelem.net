@@ -66,7 +66,7 @@ Um outro ponto importante do XHTML é o DOCTYPE que informa a definição do XHT
 [code language="html"]
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 [/code]
-O <strong>DOCTYPE Strict</strong> deve ser usado quando se cumpre todas as especificações do XHTML e ele não validará enquanto TUDO não foi 100% correto e seguindo os <a href="http://www.w3.org/TR/xhtml1/" target="_blank">padrões</a> definidos pelo W3C.
+O <strong>DOCTYPE Strict</strong> deve ser usado quando se cumpre todas as especificações do XHTML e ele não validará enquanto TUDO não foi 100% correto e seguindo os [padrões](http://www.w3.org/TR/xhtml1/) definidos pelo W3C.
 [code language="html"]
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 [/code]
@@ -77,5 +77,5 @@ E tem o <strong>DOCTYPE Frameset</strong> que você vai usar quando seu site tiv
 
 Até a próxima! :)
 
-<p style="text-align: right; font-size: 10px">Fonte: <a href="http://www.phpbuilder.com/columns/marc_plotz06302009.php3" target="_blank">PHPBuilder.com</a>
+<p style="text-align: right; font-size: 10px">Fonte: [PHPBuilder.com](http://www.phpbuilder.com/columns/marc_plotz06302009.php3)
 

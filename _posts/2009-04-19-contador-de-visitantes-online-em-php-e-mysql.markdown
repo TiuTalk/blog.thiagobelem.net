@@ -200,7 +200,7 @@ Visitantes online: <?php echo visitantesOnline(); ?>!
 
 <strong>visitantesRecorde($formato)</strong>
 
-Com essa função você vai receber um array, contendo dois elementos: primeiro a data do recorde, depois o recorde de visitas. Você pode, se quiser, formatar a data retornada (seguindo os parâmetros da função <a href="http://br2.php.net/manual/pt_BR/function.date.php" target="_blank">date()</a>).
+Com essa função você vai receber um array, contendo dois elementos: primeiro a data do recorde, depois o recorde de visitas. Você pode, se quiser, formatar a data retornada (seguindo os parâmetros da função [date()](http://br2.php.net/manual/pt_BR/function.date.php)).
 
 Para usá-la você precisará fazer da seguinte forma:
 

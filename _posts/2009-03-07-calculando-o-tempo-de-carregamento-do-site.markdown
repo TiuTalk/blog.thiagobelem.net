@@ -64,7 +64,7 @@ Vale lembrar que esse tempo calculado pelo php <strong>não é</strong> o tempo 
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br.php.net/microtime" target="_blank">microtime()</a></strong> » Retorna os microsegundos desde 1970</li>
-<li><strong>Função <a href="http://us.php.net/explode" target="_blank">explode()</a></strong> » Quebra uma string usando um(ns) carectere(s) como separador</li>
-<li><strong>Função <a href="http://us.php.net/round" target="_blank">round()</a></strong> » Arredonda um valor numérico real</li>
+<li><strong>Função [microtime()](http://br.php.net/microtime)</strong> » Retorna os microsegundos desde 1970</li>
+<li><strong>Função [explode()](http://us.php.net/explode)</strong> » Quebra uma string usando um(ns) carectere(s) como separador</li>
+<li><strong>Função [round()](http://us.php.net/round)</strong> » Arredonda um valor numérico real</li>
 </ul>

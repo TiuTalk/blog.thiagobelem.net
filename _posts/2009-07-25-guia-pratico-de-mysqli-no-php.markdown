@@ -86,7 +86,7 @@ Como vocês podem ver a sintaxe dos comandos SQL não mudam em nada... O que mud
 
 Uma coisa que eu não falei aqui e que é o grande forte do MySQLi são os "<em>prepared statements</em>" que falarei em um artigo durante essa semana mesmo.
 
-Quem quiser mais detalhes é só dar uma olhada na <a href="http://br2.php.net/manual/pt_BR/book.mysqli.php" target="_blank">documentação oficial</a>.
+Quem quiser mais detalhes é só dar uma olhada na [documentação oficial](http://br2.php.net/manual/pt_BR/book.mysqli.php).
 
 Espero que tenham gostado!
 

@@ -17,7 +17,7 @@ Essa semana várias pessoas me pediram para (re)fazer um artigo ensinando como g
 
 Pra tentar uma abordagem diferente dos outros artigos, eu vou fazer dizer o que você precisa fazer, passo-a-passo, e só depois coloco o código completo, será que dá certo assim? Afinal.. Fiz esse blog pra ensinar, e não pra mostrar que sei. ;)
 
-Bom.. Como viram no meu tópico ensinando sobre <a title="Lendo um Feed RSS com PHP" href="/lendo-um-feed-rss-com-php" target="_blank">como ler um Feed RSS com PHP</a>, existe uma classe pronta do PHP chamada <strong>SimpleXMLElement</strong> e iremos usá-la para gerar o nosso Feed RSS.
+Bom.. Como viram no meu tópico ensinando sobre [como ler um Feed RSS com PHP](/lendo-um-feed-rss-com-php), existe uma classe pronta do PHP chamada <strong>SimpleXMLElement</strong> e iremos usá-la para gerar o nosso Feed RSS.
 
 Na descrição de RSS na Wikipédia temos:
 
@@ -27,9 +27,9 @@ Na descrição de RSS na Wikipédia temos:
 
 --
 
-Eu vou ensinar a fazer um Feed RSS com um item, e depois mostrarei um exemplo de como seria se estivéssemos pegando as notícias de um banco de dados. <strong>Atenção:</strong> o formato do RSS aqui criado segue os <a href="http://cyber.law.harvard.edu/rss/rss.html" target="_blank">padrões e especificações do RSS 2.0</a>.
+Eu vou ensinar a fazer um Feed RSS com um item, e depois mostrarei um exemplo de como seria se estivéssemos pegando as notícias de um banco de dados. <strong>Atenção:</strong> o formato do RSS aqui criado segue os [padrões e especificações do RSS 2.0](http://cyber.law.harvard.edu/rss/rss.html).
 
-Vamos ao que interessa... A classe <a href="http://www.php.net/manual/pt_BR/book.simplexml.php" target="_blank">SimpleXMLElement</a> já foi compilada junto com as versões atuais do PHP, então você não precisa instalar nada.. É só chamar a classe e sair brincando.
+Vamos ao que interessa... A classe [SimpleXMLElement](http://www.php.net/manual/pt_BR/book.simplexml.php) já foi compilada junto com as versões atuais do PHP, então você não precisa instalar nada.. É só chamar a classe e sair brincando.
 
 Primeiro chamamos a classe:
 
@@ -88,7 +88,7 @@ $canal->addChild('description', 'Este é o meu primeiro RSS, uha!');
 ?>
 [/code]
 
-Existem outros sub-elementos de channel, mas são todos opcionais... Veja a lista completa deles <a href="http://cyber.law.harvard.edu/rss/rss.html#optionalChannelElements" target="_blank">aqui</a>.
+Existem outros sub-elementos de channel, mas são todos opcionais... Veja a lista completa deles [aqui](http://cyber.law.harvard.edu/rss/rss.html#optionalChannelElements).
 
 E com isso, o nosso RSS ficará com um formato assim:
 
@@ -143,7 +143,7 @@ $item->addChild('pubDate', date('r'));
 
 Cada <strong><item></strong> representa uma entrada do RSS, seria cada uma das notícias de um site de notícias, ou cada um dos artigos de um blog ou cada um dos apartamentos do site de uma imobiliária. A ordem dos <strong><item>s</strong> deve ser é do mais recente para o mais antigo.
 
-Os três sub-elementos obrigatórios dos <strong><item>s</strong> são: o <strong><title></strong>, o <strong><link></strong>e o <strong><description></strong>... Existem vários outros sub-elemtos (<a href="http://cyber.law.harvard.edu/rss/rss.html#hrelementsOfLtitemgt" target="_blank">lista</a>), um exemplo comum é o <strong><pubDate></strong> (coloquei ele no 2º item) que representa a data de publicação do <item> em questão, e segue o formato <strong>RFC 733</strong>, por exemplo: <em>Thu, 21 Dec 2000 16:01:07 +0200</em>. Esse formato pode ser obtido pelo parâmetro <span style="color: #0000ff;"><strong>r</strong></span> passado para a função date() do PHP.
+Os três sub-elementos obrigatórios dos <strong><item>s</strong> são: o <strong><title></strong>, o <strong><link></strong>e o <strong><description></strong>... Existem vários outros sub-elemtos ([lista](http://cyber.law.harvard.edu/rss/rss.html#hrelementsOfLtitemgt)), um exemplo comum é o <strong><pubDate></strong> (coloquei ele no 2º item) que representa a data de publicação do <item> em questão, e segue o formato <strong>RFC 733</strong>, por exemplo: <em>Thu, 21 Dec 2000 16:01:07 +0200</em>. Esse formato pode ser obtido pelo parâmetro <span style="color: #0000ff;"><strong>r</strong></span> passado para a função date() do PHP.
 
 Depois de inserir os dois itens o formato do nosso RSS está concluído, ficando assim:
 
@@ -232,7 +232,7 @@ exit;
 
 --
 
-<img style="margin: 0px; float: right;" src="http://validator.w3.org/feed/images/valid-rss.png" alt="" />Ahh, e pra quem for interessado e sistemático: <a href="http://validator.w3.org/feed/" target="_blank">validador de RSS do W3C</a>.
+<img style="margin: 0px; float: right;" src="http://validator.w3.org/feed/images/valid-rss.png" alt="" />Ahh, e pra quem for interessado e sistemático: [validador de RSS do W3C](http://validator.w3.org/feed/).
 
 Espero que tenham gostado e que façam os seus XML's e RSS's com essa classe de agora em diante.. fica mais rápido!  :)
 

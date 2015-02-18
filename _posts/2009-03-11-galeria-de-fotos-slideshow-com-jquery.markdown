@@ -12,15 +12,15 @@ tags: []
 ---
 Hoje vou ensinar a criar uma galeria de fotos (ou <em>slideshow</em>) usando o jQuery. Pra quem ainda não sabe: o jQuery é um <abbr title="Em desenvolvimento de software, um framework ou arcabouço é uma abstração que une códigos comuns entre vários projetos de software provendo uma funcionalidade genérica. Um framework pode atingir uma funcionalidade específica, por configuração, durante a programação de uma aplicação.">framework</abbr> de JavaScript desenvolvido para codificação rápida (leia-se <strong>relâmpago</strong>).
 
-O lema do <a href="http://jquery.com/" target="_blank">jQuery</a> é <em>The Write Less, do More</em> que em bom português significa "Escreva menos, faça mais". E é exatamente isso que o jQ te proporciona: fazer muito mais funcionalidades e efeitos com muito menos código.
+O lema do [jQuery](http://jquery.com/) é <em>The Write Less, do More</em> que em bom português significa "Escreva menos, faça mais". E é exatamente isso que o jQ te proporciona: fazer muito mais funcionalidades e efeitos com muito menos código.
 
-<a href="/exemplo1" target="_blank">Veja um exemplo on-line do resultado desta aula.</a>
+[Veja um exemplo on-line do resultado desta aula.](/exemplo1)
 
 Pra aula de hoje você vai precisar de - <strong>apenas</strong> - duas coisas:
 
 <ol>
-<li>Última versão do <strong>jQuery</strong>: <a href="http://jquery.com/" target="_blank">http://jquery.com/</a> <span style="color: #999999;">- Clique no botão <em><strong>Download ( jQuery );</strong></em></span></li>
-<li>Última versão do plugin <strong>jCycle</strong> para jQuery: <a href="http://malsup.com/jquery/cycle/" target="_blank">http://malsup.com/jquery/cycle/</a></li>
+<li>Última versão do <strong>jQuery</strong>: [http://jquery.com/](http://jquery.com/) <span style="color: #999999;">- Clique no botão <em><strong>Download ( jQuery );</strong></em></span></li>
+<li>Última versão do plugin <strong>jCycle</strong> para jQuery: [http://malsup.com/jquery/cycle/](http://malsup.com/jquery/cycle/)</li>
 </ol>
 Depois de ter feito o download dos dois arquivos .js é só incluí-los no seu site assim:
 
@@ -62,7 +62,7 @@ Com isso você definiu qual a div que contem o slideshow (repare que o ID da div
 
 Mas só isso? Sim. Você já tem um slideshow, automático, com efeito de transição <em>fade</em> pronto pra ser usado!
 
-<a href="/exemplo1" target="_blank">Veja como ficou a galeria criada neste exemplo.</a>
+[Veja como ficou a galeria criada neste exemplo.](/exemplo1)
 
 No site do jCycle você vai ver dezenas de outros exemplos de transições e opções que podem ser usadas na chamada do jCycle. Teste-os, você vai adorar!
 

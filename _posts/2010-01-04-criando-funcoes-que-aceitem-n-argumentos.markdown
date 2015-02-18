@@ -13,9 +13,9 @@ tags:
 - Argumentos
 - Funções
 ---
-Hoje vou mostrar pra vocês como é facil criar uma função que aceite um número indeterminado de argumentos, é o mesmo caso das funções <a href="http://www.php.net/manual/pt_BR/function.min.php" target="_blank">min()</a> e <a href="http://www.php.net/manual/pt_BR/function.max.php" target="_blank">max()</a>, onde você pode passar 1, 2 ou 200 argumentos e ela irá funcionar perfeitamente.
+Hoje vou mostrar pra vocês como é facil criar uma função que aceite um número indeterminado de argumentos, é o mesmo caso das funções [max()](http://www.php.net/manual/pt_BR/function.max.php), onde você pode passar 1, 2 ou 200 argumentos e ela irá funcionar perfeitamente.
 
-O ponto-chave desse tipo de função é o uso de duas outras funções nativas do PHP, são elas: <a href="http://www.php.net/manual/pt_BR/function.func-num-args.php" target="_blank">func_num_args()</a> e <a href="http://www.php.net/manual/pt_BR/function.func-get-args.php" target="_blank">func_get_args()</a>.
+O ponto-chave desse tipo de função é o uso de duas outras funções nativas do PHP, são elas: [func_get_args()](http://www.php.net/manual/pt_BR/function.func-get-args.php).
 
 A função <strong>func_num_args()</strong> (quando usada dentro de uma outra função) retorna o número de argumentos que foram passados para essa função. E a função <strong>func_get_args()</strong> retorna uma lista (array) com os argumentos que foram passados para essa função.
 

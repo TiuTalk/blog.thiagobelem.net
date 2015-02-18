@@ -112,8 +112,8 @@ echo "O segundo item da lista é: " . $lista[1];
 Vale lembrar, que quando estamos trabalhando com índices numéricos (ordenados), a posição inicial é a zero, então a quarta posição será o índice<span style="color: #000080;"><strong> [<span style="color: #0000ff;">3</span>]</strong></span>.
 
 Veja também:
-» <a href="http://pt.wikipedia.org/wiki/Array" target="_blank">Array (Wikipédia)</a>
-» <a href="http://br2.php.net/manual/pt_BR/language.types.array.php" target="_blank">Documentação (do PHP) sobre Arrays</a>
+» [Array (Wikipédia)](http://pt.wikipedia.org/wiki/Array)
+» [Documentação (do PHP) sobre Arrays](http://br2.php.net/manual/pt_BR/language.types.array.php)
 
 <h3>Arrays multi-dimensionais</h3>
 Não vou me aprofundar no assunto... mas você pode definir um array onde um ou mais elementos sejam arrays. Nesse caso o array não pode mais ser chamado de <strong>lista</strong>, e deve ser chamado de <strong>vetor</strong> ou <strong>array</strong> mesmo. Veja um exemplo básico de definição e exibição:
@@ -138,5 +138,5 @@ echo "A terceira cor do meu " . $carro['modelo'] . " é: " . $carro['cores'][2];
 
 Espero que tenham gostado... Não falei ainda as funções de manipulação de arrays, o que vai ficar para um outro dia.
 
-Abraços e qualquer dica, dúvida, ou sugestão, é só falar! E não esqueçam de assinar o <a title="Feed RSS" href="http://feeds2.feedburner.com/ThiagoBelem/Blog" target="_blank">Feed RSS</a> do blog. :)
+Abraços e qualquer dica, dúvida, ou sugestão, é só falar! E não esqueçam de assinar o [Feed RSS](http://feeds2.feedburner.com/ThiagoBelem/Blog) do blog. :)
 

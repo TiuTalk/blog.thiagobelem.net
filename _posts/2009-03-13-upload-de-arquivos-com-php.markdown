@@ -96,7 +96,7 @@ $nome_final = $_FILES['arquivo']['name'];
 if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_final)) {
 // Upload efetuado com sucesso, exibe uma mensagem e um link para o arquivo
 echo "Upload efetuado com sucesso!";
-echo '<a href="' . $_UP['pasta'] . $nome_final . '">Clique aqui para acessar o arquivo</a>';
+echo '[Clique aqui para acessar o arquivo](' . $_UP['pasta'] . $nome_final . ')';
 } else {
 // Não foi possível fazer o upload, provavelmente a pasta está incorreta
 echo "Não foi possível enviar o arquivo, tente novamente";
@@ -123,8 +123,8 @@ Espero que tenham gostado!
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br.php.net/move_uploaded_file" target="_blank">move_uploaded_file()</a></strong> » Move um arquivo que foi enviado para o servidor</li>
-<li><strong>Função <a href="http://br.php.net/time" target="_blank">time()</a></strong> » Retorna o UNIX TIMESTAMP atual</li>
-<li><strong>Função <a href="http://br.php.net/strtolower" target="_blank">strtolower()</a></strong> » Altera uma string para ficar com as letras minúsculas</li>
-<li><strong>Função <a href="http://br.php.net/array_search" target="_blank">array_search()</a></strong> » Faz uma busca entre os elementos do array</li>
+<li><strong>Função [move_uploaded_file()](http://br.php.net/move_uploaded_file)</strong> » Move um arquivo que foi enviado para o servidor</li>
+<li><strong>Função [time()](http://br.php.net/time)</strong> » Retorna o UNIX TIMESTAMP atual</li>
+<li><strong>Função [strtolower()](http://br.php.net/strtolower)</strong> » Altera uma string para ficar com as letras minúsculas</li>
+<li><strong>Função [array_search()](http://br.php.net/array_search)</strong> » Faz uma busca entre os elementos do array</li>
 </ul>

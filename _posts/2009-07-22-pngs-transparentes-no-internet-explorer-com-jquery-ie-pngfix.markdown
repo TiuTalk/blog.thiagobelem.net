@@ -19,11 +19,11 @@ tags:
 ---
 Hoje vou falar sobre outra forma de "IE PNGFix" (Exibição de PNGs transparentes no Internet Explorer 6 ou inferior)...
 
-Existe um <em>plugin</em> de jQuery chamado <strong>jQuery PNG Fix</strong>, pra quem quiser ver/testar um exemplo dele, é só ir no <a href="http://jquery.andreaseberhard.de/pngFix/" target="_blank">site do plugin</a>.
+Existe um <em>plugin</em> de jQuery chamado <strong>jQuery PNG Fix</strong>, pra quem quiser ver/testar um exemplo dele, é só ir no [site do plugin](http://jquery.andreaseberhard.de/pngFix/).
 
 A vantagem de usar esse script é que ele funciona com IE 5.5, 6 e 7, não atrapalha o uso de outros scripts (unobtrusive) e funciona com imagens linkadas, fundos em CSS e mantém todos os atributos e propriedades (alt, title, class, style e etc.) das imagens.
 
-Para usá-lo no seu site, é muito simples... Primeiro insira o <a href="http://jquery.andreaseberhard.de/pngFix/jquery.pngFix.js" target="_blank">script do pngFix</a> dentro do <head> do seu site:
+Para usá-lo no seu site, é muito simples... Primeiro insira o [script do pngFix](http://jquery.andreaseberhard.de/pngFix/jquery.pngFix.js) dentro do <head> do seu site:
 
 
 [code language="html"]

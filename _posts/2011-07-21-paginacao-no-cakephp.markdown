@@ -30,7 +30,7 @@ tags:
 ---
 Opa opa! Estou de volta :)
 
-Tenho recebido algumas dúvidas sobre como usar/fazer <a href="http://book.cakephp.org/view/1231/Pagination">paginação no CakePHP</a>, e resolvi ensinar pra vocês como eu resolvo esse problema...
+Tenho recebido algumas dúvidas sobre como usar/fazer [paginação no CakePHP](http://book.cakephp.org/view/1231/Pagination), e resolvi ensinar pra vocês como eu resolvo esse problema...
 
 Você vai que precisamos de exatamente <strong>duas linhas</strong> pra fazer uma consulta paginada no CakePHP, e mais duas linhas pra mostrar os links de "pŕoximo" e "anterior". :)
 
@@ -123,16 +123,16 @@ echo $this->Paginator->next('Mais antigas »', null, null, array('class' => 'des
 
 Na linha 1 e 3 nós mostramos os links para a <strong>próxima página</strong> e para a <strong>página anterior</strong>. Já na linha 2 nós mostramos aquela lista de números das páginas:<strong> 1, 2, 3, 4</strong> cada uma com um link!
 
-O <strong>PaginatorHelper</strong> tem muitas outras opções e customizações, não deixe de consultar a <a href="http://api.cakephp.org/class/paginator-helper">documentação</a>.
+O <strong>PaginatorHelper</strong> tem muitas outras opções e customizações, não deixe de consultar a [documentação](http://api.cakephp.org/class/paginator-helper).
 
 <h3>Quer saber mais sobre o CakePHP?</h3>
-<a href="http://assando-sites.com.br/"><img src="/assets/uploads/2011/07/cookie.png" alt="Assando Sites, curso online de CakePHP" title="Assando Sites, curso online de CakePHP" width="128" height="128" class="alignright size-full wp-image-1737" /></a>
+[](http://assando-sites.com.br/)
 
-Inscreva-se no meu <strong>curso online</strong> de CakePHP, o <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br" target="_blank">Assando Sites</a>!
+Inscreva-se no meu <strong>curso online</strong> de CakePHP, o [Assando Sites](http://assando-sites.com.br)!
 
 Você aprende sem sair de casa, aos domingos ou quando preferir assistir os vídeos gravados em aula. :)
 
-Para saber mais informações sobre o curso, <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br" target="_blank">acesse o site</a> ou leia <a title="Curso online de CakePHP" href="/curso-online-de-cakephp" target="_blank">este post aqui no blog</a>.
+Para saber mais informações sobre o curso, [este post aqui no blog](/curso-online-de-cakephp).
 
 Um grande abraço e até a próxima!
 

@@ -11,7 +11,7 @@ categories:
 - SEO
 tags: []
 ---
-Não gente! <strong>SEO</strong> não é a versão, em emuxês, de "seu". Não façam essa confusão, pelo amor da <a title="Ada Lovelace" href="http://pt.wikipedia.org/wiki/Ada_Lovelace" target="_blank">Santa Ada</a>!
+Não gente! <strong>SEO</strong> não é a versão, em emuxês, de "seu". Não façam essa confusão, pelo amor da [Santa Ada](http://pt.wikipedia.org/wiki/Ada_Lovelace)!
 
 Viemos falar de <strong>SEO</strong>, a sigla para <strong>S</strong>earch <strong>E</strong>ngine <strong>O</strong>ptimization, que em bom português significa "Otimização para Mecanismos de Buca" ou, como alguns preferem "ser amigo do Google".
 
@@ -35,40 +35,40 @@ Antigamente a coisa era diferente, mas hoje em dia os seguintes elementos fazem 
 Sabendo disso, é fácil tentar enganar os <em><abbr title="rastreadores dos sistemas de busca">spiders</abbr></em> e com isso conseguir um bom posicionamento... Foi aí que surgiu a<strong> busca orgânica </strong>do Google.
 
 <h2>Busca Orgânica</h2>
-O Google iniciou um novo conceito de rastreamento de sites baseado na avaliação (automática) de cada site, criando assim um <a title="PageRank" href="http://pt.wikipedia.org/wiki/PageRank" target="_blank">PageRank</a>. O PR funciona, basicamente, da seguinte forma: Para cada link, que um site externo aponta para o seu site, você ganha mais pontos..  E quanto mais famoso for esse site, mais pontos você ganha. É simples e indiscutível.
+O Google iniciou um novo conceito de rastreamento de sites baseado na avaliação (automática) de cada site, criando assim um [PageRank](http://pt.wikipedia.org/wiki/PageRank). O PR funciona, basicamente, da seguinte forma: Para cada link, que um site externo aponta para o seu site, você ganha mais pontos..  E quanto mais famoso for esse site, mais pontos você ganha. É simples e indiscutível.
 
 Esse novo conceito permitiu que usuários não tão avançados conseguissem que seus sites fossem indexados de forma justa... Pois não é todo mundo que sabe a diferença de <strong><b></strong> e <strong><strong></strong> ou <strong><i></strong> e <strong><em></strong>. :)
 
 <h2>Conseguindo o seu lugar ao Sol</h2>
 Hoje em dia, se você quer que seu site apareça nos resultados de busca, você ainda precisa enviar ele para os buscadores, é o "básico do SEO"... Mas você também precisa que algum outro site (já indexado pelo sistema de busca) aponte um link para o seu site que ele vai começar a vasculhar suas páginas atras de conteúdos e imagens.
 
-Você pode usar um recurso, comum a todos os sistemas de busca, chamado <a title="robots.txt" href="http://pt.wikipedia.org/wiki/Robots.txt" target="_blank">robots.txt</a> que diz o que o sistema de busca pode ou não ver no seu site.
+Você pode usar um recurso, comum a todos os sistemas de busca, chamado [robots.txt](http://pt.wikipedia.org/wiki/Robots.txt) que diz o que o sistema de busca pode ou não ver no seu site.
 
 Existem também, nos sistemas mais famosos, áreas para os WebMasters gerenciares como o spider vai interagir com seu site e ver estatísticas de indexação e todos aqueles gráficos que nós adoramos. Veja alguns dos links:
 
 <ul>
-<li><a title="Google Webmasters Tools" rel="external" href="http://www.google.com/webmasters/">Google Webmasters Tools</a></li>
-<li><a title="Yahoo! Search Content Quality Guidelines" rel="external" href="http://help.yahoo.com/l/us/yahoo/search/basics/basics-18.html">Yahoo! Search Content Quality Guidelines</a></li>
+<li>[Google Webmasters Tools](http://www.google.com/webmasters/)</li>
+<li>[Yahoo! Search Content Quality Guidelines](http://help.yahoo.com/l/us/yahoo/search/basics/basics-18.html)</li>
 <li><span class="removed_link" title="http://help.live.com/help.aspx?mkt=pt-br&project=wl_webmasters">MSN</span></li>
 </ul>
 Outros endereços que podem te ajudar:
 
 <ul>
-<li><a title="http://www.google.com/webmasters/seo.html" rel="external" href="http://www.google.com/support/webmasters/bin/answer.py?answer=35291">Práticas Recomendadas pelo Google em SEO</a></li>
-<li><a title="http://www.google.com/webmasters/guidelines.html" rel="external" href="http://www.google.com/support/webmasters/bin/answer.py?answer=35769">Práticas Recomendadas pelo Google em Site Design</a></li>
+<li>[Práticas Recomendadas pelo Google em SEO](http://www.google.com/support/webmasters/bin/answer.py?answer=35291)</li>
+<li>[Práticas Recomendadas pelo Google em Site Design](http://www.google.com/support/webmasters/bin/answer.py?answer=35769)</li>
 <li><span class="removed_link" title="http://help.live.com:80/help.aspx?mkt=en-us&project=wl_webmasters">Práticas Recomendadas pela MSN Search para Indexação de Sites</span></li>
 <li>Práticas Recomendadas pelo Yahoo! Search para Criação de Conteúdo</li>
-<li><a href="http://pt.wikipedia.org/wiki/Otimiza%C3%A7%C3%A3o_para_Sistemas_de_Busca" target="_blank">Otimização para mecanismos de busca</a> e <a href="http://pt.wikipedia.org/wiki/Motor_de_busca" target="_blank">motores de busca</a></li>
+<li>[motores de busca](http://pt.wikipedia.org/wiki/Motor_de_busca)</li>
 </ul>
 Um outro recurso, que vale a pena procurar sobre, são os <strong>sitemaps</strong>.
 
 Veja algumas planílhas indispensáveis para uma boa estruturação do SEO do seu site:
 
 <ul>
-<li><a href="http://www.scribd.com/The-Web-Developers-SEO-Cheat-Sheet/d/2976807" target="_blank">Web Developer SEO Cheat Sheet</a></li>
-<li><a href="http://www.scottklarr.com/topic/94/html-and-xhtml-cheat-sheets/" target="_blank">HTML and XHTML cheat sheets</a></li>
+<li>[Web Developer SEO Cheat Sheet](http://www.scribd.com/The-Web-Developers-SEO-Cheat-Sheet/d/2976807)</li>
+<li>[HTML and XHTML cheat sheets](http://www.scottklarr.com/topic/94/html-and-xhtml-cheat-sheets/)</li>
 <li><span class="removed_link" title="http://www.e3internet.com/tools/search-engine-query-cheatsheets/">Search Cheat Sheet</span></li>
-<li><a href="http://www.usereffect.com/topic/25-point-website-usability-checklist" target="_blank">Usability Checklist</a></li>
+<li>[Usability Checklist](http://www.usereffect.com/topic/25-point-website-usability-checklist)</li>
 </ul>
 --
 

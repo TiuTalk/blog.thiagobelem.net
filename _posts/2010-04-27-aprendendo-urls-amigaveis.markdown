@@ -65,13 +65,13 @@ Todos esses formatos são definidos por você, mas você vai perceber que é pre
 Vale ressaltar que o que faremos aqui não é restrito a PHP, isso funcionará com qualquer outra linguagem desde que estejamos rodando o servidor com Apache. Claro que há outras formas de fazer URLs Amigáveis em servidores como IIS e etc. mas não vou falar sobre isso aqui.
 
 <h3>Criando a sua primeira URL Amigável</h3>
-Infelizmente, o mundo não é um mar de rosas e você vai precisar aprender um pouquinho de <a title="Expressões Regulares - Wikipédia" href="http://pt.wikipedia.org/wiki/Express%C3%A3o_regular" target="_blank">Expressões Regulares</a> antes de conseguir sair fazendo regras, mas felizmente existem ótimos <a title="Expressões Regulares" href="http://guia-er.sourceforge.net/" target="_blank">guias</a> na Internet e eu já falei um pouco sobre o assunto em <a title="Validação de e-mail no PHP com Expressões Regulares" href="/validacao-de-e-mail-no-php-com-expressoes-regulares">um artigo</a> aqui no blog.
+Infelizmente, o mundo não é um mar de rosas e você vai precisar aprender um pouquinho de [um artigo](/validacao-de-e-mail-no-php-com-expressoes-regulares) aqui no blog.
 
-Recomendo que, antes de mais nada, se você entende um mínimo de inglês e quer realmente conseguir usar URLs Amigáveis da melhor forma no seu site, leia a <a title="Documentação do mod_rewrite" href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html" target="_blank">documentação do mod_rewrite</a> no site da Apache, e acredite: essa documentação é realmente importante e significativa.
+Recomendo que, antes de mais nada, se você entende um mínimo de inglês e quer realmente conseguir usar URLs Amigáveis da melhor forma no seu site, leia a [documentação do mod_rewrite](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html) no site da Apache, e acredite: essa documentação é realmente importante e significativa.
 
 Vamos começar com o exemplo da página de contato que atualmente você acessa pelo endereço <code>http://www.meusite.com.br/contato.php</code>.
 
-Vá até a raiz do seu site e edite (ou crie) um arquivo chamado .htaccess (<a title=".htaccess - Wikipédia" href="http://en.wikipedia.org/wiki/Htaccess" target="_blank">leia mais aqui</a>), e dentro dele coloque as seguintes linhas que explicarei mais a diante:
+Vá até a raiz do seu site e edite (ou crie) um arquivo chamado .htaccess ([leia mais aqui](http://en.wikipedia.org/wiki/Htaccess)), e dentro dele coloque as seguintes linhas que explicarei mais a diante:
 
 
 [code language="plain"]
@@ -110,11 +110,11 @@ Na parte <span style="background: cyan; color: black;"> azul </span> temos os c�
 
 --
 
-Por hoje vamos ficar por aqui... Amanhã continuarei o tutorial falando sobre a <a title="Aprendendo URLs amigáveis com regras complexas" href="/aprendendo-urls-amigaveis-com-regras-complexas">reescrita de URLs mais complexas</a>, que contenham valores variáveis como os exemplos <code>meusite.com/produtos/<span style="background: yellow;">camisetas</span>/</code> e <code>meusite.com/noticias/<span style="background: yellow;">minha-noticia/2</span>/</code>.
+Por hoje vamos ficar por aqui... Amanhã continuarei o tutorial falando sobre a [reescrita de URLs mais complexas](/aprendendo-urls-amigaveis-com-regras-complexas), que contenham valores variáveis como os exemplos <code>meusite.com/produtos/<span style="background: yellow;">camisetas</span>/</code> e <code>meusite.com/noticias/<span style="background: yellow;">minha-noticia/2</span>/</code>.
 
 Um grande abraço, uma boa noite e até amanhã!
 
-<strong>Continue lendo:</strong> <a title="Aprendendo URLs amigáveis com regras complexas" href="/aprendendo-urls-amigaveis-com-regras-complexas">Aprendendo URLs amigáveis com regras complexas</a>
+<strong>Continue lendo:</strong> [Aprendendo URLs amigáveis com regras complexas](/aprendendo-urls-amigaveis-com-regras-complexas)
 
 Deixe um comentário com a sua opinião! Não custa nada e ainda me ajuda a escrever tutoriais melhores para todos vocês! :)
 

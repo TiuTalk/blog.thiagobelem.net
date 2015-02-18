@@ -65,7 +65,7 @@ else
 
 ?>
 [/code]
-Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é tão dificil assim perceber onde começa e termina cada bloco... Há um <a href="http://en.wikipedia.org/wiki/Indent_style" title="Estilos de Indentação" target="_blank">artigo na Wikipédia</a> que mostra os vários estilos de indentação.
+Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é tão dificil assim perceber onde começa e termina cada bloco... Há um [artigo na Wikipédia](http://en.wikipedia.org/wiki/Indent_style) que mostra os vários estilos de indentação.
 
 <br/>
 
@@ -153,7 +153,7 @@ Uma vez ouvi um profissional da área dizendo "<em>enquanto uma linha de código
 
 Espero que tenham gostado! :D
 
-Se você estiver procurando algum material mais detalhado e técnico, recomendo a leitura do documento <a href="http://www.walkeralencar.com/PHPCodeStandards.pdf" title="PHP Coding Standards" target="_blank">PHP Coding Standards</a> do <a href="http://blog.walkeralencar.com" target="_blank" title="Walker Alencar">Walker Alencar</a>.
+Se você estiver procurando algum material mais detalhado e técnico, recomendo a leitura do documento [Walker Alencar](http://blog.walkeralencar.com).
 
-<p style="font-size: 10px; text-align: right; color: silver">Fonte: <a href="http://net.tutsplus.com/" title="Nettuts+">Nettuts+</a>
+<p style="font-size: 10px; text-align: right; color: silver">Fonte: [Nettuts+](http://net.tutsplus.com/)
 

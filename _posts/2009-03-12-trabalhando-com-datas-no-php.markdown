@@ -79,8 +79,8 @@ Abraços e até a próxima!
 
 <h4>Documentação Oficial:</h4>
 <ul>
-<li><strong>Função <a href="http://br2.php.net/manual/en/function.date.php" target="_blank">date()</a></strong> » Função para formatar datas</li>
-<li><strong>Função <a href="http://br.php.net/time" target="_blank">time()</a></strong> » Retorna o UNIX TIMESTAMP atual</li>
-<li><strong>Função <a href="http://br.php.net/mktime" target="_blank">mktime()</a></strong> » Cria um timestamp em função de seus argumentos (uma data específica)</li>
-<li><strong>Função <a href="http://br.php.net/strtotime" target="_blank">strtotime()</a></strong> » Gera o timestamp de uma data em formato textual</li>
+<li><strong>Função [date()](http://br2.php.net/manual/en/function.date.php)</strong> » Função para formatar datas</li>
+<li><strong>Função [time()](http://br.php.net/time)</strong> » Retorna o UNIX TIMESTAMP atual</li>
+<li><strong>Função [mktime()](http://br.php.net/mktime)</strong> » Cria um timestamp em função de seus argumentos (uma data específica)</li>
+<li><strong>Função [strtotime()](http://br.php.net/strtotime)</strong> » Gera o timestamp de uma data em formato textual</li>
 </ul>

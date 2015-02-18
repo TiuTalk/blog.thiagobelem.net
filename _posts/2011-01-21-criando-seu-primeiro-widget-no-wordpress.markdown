@@ -16,9 +16,9 @@ tags:
 - WordPress
 - Widget
 ---
-Fala minha gente!! Trago até vocês mais um artigo sobre desenvolvimento, dessa sobre <strong>WordPress</strong>! (Atendendo o pedido do <a href="https://twitter.com/PhelippdeAvila" target="_blank">Phelipp de Avila</a>, que me segue no Twitter)
+Fala minha gente!! Trago até vocês mais um artigo sobre desenvolvimento, dessa sobre <strong>WordPress</strong>! (Atendendo o pedido do [Phelipp de Avila](https://twitter.com/PhelippdeAvila), que me segue no Twitter)
 
-Segundo a <a href="http://codex.wordpress.org/Widgets_API" target="_blank">documentação oficial sobre widgets do WordPress</a> você deve criar Widgets utilizando um modelo de classe definido por eles, que é o que vou ensinar no artigo de hoje.
+Segundo a [documentação oficial sobre widgets do WordPress](http://codex.wordpress.org/Widgets_API) você deve criar Widgets utilizando um modelo de classe definido por eles, que é o que vou ensinar no artigo de hoje.
 
 Nesse exemplo, iremos criar um <strong>widget de "Sobre o autor"</strong>, que pode ser inserido no sidebar geral do blog (ou num sidebar específico para posts)... Esse widget irá verificar se estamos em um post (que o WordPress chama de <em>single</em>), e caso estejamos, irá exibir o <strong>nome</strong>, o <strong>avatar</strong> e a <strong>descrição</strong> do autor do post, todos esses dados vindos diretamente do banco de dados do WordPress.
 
@@ -175,7 +175,7 @@ Feito isso é só começar a exibir o HTML do Widget:
 		echo "{$autor['descricao']}
 ";
 		if (isset($instancia['link_autor']) && $instancia['link_autor']) {
-			echo 'Visite o <a href="'. $autor['link'] .'" title="'. $autor['nome'] .'" rel="nofollow" target="_blank">site do autor</a>
+			echo 'Visite o [site do autor]('. $autor['link'] .')
 ';
 		}
 		echo $argumentos['after_widget'];
@@ -192,7 +192,7 @@ add_action('widgets_init', create_function('', 'return register_widget("SobreAut
 
 Espero que tenham gostado! Agora é só você editar o CSS do seu blog para deixar o widget bem apresentável. ;)
 
-Faça o download do código-fonte completo do widget: <a href="/arquivos/widget_sobre-autor.class.phps" title="Widget - Sobre o autor (código fonte)" target="_blank">http://blog.thiagobelem.net/arquivos/widget_sobre-autor.class.phps</a>
+Faça o download do código-fonte completo do widget: [http://blog.thiagobelem.net/arquivos/widget_sobre-autor.class.phps](/arquivos/widget_sobre-autor.class.phps)
 
 Gostou do artigo? Criou um widget pro seu blog? Comente como foi! Diga o que você conseguiu fazer! :)
 

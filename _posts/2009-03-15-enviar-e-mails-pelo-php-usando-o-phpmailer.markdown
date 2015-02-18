@@ -14,9 +14,9 @@ Hoje vou ensinar como usar o PHPMailer para enviar os e-mails do seu site - via 
 
 O PHPMailer é uma classe pronta para envio de e-mails através do PHP via conexão SMTP ou POP3 muito utilizado por todo o mundo. Seu método de envio é largamente recomendado e é bem melhor do que o envio do mail() que á função padrão do PHP.
 
-Primeiro você precisa fazer o download da última versão dele, vá <a title="Download do PHPMailer" href="http://sourceforge.net/projects/phpmailer/files/" target="_blank">nesse endereço</a> e baixe a sua versão ou vá direto ao <a title="Site do PHPMailer" href="http://phpmailer.worxware.com/" target="_blank">site do script</a>.
+Primeiro você precisa fazer o download da última versão dele, vá [site do script](http://phpmailer.worxware.com/).
 
-<strong>Nota: </strong>Nesse tutorial usarei a versão 2.3 (<a href="http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/Previous%20Versions/PHPMailer%20v2.3%20for%20PHP5_6/phpMailer_v2.3.zip/download" target="_blank">download</a>) do <strong>PHPMailer </strong>que é a última versão até agora.
+<strong>Nota: </strong>Nesse tutorial usarei a versão 2.3 ([download](http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/Previous%20Versions/PHPMailer%20v2.3%20for%20PHP5_6/phpMailer_v2.3.zip/download)) do <strong>PHPMailer </strong>que é a última versão até agora.
 
 Faça o download, descompacte o arquivo e coloque os arquivos <strong>class.phpmailer.php</strong> e <strong>class.smtp.php</strong> em uma pasta chamada <strong>phpmailer</strong> dentro do seu site.
 
@@ -89,7 +89,7 @@ echo "<b>Informações do erro:</b> " . $mail->ErrorInfo;
 
 Algumas linhas de código estão comentadas porque são opcionais e dependem também da necessidade de quem vai usar o script. Logo no começo, na parte dos dados do servidor você tem a opção de configurar o login do servidor SMTP caso seja necessário.
 
-Repare que, na parte na qual definimos a mensagem e o assunto do e-mail, temos duas formas de "corpo de e-mail": formato HTML e formato Texto Plano... É bom que você também defina o <a title="Descrição de texto plano na Wikipédia" href="http://pt.wikipedia.org/wiki/Texto_plano" target="_blank">texto plano</a> (que nada mais é do que um texto sem as tags HTML parecido com o conteúdo de um arquivo .txt) por que muitos leitores de e-mail não têm suporte a e-mails em HTML (seja por configuração do usuário ou por falta de funcionalidade mesmo).
+Repare que, na parte na qual definimos a mensagem e o assunto do e-mail, temos duas formas de "corpo de e-mail": formato HTML e formato Texto Plano... É bom que você também defina o [texto plano](http://pt.wikipedia.org/wiki/Texto_plano) (que nada mais é do que um texto sem as tags HTML parecido com o conteúdo de um arquivo .txt) por que muitos leitores de e-mail não têm suporte a e-mails em HTML (seja por configuração do usuário ou por falta de funcionalidade mesmo).
 
 Deixei também um exemplo pronto de como anexar um arquivo ao seu e-mail. O caminho do arquivo (primeiro arquivo) está nos moldes de um servidor rodando localmente... Mas ele pode ser relativo se você estiver usando o script num servidor externo. O segundo argumento é o 'novo' nome do arquivo, mas é opcional.
 

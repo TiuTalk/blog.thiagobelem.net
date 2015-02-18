@@ -16,13 +16,13 @@ tags:
 - os x
 - homebrew
 ---
-Atualmente estou usando Mac durante alguns dias da semana, e como pretendo voltar a escrever artigos para o blog, precisei instalar o <a title="PHP 5.4 – Novidades e novas funcionalidades" href="/php-5-4-novas-funcionalidades">PHP 5.4</a> no OS X mas não queria usar nenhum pacotão como o <a href="http://www.mamp.info/">Mamp</a>.
+Atualmente estou usando Mac durante alguns dias da semana, e como pretendo voltar a escrever artigos para o blog, precisei instalar o [Mamp](http://www.mamp.info/).
 
-Como estou usando o <a href="http://mxcl.github.io/homebrew/">Brew</a> para gerenciamento e instalação de pacotes, preferi não <a title="Instalando o PHP 5.3+ no Ubuntu" href="/instalando-o-php-5-3-3-no-ubuntu-10-10-maverick">compilar o PHP</a> (manualmente) e busquei um solução que fizesse uso dele.
+Como estou usando o [compilar o PHP](/instalando-o-php-5-3-3-no-ubuntu-10-10-maverick) (manualmente) e busquei um solução que fizesse uso dele.
 
-Outro ponto é que não queria instalar o Apache pois o PHP 5.4 já tem um <a title="PHP 5.4 – Servidor interno" href="/php-5-4-servidor-interno">servidor interno</a> que serve muito bem para o meu propósito.
+Outro ponto é que não queria instalar o Apache pois o PHP 5.4 já tem um [servidor interno](/php-5-4-servidor-interno) que serve muito bem para o meu propósito.
 
-Curiosamente, a solução que encontrei faz uso do repositório <a href="https://github.com/josegonzalez/homebrew-php">homebrew-php</a>, de um dos mantenedores do <strong>CakePHP</strong> :)
+Curiosamente, a solução que encontrei faz uso do repositório [homebrew-php](https://github.com/josegonzalez/homebrew-php), de um dos mantenedores do <strong>CakePHP</strong> :)
 
 <h2>Instalando o PHP 5.4 com Homebrew</h2>
 <div data-gist-id="5373512" data-gist-show-loading="false"></div>

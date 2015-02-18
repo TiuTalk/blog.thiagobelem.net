@@ -90,10 +90,10 @@ if (defined('SITE') == false) {
 [/code]
 
 <h3>Documentação</h3>
-» Capítulo <a href="http://www.php.net/manual/pt_BR/language.constants.php" target="_blank">constantes</a>
-» Função <a href="http://www.php.net/manual/pt_BR/function.define.php" target="_blank">define()</a>
-» Função <a href="http://www.php.net/manual/pt_BR/function.constant.php" target="_blank">constant()</a>
-» Função <a href="http://www.php.net/manual/pt_BR/function.defined.php" target="_blank">defined()</a>
+» Capítulo [constantes](http://www.php.net/manual/pt_BR/language.constants.php)
+» Função [define()](http://www.php.net/manual/pt_BR/function.define.php)
+» Função [constant()](http://www.php.net/manual/pt_BR/function.constant.php)
+» Função [defined()](http://www.php.net/manual/pt_BR/function.defined.php)
 
 --
 

@@ -25,7 +25,7 @@ Essa semana saiu a <strong>versão stable</strong> do <strong>CakePHP 2.0</stron
 
 Resolvi escrever esse post para ajudá-lo a atualizar sua aplicação, mas antes vamos para algumas perguntas e pontos que as pessoas levantaram nas listas e grupos ligados ao CakePHP.
 
-Recomendo muito a leitura do <a href="http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php" target="_blank">guia de migração</a>, lá na documentação oficial do CakePHP 2.0.
+Recomendo muito a leitura do [guia de migração](http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php), lá na documentação oficial do CakePHP 2.0.
 
 <h3>"Atualizar ou não atualizar?", eis a questão</h3>
 Recomendo fortemente que você atualize suas aplicações que atualmente rodam em CakePHP 1.3, ainda mais se elas seguirem os padrões do Cake e você não <strong>mudou nada no core</strong>.
@@ -33,12 +33,12 @@ Recomendo fortemente que você atualize suas aplicações que atualmente rodam e
 A nova versão traz inúmeras melhorias, otimizações e padronizações... O CakePHP em si tá mais rápido e leve, usando recusos nativos da linguagem e usando <strong>LazyLoad</strong> (só carrega quando for usar) em vários pontos da aplicação.
 
 <h3>Não é melhor deixar tudo do jeito que tá e começar do zero?</h3>
-Estou trabalhando no novo site do meu curso online de CakePHP - <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br/" target="_blank">Assando Sites</a> - que começou sendo criado na versão 1.3 mas ontem parei para atualizá-lo pra versão 2.0, fui lendo a documentação e fazendo os ajustes... demorei menos de 1 hora e não usei scripts prontos.
+Estou trabalhando no novo site do meu curso online de CakePHP - [Assando Sites](http://assando-sites.com.br/) - que começou sendo criado na versão 1.3 mas ontem parei para atualizá-lo pra versão 2.0, fui lendo a documentação e fazendo os ajustes... demorei menos de 1 hora e não usei scripts prontos.
 
 <h3>O que mudou na versão nova?</h3>
 Recomendo que você leia essa página na documentação oficial:
 
-<a href="http://book.cakephp.org/2.0/en/appendices/new-features-in-cakephp-2-0.html">http://book.cakephp.org/2.0/en/appendices/new-features-in-cakephp-2-0.html</a>
+[http://book.cakephp.org/2.0/en/appendices/new-features-in-cakephp-2-0.html](http://book.cakephp.org/2.0/en/appendices/new-features-in-cakephp-2-0.html)
 
 <h2>Atualizando seu projeto</h2>
 Na minha opinião, o trabalho de atualizar/migrar o projeto para a nova versão foi bem tranquilo... diria que muito pouca coisa de código mudou (exceto arquivos que já vêm no APP como config, database, index.php e etc.). A maior mudança - na minha opinião - foi a estrutura de pastas e nomenclatura de arquivos.
@@ -170,21 +170,21 @@ O CakePHP vinha com várias funções-atalho que serviam pra reduzir o tamanho d
 
 Veja uma lista dessas funções (e suas alternativas) aqui:
 
-<a href="http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php" target="_blank">http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php</a>
+[http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php](http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php)
 
 <h3>Finalizando</h3>
 Agora você já pode começar a tentar rodar o seu projeto e ir resolvendo qualquer problema que apareça...
 
-Essas não são TODAS as mudanças que você precisará fazer no seu projeto, mas isso já cuida de grande parte das mudanças... Agora você precisará fazer ajustes e em alguns de seus components, RequestHandler e etc... Vale muito a pena ler o <a href="http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php" target="_blank">guia de migração</a>.
+Essas não são TODAS as mudanças que você precisará fazer no seu projeto, mas isso já cuida de grande parte das mudanças... Agora você precisará fazer ajustes e em alguns de seus components, RequestHandler e etc... Vale muito a pena ler o [guia de migração](http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php).
 
 Um grande abraço e espero que tenham gostado! :)
 
 <h2>Quer aprender CakePHP, já com todas as vantagens da versão 2.0, sem sair de casa?</h2>
-<a href="http://assando-sites.com.br/"><img src="/assets/uploads/2011/07/cookie.png" alt="Assando Sites, curso online de CakePHP" title="Assando Sites, curso online de CakePHP" width="128" height="128" class="alignright size-full wp-image-1737"></a>
+[](http://assando-sites.com.br/)
 
-Inscreva-se no meu <strong>curso online</strong> de CakePHP, o <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br/" target="_blank">Assando Sites</a>! As próximas turmas já serão feitas utilizando o CakePHP 2.0 como padrão!
+Inscreva-se no meu <strong>curso online</strong> de CakePHP, o [Assando Sites](http://assando-sites.com.br/)! As próximas turmas já serão feitas utilizando o CakePHP 2.0 como padrão!
 
 As aulas são ao-vivo e você aprende sem sair de casa, aos domingos ou quando preferir assistir os vídeos gravados em aula. <img src="http://blog.thiagobelem.net/wp-includes/images/smilies/icon_smile.gif" alt=":)" />
 
-Para saber mais informações sobre o curso, <a title="Assando Sites, curso online de CakePHP" href="http://assando-sites.com.br/" target="_blank">acesse o site</a> ou leia <a title="Curso online de CakePHP" href="/curso-online-de-cakephp" target="_blank">este post aqui no blog</a>.
+Para saber mais informações sobre o curso, [este post aqui no blog](/curso-online-de-cakephp).
 

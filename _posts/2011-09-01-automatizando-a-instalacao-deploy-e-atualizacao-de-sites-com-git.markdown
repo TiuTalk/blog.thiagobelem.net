@@ -22,7 +22,7 @@ tags:
 ---
 Hoje vou mostrar pra vocês como é extramente simples realizar deploys de sites de forma segura, <em>fail-safe</em> e rápida utilizando Git com alguns poucos comandos na linha de comando.
 
-Este artigo é uma "tradução" (com algumas modificações) do artigo "<a href="http://toroid.org/ams/git-website-howto" target="_blank">Using Git to manage a web site</a>", escrito por <strong>Abhijit Menon-Sen</strong>. Estou apenas trazendo a idéia geral do autor e explicando o passo-a-passo com o meu ponto de vista.
+Este artigo é uma "tradução" (com algumas modificações) do artigo "[Using Git to manage a web site](http://toroid.org/ams/git-website-howto)", escrito por <strong>Abhijit Menon-Sen</strong>. Estou apenas trazendo a idéia geral do autor e explicando o passo-a-passo com o meu ponto de vista.
 
 Não vou entrar no mérito de explicar o conceito de repositórios distribuídos ou as vantagens do Git. Pra quem não conhece a ferramenta, recomendo: <span class="removed_link" title="http://akitaonrails.com/2008/04/02/micro-tutorial-de-git">esse post</span> e <span class="removed_link" title="http://akitaonrails.com/2010/08/17/screencast-comecando-com-git">esse screencast</span> (vale o preço).
 
@@ -44,7 +44,7 @@ $ git commit -q -m "Iniciando o repositório"
 Agora que seu repositório local está pronto, o index.html foi criado e o primeiro commit feito, vamos criar o repositório remoto no ambiente de produção (servidor onde o site está/vai rodar).
 
 <h3>Repositório remoto</h3>
-Partindo do princípio que o seu site vai rodar em um servidor que você possui <a href="/login-automatico-no-ssh-no-linux" target="_blank">acesso SSH facilitado</a>, vamos criar o repositório lá que será uma cópia do servidor local:
+Partindo do princípio que o seu site vai rodar em um servidor que você possui [acesso SSH facilitado](/login-automatico-no-ssh-no-linux), vamos criar o repositório lá que será uma cópia do servidor local:
 
 
 [code language="bash"]

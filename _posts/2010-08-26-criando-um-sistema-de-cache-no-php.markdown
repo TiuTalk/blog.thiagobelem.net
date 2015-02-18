@@ -230,7 +230,7 @@ echo "{$frase}
 ";
 [/code]
 
-Veja o código-fonte completo da classe: <a href="http://pastebin.com/p4m0CpwH">http://pastebin.com/p4m0CpwH</a>
+Veja o código-fonte completo da classe: [http://pastebin.com/p4m0CpwH](http://pastebin.com/p4m0CpwH)
 
 Um grande abraço e até a próxima! :)
 

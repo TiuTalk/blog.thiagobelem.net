@@ -20,12 +20,12 @@ Tenho alguns artigos (beeem antigos) aqui no blog onde falo sobre encriptação/
 
 Esses métodos de hashing atendem - <strong>de forma satisfatória</strong> - quem está começando a trabalhar com programação e desenvolvimento, mas são notavelmente <strong>inseguros</strong> se comparados à outros métodos (como o <strong>bcrypt</strong>).
 
-Recomendo a leitura de um artigo meu (não tão antigo assim), onde falo sobre a <a title="Encriptando senhas de forma segura" href="/encriptando-senhas-de-forma-segura">Encriptação de senhas de forma segura</a>, e nele explico o problema por trás de hashes como MD5 e SHA1, e sugiro a utilização de outros métodos como <strong>Blowfish</strong>, que é a cifra no qual o <a href="http://en.wikipedia.org/wiki/Bcrypt">bcrypt</a> se baseia.
+Recomendo a leitura de um artigo meu (não tão antigo assim), onde falo sobre a [bcrypt](http://en.wikipedia.org/wiki/Bcrypt) se baseia.
 
 Desde então, eu tenho procurado me aprofundar um pouco mais no assunto, e recentemente comecei a usar o <strong>bcrypt </strong>nos meus projetos...
 
 <h3>Suporte ao bcrypt</h3>
-O PHP suporta hashing via <a href="http://en.wikipedia.org/wiki/Bcrypt">bcrypt</a> através da função <a href="http://php.net/manual/function.crypt.php">crypt()</a> que está presente desde o PHP 4, e serve pra trabalhar com hashings de mão única (como o MD5 e SHA1).
+O PHP suporta hashing via [crypt()](http://php.net/manual/function.crypt.php) que está presente desde o PHP 4, e serve pra trabalhar com hashings de mão única (como o MD5 e SHA1).
 
 <h3>Usando o bcrypt</h3>
 O bcrypt precisa - obrigatóriamente - receber dois "parâmetros" pra funcionar: o <strong>salt</strong> e o <strong>custo</strong> de processamento. O <strong>salt </strong>nada mais é do que a sua garantia de que, dado um salt aleatório, a mesma senha nunca será igualmente hasheada duas vezes... não importa que você criptografe a mesma senha 100 vezes, se o salt for diferente nas 100 vezes, o resultado final será sempre diferente. Para o bcrypt funcionar:
@@ -72,7 +72,7 @@ Para comparar uma senha texto-plano com um já hasheado, é só usar esse própr
 E é aí que o <strong>custo</strong> entra em jogo... mesmo durante um ataque de força bruta, o atacante pode tentar diferentes combinações de "senha original" mas o custo vai tornar a operação toda tão lenta que não vai valer o esforço.
 
 <h3>Uma pequena classe para facilitar a sua vida</h3>
-Criei uma pequena <a href="https://gist.github.com/3438461">classe Bcrypt</a> que ajuda a fazer esse trabalho todo através de dois métodos bem simples de usar..
+Criei uma pequena [classe Bcrypt](https://gist.github.com/3438461) que ajuda a fazer esse trabalho todo através de dois métodos bem simples de usar..
 
 Primeiro, o código completo da classe:
 

@@ -12,7 +12,7 @@ tags: []
 ---
 Essa não é uma tarefa muito comum... Mas as vezes precisamos fazer um login automático (usando PHP) em outro site para pegar algumas informações dinamicamente.
 
-Você pode fazer essa "façanha" usando uma biblioteca do PHP chamada cURL (<a title="Documentação Oficial do cURL" href="http://br2.php.net/manual/pt_BR/book.curl.php" target="_blank">veja mais sobre o cURL aqui</a>), veja um exemplo devidamente comentado e explicado:
+Você pode fazer essa "façanha" usando uma biblioteca do PHP chamada cURL ([veja mais sobre o cURL aqui](http://br2.php.net/manual/pt_BR/book.curl.php)), veja um exemplo devidamente comentado e explicado:
 
 
 [code language="php"]
@@ -55,7 +55,7 @@ No fim da execução deste script você terá duas variáveis: a <span style="co
 
 O uso dele é bem simples, vale a pena tentar.
 
-Há também, pra quem quiser, o site (não muito bonito) do cURL: <a title="cURL" href="http://curl.haxx.se/" target="_blank">http://curl.haxx.se/</a>
+Há também, pra quem quiser, o site (não muito bonito) do cURL: [http://curl.haxx.se/](http://curl.haxx.se/)
 
 Se alguém tiver alguma dúvida, é só falar!
 

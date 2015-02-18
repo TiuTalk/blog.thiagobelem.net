@@ -22,7 +22,7 @@ Hoje vou ensinar como criar um menu usando listas (ol) e que tem o efeito de exp
 
 O efeito em sí é bem simples e fácil de ser modificado... O meu foi feito usando HTML puro e uma folha de estilos (CSS) pequena. No final do tutorial você vai encontrar o link pra download do arquivo .rar com o exemplo dessa aula.
 
-<a href="/exemplo3" target="_blank">Veja aqui um exemplo de como vai ficar o menu.</a>
+[Veja aqui um exemplo de como vai ficar o menu.](/exemplo3)
 
 Bom... vamos lá!
 
@@ -31,17 +31,17 @@ Bom... vamos lá!
 [code language="html"]
 <ul id="menu">
 	<li class="header">Menu</li>
-	<li><a href="#" title="">Página inicial</a></li>
-	<li><a href="#" title="">Notícias</a></li>
-	<li class="parent"><a href="#" title="">Produtos</a>
+	<li>[Página inicial](#)</li>
+	<li>[Notícias](#)</li>
+	<li class="parent">[Produtos](#)
 		<ul class="sub-menu">
-			<li><a href="#" title="">Camisetas</a></li>
-			<li><a href="#" title="">Calças</a></li>
-			<li><a href="#" title="">Livros</a></li>
+			<li>[Camisetas](#)</li>
+			<li>[Calças](#)</li>
+			<li>[Livros](#)</li>
 		</ul>
 	</li>
-	<li><a href="#" title="">Quem somos nós</a></li>
-	<li><a href="#" title="">Contato</a></li>
+	<li>[Quem somos nós](#)</li>
+	<li>[Contato](#)</li>
 </ul>
 [/code]
 
@@ -136,7 +136,7 @@ $(function() {
 
 O código do efeito pode parecer um pouco complicado pra quem tá começando com jQuery, mas é só ler os comentários e procurar um pouco sobre cada função (<strong>slideToggle</strong>, <strong>toggleClass</strong>, <strong>click</strong>) na documentação que, com os exemplos de lá vai ficar tudo claro.
 
-<a href="/arquivos/2009/06/menu.rar" target="_blank">Faça aqui o download do arquivo .rar com os arquivos dessa aula.</a>
+[Faça aqui o download do arquivo .rar com os arquivos dessa aula.](/arquivos/2009/06/menu.rar)
 
 Espero que tenham gostado, qualquer dúvida é só falar.
 

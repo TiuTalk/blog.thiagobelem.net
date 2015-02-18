@@ -43,7 +43,7 @@ class cFileType {
 }
 [/code]
 
-A primeira mudança foi trocar esse switch, que não está fazendo nada além de definir o valor da variável $bool como true ou false se o $type for um dos valores válidos (jpg, png ou gif)... Nada melhor então do que usar a função <a href="http://php.net/manual/en/function.in-array.php">in_array()</a>:
+A primeira mudança foi trocar esse switch, que não está fazendo nada além de definir o valor da variável $bool como true ou false se o $type for um dos valores válidos (jpg, png ou gif)... Nada melhor então do que usar a função [in_array()](http://php.net/manual/en/function.in-array.php):
 
 
 [code language="php"]
@@ -141,7 +141,7 @@ if (cFileType::fImage('jpg')) {
 Sendo que você ainda pode usar o <code>cFileType::image</code> (pra ter uma lista de imagens válidas) em qualquer parte da sua aplicação sem instanciar a classe.
 
 <h3>Reutilização de código</h3>
-Segundo a abordagem <a href="http://pt.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>, não devemos nos repetir... Por isso aquele <code>in_array()</code> começou a me incomodar... Vai que você está verificando 30 tipos diferentes de arquivos, todos os métodos fazendo exatamente a mesma coisa... mas aí você decide mudar o in_array() pra algo mais eficiente ou aceitar até o caminho absoluto de um arquivo... vai mudar em 30 métodos na mão?
+Segundo a abordagem [DRY](http://pt.wikipedia.org/wiki/Don't_repeat_yourself), não devemos nos repetir... Por isso aquele <code>in_array()</code> começou a me incomodar... Vai que você está verificando 30 tipos diferentes de arquivos, todos os métodos fazendo exatamente a mesma coisa... mas aí você decide mudar o in_array() pra algo mais eficiente ou aceitar até o caminho absoluto de um arquivo... vai mudar em 30 métodos na mão?
 
 A responsabilidade de verificar se o valor <code>$type</code> tá dentro de uma "lista" válida não é dos métodos <code>fImage</code> e <code>fDoc</code>.. então vamos delegar:
 
@@ -207,5 +207,5 @@ if (FileType::isImage('jpg')) {
 
 Espero que tenham gostado! :)
 
-Pra quem quiser ver o código completo da classe final, com os métodos comentados: <a href="https://gist.github.com/1338259">https://gist.github.com/1338259</a>
+Pra quem quiser ver o código completo da classe final, com os métodos comentados: [https://gist.github.com/1338259](https://gist.github.com/1338259)
 

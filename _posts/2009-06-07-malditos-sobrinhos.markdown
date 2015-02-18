@@ -10,9 +10,9 @@ categories:
 - Artigos
 tags: []
 ---
-Esse é um artigo que eu adoro, criado pelo meu amigo <a href="http://www.michelazzo.com.br/" target="_blank">Paulino Michelazzo</a>, da <span class="removed_link" title="http://www.fabricalivre.com.br/">Fábrica Livre</span>.
+Esse é um artigo que eu adoro, criado pelo meu amigo [Paulino Michelazzo](http://www.michelazzo.com.br/), da <span class="removed_link" title="http://www.fabricalivre.com.br/">Fábrica Livre</span>.
 
-Não vou nem me atrever a filosofar sobre o assunto desse artigo, vou deixar que todos vocês leiam e entendam... Mas posso dizer que ele trata do mesmo assunto que falei no meu outro artigo, <a title="Codificadores e Programadores" href="/codificadores-e-programadores" target="_blank">Codificadores e Programadores</a>. :)
+Não vou nem me atrever a filosofar sobre o assunto desse artigo, vou deixar que todos vocês leiam e entendam... Mas posso dizer que ele trata do mesmo assunto que falei no meu outro artigo, [Codificadores e Programadores](/codificadores-e-programadores). :)
 
 --
 

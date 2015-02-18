@@ -20,7 +20,7 @@ Hoje vou falar sobre um assunto muito importante relacionado a segurança: como 
 
 A meses que pessoas têm tentado invadir o meu blog e, como eu estava sempre conseguindo "pegar" os invasores, me diverti por um tempo com essas tentativas... Mas resolvi tomar uma providência e bloqueei os IPs que continuam tentando invadir o blog.
 
-Aproveitei o ritmo e resolvi ensinar à vocês como fazer isso... Já falei antes sobre <a href="/bloqueando-visitantes-pelo-ip-com-mysql-e-php" title="Bloqueando visitantes pelo IP com MySQL e PHP">como bloquear visitantes pelo IP utilizando PHP e MySQL</a> só que o bloqueio com <strong>.htaccess</strong> é muito mais eficiente pois ele bloqueia logo no começo da requisição e exibe uma página de erro das mais feias.
+Aproveitei o ritmo e resolvi ensinar à vocês como fazer isso... Já falei antes sobre [como bloquear visitantes pelo IP utilizando PHP e MySQL](/bloqueando-visitantes-pelo-ip-com-mysql-e-php) só que o bloqueio com <strong>.htaccess</strong> é muito mais eficiente pois ele bloqueia logo no começo da requisição e exibe uma página de erro das mais feias.
 
 <h3>Bloqueando IPs</h3>
 Edite (ou crie) o arquivo <strong>.htaccess</strong> na raíz do seu servidor e coloque o seguinte código:

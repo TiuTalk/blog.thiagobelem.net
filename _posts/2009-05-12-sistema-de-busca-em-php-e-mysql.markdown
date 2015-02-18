@@ -17,7 +17,7 @@ O sistema de busca aqui explicado consiste em duas coisas: o formulário de busc
 
 A busca será feita no <strong>título</strong> e no <strong>conteúdo</strong> das notícias cadastradas no banco de dados, em uma tabela chamada <strong>notícias</strong>.
 
-Veja <a href="/arquivos/2009/05/busca.jpg" target="_blank">um exemplo</a> (imagem) de como ficará o resultado da busca sem CSS.
+Veja [um exemplo](/arquivos/2009/05/busca.jpg) (imagem) de como ficará o resultado da busca sem CSS.
 
 Veja o código de criação da tabela:
 
@@ -99,11 +99,11 @@ $titulo = $resultado['titulo'];
 $texto = $resultado['texto'];
 $link = 'http://www.meusite.com.br/noticia.php?id=' . $resultado['id'];
 echo "<li>";
-echo '<a href="'.$link.'" title="'.$titulo.'">'.$titulo.'</a>';
+echo '['.$titulo.']('.$link.')';
 echo date('d/m/Y H:i', strtotime($resultado['cadastro']));
 echo ''.$texto.'
 ';
-echo '<a href="'.$link.'" title="'.$titulo.'">'.$link.'</a>';
+echo '['.$link.']('.$link.')';
 echo "</li>";
 }
 echo "</ul>";
@@ -190,11 +190,11 @@ $titulo = $resultado['titulo'];
 $texto = $resultado['texto'];
 $link = 'http://www.meusite.com.br/noticia.php?id=' . $resultado['id'];
 echo "<li>";
-echo '<a href="'.$link.'" title="'.$titulo.'">'.$titulo.'</a>';
+echo '['.$titulo.']('.$link.')';
 echo date('d/m/Y H:i', strtotime($resultado['cadastro']));
 echo ''.$texto.'
 ';
-echo '<a href="'.$link.'" title="'.$titulo.'">'.$link.'</a>';
+echo '['.$link.']('.$link.')';
 echo "</li>";
 }
 echo "</ul>";
@@ -204,7 +204,7 @@ echo "</ul>";
 // Começa a exibição dos paginadores
 if ($total > 0) {
 for($n = 1; $n <= $paginas; $n++) {
-echo '<a href="?consulta='.$_GET['consulta'].'&pagina='.$n.'">'.$n.'</a>&nbsp;&nbsp;';
+echo '['.$n.'](?consulta='.$_GET['consulta'].'&pagina='.$n.')&nbsp;&nbsp;';
 }
 }
 

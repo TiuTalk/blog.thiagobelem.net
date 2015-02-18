@@ -78,7 +78,7 @@ Isso fará com que apenas os dois arquivos especificados e a pasta sejam acessí
 
 Ainda existem outras regras que limitam o acesso dos robôs a um certo horário do dia ou a uma quantidade limite de visitas por dia ou por arquivo... Mas isso vai ficar pra um outro dia.
 
-Pra quem gostou do assunto e quer saber mais, sugiro que visite o <a title="The Web Robots Pages" href="http://www.robotstxt.org/" target="_blank">site oficial</a> do dito cujo.
+Pra quem gostou do assunto e quer saber mais, sugiro que visite o [site oficial](http://www.robotstxt.org/) do dito cujo.
 
-Espero que tenham gostado... Qualque dúvida ou elogio é só falar! E não esqueçam de assinar o <a href="http://feeds2.feedburner.com/ThiagoBelem/Blog" target="_blank">RSS do Blog</a>.
+Espero que tenham gostado... Qualque dúvida ou elogio é só falar! E não esqueçam de assinar o [RSS do Blog](http://feeds2.feedburner.com/ThiagoBelem/Blog).
 

@@ -112,7 +112,7 @@ http://www.google.com.br/search?q={searchTerms}
 
 As outras opções são fáceis de entender...
 
-Pra quem gostou e quer saber mais: <a href="http://www.opensearch.org/Home">http://www.opensearch.org/</a>
+Pra quem gostou e quer saber mais: [http://www.opensearch.org/](http://www.opensearch.org/Home)
 
 Espero que tenham gostado! :)
 

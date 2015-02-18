@@ -17,9 +17,9 @@ tags:
 - geeks on a plane
 - geeks on beer
 ---
-Como muitos devem ter acompanhado pelo Twitter, ontem fui no jantar do <a title="Geeks On A Plane" href="http://geeksonaplane.com/">Geeks On A Plane</a> (<a href="https://twitter.com/#!/search/%23goap">#goap</a>) organizado em menos de 24h pelo pessoal do <a href="http://horaextra.org/">#HoraExtra</a>.
+Como muitos devem ter acompanhado pelo Twitter, ontem fui no jantar do [#HoraExtra](http://horaextra.org/).
 
-<blockquote>Um grupo de geeks, empreendedores e investidores do <a href="http://pt.wikipedia.org/wiki/Vale_do_Sil%C3%ADcio">Vale do Silício</a> resolveu se juntar, entrar num avião e rodar diversos países, para conhecer pessoas, outros empreendedores, empresas etc, buscando se divertir e é claro fazer negócios! Não é loucura, é real.
+<blockquote>Um grupo de geeks, empreendedores e investidores do [Vale do Silício](http://pt.wikipedia.org/wiki/Vale_do_Sil%C3%ADcio) resolveu se juntar, entrar num avião e rodar diversos países, para conhecer pessoas, outros empreendedores, empresas etc, buscando se divertir e é claro fazer negócios! Não é loucura, é real.
 </blockquote>
 Não tenho o número exato, mas quase 100 pessoas compareceram ao jantar... Muita gente de TI, muito desenvolvedor, muito curioso, muita gente de marketing e muita gente com startups acontecendo agora.
 
@@ -27,7 +27,7 @@ Cumpri meu objetivo conhecendo cada uma das pessoas que estavam lá, várias pes
 
 Mais uma vez, o esquadrão <del>do BOPE</del> do #<strong>HoraExtra</strong> conseguiu organizar um evento onde todo mundo foi muito bem recebido, independente do seu background, independente dos seus objetivos, aquele era o lugar certo, com pessoas certas e oportunidades mil.
 
-<a href="http://www.facebook.com/media/set/?set=a.200170333352715.42736.193076124062136"><img class="size-full wp-image-1531 " title="Geeks On A Plane - Rio" src="/assets/uploads/2011/05/goap2.jpg" alt="Geeks On A Plane - Rio" width="570" height="381" /></a>
+[](http://www.facebook.com/media/set/?set=a.200170333352715.42736.193076124062136)
 
 O evento contribuiu muito pro networking de cada um, acredito que todos aproveitaram muito o momento... Não era tempo pra falar besteira, não era tempo de perder tempo, e cada um deu o seu melhor, todo mundo teve seu espaço pra expor quem era, suas idéias e conhecer gente nova.
 
@@ -41,9 +41,9 @@ E foi mais ou menos isso mesmo... Os caras não iam ter nenhum encontro com a co
 
 Isso mostra o poder da comunidade... Se você está numa situação onde você não está nem contribuindo nem aprendendo, use seus dois pés e mova-se para uma situação melhor. Corra trás! Faça acontecer! Só depende de você e dos seus parceiros.
 
-Quem quiser ver mais fotos do evento (eu sou o careca de camiseta azul/amarelo/azul/amarelo/azul/amarelo) é só ver esse álbum no Facebook: <a href="http://www.facebook.com/media/set/?set=a.200170333352715.42736.193076124062136">http://www.facebook.com/media/set/?set=a.200170333352715.42736.193076124062136</a>
+Quem quiser ver mais fotos do evento (eu sou o careca de camiseta azul/amarelo/azul/amarelo/azul/amarelo) é só ver esse álbum no Facebook: [http://www.facebook.com/media/set/?set=a.200170333352715.42736.193076124062136](http://www.facebook.com/media/set/?set=a.200170333352715.42736.193076124062136)
 
 Façam o mesmo em suas cidades! Corram atrás, chamem os amigos, façam um #HoraExtra num bar qualquer... Vocês não tem nada a perder.
 
-São os <a href="http://smallactsmanifesto.org/">pequenos atos</a> que trazem as maiores mudanças.
+São os [pequenos atos](http://smallactsmanifesto.org/) que trazem as maiores mudanças.
 

@@ -13,7 +13,7 @@ tags: []
 ---
 Hoje vou falar sobre alguns erros comuns que são cometidos por programadores que estão começando agora. Resolvi fazer esse post pois vejo diariamente em fóruns de PHP pessoas com erros em scripts que possuem rombos enormes de segurança...
 
-Não prometo deixar o seu sistema tão protegido quanto o <a title="Cadillac One" href="/arquivos/2009/03/cadillac-one.jpg" target="_blank"><em>carro do Obama</em></a> mas, sem dúvida, você vai evitar que muita gente faça um estrago considerável no seu site.
+Não prometo deixar o seu sistema tão protegido quanto o [](/arquivos/2009/03/cadillac-one.jpg) mas, sem dúvida, você vai evitar que muita gente faça um estrago considerável no seu site.
 
 Se você se identificar com algumas dessas medidas não saia correndo e se jogue da ponte... Faça os devidos ajustes e tudo ficará bem.
 
@@ -144,7 +144,7 @@ Outro ponto muito importante é não exibir, em momento algum, o nome de login <
 
 Vale lembrar também que você <strong>não precisa</strong> deixar a senha do usuário na forma real quando salva-la no banco. É muito mais seguro salvar um <strong>md5() </strong>ou <strong>sha1()</strong> da senha no banco e quando for necessário fazer a validação do usuário você também gera o <strong>md5()</strong> ou <strong>sha1()</strong> da senha que ele digitou e compara com o que há no banco. Assim, se por ventura alguém conseguir invadir e pegar todos os registros do banco de usuários, o máximo que ele irá conseguir são o usuário/e-mail e uma senha criptografada.
 
-Se quiser saber como funciona criptografica no PHP é só ver esse post:» <a href="/criptografia-no-php-usando-md5-sha1-e-base64">Criptografia no PHP usando md5, sha1 e base64</a>
+Se quiser saber como funciona criptografica no PHP é só ver esse post:» [Criptografia no PHP usando md5, sha1 e base64](/criptografia-no-php-usando-md5-sha1-e-base64)
 
 Espero que tenham gostado. :)
 

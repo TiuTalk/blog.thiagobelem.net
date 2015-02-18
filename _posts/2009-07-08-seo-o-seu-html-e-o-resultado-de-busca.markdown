@@ -20,7 +20,7 @@ Acredito que alguns de vocês, que estão começando, e não se acostumaram tant
 Todos os elementos que aparecem nos resultados de busca têm ligação direta com o HTML da página em questão.
 
 Veja a imagem a seguir:
-<a href="/arquivos/2009/07/google.jpg"><img src="http://blog.thiagobelem.net/arquivos/2009/07/google.jpg" alt="google" title="google" width="600" height="471" class="aligncenter size-full wp-image-566" style="border: 1px solid gray; margin: 10px 0 0 12px" /></a>
+[](/arquivos/2009/07/google.jpg)
 
 Vamos as explicações:
 
