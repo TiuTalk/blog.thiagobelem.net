@@ -34,14 +34,14 @@ div#page>div.logo+ul#navigation>li*5>a
 ... aperta uma combinação de teclas, normalmente CTRL+E, e isso é <strong>automaticamente</strong> transformado em:
 {% highlight html linenos %}
 <div id="page">
-	<div class="logo"></div>
-	<ul id="navigation">
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-	</ul>
+  <div class="logo"></div>
+  <ul id="navigation">
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+  </ul>
 </div>
 {% endhighlight %}
 
@@ -62,32 +62,32 @@ html>(head>title+meta[name="description" content]+meta[name="keywords" content])
 Em um template de site completo:
 {% highlight html linenos %}
 <html>
-	<head>
-		<title></title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-	</head>
-	<body>
-		<header></header>
-		<div id="body">
-			<div id="content"></div>
-			<aside id="sidebar"></aside>
-		</div>
-		<footer></footer>
-	</body>
+  <head>
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <header></header>
+    <div id="body">
+      <div id="content"></div>
+      <aside id="sidebar"></aside>
+    </div>
+    <footer></footer>
+  </body>
 </html>
 {% endhighlight %}
 
 Esse é um bom exemplo do que ele é capaz de fazer... Mas não é um uso comum dele... A idéia é você fazer HTML muito rápido, por exemplo quando você digita <code>#menu>ul>li*5>a</code> e "expande", você ganha tempo por não ter que escrever (e organizar/identar), isso tudo:
 {% highlight html linenos %}
 <div id="menu">
-	<ul>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-	</ul>
+  <ul>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+  </ul>
 </div>
 {% endhighlight %}
 

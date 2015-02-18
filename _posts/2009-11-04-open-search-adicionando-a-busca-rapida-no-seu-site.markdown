@@ -48,20 +48,20 @@ Perceba que o código está apontando pra um arquivo <strong>opensearch.php</str
  */
 
 $_CONFIG = array(
-	'site_nome' =>			'Meu Site',
-	'site_nome_longo' =>		'Meu Site Legal',
-	'busca_descricao' =>		'Busque no Meu Site',
+  'site_nome' =>      'Meu Site',
+  'site_nome_longo' =>    'Meu Site Legal',
+  'busca_descricao' =>    'Busque no Meu Site',
 
-	'email_contato' =>		'contato@meusite.com.br',
+  'email_contato' =>    'contato@meusite.com.br',
 
-	'endereco_busca' =>		'http://meusite.com.br/busca.php?q={searchTerms}',
+  'endereco_busca' =>    'http://meusite.com.br/busca.php?q={searchTerms}',
 
-	'imagem_icone' =>		'http://meusite.com.br/open_search.jpg',
-	'imagem_tamanho' =>		array(16, 16),
-	'imagem_mimetype' =>		'image/jpg',
+  'imagem_icone' =>    'http://meusite.com.br/open_search.jpg',
+  'imagem_tamanho' =>    array(16, 16),
+  'imagem_mimetype' =>    'image/jpg',
 
-	'conteudo_adulto' =>		false,
-	'linguagem' =>			'pt-br'
+  'conteudo_adulto' =>    false,
+  'linguagem' =>      'pt-br'
 );
 
 // --------- Aqui você pode parar de editar :] ---------

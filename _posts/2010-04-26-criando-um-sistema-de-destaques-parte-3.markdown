@@ -44,9 +44,9 @@ Antes da gente começar a codificar a parte três... Vamos colocar uma coisinha 
 
 {% highlight css linenos %}
 #blocoDestaques ul li div.fundo {
-	opacity: 0.80;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.80;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 {% endhighlight %}
 
@@ -70,18 +70,18 @@ Agora nós iremos definir algumas variáveis de configuração:
  * Configurações do sistema de destaques
  */
 $destaques = array(
-	// Dados de conexão ao MySQL
-	'mysql' => array(
-		'servidor' => 'localhost',
-		'usuario' => 'root',
-		'senha' => '12345',
-		'banco' => 'meu_site'),
+  // Dados de conexão ao MySQL
+  'mysql' => array(
+    'servidor' => 'localhost',
+    'usuario' => 'root',
+    'senha' => '12345',
+    'banco' => 'meu_site'),
 
-	// Nome da tabela com os destaques
-	'tabela' => 'destaques',
+  // Nome da tabela com os destaques
+  'tabela' => 'destaques',
 
-	// Limite máximo de destaques que serão exibidos
-	'limite' => 5
+  // Limite máximo de destaques que serão exibidos
+  'limite' => 5
 );
 {% endhighlight %}
 
@@ -109,10 +109,10 @@ Agora vai começar a brincadeira... Vamos criar e executar uma consulta para tra
  * Busca os dados na tabela de destaques
  */
 $sql = "SELECT `titulo`, `link`, `imagem`
-		FROM `{$destaques['tabela']}`
-		WHERE `ativo` = 1
-		ORDER BY `id` DESC
-		LIMIT {$destaques['limite']}";
+    FROM `{$destaques['tabela']}`
+    WHERE `ativo` = 1
+    ORDER BY `id` DESC
+    LIMIT {$destaques['limite']}";
 $query = mysql_query($sql) OR trigger_error('ERRO: ' . mysql_error());
 {% endhighlight %}
 
@@ -125,7 +125,7 @@ Nós já executamos a consulta e já temos o <em>Resource MySQL</em> (ou resulta
  */
 $lista_destaques = array();
 while ($registro = mysql_fetch_object($query)) {
-	$lista_destaques[] = $registro;
+  $lista_destaques[] = $registro;
 }
 {% endhighlight %}
 
@@ -138,36 +138,36 @@ Agora vamos voltar ao HTML do nosso sistema de destaques que até hoje está ass
 <!-- destaques -->
 <div id="blocoDestaques">
 
-	[](#)
+  [](#)
 
-	<ul>
-		<li>
-			<a href="#" title="Destaque 1">
-				<img src="img/destaque1.jpg" alt="Destaque 1" />
-			</a>
-			<div class="fundo"><!--  --></div>
-			[Destaque 1 - Muita coisa boa!](#)
+  <ul>
+    <li>
+      <a href="#" title="Destaque 1">
+        <img src="img/destaque1.jpg" alt="Destaque 1" />
+      </a>
+      <div class="fundo"><!--  --></div>
+      [Destaque 1 - Muita coisa boa!](#)
 
-		</li>
+    </li>
 
-		<li>
-			<a href="#" title="Destaque 2">
-				<img src="img/destaque2.jpg" alt="Destaque 2" />
-			</a>
-			<div class="fundo"><!--  --></div>
-			[Destaque 2 - Nem tão bom assim...](#)
+    <li>
+      <a href="#" title="Destaque 2">
+        <img src="img/destaque2.jpg" alt="Destaque 2" />
+      </a>
+      <div class="fundo"><!--  --></div>
+      [Destaque 2 - Nem tão bom assim...](#)
 
-		</li>
+    </li>
 
-		<li>
-			<a href="#" title="Destaque 3">
-				<img src="img/destaque3.jpg" alt="Destaque 3" />
-			</a>
-			<div class="fundo"><!--  --></div>
-			[Destaque 3 - Agora sim... bem melhor!](#)
+    <li>
+      <a href="#" title="Destaque 3">
+        <img src="img/destaque3.jpg" alt="Destaque 3" />
+      </a>
+      <div class="fundo"><!--  --></div>
+      [Destaque 3 - Agora sim... bem melhor!](#)
 
-		</li>
-	</ul>
+    </li>
+  </ul>
 </div>
 <!-- /destaques -->
 {% endhighlight %}
@@ -180,18 +180,18 @@ Vamos fazer algumas modificações no nosso HTML... Vamos começar incluindo o a
 <?php require_once('mysql_destaques.php'); ?>
 <div id="blocoDestaques">
 
-	[](#)
+  [](#)
 
-	<ul>
-		<li>
-			<a href="#" title="Destaque 1">
-				<img src="img/destaque1.jpg" alt="Destaque 1" />
-			</a>
-			<div class="fundo"><!--  --></div>
-			[Destaque 1 - Muita coisa boa!](#)
+  <ul>
+    <li>
+      <a href="#" title="Destaque 1">
+        <img src="img/destaque1.jpg" alt="Destaque 1" />
+      </a>
+      <div class="fundo"><!--  --></div>
+      [Destaque 1 - Muita coisa boa!](#)
 
-		</li>
-	</ul>
+    </li>
+  </ul>
 </div>
 <!-- /destaques -->
 {% endhighlight %}
@@ -204,20 +204,20 @@ Agora é só criar um loop utilizando o <code>foreach()</code> para gerar um LI 
 <?php require_once('mysql_destaques.php'); ?>
 <div id="blocoDestaques">
 
-	[](#)
+  [](#)
 
-	<ul>
-		<?php foreach ($lista_destaques AS $destaque) { ?>
-		<li>
-			<a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>">
-				<img src="<?php echo $destaque->imagem; ?>" alt="<?php echo $destaque->titulo; ?>" />
-			</a>
-			<div class="fundo"><!--  --></div>
-			[](<?php echo $destaque->link; ?>)
+  <ul>
+    <?php foreach ($lista_destaques AS $destaque) { ?>
+    <li>
+      <a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>">
+        <img src="<?php echo $destaque->imagem; ?>" alt="<?php echo $destaque->titulo; ?>" />
+      </a>
+      <div class="fundo"><!--  --></div>
+      [](<?php echo $destaque->link; ?>)
 
-		</li>
-		<?php } ?>
-	</ul>
+    </li>
+    <?php } ?>
+  </ul>
 </div>
 <!-- /destaques -->
 {% endhighlight %}
@@ -231,20 +231,20 @@ Podemos ainda adicionar uma condição ao redor da div#blocoDestaques para ter c
 <?php if (isset($lista_destaques) AND !empty($lista_destaques)) { ?>
 <div id="blocoDestaques">
 
-	[](#)
+  [](#)
 
-	<ul>
-		<?php foreach ($lista_destaques AS $destaque) { ?>
-		<li>
-			<a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>">
-				<img src="<?php echo $destaque->imagem; ?>" alt="<?php echo $destaque->titulo; ?>" />
-			</a>
-			<div class="fundo"><!--  --></div>
-			[](<?php echo $destaque->link; ?>)
+  <ul>
+    <?php foreach ($lista_destaques AS $destaque) { ?>
+    <li>
+      <a href="<?php echo $destaque->link; ?>" title="<?php echo $destaque->titulo; ?>">
+        <img src="<?php echo $destaque->imagem; ?>" alt="<?php echo $destaque->titulo; ?>" />
+      </a>
+      <div class="fundo"><!--  --></div>
+      [](<?php echo $destaque->link; ?>)
 
-		</li>
-		<?php } ?>
-	</ul>
+    </li>
+    <?php } ?>
+  </ul>
 </div>
 <?php } ?>
 <!-- /destaques -->

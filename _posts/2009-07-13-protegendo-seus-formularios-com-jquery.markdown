@@ -25,11 +25,11 @@ Criei um pedacinho de código pequeno porém muito do útil que ajuda a evitar e
 {% highlight javascript linenos %}
 $(function() {
     $("form").submit(function() {
-    	// ReadOnly em todos os inputs
-    	$("input", this).attr("readonly", true);
-    	// Desabilita os submits
-    	$("input[type='submit'],input[type='image']", this).attr("disabled", true);
-    	return true;
+      // ReadOnly em todos os inputs
+      $("input", this).attr("readonly", true);
+      // Desabilita os submits
+      $("input[type='submit'],input[type='image']", this).attr("disabled", true);
+      return true;
     });
 });
 {% endhighlight %}
@@ -39,17 +39,17 @@ Mas há um probleminha com esse código: se você usar algum tipo de validação
 Uma solução seria chamar essa função de validação dentro desse código jQuery, da seguinte forma:
 {% highlight javascript linenos %}
 $(function() {
-	$("form").submit(function() {
-		if (minhaFuncao() == true) {
-			// ReadOnly em todos os inputs
-			$("input", this).attr("readonly", true);
-			// Desabilita os submits
-			$("input[type='submit'],input[type='image']", this).attr("disabled", true);
-			return true;
-		} else {
-			return false;
-		}
-	});
+  $("form").submit(function() {
+    if (minhaFuncao() == true) {
+      // ReadOnly em todos os inputs
+      $("input", this).attr("readonly", true);
+      // Desabilita os submits
+      $("input[type='submit'],input[type='image']", this).attr("disabled", true);
+      return true;
+    } else {
+      return false;
+    }
+  });
 });
 {% endhighlight %}
 

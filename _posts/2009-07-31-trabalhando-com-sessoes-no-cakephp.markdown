@@ -74,8 +74,8 @@ Quando o seu usuário fizer logout você provavelmente vai precisar/querer destr
 {% highlight php linenos %}
 // Destruindo a sessão
 if ($this->Session->valid()) {
-	$this->Session->destroy(); // Destrói
-	$this->redirect('/');// Redireciona o usuário
+  $this->Session->destroy(); // Destrói
+  $this->redirect('/');// Redireciona o usuário
 }
 {% endhighlight %}
 Viram que simples? [3] :D

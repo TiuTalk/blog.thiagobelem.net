@@ -44,26 +44,26 @@ Depois é só charmar esse código JavaScript, pode ser no fim da página, antes
 
 
 {% highlight javascript linenos %}
-	if (GBrowserIsCompatible()) {
-		var map = new GMap2(document.getElementById("googleMap"));
-		var lat = {LATITUDE}; // Latitude do marcador
-		var lon = {LONGITUDE}; // Longitude do marcador
-		var zoom = {ZOOM}; // Zoom
+  if (GBrowserIsCompatible()) {
+    var map = new GMap2(document.getElementById("googleMap"));
+    var lat = {LATITUDE}; // Latitude do marcador
+    var lon = {LONGITUDE}; // Longitude do marcador
+    var zoom = {ZOOM}; // Zoom
 
-		map.addControl(new GMapTypeControl());
-		map.addControl(new GLargeMapControl());
-		map.setCenter(new GLatLng(lat, lon), zoom);
+    map.addControl(new GMapTypeControl());
+    map.addControl(new GLargeMapControl());
+    map.setCenter(new GLatLng(lat, lon), zoom);
 
-		var marker = new GMarker(new GLatLng(lat,lon));
+    var marker = new GMarker(new GLatLng(lat,lon));
 
-		GEvent.addListener(marker, "click", function() {
-			marker.openInfoWindowHtml("<h2>Minha marca</h2>Meu texto!
+    GEvent.addListener(marker, "click", function() {
+      marker.openInfoWindowHtml("<h2>Minha marca</h2>Meu texto!
 ");
-		});
+    });
 
-		map.addOverlay(marker);
-		map.setCenter(point, zoom);
-	}
+    map.addOverlay(marker);
+    map.setCenter(point, zoom);
+  }
 {% endhighlight %}
 
 Agora é só substituir o <strong style="background: gray; color: orange">{LATITUDE}</strong>, <strong style="background: gray; color: orange">{LONGITUDE}</strong> e <strong style="background: gray; color: orange">{ZOOM}</strong> (nas linhas 3, 4 e 5) pelas informações que você conseguiu pegar usando o passo-a-passo do [outro artigo](/buscando-a-latitude-e-longitude-de-um-endereco-google-maps-php-parte-1).

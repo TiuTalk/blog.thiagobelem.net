@@ -24,13 +24,13 @@ Todo upload, geralmente, começa com um formulário onde o usuário insere o arq
 {% highlight html linenos %}
 <form method="post" action="recebe.php" enctype="multipart/form-data">
 <fieldset>
-	<label for="txNome">Seu nome</label>
-	<input type="text" name="nome" id="txNome" />
+  <label for="txNome">Seu nome</label>
+  <input type="text" name="nome" id="txNome" />
 
-	<label for="txFoto">Sua foto</label>
-	<input type="file" name="arquivo" id="txFoto" />
+  <label for="txFoto">Sua foto</label>
+  <input type="file" name="arquivo" id="txFoto" />
 
-	<input type="submit" value="Salvar Dados" />
+  <input type="submit" value="Salvar Dados" />
 </fieldset>
 </form>
 {% endhighlight %}
@@ -57,7 +57,7 @@ Normalmente quando enviamos dados através de um formulário (com a propriedade 
 {% highlight php linenos %}
 <?php
 
-	$nome = $_POST['nome'];
+  $nome = $_POST['nome'];
 
 ?>
 {% endhighlight %}
@@ -71,18 +71,18 @@ Veja um exemplo onde pegamos todas essas informações e salvamos em novas vari�
 {% highlight php linenos %}
 <?php
 
-	$nome = $_POST['nome'];
+  $nome = $_POST['nome'];
 
-	// O nome original do arquivo no computador do usuário
-	$arqName = $_FILES['arquivo']['name'];
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
-	$arqType = $_FILES['arquivo']['type'];
-	// O tamanho, em bytes, do arquivo
-	$arqSize = $_FILES['arquivo']['size'];
-	// O nome temporário do arquivo, como foi guardado no servidor
-	$arqTemp = $_FILES['arquivo']['tmp_name'];
-	// O código de erro associado a este upload de arquivo
-	$arqError = $_FILES['arquivo']['error'];
+  // O nome original do arquivo no computador do usuário
+  $arqName = $_FILES['arquivo']['name'];
+  // O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+  $arqType = $_FILES['arquivo']['type'];
+  // O tamanho, em bytes, do arquivo
+  $arqSize = $_FILES['arquivo']['size'];
+  // O nome temporário do arquivo, como foi guardado no servidor
+  $arqTemp = $_FILES['arquivo']['tmp_name'];
+  // O código de erro associado a este upload de arquivo
+  $arqError = $_FILES['arquivo']['error'];
 
 ?>
 {% endhighlight %}
@@ -99,23 +99,23 @@ Agora iremos mover o arquivo para a pasta correta caso o upload tenha ocorrido s
 {% highlight php linenos %}
 <?php
 
-	$nome = $_POST['nome'];
+  $nome = $_POST['nome'];
 
-	// O nome original do arquivo no computador do usuário
-	$arqName = $_FILES['arquivo']['name'];
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
-	$arqType = $_FILES['arquivo']['type'];
-	// O tamanho, em bytes, do arquivo
-	$arqSize = $_FILES['arquivo']['size'];
-	// O nome temporário do arquivo, como foi guardado no servidor
-	$arqTemp = $_FILES['arquivo']['tmp_name'];
-	// O código de erro associado a este upload de arquivo
-	$arqError = $_FILES['arquivo']['error'];
+  // O nome original do arquivo no computador do usuário
+  $arqName = $_FILES['arquivo']['name'];
+  // O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+  $arqType = $_FILES['arquivo']['type'];
+  // O tamanho, em bytes, do arquivo
+  $arqSize = $_FILES['arquivo']['size'];
+  // O nome temporário do arquivo, como foi guardado no servidor
+  $arqTemp = $_FILES['arquivo']['tmp_name'];
+  // O código de erro associado a este upload de arquivo
+  $arqError = $_FILES['arquivo']['error'];
 
-	if ($arqError == 0) {
-		$pasta = '/uploads/';
-		$upload = move_uploaded_file($arqTemp, $pasta . $arqName);
-	}
+  if ($arqError == 0) {
+    $pasta = '/uploads/';
+    $upload = move_uploaded_file($arqTemp, $pasta . $arqName);
+  }
 
 ?>
 {% endhighlight %}
@@ -136,32 +136,32 @@ Vamos criar uma lista com todos os <strong>mime-types</strong> permitidos e veri
 
 {% highlight php linenos %}
 <?php
-	// Lista de tipos de arquivos permitidos
-	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
+  // Lista de tipos de arquivos permitidos
+  $tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
 
-	$nome = $_POST['nome'];
+  $nome = $_POST['nome'];
 
-	// O nome original do arquivo no computador do usuário
-	$arqName = $_FILES['arquivo']['name'];
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
-	$arqType = $_FILES['arquivo']['type'];
-	// O tamanho, em bytes, do arquivo
-	$arqSize = $_FILES['arquivo']['size'];
-	// O nome temporário do arquivo, como foi guardado no servidor
-	$arqTemp = $_FILES['arquivo']['tmp_name'];
-	// O código de erro associado a este upload de arquivo
-	$arqError = $_FILES['arquivo']['error'];
+  // O nome original do arquivo no computador do usuário
+  $arqName = $_FILES['arquivo']['name'];
+  // O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+  $arqType = $_FILES['arquivo']['type'];
+  // O tamanho, em bytes, do arquivo
+  $arqSize = $_FILES['arquivo']['size'];
+  // O nome temporário do arquivo, como foi guardado no servidor
+  $arqTemp = $_FILES['arquivo']['tmp_name'];
+  // O código de erro associado a este upload de arquivo
+  $arqError = $_FILES['arquivo']['error'];
 
-	if ($arqError == 0) {
-		// Verifica o tipo de arquivo enviado
-		if (array_search($arqType, $tiposPermitidos) === false) {
-			echo 'O tipo de arquivo enviado é inválido!';
-		// Não houveram erros, move o arquivo
-		} else {
-			$pasta = '/uploads/';
-			$upload = move_uploaded_file($arqTemp, $pasta . $arqName);
-		}
-	}
+  if ($arqError == 0) {
+    // Verifica o tipo de arquivo enviado
+    if (array_search($arqType, $tiposPermitidos) === false) {
+      echo 'O tipo de arquivo enviado é inválido!';
+    // Não houveram erros, move o arquivo
+    } else {
+      $pasta = '/uploads/';
+      $upload = move_uploaded_file($arqTemp, $pasta . $arqName);
+    }
+  }
 
 ?>
 {% endhighlight %}
@@ -174,37 +174,37 @@ Muita gente tem problemas com o tamanho de arquivo enviado pelos usuários pois,
 
 {% highlight php linenos %}
 <?php
-	// Lista de tipos de arquivos permitidos
-	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
-	// Tamanho máximo (em bytes)
-	$tamanhoPermitido = 1024 * 500; // 500 Kb
+  // Lista de tipos de arquivos permitidos
+  $tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
+  // Tamanho máximo (em bytes)
+  $tamanhoPermitido = 1024 * 500; // 500 Kb
 
-	$nome = $_POST['nome'];
+  $nome = $_POST['nome'];
 
-	// O nome original do arquivo no computador do usuário
-	$arqName = $_FILES['arquivo']['name'];
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
-	$arqType = $_FILES['arquivo']['type'];
-	// O tamanho, em bytes, do arquivo
-	$arqSize = $_FILES['arquivo']['size'];
-	// O nome temporário do arquivo, como foi guardado no servidor
-	$arqTemp = $_FILES['arquivo']['tmp_name'];
-	// O código de erro associado a este upload de arquivo
-	$arqError = $_FILES['arquivo']['error'];
+  // O nome original do arquivo no computador do usuário
+  $arqName = $_FILES['arquivo']['name'];
+  // O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+  $arqType = $_FILES['arquivo']['type'];
+  // O tamanho, em bytes, do arquivo
+  $arqSize = $_FILES['arquivo']['size'];
+  // O nome temporário do arquivo, como foi guardado no servidor
+  $arqTemp = $_FILES['arquivo']['tmp_name'];
+  // O código de erro associado a este upload de arquivo
+  $arqError = $_FILES['arquivo']['error'];
 
-	if ($arqError == 0) {
+  if ($arqError == 0) {
         // Verifica o tipo de arquivo enviado
-		if (array_search($arqType, $tiposPermitidos) === false) {
-			echo 'O tipo de arquivo enviado é inválido!';
-		// Verifica o tamanho do arquivo enviado
-		} else if ($arqSize > $tamanhoPermitido) {
-			echo 'O tamanho do arquivo enviado é maior que o limite!';
-		// Não houveram erros, move o arquivo
-		} else {
-			$pasta = '/uploads/';
-			$upload = move_uploaded_file($arqTemp, $pasta . $arqName);
-		}
-	}
+    if (array_search($arqType, $tiposPermitidos) === false) {
+      echo 'O tipo de arquivo enviado é inválido!';
+    // Verifica o tamanho do arquivo enviado
+    } else if ($arqSize > $tamanhoPermitido) {
+      echo 'O tamanho do arquivo enviado é maior que o limite!';
+    // Não houveram erros, move o arquivo
+    } else {
+      $pasta = '/uploads/';
+      $upload = move_uploaded_file($arqTemp, $pasta . $arqName);
+    }
+  }
 
 ?>
 {% endhighlight %}
@@ -215,42 +215,42 @@ Caso você queira armazenar o arquivo enviado com outro nome, mas manter a exten
 
 {% highlight php linenos %}
 <?php
-	// Lista de tipos de arquivos permitidos
-	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
-	// Tamanho máximo (em bytes)
-	$tamanhoPermitido = 1024 * 500; // 500 Kb
+  // Lista de tipos de arquivos permitidos
+  $tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
+  // Tamanho máximo (em bytes)
+  $tamanhoPermitido = 1024 * 500; // 500 Kb
 
-	$nome = $_POST['nome'];
+  $nome = $_POST['nome'];
 
-	// O nome original do arquivo no computador do usuário
-	$arqName = $_FILES['arquivo']['name'];
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
-	$arqType = $_FILES['arquivo']['type'];
-	// O tamanho, em bytes, do arquivo
-	$arqSize = $_FILES['arquivo']['size'];
-	// O nome temporário do arquivo, como foi guardado no servidor
-	$arqTemp = $_FILES['arquivo']['tmp_name'];
-	// O código de erro associado a este upload de arquivo
-	$arqError = $_FILES['arquivo']['error'];
+  // O nome original do arquivo no computador do usuário
+  $arqName = $_FILES['arquivo']['name'];
+  // O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+  $arqType = $_FILES['arquivo']['type'];
+  // O tamanho, em bytes, do arquivo
+  $arqSize = $_FILES['arquivo']['size'];
+  // O nome temporário do arquivo, como foi guardado no servidor
+  $arqTemp = $_FILES['arquivo']['tmp_name'];
+  // O código de erro associado a este upload de arquivo
+  $arqError = $_FILES['arquivo']['error'];
 
-	if ($arqError == 0) {
+  if ($arqError == 0) {
         // Verifica o tipo de arquivo enviado
-		if (array_search($arqType, $tiposPermitidos) === false) {
-			echo 'O tipo de arquivo enviado é inválido!';
-		// Verifica o tamanho do arquivo enviado
-		} else if ($arqSize > $tamanhoPermitido) {
-			echo 'O tamanho do arquivo enviado é maior que o limite!';
-		// Não houveram erros, move o arquivo
-		} else {
-			$pasta = '/uploads/';
-			// Pega a extensão do arquivo enviado
-			$extensao = strtolower(end(explode('.', $arqName)));
-			// Define o novo nome do arquivo usando um UNIX TIMESTAMP
-			$nome = time() . '.' . $extensao;
+    if (array_search($arqType, $tiposPermitidos) === false) {
+      echo 'O tipo de arquivo enviado é inválido!';
+    // Verifica o tamanho do arquivo enviado
+    } else if ($arqSize > $tamanhoPermitido) {
+      echo 'O tamanho do arquivo enviado é maior que o limite!';
+    // Não houveram erros, move o arquivo
+    } else {
+      $pasta = '/uploads/';
+      // Pega a extensão do arquivo enviado
+      $extensao = strtolower(end(explode('.', $arqName)));
+      // Define o novo nome do arquivo usando um UNIX TIMESTAMP
+      $nome = time() . '.' . $extensao;
 
-			$upload = move_uploaded_file($arqTemp, $pasta . $nome);
-		}
-	}
+      $upload = move_uploaded_file($arqTemp, $pasta . $nome);
+    }
+  }
 
 ?>
 {% endhighlight %}
@@ -266,59 +266,59 @@ Agora vamos salvar os dados recebidos no banco de dados apenas para concluir o e
 {% highlight php linenos %}
 <?php
 
-	// Aqui você faz a conexão com o banco de dados
+  // Aqui você faz a conexão com o banco de dados
 
-	// Lista de tipos de arquivos permitidos
-	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
-	// Tamanho máximo (em bytes)
-	$tamanhoPermitido = 1024 * 500; // 500 Kb
+  // Lista de tipos de arquivos permitidos
+  $tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
+  // Tamanho máximo (em bytes)
+  $tamanhoPermitido = 1024 * 500; // 500 Kb
 
-	// O nome original do arquivo no computador do usuário
-	$arqName = $_FILES['arquivo']['name'];
-	// O tipo mime do arquivo. Um exemplo pode ser "image/gif"
-	$arqType = $_FILES['arquivo']['type'];
-	// O tamanho, em bytes, do arquivo
-	$arqSize = $_FILES['arquivo']['size'];
-	// O nome temporário do arquivo, como foi guardado no servidor
-	$arqTemp = $_FILES['arquivo']['tmp_name'];
-	// O código de erro associado a este upload de arquivo
-	$arqError = $_FILES['arquivo']['error'];
+  // O nome original do arquivo no computador do usuário
+  $arqName = $_FILES['arquivo']['name'];
+  // O tipo mime do arquivo. Um exemplo pode ser "image/gif"
+  $arqType = $_FILES['arquivo']['type'];
+  // O tamanho, em bytes, do arquivo
+  $arqSize = $_FILES['arquivo']['size'];
+  // O nome temporário do arquivo, como foi guardado no servidor
+  $arqTemp = $_FILES['arquivo']['tmp_name'];
+  // O código de erro associado a este upload de arquivo
+  $arqError = $_FILES['arquivo']['error'];
 
-	if ($arqError == 0) {
+  if ($arqError == 0) {
         // Verifica o tipo de arquivo enviado
-		if (array_search($arqType, $tiposPermitidos) === false) {
-			echo 'O tipo de arquivo enviado é inválido!';
-		// Verifica o tamanho do arquivo enviado
-		} else if ($arqSize > $tamanhoPermitido) {
-			echo 'O tamanho do arquivo enviado é maior que o limite!';
-		// Não houveram erros, move o arquivo
-		} else {
-			$pasta = '/uploads/';
-			// Pega a extensão do arquivo enviado
-			$extensao = strtolower(end(explode('.', $arqName)));
-			// Define o novo nome do arquivo usando um UNIX TIMESTAMP
-			$nome = time() . '.' . $extensao;
+    if (array_search($arqType, $tiposPermitidos) === false) {
+      echo 'O tipo de arquivo enviado é inválido!';
+    // Verifica o tamanho do arquivo enviado
+    } else if ($arqSize > $tamanhoPermitido) {
+      echo 'O tamanho do arquivo enviado é maior que o limite!';
+    // Não houveram erros, move o arquivo
+    } else {
+      $pasta = '/uploads/';
+      // Pega a extensão do arquivo enviado
+      $extensao = strtolower(end(explode('.', $arqName)));
+      // Define o novo nome do arquivo usando um UNIX TIMESTAMP
+      $nome = time() . '.' . $extensao;
 
-			// Escapa os caracteres protegidos do MySQL (para o nome do usuário)
-			$nomeMySQL = mysql_real_escape_string($_POST['nome']);
+      // Escapa os caracteres protegidos do MySQL (para o nome do usuário)
+      $nomeMySQL = mysql_real_escape_string($_POST['nome']);
 
-			$upload = move_uploaded_file($arqTemp, $pasta . $nome);
+      $upload = move_uploaded_file($arqTemp, $pasta . $nome);
 
-			// Verifica se o arquivo foi movido com sucesso
-			if ($upload == true) {
-				// Cria uma query MySQL
-				$sql = "INSERT INTO `contas` (`id`, `nome`, `foto`) VALUES (NULL, '". $nomeMySQL ."', '". $nome ."')";
-				// Executa a consulta
-				$query = mysql_query($sql);
+      // Verifica se o arquivo foi movido com sucesso
+      if ($upload == true) {
+        // Cria uma query MySQL
+        $sql = "INSERT INTO `contas` (`id`, `nome`, `foto`) VALUES (NULL, '". $nomeMySQL ."', '". $nome ."')";
+        // Executa a consulta
+        $query = mysql_query($sql);
 
-				if ($query == true) {
+        if ($query == true) {
                     echo 'Usuário inserido com sucesso!';
                 }
-			}
-		}
-	} else {
-		echo 'Ocorreu algum erro com o upload, por favor tente novamente!';
-	}
+      }
+    }
+  } else {
+    echo 'Ocorreu algum erro com o upload, por favor tente novamente!';
+  }
 
 ?>
 {% endhighlight %}

@@ -58,12 +58,12 @@ $lembrar = (isset($_POST['lembrar']) AND !empty($_POST['lembrar']));
 
 // Tenta logar o usuário com os dados
 if ( $userClass->logaUsuario( $usuario, $senha, $lembrar ) ) {
-	// Usuário logado com sucesso, redireciona ele para a página restrita
-	header("Location: pagina_restrita.php");
-	exit;
+  // Usuário logado com sucesso, redireciona ele para a página restrita
+  header("Location: pagina_restrita.php");
+  exit;
 } else {
-	// Não foi possível logar o usuário, exibe a mensagem de erro
-	echo "<strong>Erro: </strong>" . $userClass->erro;
+  // Não foi possível logar o usuário, exibe a mensagem de erro
+  echo "<strong>Erro: </strong>" . $userClass->erro;
 }
 ?>
 {% endhighlight %}
@@ -85,9 +85,9 @@ $userClass = new Usuario();
 
 // Verifica se não há um usuário logado
 if ( $userClass->usuarioLogado() === false ) {
-	// Não há um usuário logado, redireciona pra tela de login
-	header("Location: login.php");
-	exit;
+  // Não há um usuário logado, redireciona pra tela de login
+  header("Location: login.php");
+  exit;
 }
 ?>
 {% endhighlight %}
@@ -111,9 +111,9 @@ $userClass = new Usuario();
 
 // Usuário fez logout com sucesso?
 if ( $userClass->logout() ) {
-	// Redireciona pra tela de login
-	header("Location: login.php");
-	exit;
+  // Redireciona pra tela de login
+  header("Location: login.php");
+  exit;
 }
 ?>
 {% endhighlight %}

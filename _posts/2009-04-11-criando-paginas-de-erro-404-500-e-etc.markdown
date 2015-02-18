@@ -31,31 +31,31 @@ Os possíveis códigos de erro são:
 <tbody>
 <tr>
 <td style="border: none" valign="top"><strong style="color: black"><em>Códigos de erro no cliente</em></strong>
-<strong>400  	 Bad Request</strong>
-<strong>401 	Unauthorized</strong>
-402 	Payment Required
-<strong>403 	Forbidden
-404 	Not Found</strong>
-405 	Method Not Allowed
-406 	Not Acceptable
-407 	Proxy
-408 	Request Timeout
-409 	Conflict
-410 	Gone
-411 	Length Required
-412 	Precondition Failed
-413 	Request Entity Too Large
-414 	Request-URI Too Large
-415 	Unsupported Media Type
-416 	Requested Range Not Satisfiable
-417 	Expectation Failed</td>
+<strong>400     Bad Request</strong>
+<strong>401   Unauthorized</strong>
+402   Payment Required
+<strong>403   Forbidden
+404   Not Found</strong>
+405   Method Not Allowed
+406   Not Acceptable
+407   Proxy
+408   Request Timeout
+409   Conflict
+410   Gone
+411   Length Required
+412   Precondition Failed
+413   Request Entity Too Large
+414   Request-URI Too Large
+415   Unsupported Media Type
+416   Requested Range Not Satisfiable
+417   Expectation Failed</td>
 <td style="border: none" valign="top"><strong style="color: black"><em>Código de erros no Servidor</em></strong>
-<strong>500 	Internal Server Error</strong>
-501 	Not Implemented
-502 	Bad Gateway
-503 	Service Unavailable
-504 	Gateway Timeout
-505 	HTTP Version not supported</td>
+<strong>500   Internal Server Error</strong>
+501   Not Implemented
+502   Bad Gateway
+503   Service Unavailable
+504   Gateway Timeout
+505   HTTP Version not supported</td>
 </tr>
 </tbody>
 </table>

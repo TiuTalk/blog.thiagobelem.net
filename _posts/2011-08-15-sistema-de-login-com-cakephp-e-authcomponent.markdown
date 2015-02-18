@@ -35,12 +35,12 @@ Se você já tem um model/tabela de usuários pode pular para o próximo passo. 
 
 {% highlight sql linenos %}
 CREATE TABLE `clientes` (
-	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-	`nome` VARCHAR( 100 ) NOT NULL ,
-	`email` VARCHAR( 150 ) NOT NULL ,
-	`senha` CHAR( 40 ) NOT NULL ,
-	`ativo` BOOLEAN NOT NULL DEFAULT '0',
-	INDEX ( `email` )
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  `nome` VARCHAR( 100 ) NOT NULL ,
+  `email` VARCHAR( 150 ) NOT NULL ,
+  `senha` CHAR( 40 ) NOT NULL ,
+  `ativo` BOOLEAN NOT NULL DEFAULT '0',
+  INDEX ( `email` )
 ) ;
 {% endhighlight %}
 
@@ -53,8 +53,8 @@ Edite (ou crie) o arquivo <strong>/app/app_controller.php</strong> e defina os c
 {% highlight php linenos %}
 class AppController extends Controller {
 
-	// Componentes utilizados por toda a aplicação
-	public $components = array('Session', 'Cookie', 'Auth');
+  // Componentes utilizados por toda a aplicação
+  public $components = array('Session', 'Cookie', 'Auth');
 
 }
 {% endhighlight %}
@@ -70,46 +70,46 @@ Ainda dentro do seu <strong>AppController</strong> você vai configurar o compon
 
 class AppController extends Controller {
 
-	public $components = array('Session', 'Cookie', 'Auth');
+  public $components = array('Session', 'Cookie', 'Auth');
 
-	public function beforeFilter() {
+  public function beforeFilter() {
 
-		// Model de usuários
-		$this->Auth->userModel = 'Cliente';
+    // Model de usuários
+    $this->Auth->userModel = 'Cliente';
 
-		// Campos de usuário e senha
-		$this->Auth->fields = array(
-			'username' => 'email',
-			'password' => 'senha'
-		);
+    // Campos de usuário e senha
+    $this->Auth->fields = array(
+      'username' => 'email',
+      'password' => 'senha'
+    );
 
-		// Condição de usuário ativo/válido (opcional)
-		$this->Auth->userScope = array(
-			'Cliente.ativo' => true
-		);
+    // Condição de usuário ativo/válido (opcional)
+    $this->Auth->userScope = array(
+      'Cliente.ativo' => true
+    );
 
-		// Action da tela de login
-		$this->Auth->loginAction = array(
-			'controller' => 'clientes',
-			'action' => 'login'
-		);
+    // Action da tela de login
+    $this->Auth->loginAction = array(
+      'controller' => 'clientes',
+      'action' => 'login'
+    );
 
-		// Action da tela após o login (com sucesso)
-		$this->Auth->loginRedirect = array(
-			'controller' => 'clientes',
-			'action' => 'home'
-		);
+    // Action da tela após o login (com sucesso)
+    $this->Auth->loginRedirect = array(
+      'controller' => 'clientes',
+      'action' => 'home'
+    );
 
-		// Action para redirecionamento após o logout
-		$this->Auth->logoutRedirect = array(
-			'controller' => 'pages',
-			'action' => 'display', 'home'
-		);
+    // Action para redirecionamento após o logout
+    $this->Auth->logoutRedirect = array(
+      'controller' => 'pages',
+      'action' => 'display', 'home'
+    );
 
-		// Mensagens de erro
-		$this->Auth->loginError = __('Usuário e/ou senha incorreto(s)', true);
-		$this->Auth->authError = __('Você precisa fazer login para acessar esta página', true);
-	}
+    // Mensagens de erro
+    $this->Auth->loginError = __('Usuário e/ou senha incorreto(s)', true);
+    $this->Auth->authError = __('Você precisa fazer login para acessar esta página', true);
+  }
 
 }
 {% endhighlight %}
@@ -127,12 +127,12 @@ Se o nosso model de usuários se chama <strong>Cliente</strong>, então nossas a
 
 class ClientesController extends AppController {
 
-	public function login() { }
+  public function login() { }
 
-	public function logout() {
-		// Redireciona o usuário para o action do logoutRedirect
-		$this->redirect($this->Auth->logout());
-	}
+  public function logout() {
+    // Redireciona o usuário para o action do logoutRedirect
+    $this->redirect($this->Auth->logout());
+  }
 
 }
 {% endhighlight %}
@@ -166,17 +166,17 @@ Para criar um usuário é bem simples: é só você fazer isso dentro de alguma 
 
 
 {% highlight php linenos %}
-		// Carrega o model de clientes
-		$this->loadModel('Cliente');
+    // Carrega o model de clientes
+    $this->loadModel('Cliente');
 
-		// Cria um novo cliente
-		$this->Cliente->create();
-		$this->Cliente->save(array(
-			'nome' => 'Thiago Belem',
-			'email' => 'contato@thiagobelem.net',
-			'senha' => $this->Auth->password('123456'),
-			'ativo' => true
-		));
+    // Cria um novo cliente
+    $this->Cliente->create();
+    $this->Cliente->save(array(
+      'nome' => 'Thiago Belem',
+      'email' => 'contato@thiagobelem.net',
+      'senha' => $this->Auth->password('123456'),
+      'ativo' => true
+    ));
 {% endhighlight %}
 
 Esse código pode ir dentro do método <strong>beforeFilter</strong> do seu <strong>AppController</strong> (após as instruções de configuração do AuthComponent... Mas <strong>execute esse código apenas uma vez</strong>! Cada vez que esse código for executado o CakePHP irá tentar criar um novo usuário. Execute, verifique no banco de dados se o usuário foi criado e delete o código.
@@ -191,7 +191,7 @@ Caso você queira proteger apenas um [prefixo](http://book.cakephp.org/pt/view/9
 
 {% highlight php linenos %}
 if (!isset($this->params['admin']) || !$this->params['admin'])
-		$this->Auth->allow('*');
+    $this->Auth->allow('*');
 {% endhighlight %}
 
 Isso fará com que o Auth permita acesso à qualquer action quando você não estiver dentro do um prefixo "admin".
@@ -200,26 +200,26 @@ Você também precisará mudar algumas configurações do Auth:
 
 
 {% highlight php linenos %}
-		// Action da tela de login
-		$this->Auth->loginAction = array(
-			'admin' => false,
-			'controller' => 'clientes',
-			'action' => 'login'
-		);
+    // Action da tela de login
+    $this->Auth->loginAction = array(
+      'admin' => false,
+      'controller' => 'clientes',
+      'action' => 'login'
+    );
 
-		// Action da tela após o login (com sucesso)
-		$this->Auth->loginRedirect = array(
-			'admin' => true,
-			'controller' => 'clientes',
-			'action' => 'home'
-		);
+    // Action da tela após o login (com sucesso)
+    $this->Auth->loginRedirect = array(
+      'admin' => true,
+      'controller' => 'clientes',
+      'action' => 'home'
+    );
 
-		// Action para redirecionamento após o logout
-		$this->Auth->logoutRedirect = array(
-			'admin' => false,
-			'controller' => 'pages',
-			'action' => 'display', 'home'
-		);
+    // Action para redirecionamento após o logout
+    $this->Auth->logoutRedirect = array(
+      'admin' => false,
+      'controller' => 'pages',
+      'action' => 'display', 'home'
+    );
 {% endhighlight %}
 
 Essa mudança é necessária pois você precisa sair e entrar do prefixo "admin" antes e depois do login/logout.

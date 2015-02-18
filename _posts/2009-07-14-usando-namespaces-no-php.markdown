@@ -28,7 +28,7 @@ Imagine que você fez uma função nova para usar no seu site só que ela usa no
 <?php
 
 function connect() {
-	// Faz a sua conexão com o banco de dados
+  // Faz a sua conexão com o banco de dados
 }
 
 ?>
@@ -43,7 +43,7 @@ Aí, usando a maravilha do namespace, você faz assim:
 namespace MeuProjeto;
 
 function connect() {
-	// Faz a sua conexão com o banco de dados
+  // Faz a sua conexão com o banco de dados
 }
 
 ?>
@@ -52,11 +52,11 @@ function connect() {
 E quando você precisar chamar a função do MeuProjeto é só fazer assim:
 {% highlight php linenos %}
 <?php
-	// Inclui o arquivo com a função
-	include("conexao-MySQL.php");
+  // Inclui o arquivo com a função
+  include("conexao-MySQL.php");
 
-	// Chama a função dentro do namespace
-	MeuProjeto/connect();
+  // Chama a função dentro do namespace
+  MeuProjeto/connect();
 ?>
 {% endhighlight %}
 
@@ -67,9 +67,9 @@ E quando você precisar chamar a função do MeuProjeto é só fazer assim:
 
 namespace MeuProjeto {
 
-	function connect() {
-		// Faz a sua conexão com o banco de dados
-	}
+  function connect() {
+    // Faz a sua conexão com o banco de dados
+  }
 
 }
 

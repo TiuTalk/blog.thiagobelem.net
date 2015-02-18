@@ -32,9 +32,9 @@ $palavra = '(casa|carro)';
 $frase = 'Eu fui pra casa ontem!';
 
 if (ereg($palavra, $frase)) {
-	echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
+  echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
 } else {
-	echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
+  echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
 }
 
 ?>
@@ -50,9 +50,9 @@ $palavra = '/(casa|carro)/';
 $frase = 'Eu fui pra casa ontem!';
 
 if (preg_match($palavra, $frase)) {
-	echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
+  echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
 } else {
-	echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
+  echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
 }
 
 ?>
@@ -71,9 +71,9 @@ $palavra = '/(casa|carro)/i';
 $frase = 'Eu fui pra CasA ontem!';
 
 if (preg_match($palavra, $frase)) {
-	echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
+  echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
 } else {
-	echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
+  echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
 }
 
 ?>

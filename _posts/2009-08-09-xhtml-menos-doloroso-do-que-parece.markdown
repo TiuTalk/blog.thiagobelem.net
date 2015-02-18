@@ -29,14 +29,14 @@ Você já andou meio caminho... Essa é a regra principal do XHTML... Todos os e
 Por exemplo, esse código:
 {% highlight html linenos %}
 <div>
-	<ul>
-		<li>
+  <ul>
+    <li>
 {% endhighlight %}
 
 Segundo o XHTML ele deveria ser fechado dessa forma:
 {% highlight html linenos %}
     </li>
-	</ul>
+  </ul>
 </div>
 {% endhighlight %}
 Isso tudo é muito mais organizado e mais fácil de ler, concordam?
@@ -46,13 +46,13 @@ Mas existem outras tags que não são de marcação e por isso não tem uma segu
 E eu te mostro a resposta:
 {% highlight html linenos %}
 <div>
-	Esse é um parágrafo com TAG de fechamento
+  Esse é um parágrafo com TAG de fechamento
 
-	<img src="minha_imagem.jpg" alt="Minha Imagem" />
-	<hr />
-	Esse é outro parágrafo com TAG de fechamento e  quebra de linha!
+  <img src="minha_imagem.jpg" alt="Minha Imagem" />
+  <hr />
+  Esse é outro parágrafo com TAG de fechamento e  quebra de linha!
 
-	<input type="text" name="meuInput" />
+  <input type="text" name="meuInput" />
 </div>
 {% endhighlight %}
 

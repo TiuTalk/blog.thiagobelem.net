@@ -30,15 +30,15 @@ Para o nosso exemplo de hoje usaremos duas tabelas, chamadas "categorias" e "pro
 
 {% highlight sql linenos %}
 CREATE TABLE `categorias` (
-	`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-	`nome` VARCHAR( 255 ) NOT NULL
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  `nome` VARCHAR( 255 ) NOT NULL
 ) ENGINE = MYISAM;
 
 CREATE TABLE `produtos` (
-	`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-	`categoria_id` INT NOT NULL ,
-	`nome` VARCHAR( 255 ) NOT NULL ,
-	`preco` DECIMAL( 10,2 ) NOT NULL
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  `categoria_id` INT NOT NULL ,
+  `nome` VARCHAR( 255 ) NOT NULL ,
+  `preco` DECIMAL( 10,2 ) NOT NULL
 ) ENGINE = MYISAM;
 {% endhighlight %}
 
@@ -69,17 +69,17 @@ Sem usar o relacionamento você poderia pegar todos os produtos e depois pegar a
 $sql = "SELECT * FROM `produtos` ORDER BY `nome` ASC";
 $query = mysql_query($sql);
 while ($produto = mysql_fetch_assoc($query)) {
-	// Aqui temos o array $produto com todos os valores do produto
+  // Aqui temos o array $produto com todos os valores do produto
 
-	// Consulta para pegar os dados da categoria:
-	$sqlC = "SELECT * FROM `categorias` WHERE `id` = " . $produto['categoria_id'];
-	$queryC = mysql_query($sqlC);
-	$categoria = mysql_fetch_assoc($queryC);
+  // Consulta para pegar os dados da categoria:
+  $sqlC = "SELECT * FROM `categorias` WHERE `id` = " . $produto['categoria_id'];
+  $queryC = mysql_query($sqlC);
+  $categoria = mysql_fetch_assoc($queryC);
 
-	echo 'Titulo: ' . $produto['nome'] . '';
-	echo 'Preço: ' . $produto['preco'] . '';
-	echo 'Categoria: ' . $categoria['nome']. '';
-	echo '<hr />';
+  echo 'Titulo: ' . $produto['nome'] . '';
+  echo 'Preço: ' . $produto['preco'] . '';
+  echo 'Categoria: ' . $categoria['nome']. '';
+  echo '<hr />';
 }
 
 ?>
@@ -145,11 +145,11 @@ Agora vamos ao nosso novo script de PHP que, sem dúvidas, é bem mais prático 
 $sql = "SELECT p.*, c.`nome` AS categoria FROM `produtos` AS p INNER JOIN `categorias` AS c ON p.`categoria_id` = c.`id` ORDER BY p.`nome` ASC";
 $query = mysql_query($sql);
 while ($produto = mysql_fetch_assoc($query)) {
-	// Aqui temos o array $produto com todos os dados encontrados
-	echo 'Titulo: ' . $produto['nome'] . '';
-	echo 'Preço: ' . $produto['preco'] . '';
-	echo 'Categoria: ' . $produto['categoria']. '';
-	echo '<hr />';
+  // Aqui temos o array $produto com todos os dados encontrados
+  echo 'Titulo: ' . $produto['nome'] . '';
+  echo 'Preço: ' . $produto['preco'] . '';
+  echo 'Categoria: ' . $produto['categoria']. '';
+  echo '<hr />';
 }
 
 ?>

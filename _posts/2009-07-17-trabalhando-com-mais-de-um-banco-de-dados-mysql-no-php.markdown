@@ -19,31 +19,31 @@ Hoje vi que há pouco material sobre como fazer o PHP conectar-se a dois servido
 
 {% highlight php linenos %}
 <?php
-	// Primeiro servidor
-	$banco1 = mysql_connect('127.0.0.1', 'root', '');
-	mysql_select_db('banco', $banco1);
+  // Primeiro servidor
+  $banco1 = mysql_connect('127.0.0.1', 'root', '');
+  mysql_select_db('banco', $banco1);
 
-	// Segundo servidor
-	$banco2 = mysql_connect('127.0.0.2', 'root', '');
-	mysql_select_db('banco', $banco2);
+  // Segundo servidor
+  $banco2 = mysql_connect('127.0.0.2', 'root', '');
+  mysql_select_db('banco', $banco2);
 
-	// Terceiro servidor
-	$banco3 = mysql_connect('127.0.0.3', 'root', '');
-	mysql_select_db('banco', $banco3);
+  // Terceiro servidor
+  $banco3 = mysql_connect('127.0.0.3', 'root', '');
+  mysql_select_db('banco', $banco3);
 
-	// ...
+  // ...
 
-	// Consulta no 1° banco
-	$sql1 = mysql_query('SELECT * FROM `noticias`', $banco1);
-	// ... processa os dados ...
+  // Consulta no 1° banco
+  $sql1 = mysql_query('SELECT * FROM `noticias`', $banco1);
+  // ... processa os dados ...
 
-	// Consulta no 2° banco
-	$sql2 = mysql_query('SELECT * FROM `noticias`', $banco2);
-	// ... processa os dados ...
+  // Consulta no 2° banco
+  $sql2 = mysql_query('SELECT * FROM `noticias`', $banco2);
+  // ... processa os dados ...
 
-	// Consulta no 3° banco
-	$sql3 = mysql_query('SELECT * FROM `noticias`', $banco3);
-	// ... processa os dados ...
+  // Consulta no 3° banco
+  $sql3 = mysql_query('SELECT * FROM `noticias`', $banco3);
+  // ... processa os dados ...
 ?>
 {% endhighlight %}
 

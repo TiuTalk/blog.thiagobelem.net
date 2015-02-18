@@ -63,14 +63,14 @@ Primeiro vamos à minha solução em PHP:
 
 {% highlight php linenos %}
 function solucao() {
-	$soma = 0;
+  $soma = 0;
 
-	for ($i = 1; $i < 1000; $i++) {
-		if (!($i % 3) || !($i % 5))
-			$soma += $i;
-	}
+  for ($i = 1; $i < 1000; $i++) {
+    if (!($i % 3) || !($i % 5))
+      $soma += $i;
+  }
 
-	echo $soma;
+  echo $soma;
 }
 {% endhighlight %}
 
@@ -80,13 +80,13 @@ E agora, a mesma abordagem em Python:
 
 {% highlight python linenos %}
 def solucao():
-	soma = 0;
+  soma = 0;
 
-	for i in range(1, 1000):
-		if not (i % 3) or not (i % 5):
-			soma += i
+  for i in range(1, 1000):
+    if not (i % 3) or not (i % 5):
+      soma += i
 
-	print soma
+  print soma
 {% endhighlight %}
 
 <h3>Conclusão</h3>

@@ -36,12 +36,12 @@ Agora vamos definir algumas variáveis com valores padrões:
 < ?php
 
 class MeuSQL {
-	// Propriedades padrões
-	var $servidor = '127.0.0.1';
-	var $usuario = 'root';
-	var $senha = '';
-	var $banco = 'meusite';
-	var $conexao = null;
+  // Propriedades padrões
+  var $servidor = '127.0.0.1';
+  var $usuario = 'root';
+  var $senha = '';
+  var $banco = 'meusite';
+  var $conexao = null;
 
 }
 
@@ -59,20 +59,20 @@ Agora vamos definir o primeiro método. "<strong>Método</strong>" é nome que s
 < ?php
 
 class MeuSQL {
-	// Propriedades padrões
-	var $servidor = '127.0.0.1'; // Endereço
-	var $usuario = 'root'; // Usuário
-	var $senha = ''; // Senha
-	var $banco = 'meusite'; // Banco de dados
-	// Outras variáveis para uso interno:
-	var $conexao = null;
-	var $query = null;
+  // Propriedades padrões
+  var $servidor = '127.0.0.1'; // Endereço
+  var $usuario = 'root'; // Usuário
+  var $senha = ''; // Senha
+  var $banco = 'meusite'; // Banco de dados
+  // Outras variáveis para uso interno:
+  var $conexao = null;
+  var $query = null;
 
-	function conecta() {
-		$this->conexao = mysql_connect($this->servidor, $this->usuario, $this->senha);
-		$status = mysql_select_db($this->banco, $this->conexao);
-		return $status;
-	}
+  function conecta() {
+    $this->conexao = mysql_connect($this->servidor, $this->usuario, $this->senha);
+    $status = mysql_select_db($this->banco, $this->conexao);
+    return $status;
+  }
 
 }
 
@@ -92,33 +92,33 @@ Agora vamos definir mais três métodos para as outras funções básicas do MyS
 < ?php
 
 class MeuSQL {
-	// Propriedades padrões
-	var $servidor = '127.0.0.1'; // Endereço
-	var $usuario = 'root'; // Usuário
-	var $senha = ''; // Senha
-	var $banco = 'meusite'; // Banco de dados
-	// Outras variáveis para uso interno:
-	var $conexao = null;
-	var $query = null;
+  // Propriedades padrões
+  var $servidor = '127.0.0.1'; // Endereço
+  var $usuario = 'root'; // Usuário
+  var $senha = ''; // Senha
+  var $banco = 'meusite'; // Banco de dados
+  // Outras variáveis para uso interno:
+  var $conexao = null;
+  var $query = null;
 
-	function conecta() {
-		$this->conexao = mysql_connect($this->servidor, $this->usuario, $this->senha);
-		$status = mysql_select_db($this->banco, $this->conexao);
-		return $status;
-	}
+  function conecta() {
+    $this->conexao = mysql_connect($this->servidor, $this->usuario, $this->senha);
+    $status = mysql_select_db($this->banco, $this->conexao);
+    return $status;
+  }
 
-	function consulta($query) {
-		$this->query = mysql_query($query);
-		return $this->query;
-	}
+  function consulta($query) {
+    $this->query = mysql_query($query);
+    return $this->query;
+  }
 
-	function resultado() {
-		return mysql_fetch_assoc($this->query);
-	}
+  function resultado() {
+    return mysql_fetch_assoc($this->query);
+  }
 
-	function registros() {
-		return mysql_num_rows($this->query);
-	}
+  function registros() {
+    return mysql_num_rows($this->query);
+  }
 
 }
 
@@ -150,9 +150,9 @@ echo "<hr />";
 
 // Exibe dados de cada registro
 while ($dados = $sql->resultado()) {
-	// Aqui o array $dados terá o valor de cada coluna do registro
-	echo "- Titulo da notícia: " . $dados['titulo'];
-	echo "";
+  // Aqui o array $dados terá o valor de cada coluna do registro
+  echo "- Titulo da notícia: " . $dados['titulo'];
+  echo "";
 }
 ?>
 {% endhighlight %}
@@ -170,45 +170,45 @@ Agora, por fim, fiz alguns ajustes e comentei cada método da classe para ficar 
 * Classe personalizada de uso do MySQL
 */
 class MeuSQL {
-	// Propriedades padrões
-	var $servidor = '127.0.0.1'; // Endereço
-	var $usuario = 'root'; // Usuário
-	var $senha = ''; // Senha
-	var $banco = 'meusite'; // Banco de dados
-	// Outras variáveis para uso interno
-	var $conexao = null;
-	var $query = null;
+  // Propriedades padrões
+  var $servidor = '127.0.0.1'; // Endereço
+  var $usuario = 'root'; // Usuário
+  var $senha = ''; // Senha
+  var $banco = 'meusite'; // Banco de dados
+  // Outras variáveis para uso interno
+  var $conexao = null;
+  var $query = null;
 
-	/**
-	* Função para fazer a conexão com o MySQL
-	*/
-	function conecta() {
-		$this->conexao = mysql_connect($this->servidor, $this->usuario, $this->senha);
-		$status = mysql_select_db($this->banco, $this->conexao);
-		return $status;
-	}
+  /**
+  * Função para fazer a conexão com o MySQL
+  */
+  function conecta() {
+    $this->conexao = mysql_connect($this->servidor, $this->usuario, $this->senha);
+    $status = mysql_select_db($this->banco, $this->conexao);
+    return $status;
+  }
 
-	/**
-	* Função para fazer uma consulta no MySQL
-	*/
-	function consulta($query) {
-		$this->query = mysql_query($query);
-		return $this->query;
-	}
+  /**
+  * Função para fazer uma consulta no MySQL
+  */
+  function consulta($query) {
+    $this->query = mysql_query($query);
+    return $this->query;
+  }
 
-	/**
-	* Função para retornar cada resultado da consulta
-	*/
-	function resultado() {
-		return mysql_fetch_assoc($this->query);
-	}
+  /**
+  * Função para retornar cada resultado da consulta
+  */
+  function resultado() {
+    return mysql_fetch_assoc($this->query);
+  }
 
-	/**
-	* Função que retorna o total de resultados encontrados
-	*/
-	function registros() {
-		return mysql_num_rows($this->query);
-	}
+  /**
+  * Função que retorna o total de resultados encontrados
+  */
+  function registros() {
+    return mysql_num_rows($this->query);
+  }
 
 }
 

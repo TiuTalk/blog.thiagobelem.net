@@ -34,7 +34,7 @@ Normalmente você faria uma consulta assim:
 $sql = "SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 0, 20";
 $query = mysql_query($sql);
 while ($dados = mysql_fetch_assoc($query)) {
-	// Aqui você faz a exibição de cada notícia
+  // Aqui você faz a exibição de cada notícia
 }
 
 ?>
@@ -63,7 +63,7 @@ $mem->set($chave, $query, 0, $tempo);
 
 // Exibição dos dados
 while ($dados = mysql_fetch_assoc($query)) {
-	// Aqui você faz a exibição de cada notícia
+  // Aqui você faz a exibição de cada notícia
 }
 
 ?>
@@ -85,19 +85,19 @@ $cache = $mem->get($chave);
 
 // Verifica se o resultado não existe ou expirou
 if ($cache === false) {
-	// Executa a consulta novamente
-	$query = mysql_query($sql);
+  // Executa a consulta novamente
+  $query = mysql_query($sql);
 
-	$tempo = 60 * 60; // 3600s
-	$mem->set($chave, $query, 0, $tempo);
+  $tempo = 60 * 60; // 3600s
+  $mem->set($chave, $query, 0, $tempo);
 } else {
-	// A consulta está salva na memória ainda, então pegamos o resultado:
-	$query = $cache;
+  // A consulta está salva na memória ainda, então pegamos o resultado:
+  $query = $cache;
 }
 
 // Exibição dos dados
 while ($dados = mysql_fetch_assoc($query)) {
-	// Aqui você faz a exibição de cada notícia
+  // Aqui você faz a exibição de cada notícia
 }
 ?>
 {% endhighlight %}
@@ -109,18 +109,18 @@ Você ainda poderia fazer uma função para fazer todo esse trabalho por você..
 
 {% highlight php linenos %}
 function mysql_queryCache($consulta, $tempo = 3600) {
-	$chave = md5($consulta);
+  $chave = md5($consulta);
 
-	$mem = new Memcache;
-	$mem->addServer($_SERVER['HTTP_HOST']);
+  $mem = new Memcache;
+  $mem->addServer($_SERVER['HTTP_HOST']);
 
-	$query = $mem->get($chave);
-	if ($query === false) {
-		$query = mysql_query($consulta);
-		$mem->set($chave, $query, 0, $tempo);
-	}
+  $query = $mem->get($chave);
+  if ($query === false) {
+    $query = mysql_query($consulta);
+    $mem->set($chave, $query, 0, $tempo);
+  }
 
-	return $query;
+  return $query;
 }
 {% endhighlight %}
 E agora, o exemplo anterior usando a função:
@@ -132,7 +132,7 @@ $query = mysql_queryCache($sql);
 
 // Exibição dos dados
 while ($dados = mysql_fetch_assoc($query)) {
-	// Aqui você faz a exibição de cada notícia
+  // Aqui você faz a exibição de cada notícia
 }
 ?>
 {% endhighlight %}

@@ -97,10 +97,10 @@ Vamos iniciar o nosso script criando um pequeno script de conexão ao banco de d
 
 // Dados de acesso ao servidor MySQL
 $MySQL = array(
-	'servidor' => '127.0.0.1',	// Endereço do servidor
-	'usuario' => 'root',		// Usuário
-	'senha' => '',				// Senha
-	'banco' => 'meu_site'		// Nome do banco de dados
+  'servidor' => '127.0.0.1',  // Endereço do servidor
+  'usuario' => 'root',    // Usuário
+  'senha' => '',        // Senha
+  'banco' => 'meu_site'    // Nome do banco de dados
 );
 
 $MySQLi = new MySQLi($MySQL['servidor'], $MySQL['usuario'], $MySQL['senha'], $MySQL['banco']);
@@ -144,10 +144,10 @@ Agora vamos montar uma consulta SQL simples para buscar as 10 últimas notícias
 {% highlight php linenos %}
 // Monta a consulta SQL para trazer as últimas 10 notícias ativas
 $sql = 'SELECT *
-		FROM `noticias` AS Noticia
-		WHERE Noticia.`ativa` = 1
-		ORDER BY Noticia.`cadastro` DESC
-		LIMIT 10';
+    FROM `noticias` AS Noticia
+    WHERE Noticia.`ativa` = 1
+    ORDER BY Noticia.`cadastro` DESC
+    LIMIT 10';
 {% endhighlight %}
 
 A consulta montada poderia ser traduzida por:
@@ -172,16 +172,16 @@ E agora só precisamos rodar um loop, e em cada iteração (passada no loop) ire
 {% highlight php linenos %}
 // Faz um loop, passando por todos os resultados encontrados
 while ($noticia = $resultado->fetch_object()) {
-	// Exibe a notícia dentro de um bloco HTML
-	?>
+  // Exibe a notícia dentro de um bloco HTML
+  ?>
 
-	<h2><?php echo $noticia->titulo; ?></h2>
-	<?php echo $noticia->descricao; ?>
+  <h2><?php echo $noticia->titulo; ?></h2>
+  <?php echo $noticia->descricao; ?>
 
-	[Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
+  [Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
 
 
-	<?php
+  <?php
 } // while ($noticia = $resultado->fetch_object())
 {% endhighlight %}
 
@@ -234,26 +234,26 @@ require_once('includes/mysqli.php');
 
 // Monta a consulta SQL para trazer as últimas 10 notícias ativas
 $sql = 'SELECT *
-		FROM `noticias` AS Noticia
-		WHERE Noticia.`ativa` = 1
-		ORDER BY Noticia.`cadastro` DESC
-		LIMIT 10';
+    FROM `noticias` AS Noticia
+    WHERE Noticia.`ativa` = 1
+    ORDER BY Noticia.`cadastro` DESC
+    LIMIT 10';
 
 // Executa a consulta OU mostra uma mensagem de erro
 $resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
 
 // Faz um loop, passando por todos os resultados encontrados
 while ($noticia = $resultado->fetch_object()) {
-	// Exibe a notícia dentro de um bloco HTML
-	?>
+  // Exibe a notícia dentro de um bloco HTML
+  ?>
 
-	<h2><?php echo $noticia->titulo; ?></h2>
-	<?php echo $noticia->descricao; ?>
+  <h2><?php echo $noticia->titulo; ?></h2>
+  <?php echo $noticia->descricao; ?>
 
-	[Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
+  [Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
 
 
-	<?php
+  <?php
 } // while ($noticia = $resultado->fetch_object())
 
 // Exibe o total de registros encontrados

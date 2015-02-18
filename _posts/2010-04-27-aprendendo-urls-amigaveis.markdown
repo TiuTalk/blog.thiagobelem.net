@@ -76,9 +76,9 @@ Vá até a raiz do seu site e edite (ou crie) um arquivo chamado .htaccess ([lei
 
 {% highlight text linenos %}
 <IfModule mod_rewrite.c>
-	RewriteEngine On
+  RewriteEngine On
 
-	RewriteRule ^contato/?$ /contato.php [NC,L]
+  RewriteRule ^contato/?$ /contato.php [NC,L]
 </IfModule>
 {% endhighlight %}
 

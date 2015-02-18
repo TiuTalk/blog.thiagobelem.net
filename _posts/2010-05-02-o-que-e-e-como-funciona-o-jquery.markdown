@@ -54,10 +54,10 @@ Suponhamos que você tenha uma lista de imagens com o seguinte HTML:
 
 {% highlight html linenos %}
 <ul class="lista-imagens">
-	<li><img src="img/imagem1.jpg" alt="Imagem 1" width="200" height="200" /></li>
-	<li><img src="img/imagem2.jpg" alt="Imagem 2" width="200" height="200" /></li>
-	<li><img src="img/imagem3.jpg" alt="Imagem 3" width="200" height="200" /></li>
-	<li><img src="img/imagem4.jpg" alt="Imagem 4" width="200" height="200" /></li>
+  <li><img src="img/imagem1.jpg" alt="Imagem 1" width="200" height="200" /></li>
+  <li><img src="img/imagem2.jpg" alt="Imagem 2" width="200" height="200" /></li>
+  <li><img src="img/imagem3.jpg" alt="Imagem 3" width="200" height="200" /></li>
+  <li><img src="img/imagem4.jpg" alt="Imagem 4" width="200" height="200" /></li>
 </ul>
 {% endhighlight %}
 
@@ -100,10 +100,10 @@ Agora vamos criar o código que criará o evento de "quando o site terminar de c
 {% highlight javascript linenos %}
 (function($) {
 
-	// Quando o site terminar de carregar...
-	$(document).ready(function() {
+  // Quando o site terminar de carregar...
+  $(document).ready(function() {
 
-	});
+  });
 
 })(jQuery);
 {% endhighlight %}
@@ -145,8 +145,8 @@ Continuando o nosso código, vamos inserir a linha que irá escurecer (apagar / 
 // Quando passarmos o mouse me cima das imagens
 $('ul.lista-imagens li img').hover(function() {
 
-	// Escurecemos todas as imagens da lista
-	$('ul.lista-imagens li img').fadeTo('fast', 0.3);
+  // Escurecemos todas as imagens da lista
+  $('ul.lista-imagens li img').fadeTo('fast', 0.3);
 
 });
 {% endhighlight %}
@@ -178,12 +178,12 @@ Precisamos adicionar o segundo parâmetro do <code>.hover()</code>, este segundo
 // Quando passarmos o mouse me cima das imagens
 $('ul.lista-imagens li img').hover(function() {
 
-	// Escurecemos todas as OUTRAS imagens da lista
-	$('ul.lista-imagens li img').not(this).fadeTo('fast', 0.3);
+  // Escurecemos todas as OUTRAS imagens da lista
+  $('ul.lista-imagens li img').not(this).fadeTo('fast', 0.3);
 
 }, function() {
 
-	// Aqui teremos o código que será executado quando tirarmos o mouse da imagem
+  // Aqui teremos o código que será executado quando tirarmos o mouse da imagem
 
 });
 {% endhighlight %}
@@ -197,13 +197,13 @@ Agora só precisamos inserir o mesmo código que usamos para escurecer as imagen
 // Quando passarmos o mouse me cima das imagens
 $('ul.lista-imagens li img').hover(function() {
 
-	// Escurecemos todas as OUTRAS imagens da lista
-	$('ul.lista-imagens li img').not(this).fadeTo('fast', 0.3);
+  // Escurecemos todas as OUTRAS imagens da lista
+  $('ul.lista-imagens li img').not(this).fadeTo('fast', 0.3);
 
 }, function() {
 
-	// Todas as imagens se acendem voltando ao estado original
-	$('ul.lista-imagens li img').fadeTo('fast', 1.0);
+  // Todas as imagens se acendem voltando ao estado original
+  $('ul.lista-imagens li img').fadeTo('fast', 1.0);
 
 });
 {% endhighlight %}
@@ -219,13 +219,13 @@ Sabendo disso, precisamos fazer todos os efeitos "pararem" antes de começar um 
 // Quando passarmos o mouse me cima das imagens
 $('ul.lista-imagens li img').hover(function() {
 
-	// Escurecemos todas as OUTRAS imagens da lista
-	$('ul.lista-imagens li img').not(this).stop().fadeTo('fast', 0.3);
+  // Escurecemos todas as OUTRAS imagens da lista
+  $('ul.lista-imagens li img').not(this).stop().fadeTo('fast', 0.3);
 
 }, function() {
 
-	// Todas as imagens se acendem voltando ao estado original
-	$('ul.lista-imagens li img').stop().fadeTo('fast', 1.0);
+  // Todas as imagens se acendem voltando ao estado original
+  $('ul.lista-imagens li img').stop().fadeTo('fast', 1.0);
 
 });
 {% endhighlight %}
@@ -235,9 +235,9 @@ Agora sim nosso efeito ficou [completo](http://jsbin.com/odaga3/4/) e, pasmem, c
 
 {% highlight javascript linenos %}
 $('ul.lista-imagens li img').hover(function() {
-	$('ul.lista-imagens li img').not(this).stop().fadeTo('fast', 0.3);
+  $('ul.lista-imagens li img').not(this).stop().fadeTo('fast', 0.3);
 }, function() {
-	$('ul.lista-imagens li img').stop().fadeTo('fast', 1.0);
+  $('ul.lista-imagens li img').stop().fadeTo('fast', 1.0);
 });
 {% endhighlight %}
 

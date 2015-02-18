@@ -32,16 +32,16 @@ Neste arquivo, adicione o seguinte bloco de código:
 {% highlight sh linenos %}
 # Todo o servidor
 <Directory />
-	Order deny,allow
-	Deny from all
-	AllowOverride None
-	Options None
+  Order deny,allow
+  Deny from all
+  AllowOverride None
+  Options None
 </Directory>
 
 # Raíz do servidor (opcional)
 <Directory /var/www/>
-	Order allow,deny
-	Allow from all
+  Order allow,deny
+  Allow from all
 </Directory>
 {% endhighlight %}
 
@@ -51,16 +51,16 @@ Neste arquivo, adicione o seguinte bloco de código:
 {% highlight sh linenos %}
 # Todo o servidor
 <Directory C:/>
-	Order deny,allow
-	Deny from all
-	AllowOverride None
-	Options None
+  Order deny,allow
+  Deny from all
+  AllowOverride None
+  Options None
 </Directory>
 
 # Raíz do servidor (opcional)
 <Directory C:/webroot/>
-	Order allow,deny
-	Allow from all
+  Order allow,deny
+  Allow from all
 </Directory>
 {% endhighlight %}
 

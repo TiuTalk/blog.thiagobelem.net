@@ -57,17 +57,17 @@ Feito isso, montaremos a consulta que será executada no banco de dados:
 {% highlight php linenos %}
 // Monta a consulta SQL para trazer as últimas 10 notícias ativas e que pertençam à categoria específica
 $sql = "SELECT
-			Noticia.id, Noticia.titulo, Noticia.descricao,
-			Categoria.nome AS categoria
-		FROM `noticias` AS Noticia
-			INNER JOIN `categorias` AS Categoria
-				ON Categoria.`id` = Noticia.`categoria_id`
-		WHERE
-			Noticia.`ativa` = 1
-			AND
-			Categoria.`nome` = '{$categoria}'
-		ORDER BY Noticia.`cadastro` DESC
-		LIMIT 10";
+      Noticia.id, Noticia.titulo, Noticia.descricao,
+      Categoria.nome AS categoria
+    FROM `noticias` AS Noticia
+      INNER JOIN `categorias` AS Categoria
+        ON Categoria.`id` = Noticia.`categoria_id`
+    WHERE
+      Noticia.`ativa` = 1
+      AND
+      Categoria.`nome` = '{$categoria}'
+    ORDER BY Noticia.`cadastro` DESC
+    LIMIT 10";
 {% endhighlight %}
 
 O interessante dessa consulta é que ela busca os registros da tabela <code>noticia</code> que possuam um relacionamento com os registros da tabela <code>categorias</code> e, o registro correspondente na tabela <code>categorias</code> deve possuir o valor da variável <code>$categoria</code> no campo <code>nome</code>.
@@ -83,16 +83,16 @@ $resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR)
 
 // Faz um loop, passando por todos os resultados encontrados
 while ($noticia = $resultado->fetch_object()) {
-	// Exibe a notícia dentro de um bloco HTML
-	?>
+  // Exibe a notícia dentro de um bloco HTML
+  ?>
 
-	<h2><?php echo $noticia->categoria; ?> - <?php echo $noticia->titulo; ?></h2>
-	<?php echo $noticia->descricao; ?>
+  <h2><?php echo $noticia->categoria; ?> - <?php echo $noticia->titulo; ?></h2>
+  <?php echo $noticia->descricao; ?>
 
-	[Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
+  [Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
 
 
-	<?php
+  <?php
 } // while ($noticia = $resultado->fetch_object())
 {% endhighlight %}
 

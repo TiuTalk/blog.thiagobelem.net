@@ -57,13 +57,13 @@ Vamos criar o seguinte HTML de exemplo:
 
 {% highlight html linenos %}
 <div class="box">
-	<h2>Meus links</h2>
-	[abrir/fechar](#)
-	<ul class="conteudo">
-		<li>[Primeiro link](#)</li>
-		<li>[Segundo link](#)</li>
-		<li>[Terceiro link](#)</li>
-	</ul>
+  <h2>Meus links</h2>
+  [abrir/fechar](#)
+  <ul class="conteudo">
+    <li>[Primeiro link](#)</li>
+    <li>[Segundo link](#)</li>
+    <li>[Terceiro link](#)</li>
+  </ul>
 </div>
 {% endhighlight %}
 
@@ -76,7 +76,7 @@ Para isso, precisamos colocar em nosso código javascript um código que permita
 
 {% highlight javascript linenos %}
 $(document).ready(function() {
-	// O que estiver aqui será executado após o carregamento do site
+  // O que estiver aqui será executado após o carregamento do site
 });
 {% endhighlight %}
 
@@ -89,7 +89,7 @@ Faça o seguinte teste para entender melhor:
 
 {% highlight javascript linenos %}
 $(document).ready(function() {
-	alert('O site terminou de carregar!');
+  alert('O site terminou de carregar!');
 });
 {% endhighlight %}
 
@@ -100,7 +100,7 @@ Agora vamos continuar e voltar ao nosso exemplo de collapse: precisamos criar um
 
 {% highlight javascript linenos %}
 $(document).ready(function() {
-	$('div.box a.trocar').click();
+  $('div.box a.trocar').click();
 });
 {% endhighlight %}
 
@@ -113,9 +113,9 @@ Vamos a um pequeno exemplo que irá disparar um alerta ao clicar no link:
 
 {% highlight javascript linenos %}
 $(document).ready(function() {
-	$('div.box a.trocar').click(function() {
-		alert('Você clicou no link...');
-	});
+  $('div.box a.trocar').click(function() {
+    alert('Você clicou no link...');
+  });
 });
 {% endhighlight %}
 
@@ -130,10 +130,10 @@ Existem duas formas de evitar o comportamento padrão de um clique em um link qu
 
 {% highlight javascript linenos %}
 $(document).ready(function() {
-	$('div.box a.trocar').click(function(evento) {
-		evento.preventDefault();
-		alert('Você clicou no link...');
-	});
+  $('div.box a.trocar').click(function(evento) {
+    evento.preventDefault();
+    alert('Você clicou no link...');
+  });
 });
 {% endhighlight %}
 
@@ -146,10 +146,10 @@ Agora nós podemos continuar nosso exemplo selecionando a lista de links com cla
 
 {% highlight javascript linenos %}
 $(document).ready(function() {
-	$('div.box a.trocar').click(function(evento) {
-		evento.preventDefault();
-		$(this).next('ul.conteudo');
-	});
+  $('div.box a.trocar').click(function(evento) {
+    evento.preventDefault();
+    $(this).next('ul.conteudo');
+  });
 });
 {% endhighlight %}
 
@@ -164,10 +164,10 @@ Mas, como foi dito anteriormente, não adianta nada selecionar um elemento se n�
 
 {% highlight javascript linenos %}
 $(document).ready(function() {
-	$('div.box a.trocar').click(function(evento) {
-		evento.preventDefault();
-		$(this).next('ul.conteudo').slideToggle();
-	});
+  $('div.box a.trocar').click(function(evento) {
+    evento.preventDefault();
+    $(this).next('ul.conteudo').slideToggle();
+  });
 });
 {% endhighlight %}
 
@@ -182,10 +182,10 @@ Para evitar esse tipo de comportamento precisamos filtrar o seletor e evitar rod
 
 {% highlight javascript linenos %}
 $(document).ready(function() {
-	$('div.box a.trocar').click(function(evento) {
-		evento.preventDefault();
-		$(this).next('ul.conteudo:not(:animated)').slideToggle();
-	});
+  $('div.box a.trocar').click(function(evento) {
+    evento.preventDefault();
+    $(this).next('ul.conteudo:not(:animated)').slideToggle();
+  });
 });
 {% endhighlight %}
 

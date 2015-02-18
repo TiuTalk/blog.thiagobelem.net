@@ -29,17 +29,17 @@ O nosso sistema consistirá em um login simples, validado por usuário e senha (
 Você pode executar esse código MySQL para criar a nossa tabela de usuários que tem 7 campos: id, nome, usuario, senha, niveis, ativo e cadastro:
 {% highlight sql linenos %}
 CREATE TABLE IF NOT EXISTS `usuarios` (
-	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-	`nome` VARCHAR( 50 ) NOT NULL ,
-	`usuario` VARCHAR( 25 ) NOT NULL ,
-	`senha` VARCHAR( 40 ) NOT NULL ,
-	`email` VARCHAR( 100 ) NOT NULL ,
-	`nivel` INT(1) UNSIGNED NOT NULL DEFAULT '1',
-	`ativo` BOOL NOT NULL DEFAULT '1',
-	`cadastro` DATETIME NOT NULL ,
-	PRIMARY KEY (`id`),
-	UNIQUE KEY `usuario` (`usuario`),
-	KEY `nivel` (`nivel`)
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR( 50 ) NOT NULL ,
+  `usuario` VARCHAR( 25 ) NOT NULL ,
+  `senha` VARCHAR( 40 ) NOT NULL ,
+  `email` VARCHAR( 100 ) NOT NULL ,
+  `nivel` INT(1) UNSIGNED NOT NULL DEFAULT '1',
+  `ativo` BOOL NOT NULL DEFAULT '1',
+  `cadastro` DATETIME NOT NULL ,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `usuario` (`usuario`),
+  KEY `nivel` (`nivel`)
 ) ENGINE=MyISAM ;
 {% endhighlight %}
 
@@ -62,12 +62,12 @@ Vamos criar agora o nosso formulário que será onde o visitante entrará com os
 <form action="validacao.php" method="post">
 <fieldset>
 <legend>Dados de Login</legend>
-	<label for="txUsuario">Usuário</label>
-	<input type="text" name="usuario" id="txUsuario" maxlength="25" />
-	<label for="txSenha">Senha</label>
-	<input type="password" name="senha" id="txSenha" />
+  <label for="txUsuario">Usuário</label>
+  <input type="text" name="usuario" id="txUsuario" maxlength="25" />
+  <label for="txSenha">Senha</label>
+  <input type="password" name="senha" id="txSenha" />
 
-	<input type="submit" value="Entrar" />
+  <input type="submit" value="Entrar" />
 </fieldset>
 </form>
 {% endhighlight %}
@@ -86,7 +86,7 @@ Primeiro de tudo nós precisamos verificar se o usuário de fato preencheu algo 
 
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
 if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
-	header("Location: index.php"); exit;
+  header("Location: index.php"); exit;
 }
 
 ?>
@@ -102,7 +102,7 @@ Agora nós iremos abrir uma conexão com o MySQL mas essa conexão pode ser feit
 
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
 if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
-	header("Location: index.php"); exit;
+  header("Location: index.php"); exit;
 }
 
 // Tenta se conectar ao servidor MySQL
@@ -124,7 +124,7 @@ Agora é hora de validar os dados contra a tabela de usuários:
 
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
 if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
-	header("Location: index.php"); exit;
+  header("Location: index.php"); exit;
 }
 
 // Tenta se conectar ao servidor MySQL
@@ -139,11 +139,11 @@ $senha = mysql_real_escape_string($_POST['senha']);
 $sql = "SELECT `id`, `nome`, `nivel` FROM `usuarios` WHERE (`usuario` = '". $usuario ."') AND (`senha` = '". sha1($senha) ."') AND (`ativo` = 1) LIMIT 1";
 $query = mysql_query($sql);
 if (mysql_num_rows($query) != 1) {
-	// Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
-	echo "Login inválido!"; exit;
+  // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
+  echo "Login inválido!"; exit;
 } else {
-	// Salva os dados encontados na variável $resultado
-	$resultado = mysql_fetch_assoc($query);
+  // Salva os dados encontados na variável $resultado
+  $resultado = mysql_fetch_assoc($query);
 }
 
 ?>
@@ -166,22 +166,22 @@ Agora nós precisamos salvar os dados encontrados na sessão pois eles serão ut
 
 {% highlight php linenos %}
 if (mysql_num_rows($query) != 1) {
-	// Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
-	echo "Login inválido!"; exit;
+  // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
+  echo "Login inválido!"; exit;
 } else {
-	// Salva os dados encontados na variável $resultado
-	$resultado = mysql_fetch_assoc($query);
+  // Salva os dados encontados na variável $resultado
+  $resultado = mysql_fetch_assoc($query);
 
-	// Se a sessão não existir, inicia uma
-	if (!isset($_SESSION)) session_start();
+  // Se a sessão não existir, inicia uma
+  if (!isset($_SESSION)) session_start();
 
-	// Salva os dados encontrados na sessão
-	$_SESSION['UsuarioID'] = $resultado['id'];
-	$_SESSION['UsuarioNome'] = $resultado['nome'];
-	$_SESSION['UsuarioNivel'] = $resultado['nivel'];
+  // Salva os dados encontrados na sessão
+  $_SESSION['UsuarioID'] = $resultado['id'];
+  $_SESSION['UsuarioNome'] = $resultado['nome'];
+  $_SESSION['UsuarioNivel'] = $resultado['nivel'];
 
-	// Redireciona o visitante
-	header("Location: restrito.php"); exit;
+  // Redireciona o visitante
+  header("Location: restrito.php"); exit;
 }
 
 {% endhighlight %}
@@ -200,10 +200,10 @@ if (!isset($_SESSION)) session_start();
 
 // Verifica se não há a variável da sessão que identifica o usuário
 if (!isset($_SESSION['UsuarioID'])) {
-	// Destrói a sessão por segurança
-	session_destroy();
-	// Redireciona o visitante de volta pro login
-	header("Location: index.php"); exit;
+  // Destrói a sessão por segurança
+  session_destroy();
+  // Redireciona o visitante de volta pro login
+  header("Location: index.php"); exit;
 }
 
 ?>
@@ -225,10 +225,10 @@ $nivel_necessario = 2;
 
 // Verifica se não há a variável da sessão que identifica o usuário
 if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necessario)) {
-	// Destrói a sessão por segurança
-	session_destroy();
-	// Redireciona o visitante de volta pro login
-	header("Location: index.php"); exit;
+  // Destrói a sessão por segurança
+  session_destroy();
+  // Redireciona o visitante de volta pro login
+  header("Location: index.php"); exit;
 }
 
 ?>
@@ -244,9 +244,9 @@ O arquivo <strong style="color: white; background: gray">logout.php</strong> é 
 Ou se você preferir, uma versão mais extensa:
 {% highlight php linenos %}
 <?php
-	session_start(); // Inicia a sessão
-	session_destroy(); // Destrói a sessão limpando todos os valores salvos
-	header("Location: index.php"); exit; // Redireciona o visitante
+  session_start(); // Inicia a sessão
+  session_destroy(); // Destrói a sessão limpando todos os valores salvos
+  header("Location: index.php"); exit; // Redireciona o visitante
 ?>
 {% endhighlight %}
 

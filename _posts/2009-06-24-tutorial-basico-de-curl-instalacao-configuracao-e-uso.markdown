@@ -23,8 +23,8 @@ Para poder usar o cURL no seu site/sistema você precisa que a biblioteca esteja
 Recomendo que antes de sair tentando instalar a cURL, verifique se ela já não está habilitada no seu servidor... Crie um arquivo .php com o seguinte conteúdo:
 {% highlight php linenos %}
 <?php
-	// Exibe informações relativas ao PHP e suas extensões
-	phpinfo();
+  // Exibe informações relativas ao PHP e suas extensões
+  phpinfo();
 ?>
 {% endhighlight %}
 Acesse esse arquivo pelo seu navegador e procure por "cURl support" se encontrar algo significa que você tem o cURL instalado e pode pular o próximo capitulo.
@@ -40,14 +40,14 @@ Agora remova o ponto-e-vírgula (;) do começo da linha, reinicie o seu servidor
 Bom, primeiro de tudo, vamos o script mais simples que você pode usar para pegar a resposta de um site (que nesse caso, é o arquivo robots.txt aqui do blog):
 {% highlight php linenos %}
 <?php
-	// Inicia o cURL acessando uma URL
-	$cURL = curl_init('http://blog.thiagobelem.net/robots.txt');
-	// Define a opção que diz que você quer receber o resultado encontrado
-	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
-	// Executa a consulta, conectando-se ao site e salvando o resultado na variável $resultado
-	$resultado = curl_exec($cURL);
-	// Encerra a conexão com o site
-	curl_close($cURL);
+  // Inicia o cURL acessando uma URL
+  $cURL = curl_init('http://blog.thiagobelem.net/robots.txt');
+  // Define a opção que diz que você quer receber o resultado encontrado
+  curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
+  // Executa a consulta, conectando-se ao site e salvando o resultado na variável $resultado
+  $resultado = curl_exec($cURL);
+  // Encerra a conexão com o site
+  curl_close($cURL);
 ?>
 {% endhighlight %}
 Depois de executar esse script, o conteúdo da variável $resultado será exatamente o conteúdo do meu arquivo robots.txt. Você pode usar esse método para pegar o HTML resultado de qualquer site e etc.
@@ -58,24 +58,24 @@ A função <strong>curl_setopt()</strong> permite que você defina uma série de
 Com o script que vou mostrar agora você vai poder acessar qualquer endereço ou URL pública e descobrir se ele retorna erro 404 (página não encontrada) ou não, baseando-se no código HTTP de resposta:
 {% highlight php linenos %}
 <?php
-	$cURL = curl_init('http://www.sitequenaoexiste.net.br');
-	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
+  $cURL = curl_init('http://www.sitequenaoexiste.net.br');
+  curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
 
-	// Seguir qualquer redirecionamento que houver na URL
-	curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, true);
+  // Seguir qualquer redirecionamento que houver na URL
+  curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, true);
 
-	$resultado = curl_exec($cURL);
+  $resultado = curl_exec($cURL);
 
-	// Pega o código de resposta HTTP
-	$resposta = curl_getinfo($cURL, CURLINFO_HTTP_CODE);
+  // Pega o código de resposta HTTP
+  $resposta = curl_getinfo($cURL, CURLINFO_HTTP_CODE);
 
-	curl_close($cURL);
+  curl_close($cURL);
 
-	if ($resposta == '404') {
-		echo 'O site está fora do ar (ERRO 404)!';
-	} else {
-		echo 'Parece que está tudo bem...';
-	}
+  if ($resposta == '404') {
+    echo 'O site está fora do ar (ERRO 404)!';
+  } else {
+    echo 'Parece que está tudo bem...';
+  }
 ?>
 {% endhighlight %}
 Adicionei também uma opção nova (CURLOPT_FOLLOWLOCATION) que vai permitir que o cURL siga todos os redirects que houverem na URL. Por exemplo, se estivermos usando o TintURL é preciso seguir o redirecionamento depois de acessar a url reduzida para chegar na URL final.
@@ -84,48 +84,48 @@ Adicionei também uma opção nova (CURLOPT_FOLLOWLOCATION) que vai permitir que
 Suponhamos que você queira testar o cURL enviando dados para um formulário, como se você tivesse digitando os dados e dando submit no formulário. Você vai precisar de duas coisas: a lista dos nomes (names) dos campos e o action do formulário (que é pra onde os dados são enviados)... Depois é só montar um script parecido com esse:
 {% highlight php linenos %}
 <?php
-	// Aqui entra o action do formulário - pra onde os dados serão enviados
-	$cURL = curl_init('http://www.meusite.com.br/envia.php');
-	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
+  // Aqui entra o action do formulário - pra onde os dados serão enviados
+  $cURL = curl_init('http://www.meusite.com.br/envia.php');
+  curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
 
-	// Definimos um array seguindo o padrão:
-	//  '<name do input>' => '<valor inserido>'
-	$dados = array(
-		'nome' => 'Thiago Belem',
-		'email' => 'contato@thiagobelem.net',
-		'mensagem' => 'Testando o cURL!'
-	);
+  // Definimos um array seguindo o padrão:
+  //  '<name do input>' => '<valor inserido>'
+  $dados = array(
+    'nome' => 'Thiago Belem',
+    'email' => 'contato@thiagobelem.net',
+    'mensagem' => 'Testando o cURL!'
+  );
 
-	// Iremos usar o método POST
-	curl_setopt($cURL, CURLOPT_POST, true);
-	// Definimos quais informações serão enviadas pelo POST (array)
-	curl_setopt($cURL, CURLOPT_POSTFIELDS, $dados);
+  // Iremos usar o método POST
+  curl_setopt($cURL, CURLOPT_POST, true);
+  // Definimos quais informações serão enviadas pelo POST (array)
+  curl_setopt($cURL, CURLOPT_POSTFIELDS, $dados);
 
-	$resultado = curl_exec($cURL);
-	curl_close($cURL);
+  $resultado = curl_exec($cURL);
+  curl_close($cURL);
 ?>
 {% endhighlight %}
 Mas suponhamos que você testou o script e reparou que algo deu errado.. E depois de fazer o seu trabalho de casa, descobriu que o site permite apenas dados vindos do próprio site (ou seja, ele verifica o <strong>REFERER</strong> que é o endereço da página na qual os dados foram inseridos). Então, você ajusta o seu script da seguinte maneira:
 {% highlight php linenos %}
 <?php
-	$cURL = curl_init('http://www.meusite.com.br/envia.php');
-	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
+  $cURL = curl_init('http://www.meusite.com.br/envia.php');
+  curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
 
-	$dados = array(
-		'nome' => 'Thiago Belem',
-		'email' => 'contato@thiagobelem.net',
-		'mensagem' => 'Testando o cURL!'
-	);
+  $dados = array(
+    'nome' => 'Thiago Belem',
+    'email' => 'contato@thiagobelem.net',
+    'mensagem' => 'Testando o cURL!'
+  );
 
-	curl_setopt($cURL, CURLOPT_POST, true);
-	curl_setopt($cURL, CURLOPT_POSTFIELDS, $dados);
+  curl_setopt($cURL, CURLOPT_POST, true);
+  curl_setopt($cURL, CURLOPT_POSTFIELDS, $dados);
 
-	// O site só permite requisições vindas do próprio site:
-	// Definimos então o REFERER como sendo a página do formulário de contato
-	curl_setopt($cURL, CURLOPT_REFERER, 'http://www.meusite.com.br/contato.php');
+  // O site só permite requisições vindas do próprio site:
+  // Definimos então o REFERER como sendo a página do formulário de contato
+  curl_setopt($cURL, CURLOPT_REFERER, 'http://www.meusite.com.br/contato.php');
 
-	$resultado = curl_exec($cURL);
-	curl_close($cURL);
+  $resultado = curl_exec($cURL);
+  curl_close($cURL);
 ?>
 {% endhighlight %}
 

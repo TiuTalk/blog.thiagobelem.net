@@ -18,19 +18,19 @@ Primeiro, criamos as tabelas no MySQL para armazenamento dos dados, são duas ta
 
 {% highlight text linenos %}
 CREATE TABLE IF NOT EXISTS `visitas_online` (
-	`id` int(11) NOT NULL AUTO_INCREMENT,
-	`ip` varchar(15) NOT NULL,
-	`identificador` varchar(40) NOT NULL,
-	`hora` datetime NOT NULL,
-	PRIMARY KEY (`id`),
-	UNIQUE KEY `identificador` (`identificador`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ip` varchar(15) NOT NULL,
+  `identificador` varchar(40) NOT NULL,
+  `hora` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `identificador` (`identificador`)
 ) ENGINE=MyISAM ;
 
 CREATE TABLE IF NOT EXISTS `visitas_record` (
-	`id` int(11) NOT NULL AUTO_INCREMENT,
-	`data` datetime NOT NULL,
-	`visitantes` int(11) NOT NULL,
-	PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `data` datetime NOT NULL,
+  `visitantes` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM ;
 {% endhighlight %}
 
@@ -72,17 +72,17 @@ $_VO['tabela_r'] = 'visitas_record'; // Tabela onde os recordes de visitas serã
 
 // Verifica se precisa fazer a conexão com o MySQL
 if ($_VO['conectaMySQL'] == true) {
-	$_VO['link'] = mysql_connect($_VO['servidor'], $_VO['usuario'], $_VO['senha']) or die("MySQL: Não foi possível conectar-se ao servidor [".$_VO['servidor']."].");
-	mysql_select_db($_VO['banco'], $_VO['link']) or die("MySQL: Não foi possível conectar-se ao banco de dados [".$_VO['banco']."].");
+  $_VO['link'] = mysql_connect($_VO['servidor'], $_VO['usuario'], $_VO['senha']) or die("MySQL: Não foi possível conectar-se ao servidor [".$_VO['servidor']."].");
+  mysql_select_db($_VO['banco'], $_VO['link']) or die("MySQL: Não foi possível conectar-se ao banco de dados [".$_VO['banco']."].");
 }
 
 /**
 * Gera o identificador do visitante baseado no IP e na hora
 */
 function geraIdentificador() {
-	global $_VO;
+  global $_VO;
 
-	return sha1($_VO['cookieNome'].$_SERVER["REMOTE_ADDR"].microtime());
+  return sha1($_VO['cookieNome'].$_SERVER["REMOTE_ADDR"].microtime());
 }
 
 /**
@@ -90,81 +90,81 @@ function geraIdentificador() {
 *  Esta funçaõ será chamada automaticamente dependendo de $_VO['registraAuto']
 */
 function registraVisita() {
-	global $_VO;
+  global $_VO;
 
-	// Verifica se os headers já foram enviados. Caso tenham, é gerada uma mensagem de erro
-	if (headers_sent()) {
-		trigger_error("[VisitantesOnline] Por favor, insira o arquivo antes de qualquer HTML", E_USER_ERROR);
-		return false;
-	}
+  // Verifica se os headers já foram enviados. Caso tenham, é gerada uma mensagem de erro
+  if (headers_sent()) {
+    trigger_error("[VisitantesOnline] Por favor, insira o arquivo antes de qualquer HTML", E_USER_ERROR);
+    return false;
+  }
 
-	// Verifica se é um visitante que já está no site (se o Cookie existe)
-	if (isset($_COOKIE[$_VO['cookieNome']])) {
-		$novo = false;
-		$identificador = $_COOKIE[$_VO['cookieNome']];
-	} else {
-		$novo = true;
-		$identificador = geraIdentificador();
-	}
+  // Verifica se é um visitante que já está no site (se o Cookie existe)
+  if (isset($_COOKIE[$_VO['cookieNome']])) {
+    $novo = false;
+    $identificador = $_COOKIE[$_VO['cookieNome']];
+  } else {
+    $novo = true;
+    $identificador = geraIdentificador();
+  }
 
-	// Se o visitante não é novo, tenta atualizar o registro dele na tabela
-	if (!$novo) {
-		$query = "UPDATE `".$_VO['tabela_v']."` SET `hora` = NOW() WHERE `identificador` = '".$identificador."' LIMIT 1";
-		$resultado = mysql_query($query);
-		$atualizado = (bool)(mysql_affected_rows($resultado) == 1);
-	}
+  // Se o visitante não é novo, tenta atualizar o registro dele na tabela
+  if (!$novo) {
+    $query = "UPDATE `".$_VO['tabela_v']."` SET `hora` = NOW() WHERE `identificador` = '".$identificador."' LIMIT 1";
+    $resultado = mysql_query($query);
+    $atualizado = (bool)(mysql_affected_rows($resultado) == 1);
+  }
 
-	// Se o visitante é novo OU se o registro dele ele não foi atualizado, insere um novo registro na tabela
-	if ($novo OR !$atualizado) {
-		$query = "INSERT INTO `".$_VO['tabela_v']."` VALUES (NULL, '".$_SERVER["REMOTE_ADDR"]."', '".$identificador."', NOW())";
-		mysql_query($query);
-	}
+  // Se o visitante é novo OU se o registro dele ele não foi atualizado, insere um novo registro na tabela
+  if ($novo OR !$atualizado) {
+    $query = "INSERT INTO `".$_VO['tabela_v']."` VALUES (NULL, '".$_SERVER["REMOTE_ADDR"]."', '".$identificador."', NOW())";
+    mysql_query($query);
+  }
 
-	// Deleta todos os visitantes com mais de 20min no site, exceto o atual
-	$query = "DELETE FROM `".$_VO['tabela_v']."` WHERE (`hora` <= (NOW() - INTERVAL ".$_VO['cookieTempo']." MINUTE)) AND `identificador` != '".$identificador."'";
-	mysql_query($query);
+  // Deleta todos os visitantes com mais de 20min no site, exceto o atual
+  $query = "DELETE FROM `".$_VO['tabela_v']."` WHERE (`hora` <= (NOW() - INTERVAL ".$_VO['cookieTempo']." MINUTE)) AND `identificador` != '".$identificador."'";
+  mysql_query($query);
 
-	// Verifica se é preciso atualizar o recorde de visitas
-	$recorde = visitantesRecorde(); // Pega o recorde de visitantes
-	$online = visitantesOnline(); // Pega o n° de visitantes atual
-	if ($recorde[1] < $online) {
-		$query = "REPLACE INTO `".$_VO['tabela_r']."` SET `data` = NOW(), `visitantes` = ".$online;
-		mysql_query($query);
-	}
+  // Verifica se é preciso atualizar o recorde de visitas
+  $recorde = visitantesRecorde(); // Pega o recorde de visitantes
+  $online = visitantesOnline(); // Pega o n° de visitantes atual
+  if ($recorde[1] < $online) {
+    $query = "REPLACE INTO `".$_VO['tabela_r']."` SET `data` = NOW(), `visitantes` = ".$online;
+    mysql_query($query);
+  }
 
-	// Atualiza o cookie com o identificador do visitante
-	setcookie($_VO['cookieNome'], $identificador, time() + ($_VO['cookieTempo'] * 60), '');
-	return true;
+  // Atualiza o cookie com o identificador do visitante
+  setcookie($_VO['cookieNome'], $identificador, time() + ($_VO['cookieTempo'] * 60), '');
+  return true;
 }
 
 /**
 * Função que retorna o total de visitantes online
 */
 function visitantesOnline() {
-	global $_VO;
+  global $_VO;
 
-	// Faz a consulta no MySQL em função dos argumentos
-	$sql = "SELECT COUNT(*) FROM `".$_VO['tabela_v']."`";
-	$query = mysql_query($sql);
-	$resultado = mysql_fetch_row($query);
+  // Faz a consulta no MySQL em função dos argumentos
+  $sql = "SELECT COUNT(*) FROM `".$_VO['tabela_v']."`";
+  $query = mysql_query($sql);
+  $resultado = mysql_fetch_row($query);
 
-	// Retorna o valor encontrado ou zero
-	return (!empty($resultado)) ? (int)$resultado[0] : 0;
+  // Retorna o valor encontrado ou zero
+  return (!empty($resultado)) ? (int)$resultado[0] : 0;
 }
 
 /**
 * Função que retorna a data e o recorde de visitantes online
 */
 function visitantesRecorde($formato = 'd/m/Y') {
-	global $_VO;
+  global $_VO;
 
-	// Faz a consulta no MySQL em função dos argumentos
-	$sql = "SELECT `data`, `visitantes` FROM `".$_VO['tabela_r']."` LIMIT 1";
-	$query = mysql_query($sql);
-	$resultado = mysql_fetch_row($query);
+  // Faz a consulta no MySQL em função dos argumentos
+  $sql = "SELECT `data`, `visitantes` FROM `".$_VO['tabela_r']."` LIMIT 1";
+  $query = mysql_query($sql);
+  $resultado = mysql_fetch_row($query);
 
-	// Retorna o valor encontrado ou zero
-	return (!empty($resultado)) ? array(date($formato, strtotime($resultado[1])), (int)$resultado[1]) : array(date($formato), 0);
+  // Retorna o valor encontrado ou zero
+  return (!empty($resultado)) ? array(date($formato, strtotime($resultado[1])), (int)$resultado[1]) : array(date($formato), 0);
 }
 
 if ($_VO['registraAuto'] == true) { registraVisita(); }

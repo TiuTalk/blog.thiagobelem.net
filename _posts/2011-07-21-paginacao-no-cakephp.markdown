@@ -47,20 +47,20 @@ Você vai que precisamos de exatamente <strong>duas linhas</strong> pra fazer um
 {% highlight php linenos %}
 class NoticiasController extends AppController {
 
-	/**
-	 * Lista as notícias utilizando paginação
-	 */
-	public function lista() {
+  /**
+   * Lista as notícias utilizando paginação
+   */
+  public function lista() {
 
-		$options = array(
-			'fields' => array('Noticia.titulo', 'Noticia.resumo'),
-			'conditions' => array('Noticia.active' => true),
+    $options = array(
+      'fields' => array('Noticia.titulo', 'Noticia.resumo'),
+      'conditions' => array('Noticia.active' => true),
 
-			'order' => array('Noticia.created' => 'DESC'),
-			'limit' => 10
-		);
+      'order' => array('Noticia.created' => 'DESC'),
+      'limit' => 10
+    );
 
-	}
+  }
 
 }
 {% endhighlight %}
@@ -71,27 +71,27 @@ Definido os parâmetros de busca, podemos atribuí-los ao atributo <strong>pagin
 {% highlight php linenos %}
 class NoticiasController extends AppController {
 
-	/**
-	 * Lista as notícias utilizando paginação
-	 */
-	public function lista() {
+  /**
+   * Lista as notícias utilizando paginação
+   */
+  public function lista() {
 
-		$options = array(
-			'fields' => array('Noticia.titulo', 'Noticia.resumo'),
-			'conditions' => array('Noticia.active' => true),
+    $options = array(
+      'fields' => array('Noticia.titulo', 'Noticia.resumo'),
+      'conditions' => array('Noticia.active' => true),
 
-			'order' => array('Noticia.created' => 'DESC'),
-			'limit' => 10
-		);
+      'order' => array('Noticia.created' => 'DESC'),
+      'limit' => 10
+    );
 
-		$this->paginate = $options;
+    $this->paginate = $options;
 
-		// Roda a consulta, já trazendo os resultados paginados
-		$noticias = $this->paginate('Noticia');
+    // Roda a consulta, já trazendo os resultados paginados
+    $noticias = $this->paginate('Noticia');
 
-		// Envia os dados pra view
-		$this->set('noticias', $noticias);
-	}
+    // Envia os dados pra view
+    $this->set('noticias', $noticias);
+  }
 
 }
 {% endhighlight %}
@@ -105,8 +105,8 @@ Um exemplo básico (usando a tag <em>article</em> do <strong>HTML5</strong>) da 
 {% highlight php linenos %}
 <article>
 <?php foreach($noticias AS $data): ?>
-	<h1><?php echo $data['Noticia']['titulo'] ?></h1>
-	<?php echo $data['Noticia']['resumo'] ?>
+  <h1><?php echo $data['Noticia']['titulo'] ?></h1>
+  <?php echo $data['Noticia']['resumo'] ?>
 
 <?php endforeach; ?>
 </article>

@@ -55,39 +55,39 @@ Agora vamos inserir quatro métodos vazios para deixar a estrutura da classe pro
 
 
 {% highlight php linenos %}
-	/**
-	 * Construtor
-	 */
-	public function SobreAutorWidget() { parent::WP_Widget(false, $name = 'Sobre o autor'); }
+  /**
+   * Construtor
+   */
+  public function SobreAutorWidget() { parent::WP_Widget(false, $name = 'Sobre o autor'); }
 
-	/**
-	 * Exibição final do Widget (já no sidebar)
-	 *
-	 * @param array $argumentos Argumentos passados para o widget
-	 * @param array $instancia Instância do widget
-	 */
-	public function widget($argumentos, $instancia) {
+  /**
+   * Exibição final do Widget (já no sidebar)
+   *
+   * @param array $argumentos Argumentos passados para o widget
+   * @param array $instancia Instância do widget
+   */
+  public function widget($argumentos, $instancia) {
 
-	}
+  }
 
-	/**
-	 * Salva os dados do widget no banco de dados
-	 *
-	 * @param array $nova_instancia Os novos dados do widget (a serem salvos)
-	 * @param array $instancia_antiga Os dados antigos do widget
-	 */
-	public function update($nova_instancia, $instancia_antiga) {
+  /**
+   * Salva os dados do widget no banco de dados
+   *
+   * @param array $nova_instancia Os novos dados do widget (a serem salvos)
+   * @param array $instancia_antiga Os dados antigos do widget
+   */
+  public function update($nova_instancia, $instancia_antiga) {
 
-	}
+  }
 
-	/**
-	 * Formulário para os dados do widget (exibido no painel de controle)
-	 *
-	 * @param array $instancia Instância do widget
-	 */
-	public function form($instancia) {
+  /**
+   * Formulário para os dados do widget (exibido no painel de controle)
+   *
+   * @param array $instancia Instância do widget
+   */
+  public function form($instancia) {
 
-	}
+  }
 {% endhighlight %}
 
 <h3>Método form()</h3>
@@ -97,18 +97,18 @@ O nosso método form() ficará da seguinte forma:
 
 
 {% highlight php linenos %}
-	/**
-	 * Formulário para os dados do widget (exibido no painel de controle)
-	 *
-	 * @param array $instancia Instância do widget
-	 */
-	public function form($instancia) {
-		$widget['link_autor'] = (boolean)$instancia['link_autor'];
-		?>
-		<label for="<?php echo $this->get_field_id('link_autor'); ?>"><input id="<?php echo $this->get_field_id('link_autor'); ?>" name="<?php echo $this->get_field_name('link_autor'); ?>" type="checkbox" value="1" <?php if ($widget['link_autor']) echo 'checked="checked"'; ?> /> <?php _e('Exibe o link do autor'); ?></label>
+  /**
+   * Formulário para os dados do widget (exibido no painel de controle)
+   *
+   * @param array $instancia Instância do widget
+   */
+  public function form($instancia) {
+    $widget['link_autor'] = (boolean)$instancia['link_autor'];
+    ?>
+    <label for="<?php echo $this->get_field_id('link_autor'); ?>"><input id="<?php echo $this->get_field_id('link_autor'); ?>" name="<?php echo $this->get_field_name('link_autor'); ?>" type="checkbox" value="1" <?php if ($widget['link_autor']) echo 'checked="checked"'; ?> /> <?php _e('Exibe o link do autor'); ?></label>
 
-		<?php
-	}
+    <?php
+  }
 {% endhighlight %}
 
 Eu sei que parece complicado, mas estamos apenas criando um parágrafo com um checkbox e um label... Para definir o ID e o name do input utilizamos recursos do próprio WordPress, assim não caímos no problema de usar um name que já exista... O resultado é um checkbox onde você pode decidir se exibe ou não o link do autor no widget.
@@ -122,19 +122,19 @@ Esse método precisará retornar os dados a serem salvos no banco de dados, fica
 
 
 {% highlight php linenos %}
-	/**
-	 * Salva os dados do widget no banco de dados
-	 *
-	 * @param array $nova_instancia Os novos dados do widget (a serem salvos)
-	 * @param array $instancia_antiga Os dados antigos do widget
-	 *
-	 * @return array $instancia Dados atualizados a serem salvos no banco de dados
-	 */
-	public function update($nova_instancia, $instancia_antiga) {
-		$instancia = array_merge($instancia_antiga, $nova_instancia);
+  /**
+   * Salva os dados do widget no banco de dados
+   *
+   * @param array $nova_instancia Os novos dados do widget (a serem salvos)
+   * @param array $instancia_antiga Os dados antigos do widget
+   *
+   * @return array $instancia Dados atualizados a serem salvos no banco de dados
+   */
+  public function update($nova_instancia, $instancia_antiga) {
+    $instancia = array_merge($instancia_antiga, $nova_instancia);
 
-		return $instancia;
-	}
+    return $instancia;
+  }
 {% endhighlight %}
 
 Mais uma vez, não tem mistério: sobrescrevemos os valores de <code>$instancia_antiga</code> (o que estava salvo no banco de dados) com os valores de <code>$nova_instancia</code> e retornamos esses dados "mesclados" para serem salvos no banco de dados.
@@ -148,37 +148,37 @@ Esse widget irá funcionar apenas nas páginas de post... então precisamos evit
 
 
 {% highlight php linenos %}
-	public function widget($argumentos, $instancia) {
-		if (!is_single()) return;
-	}
+  public function widget($argumentos, $instancia) {
+    if (!is_single()) return;
+  }
 {% endhighlight %}
 
 Agora vamos trazer alguns dados sobre o autor:
 
 
 {% highlight php linenos %}
-		$autor = array(
-			'nome' => get_the_author_meta('display_name'),
-			'email' => get_the_author_meta('user_email'),
-			'descricao' => get_the_author_meta('description'),
-			'link' => get_the_author_meta('user_url')
-		);
+    $autor = array(
+      'nome' => get_the_author_meta('display_name'),
+      'email' => get_the_author_meta('user_email'),
+      'descricao' => get_the_author_meta('description'),
+      'link' => get_the_author_meta('user_url')
+    );
 {% endhighlight %}
 
 Feito isso é só começar a exibir o HTML do Widget:
 {% highlight php linenos %}
-		// Exibe o HTML do Widget
-		echo $argumentos['before_widget'];
-		echo $argumentos['before_title'] . $argumentos['widget_name'] . $argumentos['after_title'];
-		echo get_avatar($autor['email'], $size = '59');
-		echo "<h4>{$autor['nome']}</h4>";
-		echo "{$autor['descricao']}
+    // Exibe o HTML do Widget
+    echo $argumentos['before_widget'];
+    echo $argumentos['before_title'] . $argumentos['widget_name'] . $argumentos['after_title'];
+    echo get_avatar($autor['email'], $size = '59');
+    echo "<h4>{$autor['nome']}</h4>";
+    echo "{$autor['descricao']}
 ";
-		if (isset($instancia['link_autor']) && $instancia['link_autor']) {
-			echo 'Visite o [site do autor]('. $autor['link'] .')
+    if (isset($instancia['link_autor']) && $instancia['link_autor']) {
+      echo 'Visite o [site do autor]('. $autor['link'] .')
 ';
-		}
-		echo $argumentos['after_widget'];
+    }
+    echo $argumentos['after_widget'];
 {% endhighlight %}
 
 E o nosso widget está pronto!

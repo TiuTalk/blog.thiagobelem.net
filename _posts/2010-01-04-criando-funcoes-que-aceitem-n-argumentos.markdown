@@ -41,33 +41,33 @@ Agora vamos pegar o total e a lista de argumentos passados para a função:
 
 
 {% highlight php linenos %}
-	// Total de argumentos passados
-	$total = func_num_args();
-	// Array com cada um dos argumentos passados
-	$numeros = func_get_args();
+  // Total de argumentos passados
+  $total = func_num_args();
+  // Array com cada um dos argumentos passados
+  $numeros = func_get_args();
 {% endhighlight %}
 
 Feito isso, vamos precisar fazer uma verificação, só por segurança, da quantidade de argumentos passados... Não há lógica em tentar calcular a média de 0 numeros, não é mesmo?
 
 
 {% highlight php linenos %}
-	// Verifica se foi passado pelo menos 1 número
-	if ($total < 1) {
-		trigger_error('Não é possível calcular a média de menos de 1 número!');
-		return 0;
-	}
+  // Verifica se foi passado pelo menos 1 número
+  if ($total < 1) {
+    trigger_error('Não é possível calcular a média de menos de 1 número!');
+    return 0;
+  }
 {% endhighlight %}
 
 E por final, caso tenha sido passado pelo menos um argumento, calculamos a somatória dos números e retornamos a média:
 
 
 {% highlight php linenos %}
-	} else {
-		// Calcula a somatória de todos os números passados
-		$soma = array_sum($numeros);
-		// Retorna a média dos números
-		return ($soma / $total);
-	}
+  } else {
+    // Calcula a somatória de todos os números passados
+    $soma = array_sum($numeros);
+    // Retorna a média dos números
+    return ($soma / $total);
+  }
 {% endhighlight %}
 
 No final das contas, nossa função ficou assim:
@@ -81,21 +81,21 @@ No final das contas, nossa função ficou assim:
  * @author Thiago Belem <contato@thiagobelem.net>
  */
 function media() {
-	// Total de argumentos passados
-	$total = func_num_args();
-	// Array com cada um dos argumentos passados
-	$numeros = func_get_args();
+  // Total de argumentos passados
+  $total = func_num_args();
+  // Array com cada um dos argumentos passados
+  $numeros = func_get_args();
 
-	// Verifica se foi passado pelo menos 1 número
-	if ($total < 1) {
-		trigger_error('Não é possível calcular a média de menos de 1 número!');
-		return 0;
-	} else {
-		// Calcula a somatória de todos os números passados
-		$soma = array_sum($numeros);
-		// Retorna a média dos números
-		return ($soma / $total);
-	}
+  // Verifica se foi passado pelo menos 1 número
+  if ($total < 1) {
+    trigger_error('Não é possível calcular a média de menos de 1 número!');
+    return 0;
+  } else {
+    // Calcula a somatória de todos os números passados
+    $soma = array_sum($numeros);
+    // Retorna a média dos números
+    return ($soma / $total);
+  }
 }
 
 ?>

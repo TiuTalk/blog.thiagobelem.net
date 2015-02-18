@@ -55,9 +55,9 @@ $query = mysql_query($sql);
 
 // Para cada resultado encontrado...
 while ($noticia = mysql_fetch_assoc($query)) {
-	// Exibe um link com a notícia
-	echo '['. $noticia['titulo'] .']('. $noticia['link'] .')';
-	echo '';
+  // Exibe um link com a notícia
+  echo '['. $noticia['titulo'] .']('. $noticia['link'] .')';
+  echo '';
 } // fim while
 
 // Total de notícias
@@ -88,27 +88,27 @@ $data = date('Y-m-d');
 // Prepara uma consulta SQL
 if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE `ativa` = 1 AND `data` <= ?")) {
 
-	// Atribui valores às variáveis da consulta
-	$sql->bind_param('s', $data); // Coloca o valor de $data no lugar da primeira interrogação (?)
+  // Atribui valores às variáveis da consulta
+  $sql->bind_param('s', $data); // Coloca o valor de $data no lugar da primeira interrogação (?)
 
-	// Executa a consulta
-	$sql->execute();
+  // Executa a consulta
+  $sql->execute();
 
-	// Atribui o resultado encontrado a variáveis
-	$sql->bind_result($id, $titulo, $link);
+  // Atribui o resultado encontrado a variáveis
+  $sql->bind_result($id, $titulo, $link);
 
-	// Para cada resultado encontrado...
-	while ($sql->fetch()) {
-		// Exibe um link com a notícia
-		echo '['. $titulo .']('. $link .')';
-		echo '';
-	} // fim while
+  // Para cada resultado encontrado...
+  while ($sql->fetch()) {
+    // Exibe um link com a notícia
+    echo '['. $titulo .']('. $link .')';
+    echo '';
+  } // fim while
 
-	// Total de notícias
-	echo 'Total de notícias: ' . $sql->num_rows;
+  // Total de notícias
+  echo 'Total de notícias: ' . $sql->num_rows;
 
-	// Fecha a consulta
-	$sql->close();
+  // Fecha a consulta
+  $sql->close();
 }
 
 // Fecha a conexão com o banco de dados
@@ -138,13 +138,13 @@ $autor = 'Thiago Belem';
 // Prepara uma consulta SQL
 if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE (`data` <= ?) AND (`ativa` = ?) AND (`autor` = ?)")) {
 
-	// Atribui valores às variáveis da consulta
-	$sql->bind_param('sis', $data, 1, $autor);
+  // Atribui valores às variáveis da consulta
+  $sql->bind_param('sis', $data, 1, $autor);
 
-	// Executa a consulta
-	$sql->execute();
+  // Executa a consulta
+  $sql->execute();
 
-	// ... Todo o resto é igual
+  // ... Todo o resto é igual
 }
 ?>
 {% endhighlight %}

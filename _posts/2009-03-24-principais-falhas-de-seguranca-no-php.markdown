@@ -23,15 +23,15 @@ Uma falha muito comum são aqueles sites que, tentando usar um sistema "legal", 
 
 {% highlight php linenos %}
 <?php
-	// Verifica se a variável $_GET['pagina'] existe
-	if (isset($_GET['pagina'])) {
-		// Pega o valor da variável $_GET['pagina']
-		$arquivo = $_GET['pagina'];
-	} else {
-		// Se não existir variável, define um valor padrão
-		$arquivo = 'home.php';
-	}
-	include ($arquivo); // Inclui o arquivo
+  // Verifica se a variável $_GET['pagina'] existe
+  if (isset($_GET['pagina'])) {
+    // Pega o valor da variável $_GET['pagina']
+    $arquivo = $_GET['pagina'];
+  } else {
+    // Se não existir variável, define um valor padrão
+    $arquivo = 'home.php';
+  }
+  include ($arquivo); // Inclui o arquivo
 ?>
 {% endhighlight %}
 
@@ -48,18 +48,18 @@ Evitar que isso aconteça é extremamente simples: é só criar um <em>array </e
 
 {% highlight php linenos %}
 <?php
-	// Define uma lista com os arquivos que poderão ser chamados na URL
-	$permitidos = array('home.php', 'produtos.php', 'contato.php', 'empresa.php');
+  // Define uma lista com os arquivos que poderão ser chamados na URL
+  $permitidos = array('home.php', 'produtos.php', 'contato.php', 'empresa.php');
 
-	// Verifica se a variável $_GET['pagina'] existe E se ela faz parte da lista de arquivos permitidos
-	if (isset($_GET['pagina']) AND (array_search($_GET['pagina'], $permitidos) !== false)) {
-		// Pega o valor da variável $_GET['pagina']
-		$arquivo = $_GET['pagina'];
-	} else {
-		// Se não existir variável $_GET ou ela não estiver na lista de permissões, define um valor padrão
-		$arquivo = 'home.php';
-	}
-	include ($arquivo); // Inclui o arquivo
+  // Verifica se a variável $_GET['pagina'] existe E se ela faz parte da lista de arquivos permitidos
+  if (isset($_GET['pagina']) AND (array_search($_GET['pagina'], $permitidos) !== false)) {
+    // Pega o valor da variável $_GET['pagina']
+    $arquivo = $_GET['pagina'];
+  } else {
+    // Se não existir variável $_GET ou ela não estiver na lista de permissões, define um valor padrão
+    $arquivo = 'home.php';
+  }
+  include ($arquivo); // Inclui o arquivo
 ?>
 {% endhighlight %}
 

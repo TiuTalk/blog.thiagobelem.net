@@ -55,24 +55,24 @@ Agora vamos começar a inserir algumas propriedades (variáveis) que serão usad
 
 
 {% highlight php linenos %}
-	/**
-	 * Nome do banco de dados onde está a tabela de usuários
-	 */
-	var $bancoDeDados = 'meu_site';
+  /**
+   * Nome do banco de dados onde está a tabela de usuários
+   */
+  var $bancoDeDados = 'meu_site';
 
-	/**
-	 * Nome da tabela de usuários
-	 */
-	var $tabelaUsuarios = 'usuarios';
+  /**
+   * Nome da tabela de usuários
+   */
+  var $tabelaUsuarios = 'usuarios';
 
-	/**
-	 * Nomes dos campos onde ficam o usuário e a senha de cada usuário
-	 * Formato: tipo => nome_do_campo
-	 */
-	var $campos = array(
-		'usuario' => 'usuario',
-		'senha' => 'senha'
-	);
+  /**
+   * Nomes dos campos onde ficam o usuário e a senha de cada usuário
+   * Formato: tipo => nome_do_campo
+   */
+  var $campos = array(
+    'usuario' => 'usuario',
+    'senha' => 'senha'
+  );
 {% endhighlight %}
 
 São com essas propriedades da classe que você vai poder customizar a classe para ela funcionar no seu site.. Cada uma esta devidamente comentada e explicada, é só alterar da forma que você necessitar.
@@ -81,19 +81,19 @@ Agora vamos definir o primeiro método da nossa classe:
 
 
 {% highlight php linenos %}
-	/**
-	 * Usa algum tipo de encriptação para codificar uma senha
-	 *
-	 * Método protegido: Só pode ser acessado por dentro da classe
-	 *
-	 * @param string $senha - A senha que será codificada
-	 * @return string - A senha já codificada
-	 */
-	function __codificaSenha($senha) {
-		// Altere aqui caso você use, por exemplo, o MD5:
-		// return md5($senha);
-		return $senha;
-	}
+  /**
+   * Usa algum tipo de encriptação para codificar uma senha
+   *
+   * Método protegido: Só pode ser acessado por dentro da classe
+   *
+   * @param string $senha - A senha que será codificada
+   * @return string - A senha já codificada
+   */
+  function __codificaSenha($senha) {
+    // Altere aqui caso você use, por exemplo, o MD5:
+    // return md5($senha);
+    return $senha;
+  }
 {% endhighlight %}
 
 Esse método cuidará da encriptação da senha (caso ela exista, claro)... Se o seu sistema não usar nenhum tipo de criptografia, pode deixar esse método do jeito que está, mas caso você use, por exemplo, o SHA1, você precisa mudar ali na linha 34 e colocar, por exemplo:
@@ -106,34 +106,34 @@ Agora vamos criar o segundo método da classe e o último método dessa parte do
 
 
 {% highlight php linenos %}
-	/**
-	 * Valida se um usuário existe
-	 *
-	 * @param string $usuario - O usuário que será validado
-	 * @param string $senha - A senha que será validada
-	 * @return boolean - Se o usuário existe ou não
-	 */
-	function validaUsuario($usuario, $senha) {
-		$senha = $this->__codificaSenha($senha);
+  /**
+   * Valida se um usuário existe
+   *
+   * @param string $usuario - O usuário que será validado
+   * @param string $senha - A senha que será validada
+   * @return boolean - Se o usuário existe ou não
+   */
+  function validaUsuario($usuario, $senha) {
+    $senha = $this->__codificaSenha($senha);
 
-		// Procura por usuários com o mesmo usuário e senha
-		$sql = "SELECT COUNT(*)
-				FROM `{$this->bancoDeDados}`.`{$this->tabelaUsuarios}`
-				WHERE
-					`{$this->campos['usuario']}` = '{$usuario}'
-					AND
-					`{$this->campos['senha']}` = '{$senha}'";
-		$query = mysql_query($sql);
-		if ($query) {
-			$total = mysql_result($query, 0);
-		} else {
-			// A consulta foi mal sucedida, retorna false
-			return false;
-		}
+    // Procura por usuários com o mesmo usuário e senha
+    $sql = "SELECT COUNT(*)
+        FROM `{$this->bancoDeDados}`.`{$this->tabelaUsuarios}`
+        WHERE
+          `{$this->campos['usuario']}` = '{$usuario}'
+          AND
+          `{$this->campos['senha']}` = '{$senha}'";
+    $query = mysql_query($sql);
+    if ($query) {
+      $total = mysql_result($query, 0);
+    } else {
+      // A consulta foi mal sucedida, retorna false
+      return false;
+    }
 
-		// Se houver apenas um usuário, retorna true
-		return ($total == 1) ? true : false;
-	}
+    // Se houver apenas um usuário, retorna true
+    return ($total == 1) ? true : false;
+  }
 {% endhighlight %}
 
 Esse método, como o comentário explica, cuidará de validar se um usuário existe, procurando o par <strong>$usuario</strong> + <strong>$senha</strong> no banco de dados... Ele só retornará verdadeiro (<em>true</em>) quando apenas um registro for encontrado.

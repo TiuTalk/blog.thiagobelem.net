@@ -22,23 +22,23 @@ O código original já estava dentro de uma classe, mas não faria diferença ne
 {% highlight php linenos %}
 class cFileType {
 
-	function fImage($type) {
-		switch($type) {
-			case 'jpg':
-			$bool = true;
-			break;
-			case 'png':
-			$bool = true;
-			break;
-			case 'gif':
-			$bool = true;
-			break;
-			default:
-			$bool = false;
-			break;
-		}
-		return $bool;
-	}
+  function fImage($type) {
+    switch($type) {
+      case 'jpg':
+      $bool = true;
+      break;
+      case 'png':
+      $bool = true;
+      break;
+      case 'gif':
+      $bool = true;
+      break;
+      default:
+      $bool = false;
+      break;
+    }
+    return $bool;
+  }
 
 }
 {% endhighlight %}
@@ -49,9 +49,9 @@ A primeira mudança foi trocar esse switch, que não está fazendo nada além de
 {% highlight php linenos %}
 class cFileType {
 
-	function fImage($type) {
-		return in_array($type, array('jpg', 'png', 'gif'));
-	}
+  function fImage($type) {
+    return in_array($type, array('jpg', 'png', 'gif'));
+  }
 
 }
 {% endhighlight %}
@@ -64,13 +64,13 @@ Meu amigo me disse que essa classe seria para verificar os tipos de arquivos (ex
 {% highlight php linenos %}
 class cFileType {
 
-	function fImage($type) {
-		return in_array($type, array('jpg', 'png', 'gif'));
-	}
+  function fImage($type) {
+    return in_array($type, array('jpg', 'png', 'gif'));
+  }
 
-	function fDoc($type) {
-		return in_array($type, array('doc', 'docx'));
-	}
+  function fDoc($type) {
+    return in_array($type, array('doc', 'docx'));
+  }
 
 }
 {% endhighlight %}
@@ -82,17 +82,17 @@ O código está melhorando, mas ainda assim tem algo errado... não é responsab
 {% highlight php linenos %}
 class cFileType {
 
-	public $image = array('jpg', 'png', 'gif');
+  public $image = array('jpg', 'png', 'gif');
 
-	public $doc = array('doc', 'docx');
+  public $doc = array('doc', 'docx');
 
-	function fImage($type) {
-		return in_array($type, $this->image);
-	}
+  function fImage($type) {
+    return in_array($type, $this->image);
+  }
 
-	function fDoc($type) {
-		return in_array($type, $this->doc);
-	}
+  function fDoc($type) {
+    return in_array($type, $this->doc);
+  }
 
 }
 {% endhighlight %}
@@ -104,7 +104,7 @@ Agora sim está parecendo uma classe normal, com atributos e métodos... Aí per
 {% highlight php linenos %}
 $cFileType = new cFileType();
 if ($cFileType->fImage('jpg')) {
-	// É uma imagem válida
+  // É uma imagem válida
 }
 {% endhighlight %}
 
@@ -114,17 +114,17 @@ Eu não trabalho o objeto <code>$cFileType</code>, apenas instancio e utilizo um
 {% highlight php linenos %}
 class cFileType {
 
-	public static $image = array('jpg', 'png', 'gif');
+  public static $image = array('jpg', 'png', 'gif');
 
-	public static $doc = array('doc', 'docx');
+  public static $doc = array('doc', 'docx');
 
-	static function fImage($type) {
-		return in_array($type, self::$image);
-	}
+  static function fImage($type) {
+    return in_array($type, self::$image);
+  }
 
-	static function fDoc($type) {
-		return in_array($type, self::$doc);
-	}
+  static function fDoc($type) {
+    return in_array($type, self::$doc);
+  }
 
 }
 {% endhighlight %}
@@ -134,7 +134,7 @@ E agora a utilização ficou um pouco mais simples:
 
 {% highlight php linenos %}
 if (cFileType::fImage('jpg')) {
-	// É uma imagem válida
+  // É uma imagem válida
 }
 {% endhighlight %}
 
@@ -149,21 +149,21 @@ A responsabilidade de verificar se o valor <code>$type</code> tá dentro de uma 
 {% highlight php linenos %}
 class cFileType {
 
-	public static $image = array('jpg', 'png', 'gif');
+  public static $image = array('jpg', 'png', 'gif');
 
-	public static $doc = array('doc', 'docx');
+  public static $doc = array('doc', 'docx');
 
-	static function fType($type, $list) {
-		return in_array($type, $list);
-	}
+  static function fType($type, $list) {
+    return in_array($type, $list);
+  }
 
-	static function fImage($type) {
-		return self::fType($type, self::$image);
-	}
+  static function fImage($type) {
+    return self::fType($type, self::$image);
+  }
 
-	static function fDoc($type) {
-		return self::fType($type, self::$doc);
-	}
+  static function fDoc($type) {
+    return self::fType($type, self::$doc);
+  }
 
 }
 {% endhighlight %}
@@ -177,21 +177,21 @@ Temos que concordar que os nomes de classe e métodos escolhidos pelo meu amigo 
 {% highlight php linenos %}
 class FileType {
 
-	public static $image = array('jpg', 'png', 'gif');
+  public static $image = array('jpg', 'png', 'gif');
 
-	public static $doc = array('doc', 'docx');
+  public static $doc = array('doc', 'docx');
 
-	public static function isTypeInList($type, $list) {
-		return in_array($type, $list);
-	}
+  public static function isTypeInList($type, $list) {
+    return in_array($type, $list);
+  }
 
-	public static function isImage($type) {
-		return self::isTypeInList($type, self::$image);
-	}
+  public static function isImage($type) {
+    return self::isTypeInList($type, self::$image);
+  }
 
-	public static function isDoc($type) {
-		return self::isTypeInList($type, self::$doc);
-	}
+  public static function isDoc($type) {
+    return self::isTypeInList($type, self::$doc);
+  }
 
 }
 {% endhighlight %}
@@ -201,7 +201,7 @@ Com uma utilização bem simples e intuitiva:
 
 {% highlight php linenos %}
 if (FileType::isImage('jpg')) {
-	// É uma imagem válida
+  // É uma imagem válida
 }
 {% endhighlight %}
 

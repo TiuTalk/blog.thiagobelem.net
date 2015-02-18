@@ -38,7 +38,7 @@ Veja um exemplo da compressão que ele faz em um CSS:
 Antes:
 {% highlight css linenos %}
 html {
-	background-color: #f7f6f1;
+  background-color: #f7f6f1;
 }
 
 * html input,
@@ -49,21 +49,21 @@ html {
 textarea,
 input,
 select {
-	border-color: #dfdfdf;
+  border-color: #dfdfdf;
 }
 
 kbd,
 code {
-	background: #eaeaea;
+  background: #eaeaea;
 }
 
 input[readonly] {
-	background-color: #eee;
+  background-color: #eee;
 }
 
 .find-box-search {
-	border-color: #dfdfdf;
-	background-color: #f1f1f1;
+  border-color: #dfdfdf;
+  background-color: #f1f1f1;
 }
 {% endhighlight %}
 

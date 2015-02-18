@@ -32,17 +32,17 @@ $cadastrados = 0;
 
 // Para cada elemento de $usuários, faça:
 foreach ($usuarios as $usuario) {
-	$nome = $usuario['nome'];
-	$email = $usuario['email'];
+  $nome = $usuario['nome'];
+  $email = $usuario['email'];
 
-	// Monta a consulta
-	$sql = "INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, '{$nome}', '{$email}');";
+  // Monta a consulta
+  $sql = "INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES (NULL, '{$nome}', '{$email}');";
 
-	// Executa a consulta verificando se foi inserido com sucesso
-	if (mysql_query($sql)) {
-		// Incrementa o contador
-		$cadastrados++;
-	}
+  // Executa a consulta verificando se foi inserido com sucesso
+  if (mysql_query($sql)) {
+    // Incrementa o contador
+    $cadastrados++;
+  }
 }
 
 echo 'Usuários cadastrados: ' . $cadastrados;
@@ -73,11 +73,11 @@ $sql = "INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES";
 
 // Para cada elemento de $usuários, faça:
 foreach ($usuarios as $usuario) {
-	$nome = $usuario['nome'];
-	$email = $usuario['email'];
+  $nome = $usuario['nome'];
+  $email = $usuario['email'];
 
-	// Monta a parte consulta de cada usuário
-	$sql .= " (NULL, '{$nome}', '{$email}'),";
+  // Monta a parte consulta de cada usuário
+  $sql .= " (NULL, '{$nome}', '{$email}'),";
 }
 
 // Tira o último caractere (vírgula extra)

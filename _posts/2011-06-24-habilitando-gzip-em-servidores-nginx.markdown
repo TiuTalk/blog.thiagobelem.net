@@ -46,20 +46,20 @@ Encontrado o arquivo, é só colocar algo do tipo dentro do bloco de configuraç
 
 {% highlight sh linenos %}
 # Habilita o gzip
-gzip			on;
-gzip_http_version	1.1;
-gzip_vary		on;
-gzip_comp_level	6;
-gzip_proxied	any;
+gzip      on;
+gzip_http_version  1.1;
+gzip_vary    on;
+gzip_comp_level  6;
+gzip_proxied  any;
 
 # Mime-types que serão compactados
-gzip_types		text/html text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+gzip_types    text/html text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
 
 # http://blog.leetsoft.com/2007/7/25/nginx-gzip-ssl
-gzip_buffers	16	8k;
+gzip_buffers  16  8k;
 
 # Desabilita o gzip para alguns navegadores
-gzip_disable	"MSIE [1-6].(?!.*SV1)";
+gzip_disable  "MSIE [1-6].(?!.*SV1)";
 {% endhighlight %}
 
 Gist: [https://gist.github.com/1045708](https://gist.github.com/1045708)

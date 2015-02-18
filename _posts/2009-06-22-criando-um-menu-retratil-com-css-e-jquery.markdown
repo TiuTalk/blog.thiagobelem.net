@@ -30,18 +30,18 @@ Bom... vamos lá!
 
 {% highlight html linenos %}
 <ul id="menu">
-	<li class="header">Menu</li>
-	<li>[Página inicial](#)</li>
-	<li>[Notícias](#)</li>
-	<li class="parent">[Produtos](#)
-		<ul class="sub-menu">
-			<li>[Camisetas](#)</li>
-			<li>[Calças](#)</li>
-			<li>[Livros](#)</li>
-		</ul>
-	</li>
-	<li>[Quem somos nós](#)</li>
-	<li>[Contato](#)</li>
+  <li class="header">Menu</li>
+  <li>[Página inicial](#)</li>
+  <li>[Notícias](#)</li>
+  <li class="parent">[Produtos](#)
+    <ul class="sub-menu">
+      <li>[Camisetas](#)</li>
+      <li>[Calças](#)</li>
+      <li>[Livros](#)</li>
+    </ul>
+  </li>
+  <li>[Quem somos nós](#)</li>
+  <li>[Contato](#)</li>
 </ul>
 {% endhighlight %}
 
@@ -51,66 +51,66 @@ Vejam que o sub-menu (que irá aparecer) fica dentro do <li> e fora do <a>.
 
 {% highlight css linenos %}
 * {
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-	font-family: Verdana, Arial, sans-serif;
-	font-size: 11px;
-	margin: 20px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  margin: 20px;
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 ul#menu {
-	width: 170px;
-	border: 1px solid silver;
-	margin-top: 20px;
+  width: 170px;
+  border: 1px solid silver;
+  margin-top: 20px;
 }
 
 ul#menu li {
-	color: black;
-	line-height: 19px;
-	background: #F4F4F4;
+  color: black;
+  line-height: 19px;
+  background: #F4F4F4;
 }
 
 ul#menu li.header {
-	background: #DFDFDF;
-	font-weight: bolder;
-	padding: 0px 3px;
-	font-size: 12px;
+  background: #DFDFDF;
+  font-weight: bolder;
+  padding: 0px 3px;
+  font-size: 12px;
 }
 
 ul#menu li a {
-	color: black;
-	text-decoration: none;
-	display: block;
-	padding: 0px 3px;
-	outline: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 0px 3px;
+  outline: none;
 }
 
 ul#menu li.parent > a {
-	background: transparent url('../img/down.gif') right center no-repeat;
+  background: transparent url('../img/down.gif') right center no-repeat;
 }
 
 ul#menu li.aberto > a {
-	background: transparent url('../img/up.gif') right center no-repeat;
+  background: transparent url('../img/up.gif') right center no-repeat;
 }
 
 ul#menu li a:hover {
-	background-color: #EAEEFF;
+  background-color: #EAEEFF;
 }
 
 ul#menu li ul.sub-menu {
-  	display: none;
+    display: none;
 }
 
 ul#menu li ul.sub-menu li a {
-	padding-left: 15px;
-	color: maroon;
+  padding-left: 15px;
+  color: maroon;
 }
 {% endhighlight %}
 
@@ -118,15 +118,15 @@ ul#menu li ul.sub-menu li a {
 
 {% highlight javascript linenos %}
 $(function() {
-	// Evento de clique do elemento: ul#menu li.parent > a
-	$('ul#menu li.parent > a').click(function() {
-		// Expande ou retrai o elemento ul.sub-menu dentro do elemento pai (ul#menu li.parent)
-		$('ul.sub-menu', $(this).parent()).slideToggle('fast', function() {
-			// Depois de expandir ou retrair, troca a classe 'aberto' do <a> clicado
-			$(this).parent().toggleClass('aberto');
-		});
-		return false;
-	});
+  // Evento de clique do elemento: ul#menu li.parent > a
+  $('ul#menu li.parent > a').click(function() {
+    // Expande ou retrai o elemento ul.sub-menu dentro do elemento pai (ul#menu li.parent)
+    $('ul.sub-menu', $(this).parent()).slideToggle('fast', function() {
+      // Depois de expandir ou retrair, troca a classe 'aberto' do <a> clicado
+      $(this).parent().toggleClass('aberto');
+    });
+    return false;
+  });
 });
 {% endhighlight %}
 

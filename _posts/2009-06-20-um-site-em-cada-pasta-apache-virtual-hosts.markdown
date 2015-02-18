@@ -25,15 +25,15 @@ Com eles você pode ter vários sites, no mesmo servidor, cada um rodando em uma
 
 {% highlight text linenos %}
 <VirtualHost site1.com www.site.com>
-	DocumentRoot C:\htdocs\site1
-	ServerName site1.com
-	ServerAdmin thiagobelem@site1.com
+  DocumentRoot C:\htdocs\site1
+  ServerName site1.com
+  ServerAdmin thiagobelem@site1.com
 </VirtualHost>
 
 <VirtualHost site2.com www.site2.com site1.site2.com>
-	DocumentRoot C:\htdocs\site2
-	ServerName site1.com
-	ServerAdmin fulano@site2.com
+  DocumentRoot C:\htdocs\site2
+  ServerName site1.com
+  ServerAdmin fulano@site2.com
 </VirtualHost>
 {% endhighlight %}
 

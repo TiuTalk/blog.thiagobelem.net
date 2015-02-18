@@ -84,7 +84,7 @@ Você pode usar a função <strong>defined()</strong> para saber se uma constant
 <?php
 // Verifica se a constante SITE não foi definida
 if (defined('SITE') == false) {
-	define('SITE', 'Thiago Belem / Blog');
+  define('SITE', 'Thiago Belem / Blog');
 }
 ?>
 {% endhighlight %}

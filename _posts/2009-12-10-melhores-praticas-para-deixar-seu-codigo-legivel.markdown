@@ -33,13 +33,13 @@ Indentação é, sem dúvida, a parte mais importante desse artigo... Sem uma bo
 <?php
 
 if ($nota >= 7) {
-	echo 'Você foi aprovado!';
+  echo 'Você foi aprovado!';
 } else {
-	if ($nota > 3) {
-		echo 'Você precisa fazer prova final!';
-	} else {
-		echo 'Você foi reprovado!';
-	}
+  if ($nota > 3) {
+    echo 'Você precisa fazer prova final!';
+  } else {
+    echo 'Você foi reprovado!';
+  }
 }
 
 ?>
@@ -49,18 +49,18 @@ if ($nota >= 7) {
 
 if ($nota >= 7)
 {
-	echo 'Você foi aprovado!';
+  echo 'Você foi aprovado!';
 }
 else
 {
-	if ($nota > 3)
-	{
-		echo 'Você precisa fazer prova final!';
-	}
-	else
-	{
-		echo 'Você foi reprovado!';
-	}
+  if ($nota > 3)
+  {
+    echo 'Você precisa fazer prova final!';
+  }
+  else
+  {
+    echo 'Você foi reprovado!';
+  }
 }
 
 ?>
@@ -78,10 +78,10 @@ Comentar o seu código é sempre bom... Comentários só pesam no tamanho do arq
 
 // Se o $nome for igual a Thiago
 if ($nome == 'Thiago')  {
-	// Exibe uma mensagem de boas vindas
-	echo 'Olá Thiago!';
-	// Calcula a idade da pessoa
-	$idade = calculaIdade($nome);
+  // Exibe uma mensagem de boas vindas
+  echo 'Olá Thiago!';
+  // Calcula a idade da pessoa
+  $idade = calculaIdade($nome);
 }
 
 ?>
@@ -100,14 +100,14 @@ Muitas vezes fazemos isso sem perceber... E é uma ótima prática! Agrupe as li
 $sql = "SELECT * FROM `produtos` WHERE `destaque` = 1";
 $query = mysql_query($sql);
 while ($produto = mysql_fetch_assoc($query)) {
-	echo $produto['nome'] . '';
+  echo $produto['nome'] . '';
 }
 
 // Lista o apelido dos usuários online
 $sql = "SELECT `apelido` FROM `usuarios` WHERE `online` = 1";
 $query = mysql_query($sql);
 while ($usuario = mysql_fetch_assoc($query)) {
-	echo '»' . $usuario['apelido'] . '';
+  echo '»' . $usuario['apelido'] . '';
 }
 
 ?>

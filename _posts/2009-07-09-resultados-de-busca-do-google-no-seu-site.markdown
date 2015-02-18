@@ -28,73 +28,73 @@ Fiz uma classe que vocês vão poder usar para pegar o resultado de busca do Goo
 /**
  * API de busca do Google
  *
- * @author			Thiago Belem (contato@thiagobelem.net)
- * @link			http://blog.thiagobelem.net/
- * @version			1.1
+ * @author      Thiago Belem (contato@thiagobelem.net)
+ * @link      http://blog.thiagobelem.net/
+ * @version      1.1
  */
 class googleSearchAPI {
-	protected $url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=large&start=%s&q=%s';
-	var $resultado, $pagina, $keywords;
+  protected $url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=large&start=%s&q=%s';
+  var $resultado, $pagina, $keywords;
 
-	function __construct() {
-		if (!function_exists('curl_init')) {
-			trigger_error('A biblioteca cURL não está instalada!');
-			return false;
-		}
-		if (!function_exists('json_decode')) {
-			trigger_error('A biblioteca para manipulação de JSON não está instalada!');
-			return false;
-		}
-	}
+  function __construct() {
+    if (!function_exists('curl_init')) {
+      trigger_error('A biblioteca cURL não está instalada!');
+      return false;
+    }
+    if (!function_exists('json_decode')) {
+      trigger_error('A biblioteca para manipulação de JSON não está instalada!');
+      return false;
+    }
+  }
 
-	/**
-	 * Pega o resultado HTTP de uma URL
-	 */
-	protected function httpRequest($url) {
-		$cURL = curl_init($url);
-		curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, true);
-		$resultado = curl_exec($cURL);
-		$resposta = curl_getinfo($cURL, CURLINFO_HTTP_CODE);
-		curl_close($cURL);
-		return $resultado;
-	}
+  /**
+   * Pega o resultado HTTP de uma URL
+   */
+  protected function httpRequest($url) {
+    $cURL = curl_init($url);
+    curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, true);
+    $resultado = curl_exec($cURL);
+    $resposta = curl_getinfo($cURL, CURLINFO_HTTP_CODE);
+    curl_close($cURL);
+    return $resultado;
+  }
 
-	/**
-	 * Executa a busca
-	 */
-	function busca($keywords = null, $pagina = 1, $site = null) {
-		$keywords = (is_null($keywords)) ? $this->keywords : $keywords;
-		$start = (is_null($pagina)) ? 0 : (($pagina - 1) * 8);
+  /**
+   * Executa a busca
+   */
+  function busca($keywords = null, $pagina = 1, $site = null) {
+    $keywords = (is_null($keywords)) ? $this->keywords : $keywords;
+    $start = (is_null($pagina)) ? 0 : (($pagina - 1) * 8);
 
-		$bkeywords = (!is_null($site)) ? ($keywords . ' site:' . $site) : $keywords;
+    $bkeywords = (!is_null($site)) ? ($keywords . ' site:' . $site) : $keywords;
 
-		$url = sprintf($this->url, (int)$start, urlencode($bkeywords));
-		$resultado = $this->httpRequest($url);
-		if (!$resultado) {
-			trigger_error('Não foi possível acessar a URL de busca:' . $url);
-			return false;
-		}
-		$resultado = json_decode($resultado, true);
+    $url = sprintf($this->url, (int)$start, urlencode($bkeywords));
+    $resultado = $this->httpRequest($url);
+    if (!$resultado) {
+      trigger_error('Não foi possível acessar a URL de busca:' . $url);
+      return false;
+    }
+    $resultado = json_decode($resultado, true);
 
-		$this->resultado = $resultado['responseData'];
-		$this->keywords = $keywords;
-		$this->pagina = $pagina;
-	}
+    $this->resultado = $resultado['responseData'];
+    $this->keywords = $keywords;
+    $this->pagina = $pagina;
+  }
 
-	/**
-	 * Pega os resultados encontrados
-	 */
-	function resultadoSites() {
-		return $this->resultado['results'];
-	}
+  /**
+   * Pega os resultados encontrados
+   */
+  function resultadoSites() {
+    return $this->resultado['results'];
+  }
 
-	/**
-	 * Pega o total de sites encontrados
-	 */
-	function resultadoTotal() {
-		return $this->resultado['cursor']['estimatedResultCount'];
-	}
+  /**
+   * Pega o total de sites encontrados
+   */
+  function resultadoTotal() {
+    return $this->resultado['cursor']['estimatedResultCount'];
+  }
 }
 
 ?>
@@ -121,10 +121,10 @@ echo "";
 echo "<h2>Pagina: " . $gs->pagina . "</h2>";
 
 foreach ($gs->resultadoSites() as $item) {
-	echo "<h3>" . $item['title'] . "</h3>";
-	echo "" . $item['content'] . "
+  echo "<h3>" . $item['title'] . "</h3>";
+  echo "" . $item['content'] . "
 ";
-	echo '[' . $item['visibleUrl'] . "](' . $item['unescapedUrl'] . ')";
+  echo '[' . $item['visibleUrl'] . "](' . $item['unescapedUrl'] . ')";
 }
 
 echo "<hr />";
@@ -134,8 +134,8 @@ echo "<hr />";
 if (($pagina - 5) > 1) echo '...&nbsp;';
 
 for ($n = 1; $n <= ceil($total / 8); $n++) {
-	if (($n < ($pagina - 5)) OR ($n > ($pagina + 5))) continue;
-	echo '['.$n.'](?q='.$keywords.'&p='.$n.')&nbsp;';
+  if (($n < ($pagina - 5)) OR ($n > ($pagina + 5))) continue;
+  echo '['.$n.'](?q='.$keywords.'&p='.$n.')&nbsp;';
 }
 
 if (($pagina + 5) < $total) echo '...';

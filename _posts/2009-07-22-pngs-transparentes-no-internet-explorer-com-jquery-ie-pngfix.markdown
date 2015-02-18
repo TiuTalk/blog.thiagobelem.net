@@ -44,9 +44,9 @@ E depois é só inserir um bloco de jQuery que fará a correção em todos os el
   <script language="JavaScript" src="jquery.pngFix.js" type="text/javascript"></script>
 
   <script language="JavaScript" type="text/javascript">
-	$(document).ready(function(){
-		$(document).pngFix(); // "Executa" o pngFix em todos os elementos do site
-	});
+  $(document).ready(function(){
+    $(document).pngFix(); // "Executa" o pngFix em todos os elementos do site
+  });
   </script>
 </head>
 {% endhighlight %}

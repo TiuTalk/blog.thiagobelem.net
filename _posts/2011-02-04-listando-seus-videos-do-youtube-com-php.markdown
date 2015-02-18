@@ -61,19 +61,19 @@ $videos = array();
 
 // Passa por todos vídeos no RSS
 foreach ($xml->entry AS $video) {
-	$url = (string)$video->link['href'];
+  $url = (string)$video->link['href'];
 
-	// Quebra a URL do vídeo para pegar o ID
-	parse_str(parse_url($url, PHP_URL_QUERY), $params);
-	$id = $params['v'];
+  // Quebra a URL do vídeo para pegar o ID
+  parse_str(parse_url($url, PHP_URL_QUERY), $params);
+  $id = $params['v'];
 
-	// Monta um array com os dados do vídeo
-	$videos[] = array(
-		'id' => $id,
-		'titulo' => (string)$video->title,
-		'thumbnail' => 'http://i' . rand(1, 4) .'.ytimg.com/vi/'. $id .'/hqdefault.jpg',
-		'url' => $url
-	);
+  // Monta um array com os dados do vídeo
+  $videos[] = array(
+    'id' => $id,
+    'titulo' => (string)$video->title,
+    'thumbnail' => 'http://i' . rand(1, 4) .'.ytimg.com/vi/'. $id .'/hqdefault.jpg',
+    'url' => $url
+  );
 }
 
 ?>
@@ -86,11 +86,11 @@ Ao final desse código teremos o array <code>$videos</code> com a lista de víde
 <h1>Meus Vídeos</h1>
 
 <ul>
-	<?php foreach ($videos AS $video) { ?>
-	<li>
-		[](<?php echo $video['url'] ?>)
-	</li>
-	<?php } ?>
+  <?php foreach ($videos AS $video) { ?>
+  <li>
+    [](<?php echo $video['url'] ?>)
+  </li>
+  <?php } ?>
 </ul>
 {% endhighlight %}
 

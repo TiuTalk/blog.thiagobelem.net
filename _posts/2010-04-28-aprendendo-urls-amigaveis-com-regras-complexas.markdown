@@ -44,12 +44,12 @@ O nosso <code>.htaccess</code> para reescrever a URL anterior (da página de con
 
 {% highlight sh linenos %}
 <IfModule mod_rewrite.c>
-	RewriteEngine On
+  RewriteEngine On
 
-	# Página de contato
-	RewriteRule ^contato/?$ /contato.php [NC,L]
-	# Página de exibição de um produto
-	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]
+  # Página de contato
+  RewriteRule ^contato/?$ /contato.php [NC,L]
+  # Página de exibição de um produto
+  RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]
 </IfModule>
 {% endhighlight %}
 
@@ -140,16 +140,16 @@ Vamos ver mais alguns exemplos que podemos colocar no nosso <code>.htaccess</cod
 
 {% highlight sh linenos %}
 <IfModule mod_rewrite.c>
-	RewriteEngine On
+  RewriteEngine On
 
-	# Página de contato
-	RewriteRule ^contato/?$ /contato.php [NC,L]
-	# Página de exibição de um produto
-	RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]
-	# Página de exibição de uma categoria de livros
-	RewriteRule ^livro/([a-z0-9-]+)/?$ /livros.php?categoria=$1 [NC,L]
-	# Página de exibição de um artigo com a data na URL
-	RewriteRule ^artigo/([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-z0-9-]+)/([0-9]+)/?$ /artigo.php?id=$5&nome=$4&data=$1-$2-$3 [NC]
+  # Página de contato
+  RewriteRule ^contato/?$ /contato.php [NC,L]
+  # Página de exibição de um produto
+  RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]
+  # Página de exibição de uma categoria de livros
+  RewriteRule ^livro/([a-z0-9-]+)/?$ /livros.php?categoria=$1 [NC,L]
+  # Página de exibição de um artigo com a data na URL
+  RewriteRule ^artigo/([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-z0-9-]+)/([0-9]+)/?$ /artigo.php?id=$5&nome=$4&data=$1-$2-$3 [NC]
 </IfModule>
 {% endhighlight %}
 

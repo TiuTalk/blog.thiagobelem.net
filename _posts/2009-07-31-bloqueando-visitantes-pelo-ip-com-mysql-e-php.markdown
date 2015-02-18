@@ -26,11 +26,11 @@ Para salvar a lista de IPs banidos usaremos uma tabela no MySQL que pode ser cri
 
 {% highlight sql linenos %}
 CREATE TABLE `banidos` (
-	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-	`ip` VARCHAR( 15 ) NOT NULL ,
-	`inicio` DATETIME NOT NULL ,
-	`fim` DATETIME NOT NULL ,
-	INDEX ( `ip` )
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  `ip` VARCHAR( 15 ) NOT NULL ,
+  `inicio` DATETIME NOT NULL ,
+  `fim` DATETIME NOT NULL ,
+  INDEX ( `ip` )
 ) ENGINE = MYISAM
 {% endhighlight %}
 
@@ -77,7 +77,7 @@ mysql_query($sql);
 $sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip_visitante ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";
 $query = mysql_query($sql);
 if (mysql_num_rows($query) > 0) {
-	// Pelo menos um resultado foi encontrado, o usuário está banido
+  // Pelo menos um resultado foi encontrado, o usuário está banido
 }
 
 ?>
@@ -91,9 +91,9 @@ Agora é só redirecionar o visitante para outra página/endereço:
 $sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip_visitante ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";
 $query = mysql_query($sql);
 if (mysql_num_rows($query) > 0) {
-	// Redireciona o visitante
-	header("Location: http://www.pudim.com.br/");
-	exit;
+  // Redireciona o visitante
+  header("Location: http://www.pudim.com.br/");
+  exit;
 }
 {% endhighlight %}
 
@@ -104,27 +104,27 @@ Agora nós vamos criar uma funçãozinha que você vai usar para banir o visitan
 
 {% highlight php linenos %}
 function banirVisitante($minutos, $ip = null) {
-	// Define o IP que será banido
-	$ip = (is_null($ip)) ? $_SERVER['REMOTE_ADDR'] : $ip;
+  // Define o IP que será banido
+  $ip = (is_null($ip)) ? $_SERVER['REMOTE_ADDR'] : $ip;
 
-	// Verifica se o usuário já está banido
-	$sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";
-	$query = mysql_query($sql);
-	if (mysql_num_rows($query) > 0) {
-		// Cria uma consulta que atualizará o registro do visitante
-		$sql = "UPDATE `banidos` SET `fim` = DATE_ADD(NOW(), INTERVAL ".$minutos." MINUTE) WHERE  ( `ip` = '". $ip ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";
-	} else {
-		// Cria uma consulta que insere o registro na tabela
-		$sql = "INSERT INTO `banidos` VALUES ( NULL, '". $ip ."', NOW(), DATE_ADD(NOW(), INTERVAL ".$minutos." MINUTE) )";
-	}
-	// Executa a consulta criada dentro do IF/ELSE
-	mysql_query($sql);
+  // Verifica se o usuário já está banido
+  $sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";
+  $query = mysql_query($sql);
+  if (mysql_num_rows($query) > 0) {
+    // Cria uma consulta que atualizará o registro do visitante
+    $sql = "UPDATE `banidos` SET `fim` = DATE_ADD(NOW(), INTERVAL ".$minutos." MINUTE) WHERE  ( `ip` = '". $ip ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";
+  } else {
+    // Cria uma consulta que insere o registro na tabela
+    $sql = "INSERT INTO `banidos` VALUES ( NULL, '". $ip ."', NOW(), DATE_ADD(NOW(), INTERVAL ".$minutos." MINUTE) )";
+  }
+  // Executa a consulta criada dentro do IF/ELSE
+  mysql_query($sql);
 
-	// Redireciona o visitante
-	if ($_SERVER['REMOTE_ADDR'] == $ip) {
-		header("Location: http://www.pudim.com.br/");
-		exit;
-	}
+  // Redireciona o visitante
+  if ($_SERVER['REMOTE_ADDR'] == $ip) {
+    header("Location: http://www.pudim.com.br/");
+    exit;
+  }
 }
 {% endhighlight %}
 

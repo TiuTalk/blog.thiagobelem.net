@@ -69,15 +69,15 @@ Agora nós iremos inserir o código que faz o jQuery Cycle agir sobre a lista de
 
 
 {% highlight javascript linenos %}
-	$(document).ready(function() {
+  $(document).ready(function() {
 
-		/**
-		 * Roda o jQuery Cycle na lista (ul) que está
-		 * dentro do bloco de destaques (#blocoDestaques)
-		 */
-		$('#blocoDestaques ul').cycle();
+    /**
+     * Roda o jQuery Cycle na lista (ul) que está
+     * dentro do bloco de destaques (#blocoDestaques)
+     */
+    $('#blocoDestaques ul').cycle();
 
-	});
+  });
 {% endhighlight %}
 Rode o seu site e veja a mágica acontecer... Já está 99% pronto! :D
 
@@ -95,10 +95,10 @@ Para inserir os paginadores precisaremos antes criar um container para recebê-l
 
 
 {% highlight javascript linenos %}
-	// Cria uma div.paginas que receberá os paginadores
-	var div = $('<div></div>').addClass('paginas');
-	// Insere a div criada antes da lista de destaques
-	$('#blocoDestaques ul').before(div);
+  // Cria uma div.paginas que receberá os paginadores
+  var div = $('<div></div>').addClass('paginas');
+  // Insere a div criada antes da lista de destaques
+  $('#blocoDestaques ul').before(div);
 {% endhighlight %}
 
 Deveremos inserir esse código dentro do document.ready mas antes do código que chama o jQuery Cycle pois essa div criada será usada pelo Cycle.
@@ -107,22 +107,22 @@ Com esse código inserido o nosso document.ready() ficará assim:
 
 
 {% highlight javascript linenos %}
-	$(document).ready(function() {
+  $(document).ready(function() {
 
-		// Cria uma div.paginas que receberá os paginadores
-		var div = $('<div></div>').addClass('paginas');
-		// Insere a div criada antes da lista de destaques
-		$('#blocoDestaques ul').before(div);
+    // Cria uma div.paginas que receberá os paginadores
+    var div = $('<div></div>').addClass('paginas');
+    // Insere a div criada antes da lista de destaques
+    $('#blocoDestaques ul').before(div);
 
-		/**
-		 * Roda o jQuery Cycle na lista (ul) que está
-		 * dentro do bloco de destaques (#blocoDestaques)
-		 */
-		$('#blocoDestaques ul').cycle({
+    /**
+     * Roda o jQuery Cycle na lista (ul) que está
+     * dentro do bloco de destaques (#blocoDestaques)
+     */
+    $('#blocoDestaques ul').cycle({
 
-		});
+    });
 
-	});
+  });
 {% endhighlight %}
 
 Perceba que colocamos também um par de chaves dentro da chamada do jQuery Cycle... Ali dentro nós iremos definir as [opções](http://www.malsup.com/jquery/cycle/options.html) para modificar e interagir com o jQuery Cycle (veja mais a diante).
@@ -131,9 +131,9 @@ Agora nós já temos o container que receberá os paginadores, vamos inserir o c
 
 
 {% highlight javascript linenos %}
-		$('#blocoDestaques ul').cycle({
-			pager: 'div.paginas', // Paginadores
-		});
+    $('#blocoDestaques ul').cycle({
+      pager: 'div.paginas', // Paginadores
+    });
 {% endhighlight %}
 
 Com apenas essa linha os nossos links de paginação já estão aparecendo e funcionando! Não é uma maravilha?!
@@ -143,36 +143,36 @@ Vamos agora criar, rapidamente, o CSS para eles ficarem aparecendo sobre os slid
 
 {% highlight css linenos %}
 #blocoDestaques div.paginas {
-	position: absolute;
-	top: 5px;
-	right: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 
-	z-index: 100;
+  z-index: 100;
 }
 
 #blocoDestaques div.paginas a {
-	height: 20px;
-	width: 20px;
+  height: 20px;
+  width: 20px;
 
-	display: block;
-	float: left;
-	margin-left: 2px;
+  display: block;
+  float: left;
+  margin-left: 2px;
 
-	color: white;
-	font-size: 10px;
-	font-family: Verdana, Arial, sans-serif;
-	text-decoration: none;
-	text-align: center;
-	line-height: 20px;
-	outline: none;
+  color: white;
+  font-size: 10px;
+  font-family: Verdana, Arial, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  line-height: 20px;
+  outline: none;
 
-	background: black;
+  background: black;
 }
 
 #blocoDestaques div.paginas a:hover,
 #blocoDestaques div.paginas a.activeSlide {
-	background: #9FAA27;
-	font-weight: bold;
+  background: #9FAA27;
+  font-weight: bold;
 }
 
 #blocoDestaques ul li p,
@@ -187,11 +187,11 @@ Vamos inserir mais duas opções que farão o slideshow pausar a transição se 
 
 
 {% highlight javascript linenos %}
-		$('#blocoDestaques ul').cycle({
-			pager: 'div.paginas', // Paginadores
-			pause: true, // Pausa ao passar o mouse sobre ele?
-			pauseOnPagerHover: true // Pausa ao passar o mouse sobre as páginas?
-		});
+    $('#blocoDestaques ul').cycle({
+      pager: 'div.paginas', // Paginadores
+      pause: true, // Pausa ao passar o mouse sobre ele?
+      pauseOnPagerHover: true // Pausa ao passar o mouse sobre as páginas?
+    });
 {% endhighlight %}
 
 <h3>3.2 - Efeito de transição: escondendo e mostrando a barrinha de titulo</h3>
@@ -199,10 +199,10 @@ Agora nós vamos inserir uma opção que tem comportamento de <em>callback</em>,
 
 
 {% highlight javascript linenos %}
-			// Executa uma função antes de cada troca de slide
-			before: function(atual, proximo, opcoes, avancando) {
+      // Executa uma função antes de cada troca de slide
+      before: function(atual, proximo, opcoes, avancando) {
 
-			}
+      }
 {% endhighlight %}
 
 Você não precisa se preocupar com o formato usado na declaração dessa função, ele já é pré-definido pelo jQuery Cycle... Você só precisa se dedicar ao que vai colocar dentro dela.
@@ -211,36 +211,36 @@ E dentro dela vamos colocar o código que esconde a barrinha preta de titulo do 
 
 
 {% highlight javascript linenos %}
-				/**
-				 * Esconde o parágrafo E a div.fundo que estão dentro do slide atual
-				 */
-				$('p, div.fundo', atual).slideUp('fast');
+        /**
+         * Esconde o parágrafo E a div.fundo que estão dentro do slide atual
+         */
+        $('p, div.fundo', atual).slideUp('fast');
 {% endhighlight %}
 
 A nossa função de <em>callback</em> ficará assim:
 
 
 {% highlight javascript linenos %}
-			// Executa uma função antes de cada troca de slide
-			before: function(atual, proximo, opcoes, avancando) {
-				/**
-				 * Esconde o parágrafo E a div.fundo que estão dentro do slide atual
-				 */
-				$('p, div.fundo', atual).slideUp('fast');
-			}
+      // Executa uma função antes de cada troca de slide
+      before: function(atual, proximo, opcoes, avancando) {
+        /**
+         * Esconde o parágrafo E a div.fundo que estão dentro do slide atual
+         */
+        $('p, div.fundo', atual).slideUp('fast');
+      }
 {% endhighlight %}
 
 Vamos também criar o <em>callback</em> que será chamado após a troca de slides:
 
 
 {% highlight javascript linenos %}
-			// Executa uma função depois de cada troca de slide
-			after: function(atual, proximo, opcoes, avancando) {
-				/**
-				 * Mostra o parágrafo E a div.fundo que estão dentro do slide atual
-				 */
-				$('p, div.fundo', proximo).slideDown('fast');
-			}
+      // Executa uma função depois de cada troca de slide
+      after: function(atual, proximo, opcoes, avancando) {
+        /**
+         * Mostra o parágrafo E a div.fundo que estão dentro do slide atual
+         */
+        $('p, div.fundo', proximo).slideDown('fast');
+      }
 {% endhighlight %}
 
 E agora a nossa barrinha de destaques está subindo e descendo como o planejado! :D Só falta trocar o link da etiqueta [Destaques] para o link exato de cada destaque.
@@ -250,22 +250,22 @@ O link da etiqueta deverá ser atualizado logo após a troca de slides, então v
 
 
 {% highlight javascript linenos %}
-			// Executa uma função depois de cada troca de slide
-			after: function(atual, proximo, opcoes, avancando) {
-				/**
-				 * Altera dois atributos da etiqueta [Destaques] para
-				 * ela ter o mesmo titulo e link do destaque mostrado
-				 */
-				$('a.faixa', '#blocoDestaques').attr({
-					title: $('a', proximo).attr('title'),
-					href: $('a', proximo).attr('href')
-				});
+      // Executa uma função depois de cada troca de slide
+      after: function(atual, proximo, opcoes, avancando) {
+        /**
+         * Altera dois atributos da etiqueta [Destaques] para
+         * ela ter o mesmo titulo e link do destaque mostrado
+         */
+        $('a.faixa', '#blocoDestaques').attr({
+          title: $('a', proximo).attr('title'),
+          href: $('a', proximo).attr('href')
+        });
 
-				/**
-				 * Mostra o parágrafo E a div.fundo que estão dentro do slide atual
-				 */
-				$('p, div.fundo', proximo).slideDown('fast');
-			}
+        /**
+         * Mostra o parágrafo E a div.fundo que estão dentro do slide atual
+         */
+        $('p, div.fundo', proximo).slideDown('fast');
+      }
 {% endhighlight %}
 
 Pra quem quiser dar uma olhada no jquery.destaques.js completo: [Pastie](http://pastie.org/857733)
