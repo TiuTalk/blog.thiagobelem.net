@@ -32,7 +32,7 @@ tags:
 <p>O custo de processamento influencia diretamente nas tentativas de ataque de força bruta, quanto maior, mais lento, quanto mais lento, melhor.</p>
 <h3>Criptografando senhas usando bcrypt</h3>
 <p>Basicamente, pra criptografar a senha "<strong>olá mundo</strong>", com o salt "<strong>Cf1f11ePArKlBJomM0F6aJ</strong>" à um custo de processamento de <strong>8</strong>, você faria algo assim:</p>
-<p>[gist id=3438858]</p>
+<div data-gist-id="3438858" data-gist-show-loading="false"></div>
 <p>O que fizemos foi passar dois valores para a função <strong>crypt()</strong>: o valor a ser criptografado (a senha em si), e uma string '<strong>$2a$08$Cf1f11ePArKlBJomM0F6aJ$</strong>', que é composta por três partes (separadas por cifrão):</p>
 <ol>
 <li>O método de hashing -- <strong>2a</strong> -- que fará com que o bcrypt/blowfish seja usado</li>
@@ -48,13 +48,13 @@ tags:
 <p>Agora suponhamos que o seu usuário está fazendo o login, e o único valor que você tem é o nome de usuário (ou email, tanto faz) e a senha que ele digitou no formulário (ola mundo), como comparar isso com o valor que está no banco para verificar se os dados estão válidos?</p>
 <p>Já que você está trabalhando com um salt gerado aleatoriamente, é impossível gerar um novo hash que seja igual ao hash que está no banco... correto? ERRADO! :)</p>
 <p>Para comparar uma senha texto-plano com um já hasheado, é só usar esse próprio valor hasheado como hash da senha text-plano, vejam como é simples:</p>
-<p>[gist id=3439074]</p>
+<div data-gist-id="3439074" data-gist-show-loading="false"></div>
 <p>É ou não é sensacional? Você pode gerar o mesmo hash, tendo a senha original e o hash resultado, sem precisar do salt original! :) Isso garante que você pode gerar um salt aleatório sempre que for criptografar a senha de alguém.</p>
 <p>E é aí que o <strong>custo</strong> entra em jogo... mesmo durante um ataque de força bruta, o atacante pode tentar diferentes combinações de "senha original" mas o custo vai tornar a operação toda tão lenta que não vai valer o esforço.</p>
 <h3>Uma pequena classe para facilitar a sua vida</h3>
 <p>Criei uma pequena <a href="https://gist.github.com/3438461">classe Bcrypt</a> que ajuda a fazer esse trabalho todo através de dois métodos bem simples de usar..</p>
 <p>Primeiro, o código completo da classe:</p>
-<p>[gist id=3438461]</p>
+<div data-gist-id="3438461" data-gist-show-loading="false"></div>
 <p>Agora como você pode usar os métodos:</p>
-<p>[gist id=3439186]</p>
+<div data-gist-id="3439186" data-gist-show-loading="false"></div>
 <p>Espero que tenham gostado! :)</p>

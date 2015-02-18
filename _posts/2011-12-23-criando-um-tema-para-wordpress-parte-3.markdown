@@ -25,11 +25,11 @@ tags:
 <p>No <a href="http://blog.thiagobelem.net/criando-um-tema-para-wordpress-parte-2/" title="Criando um tema para WordPress – Parte 2" target="_blank">último artigo</a> nós começamos a criar o HTML da página inicial, e agora vamos continuar o trabalho criando o topo do site e listando os posts.</p>
 <h3>Deixando o título mais... dinâmico</h3>
 <p>Uma boa prática é mostrar o título do post dentro da tag <strong>title</strong>, no <strong>head</strong> do site... Pra isso vamos usar a função <a href="http://codex.wordpress.org/Function_Reference/wp_title" target="_blank">wp_title()</a> e fazer a seguinte mudança:</p>
-<p>[gist id=1514337]</p>
+<div data-gist-id="1514337" data-gist-show-loading="false"></div>
 <p>Com isso, sempre que estivermos dentro de um post ou página, o <strong>título do post</strong> - <a href="http://codex.wordpress.org/Function_Reference/wp_title" target="_blank">wp_title()</a> virá antes do <strong>título do site</strong>  - <a href="http://codex.wordpress.org/Function_Reference/bloginfo" target="_blank">bloginfo()</a>, separado por um hífen. :)</p>
 <h3>Montando o topo do site</h3>
 <p>Não vou fazer nada mirabolante nem inserir um menu ainda, vamos só colocar o título e o subtítulo do site... Além disso, usaremos a função <a href="http://codex.wordpress.org/Function_Reference/body_class" target="_blank">body_class()</a> na tab body para inserir algumas classes que o WordPress gera automaticamente.</p>
-<p>[gist id=1514349]</p>
+<div data-gist-id="1514349" data-gist-show-loading="false"></div>
 <p>Se você estiver acessando a home do blog, a função <a href="http://codex.wordpress.org/Function_Reference/body_class" target="_blank">body_class()</a> irá gerar as seguintes classes: <code>&lt;body class="home blog"&gt;</code>, mas se você estiver visualizando um post ela trará muito mais informações como o ID do post ou nome da categoria: <code>&lt;body class="page page-id-2 page-template page-template-default logged-in"&gt;</code>. Você pode usar essas classes para estilizar (CSS) as diferentes áreas/páginas/posts do seu blog.</p>
 <h3>Listando os posts</h3>
 <p>Para listar os posts usaremos as seguintes funções que são chamadas de "<a href="http://codex.wordpress.org/The_Loop" target="_blank">The Loop</a>":</p>
@@ -38,7 +38,7 @@ tags:
 <li><a href="http://codex.wordpress.org/The_Loop" target="_blank">the_post()</a> - Carrega um post da lista à ser exibida</li>
 </ul>
 <p>A forma mais minimalista do <strong>The Loop</strong> funciona de forma bem simples:</p>
-<p>[gist id=1514368]</p>
+<div data-gist-id="1514368" data-gist-show-loading="false"></div>
 <p>Então.. enquanto (while) existirem posts (have_posts) à serem exibidos, carrega o post e exibe as informações do mesmo.</p>
 <h3>Exibindo dados do post</h3>
 <p>Agora vamos começar a mostrar os dados do post, para isso usaremos as seguintes funções:</p>
@@ -52,9 +52,9 @@ tags:
 </ul>
 <p><strong>Atenção:</strong> Essas funções só vão funcionar corretamente se você carregar o post antes, com o <a href="http://codex.wordpress.org/The_Loop" target="_blank">the_post()</a>, por isso usamos isso tudo dentro do <a href="http://codex.wordpress.org/The_Loop" target="_blank">The Loop</a>.</p>
 <p>Vamos juntar tudo e exibir todos os dados do post, <em>like a boss</em>:</p>
-<p>[gist id=1514391]</p>
+<div data-gist-id="1514391" data-gist-show-loading="false"></div>
 <p>O resultado do código acima vai ser mais ou menos esse:</p>
-<p>[gist id=1514395]</p>
+<div data-gist-id="1514395" data-gist-show-loading="false"></div>
 <h3>Finalizando</h3>
 <p>Nosso blog está tomando forma, na próxima parte iremos começar a falar do <strong>single.php</strong> (o template pra mostrar um post) e - talvez - vamos ver sobre menus dinâmicos.</p>
 <p>Acompanhe o template que estou criando pro meu blog, com mais algumas coisinhas (que não coloco aqui), no GitHub: <a href="https://github.com/TiuTalk/blog.thiagobelem.net" target="_blank">https://github.com/TiuTalk/blog.thiagobelem.net</a></p>

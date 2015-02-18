@@ -18,7 +18,7 @@ tags:
 <p>Recentemente comecei a trabalhar num projeto onde a maior parte dos models tem um campo "published", que servirá para controlar qual conteúdo entra ou não no site externo... E eu não acho muito prático ficar colocando <code>"published" => true</code> em todas as conditions do site.</p>
 <p>Foi aqui que tive a idéia de criar o <code>$Model->find('published')</code>, que funciona da mesma forma que o <code>$Model->find('all')</code> mas inclui a condição internamente.</p>
 <p>A <a href="http://book.cakephp.org/2.0/en/models/retrieving-your-data.html#creating-custom-find-types" title="Creating custom find types" target="_blank">documentação</a> é bem simples, e o resultado da minha implementação (que estou usando no meu projeto) é mais ou menos assim:</p>
-<p>[gist id="1630250"]</p>
+<div data-gist-id="1630250" data-gist-show-loading="false"></div>
 <p>A lógica é bem simples.. precisamos:</p>
 <ol>
 <li>Definir um método chamado <strong>"_findPublished"</strong> que será rodado antes e depois da consulta</li>

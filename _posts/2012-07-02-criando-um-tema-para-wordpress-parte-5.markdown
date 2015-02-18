@@ -36,12 +36,12 @@ tags:
 </ol>
 <p>Então, como nós queremos criar uma single para os posts normais, vamos criar o <strong>single.php</strong>, já que o <strong>index.php</strong> está sendo usado pela home do blog.</p>
 <p>Podemos começar o <strong>single.php</strong> copiando todo o <strong>index.php</strong>, que ele já vai funcionar:</p>
-<p>[gist id=3030780]</p>
+<div data-gist-id="3030780" data-gist-show-loading="false"></div>
 <p>Porém, se for pra deixar ele exatamente igual ao index.php não precisaríamos criar o single.php, é só deixar que o WordPress use o index.php  (ultima opção na hierarquia de templates).</p>
 <p>Então vamos fazer algumas mudanças..</p>
 <h3>Listando as categorias e tags de um post</h3>
 <p>Vamos criar um rodapé no post, dentro dele vamos mostrar a lista das categorias e tags (separadas por vírgulas):</p>
-<p>[gist id=3030816]</p>
+<div data-gist-id="3030816" data-gist-show-loading="false"></div>
 <p>Usamos agora duas novas funções:</p>
 <ul>
 <li><a href="http://codex.wordpress.org/Function_Reference/the_category">the_category( separador, parent, post_id )</a> - Lista as categorias de um post</li>
@@ -50,12 +50,12 @@ tags:
 <p>Tirando a diferença nos parâmetros, ambas funções funcionam de forma bem parecida.</p>
 <h3>Exibindo o thumbnail principal de um post</h3>
 <p>Podemos também editar o cabeçalho do post e exibir seu thumbnail com a função <a href="http://codex.wordpress.org/Function_Reference/the_post_thumbnail">the_post_thumbnail( tamanho, atributos )</a>, assim:</p>
-<p>[gist id=3030838]</p>
+<div data-gist-id="3030838" data-gist-show-loading="false"></div>
 <p>Percebam que não usei nenhum dos parâmetros da função, pois quero justamente o tamanho padrão (configurado por dentro do painel de controle) e manter os atributos (alt, title) originais.</p>
 <p>Mas agora tem uma pegadinha! Você precisa <strong>habilitar os thumbnails</strong> (no seu tema) caso queira que seus posts e páginas possam ter uma <strong>imagem destacada</strong>, no caso o thumbnail que estamos exibindo ali em cima.</p>
 <h3>Habilitando thumbnails em um tema</h3>
 <p>Para habilitar os thumbnails é só criar na raiz do seu tema (ou editar se ele já existir) o arquivo <strong>functions.php</strong>, que é - basicamente - o arquivo central do seu tema, onde você define todo tipo de configuração ligada ao tema:</p>
-<p>[gist id=3030858]</p>
+<div data-gist-id="3030858" data-gist-show-loading="false"></div>
 <p>Usamos a função <a href="http://codex.wordpress.org/Function_Reference/add_theme_support">add_theme_support( feature )</a> que serve pra habilitar uma feature no seu tema, as features que podem ser habilitadas são:</p>
 <ul>
 <li><strong>post-formats</strong> - Formatos diferentes de post, vide: <a href="http://codex.wordpress.org/Post_Formats">http://codex.wordpress.org/Post_Formats</a></li>

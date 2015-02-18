@@ -21,10 +21,10 @@ tags:
 <h3>Intalando o Bower</h3>
 <p>Antes de tudo, você vai precisar do <a href="http://nodejs.org/">Node.js</a> e do <a href="http://npmjs.org/">NPM</a> instalados na sua máquina.</p>
 <p>Agora é só usar o NPM para instalar o Bower globalmente no seu sistema:</p>
-<p>[gist id=6155753]</p>
+<div data-gist-id="6155753" data-gist-show-loading="false"></div>
 <h3>Instalando pacotes com o Bower</h3>
 <p>Agora você pode instalar pacotes de três formas diferentes:</p>
-<p>[gist id=6155762]</p>
+<div data-gist-id="6155762" data-gist-show-loading="false"></div>
 <p>Onde <code>&lt;package&gt;</code> pode ser um dos seguintes itens:</p>
 <ul>
 <li>O nome de um pacote registrado no Bower, por exemplo <code>jquery</code></li>
@@ -36,19 +36,19 @@ tags:
 <p>Todos os pacotes serão instalados numa pasta <code>bower_components</code> dentro do seu projeto. E a ideia é que você nunca altere o conteúdo dessa pasta, nem dos pacotes dentro dela. Por isso, uma boa é colocá-la no seu <code>.gitignore</code>.</p>
 <h3>Definindo as dependências do seu projeto no bower.json</h3>
 <p>O conteúdo do arquivo do seu bower.json descreve o seu projeto e suas dependências num projeto onde usamos o <strong>jQuery</strong> e o <strong>Angular.js</strong>. Ele seria mais ou menos assim:</p>
-<p>[gist id=6155766]</p>
+<div data-gist-id="6155766" data-gist-show-loading="false"></div>
 <p>Após rodar o comando de instalação:</p>
-<p>[gist id=6155768]</p>
+<div data-gist-id="6155768" data-gist-show-loading="false"></div>
 <p>Veríamos o seguinte output:</p>
-<p>[gist id=6155770]</p>
+<div data-gist-id="6155770" data-gist-show-loading="false"></div>
 <p>E com isso acabamos de instalar o Angular.js (1.0.7) e o jQuery (2.0.2) no nosso projeto!</p>
 <p>Se amanhã sair outra versão do jQuery, podemos atualizá-lo com:</p>
-<p>[gist id=6155868]</p>
+<div data-gist-id="6155868" data-gist-show-loading="false"></div>
 <p>E o jQuery será atualizado, mas o Angular permancerá na versão 1.0.7, pois foi assim que definimos no nosso <code>bower.json</code>.</p>
 <h3>Incluindo assets instalados com o Bower</h3>
 <p>Claro que esse passo é opcional se você estiver incluindo assets de outra forma (Sprockets?). Mas vou deixar aqui um pequeno exemplo para não ficarem dúvidas.</p>
 <p>Para incluir os arquivos de um projeto, não existe magia negra, é só usar o caminho completo:</p>
-<p>[gist id=6155880]</p>
+<div data-gist-id="6155880" data-gist-show-loading="false"></div>
 <h3>Conclusão</h3>
 <p>Acredito que o Bower tenha bastante futuro, pois estamos cada vez mais tirando as dependências de dentro dos nossos projetos e repositórios, deixando apenas o que é realmente único e importante para a aplicação.</p>
 <p>Até a próxima!</p>

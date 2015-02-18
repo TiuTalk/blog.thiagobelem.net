@@ -25,15 +25,15 @@ tags:
 <p>Na <a title="HTML5 vs HTML4 – Parte 1" href="http://blog.thiagobelem.net/html5-vs-html4-parte-1/" target="_blank">primeira parte</a>, construímos o arquivo <strong>HTML</strong>, vazio, hoje começaremos a mexer no body do documento, e colocar tudo que aparecera no site.</p>
 <p>Como sou muito fã das novidades do <strong>HTML5</strong>, vou continuar postando códigos comparativos, ainda mais na parte de formulários, onde vejo as mais belas inovações, apesar de pouco compatíveis por enquanto.</p>
 <p>Vamos ao nosso formulário, primeiro, claro, em <strong>HTML4</strong>:</p>
-<p>[gist id=4746524]</p>
+<div data-gist-id="4746524" data-gist-show-loading="false"></div>
 <h3>Validando Formularios com JS</h3>
 <p>Se prestarem atenção, tem coisas faltando nesse formulário, como o <strong>action</strong> na tag form. Outro defeito deste formulário é: a pessoa pode enviar o que quiser, nada, letras, qualquer coisa, mas para o funcionamento da nossa aplicação, devemos aceitar somente números, sendo que<strong> o coeficiente A necessariamente deve ser diferente de 0</strong>.</p>
 <p>Mas não se preocupem, um “pequeno” script em <strong>JavaScript </strong>colocado no head do nosso documento pode resolver nossos problemas, e evitar muita dor de cabeça!!! É o seguinte:</p>
-<p>[gist id=4746560]</p>
+<div data-gist-id="4746560" data-gist-show-loading="false"></div>
 <p>Lembrando que, para inserir scripts diretamente dentro do HTML (sem fazer referência à um arquivo), você precisa usar a tag script, dessa forma:</p>
-<p>[gist id=4746571]</p>
+<div data-gist-id="4746571" data-gist-show-loading="false"></div>
 <p>Alem disso, faremos uma pequena mudança no form, alterando o botão de envio:</p>
-<p>[gist id=4746563]</p>
+<div data-gist-id="4746563" data-gist-show-loading="false"></div>
 <p>Isso nada mais faz do que um botão, que quando clicado,<strong> chame a função validar() do JavaScript</strong>. Em outros artigos postarei outros tipos de validação, não digo melhores, por que cada tipo pode ser melhor em determinada situação.</p>
 <p>Viu? eu disse que era simples, por enquanto nosso formulário não faz nada, alem de verificar se o que inserimos nele é valido.</p>
 <p><strong>Atenção:</strong> não é recomendado definir eventos DOM (onclick, onsubmit e etc.) diretamente no HTML, o ideal seria fazer esse vínculo através do Javascript também, vide:</p>
@@ -44,7 +44,7 @@ tags:
 </ul>
 <h3>Novidades no HTML5</h3>
 <p>Agora, vamos ao nosso mesmo formulário, só que em <strong>HTML5</strong>:</p>
-<p>[gist id=4746526]</p>
+<div data-gist-id="4746526" data-gist-show-loading="false"></div>
 <p>Simples não? O atributo <strong>type</strong> [dos inputs] do HTML5, ganha novos valores, como o <strong>number</strong>, que obriga o usuário a digitar <strong>números</strong>, e o atributo <strong>required</strong>, faz o campo ser <strong>obrigatório</strong>.</p>
 <p>Para nossa infelicidade, por enquanto o tipo number <strong>ainda não é compatível com com todos os navegadores</strong> (leia-se, Internet Explorer), mas isso vem mudando. Existem muitos outros tipos de campo, como por exemplo:</p>
 <ul>
@@ -57,7 +57,7 @@ tags:
 <p>Mas nem tudo são flores, por enquanto ainda será necessário verificar se o valor do <strong>coefA</strong> é igual a zero, ou seja, usaremos o mesmo script anterior, porem só o que necessitamos agora:</p>
 <p>[gist id= 4746566]</p>
 <p>Se estivermos procurando apenas valores <strong>maiores que zero</strong>, poderíamos ter feito essa "regra" diretamente no campo, sem a necessidade de JavaScript:</p>
-<p>[gist id=4746599]</p>
+<div data-gist-id="4746599" data-gist-show-loading="false"></div>
 <h3>Conclusão</h3>
 <p>Bom pessoal, no próximo post estou em duvida se ensinarei a fazer o calculo das equações, ou dar uma pequena introdução sobre o CSS, o que é mais importante? O  aplicativo ser bonito, ou funcionar? Lógico que funcionar, mas ninguém gosta de apps feios!</p>
 <p>Até a próxima, abraços! :)</p>

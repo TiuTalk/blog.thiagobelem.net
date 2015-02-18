@@ -23,13 +23,13 @@ tags:
 <p>Por exemplo: você precisa listar todos os números primos de 1 até 1.000.000, uma forma mais simples seria criar uma lista com todos sesses números e depois ir iterando nela, fazendo verificações se esses números são primos e imprimindo-os.. O problema aqui é que você terá uma lista de 1.000.000 de números em memória, o que pode ser custoso pra alguns sistemas.</p>
 <p>Com generators você conseguiria fazer exatamente a mesma coisa, mas sem precisar armazenar essa lista em memoria... pra cada iteração ele "encontra" o próximo numero da lista... a lista vai sendo gerada número a número enquanto você está usando, ficando com apenas um número na memória.</p>
 <p>Veja um exemplo disso funcionando:</p>
-<p>[gist id=5232890]</p>
+<div data-gist-id="5232890" data-gist-show-loading="false"></div>
 <p>Pra cada iteração o número "da vez" será entregue pelo <strong>yeld</strong>... No exemplo acima o "generator" é a função criada com o nome de <strong>xrange</strong>.</p>
 <h2>Foreach com suporte ao método list</h2>
 <p>Agora a função <a href="http://www.php.net/manual/en/control-structures.foreach.php">foreach</a> tem suporte à "desempacotamento" através da função list, veja um exemplo:</p>
-<p>[gist id=5232923]</p>
+<div data-gist-id="5232923" data-gist-show-loading="false"></div>
 <h2>Dereferencing de arrays e strings literais</h2>
 <p>Agora é possível indexar arrays e strings literais, por exemplo:</p>
-<p>[gist id=5232943]</p>
+<div data-gist-id="5232943" data-gist-show-loading="false"></div>
 <h2>API oficial de senhas</h2>
 <p>E por último mas não menos importante, a nova e inédia <a href="http://blog.thiagobelem.net/php-5-5-api-de-senhas/">API de hashing de senhas</a>, algo bem interessante e que irá "padronizar" de uma vez por todas a questão de hashing/segurança de senhas... E por isso ela merece <a href="http://blog.thiagobelem.net/php-5-5-api-de-senhas/">um artigo</a> só pra ela.</p>

@@ -29,7 +29,7 @@ tags:
 <p>O model é a camada que <strong>representa os seus dados</strong>, provendo meios de acesso (leitura e escrita) à esses dados.</p>
 <p>A regra é simples: tudo que diz respeito à <strong>escrita</strong>, <strong>validação</strong> e <strong>leitura</strong> dos dados está dentro da <strong>camada model</strong>, não necessariamente dentro do model em si, mas dentro da camada model.</p>
 <p>Vemos aqui um exemplo de model de produtos (que vai prover o acesso à tabela <strong>products</strong>, no banco de dados) no arquivo <strong>Product.php</strong>:</p>
-<p>[gist id=4610407]</p>
+<div data-gist-id="4610407" data-gist-show-loading="false"></div>
 <p>Aqui temos um model bem simples, onde definimos as regras de validação e um método que vai auxiliar a encontrar os produtos mais recentes.</p>
 <p>Não vou entrar nos detalhes do CakePHP, além do mais acho que o código é bem auto-explicativo.</p>
 <p>Somente através desse model será possível cadastrar e buscar produtos, e quando um usuário for cadastrar ou editar uma notícia, aquelas regras de validação devem ser respeitadas, ou seja:</p>
@@ -49,7 +49,7 @@ tags:
 </ol>
 <p>Atente que <strong>não é o controller</strong> que busca os dados (responsabilidade do model) e nem é ele quem exibe os dados (responsabilidade da view)... ele está ali justamente pra <strong>controlar</strong> os dois e a aplicação como um todo.</p>
 <p>Vamos à um exemplo de controller no arquivo <strong>ProductsController.php</strong>:</p>
-<p>[gist id=4610719]</p>
+<div data-gist-id="4610719" data-gist-show-loading="false"></div>
 <p>Aqui temos duas actons:</p>
 <ul>
 <li><span style="line-height: 14px;">Uma action (<strong>index</strong>) vai pedir (para o model) a lista de produtos mais recentes;</span></li>
@@ -65,7 +65,7 @@ tags:
 </ul>
 <p>Mas a view não faz nenhum tipo de escrita/persistência no seu sistema... ela não salva dados no banco, na sessão e etc.. E ela também não busca esses dados, pois eles devem - obrigatoriamente - serem entregues pela camada <strong>controller</strong>.</p>
 <p>Vamos ver então um exemplo de listagem dos produtos, no arquivo <strong>index.ctp</strong>:</p>
-<p>[gist id=4610943]</p>
+<div data-gist-id="4610943" data-gist-show-loading="false"></div>
 <p>Aqui temos uma mistura de HTML e PHP, e também fazemos uso do <a href="http://book.cakephp.org/2.0/en/core-libraries/helpers/number.html">NumberHelper</a>, um Helper do CakePHP para ajudar na formatação de números.</p>
 <p>Se você quiser saber mais sobre views no CakePHP, consulte a documentação: <a href="http://book.cakephp.org/2.0/en/views.html">http://book.cakephp.org/2.0/en/views.html</a></p>
 <h2>Conclusão</h2>

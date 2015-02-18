@@ -25,23 +25,23 @@ tags:
 <p>Veja mais sobre Traits num outro artigo meu, aqui: <a href="http://blog.thiagobelem.net/php-5-4-traits/">http://blog.thiagobelem.net/php-5-4-traits/</a></p>
 <h2>Nova sintaxe para arrays</h2>
 <p>Antigamente você criava arrays assim:</p>
-<p>[gist id=3970221]</p>
+<div data-gist-id="3970221" data-gist-show-loading="false"></div>
 <p>Agora você pode criá-los com uma sintaxe bem mais limpa:</p>
-<p>[gist id=3970226]</p>
+<div data-gist-id="3970226" data-gist-show-loading="false"></div>
 <p>O comportamento é exatamente o mesmo... E se você é como eu, pode ficar tranquilo que a sintaxe antiga continua funcionando. :)</p>
 <h2>Function array dereferencing</h2>
 <p>Se você tem uma função/método que retora um array, você precisava colocar o resultado numa variável para poder acessar o índice:</p>
-<p>[gist id=3970242]</p>
+<div data-gist-id="3970242" data-gist-show-loading="false"></div>
 <p>Agora você pode acessar o índice diretamente na chamada da função:</p>
-<p>[gist id=3970245]</p>
+<div data-gist-id="3970245" data-gist-show-loading="false"></div>
 <p>Isso vale pra qualquer método ou função que retorne arrays!</p>
 <h2>&lt;?="Sempre disponível"?&gt;</h2>
 <p>Se você não conhece, essa é a uma forma encurtada de imprimir algo em PHP:</p>
-<p>[gist id=3970264]</p>
+<div data-gist-id="3970264" data-gist-show-loading="false"></div>
 <p>Porém essa sintaxe só funcionava (até antes da versão 5.4) caso a opção <a href="http://www.php.net/manual/en/ini.core.php#ini.short-open-tag" target="_blank">short_open_tags</a> estivesse habilitada no php.ini, agora essa sintaxe estará disponível independente das suas configurações no php.ini.</p>
 <h2>Acesso durante o instanciamento</h2>
 <p>Muito parecido com o acesso à índices de arrays, esse novo recurso permite que você acesse atributos e métodos de objetos que estão sendo instanciados, durante o instanciamento:</p>
-<p>[gist id=3970279]</p>
+<div data-gist-id="3970279" data-gist-show-loading="false"></div>
 <h2>Servidor [de desenvolviemento] embutido</h2>
 <p>E por último, mas não menos importante, o PHP 5.4 nos permite usar um servidor embutido para teste e desenvolvimento local, não há mais a necessidade de usar o Apache!</p>
 <p>Em breve, farei um artigo falando apenas sobre esse recurso, aguarde.</p>

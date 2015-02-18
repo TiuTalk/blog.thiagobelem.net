@@ -61,7 +61,7 @@ tags:
 <p>Uma das maiores características do desenvolvimento orientado à testes é que você sempre tente dar passos menores que suas pernas, não significa que você não possa dar uma corrida se o projeto exigir, mas sempre avance com pequenos passos, nada de escrever 100 linhas de código sem testar (com testes)... e eu vou tentar seguir essa metodologia aqui.</p>
 <h3>Mãos à obra!</h3>
 <p>No TDD você SEMPRE começa pelo teste, então vamos começar criando nosso arquivo de testes:</p>
-<p>[gist id=2877310]</p>
+<div data-gist-id="2877310" data-gist-show-loading="false"></div>
 <p>Fizemos três coisas no nosso arquivo <strong>fizzbuzz_test.py</strong>:</p>
 <ol>
 <li>Primeiro temos <strong>#!/usr/bin/env pytho</strong>n que permite que executemos o arquivo sem ser através do executável do Python, mas isso é opcional.</li>
@@ -69,7 +69,7 @@ tags:
 <li>E por fim usamos uma condição que - resumidamente - permite que o arquivo seja executado pelo terminal já rodando os testes</li>
 </ol>
 <p>Quando a gente rodar esse arquivo com o comando <strong>./fizzbuzz_test.py</strong> ou o comando <strong>python fizzbuzz_test.py </strong>vamos ter o seguinte output:</p>
-<p>[gist id=2877331]</p>
+<div data-gist-id="2877331" data-gist-show-loading="false"></div>
 <p>Então sabemos que tudo está funcionando... prontos para o primeiro teste?</p>
 <ul>
 <li><strong>FizzBuzz recebe um número</strong></li>
@@ -80,29 +80,29 @@ tags:
 <li>FizzBuzz(5) retorna "buzz"</li>
 </ul>
 <p>Nosso primeiro teste, da forma mais simples e reduzida possível, ficaria assim:</p>
-<p>[gist id=2877410]</p>
+<div data-gist-id="2877410" data-gist-show-loading="false"></div>
 <p>Criamos uma classe <strong>TestFizzBuzz</strong>, que é um <strong>caso de teste</strong> (contém vários testes) para testar a classe/funcionalidade FizzBuzz.</p>
 <p>Definimos nosso primeiro teste (test_FizzBuzz), onde fizemos uma asserção (verificação):</p>
 <blockquote><p>O resultado de <strong>FizzBuzz(1) </strong>é IGUAL a <strong>1</strong>?</p></blockquote>
 <p>A asserção de igualdade é justamente o método <strong>assertEqual</strong>... :)</p>
 <p>Prontos pra rodar o teste? Vamos ver o que acontece...</p>
-<p>[gist id=2877449]</p>
+<div data-gist-id="2877449" data-gist-show-loading="false"></div>
 <p>UHU! Nosso primeiro erro! (sim, no TDD os testes não passando significam progresso).. mas não é o erro que eu estava esperando! :(</p>
 <p>O problema é que nós ainda não definimos FizzBuzz, por isso o Python xiou dizendo "<strong>global name 'FizzBuzz' is not defined</strong>".</p>
 <p>Vamos criar nosso arquivo fizzbuzz.py com o seguinte conteúdo:</p>
-<p>[gist id=2877466]</p>
+<div data-gist-id="2877466" data-gist-show-loading="false"></div>
 <p>Criamos a estrutura da nossa função FizzBuzz que ainda não faz nada.</p>
 <p>O "pass" no Python é usado quando uma função/método ainda não tem conteúdo.. e como não temos chaves pra dizer onde ela começa e termina, precisamos de uma instrução que faça exatamente nada.</p>
 <p>Vamos voltar ao nosso teste e importar essa função para que ela possa ser usada nos nossos testes, depois vamos rodar os testes novamente e ver se aquela mensagem de erro mudou.</p>
-<p>[gist id=2877480]</p>
+<div data-gist-id="2877480" data-gist-show-loading="false"></div>
 <p>A linha "from<strong> fizzbuzz </strong>import<strong> FizzBuzz</strong>" significa "Importe a classe/função <strong>FizzBuzz</strong> do arquivo ou módulo chamado <strong>fizzbuzz</strong>"... isso mesmo, no Python podemos importar apenas parte de um arquivo! :)</p>
 <p>E o resultado da execução dos testes é...</p>
-<p>[gist id=2877492]</p>
+<div data-gist-id="2877492" data-gist-show-loading="false"></div>
 <p>E estamos chegando lá... agora o Python reclamou que - segundo sua definição - a função FizzBuzz não recebe parâmetros.. que é justamente o primeiro item da nossa lista, então vamos fazer isso acontecer.</p>
-<p>[gist id=2877509]</p>
+<div data-gist-id="2877509" data-gist-show-loading="false"></div>
 <p>Isso.. tudo beeeeem de vagar, lembre-se dos passos de bebê!</p>
 <p>Agora rodamos os testes novamente e...</p>
-<p>[gist id=2877511]</p>
+<div data-gist-id="2877511" data-gist-show-loading="false"></div>
 <p>Conseguimos! O primeiro item da lista foi resolvido! :D</p>
 <ul>
 <li><del>FizzBuzz recebe um número</del></li>
@@ -117,10 +117,10 @@ tags:
 <p>Agora vem a parte (pra mim) mais importante do TDD:</p>
 <p>Sempre que você escrever um teste e ele quebrar, pergunte-se: "<span style="color: #333399;"><strong>Qual o menor passo, a menor mudança no código, que eu posso fazer pra esse teste passar?</strong></span>" Não importa se esse passo é elegante, segue padrões de projeto ou está simplesmente enganando o código... A primeira vez que você faz o teste passar tem a ver com velocidade e simplicidade, boas práticas fica pro momento da refatoração, com todos os testes passando.</p>
 <p>A menor mudança que a gente pode fazer pra esse código funcionar, sem pensar nos outros casos de FizzBuzz(n) que ainda não estão testados é:</p>
-<p>[gist id=2877529]</p>
+<div data-gist-id="2877529" data-gist-show-loading="false"></div>
 <p>Você pode querer me matar depois dessa, mas não estou brincando.. isso é sério, é assim que a coisa funciona! :)</p>
 <p>E os testes?</p>
-<p>[gist id=2877535]</p>
+<div data-gist-id="2877535" data-gist-show-loading="false"></div>
 <p>Satisfação! Finalmente, nosso primeiro teste passou!!!</p>
 <ul>
 <li><del>FizzBuzz recebe um número</del></li>
@@ -139,14 +139,14 @@ tags:
 <li>Teste com valores plausíveis e facilmente compreensíveis... testar soma (1, 2) == 3 é muito melhor do que testar soma (12312512312, 31653341265312) = ????, entendeu onde quero chegar?</li>
 </ul>
 <p>Então vamos seguir a lista e testar <strong>FizzBuzz(2)</strong> que deveria retornar <strong>2</strong>, e provavelmente não vai passar por causa do nosso roubo (return 1).</p>
-<p>[gist id=2877559]</p>
+<div data-gist-id="2877559" data-gist-show-loading="false"></div>
 <p>Eu poderia fazer a nova asserção dentro do mesmo teste, mas preferi trocar o nome dele e criar um segundo teste, assim as coisas ficam mais claras e você pode ver cada teste falhando separadamente.</p>
-<p>[gist id=2877569]</p>
+<div data-gist-id="2877569" data-gist-show-loading="false"></div>
 <p>E com esse teste, concluímos que ao roubar (mesmo valendo pra quele momento) acabamos cuspindo pra cima, e agora o cuspe caiu na nossa cabeça... 2 (esperado) é diferente de 1 (resultado).</p>
 <p>Mais uma vez, hora de se perguntar: "<strong>Qual o menor passo, a menor mudança no código, que eu posso fazer pra esse teste passar?</strong>".. e se a função retornar o número que recebeu?</p>
-<p>[gist id=2877593]</p>
+<div data-gist-id="2877593" data-gist-show-loading="false"></div>
 <p>Feita a mudança, rodamos os testes e...</p>
-<p>[gist id=2877596]</p>
+<div data-gist-id="2877596" data-gist-show-loading="false"></div>
 <p>Excelente! Nosso segundo teste está passando e, quase sem perceber, refatoramos o código para algo realmente dentro das regras do problema :)</p>
 <ul>
 <li><del>FizzBuzz recebe um número</del></li>
@@ -162,12 +162,12 @@ tags:
 <li>FizzBuzz(9) retorna "fizz"</li>
 </ul>
 <p>Agora vamos ao teste do <strong>FizzBuzz(3) retorna "fizz"</strong>:</p>
-<p>[gist id=2877656]</p>
+<div data-gist-id="2877656" data-gist-show-loading="false"></div>
 <p>E o resultado dos testes, como esperado, falhou:</p>
-<p>[gist id=2877660]</p>
+<div data-gist-id="2877660" data-gist-show-loading="false"></div>
 <p>Minha função FizzBuzz ainda não está preparada para retornar fizz, o teste quebrou e nós progredimos em direção a solução de mais um problema... viu como é legal?</p>
 <p>Eu sei que você está querendo começar a correr e verificar se <strong>numero</strong> é múltiplo de três, mas não temos testes pra isso ainda.. temos apenas um teste onde FizzBuzz(3) deveria retornar "fizz"... é esse pequeno passo que vamos dar. TDD também tem a ver com <strong>ansiedade</strong>, e você precisa aprender a controlar a sua.</p>
-<p>[gist id=2877675]</p>
+<div data-gist-id="2877675" data-gist-show-loading="false"></div>
 <p>E os testes passaram! :D</p>
 <ul>
 <li><del>FizzBuzz recebe um número</del></li>
@@ -179,9 +179,9 @@ tags:
 <li>FizzBuzz(9) retorna "fizz"</li>
 </ul>
 <p>Eu poderia seguir a lista e partir para o <strong>FizzBuzz(4)</strong> mas ele provavelmente vai passar, mas ao mesmo tempo, entre a dúvida e o teste, fique com o teste:</p>
-<p>[gist id=2877696]</p>
+<div data-gist-id="2877696" data-gist-show-loading="false"></div>
 <p>Ok.. os testes continuam passando, então esse teste não colaborou em nada para o problema.. Vamos dar um pulo e testar nosso caso mais recente:</p>
-<p>[gist id=2877701]</p>
+<div data-gist-id="2877701" data-gist-show-loading="false"></div>
 <ul>
 <li><del>FizzBuzz recebe um número</del></li>
 <li><del>FizzBuzz(1) retorna 1</del></li>
@@ -193,11 +193,11 @@ tags:
 </ul>
 <p>Ok.. os testes quebraram.. mas como vamos resolver o problema?</p>
 <p>Sabemos que nosso código ainda tem um "roubo", podemos fazer outro roubo ou partir para uma refatoração que resolva o FizzBuzz(3) e FizzBuzz(9), como o problema é ridiculamente simples e esse artigo está ficando longo demais, vamos pra segunda opção:</p>
-<p>[gist id=2877719]</p>
+<div data-gist-id="2877719" data-gist-show-loading="false"></div>
 <p>E os testes passaram! :)</p>
 <p>Vejam que foi uma refatoração bem simples, ao invés de verificar se o número é igual a três, eu verifiquei se não sobrou resto da sua divisão por três, ou seja: se ele é múltiplo de três.</p>
 <p>Uma coisa que está me incomodando um pouco são todos os nomes testes, acho que podemos refatorar o teste a grupar casos semelhantes:</p>
-<p>[gist id=2877751]</p>
+<div data-gist-id="2877751" data-gist-show-loading="false"></div>
 <p>Agora sim! Bem melhor, e continuamos testando a mesma coisa... só que com menos testes e mais asserções por teste.</p>
 <p>Nossa lista está quase acabando...</p>
 <ul>
@@ -218,15 +218,15 @@ tags:
 </ul>
 <p>Claro que eu já sei como o problema funciona, mas podemos levantar esses exemplos só de olhar pra descrição do problema lá em cima..</p>
 <p>Então vamos partir pro primeiro item da lista: FizzBuzz(5) retorna "buzz"</p>
-<p>[gist id=2877779]</p>
+<div data-gist-id="2877779" data-gist-show-loading="false"></div>
 <p>Os testes voltam a quebrar, apenas o último teste falhou pois <strong>5 != "buzz"</strong>.</p>
 <p>Como ainda não explicitamos a regra do "multiplo de 5" através de testes, o correto aqui é fazer com que apenas essse teste passe (e não testes futuros):</p>
-<p>[gist id=2877802]</p>
+<div data-gist-id="2877802" data-gist-show-loading="false"></div>
 <p>E todos os testes passaram! :D</p>
 <p>Agora vamos colocar mais um múltiplo de cinco, como por exemplo FizzBuzz(10) e o teste vai quebrar:</p>
-<p>[gist id=2877812]</p>
+<div data-gist-id="2877812" data-gist-show-loading="false"></div>
 <p>Vamos então parar de roubar e fazer o que fizemos com com os múltiplos de três:</p>
-<p>[gist id=2877816]</p>
+<div data-gist-id="2877816" data-gist-show-loading="false"></div>
 <p>E todos os três testes (com as 7 asserções) passaram novamente.</p>
 <ul>
 <li><del>FizzBuzz(5) retorna "buzz"</del></li>
@@ -236,12 +236,12 @@ tags:
 </ul>
 <p>Agora vamos atacar a última parte do problema, <strong>múltiplos de três e de cinco</strong>.</p>
 <p>Nada de escrever código, primeiro o teste:</p>
-<p>[gist id=2877837]</p>
+<div data-gist-id="2877837" data-gist-show-loading="false"></div>
 <p>(Aproveitei também pra mudar o nome dos testes)</p>
 <p>Vejam vocês... o teste falhou.. mas diferente do que vimos até agora, não temos "<strong>15 != fizzbuzz</strong>" mas sim "<strong>fizz != fizzbuzz</strong>" pois <strong>15</strong> é multiplo de <strong>3</strong>, correto?</p>
-<p>[gist id=2877850]</p>
+<div data-gist-id="2877850" data-gist-show-loading="false"></div>
 <p>Primeiro roubamos (o que o Kent Beck chama de "implementação óbvia"):</p>
-<p>[gist id=2877862]</p>
+<div data-gist-id="2877862" data-gist-show-loading="false"></div>
 <p>E todos os testes voltam a passar... Agora adicionamos mais um teste da nossa lista:</p>
 <ul>
 <li><del>FizzBuzz(5) retorna "buzz"</del></li>
@@ -250,9 +250,9 @@ tags:
 <li><strong>FizzBuzz(30) retorna "fizzbuzz"</strong></li>
 </ul>
 <p>E fazemos uma implementação <strong>simples</strong>, que resolva o problema:</p>
-<p>[gist id=2877873]</p>
+<div data-gist-id="2877873" data-gist-show-loading="false"></div>
 <p>Agora, que todos os testes estão passando e o problema está resolvido, podemos refatorar nossa função pra algo mais elegante:</p>
-<p>[gist id=2877917]</p>
+<div data-gist-id="2877917" data-gist-show-loading="false"></div>
 <p>Não que essa solução seja a mais elegante e mais eficiente em Python, mas acredito que ela deixe a lógica mais clara.</p>
 <p>Enfim... TDD é isso!</p>
 <p>Espero que vocês tenham gostado. :D</p>

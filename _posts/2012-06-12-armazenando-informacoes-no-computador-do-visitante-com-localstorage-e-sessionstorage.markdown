@@ -25,10 +25,10 @@ tags:
 <h3>Usando o localStorage</h3>
 <p>O <strong>localStorage</strong> salva dados no computador do visitante, que ficam vinculados ao (e apenas acessíveis pelo) seu domínio. E pra usar é bem simples:</p>
 <p>Use o método <strong>setItem(nome, valor)</strong> para criar/salvar novos itens e o depois o método<strong> getItem(nome)</strong> para recuperar o valor.</p>
-<p>[gist id=2920989]</p>
+<div data-gist-id="2920989" data-gist-show-loading="false"></div>
 <h3>Usando o sessionStorage</h3>
 <p>Já o <strong>sessionStorage</strong> faz exatamente a mesma coisa, só que os dados ficam salvos apenas durante a sessão (e são apagados quando o visitante fecha a aba/navegador):</p>
-<p>[gist id=2921014]</p>
+<div data-gist-id="2921014" data-gist-show-loading="false"></div>
 <p>Viram como é simples?</p>
 <h3>Quem avisa, amigo é...</h3>
 <p>Mas prestem atenção... os dados salvos estão acessíveis <strong>APENAS</strong> no domínio criado.. então preparem-se para problemas entre <strong>www.site.com.br</strong>, <strong>site.com.br</strong> e <strong>subdominio.site.com.br</strong>.</p>

@@ -21,9 +21,9 @@ tags:
 <p>Outro ponto é que não queria instalar o Apache pois o PHP 5.4 já tem um <a title="PHP 5.4 – Servidor interno" href="http://blog.thiagobelem.net/php-5-4-servidor-interno/">servidor interno</a> que serve muito bem para o meu propósito.</p>
 <p>Curiosamente, a solução que encontrei faz uso do repositório <a href="https://github.com/josegonzalez/homebrew-php">homebrew-php</a>, de um dos mantenedores do <strong>CakePHP</strong> :)</p>
 <h2>Instalando o PHP 5.4 com Homebrew</h2>
-<p>[gist id=5373512]</p>
+<div data-gist-id="5373512" data-gist-show-loading="false"></div>
 <p>E isso é tudo que você precisa.. depois de instalado você pode instalar alguns outros pacotes interessantes:</p>
-<p>[gist id=5373526]</p>
+<div data-gist-id="5373526" data-gist-show-loading="false"></div>
 <p>Depois disso já tenho a versão mais recente do PHP funcionando:</p>
-<p>[gist id=5373586]</p>
+<div data-gist-id="5373586" data-gist-show-loading="false"></div>
 <p>Espero que tenha ajudado! :)</p>

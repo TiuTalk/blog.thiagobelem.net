@@ -17,7 +17,7 @@ tags:
 - Ubuntu 10.10 Maverick
 ---
 <p>Atenção... Este artigo é bem antigo, hoje em dia (2012+)<strong> não precisamos mais compilar o PHP</strong>, podemos instalar tudo via pacotes:</p>
-<p>[gist id=3139795]</p>
+<div data-gist-id="3139795" data-gist-show-loading="false"></div>
 <p>E pronto! :)</p>
 <p>Agora segue o artigo original:</p>
 <p>--------</p>

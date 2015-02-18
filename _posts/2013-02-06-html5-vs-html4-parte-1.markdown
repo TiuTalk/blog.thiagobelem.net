@@ -31,10 +31,10 @@ tags:
 </ul>
 <h2>Estrutura inicial do HTML</h2>
 <p><span style="font-size: 1rem; line-height: 1.714285714;">Vamos comparar um código simples em <strong>HTML4</strong>, e depois seu equivalente em <strong>HTML5</strong>:</span></p>
-<p>[gist id=4706413]</p>
+<div data-gist-id="4706413" data-gist-show-loading="false"></div>
 <p>Nesse código temos: a declaração do <strong>DOCTYPE</strong> e do <strong>charset</strong> do documento, alem de um título e uma pequena mensagem.</p>
 <p>Agora vejamos o equivalente deste código em <strong>HTML5</strong>:</p>
-<p>[gist id=4706480]</p>
+<div data-gist-id="4706480" data-gist-show-loading="false"></div>
 <p>As duas diferenças maiores são a mudança do <strong>DOCTYPE</strong>, e o modo de declarar o <strong>charset</strong>, ambos foram simplificados... Muito bom, já que eu suponho que ninguém ai goste de ficar digitando e decorando essas coisas, certo?</p>
 <h3>Sobre o HTML5</h3>
 <p><span style="line-height: 1.714285714; font-size: 1rem;">O HTML5 ainda está amadurecendo e nem todas as novidades funcionam em todos navegadores (porém, navegadores mais recentes como <strong>Google Chrome</strong>, <strong>Safari</strong> e <strong>Firefox</strong> já suportam a maioria das especificações). Por isso, essas duas mudanças podem ser usadas sem medo, e a medida que formos vendo o que há de novo, falaremos sobre sua compatibilidade também, então, não se preocupem! :)</span></p>

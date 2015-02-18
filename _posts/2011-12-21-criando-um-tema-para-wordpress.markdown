@@ -35,7 +35,7 @@ tags:
 </ul>
 <h3>Passo 2 - Informações sobre o tema (style.css)</h3>
 <p>Agora precisamos abrir o <code>style.css</code> e colocar um bloco de comentário CSS com as informações sobre o tema:</p>
-<p>[gist id=1506849]</p>
+<div data-gist-id="1506849" data-gist-show-loading="false"></div>
 <p>Com isso o tema já aparece na nossa lista de temas dentro do Painel de Controle do WordPress:</p>
 <p>[caption id="attachment_1896" align="aligncenter" width="264"]<img class="size-full wp-image-1896" title="tema-style" src="http://blog.thiagobelem.net/wp-content/uploads/2011/12/tema-style.png" alt="" width="264" height="356" /> Tema disponível[/caption]</p>
 <p>Nosso tema já pode ser habilitado, e quando você acessar o blog já estará vendo o conteúdo do arquivo <code>index.php</code> que você criou antes: uma tela em branco! :)</p>
