@@ -20,7 +20,8 @@ A lógica é bem simples: uma data pode vir em vários formatos: AAAA-MM-DD, DD/
 A função poderia ser assim:
 
 
-[code='php']<?php
+[code='php']
+<?php
 /**
 * Validate a date
 *
@@ -68,7 +69,8 @@ break;
 }
 return checkdate($m, $d, $a);
 }
-?>[/code]
+?>
+[/code]
 
 Tá... mas o que essa função realmente faz?
 
@@ -81,7 +83,8 @@ Em cada case nós temos uma forma de "quebrar" a data e pegar cada uma das suas 
 Por fim, a função retorna verdadeiro (true) ou falso (false)... Então podemos usá-la da seguinte maneira:
 
 
-[code='php']<?php
+[code='php']
+<?php
 if (validaData('12/04/2009', 'DD/MM/AAAA')) {
 echo "Data valida!";
 } else {
@@ -106,7 +109,8 @@ echo "Data valida!";
 echo "Data invalida!";
 }
 // Data invalida
-?>[/code]
+?>
+[/code]
 
 Ahh.. essa função também te ajuda a validar datas vindas do MySQL (no formato AAAA-MM-DD).
 

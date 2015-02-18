@@ -22,17 +22,25 @@ Não vim mostrar nenhum script pronto... Vou apenas falar como é a "lógica de 
 Suponhamos que você tenha uma tabela de notícias e quer colocar uma paginação na listagem de notícias.
 
 Normalmente a sua consulta seria assim:
-[code language="sql" light="true"]-- Busca as notícias ativas ordenadas pela data de forma decrescente
-SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC[/code]
+[code language="sql" light="true"]
+-- Busca as notícias ativas ordenadas pela data de forma decrescente
+SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC
+[/code]
 
 Agora vamos definir a regra da sua paginação.. Vamos exibir apenas 15 resultados "por página", então a consulta para pegar a primeira página de resultados seria assim:
-[code language="sql" light="true"]SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 0, 15[/code]
+[code language="sql" light="true"]
+SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 0, 15
+[/code]
 
 Perceba que adicionamos um <strong style="background: gray; color: white">LIMIT 0, 15</strong> no final, isso significa que começaremos na <strong>posição 0</strong> (que é antes do 1° registro) e apanharemos os próximos 15 registros... Sabendo disso nós podemos criar a consulta (<em>query</em>) para a segunda e terceira páginas:
-[code language="sql" light="true"]SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 15, 15[/code]
+[code language="sql" light="true"]
+SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 15, 15
+[/code]
 
 
-[code language="sql" light="true"]SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 30, 15[/code]
+[code language="sql" light="true"]
+SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 30, 15
+[/code]
 
 O primeiro valor do LIMIT pode ser definido por <strong style="background: gray; color: white">(Página - 1) x Registros_por_página</strong>... Se você quer exibir 23 registros por página e está exibindo a 5ª página então o você terá um <strong>LIMIT 92, 23</strong> no fim da sua <em>query</em>.
 

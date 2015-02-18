@@ -173,9 +173,11 @@ $img->destroy();
 E veja uma versão onde fazemos isso tudo numa linha:
 
 
-[code language="php"]$arquivo = '/imagens/fotos/tiutalk.jpg';
+[code language="php"]
+$arquivo = '/imagens/fotos/tiutalk.jpg';
 
-WideImage::load($arquivo)->resize(100, 100, 'outside')->crop('50% - 50', '50% - 50', 100, 100)->saveToFile($arquivo)->destroy();[/code]
+WideImage::load($arquivo)->resize(100, 100, 'outside')->crop('50% - 50', '50% - 50', 100, 100)->saveToFile($arquivo)->destroy();
+[/code]
 
 E aí? Gostaram? :)
 

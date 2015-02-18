@@ -43,7 +43,8 @@ Vocês devem incluir o arquivo <strong>usuarios.class.php</strong> (usando <a hr
 Depois de inserir a classe em todos os arquivos vamos na página que recebe e valida os dados do login (<strong>valida_login.php</strong>) e, logo após "<em>includar</em>" a classe <strong>no começo do arquivo</strong> colocamos também o seguinte código:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 // Inclui o arquivo com a classe de login
 require_once("includes/classes/usuarios.class.php");
 // Instancia a classe
@@ -64,7 +65,8 @@ if ( $userClass->logaUsuario( $usuario, $senha, $lembrar ) ) {
 	// Não foi possível logar o usuário, exibe a mensagem de erro
 	echo "<strong>Erro: </strong>" . $userClass->erro;
 }
-?>[/code]
+?>
+[/code]
 
 Primeiro nós instanciamos a classe e depois, nas <strong>linhas 8 e 9</strong>, nós pegamos os dados vindos do <strong>formulário de login</strong> (<strong>login.php</strong>) via POST... Após pegar os dados nós tentamos logar o usuário com esses dados, a própria classe já se encarrega de validar os dados, criar a sessão, os cookies e tudo mais... A condição da <strong>linha 12</strong> será válida se o sistema conseguir logar o usuário e falsa se algo der errado ou os dados forem incorretos.
 
@@ -74,7 +76,8 @@ Caso o usuário tenha sido logado com sucesso, o próximo passo seria redirecion
 Agora que nosso login já está sendo validado e redirecionado, precisamos proteger a página registra (ou as páginas, isso depende do seu site)... Vamos novamente no começo do arquivo (<strong>pagina_restrita.php</strong>) e vamos inserir o seguinte código:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 // Inclui o arquivo com a classe de login
 require_once("includes/classes/usuarios.class.php");
 // Instancia a classe
@@ -86,7 +89,8 @@ if ( $userClass->usuarioLogado() === false ) {
 	header("Location: login.php");
 	exit;
 }
-?>[/code]
+?>
+[/code]
 
 Mas é só isso!? Sim! :)
 
@@ -98,7 +102,8 @@ Vocês já fizeram a validação do login e a proteção da página restrita... 
 Vamos criar um arquivo chamado <strong>logout.php</strong> que será acessado quando o usuário quiser sair do sistema, nele inserimos apenas o seguinte código:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 // Inclui o arquivo com a classe de login
 require_once("includes/classes/usuarios.class.php");
 // Instancia a classe
@@ -110,7 +115,8 @@ if ( $userClass->logout() ) {
 	header("Location: login.php");
 	exit;
 }
-?>[/code]
+?>
+[/code]
 
 O código fará com que o usuário seja deslogado e redirecionado para a tela de login... Quer mais moleza que isso?
 
@@ -120,7 +126,9 @@ Há! Pensou que tinha acabado?
 Para exibir dados do usuário logado, como o nome ou e-mail, você precisa inserir um simples <strong>echo</strong> puxando os dados da sessão, assim:
 
 
-[code language="php" light="true"]Seja bem vindo(a), <?php echo $_SESSION['usuario_nome']; ?>![/code]
+[code language="php" light="true"]
+Seja bem vindo(a), <?php echo $_SESSION['usuario_nome']; ?>!
+[/code]
 
 A chave "<strong>usuario_nome</strong>" é composto por duas variantes: a parte "<strong>usuario_</strong>" vem da propriedade <strong>$prefixoChaves</strong> (definida na <strong>linha 49</strong> do <strong>usuarios.class.php</strong>) que estará presente em todos os valores criados pela classe e salvos na sessão... Já a parte "nome" da chave é o nome da campo que você buscou na tabela de usuários, definido na propriedade <strong>$dados</strong> (definida na <strong>linha 37</strong> do <strong>usuarios.class.php</strong>).
 

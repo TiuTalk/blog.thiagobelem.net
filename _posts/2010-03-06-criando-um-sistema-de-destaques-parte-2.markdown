@@ -29,7 +29,9 @@ Vá ao site do <a href="http://jquery.com/">jQuery</a> e baixe a última versão
 Feito isso nós podemos inserir o jQuery no site utilizando a seguinte linha:
 
 
-[code language="html"]<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>[/code]
+[code language="html"]
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+[/code]
 
 Essa linha deve ser inserida dentro da tag <strong><head></strong> do seu site e o nome do arquivo ou a sua pasta não fazem a mínima diferença... Contanto que você acerte o arquivo, tá tudo certo.
 
@@ -52,12 +54,14 @@ Agora vamos criar um arquivo chamado <strong>jquery.destaques.js</strong> que co
 Começaremos o arquivo com o seguinte código:
 
 
-[code language="javascript"]/**
+[code language="javascript"]
+/**
  * Escopo de compatibilidade do jQuery
  */
 (function($){
 
-})(jQuery);[/code]
+})(jQuery);
+[/code]
 
 Continuaremos o nosso código na linha 5, mas parem um pouco para observar esse código... Ele fará com que o código que estiver ali dentro e usar a função jQuery (através do sifrão $) não entre em conflito com outras bibliotecas (Prototype, Moo-Tools e etc.)... Apenas essas duas linhas resolvem um problema de incompatibilidade que atrapalha MUITA gente por aí.
 

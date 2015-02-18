@@ -27,7 +27,8 @@ Para evitar isso você precisa adicionar algumas regrinhas ao seu <strong>.htacc
 [code]RewriteEngine On
 RewriteCond %{HTTP_REFERER} !^http://(.+\.)?meusite\.com\.br/ [NC]
 RewriteCond %{HTTP_REFERER} !^$
-RewriteRule .*\.(jpe?g|gif|bmp|png)$ /imagens/proibido.jpg [L][/code]
+RewriteRule .*\.(jpe?g|gif|bmp|png)$ /imagens/proibido.jpg [L]
+[/code]
 
 Esse código fará com que, caso um outro site que não esteja dentro do domínio <strong>meusite.com.br</strong> tente chamar uma imagem do seu site, receberá uma outra imagem "<strong>imagens/proibido.jpg</strong>"... Isso fará o outro site passar uma boa vergonha.
 
@@ -38,14 +39,17 @@ Mas suponhamos que você queira ser legal com o resto do mundo e chato apenas co
 RewriteCond %{HTTP_REFERER} ^http://(.+\.)?meuinimigo\.com\.br/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http://(.+\.)?meuinimigo\.net/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http://(.+\.)?meuinimigo\.org/ [NC]
-RewriteRule .*\.(jpe?g|gif|bmp|png)$ /imagens/proibido.jpg [L][/code]
+RewriteRule .*\.(jpe?g|gif|bmp|png)$ /imagens/proibido.jpg [L]
+[/code]
 
 Com isso, qualquer site irá poder usar as suas imagens, menos os domínios <strong>meuinimigo.com.br</strong>, <strong>meuinimigo.net</strong> e <strong>meuinimigo.org</strong>.
 
 Mas e se você não quer colocar outra imagem no lugar e simplesmente exibir uma página "forbidden" (acesso negado)? É só trocar a última linha:
 
 
-[code light="true"]RewriteRule .*\.(jpe?g|gif|bmp|png)$ - [F][/code]
+[code light="true"]
+RewriteRule .*\.(jpe?g|gif|bmp|png)$ - [F]
+[/code]
 
 Viram que simples?
 

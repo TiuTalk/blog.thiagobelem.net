@@ -89,7 +89,8 @@ $out = strrev($out);
 
 return $out;
 }
-?>[/code]
+?>
+[/code]
 
 Se você quiser, pode fazer o <a title="Download do arquivo" href="/arquivos/2009/06/idtextual.txt" target="_blank">download do arquivo (.txt) com a função</a> (com a indentação correta).
 
@@ -97,18 +98,22 @@ Se você quiser, pode fazer o <a title="Download do arquivo" href="/arquivos/200
 Para usar a função é bem simples, veja a conversão de número em texto:
 
 
-[code='php']<?php
+[code='php']
+<?php
 echo alphaID(9007199254740989);
 // Retorno: PpQXn7COf
-?>[/code]
+?>
+[/code]
 
 E se usarmos o texto como argumento, definindo o segundo parâmetro como true, teremos o ID novamente:
 
 
-[code='php']<?php
+[code='php']
+<?php
 echo alphaID('PpQXn7COf', true);
 // Retorno: 9007199254740989
-?>[/code]
+?>
+[/code]
 
 --
 

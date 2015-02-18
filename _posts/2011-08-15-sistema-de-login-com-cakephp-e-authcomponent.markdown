@@ -33,14 +33,16 @@ Na minha opinião, o maior problemas de usar o Auth em um sistema/aplicação em
 Se você já tem um model/tabela de usuários pode pular para o próximo passo. Se você ainda não tem, essa é uma estrutura que eu recomendo pra quem usar MySQL:
 
 
-[code language="sql"]CREATE TABLE `clientes` (
+[code language="sql"]
+CREATE TABLE `clientes` (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 	`nome` VARCHAR( 100 ) NOT NULL ,
 	`email` VARCHAR( 150 ) NOT NULL ,
 	`senha` CHAR( 40 ) NOT NULL ,
 	`ativo` BOOLEAN NOT NULL DEFAULT '0',
 	INDEX ( `email` )
-) ;[/code]
+) ;
+[/code]
 
 <h3>Habilitando o AuthComponent</h3>
 Recomendo que você insira o componente no seu <strong>AppController</strong> pois toda a aplicação será controlada/protegida pelo AuthComponent.
@@ -120,7 +122,8 @@ Para criar o formulário de login você precisa definir aquela <strong>action</s
 Se o nosso model de usuários se chama <strong>Cliente</strong>, então nossas actions de login e logout estarão no controller de <strong>Clientes</strong>:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 class ClientesController extends AppController {
 
@@ -131,7 +134,8 @@ class ClientesController extends AppController {
 		$this->redirect($this->Auth->logout());
 	}
 
-}[/code]
+}
+[/code]
 
 A action de login <strong>fica vazia</strong> mesmo, e a action de logout apenas redireciona o visitante para a action definida lá no <strong>logoutRedirect</strong> (linha 36).
 
@@ -139,13 +143,15 @@ A action de login <strong>fica vazia</strong> mesmo, e a action de logout apenas
 A <strong>view</strong> do formulário de login é extremamente simples e (segundo o nosso exemplo) vai no arquivo <strong>/app/views/clientes/login.ctp</strong>:
 
 
-[code language="php"]<?php echo $this->Session->flash('auth') ?>
+[code language="php"]
+<?php echo $this->Session->flash('auth') ?>
 <?php echo $this->Session->flash() ?>
 
 <?php echo $this->Form->create('Cliente', array('action' => 'login')) ?>
 <?php echo $this->Form->input('email') ?>
 <?php echo $this->Form->input('senha', array('type' => 'password')) ?>
-<?php echo $this->Form->end('Entrar') ?>[/code]
+<?php echo $this->Form->end('Entrar') ?>
+[/code]
 
 Primeiro nós temos o <strong>Session->flash()</strong> que irá exibir as mensagens de erro de autenticação (senha inválida, página restrita e etc.)
 
@@ -183,8 +189,10 @@ Agora todo o seu sistema estará "bloqueado", e você precisa fazer login para a
 Caso você queira proteger apenas um <a href="http://book.cakephp.org/pt/view/950/Roteando-prefixos" target="_blank">prefixo</a> (como por exemplo: admin) e não exigir login enquanto o usuário não estiver acessando um action com esse prefixo, coloque o seguinte código após a configuração do AuthComponent:
 
 
-[code language="php"]if (!isset($this->params['admin']) || !$this->params['admin'])
-		$this->Auth->allow('*');[/code]
+[code language="php"]
+if (!isset($this->params['admin']) || !$this->params['admin'])
+		$this->Auth->allow('*');
+[/code]
 
 Isso fará com que o Auth permita acesso à qualquer action quando você não estiver dentro do um prefixo "admin".
 

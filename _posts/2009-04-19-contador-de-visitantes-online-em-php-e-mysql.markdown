@@ -194,7 +194,8 @@ Esta função vai te retornar um valor numérico inteiro contendo o número de v
 Para usá-la, é só inserir um bloco de php onde você deseja que o número apareça, assim:
 
 
-[code language="php"]Visitantes online: <?php echo visitantesOnline(); ?>!
+[code language="php"]
+Visitantes online: <?php echo visitantesOnline(); ?>!
 [/code]
 
 <strong>visitantesRecorde($formato)</strong>

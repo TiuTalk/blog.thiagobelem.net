@@ -25,7 +25,8 @@ Veja um exemplo de scripts onde faremos todas as operações comuns do MySQL:
 
 <h3>Conectando-se ao MySQL</h3>
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 $servidor = 'localhost';
 $usuario = 'root';
@@ -38,13 +39,15 @@ $mysqli = new mysqli($servidor, $usuario, $senha, $banco);
 // Caso algo tenha dado errado, exibe uma mensagem de erro
 if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
 
-?>[/code]
+?>
+[/code]
 
 
 
 <h3>Executando uma consulta do tipo SELECT</h3>
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 // Aqui você se conecta ao banco
 $mysqli = new mysqli('localhost', 'root', '', 'mydb');
@@ -58,13 +61,15 @@ while ($dados = $query->mysqli_fetch_array()) {
 }
 echo 'Registros encontrados: ' . $query->num_rows;
 
-?>[/code]
+?>
+[/code]
 
 
 
 <h3>Executando uma consulta simples, do tipo DELETE ou UPDATE</h3>
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 // Aqui você se conecta ao banco
 $mysqli = new mysqli('localhost', 'root', '', 'mydb');
@@ -74,7 +79,8 @@ $sql = "DELETE FROM FROM `noticias` WHERE `id` = 2";
 $query = $mysqli->query($sql);
 echo 'Registros afetados: ' . $query->affected_rows;
 
-?>[/code]
+?>
+[/code]
 
 Como vocês podem ver a sintaxe dos comandos SQL não mudam em nada... O que muda são apenas as funções do PHP mesmo. ;)
 

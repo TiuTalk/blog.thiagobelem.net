@@ -36,11 +36,15 @@ Em ambos os casos você precisa inserir o script dentro do <code><head></code> d
 
 <h4>Inserindo o jQuery local (salvo no seu site)</h4>
 
-[code language="html" light="true"]<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>[/code]
+[code language="html" light="true"]
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+[/code]
 
 <h4>Inserindo o jQuery hospedado no Google</h4>
 
-[code language="html" light="true"]<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>[/code]
+[code language="html" light="true"]
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+[/code]
 
 Vamos ver alguns exemplos básicos de como é fácil e simples usar essa ferramenta:
 
@@ -74,8 +78,10 @@ A maioria dos scripts de jQuery são executados após o carregamento do site, o 
 Crie um arquivo <code>jquery.init.js</code> (o nome do arquivo não é obrigatório) e insira-o no seu site logo após o jQuery:
 
 
-[code language="html" light="true"]<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="js/jquery.init.js"></script>[/code]
+[code language="html" light="true"]
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.init.js"></script>
+[/code]
 
 Agora dentro dele coloque o seguinte código:
 

@@ -201,7 +201,9 @@ function googl($url) {
 Com isso seria só usar:
 
 
-[code language="php" light="true"]googl('http://thiagobelem.net/');[/code]
+[code language="php" light="true"]
+googl('http://thiagobelem.net/');
+[/code]
 
 <h3>Download do código fonte</h3>
 Caso você tenha preguiça de copiar e colar, pode baixar o <a title="Código-fonte da classe Googl" href="/arquivos/googl.class.phps" target="_blank">arquivo com código fonte</a> dela e sair usando!

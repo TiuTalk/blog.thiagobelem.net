@@ -19,12 +19,15 @@ Há duas formas de se alcançar esse objetivo:
 A primeira, um pouco mais complicada, é fazendo o <em>parser</em> (interpretador) do PHP ler os arquivos .css antes de enviá-los para o visitante. Você pode fazê-lo da seguinte forma: crie/edite um arquivo chamado .htaccess dentro do root (raiz) do seu servidor e insira essa linha nele:
 
 
-[code language="html"]AddType application/x-httpd-php.css[/code]
+[code language="html"]
+AddType application/x-httpd-php.css
+[/code]
 
 Depois é só editar o seu arquivo .css e inserir códigos PHP da forma que bem entender... Lembrando apenas de que o retorno (via echo) deve ser a mesma formatação de um CSS... Exemplo:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 $cor_fundo = '#CCCCFF';
 $cor_texto = '#003333';
 $imagem_link = '../img/link.jpg'
@@ -43,7 +46,8 @@ font-size: 12px;
 a.especial {
 text-decoration: none;
 background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;
-}[/code]
+}
+[/code]
 
 --
 
@@ -79,7 +83,9 @@ background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;
 Não esqueça também de mudar o HTML que inclui a folha de estilos:
 
 
-[code language="html"]<link rel="stylesheet" href="estilo.php" type="text/css" />[/code]
+[code language="html"]
+<link rel="stylesheet" href="estilo.php" type="text/css" />
+[/code]
 
 --
 

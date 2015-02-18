@@ -35,14 +35,17 @@ Na maioria dos casos a compressão em gzip atinge uma <strong>redução de 50% d
 Pra fazer o nginx entregar arquivos HTML, XML, CSS, JS (e outros) comprimidos em gzip você precisa editar o arquivo de configuração do site, normalmente esses arquivos ficam na pasta:
 
 
-[code]/etc/nginx/sites-available/{arquivo}[/code]
+[code]
+/etc/nginx/sites-available/{arquivo}
+[/code]
 
 Mas isso pode variar no seu servidor.
 
 Encontrado o arquivo, é só colocar algo do tipo dentro do bloco de configuração do seu site:
 
 
-[code language="shell"]# Habilita o gzip
+[code language="shell"]
+# Habilita o gzip
 gzip			on;
 gzip_http_version	1.1;
 gzip_vary		on;
@@ -56,14 +59,17 @@ gzip_types		text/html text/plain text/css application/json application/x-javascr
 gzip_buffers	16	8k;
 
 # Desabilita o gzip para alguns navegadores
-gzip_disable	"MSIE [1-6].(?!.*SV1)";[/code]
+gzip_disable	"MSIE [1-6].(?!.*SV1)";
+[/code]
 
 Gist: <a href="https://gist.github.com/1045708" target="_blank">https://gist.github.com/1045708</a>
 
 Depois é só reiniciar o seu servidor:
 
 
-[code language="shell"]sudo /etc/init.d/nginx restart[/code]
+[code language="shell"]
+sudo /etc/init.d/nginx restart
+[/code]
 
 E correr para o abraço! :)
 

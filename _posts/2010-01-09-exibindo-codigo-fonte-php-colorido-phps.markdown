@@ -30,15 +30,18 @@ Hoje vou ensiná-los como habilitar isso em seus servidores rodando Apache e PHP
 Vá na raiz do seu site e edite (ou crie se necessário) o seu arquivo .htaccess e adicione as seguintes linhas:
 
 
-[code]Action php-source /php-source.php
-AddHandler php-source .phps[/code]
+[code]
+Action php-source /php-source.php
+AddHandler php-source .phps
+[/code]
 Com isso você cria uma nova "ação" no apache e diz que os arquivos .phps serão "lidos" por essa "ação"... Você vai entender melhor no segundo passo:
 
 <h3>Passo 2</h3>
 Ainda na raiz do seu site, crie um arquivo chamado "<strong>php-source.php</strong>" e coloque o seguinte conteúdo nele:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 highlight_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["PATH_INFO"]);
 ?> [/code]
 

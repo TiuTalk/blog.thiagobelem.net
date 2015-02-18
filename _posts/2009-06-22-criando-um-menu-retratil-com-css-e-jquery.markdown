@@ -28,7 +28,8 @@ Bom... vamos lá!
 
 <h3>Código (X)HTML do menu</h3>
 
-[code lang="html"]<ul id="menu">
+[code lang="html"]
+<ul id="menu">
 	<li class="header">Menu</li>
 	<li><a href="#" title="">Página inicial</a></li>
 	<li><a href="#" title="">Notícias</a></li>
@@ -41,13 +42,15 @@ Bom... vamos lá!
 	</li>
 	<li><a href="#" title="">Quem somos nós</a></li>
 	<li><a href="#" title="">Contato</a></li>
-</ul>[/code]
+</ul>
+[/code]
 
 Vejam que o sub-menu (que irá aparecer) fica dentro do <li> e fora do <a>.
 
 <h3>Código CSS do menu</h3>
 
-[code lang="css"]* {
+[code lang="css"]
+* {
 	margin: 0px;
 	padding: 0px;
 }
@@ -108,11 +111,13 @@ ul#menu li ul.sub-menu {
 ul#menu li ul.sub-menu li a {
 	padding-left: 15px;
 	color: maroon;
-}[/code]
+}
+[/code]
 
 <h3>Bloco de código do efeito (jQuery)</h3>
 
-[code lang="javascript"]$(function() {
+[code lang="javascript"]
+$(function() {
 	// Evento de clique do elemento: ul#menu li.parent > a
 	$('ul#menu li.parent > a').click(function() {
 		// Expande ou retrai o elemento ul.sub-menu dentro do elemento pai (ul#menu li.parent)
@@ -122,7 +127,8 @@ ul#menu li ul.sub-menu li a {
 		});
 		return false;
 	});
-});[/code]
+});
+[/code]
 
 --
 

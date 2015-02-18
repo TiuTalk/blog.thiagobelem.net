@@ -19,7 +19,9 @@ Essa tradução consiste em usar o sistema de localização que já vem no Cake.
 Primeiro de tudo, vá no controller onde você quer a tradução ou direto no AppController e antes da definição da classe, insira essa linha:
 
 
-[code language="php"]App::import('Core', 'l10n');[/code]
+[code language="php"]
+App::import('Core', 'l10n');
+[/code]
 
 Isso vai fazer o Cake chamar a classe/função l10n, que é o sistema de localização.
 
@@ -30,7 +32,8 @@ Depois, crie a seguinte estrutura de pastas:
 Agora, dentro da pasta LC_MESSAGE criada, crie um arquivo chamado <span style="color: #ff6600;"><strong>default.po</strong></span> com o seguinte conteúdo:
 
 
-[code]msgid  "January"
+[code]
+msgid  "January"
 msgstr "Janeiro"
 
 msgid  "February"
@@ -71,7 +74,9 @@ msgstr "Dezembro"
 Agora é só ir no arquivo de configurações (../app/config/core.php) e inserir a seguinte linha:
 
 
-[code language="php"]Configure::write('Config.language', 'br');[/code]
+[code language="php"]
+Configure::write('Config.language', 'br');
+[/code]
 
 Pronto! Quando você criar um input para a seleção de data usando o HTML Helper, o nome do mês já vai aparecer em português direitinho. ;)
 

@@ -99,7 +99,9 @@ $resultado = mysql_fetch_assoc($query);
 A sua consulta ao MySQL ficaria da seguinte forma:
 
 
-[code language="sql" light="true"]SELECT * FROM `produtos` WHERE `id` = '12' LIMIT 1[/code]
+[code language="sql" light="true"]
+SELECT * FROM `produtos` WHERE `id` = '12' LIMIT 1
+[/code]
 
 Até aqui tudo bem.. Seu script funciona, você tem o que precisa e tá tudo na mais perfeita harmonia... Mas chega um <span style="text-decoration: line-through;">desocupado</span> invasor e modifica a sua URL deixando da seguinte forma:
 
@@ -108,7 +110,9 @@ Até aqui tudo bem.. Seu script funciona, você tem o que precisa e tá tudo na 
 Agora a sua query MySQL fica assim:
 
 
-[code language="sql" light="true"]SELECT * FROM `produtos` WHERE `id` = '' OR 1=1 OR '' = '' LIMIT 1[/code]
+[code language="sql" light="true"]
+SELECT * FROM `produtos` WHERE `id` = '' OR 1=1 OR '' = '' LIMIT 1
+[/code]
 
 Viu o que aconteceu? As possíveis condições para a consulta ser verdadeira são: id igual a vazio, 1 igual a 1 e vazio igual a vazio... Essa consulta vai ser dada como verdadeira e todos os produtos serão retornados. Sim meu amigo, é o fim do mundo.
 

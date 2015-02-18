@@ -31,14 +31,16 @@ O <a href="http://en.wikipedia.org/wiki/SHA-2">SHA-512</a> é a versão melhorad
 Para encriptar uma string usando <strong>SHA-512</strong>, no PHP, você pode fazer assim:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 $string = 'O rato reu a ropa do rei de Roma';
 $codificada = hash('sha512', $string);
 
 echo "Resultado da codificação usando sha512: " . $codificada;
 
-?>[/code]
+?>
+[/code]
 
 Ao executar o código acima você verá uma string de 128 caracteres, é essa string que você deve salvar no banco de dados para manter a senha realmente segura.
 
@@ -54,14 +56,16 @@ O <a href="http://en.wikipedia.org/wiki/Whirlpool_(cryptography)">Whirlpool</a> 
 Para encriptar uma string usando <strong>Whirlpool</strong>, no PHP, você pode fazer assim:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 $string = 'O rato reu a ropa do rei de Roma';
 $codificada = hash('whirlpool', $string);
 
 echo "Resultado da codificação usando whirlpool: " . $codificada;
 
-?>[/code]
+?>
+[/code]
 
 O resultado desse <strong>Whirlpool</strong> será algo assim:
 
@@ -75,14 +79,16 @@ E por fim, mas tão poderoso quanto, o <a href="http://en.wikipedia.org/wiki/Sal
 Para encriptar uma string usando <strong>Salsa20</strong>, no PHP, você pode fazer assim:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 $string = 'O rato reu a ropa do rei de Roma';
 $codificada = hash('salsa20', $string);
 
 echo "Resultado da codificação usando salsa20: " . $codificada;
 
-?>[/code]
+?>
+[/code]
 
 O resultado desse <strong>Salsa20</strong> será algo assim:
 
@@ -99,7 +105,8 @@ Suponhamos que você queira encontrar um usuário no seu banco de dados comparan
 O código PHP para montar a consulta SQL seria mais ou menos assim:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 $usuario = 'thiago'; // Nome do usuario (digitado pelo usuario)
 $senha = '12345'; // Senha (digitada pelo usuario)
@@ -109,7 +116,8 @@ $whirlpool = hash('whirlpool', $senha);
 
 $sql = "SELECT * FROM `usuarios` WHERE `usuario` = '{$usuario}' AND BINARY `senha` = '{$whirlpool}'";
 
-?>[/code]
+?>
+[/code]
 
 --
 

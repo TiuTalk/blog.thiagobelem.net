@@ -24,7 +24,8 @@ A vantagem de usar essa função (e não as que eu achei por aí, buscando no Go
 
 <h3>Código da Função</h3>
 
-[code lang="php"]<?php
+[code lang="php"]
+<?php
 
 /**
 * Função para criar versões reduzidas das URLs
@@ -70,7 +71,8 @@ function tinyURL($url)
 	return ((isset($resultado) AND !empty($resultado)) ? trim($resultado) : $url);
 }
 
-?>[/code]
+?>
+[/code]
 
 <h3>Exemplo de uso <span style="color: #c0c0c0;">(se é que precisa..)</span></h3>
 

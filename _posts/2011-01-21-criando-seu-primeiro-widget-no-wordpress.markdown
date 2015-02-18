@@ -108,7 +108,8 @@ O nosso método form() ficará da seguinte forma:
 		<label for="<?php echo $this->get_field_id('link_autor'); ?>"><input id="<?php echo $this->get_field_id('link_autor'); ?>" name="<?php echo $this->get_field_name('link_autor'); ?>" type="checkbox" value="1" <?php if ($widget['link_autor']) echo 'checked="checked"'; ?> /> <?php _e('Exibe o link do autor'); ?></label>
 
 		<?php
-	}[/code]
+	}
+[/code]
 
 Eu sei que parece complicado, mas estamos apenas criando um parágrafo com um checkbox e um label... Para definir o ID e o name do input utilizamos recursos do próprio WordPress, assim não caímos no problema de usar um name que já exista... O resultado é um checkbox onde você pode decidir se exibe ou não o link do autor no widget.
 
@@ -133,7 +134,8 @@ Esse método precisará retornar os dados a serem salvos no banco de dados, fica
 		$instancia = array_merge($instancia_antiga, $nova_instancia);
 
 		return $instancia;
-	}[/code]
+	}
+[/code]
 
 Mais uma vez, não tem mistério: sobrescrevemos os valores de <code>$instancia_antiga</code> (o que estava salvo no banco de dados) com os valores de <code>$nova_instancia</code> e retornamos esses dados "mesclados" para serem salvos no banco de dados.
 

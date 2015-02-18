@@ -29,7 +29,8 @@ Quando você passa o mouse sobre o nome de uma função ou método o IDE vai at�
 Indentação é, sem dúvida, a parte mais importante desse artigo... Sem uma boa indentação o código perde toda a hierarquia de comandos... Existem várias formas de indentar o seu código, todas elas são válidas, mas algumas são mais recomendadas. Veja dois exemplos dos estilos de indentação mais utilizados:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 if ($nota >= 7) {
 	echo 'Você foi aprovado!';
@@ -41,8 +42,10 @@ if ($nota >= 7) {
 	}
 }
 
-?>[/code]
-[code language="php"]<?php
+?>
+[/code]
+[code language="php"]
+<?php
 
 if ($nota >= 7)
 {
@@ -60,7 +63,8 @@ else
 	}
 }
 
-?>[/code]
+?>
+[/code]
 Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é tão dificil assim perceber onde começa e termina cada bloco... Há um <a href="http://en.wikipedia.org/wiki/Indent_style" title="Estilos de Indentação" target="_blank">artigo na Wikipédia</a> que mostra os vários estilos de indentação.
 
 <br/>
@@ -69,7 +73,8 @@ Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é t�
 Comentar o seu código é sempre bom... Comentários só pesam no tamanho do arquivo. E não é só por isso que vamos sair comentando todas as nossas linhas... Além de duplicar (ou triplicar) o nosso tempo de desenvolvimento, nosso codigo vai ficar muito poluído e explicitar o óbivio... Vejamos alguns exemplos que não precisam nem ser comentados (literalmente):
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 // Se o $nome for igual a Thiago
 if ($nome == 'Thiago')  {
@@ -79,7 +84,8 @@ if ($nome == 'Thiago')  {
 	$idade = calculaIdade($nome);
 }
 
-?>[/code]
+?>
+[/code]
 
 <br/>
 
@@ -87,7 +93,8 @@ if ($nome == 'Thiago')  {
 Muitas vezes fazemos isso sem perceber... E é uma ótima prática! Agrupe as linhas de código por suas funções/tarefas... Veja um exemplo:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 // Lista os produtos em destaque
 $sql = "SELECT * FROM `produtos` WHERE `destaque` = 1";
@@ -103,7 +110,8 @@ while ($usuario = mysql_fetch_assoc($query)) {
 	echo '»' . $usuario['apelido'] . '';
 }
 
-?>[/code]
+?>
+[/code]
 
 <br/>
 
@@ -127,9 +135,13 @@ Se você vai usar uma variável para incremento, contador ou só para armazenar 
 
 <h3>7. Evidencie os termos especiais do SQL</h3>
 Cansei de ver pessoas escrevendo consultas SQL assim:
-[code language="sql" light="true"]select nome from produtos where preco > 10 limit 1[/code]
+[code language="sql" light="true"]
+select nome from produtos where preco > 10 limit 1
+[/code]
 Quando não evidenciamos os termos especiais (protegidos) fica dificil entender com facilidade o que a consulta faz... Seria muito mais produtivo fazer algo assim:
-[code language="sql" light="true"]SELECT `nome` FROM `produtos` WHERE `preco` > 10 LIMIT 1[/code]
+[code language="sql" light="true"]
+SELECT `nome` FROM `produtos` WHERE `preco` > 10 LIMIT 1
+[/code]
 Onde as palavras protegidas do SQL são deixadas em maiúscula e os nomes de colunas e tabelas são colocados entre crases.
 
 <br/>

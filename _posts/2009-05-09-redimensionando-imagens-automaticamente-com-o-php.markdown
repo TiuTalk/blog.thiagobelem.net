@@ -40,7 +40,8 @@ $image->saveToFile('/caminho/nova_foto.jpg');
 
 <h3>Cortando imagens</h3>
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 // Chama o arquivo com a classe WideImage
 require('/caminho/WideImage.inc.php');
@@ -55,11 +56,13 @@ $image = $image->crop(10, 20, 110, 120);
 // Salva a imagem em um arquivo (novo ou não)
 $image->saveToFile('/caminho/nova_foto.jpg');
 
-?>[/code]
+?>
+[/code]
 
 <h3>Mudando a qualidade de imagens</h3>
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 // Chama o arquivo com a classe WideImage
 require('/caminho/WideImage.inc.php');
@@ -70,7 +73,8 @@ $image = wiImage::load('/caminho/foto.jpg');
 // Salva a imagem em um arquivo com 80% de qualidade
 $image->saveToFile('/caminho/nova_foto.jpg', null, 80);
 
-?>[/code]
+?>
+[/code]
 
 Estes foram apenas alguns exemplos... A classe pode fazer muito mais: tons de cinza, marca d'agua, rotacionar, flip, espelho, filtros PNG e muito mais... Acesse o <a href="http://wideimage.sourceforge.net/" target="_blank">site da classe</a> para ver outros exemplos e a documentação dos métodos dela.
 

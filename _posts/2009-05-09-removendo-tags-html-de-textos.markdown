@@ -101,14 +101,18 @@ mysql_query($sql);
 Sem o uso da função, a consulta passada para o MySQL ficaria assim:
 
 
-[code='sql']INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho's')[/code]
+[code='sql']
+INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho's')
+[/code]
 
 Repare que a aspas que fecha o valor a ser inserido, é a que vem depois do "o", e não a que veio depois do "s", que seria o correto... O que daria erro no MySQL ou acabaria resultado no cadastro de dados errados e pela metade.
 
 Já usando a função, ficaria assim:
 
 
-[code='sql']INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho\'s')[/code]
+[code='sql']
+INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho\'s')
+[/code]
 
 O que fazer com que o nome seja inserido de forma correta, e quando você fizer um <strong>SELECT</strong> para buscar esse dado, ele virá <strong>Fulaninho's</strong> (sem a barra).
 

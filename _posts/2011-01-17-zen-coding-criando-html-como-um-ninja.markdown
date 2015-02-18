@@ -28,9 +28,12 @@ Segundo o próprio site:
 </blockquote>
 <h3>Como assim? O que ele faz?</h3>
 Com o Zen-Coding você digita isso no seu editor:
-[code language="html"]div#page>div.logo+ul#navigation>li*5>a[/code]
+[code language="html"]
+div#page>div.logo+ul#navigation>li*5>a
+[/code]
 ... aperta uma combinação de teclas, normalmente CTRL+E, e isso é <strong>automaticamente</strong> transformado em:
-[code language="html"]<div id="page">
+[code language="html"]
+<div id="page">
 	<div class="logo"></div>
 	<ul id="navigation">
 		<li><a href=""></a></li>
@@ -39,7 +42,8 @@ Com o Zen-Coding você digita isso no seu editor:
 		<li><a href=""></a></li>
 		<li><a href=""></a></li>
 	</ul>
-</div>[/code]
+</div>
+[/code]
 
 <h3>Editores com suporte ao Zen-Coding</h3>
 Você pode baixar o plugin do Zen-Coding no <a href="http://code.google.com/p/zen-coding/" target="_blank">site oficial</a> para os seguintes editores:
@@ -52,9 +56,12 @@ Nem todos são plugins oficiais, mas a maioria sim. :)
 Vejam um exemplo que criei para vocês...
 
 Você pode expandir a seguinte linha:
-[code language="html"]html>(head>title+meta[name="description" content]+meta[name="keywords" content])+(body>(header+(#body>#content+aside#sidebar))+footer)[/code]
+[code language="html"]
+html>(head>title+meta[name="description" content]+meta[name="keywords" content])+(body>(header+(#body>#content+aside#sidebar))+footer)
+[/code]
 Em um template de site completo:
-[code language="html"]<html>
+[code language="html"]
+<html>
 	<head>
 		<title></title>
 		<meta name="description" content="" />
@@ -68,10 +75,12 @@ Em um template de site completo:
 		</div>
 		<footer></footer>
 	</body>
-</html>[/code]
+</html>
+[/code]
 
 Esse é um bom exemplo do que ele é capaz de fazer... Mas não é um uso comum dele... A idéia é você fazer HTML muito rápido, por exemplo quando você digita <code>#menu>ul>li*5>a</code> e "expande", você ganha tempo por não ter que escrever (e organizar/identar), isso tudo:
-[code language="html"]<div id="menu">
+[code language="html"]
+<div id="menu">
 	<ul>
 		<li><a href=""></a></li>
 		<li><a href=""></a></li>
@@ -79,7 +88,8 @@ Esse é um bom exemplo do que ele é capaz de fazer... Mas não é um uso comum 
 		<li><a href=""></a></li>
 		<li><a href=""></a></li>
 	</ul>
-</div>[/code]
+</div>
+[/code]
 
 <hr />
 Espero que vocês tenham gostado dessa ferramenta! Ela não é novidade, mas sei que nem todo mundo conhece. ;)

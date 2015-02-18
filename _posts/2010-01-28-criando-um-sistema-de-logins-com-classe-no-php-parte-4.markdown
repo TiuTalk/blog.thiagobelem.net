@@ -40,7 +40,8 @@ Estou desde ontem revisando a classe e fazendo algumas pequenas correções... N
 
 <h3>Novas Propriedades</h3>
 Para a nossa nova funcionalidade precisamos criar uma nova propriedade na nossa classe:
-[code language="php" firstline="99"]	/**
+[code language="php" firstline="99"]
+	/**
 	 * Quantidade (em dias) que o sistema lembrará os dados do usuário ("Lembrar minha senha")
 	 *
 	 * Usado apenas quando o terceiro parâmetro do método Usuario::logaUsuario() for true
@@ -49,12 +50,14 @@ Para a nossa nova funcionalidade precisamos criar uma nova propriedade na nossa 
 	 * @var integer
 	 * @since v1.1
 	 */
-	var $lembrarTempo = 7;[/code]
+	var $lembrarTempo = 7;
+[/code]
 Se vocês lerem o comentário vão perceber que um terceiro parâmetro foi adicionado ao método logaUsuario()... É esse terceiro parâmetro que define se os dados serão lembrados pelo o sistema.
 
 <h3>Novo Método - <span style="color: #B40000">lembrarDados()</span></h3>
 Vamos criar agora o método lembrarDados() que irá salvar os dados do usuário, criptografados, em cookies:
-[code language="php" firstline="391"]	/**
+[code language="php" firstline="391"]
+	/**
 	 * Salva os dados do usuário em cookies ("Lembrar minha senha")
 	 *
 	 * @access public

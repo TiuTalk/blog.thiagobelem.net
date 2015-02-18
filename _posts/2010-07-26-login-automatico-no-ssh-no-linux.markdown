@@ -22,7 +22,9 @@ Esse recurso parece inútil quando você cuida de um site simples... Mas quando 
 Para acessar o SSH de um servidor normalmente usamos o seguinte comando:
 
 
-[code language="shell"]$ ssh usuario@dominio[/code]
+[code language="shell"]
+$ ssh usuario@dominio
+[/code]
 
 Após isso, é perguntado a sua senha de acesso do servidor e você está dentro e pode executar comandos do Linux para trabalhar na máquina.
 
@@ -34,7 +36,9 @@ Vamos chamar a sua maquina de <strong>cliente</strong> (a máquina que você est
 No cliente, vá até a linha de comando e digite:
 
 
-[code language="shell"]$ ssh-keygen -t rsa[/code]
+[code language="shell"]
+$ ssh-keygen -t rsa
+[/code]
 
 Você verá a seguinte resposta:
 
@@ -86,7 +90,9 @@ Feito isso, você criou uma <strong>chave pública</strong> e esse arquivo <code
 Você pode usar sFTP (FTP via SSH) ou SCP para enviar a chave pública para o servidor, veja um exemplo utilizando SCP:
 
 
-[code language="shell"]$ scp ~/.ssh/id_dsa.pub USUARIO_REMOTO@SERVIDOR:/home/USUARIO_REMOTO/.ssh/[/code]
+[code language="shell"]
+$ scp ~/.ssh/id_dsa.pub USUARIO_REMOTO@SERVIDOR:/home/USUARIO_REMOTO/.ssh/
+[/code]
 
 Lembrando que a parta <code>USUARIO_REMOTO@SERVIDOR</code> são os mesmos dados que você utiliza para login.
 

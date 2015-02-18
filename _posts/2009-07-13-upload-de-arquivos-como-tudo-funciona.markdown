@@ -21,7 +21,8 @@ Como exemplo usarei um formulário onde o visitante enviará o seu nome e uma fo
 Todo upload, geralmente, começa com um formulário onde o usuário insere o arquivo que será enviado e <strong>manipulado</strong> para o servidor. Veja o nosso exemplo de formulário:
 
 
-[code language="html"]<form method="post" action="recebe.php" enctype="multipart/form-data">
+[code language="html"]
+<form method="post" action="recebe.php" enctype="multipart/form-data">
 <fieldset>
 	<label for="txNome">Seu nome</label>
 	<input type="text" name="nome" id="txNome" />
@@ -31,7 +32,8 @@ Todo upload, geralmente, começa com um formulário onde o usuário insere o arq
 
 	<input type="submit" value="Salvar Dados" />
 </fieldset>
-</form>[/code]
+</form>
+[/code]
 
 É um formulário simples, com dois campos e um submit... O que importa nesse formulário são três coisas:
 
@@ -52,11 +54,13 @@ Agora iremos construir o arquivo recebe.php passo a passo para você entender o 
 Normalmente quando enviamos dados através de um formulário (com a propriedade method igual a post) esses dados são disponibilizados em uma variável <strong>$_POST</strong>... Então, no começo do arquivo, iremos arquivar o nome do usuário em uma nova variável:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 	$nome = $_POST['nome'];
 
-?>[/code]
+?>
+[/code]
 
 Só pra lembrar: $_POST é um array e os seus índices serão as propriedades "name" dos inputs.
 
@@ -64,7 +68,8 @@ Só pra lembrar: $_POST é um array e os seus índices serão as propriedades "n
 Ao enviar um arquivo pelo formulário acima é criada uma nova variável (além da $_POST) que é chamada $_FILES... Essa variável funciona da mesma forma que a $_POST e é identificada pela propriedade <strong>name</strong> do input. A diferença é que o $_FILES traz várias informações sobre o arquivo enviado.
 
 Veja um exemplo onde pegamos todas essas informações e salvamos em novas variáveis:
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 	$nome = $_POST['nome'];
 
@@ -79,7 +84,8 @@ Veja um exemplo onde pegamos todas essas informações e salvamos em novas vari�
 	// O código de erro associado a este upload de arquivo
 	$arqError = $_FILES['arquivo']['error'];
 
-?>[/code]
+?>
+[/code]
 
 Preste atenção que a parte <strong style="color: red">['arquivo']</strong> se deve a propriedade name do input file no lá formulário HTML.
 
@@ -90,7 +96,8 @@ Quando algo der errado com o upload em questão você vai poder verificar o que 
 Agora iremos mover o arquivo para a pasta correta caso o upload tenha ocorrido sem problemas:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 	$nome = $_POST['nome'];
 
@@ -110,7 +117,8 @@ Agora iremos mover o arquivo para a pasta correta caso o upload tenha ocorrido s
 		$upload = move_uploaded_file($arqTemp, $pasta . $arqName);
 	}
 
-?>[/code]
+?>
+[/code]
 
 Com isso, após verificar se não houve nenhum erro, iremos mover o arquivo que está na pasta temporária do PHP para a pasta <strong>/uploads/</strong> do seu site.
 
@@ -126,7 +134,8 @@ Usando a variável $arqType poderemos identificar qual é o tipo do arquivo... E
 Vamos criar uma lista com todos os <strong>mime-types</strong> permitidos e verificar se foi enviado um arquivo com o tipo correto:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 	// Lista de tipos de arquivos permitidos
 	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
 
@@ -154,7 +163,8 @@ Vamos criar uma lista com todos os <strong>mime-types</strong> permitidos e veri
 		}
 	}
 
-?>[/code]
+?>
+[/code]
 
 Se precisar você ver aqui uma <a href="http://en.wikipedia.org/wiki/Internet_media_type" target="_blank">lista de mime-types</a> usados por cada tipo de arquivo.
 
@@ -162,7 +172,8 @@ Se precisar você ver aqui uma <a href="http://en.wikipedia.org/wiki/Internet_me
 Muita gente tem problemas com o tamanho de arquivo enviado pelos usuários pois, dependendo da quantidade e do tipo de arquivo, você rapidamente vai ter GBs e GBs de lixo no seu servidor. Se quiser fazer essa validação, é só fazer assim:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 	// Lista de tipos de arquivos permitidos
 	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
 	// Tamanho máximo (em bytes)
@@ -195,13 +206,15 @@ Muita gente tem problemas com o tamanho de arquivo enviado pelos usuários pois,
 		}
 	}
 
-?>[/code]
+?>
+[/code]
 
 <h3>5.0 - Renomeando o arquivo enviado</h3>
 Caso você queira armazenar o arquivo enviado com outro nome, mas manter a extensão do mesmo, é só fazer assim:
 
 
-[code language="php" highlight="33"]<?php
+[code language="php" highlight="33"]
+<?php
 	// Lista de tipos de arquivos permitidos
 	$tiposPermitidos= array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png');
 	// Tamanho máximo (em bytes)
@@ -239,7 +252,8 @@ Caso você queira armazenar o arquivo enviado com outro nome, mas manter a exten
 		}
 	}
 
-?>[/code]
+?>
+[/code]
 
 Na linha 31 pegamos a extensão do arquivo enviado e na linha 33 criamos um novo nome para ele usando um UNIX TIMESTAMP e a extensão original.
 
@@ -249,7 +263,8 @@ Acabamos de passar por todas as partes do upload e manipulação de um arquivo!
 Agora vamos salvar os dados recebidos no banco de dados apenas para concluir o exemplo da criação de um perfil em uma rede social:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 	// Aqui você faz a conexão com o banco de dados
 
@@ -305,7 +320,8 @@ Agora vamos salvar os dados recebidos no banco de dados apenas para concluir o e
 		echo 'Ocorreu algum erro com o upload, por favor tente novamente!';
 	}
 
-?>[/code]
+?>
+[/code]
 
 --
 

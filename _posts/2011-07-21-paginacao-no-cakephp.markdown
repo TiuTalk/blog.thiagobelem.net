@@ -68,7 +68,8 @@ class NoticiasController extends AppController {
 Definido os parâmetros de busca, podemos atribuí-los ao atributo <strong>paginate</strong> do <strong>Controller</strong> e rodar a consulta no model <strong>Noticia</strong>:
 
 
-[code language="php"]class NoticiasController extends AppController {
+[code language="php"]
+class NoticiasController extends AppController {
 
 	/**
 	 * Lista as notícias utilizando paginação
@@ -92,7 +93,8 @@ Definido os parâmetros de busca, podemos atribuí-los ao atributo <strong>pagin
 		$this->set('noticias', $noticias);
 	}
 
-}[/code]
+}
+[/code]
 
 E tá tudo pronto.. agora é só ir pra view mostrar essas notícias e colocar os links de paginação! :)
 
@@ -100,13 +102,15 @@ E tá tudo pronto.. agora é só ir pra view mostrar essas notícias e colocar o
 Um exemplo básico (usando a tag <em>article</em> do <strong>HTML5</strong>) da listagem de notícias:
 
 
-[code language="php"]<article>
+[code language="php"]
+<article>
 <?php foreach($noticias AS $data): ?>
 	<h1><?php echo $data['Noticia']['titulo'] ?></h1>
 	<?php echo $data['Noticia']['resumo'] ?>
 
 <?php endforeach; ?>
-</article>[/code]
+</article>
+[/code]
 
 E por ultimo, a listagem dos links de paginação:
 

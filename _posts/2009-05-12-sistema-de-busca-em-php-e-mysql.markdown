@@ -30,7 +30,8 @@ CREATE TABLE `noticias` (
 `ativa` BOOL NOT NULL ,
 `cadastro` DATETIME NOT NULL ,
 INDEX ( `ativa` )
-) ENGINE = MYISAM[/code]
+) ENGINE = MYISAM
+[/code]
 
 As colunas da tabela serão: <strong>id</strong>, <strong>titulo</strong>, <strong>texto</strong>, <strong>ativa</strong><span style="color: #999999;"> (1 ou 0)</span>, e <strong>cadastro</strong> <span style="color: #999999;">(AAAA-MM-DD HH:MM:SS)</span>.
 

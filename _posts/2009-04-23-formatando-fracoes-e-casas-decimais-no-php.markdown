@@ -15,7 +15,8 @@ Você já deve ter percebido que números reais (frações) usam ponto como sepa
 A função <strong>number_format()</strong> serve exatamente para isso, veja exemplos:
 
 
-[code='php']<?php
+[code='php']
+<?php
 
 $numero = 1234.56;
 
@@ -33,7 +34,8 @@ $number = 1234.5678;
 echo number_format($numero, 2, '.', '');
 // 1234.57
 
-?>[/code]
+?>
+[/code]
 
 Podemos passar os seguintes argumentos pra ela:
 

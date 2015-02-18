@@ -87,7 +87,9 @@ Após os dois comandos o servidor vai conter uma cópia dos arquivos locais.
 À medida que você for trabalhando no site e quiser atualizar o servidor no ar, é so rodar o comando (após fazer o commit):
 
 
-[code language="bash"]git push web[/code]
+[code language="bash"]
+git push web
+[/code]
 
 Isso irá enviar as modificações feitas para o repositório remoto.
 

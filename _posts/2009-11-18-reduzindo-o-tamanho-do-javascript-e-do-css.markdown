@@ -36,7 +36,8 @@ Com ele você faz o Upload dos seus JS ou CSS e ele junta todos os arquivos em u
 Veja um exemplo da compressão que ele faz em um CSS:
 
 Antes:
-[code language="css"]html {
+[code language="css"]
+html {
 	background-color: #f7f6f1;
 }
 
@@ -63,10 +64,13 @@ input[readonly] {
 .find-box-search {
 	border-color: #dfdfdf;
 	background-color: #f1f1f1;
-}[/code]
+}
+[/code]
 
 Depois:
-[code language="css"]html{background-color:#f7f6f1;}* html input,* html .widget{border-color:#8cbdd5;}textarea,input,select{border-color:#dfdfdf;}kbd,code{background:#eaeaea;}input[readonly]{background-color:#eee;}.find-box-search{border-color:#dfdfdf;background-color:#f1f1f1;}[/code]
+[code language="css"]
+html{background-color:#f7f6f1;}* html input,* html .widget{border-color:#8cbdd5;}textarea,input,select{border-color:#dfdfdf;}kbd,code{background:#eaeaea;}input[readonly]{background-color:#eee;}.find-box-search{border-color:#dfdfdf;background-color:#f1f1f1;}
+[/code]
 
 Espero que tenham gostado! :)
 

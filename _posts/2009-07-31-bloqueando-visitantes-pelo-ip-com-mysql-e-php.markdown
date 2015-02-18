@@ -24,13 +24,15 @@ Banir um visitante de vez, baseando-se no IP dele é, sem dúvida, uma das forma
 Para salvar a lista de IPs banidos usaremos uma tabela no MySQL que pode ser criada com o seguinte código:
 
 
-[code language="sql"]CREATE TABLE `banidos` (
+[code language="sql"]
+CREATE TABLE `banidos` (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 	`ip` VARCHAR( 15 ) NOT NULL ,
 	`inicio` DATETIME NOT NULL ,
 	`fim` DATETIME NOT NULL ,
 	INDEX ( `ip` )
-) ENGINE = MYISAM[/code]
+) ENGINE = MYISAM
+[/code]
 
 Já a parte em PHP do sistema vai funcionar da seguinte maneira... Quando o visitante tentar acessar o seu site é incluído um arquivo que busca no MySQL se esse IP está na lista de banidos, caso esteja o visitante é redirecionado para outro site/endereço.
 
@@ -39,7 +41,8 @@ Não vou falar como fazer uma conexão ao MySQL porque isso já foi dito N vezes
 Antes de verificar se um visitante está "banido" precisamos limpar da tabela os registros que já expiraram... Esse passo é opcional pois quando formos verificar se um usuário está banido vamos verificar também se o período é valido... Vamos lá:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 // Inclui o arquivo que faz a conexão com o banco de dados
 require_once('mysql.php');
@@ -51,12 +54,14 @@ $ip_visitante = $_SERVER['REMOTE_ADDR'];
 $sql = "DELETE FROM `banidos` WHERE ( `fim` <= NOW() )";
 mysql_query($sql);
 
-?>[/code]
+?>
+[/code]
 
 Agora nós vamos verificar se o IP do visitante consta na lista dos que ainda estão banidos:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 // Inclui o arquivo que faz a conexão com o banco de dados
 require_once('mysql.php');
@@ -75,26 +80,30 @@ if (mysql_num_rows($query) > 0) {
 	// Pelo menos um resultado foi encontrado, o usuário está banido
 }
 
-?>[/code]
+?>
+[/code]
 
 Agora é só redirecionar o visitante para outra página/endereço:
 
 
-[code language="php" firstline="13" highlight="18"]// Verifica se o visitante está banido
+[code language="php" firstline="13" highlight="18"]
+// Verifica se o visitante está banido
 $sql = "SELECT * FROM `banidos` WHERE ( `ip` = '". $ip_visitante ."' ) AND ( NOW() BETWEEN `inicio` AND `fim` )";
 $query = mysql_query($sql);
 if (mysql_num_rows($query) > 0) {
 	// Redireciona o visitante
 	header("Location: http://www.pudim.com.br/");
 	exit;
-}[/code]
+}
+[/code]
 
 --
 
 Agora nós vamos criar uma funçãozinha que você vai usar para banir o visitante durante X minutos... Vamos lá:
 
 
-[code language="php"]function banirVisitante($minutos, $ip = null) {
+[code language="php"]
+function banirVisitante($minutos, $ip = null) {
 	// Define o IP que será banido
 	$ip = (is_null($ip)) ? $_SERVER['REMOTE_ADDR'] : $ip;
 
@@ -116,10 +125,12 @@ Agora nós vamos criar uma funçãozinha que você vai usar para banir o visitan
 		header("Location: http://www.pudim.com.br/");
 		exit;
 	}
-}[/code]
+}
+[/code]
 
 Aí quando você quiser banir um visitante, seja qual for o motivo, é só usar a função criada:
-[code language="php"]// Banir visitante por 10 minutos
+[code language="php"]
+// Banir visitante por 10 minutos
 banirVisitante(10);
 
 // Banir um IP específico por 3 dias

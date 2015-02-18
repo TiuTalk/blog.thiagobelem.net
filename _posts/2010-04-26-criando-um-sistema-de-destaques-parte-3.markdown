@@ -82,7 +82,8 @@ $destaques = array(
 
 	// Limite máximo de destaques que serão exibidos
 	'limite' => 5
-);[/code]
+);
+[/code]
 
 <h3>2. Conexão com o MySQL</h3>
 Se o seu site já se conecta ao banco de dados MySQL automaticamente, você pode apagar a parte da conexão ao MySQL e pular para o item três...

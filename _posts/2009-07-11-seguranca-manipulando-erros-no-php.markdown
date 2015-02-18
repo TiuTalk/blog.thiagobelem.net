@@ -25,7 +25,8 @@ Manipular os erros de forma correta, além de deixar o site mais "bonito" faz co
 Para iniciar a manipular os seus erros é só dar um include/require nesse arquivo logo no começo do seu site. E não se esqueça de mudar as configurações entre as linhas 8 e 14.
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 /**
  *  Arquivo para manipulação de erros de forma segura:
  *   envia um e-mail para o administrador com as informações sobre o erro
@@ -142,7 +143,8 @@ function manipuladorErros($errno, $errstr='', $errfile='', $errline='')
 set_error_handler('manipuladorErros');
 
 echo $n;
-?>[/code]
+?>
+[/code]
 
 Caso você precise mudar a forma com qual o email é enviado, é só alterar ali em cima, entre as linhas 65 e 105.
 
@@ -150,12 +152,14 @@ Caso você precise mudar a forma com qual o email é enviado, é só alterar ali
 Ao executar o seguinte script (exibir uma variável que não existe):
 
 
-[code language="php" light="true"]<?php echo $n; ?> [/code]
+[code language="php" light="true"]
+<?php echo $n; ?> [/code]
 
 Termos a seguinte resposta por email:
 
 
-[code language="plain" light="true"][ ERRO NO PHP ]
+[code language="plain" light="true"]
+[ ERRO NO PHP ]
 Site: Meu site
 Tipo de erro: NOTICE
 Arquivo: C:\apache\htdocs\erro.php
@@ -169,12 +173,15 @@ User Agent: Mozilla/5.0 (Windows; U; Windows NT 5.2; pt-BR; rv:1.9.1) Gecko/2009
 URL: http://127.0.0.1/erro.php
 Referer: http://127.0.0.1/
 
-Data: 11/07/2009 10:40:29[/code]
+Data: 11/07/2009 10:40:29
+[/code]
 
 E o assunto do e-mail recebido será:
 
 
-[code language="plain" light="true"][NOTICE] Meu site - 11/07/2009 10:40:29[/code]
+[code language="plain" light="true"]
+[NOTICE] Meu site - 11/07/2009 10:40:29
+[/code]
 
 Gostaram né? :D
 

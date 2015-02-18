@@ -72,7 +72,8 @@ Até agora o nosso RSS tem um formato parecido com esse:
 O próximo passo é definir o elemento <strong><channel></strong> (canal) que contem todos os dados do RSS e cada um dos itens/notícias... Dentro dele iremos colocar mais três elementos, que são o <strong><title></strong> (titulo do RSS), o <strong><link></strong> (do site ao qual o RSS pertence) e a <strong><description></strong> (descrição do conteúdo RSS):
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 // Intanciamos/chamamos a classe
 $rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
 $rss->addAttribute('version', '2.0');
@@ -84,14 +85,16 @@ $canal->addChild('title', 'Meu primeiro RSS');
 $canal->addChild('link', 'http://www.meusite.com/');
 $canal->addChild('description', 'Este é o meu primeiro RSS, uha!');
 
-?>[/code]
+?>
+[/code]
 
 Existem outros sub-elementos de channel, mas são todos opcionais... Veja a lista completa deles <a href="http://cyber.law.harvard.edu/rss/rss.html#optionalChannelElements" target="_blank">aqui</a>.
 
 E com isso, o nosso RSS ficará com um formato assim:
 
 
-[code language="xml"]<?xml version="1.0" encoding="UTF-8"?>
+[code language="xml"]
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
 <title>Meu primeiro RSS</title>
@@ -99,14 +102,16 @@ E com isso, o nosso RSS ficará com um formato assim:
 <description>Este é o meu primeiro RSS, cheio de coisas legais!</description>
 
 </channel>
-</rss>[/code]
+</rss>
+[/code]
 
 Estão percebendo a mágica do SimpleXMLElement? Ele vai criando um formato de XML perfeito pra você usar com quase qualquer coisa! :D
 
 Bom... Já temos o formato básico do RSS.. Agora é só adicionar dois itens de exemplo e o nosso RSS estará quase pronto:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 // Intanciamos/chamamos a classe
 $rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
 $rss->addAttribute('version', '2.0');
@@ -133,7 +138,8 @@ $item->addChild('link', 'http://www.meusite.com/artigos.php?id=1');
 $item->addChild('description', 'Esse é um resumo do meu primeiro artigo.');
 $item->addChild('pubDate', date('r'));
 
-?>[/code]
+?>
+[/code]
 
 Cada <strong><item></strong> representa uma entrada do RSS, seria cada uma das notícias de um site de notícias, ou cada um dos artigos de um blog ou cada um dos apartamentos do site de uma imobiliária. A ordem dos <strong><item>s</strong> deve ser é do mais recente para o mais antigo.
 
@@ -142,7 +148,8 @@ Os três sub-elementos obrigatórios dos <strong><item>s</strong> são: o <stron
 Depois de inserir os dois itens o formato do nosso RSS está concluído, ficando assim:
 
 
-[code language="xml"]<?xml version="1.0" encoding="UTF-8"?>
+[code language="xml"]
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
 <title>Meu primeiro RSS</title>
@@ -163,7 +170,8 @@ Depois de inserir os dois itens o formato do nosso RSS está concluído, ficando
 </item>
 
 </channel>
-</rss>[/code]
+</rss>
+[/code]
 
 Agora, para concluir, precisamos apenas passar todo o conteúdo do RSS para o navegador (depois de definir qual será o tipo de conteúdo que ele irá receber), colocando isso depois de definir o <strong>último <item></strong>:
 
@@ -219,7 +227,8 @@ header("content-type: application/rss+xml; charset=utf-8");
 
 // Entrega o conteúdo do RSS completo:
 echo $rss->asXML();
-exit;[/code]
+exit;
+[/code]
 
 --
 

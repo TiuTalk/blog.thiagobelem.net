@@ -61,7 +61,8 @@ Antes de qualquer coisa, eu não sou um bom matemático... Na maior parte do tem
 Primeiro vamos à minha solução em PHP:
 
 
-[code language="php"]function solucao() {
+[code language="php"]
+function solucao() {
 	$soma = 0;
 
 	for ($i = 1; $i < 1000; $i++) {
@@ -70,20 +71,23 @@ Primeiro vamos à minha solução em PHP:
 	}
 
 	echo $soma;
-}[/code]
+}
+[/code]
 
 <h3>Solução em Python</h3>
 E agora, a mesma abordagem em Python:
 
 
-[code language="python"]def solucao():
+[code language="python"]
+def solucao():
 	soma = 0;
 
 	for i in range(1, 1000):
 		if not (i % 3) or not (i % 5):
 			soma += i
 
-	print soma[/code]
+	print soma
+[/code]
 
 <h3>Conclusão</h3>
 Meu intuito aqui não é comparar as duas linguagens! Pra mim, ambas são excelentes.

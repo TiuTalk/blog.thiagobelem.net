@@ -26,16 +26,19 @@ A vantagem de usar esse script é que ele funciona com IE 5.5, 6 e 7, não atrap
 Para usá-lo no seu site, é muito simples... Primeiro insira o <a href="http://jquery.andreaseberhard.de/pngFix/jquery.pngFix.js" target="_blank">script do pngFix</a> dentro do <head> do seu site:
 
 
-[code language="html"]<head>
+[code language="html"]
+<head>
   <title>Meu Site</title>
   <script language="JavaScript" src="jquery.js" type="text/javascript"></script>
   <script language="JavaScript" src="jquery.pngFix.js" type="text/javascript"></script>
-</head>[/code]
+</head>
+[/code]
 
 E depois é só inserir um bloco de jQuery que fará a correção em todos os elementos do seu site:
 
 
-[code language="html"]<head>
+[code language="html"]
+<head>
   <title>Meu Site</title>
   <script language="JavaScript" src="jquery.js" type="text/javascript"></script>
   <script language="JavaScript" src="jquery.pngFix.js" type="text/javascript"></script>
@@ -45,7 +48,8 @@ E depois é só inserir um bloco de jQuery que fará a correção em todos os el
 		$(document).pngFix(); // "Executa" o pngFix em todos os elementos do site
 	});
   </script>
-</head>[/code]
+</head>
+[/code]
 
 Pronto.. Já está tudo funcionando perfeitamente! :)
 

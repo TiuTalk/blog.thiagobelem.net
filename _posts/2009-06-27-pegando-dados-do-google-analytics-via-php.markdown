@@ -32,18 +32,21 @@ Para poder usar a classe você só precisa ter o hárduo trabalho de incluir o a
 
 <h3>Exemplo de uso - Autenticação</h3>
 Da mesma forma que você precisa fazer o login com a sua conta Google para ter acesso aos perfis de sites, e posteriormente aos relatórios desses perfis, você também precisa fazer o login autenticando seus dados de acesso... Veja como é dificil fazer isso:
-[code lang="php"]<?php
+[code lang="php"]
+<?php
 	require_once("gapi.class.php");
 
 	// Autenticação
 	$ga = new gapi('SEU E-MAIL', 'SUA SENHA');
-?>[/code]
+?>
+[/code]
 
 --
 
 <h3>Exemplo de uso - Listando os perfis de site</h3>
 Para listar todos os perfis de site que você tem na sua conta você pode fazer assim:
-[code lang="php"]<?php
+[code lang="php"]
+<?php
 	require_once("gapi.class.php");
 
 	// Autenticação
@@ -57,14 +60,16 @@ Para listar todos os perfis de site que você tem na sua conta você pode fazer 
 		// Exibe os dados de cada um dos perfis de site
 		echo $perfil . ' (' . $perfil->getProfileId() . ')';
 	}
-?>[/code]
+?>
+[/code]
 O código acima irá exibir uma pequena lista dos sites que você tem na sua conta do Analytics... Usarei como exemplo o ID <strong>12345</strong> que é um ID fictício.
 
 <h3>Exemplo de uso - Pegando dados</h3>
 Agora você já fez o login e tem o ID do perfil do site que você quer pegar os resultados... Vamos fazer duas consultas de exemplo e pegar os dados necessários para fazer um relatório completo sobre as visitas e pageviews do mês passado:
 
 
-[code lang="php"]<?php
+[code lang="php"]
+<?php
 	require_once("gapi.class.php");
 
 	// Autenticação
@@ -90,7 +95,8 @@ Agora você já fez o login e tem o ID do perfil do site que você quer pegar os
 	foreach ($ga->getResults() as $dados) {
 		echo 'Dia ' . $dados . ': ' . $dados->getVisits() . ' Visita(s) e ' . $dados->getPageviews() . ' Pageview(s)';
 	}
-?>[/code]
+?>
+[/code]
 É claro que esse codigo parece um pouco complexo pra quem está começando.. Vou tentar explicar os argumentos do método requestReportData:
 
 1 - Primeiro tempos o ID do perfil do site que você já pegou antes usando o requestAccountData()

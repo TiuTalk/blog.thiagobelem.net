@@ -25,7 +25,8 @@ Para instalar ele no seu site é bem fácil:
 3 - Insira o seguinte bloco de código no começo do seu site:
 
 
-[code language="php"]// Inclui o arquivo do PHPIDS
+[code language="php"]
+// Inclui o arquivo do PHPIDS
 require_once 'IDS/Init.php';
 $request = array(
 'REQUEST' =&amp;gt; $_REQUEST,
@@ -41,7 +42,8 @@ $result = $ids-&amp;gt;run();
 if (!$result-&amp;gt;isEmpty()) {
 // Exibe resultados caso sejam encontrados
 echo $result;
-}[/code]
+}
+[/code]
 
 Com isso ele já vai passar a funcionar... Vale lembrar que esse exemplo apenas avisa (mostra) que algo foi encontrado e bloqueia... Você vai  precisar adaptá-lo as suas necessidades.
 

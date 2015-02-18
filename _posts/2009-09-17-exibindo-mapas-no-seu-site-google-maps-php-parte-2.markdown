@@ -25,21 +25,26 @@ Se você ainda não tiver uma Google Maps API Key (ou GMAK) acesse esse endereç
 Agora, dentro do <strong><head></strong> do seu site, insira o seguinte código:
 
 
-[code language="html" light="true"]<script src="http://maps.google.com/maps?file=api&v=2&key={GMAK}" type="text/javascript"></script>[/code]
+[code language="html" light="true"]
+<script src="http://maps.google.com/maps?file=api&v=2&key={GMAK}" type="text/javascript"></script>
+[/code]
 
 Não se esqueça de substituir o <strong style="background: gray; color: orange">{GMAK}</strong> pela sua Google Maps API Key.
 
 Agora você precisa criar um elemento HTML onde o mapa irá aparecer, exemplo:
 
 
-[code language="html" light="true"]<div id="googleMap"></div>[/code]
+[code language="html" light="true"]
+<div id="googleMap"></div>
+[/code]
 
 Aí você pode definir a largura e altura dele no CSS do seu site ou até mesmo in-line... Não tem diferença.
 
 Depois é só charmar esse código JavaScript, pode ser no fim da página, antes do body:
 
 
-[code language="javascript"]	if (GBrowserIsCompatible()) {
+[code language="javascript"]
+	if (GBrowserIsCompatible()) {
 		var map = new GMap2(document.getElementById("googleMap"));
 		var lat = {LATITUDE}; // Latitude do marcador
 		var lon = {LONGITUDE}; // Longitude do marcador
@@ -58,7 +63,8 @@ Depois é só charmar esse código JavaScript, pode ser no fim da página, antes
 
 		map.addOverlay(marker);
 		map.setCenter(point, zoom);
-	}[/code]
+	}
+[/code]
 
 Agora é só substituir o <strong style="background: gray; color: orange">{LATITUDE}</strong>, <strong style="background: gray; color: orange">{LONGITUDE}</strong> e <strong style="background: gray; color: orange">{ZOOM}</strong> (nas linhas 3, 4 e 5) pelas informações que você conseguiu pegar usando o passo-a-passo do <a href="/buscando-a-latitude-e-longitude-de-um-endereco-google-maps-php-parte-1" target="_blank">outro artigo</a>.
 

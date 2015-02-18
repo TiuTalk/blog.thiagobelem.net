@@ -19,7 +19,8 @@ Hoje na faculdade estava vendo o código de um colega que está aprendendo PHP e
 O código original já estava dentro de uma classe, mas não faria diferença nenhuma se fosse PHP estruturado... não lembro exatamente o nome dos métodos/variáveis, mas o restante está igualzinho:
 
 
-[code language="php"]class cFileType {
+[code language="php"]
+class cFileType {
 
 	function fImage($type) {
 		switch($type) {
@@ -60,7 +61,8 @@ WOW! Reduzimos de 21 para 7 linhas... mas ainda assim, se fosse estruturado não
 Meu amigo me disse que essa classe seria para verificar os tipos de arquivos (extensões), por exemplo "se é uma imagem" ou "se é um doc"... Então criamos outro método para verificar DOCs:
 
 
-[code language="php"]class cFileType {
+[code language="php"]
+class cFileType {
 
 	function fImage($type) {
 		return in_array($type, array('jpg', 'png', 'gif'));
@@ -70,13 +72,15 @@ Meu amigo me disse que essa classe seria para verificar os tipos de arquivos (ex
 		return in_array($type, array('doc', 'docx'));
 	}
 
-}[/code]
+}
+[/code]
 
 <h3>Atributos, melhor tê-los</h3>
 O código está melhorando, mas ainda assim tem algo errado... não é responsabilidade dos métodos <code>fImage</code> e <code>fDoc</code> saber a lista de extensões válidas... isso não deveria pertencer à classe como um todo e poder ser reutilizado?
 
 
-[code language="php"]class cFileType {
+[code language="php"]
+class cFileType {
 
 	public $image = array('jpg', 'png', 'gif');
 
@@ -90,21 +94,25 @@ O código está melhorando, mas ainda assim tem algo errado... não é responsab
 		return in_array($type, $this->doc);
 	}
 
-}[/code]
+}
+[/code]
 
 <h3>Atributos e métodos estáticos</h3>
 Agora sim está parecendo uma classe normal, com atributos e métodos... Aí percebi que de orientada à OBJETOS essa classe não tem nada! Não estamos trabalhando com objetos.. O uso atual dessa classe seria assim:
 
 
-[code language="php"]$cFileType = new cFileType();
+[code language="php"]
+$cFileType = new cFileType();
 if ($cFileType->fImage('jpg')) {
 	// É uma imagem válida
-}[/code]
+}
+[/code]
 
 Eu não trabalho o objeto <code>$cFileType</code>, apenas instancio e utilizo um único modo... então vamos economizar um pouco de memória, transformando os métodos em métodos estáticos:
 
 
-[code language="php"]class cFileType {
+[code language="php"]
+class cFileType {
 
 	public static $image = array('jpg', 'png', 'gif');
 
@@ -118,14 +126,17 @@ Eu não trabalho o objeto <code>$cFileType</code>, apenas instancio e utilizo um
 		return in_array($type, self::$doc);
 	}
 
-}[/code]
+}
+[/code]
 
 E agora a utilização ficou um pouco mais simples:
 
 
-[code language="php"]if (cFileType::fImage('jpg')) {
+[code language="php"]
+if (cFileType::fImage('jpg')) {
 	// É uma imagem válida
-}[/code]
+}
+[/code]
 
 Sendo que você ainda pode usar o <code>cFileType::image</code> (pra ter uma lista de imagens válidas) em qualquer parte da sua aplicação sem instanciar a classe.
 
@@ -135,7 +146,8 @@ Segundo a abordagem <a href="http://pt.wikipedia.org/wiki/Don't_repeat_yourself"
 A responsabilidade de verificar se o valor <code>$type</code> tá dentro de uma "lista" válida não é dos métodos <code>fImage</code> e <code>fDoc</code>.. então vamos delegar:
 
 
-[code language="php"]class cFileType {
+[code language="php"]
+class cFileType {
 
 	public static $image = array('jpg', 'png', 'gif');
 
@@ -153,7 +165,8 @@ A responsabilidade de verificar se o valor <code>$type</code> tá dentro de uma 
 		return self::fType($type, self::$doc);
 	}
 
-}[/code]
+}
+[/code]
 
 Agora se precisarmos mudar essa lógica de verificar se o <code>$type</code> tá dentro de uma "lista" válida, só vamos precisar mudar em um lugar só.
 
@@ -161,7 +174,8 @@ Agora se precisarmos mudar essa lógica de verificar se o <code>$type</code> tá
 Temos que concordar que os nomes de classe e métodos escolhidos pelo meu amigo não são os mais intuitos... Então como uma modificação final, sugiro a seguinte classe devidamente renomeada:
 
 
-[code language="php"]class FileType {
+[code language="php"]
+class FileType {
 
 	public static $image = array('jpg', 'png', 'gif');
 
@@ -179,14 +193,17 @@ Temos que concordar que os nomes de classe e métodos escolhidos pelo meu amigo 
 		return self::isTypeInList($type, self::$doc);
 	}
 
-}[/code]
+}
+[/code]
 
 Com uma utilização bem simples e intuitiva:
 
 
-[code language="php"]if (FileType::isImage('jpg')) {
+[code language="php"]
+if (FileType::isImage('jpg')) {
 	// É uma imagem válida
-}[/code]
+}
+[/code]
 
 Espero que tenham gostado! :)
 

@@ -38,15 +38,18 @@ Em se tratando de PHP (e acredito que o mesmo ocorra com todas as outras linguag
 [code language="php"] <?php
 $numero = 3;
 $dobro = $numero * 2; // 6
-?>[/code]
+?>
+[/code]
 
 Imagine que, na linha 1, antes do "<strong><?php</strong>" houvesse um espaço... Tudo que está fora do "<strong><?php ... ?></strong>" é HTML, então um espaço ali seria como o 1° caractere do HTML causando o envio do header... Qualquer função de sessão/cookie/etc. dentro do bloco de PHP iria causar o erro.
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 echo 'Olá mundo';
 session_start(); // Inicio de sessão depois do envio do header?! Problema!
-?>[/code]
+?>
+[/code]
 
 Esse é outro caso clássico.. O desenvolvedor tentou criar uma sessão (que definirá um cookie de sessão novo) após enviar o header (por causa do <strong>echo</strong>).
 

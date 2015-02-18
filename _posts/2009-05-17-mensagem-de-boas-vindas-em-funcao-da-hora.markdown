@@ -15,7 +15,8 @@ Semana passada algumas pessoas me perguntaram no MSN como poderiam fazer uma men
 Isso é muito simples, veja um exemplo:
 
 
-[code='php']<?php
+[code='php']
+<?php
 
 // Formato 24 horas (de 1 a 24)
 $hora = date('G');
@@ -32,7 +33,8 @@ $mensagem = "Boa noite";
 
 echo $mensagem;
 
-?>[/code]
+?>
+[/code]
 
 Viram?
 

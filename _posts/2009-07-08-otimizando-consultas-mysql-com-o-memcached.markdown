@@ -28,7 +28,8 @@ Vou mostrar pra vocês como armazenar uma consulta na memória e depois pegar es
 
 <h3>Consulta simples</h3>
 Normalmente você faria uma consulta assim:
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 $sql = "SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC LIMIT 0, 20";
 $query = mysql_query($sql);
@@ -36,12 +37,14 @@ while ($dados = mysql_fetch_assoc($query)) {
 	// Aqui você faz a exibição de cada notícia
 }
 
-?>[/code]
+?>
+[/code]
 É uma consulta normal que, nesse exemplo, não deve pesar muito... Mas imaginemos que essa consulta demore uns 2~3 segundos para ser executada.
 
 <h3>Armazenando o resultado na memória com o Memcached</h3>
 Este exemplo irá armazenar o resultado da consulta na memória, durante 1 hora... No próximo bloco mostrarei como verificar se há um resultado armazenado na memória antes de executar a consulta novamente.
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 // Inicia o Memcache
 $mem = new Memcache;
@@ -63,11 +66,13 @@ while ($dados = mysql_fetch_assoc($query)) {
 	// Aqui você faz a exibição de cada notícia
 }
 
-?>[/code]
+?>
+[/code]
 
 <h3>Consulta otimizada com o Memcached</h3>
 Agora que já sabemos como armazenar o resultado na memória, podemos fazer uma verificação e só executar a consulta sempre que o resultado expirar ou não existir, dessa forma:
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 $mem = new Memcache;
 $mem->addServer($_SERVER['HTTP_HOST']);
@@ -94,14 +99,16 @@ if ($cache === false) {
 while ($dados = mysql_fetch_assoc($query)) {
 	// Aqui você faz a exibição de cada notícia
 }
-?>[/code]
+?>
+[/code]
 
 
 <h3>Função de atalho para o Memcache</h3>
 Você ainda poderia fazer uma função para fazer todo esse trabalho por você... Ficaria mais ou menos assim:
 
 
-[code language="php"]function mysql_queryCache($consulta, $tempo = 3600) {
+[code language="php"]
+function mysql_queryCache($consulta, $tempo = 3600) {
 	$chave = md5($consulta);
 
 	$mem = new Memcache;
@@ -114,9 +121,11 @@ Você ainda poderia fazer uma função para fazer todo esse trabalho por você..
 	}
 
 	return $query;
-}[/code]
+}
+[/code]
 E agora, o exemplo anterior usando a função:
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 $sql = "SELECT * FROM `noticias` WHERE `ativa` = 1 ORDER BY `data` DESC";
 $query = mysql_queryCache($sql);
@@ -125,7 +134,8 @@ $query = mysql_queryCache($sql);
 while ($dados = mysql_fetch_assoc($query)) {
 	// Aqui você faz a exibição de cada notícia
 }
-?>[/code]
+?>
+[/code]
 
 --
 

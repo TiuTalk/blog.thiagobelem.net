@@ -19,9 +19,11 @@ Primeiro, o mais simples:
 A codificação com GZip fará o HTML do seu site ser carregado mais rapidamente pelo visitante, é só colocar a seguinte linha no começo do seu PHP, junto do início da sessões, por exemplo:
 
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 ob_start("ob_gzhandler");
-?>[/code]
+?>
+[/code]
 
 --
 
@@ -63,7 +65,8 @@ Veja um exemplo:
 Antes o seu HTML estava assim:
 
 
-[code language="html"]<head>
+[code language="html"]
+<head>
 <title>Meu Site</title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 
@@ -75,12 +78,14 @@ Antes o seu HTML estava assim:
 <script language="JavaScript" src="js/jquery.js" type="text/javascript"></script>
 <script language="JavaScript" src="js/jquery.cycle.js" type="text/javascript"></script>
 <script language="JavaScript" src="js/outroscript.js" type="text/javascript"></script>
-</head>[/code]
+</head>
+[/code]
 
 Agora, depois de usar o Minify, ele ficou assim:
 
 
-[code language="html"]<head>
+[code language="html"]
+<head>
 <title>Meu Site</title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 
@@ -89,7 +94,8 @@ Agora, depois de usar o Minify, ele ficou assim:
 <link type="text/css" rel="stylesheet" href="/min/f=layout.css,noticia.css" />
 <!-- JS -->
 <script type="text/javascript" src="/min/f=js/jquery.js,js/jquery.cycle.js,outroscript.js"></script>
-</head>[/code]
+</head>
+[/code]
 
 Viu só? Você pode dar uma olhada no <a href="http://code.google.com/p/minify/wiki/UserGuide" target="_blank">Guia do Usuário</a> do Minify caso tenha alguma dúvida.
 

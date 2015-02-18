@@ -22,7 +22,8 @@ Fiz uma classe que vocês vão poder usar para pegar o resultado de busca do Goo
 
 <h3>A Classe - Versão 1.1</h3>
 
-[code language="php" wraplines="false"]<?php
+[code language="php" wraplines="false"]
+<?php
 
 /**
  * API de busca do Google
@@ -96,13 +97,15 @@ class googleSearchAPI {
 	}
 }
 
-?>[/code]
+?>
+[/code]
 
 
 
 <h3>Exemplo de Uso</h3>
 
-[code language="php"]<?php
+[code language="php"]
+<?php
 
 $keywords = 'Thiago Belem';
 $pagina = (isset($_GET['p'])) ? (int)$_GET['p'] : 1;
@@ -137,7 +140,8 @@ for ($n = 1; $n <= ceil($total / 8); $n++) {
 
 if (($pagina + 5) < $total) echo '...';
 
-?>[/code]
+?>
+[/code]
 
 --
 

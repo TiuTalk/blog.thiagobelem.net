@@ -22,7 +22,8 @@ Um problema muito comum em alguns sistemas é chamado de "submit múltiplo", é 
 Criei um pedacinho de código pequeno porém muito do útil que ajuda a evitar esse mal da seguinte forma: assim que o formulário é enviado ele desabilita todos os campos e botões de submit, fazendo com que não seja possível alterar os dados ou enviar o formulário novamente.
 
 É só incluir essas linhas no seu site:
-[code language="javascript"]$(function() {
+[code language="javascript"]
+$(function() {
     $("form").submit(function() {
     	// ReadOnly em todos os inputs
     	$("input", this).attr("readonly", true);
@@ -30,12 +31,14 @@ Criei um pedacinho de código pequeno porém muito do útil que ajuda a evitar e
     	$("input[type='submit'],input[type='image']", this).attr("disabled", true);
     	return true;
     });
-});[/code]
+});
+[/code]
 
 Mas há um probleminha com esse código: se você usar algum tipo de validação por JavaScript (também ativado pelo submit do formulário) o codigo não vai funcinar caso o usuário tenha digitado algo que invalide o formulário.
 
 Uma solução seria chamar essa função de validação dentro desse código jQuery, da seguinte forma:
-[code language="javascript" highlight="3"]$(function() {
+[code language="javascript" highlight="3"]
+$(function() {
 	$("form").submit(function() {
 		if (minhaFuncao() == true) {
 			// ReadOnly em todos os inputs
@@ -47,7 +50,8 @@ Uma solução seria chamar essa função de validação dentro desse código jQu
 			return false;
 		}
 	});
-});[/code]
+});
+[/code]
 
 Com isso nós iremos bloquear o próximo submit apenas quando os dados forem validados. ;)
 
