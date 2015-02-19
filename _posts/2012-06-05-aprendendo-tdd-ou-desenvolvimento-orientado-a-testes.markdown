@@ -8,7 +8,6 @@ categories:
 - Artigos
 - Python
 tags:
-- featured
 - python
 - tdd
 - fizzbuzz

@@ -12,7 +12,6 @@ categories:
 - Artigos
 tags:
 - PHP
-- featured
 - WordPress
 - Desenvolvimento
 - tema

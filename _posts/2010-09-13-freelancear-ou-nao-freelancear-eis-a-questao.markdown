@@ -14,7 +14,6 @@ tags:
 - CLT
 - Programador
 - Desenvolvedor
-- featured
 ---
 Atendendo ao pedido do [@hugollm](http://twitter.com/hugollm), hoje vou falar pra vocês um pouco sobre a minha vida de Freelancer e como sobreviver nessa selva.
 

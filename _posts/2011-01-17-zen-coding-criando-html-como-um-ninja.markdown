@@ -10,7 +10,6 @@ categories:
 - Artigos
 - Otimização
 tags:
-- featured
 - HTML
 - Zen-Coding
 - XML
