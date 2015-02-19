@@ -63,6 +63,7 @@
           </section>
         </footer>
         <div class="bottom-teaser cf">
+
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Escrito por</span></h5>
             <section class="author">
@@ -73,7 +74,9 @@
               <p class="published">Publicado <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
             </section>
           </div>
+
           {{/post}}
+
           <div class="isRight">
             <h5 class="index-headline featured"><span>Acompanhe!</span></h5>
 
@@ -85,6 +88,8 @@
               </div>
             </footer>
           </div>
+
+          {% include disqus.html %}
         </div>
       </article>
     </main>
