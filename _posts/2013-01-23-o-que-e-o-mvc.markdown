@@ -20,17 +20,18 @@ tags:
 - MVC
 - View
 ---
-<blockquote><b>Model–view–controller</b> (<b>MVC</b>) is a [software architecture](http://en.wikipedia.org/wiki/Software_architecture) pattern that separates the representation of information from the user's interaction with it.
 
--- [Wikipedia](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
-</blockquote>
-<strong>MVC</strong> é um padrão de arquitetura de software que separa a informação (e as suas regras de negócio) da interface com a qual o usuário interage.
+> **Model–view–controller** (MVC) is a [software architecture](http://en.wikipedia.org/wiki/Software_architecture) pattern that separates the representation of information from the user's interaction with it.
+> -- Wikipedia
+
+**MVC** é um padrão de arquitetura de software que separa a informação (e as suas regras de negócio) da interface com a qual o usuário interage.
 
 É uma forma de estruturar seu projeto/aplicação de forma que a interface de interação (<strong>view</strong>) esteja separada do controle da informação em si (<strong>models</strong>), separação essa que é intermediada por uma outra camada controladora (<strong>controllers</strong>).
 
 Não vou entrar em detalhes profundos sobre a arquitetura de um sistema baseado no MVC nem vou - por enquanto! - mostrar como criar um MVC do zero, mas vou tentar explicar cada uma das três camadas e dar exemplos de código do [framework de PHP](/frameworks-no-php-o-que-quando-porque-e-qual) que - ao meu ver - faz um bom uso do MVC.
 
 <h2>Model <span style="color: #999999;">(ou modelo)</span></h2>
+
 O model é a camada que <strong>representa os seus dados</strong>, provendo meios de acesso (leitura e escrita) à esses dados.
 
 A regra é simples: tudo que diz respeito à <strong>escrita</strong>, <strong>validação</strong> e <strong>leitura</strong> dos dados está dentro da <strong>camada model</strong>, não necessariamente dentro do model em si, mas dentro da camada model.
@@ -44,11 +45,10 @@ Não vou entrar nos detalhes do CakePHP, além do mais acho que o código é bem
 
 Somente através desse model será possível cadastrar e buscar produtos, e quando um usuário for cadastrar ou editar uma notícia, aquelas regras de validação devem ser respeitadas, ou seja:
 
-<ul>
-<li><span style="line-height: 14px;">O título não pode ser vazio</span></li>
-<li>A descrição não pode ser vazia nem ter menos de 100 caracteres</li>
-<li>O preço precisa ser no formato decimal, com 2 casas decimais</li>
-</ul>
+* O título não pode ser vazio
+* A descrição não pode ser vazia nem ter menos de 100 caracteres
+* O preço precisa ser no formato decimal, com 2 casas decimais
+
 Para saber mais sobre models no CakePHP, consulte a documentação: [http://book.cakephp.org/2.0/en/models.html](http://book.cakephp.org/2.0/en/models.html)
 
 Agora podemos partir para a camada que vai fazer uso desse model, pedindo uma lista de produtos..
@@ -56,11 +56,10 @@ Agora podemos partir para a camada que vai fazer uso desse model, pedindo uma li
 <h2>Controller<span style="color: #999999;"> (ou controlador)</span></h2>
 No <strong>controller</strong> você tem <strong>métodos públicos</strong> que são chamados de <strong>actions</strong>, cada action é responsável por uma "página" do seu site/sistema. É o controller quem decide:
 
-<ol>
-<li><span style="line-height: 1.714285714; font-size: 1rem;">Qual model usar;</span></li>
-<li><span style="line-height: 1.714285714; font-size: 1rem;">Quais pedidos fazer pro model;</span></li>
-<li><span style="line-height: 1.714285714; font-size: 1rem;">Qual combinação de views será usada para exibir os dados retornados pelo model.</span></li>
-</ol>
+1. Qual model usar;
+2. Quais pedidos fazer pro model;
+3. Qual combinação de views será usada para exibir os dados retornados pelo model.
+
 Atente que <strong>não é o controller</strong> que busca os dados (responsabilidade do model) e nem é ele quem exibe os dados (responsabilidade da view)... ele está ali justamente pra <strong>controlar</strong> os dois e a aplicação como um todo.
 
 Vamos à um exemplo de controller no arquivo <strong>ProductsController.php</strong>:
@@ -68,10 +67,9 @@ Vamos à um exemplo de controller no arquivo <strong>ProductsController.php</str
 <div data-gist-id="4610719" data-gist-show-loading="false"></div>
 Aqui temos duas actons:
 
-<ul>
-<li><span style="line-height: 14px;">Uma action (<strong>index</strong>) vai pedir (para o model) a lista de produtos mais recentes;</span></li>
-<li>Outra action (<strong>view</strong>) vai pedir (para o model) os dados de um único produto.</li>
-</ul>
+* Uma action (<strong>index</strong>) vai pedir (para o model) a lista de produtos mais recentes;
+* Outra action (<strong>view</strong>) vai pedir (para o model) os dados de um único produto.
+
 Para saber mais sobre controllers no CakePHP, consulte a documentação: [http://book.cakephp.org/2.0/en/controllers.html](http://book.cakephp.org/2.0/en/controllers.html)
 
 Agora podemos exibir esses dados na camada responsável por isso...
@@ -79,10 +77,9 @@ Agora podemos exibir esses dados na camada responsável por isso...
 <h2>View<span style="color: #999999;"> (ou visualização)</span></h2>
 É na view que o seu sistema interage com o usuário. Tudo que ele ver (HTML / XML / RSS / CSV) deve ser gerado e exibido através dessa camada. A view, por sua vez, tem como responsabilidade:
 
-<ul>
-<li><span style="line-height: 14px;">Manipular os dados para - e apenas para - exibição;</span></li>
-<li>Exibir os dados</li>
-</ul>
+* Manipular os dados para - e apenas para - exibição;
+* Exibir os dados.
+
 Mas a view não faz nenhum tipo de escrita/persistência no seu sistema... ela não salva dados no banco, na sessão e etc.. E ela também não busca esses dados, pois eles devem - obrigatoriamente - serem entregues pela camada <strong>controller</strong>.
 
 Vamos ver então um exemplo de listagem dos produtos, no arquivo <strong>index.ctp</strong>:
@@ -98,7 +95,6 @@ Com o MVC você conseguirá organizar seu projeto de forma que tudo tenha seu lu
 Espero que você tenha gostado dessa breve explicação sobre o MVC, e que ela tenha despertado a fagulha de curiosidade/interesse que vai fazer você correr atrás de mais conteúdo sobre o assunto... Te garanto que isso é só a ponta do iceberg.
 
 <h2>Momento jabá!</h2>
-[](http://assando-sites.com.br/)
 
 Gostou dos exemplos e quer aprender um pouco mais sobre <strong>CakePHP</strong>? E se eu te disser que tenho um curso que é <strong>online e ao vivo</strong>, e você aprende sem sair de casa?
 
