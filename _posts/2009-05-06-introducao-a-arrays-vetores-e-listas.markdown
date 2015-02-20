@@ -13,7 +13,7 @@ tags: []
 ---
 Os arrays são, sem dúvida, um dos recursos mais legais das linguagens de programação. Hoje vamos falar um pouco sobre o que são, por que devem ser usados e como usá-los no PHP.
 
-<h3>O que são e pra que servem arrays?</h3>
+### O que são e pra que servem arrays?
 <strong>Arrays</strong> são, basicamente, <span style="text-decoration: underline;">listas</span>.. Imagine uma lista de compras que você está levando ao mercado:
 
 <ol>
@@ -30,7 +30,7 @@ Agora, imagine que você precise passar isso para programação, só que a sua l
 
 Por isso existem os arrays: armazenar valores e/ou variáveis referentes a um mesmo grupo, a uma mesma origem.
 
-<h3>Arrays no PHP</h3>
+### Arrays no PHP
 Criar arrays no PHP é extremamente simples, veja dois exemplos onde criamos a nossa lista de compras:
 
 
@@ -44,13 +44,13 @@ Já no segundo exemplo definimos (antes) que $lista será um array, e logo após
 
 E por fim, no terceiro exemplo, fazemos a mesma coisa que fizemos no segundo, só que omitimos os índices dos elementos, sendo assim, o PHP irá colocar cada elemento no fim do array, começando com a posição 0 (primeiro elemento) e crescendo a cada elemento.
 
-<h3>Índices Textuais (Strings)</h3>
+### Índices Textuais (Strings)
 Você também pode definir índices (também chamados de <em>keys</em> ou chaves)  como <em>strings</em>, veja um bom exemplo de uso:
 
 
 <div data-gist-id="fa1a5ab17c3d701b2997" data-gist-show-loading="false"></div>
 
-<h3>Exibindo e localizando elementos dos Arrays</h3>
+### Exibindo e localizando elementos dos Arrays
 Quando você for exibir um elemento, é só seguir a mesma sintaxe da declaração longa:
 
 
@@ -62,7 +62,7 @@ Veja também:
 » [Array (Wikipédia)](http://pt.wikipedia.org/wiki/Array)
 » [Documentação (do PHP) sobre Arrays](http://br2.php.net/manual/pt_BR/language.types.array.php)
 
-<h3>Arrays multi-dimensionais</h3>
+### Arrays multi-dimensionais
 Não vou me aprofundar no assunto... mas você pode definir um array onde um ou mais elementos sejam arrays. Nesse caso o array não pode mais ser chamado de <strong>lista</strong>, e deve ser chamado de <strong>vetor</strong> ou <strong>array</strong> mesmo. Veja um exemplo básico de definição e exibição:
 
 

@@ -36,10 +36,10 @@ Os nomes desses arquivos não são obrigatórios, o que importa é que você ent
 
 Agora vamos ao passo-a-passo de como usar a classe:
 
-<h3>1. Incluir a classe nas páginas importantes</h3>
+### 1. Incluir a classe nas páginas importantes
 Vocês devem incluir o arquivo <strong>usuarios.class.php</strong> (usando [include_once()](http://br.php.net/manual/pt_BR/function.include-once.php)) em todas as páginas que terão <strong>alguma ligação</strong> com o sistema de login... Provavelmente serão apenas as páginas que eu listei ali em cima.
 
-<h3>2. Validar o login</h3>
+### 2. Validar o login
 Depois de inserir a classe em todos os arquivos vamos na página que recebe e valida os dados do login (<strong>valida_login.php</strong>) e, logo após "<em>includar</em>" a classe <strong>no começo do arquivo</strong> colocamos também o seguinte código:
 
 
@@ -49,7 +49,7 @@ Primeiro nós instanciamos a classe e depois, nas <strong>linhas 8 e 9</strong>,
 
 Caso o usuário tenha sido logado com sucesso, o próximo passo seria redirecioná-lo para a página restrita, e foi isso o que fizemos na <strong>linha 14</strong>... :)
 
-<h3>3. Proteger a(s) página(s) restrita(s)</h3>
+### 3. Proteger a(s) página(s) restrita(s)
 Agora que nosso login já está sendo validado e redirecionado, precisamos proteger a página registra (ou as páginas, isso depende do seu site)... Vamos novamente no começo do arquivo (<strong>pagina_restrita.php</strong>) e vamos inserir o seguinte código:
 
 
@@ -59,7 +59,7 @@ Mas é só isso!? Sim! :)
 
 A classe verifica se há um usuário logado, caso não exista um usuário logado ele é redirecionado pro formulário de login.
 
-<h3>4. Página de logout</h3>
+### 4. Página de logout
 Vocês já fizeram a validação do login e a proteção da página restrita... Agora só falta a página de logout!
 
 Vamos criar um arquivo chamado <strong>logout.php</strong> que será acessado quando o usuário quiser sair do sistema, nele inserimos apenas o seguinte código:
@@ -69,7 +69,7 @@ Vamos criar um arquivo chamado <strong>logout.php</strong> que será acessado qu
 
 O código fará com que o usuário seja deslogado e redirecionado para a tela de login... Quer mais moleza que isso?
 
-<h3>5. Exibindo dados do usuário</h3>
+### 5. Exibindo dados do usuário
 Há! Pensou que tinha acabado?
 
 Para exibir dados do usuário logado, como o nome ou e-mail, você precisa inserir um simples <strong>echo</strong> puxando os dados da sessão, assim:

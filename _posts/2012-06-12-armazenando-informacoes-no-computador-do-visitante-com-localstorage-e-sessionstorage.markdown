@@ -27,21 +27,21 @@ Todos vocês já ouviram falar dos Cookies e da Sessão, que basicamente faz a
 
 A novidade do localStorage/sessionStorage é que isso é feito de forma bastante facilitada, via JavaScript e usando recursos nativos do seu navegador.
 
-<h3>Usando o localStorage</h3>
+### Usando o localStorage
 O <strong>localStorage</strong> salva dados no computador do visitante, que ficam vinculados ao (e apenas acessíveis pelo) seu domínio. E pra usar é bem simples:
 
 Use o método <strong>setItem(nome, valor)</strong> para criar/salvar novos itens e o depois o método<strong> getItem(nome)</strong> para recuperar o valor.
 
 <div data-gist-id="2920989" data-gist-show-loading="false"></div>
 
-<h3>Usando o sessionStorage</h3>
+### Usando o sessionStorage
 Já o <strong>sessionStorage</strong> faz exatamente a mesma coisa, só que os dados ficam salvos apenas durante a sessão (e são apagados quando o visitante fecha a aba/navegador):
 
 <div data-gist-id="2921014" data-gist-show-loading="false"></div>
 
 Viram como é simples?
 
-<h3>Quem avisa, amigo é...</h3>
+### Quem avisa, amigo é...
 Mas prestem atenção... os dados salvos estão acessíveis <strong>APENAS</strong> no domínio criado.. então preparem-se para problemas entre <strong>www.site.com.br</strong>, <strong>site.com.br</strong> e <strong>subdominio.site.com.br</strong>.
 
 Outro ponto a considerar é que você só consegue salvar strings e números (inteiros) nesse mecanismo, mas nada te impede de criar um objeto JSON com os dados do array/objeto que você quer salvar, não é mesmo? :)

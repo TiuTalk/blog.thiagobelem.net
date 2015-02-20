@@ -34,7 +34,7 @@ Agora, com o PHP 5.3.0 precisamos usar a função <strong>preg_match()</strong>,
 
 Repare que entrou uma barra (pra direita) antes e depois da expressão regular.
 
-<h3>eregi()</h3>
+### eregi()
 E pra quem usava o eregi, é só adicionar um "i" no final da expressão regular, dessa forma:
 
 

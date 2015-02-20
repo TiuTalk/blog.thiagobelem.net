@@ -35,7 +35,7 @@ Que em tradução livre seria:
 <blockquote><strong>Nota:</strong> Se você está usando a versão 4.1.3 ou superior do MySQL é altamente recomendável que você use essa extensão.
 </blockquote>
 
-<h3>Começando do começo: O velho modo</h3>
+### Começando do começo: O velho modo
 Acredito que todos vocês já viram uma conexão e consulta MySQL feita da seguinte forma:
 
 
@@ -44,7 +44,7 @@ Acredito que todos vocês já viram uma conexão e consulta MySQL feita da segui
 Não há nada de especial com esse código... Conectamos ao MySQL e depois procuramos todas as notícias ativas e anteriores ao dia de hoje (inclusive)... O código por si só não é feito nem "mal organizado", mas isso é por que vocês ainda não conhecem o <strong>MySQLi</strong>!
 
 
-<h3>Orientação a Objetos: a beleza programação</h3>
+### Orientação a Objetos: a beleza programação
 Agora veja o código que faz a mesma coisa que o anterior, só que em sua versão MySQLi orientada a objetos:
 
 <div data-gist-id="2bb987b60fe51af11668" data-gist-show-loading="false"></div>

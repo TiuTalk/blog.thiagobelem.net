@@ -15,7 +15,7 @@ tags:
 ---
 Após a instalação do MySQL (se você não fizer nada), o usuário padrão será o "<em>root</em>" e a senha será vazia... E isso não é nada seguro, mesmo quando se desenvolve localmente... Hoje vou ensinar como mudar essa senha tanto no Windows quanto no Linux.
 
-<h3>Mudando a senha do <em>root</em> no Windows</h3>
+### Mudando a senha do <em>root</em> no Windows
 1. Iniciar > Executar, digite CMD e aperte enter
 
 2. Navegue até o diretório <strong>bin</strong> dentro da pasta onde o MySQL está instalado, pode ser <strong style="background: gray; color: orange">C:\mysql\bin</strong> ou se você estiver usando o XAMPP será <strong style="background: gray; color: orange">C:\xampp\mysql\bin</strong>
@@ -28,7 +28,7 @@ Pronto, a senha foi modificada... Não se esqueça de mudar a senha do phpMyAdmi
 
 
 
-<h3>Mudando a senha do <em>root</em> no Linux</h3>
+### Mudando a senha do <em>root</em> no Linux
 Se você está mudando a senha pela primeira vez é só acessar o terminal e digitar:
 
 <div data-gist-id="8b6ec1e36e4604807041" data-gist-show-loading="false"></div>

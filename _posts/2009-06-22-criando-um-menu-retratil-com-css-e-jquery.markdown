@@ -26,17 +26,17 @@ O efeito em sí é bem simples e fácil de ser modificado... O meu foi feito usa
 
 Bom... vamos lá!
 
-<h3>Código (X)HTML do menu</h3>
+### Código (X)HTML do menu
 
 <div data-gist-id="23eab7fd11e1d32b8e9a" data-gist-show-loading="false"></div>
 
 Vejam que o sub-menu (que irá aparecer) fica dentro do <li> e fora do <a>.
 
-<h3>Código CSS do menu</h3>
+### Código CSS do menu
 
 <div data-gist-id="bc990c21a16b59d8fe3c" data-gist-show-loading="false"></div>
 
-<h3>Bloco de código do efeito (jQuery)</h3>
+### Bloco de código do efeito (jQuery)
 
 <div data-gist-id="d413e6009e1132428a70" data-gist-show-loading="false"></div>
 

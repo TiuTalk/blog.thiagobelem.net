@@ -26,7 +26,7 @@ Este artigo é uma "tradução" (com algumas modificações) do artigo "[Using G
 
 Não vou entrar no mérito de explicar o conceito de repositórios distribuídos ou as vantagens do Git. Pra quem não conhece a ferramenta, recomendo: <span class="removed_link" title="http://akitaonrails.com/2008/04/02/micro-tutorial-de-git">esse post</span> e <span class="removed_link" title="http://akitaonrails.com/2010/08/17/screencast-comecando-com-git">esse screencast</span> (vale o preço).
 
-<h3>Repositório local</h3>
+### Repositório local
 Se você já possui um repositório local, pule para o pŕoximo passo.
 
 Tudo começa com a criação de um repositório Git simples:
@@ -36,7 +36,7 @@ Tudo começa com a criação de um repositório Git simples:
 
 Agora que seu repositório local está pronto, o index.html foi criado e o primeiro commit feito, vamos criar o repositório remoto no ambiente de produção (servidor onde o site está/vai rodar).
 
-<h3>Repositório remoto</h3>
+### Repositório remoto
 Partindo do princípio que o seu site vai rodar em um servidor que você possui [acesso SSH facilitado](/login-automatico-no-ssh-no-linux), vamos criar o repositório lá que será uma cópia do servidor local:
 
 
@@ -64,7 +64,7 @@ Esses dois comandos irão adicionar o repositório externo ao repositório local
 
 Após os dois comandos o servidor vai conter uma cópia dos arquivos locais.
 
-<h3>Atualizando os arquivos</h3>
+### Atualizando os arquivos
 À medida que você for trabalhando no site e quiser atualizar o servidor no ar, é so rodar o comando (após fazer o commit):
 
 
@@ -72,7 +72,7 @@ Após os dois comandos o servidor vai conter uma cópia dos arquivos locais.
 
 Isso irá enviar as modificações feitas para o repositório remoto.
 
-<h3>Finalizando...</h3>
+### Finalizando...
 Agora você consegue atualizar o seu site no servidor de produção sem abrir FTP, sem abrir arquivos ou arrastar pastas pelo cliente de FTP... Sem nem abrir o SSH e fazer algo parecido.
 
 É só rodar o <code>git push web</code> e tá tudo certo! :)

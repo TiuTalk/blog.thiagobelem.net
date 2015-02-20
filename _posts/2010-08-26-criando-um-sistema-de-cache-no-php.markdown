@@ -73,7 +73,7 @@ E agora o método para ler esse valor do cache:
 
 Se você reparar, esse último método irá excluir o arquivo de cache caso ele tenha expirado.
 
-<h3>Usando o sistema de cache</h3>
+### Usando o sistema de cache
 Veja um exemplo de uso do sistema de cache onde primeiro verificamos se há um valor armazenado no cache e, se não houver, geramos o valor novamente e salvamos ele no cache para futuras verificações:
 
 

@@ -40,7 +40,7 @@ Veja um exemplo:
 
 Como resultado desse exemplo você teria uma URL encurtada economizando 75 caracteres!
 
-<h3>Usando uma função pra facilitar as coisas</h3>
+### Usando uma função pra facilitar as coisas
 Você também pode criar uma função que faz o trabalho de instanciar a classe pra você!
 
 
@@ -51,7 +51,7 @@ Com isso seria só usar:
 
 <div data-gist-id="c85e7041b7a3326dfaef" data-gist-show-loading="false"></div>
 
-<h3>Download do código fonte</h3>
+### Download do código fonte
 Caso você tenha preguiça de copiar e colar, pode baixar o [arquivo com código fonte](/arquivos/googl.class.phps) dela e sair usando!
 
 Espero que tenham gostado! :)

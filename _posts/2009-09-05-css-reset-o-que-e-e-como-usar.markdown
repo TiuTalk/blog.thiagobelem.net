@@ -18,17 +18,17 @@ Hoje vou falar sobre uma coisa simples, rápida e MUUITO útil... o <strong>CSS 
 
 Há um grande problema quando implementamos um layout em HTML e CSS e vamos testar em outros browsers como o Internet Explorer ou Safari... Alguns elementos não se comportam da mesma forma, mesmo que esse comportamento não tenha sido definido/sobrescrito por você... por exemplo o H1, H2 e H3... Eles têm tamanhos diferentes em cada browser, mesmo usando a mesma fonte eles vão aparecer - se você não definir esse tamanho - com tamanhos diferentes.
 
-<h3>O que é?</h3>
+### O que é?
 O CSS Reset é - basicamente - um arquivo que "limpa" os estilos padrões de todos os elementos HTML que já possuem uma formatação padrão. Ele tira cores, tamanhos de fonte, <em>margins</em>, <em>paddins</em>, efeitos e decorações... Quase tudo de quase todos os elementos vira "padrão", como um texto sem formatação/alteração nenhuma.
 
-<h3>Como usar?</h3>
+### Como usar?
 Da forma mais simples do mundo: inserindo o arquivo no seu site como um CSS normal, antes de qualquer outro CSS que seu site usar.
 
 Se você inserir em um site pronto você pode ver seu site se desfigurar todo, isso vai significar que você se baseou em estilos padrões de alguns elementos, o que é errado... Já que esse estilo pode mudar entre navegadores/futuras versões.
 
 É altamente recomendável que você insira/use esse arquivo sempre que for começar a implementar um site. :)
 
-<h3>E como é esse arquivo?</h3>
+### E como é esse arquivo?
 Existem vários <strong>CSS Reset</strong> rolando pela Internet... Todos funcionam da mesma forma mas alguns atingem mais elementos que outros... Mas teoricamente não há diferença.
 
 Esse aqui é o que eu uso no meu [site pessoal](http://thiagobelem.net/):

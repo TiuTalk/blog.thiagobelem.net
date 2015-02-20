@@ -27,7 +27,7 @@ O autor do livro é considerado um dos criadores do TDD, então o cara **sabe do
 
 Mesmo recomendando muito o livro, não estou aqui pra falar dele e sim do assunto principal do livro: TDD.
 
-<h3>Não sou um adepto fanático do TDD</h3>
+### Não sou um adepto fanático do TDD
 Eu adoraria, mas ainda não consegui aplicar TDD em cada projeto que trabalho. Conheço bem e concordo MUITO com a metologia por trás do TDD, mas ainda consigo usá-lo naturalmente, tenho que me forçar sempre que quero testar algo.
 
 ## Mas afinal, que diabos é TDD?
@@ -41,7 +41,7 @@ Primeiramente o desenvolvedor escreve um [refatorado](https://pt.wikipedia.org/
 
 **Kent Beck**, considerado o criador ou o 'descobridor' da técnica, declarou em 2003 que TDD encoraja designs de código simples e inspira confiança.
 
-<h3>E qual a vantagem disso?</h3>
+### E qual a vantagem disso?
 Pra mim, TDD é uma forma de você garantir que, através de pequenos passos, você vai chegar à um "todo-completo", que é uma aplicação que funciona baseado apenas nas especificações que foram definidas, e lá na frente quando você for mudar algo, é só rodar os testes novamente para garantir que tudo continue funcionando.
 
 Mas por via das dúvidas, pesquisem mais sobre o assunto, tem um mundo por trás disso tudo.
@@ -81,10 +81,10 @@ Ao longo desse artigo irei copiar essa lista diversas vezes, marcando com **negr
 ## Mas peraí... e a linguagem?
 Verdade... temos que decidir uma linguagem, e como eu falo MUITO de PHP aqui no blog vamos fazer esse FizzBuzz em **Python**, que já vem com um **framework de testes** embutido na linguagem, pra quem quiser brincar de **testes unitários** no PHP recomendo muito o [PHPUnit](https://github.com/sebastianbergmann/phpunit/).
 
-<h3>Baby steps, ou "Passos de bebê"</h3>
+### Baby steps, ou "Passos de bebê"
 Uma das maiores características do desenvolvimento orientado à testes é que você sempre tente dar passos menores que suas pernas, não significa que você não possa dar uma corrida se o projeto exigir, mas sempre avance com pequenos passos, nada de escrever 100 linhas de código sem testar (com testes)... e eu vou tentar seguir essa metodologia aqui.
 
-<h3>Mãos à obra!</h3>
+### Mãos à obra!
 No TDD você SEMPRE começa pelo teste, então vamos começar criando nosso arquivo de testes:
 
 <div data-gist-id="2877310" data-gist-show-loading="false"></div>
@@ -168,7 +168,7 @@ Conseguimos! O primeiro item da lista foi resolvido! :D
 
 Mas agora temos outro problema... que é justamente a nossa asserção de "FizzBuzz(1) é 1" falhando.
 
-<h3>Fazendo um teste passar</h3>
+### Fazendo um teste passar
 Agora vem a parte (pra mim) mais importante do TDD:
 
 Sempre que você escrever um teste e ele quebrar, pergunte-se: "<span style="color: #333399;">**Qual o menor passo, a menor mudança no código, que eu posso fazer pra esse teste passar?**</span>" Não importa se esse passo é elegante, segue padrões de projeto ou está simplesmente enganando o código... A primeira vez que você faz o teste passar tem a ver com velocidade e simplicidade, boas práticas fica pro momento da refatoração, com todos os testes passando.

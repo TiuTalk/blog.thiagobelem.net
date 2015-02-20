@@ -30,7 +30,7 @@ A questão aqui é que a senha do SSH deve ser extremamente segura, e lembar de 
 
 Vamos chamar a sua maquina de <strong>cliente</strong> (a máquina que você está usando) e <strong>servidor</strong> a máquina que você quer acessar.
 
-<h3>Criando a chave pública no <strong>cliente</strong></h3>
+### Criando a chave pública no <strong>cliente</strong>
 No cliente, vá até a linha de comando e digite:
 
 
@@ -58,7 +58,7 @@ Dê ENTER sem digitar nada
 
 Feito isso, você criou uma <strong>chave pública</strong> e esse arquivo <code>~/.ssh/id_dsa.pub</code> pode ser enviado para o servidor ao qual você deseja se conectar que, quando você tentar fazer login, ele irá ler o arquivo e te identificar, permitindo o login automático.
 
-<h3>Enviando a sua chave pública para o <strong>servidor</strong></h3>
+### Enviando a sua chave pública para o <strong>servidor</strong>
 Você pode usar sFTP (FTP via SSH) ou SCP para enviar a chave pública para o servidor, veja um exemplo utilizando SCP:
 
 
@@ -68,7 +68,7 @@ Lembrando que a parta <code>USUARIO_REMOTO@SERVIDOR</code> são os mesmos dados 
 
 Feito isso, você precisa habilitar a chave pública.
 
-<h3>Habilitando a sua chave pública no <strong>servidor</strong></h3>
+### Habilitando a sua chave pública no <strong>servidor</strong>
 Faça login via SSH no seu servidor, e execute os seguintes comandos:
 
 

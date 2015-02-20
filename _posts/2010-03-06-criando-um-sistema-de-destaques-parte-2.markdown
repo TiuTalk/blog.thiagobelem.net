@@ -21,7 +21,7 @@ Tá na hora de continuar com a segunda parte do tutorial de destaques... Muita g
 
 Pra quem não lembra, na [assim](/exemplos/destaque/parte1/)) e hoje, como prometido, vamos criar o jQuery que dará o efeito de transição dos destaques.
 
-<h3>1. Inserindo o jQuery</h3>
+### 1. Inserindo o jQuery
 Se você já tem jQuery 1.4.2 (ou superior) inserido no seu site, pule essa parte... Caso você não tenha o jQuery ou seja uma versão antiga, recomendo que continue lendo.
 
 Vá ao site do [1.4.2](http://code.jquery.com/jquery-1.4.2.min.js)) e coloque o arquivo com o nome de <strong>jquery-1.4.2.min.js</strong> em uma pasta no seu site.
@@ -33,7 +33,7 @@ Feito isso nós podemos inserir o jQuery no site utilizando a seguinte linha:
 
 Essa linha deve ser inserida dentro da tag <strong><head></strong> do seu site e o nome do arquivo ou a sua pasta não fazem a mínima diferença... Contanto que você acerte o arquivo, tá tudo certo.
 
-<h3>2. Inserindo o jQuery Cycle</h3>
+### 2. Inserindo o jQuery Cycle
 Agora nós iremos inserir o plugin de jQuery mais útil que existe, o [galerias de fotos (slideshow) com jQuery](/galeria-de-fotos-slideshow-com-jquery)).
 
 Vá até o site do jQuery Cycle, baixe a última versão (até agora é a [2.80](http://www.malsup.com/jquery/cycle/release/jquery.cycle.zip?v2.80)) e insira-a no seu da mesma forma que você fez com o jQuery, apenas mudando o nome do arquivo e, se necessário, a pasta.
@@ -43,7 +43,7 @@ Quando você fizer o download encontrará vários arquivos, mas você só precis
 
 <div data-gist-id="e8691beff280b2c78510" data-gist-show-loading="false"></div>
 
-<h3>3. Criando o seu jQuery de Destaques</h3>
+### 3. Criando o seu jQuery de Destaques
 Agora vamos criar um arquivo chamado <strong>jquery.destaques.js</strong> que conterá o código para "rodar" o jQuery Cycle no bloco de destaques e fazer o efeito de transição entre os slides dele... Mais uma vez, o nome e a localização do arquivo, contanto que vocês saibam o que estão fazendo e insiram-o de forma correta no site, tá tudo bem.
 
 Começaremos o arquivo com o seguinte código:
@@ -69,7 +69,7 @@ Agora vamos ao 1% faltante que são três tarefas bastante simples:
 <li>Aplicar o efeito que faz a barrinha de descrição (com fundo preto) sumir e aparecer em cada troca de slides</li>
 <li>Inserir o código que trocará o link da etiqueta [Destaques] que fica sobre o slideshow, usando sempre o link do destaque que está aparecendo</li>
 </ul>
-<h3>3.1 - Inserindo paginadores no seu slideshow</h3>
+### 3.1 - Inserindo paginadores no seu slideshow
 Para inserir os paginadores precisaremos antes criar um container para recebê-los, fazemos isso com esse código:
 
 
@@ -105,7 +105,7 @@ Vamos inserir mais duas opções que farão o slideshow pausar a transição se 
 
 <div data-gist-id="8212a4721b1e1d0b70e2" data-gist-show-loading="false"></div>
 
-<h3>3.2 - Efeito de transição: escondendo e mostrando a barrinha de titulo</h3>
+### 3.2 - Efeito de transição: escondendo e mostrando a barrinha de titulo
 Agora nós vamos inserir uma opção que tem comportamento de <em>callback</em>, que são funções/métodos que são chamados logo após outras ações... Um bom exemplo de <em>callback</em> seria um redirecionamento após um login bem sucedido... Vamos inserir o código de <em>callback</em> que executará uma função antes de cada troca de slide:
 
 
@@ -130,7 +130,7 @@ Vamos também criar o <em>callback</em> que será chamado após a troca de slide
 
 E agora a nossa barrinha de destaques está subindo e descendo como o planejado! :D Só falta trocar o link da etiqueta [Destaques] para o link exato de cada destaque.
 
-<h3>3.3 - Trocando o link da etiqueta [Destaques]</h3>
+### 3.3 - Trocando o link da etiqueta [Destaques]
 O link da etiqueta deverá ser atualizado logo após a troca de slides, então vamos modificar o callback after para isso:
 
 

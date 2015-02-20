@@ -26,7 +26,7 @@ Isso é bem útil quando temos um site de tutoriais/compartilhamento de código/
 
 Hoje vou ensiná-los como habilitar isso em seus servidores rodando Apache e PHP... São apenas dois passos!
 
-<h3>Passo 1</h3>
+### Passo 1
 Vá na raiz do seu site e edite (ou crie se necessário) o seu arquivo .htaccess e adicione as seguintes linhas:
 
 
@@ -34,7 +34,7 @@ Vá na raiz do seu site e edite (ou crie se necessário) o seu arquivo .htaccess
 
 Com isso você cria uma nova "ação" no apache e diz que os arquivos .phps serão "lidos" por essa "ação"... Você vai entender melhor no segundo passo:
 
-<h3>Passo 2</h3>
+### Passo 2
 Ainda na raiz do seu site, crie um arquivo chamado "<strong>php-source.php</strong>" e coloque o seguinte conteúdo nele:
 
 

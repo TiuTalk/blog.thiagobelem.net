@@ -42,7 +42,7 @@ O valor dessa hora DEVE variar em função da complexidade e "demora" do trabalh
 
 Poucos clientes vão aceitar serem cobrados por hora... Evite coisas do tipo "<em>trabalhei 5 horas a mais então quero R$ 150,00 a mais</em>", isso vai gerar stress.
 
-<h3>Manter um controle do seu trabalho facilita o cálculo do seu valor</h3>
+### Manter um controle do seu trabalho facilita o cálculo do seu valor
 O que você pode fazer pra ajudar a se organizar é criar uma <strong>planilha de horas trabalhadas</strong>, anotando sempre o dia, a hora que começou, a hora que terminou e o que você fez nesse período. Assim você tem um controle do seu progresso, do que foi feito, quando foi feito, quanto tempo você demorou pra fazer cada coisa ou quanto tempo você ainda tem pra terminar o trabalho.. Com isso você também vai conseguir prever se vai dar pra terminar o serviço dentro do prazo, se vai trabalhar menos ou mais e etc.
 
 O difícil aqui é calcular o tal do "salário ideal", pois esse deveria ser um salário que pague todas as contas numa situação onde você não tenha um emprego fixo e ganhe apenas seu salário de freelancer.
@@ -51,7 +51,7 @@ Outro ponto que você deve tomar muito cuidado é que é praticamente impossíve
 
 Eu pessoalmente acho que um trabalho de programador que tenha um mínimo de cuidado com o código não deva custar menos de R$ 1.000,00... tem gente que [faz todas as etapas do site por R$ 200,00](http://www.hardware.com.br/comunidade/cobrar-homepages/198624/#post1513847) e eu acho isso um absurdo. Claro que o preço varia pra cada lugar, mas as pessoas (clientes) precisam entender que esse é um trabalho puramente intelectual: não há matéria prima, e a qualidade é estritamente ligada ao seu conhecimento.
 
-<h3>Quanto vale o que você sabe?</h3>
+### Quanto vale o que você sabe?
 Quanto vale todas as horas de sono que você perdeu na frente do computador tentando debugar aquele código que não roda? O que você sabe não pode ser colocado num HD ou pendrive e vendido na esquina, ninguém tira isso de você... E isso <strong>não tem preço</strong>.
 
 O difícil é transformar o incalculável em um valor justo, como se você tivesse vendendo um produto a base de uma matéria prima, mensurável e palpável.

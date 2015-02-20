@@ -18,33 +18,33 @@ tags:
 ---
 Hoje vou começar a falar um pouco sobre os APIs de informações do Google... Durante toda a semana que passou dei uma olhada rápida em todas as APIs deles e posso dizer: tem um mundo inexplorado ali... Pelo menos pros brasileiros. De hoje em diante vou focar aprender todas (eu disse TODAS) as APIs deles e sempre que eu me achar apto, vou passar algo aqui pra vocês.
 
-<h3>GAPI hein?</h3>
+### GAPI hein?
 <strong>GAPI</strong> significa <em>Google Analytics PHP Interface</em> (ou Interface em PHP para Google Analytics) e é um projeto open-source criado por um cara chamado Stig Manning... Esse projeto foi criado para facilitar a sua (e a minha) vida na hora de buscar dados e gerar relatórios com os dados do Google Analytics para serem exibidos em outros sites... Espera um pouco, você não sabia que isso era possivel?! Viva la revolucion! :D
 
 O GAPI é uma classe que te ajudará a fazer todo o trabalho de login, encontrar profile IDs, filtrar relatórios e tudo mais... Foi desenvolvido para ser usado com <strong>Frameworks</strong> (Symfony, CakePHP, Zend e etc.)... Mas pode ser usado perfeitamente por qualquer site com PHP 5 ou superior (e é isso que eu vou ensinar a fazer aqui hoje).
 
 Com a API do Google Analytics você pode ter acesso a QUALQUER dado/relatório que teria acessando normalmente sua conta pelo site.
 
-<h3>Download e "Instalação"</h3>
+### Download e "Instalação"
 Para baixar o GAPI é simples.. Como diria meu professor de física do colegial: "é mel na chupeta!"... Acesse a [página oficial do projeto](http://code.google.com/p/gapi-google-analytics-php-interface/) dentro do Google Code e (logo ali na lateral direita) faça o download da última versão.
 
 Para poder usar a classe você só precisa ter o hárduo trabalho de incluir o arquivo <span style="color: orange"><strong>gapi.class.php</strong></span> no seu site.
 
-<h3>Exemplo de uso - Autenticação</h3>
+### Exemplo de uso - Autenticação
 Da mesma forma que você precisa fazer o login com a sua conta Google para ter acesso aos perfis de sites, e posteriormente aos relatórios desses perfis, você também precisa fazer o login autenticando seus dados de acesso... Veja como é dificil fazer isso:
 
 <div data-gist-id="c12b2ea621a3d25eb0e2" data-gist-show-loading="false"></div>
 
 --
 
-<h3>Exemplo de uso - Listando os perfis de site</h3>
+### Exemplo de uso - Listando os perfis de site
 Para listar todos os perfis de site que você tem na sua conta você pode fazer assim:
 
 <div data-gist-id="ce28ccf429a7726ad06c" data-gist-show-loading="false"></div>
 
 O código acima irá exibir uma pequena lista dos sites que você tem na sua conta do Analytics... Usarei como exemplo o ID <strong>12345</strong> que é um ID fictício.
 
-<h3>Exemplo de uso - Pegando dados</h3>
+### Exemplo de uso - Pegando dados
 Agora você já fez o login e tem o ID do perfil do site que você quer pegar os resultados... Vamos fazer duas consultas de exemplo e pegar os dados necessários para fazer um relatório completo sobre as visitas e pageviews do mês passado:
 
 

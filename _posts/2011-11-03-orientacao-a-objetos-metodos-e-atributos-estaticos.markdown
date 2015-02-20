@@ -15,7 +15,7 @@ tags: []
 ---
 Hoje na faculdade estava vendo o código de um colega que está aprendendo PHP e comecei a discutir com ele algumas melhorias, o resultado final foi tão satisfatório e diferente do original que resolvi criar um post pra mostrar como o código evoluiu.
 
-<h3>O código original - Orientado à objetos ou PHP estruturado?</h3>
+### O código original - Orientado à objetos ou PHP estruturado?
 O código original já estava dentro de uma classe, mas não faria diferença nenhuma se fosse PHP estruturado... não lembro exatamente o nome dos métodos/variáveis, mas o restante está igualzinho:
 
 
@@ -33,13 +33,13 @@ Meu amigo me disse que essa classe seria para verificar os tipos de arquivos (ex
 
 <div data-gist-id="39e7b3cd6b4b424da7c6" data-gist-show-loading="false"></div>
 
-<h3>Atributos, melhor tê-los</h3>
+### Atributos, melhor tê-los
 O código está melhorando, mas ainda assim tem algo errado... não é responsabilidade dos métodos <code>fImage</code> e <code>fDoc</code> saber a lista de extensões válidas... isso não deveria pertencer à classe como um todo e poder ser reutilizado?
 
 
 <div data-gist-id="001fb58e205e7215fc9e" data-gist-show-loading="false"></div>
 
-<h3>Atributos e métodos estáticos</h3>
+### Atributos e métodos estáticos
 Agora sim está parecendo uma classe normal, com atributos e métodos... Aí percebi que de orientada à OBJETOS essa classe não tem nada! Não estamos trabalhando com objetos.. O uso atual dessa classe seria assim:
 
 
@@ -57,7 +57,7 @@ E agora a utilização ficou um pouco mais simples:
 
 Sendo que você ainda pode usar o <code>cFileType::image</code> (pra ter uma lista de imagens válidas) em qualquer parte da sua aplicação sem instanciar a classe.
 
-<h3>Reutilização de código</h3>
+### Reutilização de código
 Segundo a abordagem [DRY](http://pt.wikipedia.org/wiki/Don't_repeat_yourself), não devemos nos repetir... Por isso aquele <code>in_array()</code> começou a me incomodar... Vai que você está verificando 30 tipos diferentes de arquivos, todos os métodos fazendo exatamente a mesma coisa... mas aí você decide mudar o in_array() pra algo mais eficiente ou aceitar até o caminho absoluto de um arquivo... vai mudar em 30 métodos na mão?
 
 A responsabilidade de verificar se o valor <code>$type</code> tá dentro de uma "lista" válida não é dos métodos <code>fImage</code> e <code>fDoc</code>.. então vamos delegar:
@@ -67,7 +67,7 @@ A responsabilidade de verificar se o valor <code>$type</code> tá dentro de uma 
 
 Agora se precisarmos mudar essa lógica de verificar se o <code>$type</code> tá dentro de uma "lista" válida, só vamos precisar mudar em um lugar só.
 
-<h3>cFileType? fType? fImage? O resultado final</h3>
+### cFileType? fType? fImage? O resultado final
 Temos que concordar que os nomes de classe e métodos escolhidos pelo meu amigo não são os mais intuitos... Então como uma modificação final, sugiro a seguinte classe devidamente renomeada:
 
 

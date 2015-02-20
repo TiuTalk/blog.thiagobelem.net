@@ -24,14 +24,14 @@ Já faz um tempão que não posto um artigo "técnico" aqui, não é mesmo?
 
 Hoje precisei habilitar o [Nginx](http://nginx.org/) (um servidor web <strong>parrudão</strong> que veio pra cutucar o <strong>Apache</strong>)... Depois de pesquisar um pouco, cheguei à uma solução e resolvi repassar. :)
 
-<h3>gzoque?</h3>
+### gzoque?
 Pra quem não sabe, o <strong>gzip</strong> é um método de compressão de arquivos (lembram do ZIP e do RAR?) utilizando também no mundo WEB.. O seu navegador consegue receber um arquivo .js compactado com <strong>gzip</strong> e utilizá-lo da mesma forma.
 
 [http://pt.wikipedia.org/wiki/Gzip](http://pt.wikipedia.org/wiki/Gzip)
 
 Na maioria dos casos a compressão em gzip atinge uma <strong>redução de 50% do tamanho original</strong>... Por isso ela é muito recomendada na hora de otimizar o carregamento dos sites.
 
-<h3>Configurando o nginx</h3>
+### Configurando o nginx
 Pra fazer o nginx entregar arquivos HTML, XML, CSS, JS (e outros) comprimidos em gzip você precisa editar o arquivo de configuração do site, normalmente esses arquivos ficam na pasta:
 
 

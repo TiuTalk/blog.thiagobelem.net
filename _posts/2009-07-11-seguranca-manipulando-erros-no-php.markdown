@@ -16,12 +16,12 @@ tags:
 ---
 Hoje vou mostrar pra vocês como usar um "manipulador de erros" (Error Handler) no PHP.
 
-<h3>Por que manipular os erros?</h3>
+### Por que manipular os erros?
 Quase se trata de segurança, os erros do PHP são como uma janela aberta... Eles não permitem que um atacante consiga invadir/derrubar o seu site, mas permitem que o atacante conheça um pouco mais sobre o que é e como funciona o seu site.
 
 Manipular os erros de forma correta, além de deixar o site mais "bonito" faz com que você saiba, em <strong>tempo real</strong>, o que acontece com aquele seu site de 4 anos atrás que você nem monitora mais, pois ele te envia um e-mail dizendo o nome do site, o arquivo e a linha que deu erro.
 
-<h3>Arquivo para a manipulação de erros</h3>
+### Arquivo para a manipulação de erros
 Para iniciar a manipular os seus erros é só dar um include/require nesse arquivo logo no começo do seu site. E não se esqueça de mudar as configurações entre as linhas 8 e 14.
 
 
@@ -29,7 +29,7 @@ Para iniciar a manipular os seus erros é só dar um include/require nesse arqui
 
 Caso você precise mudar a forma com qual o email é enviado, é só alterar ali em cima, entre as linhas 65 e 105.
 
-<h3>Causando um erro</h3>
+### Causando um erro
 Ao executar o seguinte script (exibir uma variável que não existe):
 
 

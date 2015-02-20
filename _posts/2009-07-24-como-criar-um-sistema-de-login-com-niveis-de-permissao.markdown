@@ -25,7 +25,7 @@ Versões utilizadas nesse artigo: <strong>PHP 5.2.9</strong> e <strong>MySQL 5.0
 
 O nosso sistema consistirá em um login simples, validado por usuário e senha (encriptada) contra uma tabela no banco de dados e armazenando os dados na sessão. Haverão dois níveis de acesso para os nossos usuários: normal (1) e administrador (2).
 
-<h3>Criando a Tabela MySQL</h3>
+### Criando a Tabela MySQL
 Você pode executar esse código MySQL para criar a nossa tabela de usuários que tem 7 campos: id, nome, usuario, senha, niveis, ativo e cadastro:
 
 <div data-gist-id="737e6aec868203d58180" data-gist-show-loading="false"></div>
@@ -38,7 +38,7 @@ Como vocês podem perceber, o nosso campo de senha tem 40 caracteres e quando ca
 
 
 
-<h3>O formulário de Login em XHTML</h3>
+### O formulário de Login em XHTML
 Vamos criar agora o nosso formulário que será onde o visitante entrará com os dados e será mandado para a pagina validacao.php onde os dados serão validados (ohh).
 
 
@@ -48,7 +48,7 @@ Como esse artigo não é uma aula sobre formulários e método POST eu vou pular
 
 
 
-<h3>A validação dos dados</h3>
+### A validação dos dados
 Já temos o banco de dados e o formulário de login... Agora vamos começar a fazer a validação. Os próximos códigos deverão ser colocados dentro do <strong style="color: white; background: gray">validacao.php</strong> que irá tratar os dados recebidos do formulário:
 
 Primeiro de tudo nós precisamos verificar se o usuário de fato preencheu algo no formulário, caso contrário mandamos ele de volta para o <strong style="color: white; background: gray">index.php</strong>:
@@ -78,7 +78,7 @@ Depois de rodar a consulta (query) nós verificamos se o número de resultados e
 
 
 
-<h3>Salvando os dados na sessão</h3>
+### Salvando os dados na sessão
 Agora nós precisamos salvar os dados encontrados na sessão pois eles serão utilizados mais tarde, em outras páginas e eles precisam "persistir" até lá... Depois de salvar os dados na sessão nós iremos redirecionar o visitante para uma página restrita:
 
 
@@ -86,7 +86,7 @@ Agora nós precisamos salvar os dados encontrados na sessão pois eles serão ut
 
 
 
-<h3>Verificando se o usuário está logado</h3>
+### Verificando se o usuário está logado
 Nosso sistema de login está quase completo! Agora só precisamos verificar se o usuário está logado no sistema e se o seu o nível de acesso condiz com o da página... Vamos agora escrever um pequeno bloco de PHP no início do arquivo <strong style="color: white; background: gray">restrito.php</strong> (que só deve ser acessado por usuários logados):
 
 
@@ -99,7 +99,7 @@ Pronto meu amigo! O seu sistema de login está pronto para funcionar... Só vamo
 
 
 
-<h3>Código de Logout</h3>
+### Código de Logout
 O arquivo <strong style="color: white; background: gray">logout.php</strong> é tão simples que pode ter uma linha só:
 
 <div data-gist-id="36188a55a1d7e45b7f6e" data-gist-show-loading="false"></div>

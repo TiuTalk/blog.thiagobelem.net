@@ -18,15 +18,15 @@ Mas porque perder tempo com isso? Não é melhor limitar o upload de imagens, pe
 
 Existe uma classe pronta de PHP que eu gosto muito, chama [WideImage](http://wideimage.sourceforge.net/)... Vou mostrar aqui como usá-la para redimensionar (<em>resize</em>) e cortar (<em>crop</em>) imagens automaticamente, gerando (ou não) arquivos novos. Para um sistema que gera miniaturas (<em>thumbs</em>) isso é mais do que o suficiente.
 
-<h3>Redimensionando imagens</h3>
+### Redimensionando imagens
 
 <div data-gist-id="44e2f248db7f908710f8" data-gist-show-loading="false"></div>
 
-<h3>Cortando imagens</h3>
+### Cortando imagens
 
 <div data-gist-id="800f466e2feef483026e" data-gist-show-loading="false"></div>
 
-<h3>Mudando a qualidade de imagens</h3>
+### Mudando a qualidade de imagens
 
 <div data-gist-id="8d01f3114a31376fe29f" data-gist-show-loading="false"></div>
 

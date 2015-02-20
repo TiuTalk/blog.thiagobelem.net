@@ -38,7 +38,7 @@ A classe <strong>WideImage</strong> te ajuda manipular imagens salvas no seu sit
 <li>Memória o suficiente para carregar as imagens</li>
 </ul>
 
-<h3>Carregando Imagens para a Memória</h3>
+### Carregando Imagens para a Memória
 Quando você for usar a classe para manipular uma imagem você precisa, claro, carregar a imagem antes... Existem duas formas de fazer isso:
 
 <div data-gist-id="3800c622130578fffc1f" data-gist-show-loading="false"></div>

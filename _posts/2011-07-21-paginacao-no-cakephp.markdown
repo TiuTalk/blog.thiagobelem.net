@@ -34,14 +34,14 @@ Tenho recebido algumas dúvidas sobre como usar/fazer [paginação no CakePHP](h
 
 Você vai que precisamos de exatamente <strong>duas linhas</strong> pra fazer uma consulta paginada no CakePHP, e mais duas linhas pra mostrar os links de "pŕoximo" e "anterior". :)
 
-<h3>Você vai precisar de</h3>
+### Você vai precisar de
 <ol>
 <li><del>CakePHP instalado e configurado</del> (duh)</li>
 <li><del>Um model com alguns dados cadastrados no banco de dados</del> (duh²)</li>
 <li>Boa vontade</li>
 <li>5 minutos <em>(ou menos)</em></li>
 </ol>
-<h3>Começando pelo Controller</h3>
+### Começando pelo Controller
 <div>O trabalho da paginação começa no <strong>Controller</strong>... Defina os parâmetros de busca (find) normalmente, como você sempre fez:</div>
 
 <div data-gist-id="12230f0229f4d6490740" data-gist-show-loading="false"></div>
@@ -53,7 +53,7 @@ Definido os parâmetros de busca, podemos atribuí-los ao atributo <strong>pagin
 
 E tá tudo pronto.. agora é só ir pra view mostrar essas notícias e colocar os links de paginação! :)
 
-<h3>Paginação na View</h3>
+### Paginação na View
 Um exemplo básico (usando a tag <em>article</em> do <strong>HTML5</strong>) da listagem de notícias:
 
 
@@ -68,7 +68,7 @@ Na linha 1 e 3 nós mostramos os links para a <strong>próxima página</strong> 
 
 O <strong>PaginatorHelper</strong> tem muitas outras opções e customizações, não deixe de consultar a [documentação](http://book.cakephp.org/2.0/en/core-libraries/helpers/paginator.html).
 
-<h3>Quer saber mais sobre o CakePHP?</h3>
+### Quer saber mais sobre o CakePHP?
 [](http://assando-sites.com.br/)
 
 Inscreva-se no meu <strong>curso online</strong> de CakePHP, o [Assando Sites](http://assando-sites.com.br)!

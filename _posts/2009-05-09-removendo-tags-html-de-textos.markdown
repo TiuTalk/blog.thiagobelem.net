@@ -19,7 +19,7 @@ Você, nobre programador, precisa estar pronto para o pior... E uma frase muito 
 
 Então vou falar aqui sobre três funções que podem ser usadas para amenizar esse problema: a <strong>strip_tags()</strong>, <strong>htmlspecialchars()</strong> e a <strong>mysql_real_escape_string()</strong>... Cada uma faz uma coisa, mas todas ajudam nesse tipo de proteção.
 
-<h3>Função strip_tags()</h3>
+### Função strip_tags()
 O que essa função faz é simples, curto e grosso: acaba, some, oculta, exclui, remove e destrói QUALQUER código HTML da string. Não importa se é um <span style="color: #888888;"><strong><b></strong><span style="color: #000000;">...</span><strong></b></strong></span>, um <span style="color: #888888;"><strong><a></strong></span>...<span style="color: #888888;"><strong></a></strong></span>, ou um <span style="color: #888888;"><strong><iframe></iframe></strong></span>... Vai tudo pro saco.
 
 Veja um exempo de uso:
@@ -34,7 +34,7 @@ Você também pode, se quiser, definir TAGs permitidas, que permanecerão na str
 
 » [Documentação da strip_tags()](http://www.php.net/manual/pt_BR/function.strip-tags.php)
 
-<h3>Função htmlspecialchars()</h3>
+### Função htmlspecialchars()
 A htmlspecialchars não remove as TAGs HTML... Ela escapa o código HTML... Transformando-o em códigos/entidades para exibição... Ou seja, se existe um <span style="color: #888888;"><strong><b></strong></span>Hahá!<span style="color: #888888;"><strong></b></strong></span> na string, vai aparecer tudo, inclusive o <span style="color: #888888;"><strong><b></strong><span style="color: #000000;">...</span><strong></b></strong></span> (e não negrito).
 
 Exemplo de uso:
@@ -46,7 +46,7 @@ Com isso você vai poder saber exatamente o que o espertinho tentou inserir no s
 
 » [Documentação da htmlspecialchars()](http://www.php.net/manual/pt_BR/function.htmlspecialchars.php)
 
-<h3>Função mysql_real_escape_string()</h3>
+### Função mysql_real_escape_string()
 No quesito segurança, essa é a função mais legal.. Ela serve pra quando você for inserir aquele código malicioso (que o usuário postou) no seu banco de dados... A função escapa todos os caracteres que o MySQL possa vir a usar e se confundir achando que faz parte da sua query...
 
 Vamos dar um exemplo:

@@ -22,7 +22,7 @@ Segundo a [documentação oficial sobre widgets do WordPress](http://codex.wordp
 
 Nesse exemplo, iremos criar um <strong>widget de "Sobre o autor"</strong>, que pode ser inserido no sidebar geral do blog (ou num sidebar específico para posts)... Esse widget irá verificar se estamos em um post (que o WordPress chama de <em>single</em>), e caso estejamos, irá exibir o <strong>nome</strong>, o <strong>avatar</strong> e a <strong>descrição</strong> do autor do post, todos esses dados vindos diretamente do banco de dados do WordPress.
 
-<h3>A preparação</h3>
+### A preparação
 Antes de tudo, você vai precisar separar seu widget em três métodos dentro de uma classe:
 
 <ul>
@@ -42,7 +42,7 @@ Agora vamos inserir quatro métodos vazios para deixar a estrutura da classe pro
 
 <div data-gist-id="36aa215f03e0f947bc98" data-gist-show-loading="false"></div>
 
-<h3>Método form()</h3>
+### Método form()
 Agora vamos começar pelo método form(), que exibe o formulário... Esse widget não precisaria de formulário e opções pois ele não tem nenhum tipo de configuração, mas vamos deixar uma coisa opcional como exibir o link do site do autor.
 
 O nosso método form() ficará da seguinte forma:
@@ -54,7 +54,7 @@ Eu sei que parece complicado, mas estamos apenas criando um parágrafo com um ch
 
 Logo no começo do método pegamos uma informação da instância atual do widget, assim caso estejamos editando um widget, saberemos a opção salva no banco de dados.
 
-<h3>Método update()</h3>
+### Método update()
 Agora vamos partir para o método update(), que salva os dados e configurações do widget (nesse caso, apenas o checkbox) no banco de dados.
 
 Esse método precisará retornar os dados a serem salvos no banco de dados, ficando assim:
@@ -66,7 +66,7 @@ Mais uma vez, não tem mistério: sobrescrevemos os valores de <code>$instancia_
 
 E pra finalizar, o método mais importante...
 
-<h3>Método widget()</h3>
+### Método widget()
 Esse método será responsável por mostrar os dados (HTML) do widget na lateral do seu blog... Vamos fazê-lo passo-a-passo:
 
 Esse widget irá funcionar apenas nas páginas de post... então precisamos evitar que ele seja exibido nas outras páginas, dessa forma:

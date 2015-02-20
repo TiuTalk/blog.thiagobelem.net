@@ -61,14 +61,14 @@ Durante o final da instalação uma janela aparecerá perguntando a senha padrã
 <img class="size-full wp-image-1023  " title="Configuração de senha do MySQL 5.1" src="/arquivos/2010/12/mysql.png" alt="" width="632" height="266" /> Configuração de senha do MySQL 5.1
 
 <h2 id="php">Terceiro passo - Download e compilação do <strong>PHP 5.3.3</strong></h2>
-<h3>Bibliotecas necessárias</h3>
+### Bibliotecas necessárias
 Para conseguir compilar o PHP precisaremos que algumas bibliotecas estejam instaladas, insale-as com esse comando:
 
 [shell]$ sudo aptitude install libtidy-dev curl libcurl4-openssl-dev libcurl3 libcurl3-gnutls zlib1g zlib1g-dev libxslt1-dev libzip-dev libzip1 libxml2 libsnmp-base libsnmp15 libxml2-dev libsnmp-dev libjpeg62 libjpeg62-dev libpng12-0 libpng12-dev zlib1g zlib1g-dev libfreetype6 libfreetype6-dev libbz2-dev libmcrypt-dev libxmp-dev libmcrypt4 libltdl-dev[/shell]
 
 Após os 10MB de download você já pode partir para o download do código-fonte do PHP.
 
-<h3>Download do código-fonte do PHP</h3>
+### Download do código-fonte do PHP
 Para fazer o download (13MB) e descompactar o código-fonte do PHP 5.3.3, execute os seguintes comandos:
 
 [shell]$ cd ~
@@ -77,7 +77,7 @@ $ tar xvfz php-5.3.3.tar.gz[/shell]
 
 Feito isso você já tem o código fonte do PHP e é hora de configurar o compilador.
 
-<h3>Compilando o código-fonte do PHP</h3>
+### Compilando o código-fonte do PHP
 [shell]$ ./configure -with-apxs2=/usr/bin/apxs2 -with-mysql=/usr -with-mysqli=/usr/bin/mysql_config -with-pgsql=/usr -with-tidy=/usr -with-curl=/usr/bin -with-curlwrappers -with-openssl-dir=/usr -with-zlib-dir=/usr -enable-mbstring -with-xpm-dir=/usr -with-pdo-pgsql=/usr -with-pdo-mysql=/usr -with-xsl=/usr -with-ldap -with-xmlrpc -with-iconv-dir=/usr -with-snmp=/usr -enable-exif -enable-calendar -with-bz2=/usr -with-mcrypt=/usr -with-gd -with-jpeg-dir=/usr -with-png-dir=/usr -with-zlib-dir=/usr -with-freetype-dir=/usr -enable-mbstring -enable-zip -with-pear --with-config-file-path=/usr/local/lib[/shell]
 
 Não se assuste, vão aparecer MUITAS coisas na tela... Mas no final, se tudo deu certo, você receberá a seguinte mensagem:
@@ -112,7 +112,7 @@ Não se esqueça de copiar o php.ini de desenvolvimento para a pasta do PHP:
 
 [shell]$ sudo cp php.ini-development /usr/local/lib/php.ini[/shell]
 
-<h3>Fazendo o Apache rodar o PHP corretamente</h3>
+### Fazendo o Apache rodar o PHP corretamente
 O PHP precisa ser um módulo do seu servidor WEB para tudo correr bem… Normalmente você não precisaria fazer isso, mas devido ao motivo de uso da flag -i no passo anterior, nós precisamos fazer isso manualmente… Primeiro, mude o diretório:
 
 [shell]$ cd /etc/apache2/mods-available[/shell]

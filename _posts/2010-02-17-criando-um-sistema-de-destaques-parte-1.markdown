@@ -26,7 +26,7 @@ O sistema de destaques que iremos criar não é específico para o WordPress e s
 O sistema de destaques que iremos criar terá a seguinte aparência:
 [](/arquivos/2010/02/destaque.jpg)
 
-<h3>A marcação XHTML</h3>
+### A marcação XHTML
 Antes de mais nada, precisamos criar o HTML do nosso bloco de destaque... Começamos com uma div e dentro dela criaremos uma lista (UL) com três itens (LI):
 
 
@@ -54,7 +54,7 @@ Por fim, nós vamos inserir mais um link, dessa vez vazio, antes da lista (UL)..
 
 <div data-gist-id="9e938cee3f1fb0209d96" data-gist-show-loading="false"></div>
 
-<h3>Melhorando a aparência (CSS)</h3>
+### Melhorando a aparência (CSS)
 Começaremos criando um arquivo CSS e nele definiremos que a lista (UL), os seus itens (LI) e as imagens não terão estilo, margem ou espaçamento:
 
 

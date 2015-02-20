@@ -22,7 +22,7 @@ Como prometido, hoje vou continuar o [tutorial sobre URLs amigáveis](/aprendend
 
 <p style="color: gray;"><strong>Atualização 30/04/10</strong>: Adicionei algumas informações extras e fiz algumas correções nas RewriteRules.
 
-<h3>Reescrevendo URLs que possuem parâmetros</h3>
+### Reescrevendo URLs que possuem parâmetros
 Continuando o nosso exemplo, faremos agora a reescrita de URL do seguinte caso:
 
 <code>http://meusite.com/<span style="background: yellow;">produtos</span>.php?id=<span style="background: lime;">2</span></code> (A URL atual)
@@ -38,7 +38,7 @@ Perceba também que adicionamos um novo "termo" (valor) que é o nome do produto
 
 Você precisa entender que essa informação adicional, a princípio, <strong>não faz diferença alguma pro funcionamento do seu site</strong>, é apenas um bônus já que o seu sistema continuará identificando o produto pelo seu ID que está na última parte da URL.
 
-<h3>Reescrevendo a URL</h3>
+### Reescrevendo a URL
 O nosso <code>.htaccess</code> para reescrever a URL anterior (da página de contato) e essa nova URL mais complexa, ficará assim:
 
 
@@ -50,7 +50,7 @@ Agora vamos separar a regra de reescrita em três partes e explicar uma por uma:
 
 Vai ser preciso começar a entender um pouco sobre expressões regulares agora... Vamos lá!
 
-<h3>Expressões Regulares</h3>
+### Expressões Regulares
 As expressões regulares ou <em>RegExp</em> ou <em>ER</em> são formas de você validar uma string (texto).
 
 Suponhamos que você precise verificar se uma string é composta apenas por letras minúculas. Você pode fazer isso com a expressão regular <code>^[a-z]+$</code>, vamos tender o que isso significa:
@@ -117,7 +117,7 @@ Na terceira parte, em azul claro, temos <code style="background: cyan;">[NC]</co
 
 Só para reforçar para quem ainda não pegou a essência da coisa: Na primeira parte temos uma <strong>expressão regular</strong> que, se ela validar a URL que o visitante está acessando, a requisição vai ser redirecionada para o <strong>caminho</strong> especificado na segunda parte.
 
-<h3>Mais exemplos de URLs Amigáveis</h3>
+### Mais exemplos de URLs Amigáveis
 Vamos ver mais alguns exemplos que podemos colocar no nosso <code>.htaccess</code> e o entendimento de cada uma das regras, fica por sua conta:
 
 

@@ -24,7 +24,7 @@ Esse mês que passou muita gente me perguntou sobre como seria um bom ambiente d
 
 O ambiente do qual falarei é para <strong>Windows</strong> (preferencialmente XP, mas isso não tem importância).
 
-<h3>O Básico</h3>
+### O Básico
 <ul>
 <li><strong>Apache</strong> 2.2+</li>
 <li><strong>PHP</strong> 5.3+</li>
@@ -37,19 +37,19 @@ Esses são os componentes principais de um ambiente de desenvolvimento... Todos 
 
 Existem também outros programas que eu uso e facilitam (muito) a minha vida...
 
-<h3>MySQL Workbench</h3>
+### MySQL Workbench
 O [nesse post](/modelagem-de-banco-de-dados).
 
-<h3>Eclipse Galileo</h3>
+### Eclipse Galileo
 Comecei a usar o [Eclipse Galileo](http://www.eclipse.org/galileo/) (<em>free</em>) recentemente como IDE de desenvolvimento para PHP... Adorei! Ele é leve, altamente configurável e tem a capacidade de "ler" todos os arquivos do seu PHP e te ajudar a informar onde cada variável foi definida, ou quais são os argumentos daquela função que você criou a semanas atrás e nem lembra mais onde fica.
 
-<h3>HeidiSQL</h3>
+### HeidiSQL
 O [HeidiSQL](http://www.heidisql.com/) (<em>free</em>) é um "<em>MySQL front-end</em>", seria como um phpMyAdmin via programa (executável) para Windows e Linux... Geralmente uso ele para me conectar a banco de dados remotos que não possuam o phpMyAdmin no servidor.
 
-<h3>Visual SVN Server</h3>
+### Visual SVN Server
 Também uso muito o [SVN](http://pt.wikipedia.org/wiki/Svn) para ser instalado no seu computador (e acessado remotamente) para um controle de versão de arquivos e projetos... Ótimo para quando se trabalha em equipe ou se usa mais de um computador pra desenvolver o mesmo projeto.
 
-<h3>Tortoise SVN</h3>
+### Tortoise SVN
 Mesmo o Visual SVN tendo a opção de instalação de um <em>SVN Client</em> eu recomendo o uso do [Tortoise SVN](http://tortoisesvn.tigris.org/) (<em>free</em>) para se conectar, receber e enviar arquivos do seu servidor SVN. O Tortoise é o <em>SVN Client</em> mais usado do mundo. Ele se integra perfeitamente ao <em>shell</em> do Windows (menu que aparece quando se usa o botão direito nas pastas/arquivos).
 
 --

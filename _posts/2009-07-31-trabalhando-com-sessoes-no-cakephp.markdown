@@ -22,7 +22,7 @@ Pretendo falar um pouquinho mais sobre o <strong>CakePHP</strong> nós próximos
 
 Hoje vou mostrar como é uso dos <strong>métodos</strong> do component [Session](http://book.cakephp.org/2.0/en/core-libraries/components/sessions.html) que te ajuda a manipular os valores salvos na sessão de forma mais segura e orientada à objetos.
 
-<h3>Pegando todos os valores da sessão</h3>
+### Pegando todos os valores da sessão
 Normalmente, fora do Cake, você trabalharia com a variável global <strong style="background: gray; color: lime">$_SESSION</strong>... Agora, com o Cake, você nem precisa se lembrar do nome dela... Veja como pegamos todos os valores da sessão de dentro de um <strong>controller</strong>:
 
 
@@ -34,7 +34,7 @@ Se você não criou nem alterou algum valor da sessão o que será exibido vais 
 
 
 
-<h3>Escrevendo valores na sessão</h3>
+### Escrevendo valores na sessão
 Agora é hora de fazer o component Session trabalhar pra gente e escrever alguns valores na sessão... Vamos salvar dois valores:
 
 
@@ -44,7 +44,7 @@ Viram que simples?
 
 
 
-<h3>Lendo/recuperando valores da sessão</h3>
+### Lendo/recuperando valores da sessão
 Depois de criar valores na sessão você óbviamente vai quere ler esses valores em algum lugar do controller ou da view... No controller faríamos assim:
 
 
@@ -58,7 +58,7 @@ Viram que simples? [2]
 
 
 
-<h3>Destruindo a sessão</h3>
+### Destruindo a sessão
 Quando o seu usuário fizer logout você provavelmente vai precisar/querer destruir a sessão dele para ele não continuar "dentro" do sistema... Então é só verificar se é uma sessão valida e o resto você manda pro espaço:
 
 

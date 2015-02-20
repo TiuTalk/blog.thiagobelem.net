@@ -14,7 +14,7 @@ tags:
 - PHP
 - Boas Práticas
 ---
-<h3>1. Comentário e Documentação</h3>
+### 1. Comentário e Documentação
 Comentar o seu código está se tornando cada dia mais útil e eficiente. Seguindo os padrões corretos você pode conseguir que a sua IDE faça coisas desse tipo:
 
 <center><img class="aligncenter size-full wp-image-657" title="img1" src="/arquivos/2009/12/img1.jpg" alt="img1" width="555" height="434" /></center>
@@ -25,7 +25,7 @@ Quando você passa o mouse sobre o nome de uma função ou método o IDE vai at�
 
 <br/><br/>
 
-<h3>2. Indentação Consistente</h3>
+### 2. Indentação Consistente
 Indentação é, sem dúvida, a parte mais importante desse artigo... Sem uma boa indentação o código perde toda a hierarquia de comandos... Existem várias formas de indentar o seu código, todas elas são válidas, mas algumas são mais recomendadas. Veja dois exemplos dos estilos de indentação mais utilizados:
 
 
@@ -37,7 +37,7 @@ Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é t�
 
 <br/>
 
-<h3>3. Evite comentários óbvios</h3>
+### 3. Evite comentários óbvios
 Comentar o seu código é sempre bom... Comentários só pesam no tamanho do arquivo. E não é só por isso que vamos sair comentando todas as nossas linhas... Além de duplicar (ou triplicar) o nosso tempo de desenvolvimento, nosso codigo vai ficar muito poluído e explicitar o óbivio... Vejamos alguns exemplos que não precisam nem ser comentados (literalmente):
 
 
@@ -45,7 +45,7 @@ Comentar o seu código é sempre bom... Comentários só pesam no tamanho do arq
 
 <br/>
 
-<h3>4. Agrupamento de código</h3>
+### 4. Agrupamento de código
 Muitas vezes fazemos isso sem perceber... E é uma ótima prática! Agrupe as linhas de código por suas funções/tarefas... Veja um exemplo:
 
 
@@ -53,7 +53,7 @@ Muitas vezes fazemos isso sem perceber... E é uma ótima prática! Agrupe as li
 
 <br/>
 
-<h3>5. Os princípios DRY, DIE e KISS</h3>
+### 5. Os princípios DRY, DIE e KISS
 Eu me lembro desses três principios diáriamente quando estou criando código e, caso você consiga entendê-los, compreendê-los e usá-los, você vai notar uma incrivel melhoria na qualidade e eficiência do seu código. Vamos ao nome e significado de cada um:
 
 » <strong style="background: gray; color: white">DRY</strong> ou <strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself (<em>Não Se Repita</em>) - Baseia-se no conceito de que computadores e sistemas são feitos da automação de tarefas repetitivas e o seu código não deve ser diferete... Você não deve duplicar uma linha de código pra fazer a mesma coisa!
@@ -66,12 +66,12 @@ Algumas pessoas até brincando com "Dry, kiss and die", algo como "Seque, beije 
 
 <br/>
 
-<h3>6. Nomes crutos para variáveis temporárias</h3>
+### 6. Nomes crutos para variáveis temporárias
 Se você vai usar uma variável para incremento, contador ou só para armazenar um valor que será usado nas próximas linhas, ainda mais quando se trata de valores inteiros, não há necessidade de usar nomes grandes e descritivos... É muito comum usar <strong>$i</strong>, <strong>$k</strong> e <strong>$j</strong> para contadores em <strong>for</strong>/<strong>while</strong>, por exemplo.
 
 <br/>
 
-<h3>7. Evidencie os termos especiais do SQL</h3>
+### 7. Evidencie os termos especiais do SQL
 Cansei de ver pessoas escrevendo consultas SQL assim:
 
 <div data-gist-id="01ab51777a212062f8e0" data-gist-show-loading="false"></div>
@@ -84,7 +84,7 @@ Onde as palavras protegidas do SQL são deixadas em maiúscula e os nomes de col
 
 <br/>
 
-<h3>8. Refatoração de código</h3>
+### 8. Refatoração de código
 Refatorar significa mudar algo sem alterar sua funcionalidade... E refatoração de código segue a mesma lógica, se uma linha funciona bem, você pode tentar refatorá-la, reduzindo seu tamanho (KISS) melhorando sua aparencia, reutilizando códigos existentes (DRY / DIE) e manter seu real propósito.
 
 Uma vez ouvi um profissional da área dizendo "<em>enquanto uma linha de código não funcionar, reescreva-a... E quando ela funcionar, refatore-a até ela quase parar de funcionar novamente</em>".. E é mais ou menos por ai mesmo...

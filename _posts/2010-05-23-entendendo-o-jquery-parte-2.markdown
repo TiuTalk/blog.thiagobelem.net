@@ -43,7 +43,7 @@ Mas você, a esse ponto, já deve ter se perguntado: de que adianta selecionar e
 </ol>
 Ou seja: primeiro selecionamos os elementos e depois executamos um (ou mais) métodos nos elementos encontrados.
 
-<h3>Um exemplo prático</h3>
+### Um exemplo prático
 Vamos supor que vocês queiram criar aquele efeito legal de abrir e fechar um elemento com um <code>+</code> no cantinho. O nome desse efeito, em inglês, é <em>collapse</em>.
 
 Vamos criar o seguinte HTML de exemplo:

@@ -16,7 +16,7 @@ Hoje vou falar sobre três tipos de codificação/criptografia (na verdade, <str
 
 Dois deles são <strong>hashes</strong> de "<strong>mão unica</strong>" ou <em>one-way</em>. Com esse tipo de hash você apenas codifica o texto.. Não tem como, baseado no texto já codificado, descobrir o texto original. O outro é mão dupla, o que possibilita a criação de duas funções: uma para codificar e outra para decodificar o texto.
 
-<h3>MD5</h3>
+### MD5
 A primeira que vou falar é sem dúvida a mais comum, chama <abbr title="Message-Digest algorithm 5">md5</abbr> que é um algoritmo de um <abbr title="Um hash é uma seqüencia de bits geradas por um algoritmo de dispersão, em geral representada em base hexadecimal">hash</abbr> de 128 bits. Não vou tentar explicar o que é hash nem algoritmo agora... Só vou explicar como você pode usar o md5 na sua aplicação.
 
 O md5 gera uma string alfa-numérica de 32 caracteres, não importa se você tá gerando o md5 de duas letras ou de um texto de 20 parágrafos... O md5 gerado sempre vai ter 32 caracteres.
@@ -30,7 +30,7 @@ Pra usar o md5 no PHP é só usar da seguinte forma:
 
 <div data-gist-id="d4d9c6a89e45a5e0a50a" data-gist-show-loading="false"></div>
 
-<h3>SHA1</h3>
+### SHA1
 A outra <strong>hash</strong> de mão única é o <abbr title="SHA: Secure Hash Algorithm">sha1</abbr>. Ele é praticamente identico ao md5, só que tem 160 bits, o que acaba criando uma string-resultado maior: 40 caracteres alfa-numéricos. Outro ponto do sha1 é que, por ser 160 bits e gerar uma cadeia de caracteres maior, uma colisão (encontrar duas strings que, codificadas, sejam a mesma coisa) é bem mais rara que numa chave de 128bits.
 
 Usar o sha1 no PHP é exatamente a mesma coisa que o md5, só que mudando o nome da função:
@@ -38,7 +38,7 @@ Usar o sha1 no PHP é exatamente a mesma coisa que o md5, só que mudando o nome
 
 <div data-gist-id="0674130d411e59302271" data-gist-show-loading="false"></div>
 
-<h3>BASE64</h3>
+### BASE64
 É um método para codificação dos dados para transferência na Internet. Ela é uma codificação de mão dupla, e usando uma segunda função você pode descobrir a string original de uma string codificada.
 
 Para usar ela no PHP você tem as duas formas:

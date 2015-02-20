@@ -50,7 +50,7 @@ O código acima já é a função completa e pronta pra usar! :D
 
 Veja exemplos de uso no fim do artigo.
 
-<h3>Código final da função</h3>
+### Código final da função
 Fiz também uma versão mais compacta, sem comentários e com créditos:
 
 
@@ -58,7 +58,7 @@ Fiz também uma versão mais compacta, sem comentários e com créditos:
 
 --
 
-<h3>Exemplos de uso</h3>
+### Exemplos de uso
 
 <div data-gist-id="c071f2fbca10b9ab8297" data-gist-show-loading="false"></div>
 

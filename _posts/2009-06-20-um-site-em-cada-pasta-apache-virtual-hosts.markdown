@@ -19,7 +19,7 @@ Hoje vou falar sobre um recurso fantástico do Apache: os <strong>Hosts Virtuais
 
 Com eles você pode ter vários sites, no mesmo servidor, cada um rodando em uma pasta diferente! Isso permite uma melhor organização das suas coisas e, por que não, mais segurança pros seus sistemas. Outro detalhe relevante é que ele permite que você arquive sites fora do seu <strong>document root</strong> (raiz) padrão.
 
-<h3>Tá, mas como isso funciona?</h3>
+### Tá, mas como isso funciona?
 É só localizar o arquivo <span style="color: #ff6600;"><strong>httpd.conf </strong></span>que geralmente fica na pasta <span style="color: #3366ff;"><strong>.../apache/conf/</strong></span> e colocar o seguinte bloco de código (no final do arquivo):
 
 
@@ -33,7 +33,7 @@ Com esse exemplo nós criamos 2 hosts virtuais pra alguns casos especiais:
 </ul>
 Viram? :)
 
-<h3>Desenvolvimento local</h3>
+### Desenvolvimento local
 Há um porém (que eu chamaria de vantagem): você pode usar esse esquema quando desenvolver localmente também!
 
 Por exemplo: você pode configurar vários [No-IP](http://www.no-ip.com/) para serem ouvidos (<em>listen</em>) pelo Apache e usar isso para separar seus sites. Ou você pode configurar seu arquivo de <strong>hosts</strong> (do Windows) para redirecionar os domínios escolhidos para o ip local (<em>localhost</em>).

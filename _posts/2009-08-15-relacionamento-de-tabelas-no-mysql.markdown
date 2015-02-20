@@ -37,14 +37,14 @@ Reparem que na tabela produtos temos uma coluna "especial", que é a "categoria_
 
 Esse campo responsável pela relação é normalmente chamado de `foreing key` (fk) ou "chave estrangeira".
 
-<h3>Mas qual a utilidade dessa tal "relação"?</h3>
+### Mas qual a utilidade dessa tal "relação"?
 Sem usar o relacionamento você poderia pegar todos os produtos e depois pegar as informações das categorias com uma segunda consulta, assim:
 
 <div data-gist-id="4eeef6a920f8870fbafc" data-gist-show-loading="false"></div>
 
 Até aí tudo bem... Não tem nenhum pecado nisso... Mas imagine que você tem uma loja com 1000 produtos (o que não é muito), seria executada 1 consulta para todos os produtos e, dentro do loop (while) seriam executadas outras 1000 consultas para pegar o nome da categoria a qual o produto pertence... Ou seja, 1001 consultas, o que é um absurdo.
 
-<h3>A mágica da relação</h3>
+### A mágica da relação
 Agora vamos montar uma consulta que `DE UMA SÓ VEZ` irá pegar os dados de cada produto e também o nome da categoria... Com isso reduziremos nossas 1001 consultas pra... uma só! Sem mistérios, sem sub-consultas, nem consultas dentro do `while()`! :D
 
 Mas antes de mostrar o script vou ajudar a vocês entenderem como a relação é feita... Antes a nossa consulta que pega apenas os produtos era assim:
@@ -100,7 +100,7 @@ Agora vamos ao nosso novo script de PHP que, sem dúvidas, é bem mais prático 
 
 <div data-gist-id="be9c8843682edee7d9c8" data-gist-show-loading="false"></div>
 
-<h3>Os outros tipos de JOINs</h3>
+### Os outros tipos de JOINs
 Existem também outros dois tipos de JOIN: o `LEFT JOIN` e o `RIGHT JOIN`:
 
 Se usássemos o `LEFT JOIN` seriam retornados todos os produtos, independente se eles estão ligados a uma categoria (na tabela categorias) existente ou não.
@@ -109,7 +109,7 @@ Já o `RIGHT JOIN` seria exatamente o contrário: seriam retornados todos os pro
 
 O uso desses outros tipos de JOIN é muito raro e acho que não vale a pena ficar filosofando sobre eles enquanto se aprende sobre relacionamentos.
 
-<h3>E a relação com mais de duas tabelas?</h3>
+### E a relação com mais de duas tabelas?
 Só pra exemplo, essa seria a consulta que pega os produtos, as categorias e o nome do usuário que cadastrou o produto e filtrando apenas pelos produtos ativos:
 
 <div data-gist-id="f69b48cd1848812ad4f1" data-gist-show-loading="false"></div>

@@ -14,16 +14,16 @@ tags:
 - WordPress
 - Blog
 ---
-<h3>Wordoque?</h3>
+### Wordoque?
 <p style="padding-left: 30px;"><em>O <strong>WordPress</strong> é uma plataforma semântica de vanguarda para publicação pessoal, com foco na estética, nos Padrões Web e na usabilidade. O WordPress é ao mesmo tempo um software livre e gratuito. Em outras palavras, o WordPress é o que você usa quando você quer trabalhar e não lutar com seu software de publicação de blogs.</em>
 
-<h3>Download do WordPress</h3>
+### Download do WordPress
 Para fazer o download é só acessar o [2.7](http://br.wordpress.org/wordpress-2.8-pt_BR.zip)) tem só 2.5Mb!
 
-<h3>Pre-requisitos</h3>
+### Pre-requisitos
 <span style="color: #888888;">(In)</span>felizmente o WordPress só roda <span style="text-decoration: line-through;">bem</span> no  <strong>Apache</strong> com suporte ao <strong>mod_rewrite</strong> e com <strong>PHP 5.0</strong> ou superior. Acredito que alguns de vocês não sabem o que isso significa, recomendo que tentem instalar e vejam se funciona e/ou perguntem pro pessoal da sua hospedagem. Se o seu servidor for Linux pode ficar tranquilo que vai correr tudo bem.
 
-<h3>Instalação</h3>
+### Instalação
 Preparem-se para uma dolorosa instalação de cinco minutos:
 
 <p style="padding-left: 30px;"><span style="color: #c0c0c0;"><strong>1. </strong></span>Descompacte o ZIP em uma pasta e abra o arquivo <span style="color: #ff6600;"><strong>wp-config-sample.php</strong></span> com seu editor de textos;
@@ -41,7 +41,7 @@ Preparem-se para uma dolorosa instalação de cinco minutos:
 <p style="padding-left: 30px;">Caso aconteça algum erro, verifique o seu arquivo <span style="color: #ff6600;"><strong>wp-config.php</strong></span> :)
 
 <p style="padding-left: 30px;">
-<h3>Por que instalar o blog e não criar um direto no <span style="color: #3366ff;">wordpress.com</span>?</h3>
+### Por que instalar o blog e não criar um direto no <span style="color: #3366ff;">wordpress.com</span>?
 Por que você quer ter acesso aos plugins e aos arquivos do código fonte do seu blog para poder pintar e bordar sem nenhum limite... não quer?
 
 --

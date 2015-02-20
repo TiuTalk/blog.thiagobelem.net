@@ -29,7 +29,7 @@ Para o nosso banco de dados iremos utilizar a seguinte tabela:
 
 <div data-gist-id="f760f3e992ae7060475c" data-gist-show-loading="false"></div>
 
-<h3>0. Transparência</h3>
+### 0. Transparência
 Antes da gente começar a codificar a parte três... Vamos colocar uma coisinha no CSS que faltou na Parte 2: a transparência do fundo preto da legenda... Edite o CSS dos destaques e coloque isso:
 
 
@@ -37,7 +37,7 @@ Antes da gente começar a codificar a parte três... Vamos colocar uma coisinha 
 
 Isso fará com que a div de fundo fique com 80% de opacidade.
 
-<h3>1. Configurações</h3>
+### 1. Configurações
 Vamos começar com um arquivo chamado <strong>mysql_destaques.php</strong> e nele colocar um bloco PHP vazio:
 
 
@@ -48,7 +48,7 @@ Agora nós iremos definir algumas variáveis de configuração:
 
 <div data-gist-id="f9e8f2f57611e6d0ba70" data-gist-show-loading="false"></div>
 
-<h3>2. Conexão com o MySQL</h3>
+### 2. Conexão com o MySQL
 Se o seu site já se conecta ao banco de dados MySQL automaticamente, você pode apagar a parte da conexão ao MySQL e pular para o item três...
 
 Fazemos a conexão com o banco de dados:
@@ -56,7 +56,7 @@ Fazemos a conexão com o banco de dados:
 
 <div data-gist-id="3e7cb12d769c1e920513" data-gist-show-loading="false"></div>
 
-<h3>3. Buscando os dados</h3>
+### 3. Buscando os dados
 Agora vai começar a brincadeira... Vamos criar e executar uma consulta para trazer três colunas da tabela <code>`destaques`</code>:
 
 <div data-gist-id="8b090d13ea2a262f4bd0" data-gist-show-loading="false"></div>

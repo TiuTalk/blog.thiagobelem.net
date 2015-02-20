@@ -27,7 +27,7 @@ Se você ainda não está acompanhando, veja as outras partes dessa sequência 
 * [Parte 3 - Topo e listagem de posts](/criando-um-tema-para-wordpress-parte-3)
 * [Parte 4 - Header, Footer e Sidebar](/criando-um-tema-para-wordpress-parte-4)
 
-<h3>Página interna do post (single.php)</h3>
+### Página interna do post (single.php)
 Eu não sei exatamente por que chamo esse tipo de página de "interna do post" ou "interna da notícia", mas essa é a página que mostra todo o conteúdo do post em questão.
 
 Segundo a [hierarquia de templates](http://codex.wordpress.org/Template_Hierarchy) do WordPress,  ele irá mostrar o template criado nos seguintes arquivos (sempre o primeiro que ele achar):
@@ -46,7 +46,7 @@ Porém, se for pra deixar ele exatamente igual ao index.php não precisaríamos 
 
 Então vamos fazer algumas mudanças..
 
-<h3>Listando as categorias e tags de um post</h3>
+### Listando as categorias e tags de um post
 Vamos criar um rodapé no post, dentro dele vamos mostrar a lista das categorias e tags (separadas por vírgulas):
 
 <div data-gist-id="3030816" data-gist-show-loading="false"></div>
@@ -58,7 +58,7 @@ Usamos agora duas novas funções:
 
 Tirando a diferença nos parâmetros, ambas funções funcionam de forma bem parecida.
 
-<h3>Exibindo o thumbnail principal de um post</h3>
+### Exibindo o thumbnail principal de um post
 Podemos também editar o cabeçalho do post e exibir seu thumbnail com a função [the_post_thumbnail( tamanho, atributos )](http://codex.wordpress.org/Function_Reference/the_post_thumbnail), assim:
 
 <div data-gist-id="3030838" data-gist-show-loading="false"></div>
@@ -67,7 +67,7 @@ Percebam que não usei nenhum dos parâmetros da função, pois quero justamente
 
 Mas agora tem uma pegadinha! Você precisa **habilitar os thumbnails** (no seu tema) caso queira que seus posts e páginas possam ter uma **imagem destacada**, no caso o thumbnail que estamos exibindo ali em cima.
 
-<h3>Habilitando thumbnails em um tema</h3>
+### Habilitando thumbnails em um tema
 Para habilitar os thumbnails é só criar na raiz do seu tema (ou editar se ele já existir) o arquivo **functions.php**, que é - basicamente - o arquivo central do seu tema, onde você define todo tipo de configuração ligada ao tema:
 
 <div data-gist-id="3030858" data-gist-show-loading="false"></div>
@@ -80,7 +80,7 @@ Usamos a função [add_theme_support( feature )](http://codex.wordpress.org/Fun
 * **custom-header** - Header customizável (imagem, logo, texto) através do admin
 * **automatic-feed-links** - Links para feeds RSS e ATOM gerados automaticamente no [wp_head()](http://codex.wordpress.org/Function_Reference/wp_head), que eu não gosto de usar por alguns motivos
 
-<h3>Finalizando</h3>
+### Finalizando
 Agora nosso template já tem a estrutura básica (e recomendada) de um template pro WordPress, incluindo a listagem e a página interna do post.
 
 Aceito sugestões sobre o que abordar na próxima parte! :)

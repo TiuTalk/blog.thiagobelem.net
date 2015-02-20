@@ -44,7 +44,7 @@ E manter o comportamento das nossas classes, de forma bem mais simples:
 
 Podemos usar o método log() diretamente (sem a necessidade de instanciar um objeto de Log) pois nossas classes adquiriram as características (métodos e atributos) de Log! :)
 
-<h3>Conclusão</h3>
+### Conclusão
 Traits são de fato recursos bem interessantes e muitos [frameworks estão se adaptando](/o-cakephp-3-0-ja-esta-no-forno) à esse poderoso recurso.
 
 Espero que você tenha gostado (e faça um bom uso) desse novo recurso! :)

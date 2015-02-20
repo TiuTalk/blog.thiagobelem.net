@@ -22,7 +22,7 @@ Vamos fazer um código que usa as <strong>APIs</strong> do Google Maps para busc
 
 É necessário saber a latitude e longitude de um endereço para exibir um mapinha do Google Maps no seu site... O que será ensinado na parte 2 desse artigo.
 
-<h3>Começando pelo começo</h3>
+### Começando pelo começo
 Antes de mais nada você, meu amigo desenvolvedor, precisa de uma <strong>Google Maps API Key</strong> (<em>GMAK</em>) que é um código que te permite usar as APIs do Google Maps e te identifica perante ao Google. Para criar a sua GMAK é só entrar [nesse endereço](https://developers.google.com/maps/signup?hl=pt-br) e preencher o formulário.
 
 Tendo sua GMAK em mãos, vamos ver a classe que usaremos para esse e os próximos tutoriais:

@@ -28,7 +28,7 @@ Esse comando <strong>vai abrir um servidor com raíz na pasta atual</strong>, en
 
 <img class="aligncenter size-full wp-image-2865" title="php-cli-webserver-492x400" src="/assets/uploads/2012/11/php-cli-webserver-492x400.png" alt="" width="492" height="400" />
 
-<h3>Arquivo de entrada e rotas (ou entry-point)</h3>
+### Arquivo de entrada e rotas (ou entry-point)
 Esse servidor embutido do PHP <strong>não suporta aquivos .htaccess</strong>, então você precisará trabalhar a reescrita de URL através de um arquivo comumente chamado de <strong>entry-point</strong>:
 
 <div data-gist-id="4028593" data-gist-show-loading="false"></div>
@@ -46,7 +46,7 @@ Não se esqueça de ler a documentação oficial: [http://php.net/manual/featur
 </blockquote>
 Este servidor foi projeto apenas para desenvolvimento, e não deve ser usado em produção.
 
-<h3>PHP 5.4.6</h3>
+### PHP 5.4.6
 <strong>Atenção:</strong> Este artigo foi escrito baseado na <strong>versão 5.4.6</strong> do PHP, em versões futuras esse comportamento pode mudar.
 
 <div data-gist-id="4028719" data-gist-show-loading="false"></div>

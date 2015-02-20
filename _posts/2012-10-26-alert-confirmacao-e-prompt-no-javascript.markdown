@@ -22,12 +22,12 @@ Sua principal função é mostrar ao usuário uma mensagem e um botão de confir
 
 <div data-gist-id="3959649" data-gist-show-loading="false"></div>
 
-<h3>Confirmações</h3>
+### Confirmações
 A função de confirmação é um pouco diferente da função [alert em Javascript](http://www.linhadecodigo.com.br/artigo/3593/alert-em-javascript.aspx), dessa vez são exibidos dois botões, um de OK e outro de CANCELAR, separados por valores true(verdadeiro) e false(falso).
 
 <div data-gist-id="3959658" data-gist-show-loading="false"></div>
 
-<h3>Prompt</h3>
+### Prompt
 O prompt é um pouco diferente do alert() e do confirm(), pois ele necessita que o usuário insira algum valor, ou seja, precisa de uma interação direta do usuário para que ele funcione.
 
 Para chamarmos a função utilizamos o prompt(), o qual irá receber uma string(mensagem) que será exibida, normalmente em forma de pergunta, ao usuário.

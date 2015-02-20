@@ -44,7 +44,7 @@ Na [Parte 3](/criando-um-tema-para-wordpress-parte-3) criamos o template básico
 
 Agora vamos separar as partes do nosso tema!
 
-<h3>Header e Footer</h3>
+### Header e Footer
 É uma prática muito comum (e recomendada) que você separe - pelo menos - o topo e o rodapé do seu template em arquivos separados, assim podemos reutilizar esses "blocos" em todos os templates (páginas) do blog.
 
 Vamos começar separar o **header.php** que contém todo o código desde o **DOCTYPE** até o **fim do topo** do seu site:
@@ -66,7 +66,7 @@ Acabamos de usar duas funções novas:
 
 Percebam que eu chamei de "topo padrão" e "rodapé padrão" pois se você fizer uma chamada do tipo:** get_header('especial')** ele vai incluir o arquivo **header-especial.php** ao invés de **header.php**. .. O mesmo vale pro footer :)
 
-<h3>Lateral</h3>
+### Lateral
 Por enquanto não temos um conteúdo pra lateral, mas o elemento (sidebar) já existe... então podemos fazer exatamente o que fizemos com o topo e rodapé: separar a lateral em um novo arquivo que pode ser re-utilizado pelos outros **templates**.
 
 Primeiro criamos um arquivo sidebar.php com a marcação da lateral:
@@ -79,7 +79,7 @@ Depois incluímos ele no template usando a função [get_footer()](http://codex.
 
 Com isso nosso template contém só o conteúdo/miolo daquela página e podemos ter páginas com formatos diferentes, que incluam ou não a lateral e que possam usar topos ou rodapés diferentes do padrão (que não vai ser o caso desse blog).
 
-<h3>Finalizando</h3>
+### Finalizando
 Agora nosso template já tem a estrutura básica (e recomendada) de um template pro WordPress:
 
 * **header.php** - Topo do site

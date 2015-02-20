@@ -37,7 +37,7 @@ O <strong>Composer</strong> nada mais é do que um <strong>gerenciador de depend
 
 Gerenciadores de pacotes (ou dependências) são muito comuns em outras linguagens, como é o caso do [Composer](http://getcomposer.org/) pra fazer isso no PHP! :)
 
-<h3>Mas como assim, Arnaldo?</h3>
+### Mas como assim, Arnaldo?
 Suponhamos que você esteja trabalhando num projeto que faça uso (dependa) do [Twig](http://twig.sensiolabs.org/)... Mas esse exemplo vale pra qualquer biblioteca, seja o PHPThumb, WideImage, MongoDB ou qualquer outra.
 
 Se o seu projeto estiver versionado (seja SVN ou Git), <strong>essas bibliotecas provavelmente estão dentro do seu repositório</strong>, em versões "congeladas" e caso você queira atualizá-las você tem que fazer isso <strong>manualmente</strong> e depois atualizar seu repositório, acertei?

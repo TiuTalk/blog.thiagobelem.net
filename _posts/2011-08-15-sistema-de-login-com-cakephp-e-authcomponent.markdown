@@ -29,13 +29,13 @@ Na minha opinião, o maior problemas de usar o Auth em um sistema/aplicação em
 
 <strong style="color: red">*</strong> Esses <strong>níveis de acesso não deveriam definir o nome do model</strong>, que ainda é apenas um usuário.
 
-<h3>Tabela de usuários (clientes)</h3>
+### Tabela de usuários (clientes)
 Se você já tem um model/tabela de usuários pode pular para o próximo passo. Se você ainda não tem, essa é uma estrutura que eu recomendo pra quem usar MySQL:
 
 
 <div data-gist-id="4d7d6cb0a619ba07dd24" data-gist-show-loading="false"></div>
 
-<h3>Habilitando o AuthComponent</h3>
+### Habilitando o AuthComponent
 Recomendo que você insira o componente no seu <strong>AppController</strong> pois toda a aplicação será controlada/protegida pelo AuthComponent.
 
 Edite (ou crie) o arquivo <strong>/app/app_controller.php</strong> e defina os componentes que você quer usar, no final da lista coloque o Auth:
@@ -45,7 +45,7 @@ Edite (ou crie) o arquivo <strong>/app/app_controller.php</strong> e defina os c
 
 Agora começa a parte de configuração e comunicação com o seu model de usuários, administradores ou seja lá qual for o nome.
 
-<h3>Configurando o AuthComponent</h3>
+### Configurando o AuthComponent
 Ainda dentro do seu <strong>AppController</strong> você vai configurar o componente dentro de um método (<em>callback</em>) chamado <strong>beforeFilter</strong>, da seguinte maneira:
 
 
@@ -53,7 +53,7 @@ Ainda dentro do seu <strong>AppController</strong> você vai configurar o compon
 
 Com essas configurações definidas o sistema de login está praticamente pronto! :)
 
-<h3>Criando as actions de login e logout</h3>
+### Criando as actions de login e logout
 Para criar o formulário de login você precisa definir aquela <strong>action</strong> de login que você especificou ali em cima, na opção <strong>loginAction</strong> (linha 24), por exemplo:
 
 Se o nosso model de usuários se chama <strong>Cliente</strong>, então nossas actions de login e logout estarão no controller de <strong>Clientes</strong>:
@@ -63,7 +63,7 @@ Se o nosso model de usuários se chama <strong>Cliente</strong>, então nossas a
 
 A action de login <strong>fica vazia</strong> mesmo, e a action de logout apenas redireciona o visitante para a action definida lá no <strong>logoutRedirect</strong> (linha 36).
 
-<h3>Fomulário de Login</h3>
+### Fomulário de Login
 A <strong>view</strong> do formulário de login é extremamente simples e (segundo o nosso exemplo) vai no arquivo <strong>/app/views/clientes/login.ctp</strong>:
 
 
@@ -73,7 +73,7 @@ Primeiro nós temos o <strong>Session->flash()</strong> que irá exibir as mensa
 
 Depois nós usamos o <strong>FormHelper</strong> para criar o formulário de login (apontando pra action de login) com os campos de email e senha! :)
 
-<h3>Criando seu primeiro usuário</h3>
+### Criando seu primeiro usuário
 Feito isso o seu sistema de login está pronto mas você precisa criar um usuário para testá-lo, e fazer isso direto no banco de dados não vai funcionar!
 
 Quando você instalou o CakePHP ele deve ter pedido para você modificar a configuração <strong>Security.salt</strong>, lá na <span class="removed_link" title="https://github.com/cakephp/cakephp/blob/master/app/config/core.php#L204">linha 204 do arquivo <strong>/app/config/core.php</strong></span>, esse valor é utilizado na hora de encriptar a senha de um usuário antes de salvá-lo no banco de dados e consequentemente também é utilizado na hora de você fazer o login. Por isso é o CakePHP quem precisa criar esse usuário no banco de dados, não adianta tentar fazer isso diretamente no banco.
@@ -87,7 +87,7 @@ Esse código pode ir dentro do método <strong>beforeFilter</strong> do seu <str
 
 Perceba que utilizamos o método <strong>Auth->password()</strong> que faz exatamente o que expliquei ali em cima, utiliza o <strong>Security.salt</strong> para encriptar a senha passada.
 
-<h3>Protegendo apenas um prefixo <span style="color: gray">(opcional)</span></h3>
+### Protegendo apenas um prefixo <span style="color: gray">(opcional)</span>
 Agora todo o seu sistema estará "bloqueado", e você precisa fazer login para acessar qualquer tela.
 
 Caso você queira proteger apenas um [prefixo](http://book.cakephp.org/2.0/en/development/routing.html#prefix-routing) (como por exemplo: admin) e não exigir login enquanto o usuário não estiver acessando um action com esse prefixo, coloque o seguinte código após a configuração do AuthComponent:
@@ -104,10 +104,10 @@ Você também precisará mudar algumas configurações do Auth:
 
 Essa mudança é necessária pois você precisa sair e entrar do prefixo "admin" antes e depois do login/logout.
 
-<h3>Pronto! :)</h3>
+### Pronto! :)
 Parabéns, você acaba de fazer um sistema de login utilizando CakePHP! Onde o maior trabalho (na minha opinião) foi criar o usuário, pois configurar o <strong>AuthComponent</strong> e criar o formulário de login é extremamente simples.
 
-<h3>Quer saber mais sobre o CakePHP?</h3>
+### Quer saber mais sobre o CakePHP?
 [](http://assando-sites.com.br/)
 
 Inscreva-se no meu <strong>curso online</strong> de CakePHP, o [Assando Sites](http://assando-sites.com.br)!

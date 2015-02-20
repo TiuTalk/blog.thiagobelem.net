@@ -22,7 +22,7 @@ O sistema de login usará <strong>banco de dados MySQL</strong> e terá suporte 
 
 Outro detalhe importante sobre o sistema é que ele irá funcionar nas versões 4 e 5 do PHP e do MySQL, então, se a sua hospedagem é uma vergonha, não se preocupe! :D
 
-<h3>A Tabela de Usuários</h3>
+### A Tabela de Usuários
 Se você já tem uma tabela de usuários pode pular essa parte... Se não, vamos criar a seguinte tabela no banco de dados do seu site:
 <img src="/arquivos/2009/12/tabela_usuarios.jpg" alt="Tabela de Usuários" title="Tabela de Usuários" width="163" height="146" class="size-full wp-image-664" />
 Para criar essa tabela, você poderá usar o seguinte código SQL:
@@ -30,7 +30,7 @@ Para criar essa tabela, você poderá usar o seguinte código SQL:
 <div data-gist-id="3925f793d2e316fc58dc" data-gist-show-loading="false"></div>
 
 
-<h3>A classe Usuario</h3>
+### A classe Usuario
 Vamos ao que interessa!
 
 Antes de tudo, precisamos criar o nosso arquivo, vamos seguir algumas boas páticas de programação e vamos dar o nome de "<strong style="background: gray; color: orange">usuario.class.php</strong>". Criado o arquivo vazio, vamos começar a construir nossa classe:

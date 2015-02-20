@@ -16,7 +16,7 @@ tags:
 ---
 No artigo de hoje iremos ver o que é e como funciona o jQuery, a ferramenta que veio pra ficar e, arrisco dizer, "só jQuery expulsa o Flash das pessoas!".
 
-<h3>Mas hein?! jQuery? Que bicho é esse?</h3>
+### Mas hein?! jQuery? Que bicho é esse?
 Pra quem ainda não conhece, o [jQuery](http://jquery.com/) é um framework de Javascript.
 
 Um <strong>framework</strong>, de forma bem resumida, é uma coleção de funções e métodos prontos para serem utilizados, amplamente testados e que devem ser usados de forma pré-definida para tudo correr bem.
@@ -27,7 +27,7 @@ Existem inúmeros outros frameworks de Javascript como o [ExtJS](http://www.extj
 
 O jQuery foi criado sob o mantra do "<strong>Write less, do more</strong>" (Escreva menos, faça mais) e é exatamente por causa disso que ele é tão surpreendente, com algumas poucas linhas de código você consegue fazer os mais variados efeitos que antes custavam dezenas de linhas de código com Javascript puro ou algumas horas de trabalho em Flash.
 
-<h3>E onde eu uso isso?</h3>
+### E onde eu uso isso?
 Você pode usar o jQuery para fazer praticamente qualquer efeito legal, ou requisições em AJAX ou até mudanças na página após o seu carregamento.
 
 Para poder utlizar o jQuery você precisa sempre inserí-lo no seu HTML, você pode fazer o [versão hospedada pelo Google](http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js).
@@ -158,6 +158,6 @@ Este é apenas um pequeno exemplo do poder do jQuery, amanhã irei escrever mais
 
 Espero que você tenha gostado! Deixe seu comentário com sua dúvida ou elogio. E não deixe de [me seguir no Twitter](http://twitter.com/tiutalk) para ficar sabendo dos artigos aqui do blog em tempo real!
 
-<h3>Quer ver o passo-a-passo do seu efeito em jQuery?</h3>
+### Quer ver o passo-a-passo do seu efeito em jQuery?
 É simples: [Siga-me no Twitter](http://twitter.com/tiutalk), dê um RT (retweet) com um link para este artigo e descreva o seu efeito em um comentário nesse artigo. :)
 

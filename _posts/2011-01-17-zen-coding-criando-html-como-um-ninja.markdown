@@ -18,14 +18,14 @@ Fala pessoal! Finalmente de volta com o blog. :)
 
 Hoje trago até vocês uma coisinha muito da legal: o [Bernard de Luna](http://www.bernarddeluna.com/).
 
-<h3>O que é o Zen-Coding?</h3>
+### O que é o Zen-Coding?
 Segundo o próprio site:
 
 <blockquote>Zen Coding é um plugin de editores para codificar e editar HTML, XML, XSL (or any other structured code format) em alta velocidade. O "núcleo" dessa ferramenta é um sistema de abreviação poderoso que te permite expandir expressões (parecidas com a de CSS) em HTML válido e organizado.
 </blockquote>
 <blockquote><em>Zen Coding is an editor plugin for high-speed  HTML, XML, XSL (or any  other structured code format) coding and  editing. The core of this  plugin is a powerful abbreviation engine  which allows you to expand  expressions—similar to CSS selectors—into  HTML code.</em>
 </blockquote>
-<h3>Como assim? O que ele faz?</h3>
+### Como assim? O que ele faz?
 Com o Zen-Coding você digita isso no seu editor:
 
 <div data-gist-id="ff48f8afb8ddfceaf703" data-gist-show-loading="false"></div>
@@ -34,14 +34,14 @@ Com o Zen-Coding você digita isso no seu editor:
 
 <div data-gist-id="03466b842855240f7539" data-gist-show-loading="false"></div>
 
-<h3>Editores com suporte ao Zen-Coding</h3>
+### Editores com suporte ao Zen-Coding
 Você pode baixar o plugin do Zen-Coding no [site oficial](http://code.google.com/p/zen-coding/) para os seguintes editores:
 
 <blockquote>Aptana/Eclipse, TextMate (Mac), Coda (Mac), Espresso (Mac), Komodo Edit/IDE, Notepad++ (Windows), PSPad (Windows), <textarea> (browser), editArea (browser), CodeMirror (browser), Dreamweaver (Windows, Mac), Sublime Text (Windows), UltraEdit (Windows), TopStyle (Windows), GEdit, BBEdit/TextWrangler (Mac), Visual Studio (Windows), EmEditor (Windows), Sakura Editor (Windows), NetBeans, IntelliJ IDEA/WebStorm/PHPStorm, Emacs, Vim e Visual Studio
 </blockquote>
 Nem todos são plugins oficiais, mas a maioria sim. :)
 
-<h3>O que mais ele faz?</h3>
+### O que mais ele faz?
 Vejam um exemplo que criei para vocês...
 
 Você pode expandir a seguinte linha:

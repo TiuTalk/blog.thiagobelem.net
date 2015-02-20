@@ -17,7 +17,7 @@ Hoje resolvi falar um pouquinho mais sobre como o upload de arquivos funciona, p
 
 Como exemplo usarei um formulário onde o visitante enviará o seu nome e uma foto para um "perfil" de um rede social.
 
-<h3>1.0 - O formulário HTML</h3>
+### 1.0 - O formulário HTML
 Todo upload, geralmente, começa com um formulário onde o usuário insere o arquivo que será enviado e <strong>manipulado</strong> para o servidor. Veja o nosso exemplo de formulário:
 
 
@@ -36,7 +36,7 @@ Você <strong style="color: red">precisa</strong> definir o enctype como "<em>mu
 <h4 style="margin: 0px">A propriedade <strong>name</strong> do <strong>input file</strong> (linha 7)</h4>
 É nesse campo que você irá enviar o arquivo para ser manipulado pelo PHP... E é a propriedade name que você irá usar, no PHP, para saber de qual arquivos estamos falando</li>
 </ul>
-<h3>2.0 - Manipulando o upload no arquivo <span style="color: green">recebe.php</span></h3>
+### 2.0 - Manipulando o upload no arquivo <span style="color: green">recebe.php</span>
 Agora iremos construir o arquivo recebe.php passo a passo para você entender o que acontece quando enviamos um arquivo por upload.
 
 Normalmente quando enviamos dados através de um formulário (com a propriedade method igual a post) esses dados são disponibilizados em uma variável <strong>$_POST</strong>... Então, no começo do arquivo, iremos arquivar o nome do usuário em uma nova variável:
@@ -46,7 +46,7 @@ Normalmente quando enviamos dados através de um formulário (com a propriedade 
 
 Só pra lembrar: $_POST é um array e os seus índices serão as propriedades "name" dos inputs.
 
-<h3>2.1 - A variável <span style="color: green">$_FILES</span></h3>
+### 2.1 - A variável <span style="color: green">$_FILES</span>
 Ao enviar um arquivo pelo formulário acima é criada uma nova variável (além da $_POST) que é chamada $_FILES... Essa variável funciona da mesma forma que a $_POST e é identificada pela propriedade <strong>name</strong> do input. A diferença é que o $_FILES traz várias informações sobre o arquivo enviado.
 
 Veja um exemplo onde pegamos todas essas informações e salvamos em novas variáveis:
@@ -55,10 +55,10 @@ Veja um exemplo onde pegamos todas essas informações e salvamos em novas vari�
 
 Preste atenção que a parte <strong style="color: red">['arquivo']</strong> se deve a propriedade name do input file no lá formulário HTML.
 
-<h3>2.2 - Erros de upload</h3>
+### 2.2 - Erros de upload
 Quando algo der errado com o upload em questão você vai poder verificar o que aconteceu baseando-se no valor da variável $_FILES['arquivo']['error']... Quando ela for diferente de zero é que algo de errado aconteceu e você pode verificar [aqui](http://br2.php.net/manual/pt_BR/features.file-upload.errors.php) possíveis valores de erro no upload.
 
-<h3>2.3 - Movendo o arquivo para a pasta certa</h3>
+### 2.3 - Movendo o arquivo para a pasta certa
 Agora iremos mover o arquivo para a pasta correta caso o upload tenha ocorrido sem problemas:
 
 
@@ -72,7 +72,7 @@ Depois do upload a variável $upload terá um valor lógico (true ou false) que 
 
 Nosso upload já está pronto... O problema é que ele aceita qualquer tipo de arquivo e não é isso que queremos.
 
-<h3>3.0 - Validando o tipo de arquivo enviado</h3>
+### 3.0 - Validando o tipo de arquivo enviado
 Usando a variável $arqType poderemos identificar qual é o tipo do arquivo... Esse tipo é chamado de <strong>mime-type</strong>.
 
 Vamos criar uma lista com todos os <strong>mime-types</strong> permitidos e verificar se foi enviado um arquivo com o tipo correto:
@@ -82,13 +82,13 @@ Vamos criar uma lista com todos os <strong>mime-types</strong> permitidos e veri
 
 Se precisar você ver aqui uma [lista de mime-types](http://en.wikipedia.org/wiki/Internet_media_type) usados por cada tipo de arquivo.
 
-<h3>4.0 - Validando o tamanho do arquivo enviado</h3>
+### 4.0 - Validando o tamanho do arquivo enviado
 Muita gente tem problemas com o tamanho de arquivo enviado pelos usuários pois, dependendo da quantidade e do tipo de arquivo, você rapidamente vai ter GBs e GBs de lixo no seu servidor. Se quiser fazer essa validação, é só fazer assim:
 
 
 <div data-gist-id="febf536d6019f01294e2" data-gist-show-loading="false"></div>
 
-<h3>5.0 - Renomeando o arquivo enviado</h3>
+### 5.0 - Renomeando o arquivo enviado
 Caso você queira armazenar o arquivo enviado com outro nome, mas manter a extensão do mesmo, é só fazer assim:
 
 
@@ -96,7 +96,7 @@ Caso você queira armazenar o arquivo enviado com outro nome, mas manter a exten
 
 Na linha 31 pegamos a extensão do arquivo enviado e na linha 33 criamos um novo nome para ele usando um UNIX TIMESTAMP e a extensão original.
 
-<h3>6.0 - Salvando tudo no banco de dados</h3>
+### 6.0 - Salvando tudo no banco de dados
 Acabamos de passar por todas as partes do upload e manipulação de um arquivo!
 
 Agora vamos salvar os dados recebidos no banco de dados apenas para concluir o exemplo da criação de um perfil em uma rede social:

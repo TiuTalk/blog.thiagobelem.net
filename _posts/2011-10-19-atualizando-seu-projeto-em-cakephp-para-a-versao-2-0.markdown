@@ -27,15 +27,15 @@ Resolvi escrever esse post para ajudá-lo a atualizar sua aplicação, mas antes
 
 Recomendo muito a leitura do [guia de migração](http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php), lá na documentação oficial do CakePHP 2.0.
 
-<h3>"Atualizar ou não atualizar?", eis a questão</h3>
+### "Atualizar ou não atualizar?", eis a questão
 Recomendo fortemente que você atualize suas aplicações que atualmente rodam em CakePHP 1.3, ainda mais se elas seguirem os padrões do Cake e você não <strong>mudou nada no core</strong>.
 
 A nova versão traz inúmeras melhorias, otimizações e padronizações... O CakePHP em si tá mais rápido e leve, usando recusos nativos da linguagem e usando <strong>LazyLoad</strong> (só carrega quando for usar) em vários pontos da aplicação.
 
-<h3>Não é melhor deixar tudo do jeito que tá e começar do zero?</h3>
+### Não é melhor deixar tudo do jeito que tá e começar do zero?
 Estou trabalhando no novo site do meu curso online de CakePHP - [Assando Sites](http://assando-sites.com.br/) - que começou sendo criado na versão 1.3 mas ontem parei para atualizá-lo pra versão 2.0, fui lendo a documentação e fazendo os ajustes... demorei menos de 1 hora e não usei scripts prontos.
 
-<h3>O que mudou na versão nova?</h3>
+### O que mudou na versão nova?
 Recomendo que você leia essa página na documentação oficial:
 
 [http://book.cakephp.org/2.0/en/appendices/new-features-in-cakephp-2-0.html](http://book.cakephp.org/2.0/en/appendices/new-features-in-cakephp-2-0.html)
@@ -43,7 +43,7 @@ Recomendo que você leia essa página na documentação oficial:
 ## Atualizando seu projeto
 Na minha opinião, o trabalho de atualizar/migrar o projeto para a nova versão foi bem tranquilo... diria que muito pouca coisa de código mudou (exceto arquivos que já vêm no APP como config, database, index.php e etc.). A maior mudança - na minha opinião - foi a estrutura de pastas e nomenclatura de arquivos.
 
-<h3>Primeiro Passo - Reestruturando as pastas</h3>
+### Primeiro Passo - Reestruturando as pastas
 O primeiro passo será renomear praticamente todas as pastas do seu projeto (APP)... As únicas pastas que não mudam de nome são a <strong>tmp</strong> e a <strong>webroot</strong>.
 
 O resto das pastas têm o nome alterado para CamelCase no singular... exceto em alguns casos dentro da <strong>View</strong> (elements, errors e pastas de views para controllers [pastas que você criou]).
@@ -104,7 +104,7 @@ O resto das pastas têm o nome alterado para CamelCase no singular... exceto em 
 </div>
 Surge também uma pasta nova chamada <strong>Console</strong> que irá te ajudar a realizar tarefas de console/shell direto de dentro do seu projeto... Essa pasta você pode tirar de dentro do APP do CakePHP 2.0 que você baixar. ;)
 
-<h3>Segundo Passo - Renomeando os arquivos</h3>
+### Segundo Passo - Renomeando os arquivos
 Agora vem uma parte um pouco mais complicada mas que vai garantir uma padronização para todo o seu projeto... O nome de um arquivo é exatamente o nome da classe que ele contém!
 
 Veja alguns exemplos:
@@ -145,10 +145,10 @@ Alguns arquivos mudam de lugar:
 <li>View/Helper/AppHelper.php</li>
 </ul>
 </div>
-<h3>Terceiro Passo - Arquivos de configuração</h3>
+### Terceiro Passo - Arquivos de configuração
 Recomendo que você copie os arquivos <code>config/core.php</code>, <code>config/database.php</code> e <code>webroot/index.php</code> da nova versão do CakePHP e substitua os da sua aplicação... vários detalhes mudaram e é mais fácil reescrever qualquer configuração do que tentar fazer um diff e mudar só que há de novo.
 
-<h3>Quarto Passo - Internacionalização / i18n</h3>
+### Quarto Passo - Internacionalização / i18n
 Agora as funções de internacionalização/tradução como <code>__()</code> e <code>__d()</code> vão sempre retornar o texto, sem imprimí-lo como era o padrão.
 
 <div style="background: rgba(255,0,0,.1); border: 1px dashed rgba(0,0,0,.2); margin-bottom: 20px; width: 45%; float: left; padding: 10px 10px 0 10px;">
@@ -165,14 +165,14 @@ Agora as funções de internacionalização/tradução como <code>__()</code> e 
 <li>$texto = __('Olá Mundo')</li>
 </ul>
 </div>
-<h3>Quinto Passo - Funções removidas</h3>
+### Quinto Passo - Funções removidas
 O CakePHP vinha com várias funções-atalho que serviam pra reduzir o tamanho do código mas acabavam sendo um caminho mais longo para funções e métodos <em>built-in</em> do próprio PHP... Algumas dessas funções eram <code>e()</code>, <code>r()</code>, <code>low()</code>, <code>params()</code> e várias outras que foram removidas.
 
 Veja uma lista dessas funções (e suas alternativas) aqui:
 
 [http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php](http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php)
 
-<h3>Finalizando</h3>
+### Finalizando
 Agora você já pode começar a tentar rodar o seu projeto e ir resolvendo qualquer problema que apareça...
 
 Essas não são TODAS as mudanças que você precisará fazer no seu projeto, mas isso já cuida de grande parte das mudanças... Agora você precisará fazer ajustes e em alguns de seus components, RequestHandler e etc... Vale muito a pena ler o [guia de migração](http://book.cakephp.org/2.0/en/appendices/2-0-migration-guide.html#basics-php).

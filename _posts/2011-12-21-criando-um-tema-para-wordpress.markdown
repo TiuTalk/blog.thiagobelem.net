@@ -31,7 +31,7 @@ Se tudo der certo, o último post da série vai ao ar junto com o lançamento do
 
 Recomendo à todos uma leitura por alto do artigo [Theme Development](http://codex.wordpress.org/Theme_Development) no Codex... É de lá que eu tiro a maior parte das dúvidas sobre o processo de criação de temas.
 
-<h3>Passo 1 - Estrutura inicial do tema</h3>
+### Passo 1 - Estrutura inicial do tema
 Iremos criar um tema totalmente do zero, sem herdar ou usar códigos de outros temas.
 
 Pra começar, criamos uma pasta - dentro de <code>/wp-content/themes/</code> - para o nosso tema com os seguintes arquivos dentro:
@@ -39,7 +39,7 @@ Pra começar, criamos uma pasta - dentro de <code>/wp-content/themes/</code> - p
 * **style.css** - Onde definimos o título, autor e outros dados do tema
 * **index.php** - Onde iremos criar o HTML do tema
 
-<h3>Passo 2 - Informações sobre o tema (style.css)</h3>
+### Passo 2 - Informações sobre o tema (style.css)
 Agora precisamos abrir o <code>style.css</code> e colocar um bloco de comentário CSS com as informações sobre o tema:
 
 <div data-gist-id="1506849" data-gist-show-loading="false"></div>

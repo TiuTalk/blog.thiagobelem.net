@@ -23,19 +23,19 @@ Não se esqueça de antes de testar esses scripts verificar se o MySQLi está ha
 
 Veja um exemplo de scripts onde faremos todas as operações comuns do MySQL:
 
-<h3>Conectando-se ao MySQL</h3>
+### Conectando-se ao MySQL
 
 <div data-gist-id="40615383d6cee8d31ac2" data-gist-show-loading="false"></div>
 
 
 
-<h3>Executando uma consulta do tipo SELECT</h3>
+### Executando uma consulta do tipo SELECT
 
 <div data-gist-id="15ea4b3149e040c6af1e" data-gist-show-loading="false"></div>
 
 
 
-<h3>Executando uma consulta simples, do tipo DELETE ou UPDATE</h3>
+### Executando uma consulta simples, do tipo DELETE ou UPDATE
 
 <div data-gist-id="e8d8b6a2ade6b4b9a511" data-gist-show-loading="false"></div>
 

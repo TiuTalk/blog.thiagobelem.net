@@ -20,7 +20,7 @@ tags:
 ---
 Hoje trago até vocês um tutorial bem simples: como listar seus últimos vídeos do YouTube utilizando PHP.
 
-<h3>Pré-requisitos</h3>
+### Pré-requisitos
 Vamos precisar de um servidor com as seguintes extensões habilitadas:
 
 * [cURL](http://php.net/manual/book.curl.php)
@@ -34,7 +34,7 @@ Se você receber a seguinte mensagem de erro, significa que seu cURL não está 
 
 > Fatal error: Call to undefined function curl_init()
 
-<h3>O código</h3>
+### O código
 O código para pegar os vídeos é bem simples, por isso vou colocá-lo inteiro sem explicá-lo passo-a-passo:
 
 <div data-gist-id="9afbf4912e2fde79c3cd" data-gist-show-loading="false"></div>

@@ -18,7 +18,7 @@ A princípio os robôs (robots) podem acessar qualquer página/conteúdo/imagem 
 
 Imagine o robots.txt como uma lista de convidados para uma festa... Se não tá na lista não entra. A única diferenças é que com o robots.txt não há penetras. Você pode bloquear tanto o site inteiro como documentos e arquivos específicos, facilitando assim o controle de "quem entra" no seu site.
 
-<h3>Criando o seu robots.txt</h3>
+### Criando o seu robots.txt
 Suponhamos que você tenha um arquivo chamado confidencial.html na raiz do seu site e você não quer que os indexadores dos sistemas de buscas e nenhum outro tipo de robô tenha acesso a esse arquivo... É só colocar isso aqui no seu robots.txt:
 
 
@@ -29,19 +29,19 @@ Isso fará com que nenhum robot consiga acessar o arquivo especificado... Mas vo
 
 <div data-gist-id="a0d7196e4fa6a71261c9" data-gist-show-loading="false"></div>
 
-<h3>Comentários no robots.txt</h3>
+### Comentários no robots.txt
 Se você é uma pessoa <span style="text-decoration: line-through;">metódica</span> organizada e quer colocar comentários no seu robots é só usar o caractere "tralha" (#) para isso, dessa forma:
 
 
 <div data-gist-id="c4613c12a1631fa93b5b" data-gist-show-loading="false"></div>
 
-<h3>Bloqueando um site inteiro</h3>
+### Bloqueando um site inteiro
 Tá com a pá virada e quer bloquear o acesso completo de todos os robôs ao seu site? Não precisa tirar ele do ar, e só fazer isso:
 
 
 <div data-gist-id="72ac684edc18a510993e" data-gist-show-loading="false"></div>
 
-<h3>Criando a lista VIP da festa</h3>
+### Criando a lista VIP da festa
 Tem gente que prefere bloquear todo mundo e permitir só alguns, e com o robots.txt não é diferente:
 
 

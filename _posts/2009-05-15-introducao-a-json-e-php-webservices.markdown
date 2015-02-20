@@ -25,11 +25,11 @@ Descrição de JSON da Wikipédia:
 
 Trocando em miúdos: é um padrão de formatação de dados que serão transmitidos entre duas aplicações de linguagens diferentes. Conhece o XML? Então... O JSON serve pra mesma coisa.
 
-<h3></h3>
-<h3>Como ele funciona?</h3>
+###
+### Como ele funciona?
 Usando JSON você salvar quatro tipos de valores (variáveis): inteiros, strings, booleanos e arrays. O JSON é um grupo de informações/valores/variáveis agrupados e organizados dentro de um objeto (POO) de JavaScript que pode ser lido - facilmente - pela maioria das linguagens hoje em dia: PHP, ActionScript, ASP, Java, Flex e por aí vai..
 
-<h3>A sintaxe do dito cujo</h3>
+### A sintaxe do dito cujo
 Tá nervoso? Quer ver logo como é esse tal de <em>"djeisón"</em>? Vamos criar um objeto que levaria algumas informações aqui do blog.
 
 Primeiro criamos o objeto sem nada dentro:
@@ -56,7 +56,7 @@ Lembra que eu disse que você provavelmente já viu JSON em algum lugar? Já uso
 
 <span style="color: #ffffff;">.</span>
 
-<h3>Tá... E o PHP nisso?</h3>
+### Tá... E o PHP nisso?
 Bom... Como eu disse antes, o PHP 5.2+ tem suporte nativo a escrita e leitura de formatação JSON... Isso significa que você não precista instalar/ativar nada, é só começar a usar.
 
 Vejamos um exemplo de escrita:
@@ -73,7 +73,7 @@ Agora a leitura:
 
 No segundo argumento da função json_decode() do PHP você define se quer (true) ou não (false) que o objeto JSON recebido seja convertido em array. Caso não especifique o 2º argumento ou defina-o como falso, o objeto criado será outro objeto, só que agora do PHP.
 
-<h3>Webservice? Quem? Como? Quando?</h3>
+### Webservice? Quem? Como? Quando?
 Já dizia a Wikipédia: <em>"Web service é uma solução utilizada na integração de sistemas e na comunicação entre aplicações diferentes."</em>
 
 Mas perai... O JSON não é usado para formatar os dados que estão sendo compartilhados entre duas aplicações diferentes? <strong>Sim!</strong> Você acaba de descobrir por que o JSON é ideal para <em>webservices</em>. :)

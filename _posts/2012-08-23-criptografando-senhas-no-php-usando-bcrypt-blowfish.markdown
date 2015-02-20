@@ -24,10 +24,10 @@ Recomendo a leitura de um artigo meu (não tão antigo assim), onde falo sobre a
 
 Desde então, eu tenho procurado me aprofundar um pouco mais no assunto, e recentemente comecei a usar o <strong>bcrypt </strong>nos meus projetos...
 
-<h3>Suporte ao bcrypt</h3>
+### Suporte ao bcrypt
 O PHP suporta hashing via [crypt()](http://php.net/manual/function.crypt.php) que está presente desde o PHP 4, e serve pra trabalhar com hashings de mão única (como o MD5 e SHA1).
 
-<h3>Usando o bcrypt</h3>
+### Usando o bcrypt
 O bcrypt precisa - obrigatóriamente - receber dois "parâmetros" pra funcionar: o <strong>salt</strong> e o <strong>custo</strong> de processamento. O <strong>salt </strong>nada mais é do que a sua garantia de que, dado um salt aleatório, a mesma senha nunca será igualmente hasheada duas vezes... não importa que você criptografe a mesma senha 100 vezes, se o salt for diferente nas 100 vezes, o resultado final será sempre diferente. Para o bcrypt funcionar:
 
 <ol>
@@ -38,7 +38,7 @@ O bcrypt precisa - obrigatóriamente - receber dois "parâmetros" pra funcionar:
 
 O custo de processamento influencia diretamente nas tentativas de ataque de força bruta, quanto maior, mais lento, quanto mais lento, melhor.
 
-<h3>Criptografando senhas usando bcrypt</h3>
+### Criptografando senhas usando bcrypt
 Basicamente, pra criptografar a senha "<strong>olá mundo</strong>", com o salt "<strong>Cf1f11ePArKlBJomM0F6aJ</strong>" à um custo de processamento de <strong>8</strong>, você faria algo assim:
 
 <div data-gist-id="3438858" data-gist-show-loading="false"></div>
@@ -60,7 +60,7 @@ Caso essa mesma senha seja criptografada com o mesmo salt e o mesmo custo, o res
 
 Vale lembrar que o hash gerado terá sempre <strong>60 caracteres</strong>, então você pode modelar a sua coluna que armazena a senha como <strong>CHAR(60)</strong> ou <strong>VARCHAR(60)</strong> se você estiver usando o MySQL. ;)
 
-<h3>Verificando e validando senhas usando bcrypt</h3>
+### Verificando e validando senhas usando bcrypt
 Agora suponhamos que o seu usuário está fazendo o login, e o único valor que você tem é o nome de usuário (ou email, tanto faz) e a senha que ele digitou no formulário (ola mundo), como comparar isso com o valor que está no banco para verificar se os dados estão válidos?
 
 Já que você está trabalhando com um salt gerado aleatoriamente, é impossível gerar um novo hash que seja igual ao hash que está no banco... correto? ERRADO! :)
@@ -73,7 +73,7 @@ Para comparar uma senha texto-plano com um já hasheado, é só usar esse própr
 
 E é aí que o <strong>custo</strong> entra em jogo... mesmo durante um ataque de força bruta, o atacante pode tentar diferentes combinações de "senha original" mas o custo vai tornar a operação toda tão lenta que não vai valer o esforço.
 
-<h3>Uma pequena classe para facilitar a sua vida</h3>
+### Uma pequena classe para facilitar a sua vida
 Criei uma pequena [classe Bcrypt](https://gist.github.com/3438461) que ajuda a fazer esse trabalho todo através de dois métodos bem simples de usar..
 
 Primeiro, o código completo da classe:

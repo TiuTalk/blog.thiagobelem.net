@@ -26,7 +26,7 @@ Qualquer um que entenda um pouquinho mais de web vai concordar comigo quando dig
 
 Uma vez falei aqui sobre como você poderia otimizar o carregamento do seu site, e nesse post falei sobre o Minify ([Otimizando o seu site – Carregamento](/otimizando-o-seu-site-carregamento)) e hoje vou falar sobre o <strong>Yahoo YUI Compressor</strong>, que faz a mesma coisa que o Minify só que não é dinâmicamente.
 
-<h3>Yahoo YUI Compressor</h3>
+### Yahoo YUI Compressor
 O [Yahoo YUI Compressor](http://developer.yahoo.com/yui/compressor/) é um compressor/ofuscador de código criado pela Yahoo para reduzir a quantidade de "lixo" (compressor) e embaralhar (ofuscador) um código, deixando ele consideravelmente mais leve e rápido.
 
 Trago pra vocês o link do <strong>Yahoo YUI Online Compressor</strong>: [http://refresh-sf.com/](http://refresh-sf.com/)

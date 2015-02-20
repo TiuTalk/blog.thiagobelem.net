@@ -21,10 +21,10 @@ Hoje vamos dar continuidade a nossa sequëncia de tutoriais que te ensina a cria
 
 Na parte de hoje, a Parte 4, vamos fazer inúmeros ajustes e correções na classe além implementar a funcionalidade "Lembrar minha senha".
 
-<h3>Lembrando a minha senha</h3>
+### Lembrando a minha senha
 A funcionalidade "Lembrar minha senha" funciona basicamente da seguinte forma: após o usuário se logar (informando que quer que sua senha seja lembrada) são criados cookies na máquina dele salvando o usuário e a senha do mesmo... Depois, quando o usuário voltar no site e não estiver logado o sistema busca esses cookies e tenta validar os dados, se os dados validarem ele é logado automaticamente no sistema e os cookies são reescritos (para durarem mais tempo).
 
-<h3>Ajustes e correções</h3>
+### Ajustes e correções
 Estou desde ontem revisando a classe e fazendo algumas pequenas correções... Não vou listar todas aqui pois acho mais fácil vocês pegarem o PHPs final e darem uma olhada... Prefiro listar aqui rapidamente o que foi preciso fazer e vocês vão dando uma olhada no código:
 
 <ul>
@@ -38,14 +38,14 @@ Estou desde ontem revisando a classe e fazendo algumas pequenas correções... N
 </ul>
 
 
-<h3>Novas Propriedades</h3>
+### Novas Propriedades
 Para a nossa nova funcionalidade precisamos criar uma nova propriedade na nossa classe:
 
 <div data-gist-id="3e6c2da1c87a0b93359a" data-gist-show-loading="false"></div>
 
 Se vocês lerem o comentário vão perceber que um terceiro parâmetro foi adicionado ao método logaUsuario()... É esse terceiro parâmetro que define se os dados serão lembrados pelo o sistema.
 
-<h3>Novo Método - <span style="color: #B40000">lembrarDados()</span></h3>
+### Novo Método - <span style="color: #B40000">lembrarDados()</span>
 Vamos criar agora o método lembrarDados() que irá salvar os dados do usuário, criptografados, em cookies:
 
 <div data-gist-id="32da0b8315c89e638027" data-gist-show-loading="false"></div>
@@ -66,7 +66,7 @@ Nosso método que salva os dados em cookies está pronto... Esse método será u
 
 Agora nós vamos precisar criar um método que verifica os dados (usuario e senha) salvos nos cookies:
 
-<h3>Novo Método - <span style="color: #B40000">verificaDadosLembrados()</span></h3>
+### Novo Método - <span style="color: #B40000">verificaDadosLembrados()</span>
 Esse método é muito importante pois ele verificará os dados salvos nos cookies <strong>tentando logar o usuário</strong>! Esse método só será chamado quando o usuário tentar acessar uma página protegida e não estiver logado... O proprio método <strong>usuarioLogado()</strong> já fará isso!
 
 Vamos começar:
@@ -87,7 +87,7 @@ Antes que você desista do tutorial agora mesmo por que acha que tá muito compl
 
 Nossa nova funcionalidade está quase pronta.. Só falta uma coisinha: um método que limpe os dados lembrados do Cookie para quando o usuário fizer logout... Isso é opcional, vai depender do seu sistema, mas já vamos criar o método e você decide se limpa ou não os dados após o logout (automaticamente, claro).
 
-<h3>Novo Método - <span style="color: #B40000">limpaDadosLembrados()</span></h3>
+### Novo Método - <span style="color: #B40000">limpaDadosLembrados()</span>
 Para deletar um cookie você deve definir o seu valor como nulo ou falso e definir a sua data de expiração no passado... O método fica asssim:
 
 <div data-gist-id="e0d47db8bca966659497" data-gist-show-loading="false"></div>
@@ -102,6 +102,6 @@ Pra quem quiser, o download do script completo:
 <li><strong>Parte 3</strong> » [Pastie](http://pastie.org/826200) (Inclui as partes 1 e 2)</li>
 <li><strong>Parte 4</strong> » [Pastie](http://pastie.org/826208) (Inclui as partes 1, 2 e 3)</li>
 </ul>
-<h3>Como usar a nova funcionalidade</h3>
+### Como usar a nova funcionalidade
 Agora vamos fazer alguns mínimos ajustes aos códigos mostados no <a href="/sistema-de-logins-com-classe-no-php-como-usar" title="Sistema de logins com classe no PHP â
 
