@@ -68,23 +68,7 @@ Mostrei exemplos os maiores vilões do carregamento: slideshows, fotos no fim da
 Depois comecei a mostrar algumas ferramentas interessantíssimas como o [Modernizr](http://www.modernizr.com/)... De tudo o que falei acredito que a parte mais interessante foi o <strong>carregamento condicional</strong> de plugins de jQuery utilizando o <strong>yepnope.js</strong>:
 
 
-{% highlight javascript linenos %}
-// Só vamos carregar o plugin quando for necessário!
-yepnope({
-        // Teste: Existe um elemento com a classe "datepicker"?
-        test: $('.datepicker').length,
-
-        // Carrega o CSS e o JS do plugin de datepicker
-        yep: ['js/datepicker/style.css', 'js/datepicker/datepicker.js'],
-
-        // Quando terminar de carregar o CSS e o JS, executa a função...
-        complete: function() {
-
-                // ... que ativa a funcionalidade no elemento encontrado
-                $('.datepicker').datepicker();
-        }
-});
-{% endhighlight %}
+<div data-gist-id="a75af72f082c4b28f64c" data-gist-show-loading="false"></div>
 
 E terminei a palestra (bem antes do horário esperado) batendo um papo sobre as técnicas de otimização com o pessoal que estava assistindo.
 

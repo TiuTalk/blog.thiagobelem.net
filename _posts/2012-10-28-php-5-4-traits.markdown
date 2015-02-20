@@ -25,18 +25,23 @@ Suponhamos que você tenha duas ou mais classes que precisam usar um método/com
 Primeiro temos nossa classe Log, que serviria pra salvar mensagens de log (imagine uma classe completa, que faça algo de útil):
 
 <div data-gist-id="3970165" data-gist-show-loading="false"></div>
+
 E agora você tem outras classes que fazem uso dessa funcionalidade (salvar logs), mas essas classes não podem (e nem deveriam) estender Log, então você faria algo do tipo:
 
 <div data-gist-id="3970168" data-gist-show-loading="false"></div>
+
 Mais uma vez, o conteúdo ou métodos dessas classes não importa.. o que importa aqui é o trabalho que temos para poder usar o <strong>Log::log()</strong> para salvar mensagens de log.
 
 Já na versão 5.4, podemos transformar a classe Log numa Trait:
 
 <div data-gist-id="3970177" data-gist-show-loading="false"></div>
+
 E manter o comportamento das nossas classes, de forma bem mais simples:
 
 <div data-gist-id="3970188" data-gist-show-loading="false"></div>
+
 <div data-gist-id="3970189" data-gist-show-loading="false"></div>
+
 Podemos usar o método log() diretamente (sem a necessidade de instanciar um objeto de Log) pois nossas classes adquiriram as características (métodos e atributos) de Log! :)
 
 <h3>Conclusão</h3>

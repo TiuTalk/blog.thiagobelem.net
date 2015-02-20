@@ -34,19 +34,8 @@ Essa função retornará true para os seguintes casos:
 <li>var $var; (uma variável declarada, sem valor, dentro de uma classe)</li>
 </ul>
 Agora vamos ver um exemplo prático de uso do empty():
-{% highlight php linenos %}
-<?php
 
-// Recebe um campo de um formulário
-$nome = $_POST['nome'];
-
-// Verifica se o usuário digitou o seu nome
-if (empty($nome)) {
-  echo "Por favor, preencha o seu nome.";
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="01273ad36cad3e594767" data-gist-show-loading="false"></div>
 
 
 <h3>A função <span style="color: orange;">isset()</span></h3>
@@ -55,34 +44,7 @@ Ela serve para saber se uma variável existe... Ela retornará true (verdadeiro)
 Veja os exemplos de variáveis vazias no item anterior... Todos eles fazem com que a variável ($var) passe a existir... Para uma variável "não existir" ela não pode ter sido usada/definida em nenhum momento [anterior] do script... Veja um exemplo onde usamos o isset() em conjunto com o empty() e melhoramos o exemplo do item anterior:
 
 
-{% highlight php linenos %}
-<?php
-
-// Verifica se a variável $_POST não é vazia...
-// ou seja: houve um submit no formulário
-if (!empty($_POST)) {
-
-  // Verifica se a variável $_POST['nome'] existe
-  if (isset($_POST['nome']) {
-
-    // Verifica se o usuário digitou o seu nome
-    if (!empty($_POST['nome'])) {
-      $nome = $_POST['nome'];
-      echo 'Seja bem-vindo(a) ' . $nome . '!';
-    } else {
-      echo "Por favor, preencha o seu nome";
-    }
-
-  } else {
-    echo "O campo 'nome' não existe na variável $_POST";
-  }
-
-} else {
-  echo "Não houve submit no formulário";
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="f43f7a3611c2d287378e" data-gist-show-loading="false"></div>
 
 Espero que tenham gostado! :)
 

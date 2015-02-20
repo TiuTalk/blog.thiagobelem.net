@@ -29,40 +29,12 @@ Neste arquivo, adicione o seguinte bloco de código:
 <strong>Linux</strong>
 
 
-{% highlight sh linenos %}
-# Todo o servidor
-<Directory />
-  Order deny,allow
-  Deny from all
-  AllowOverride None
-  Options None
-</Directory>
-
-# Raíz do servidor (opcional)
-<Directory /var/www/>
-  Order allow,deny
-  Allow from all
-</Directory>
-{% endhighlight %}
+<div data-gist-id="0c7727edfbf7ecc547d7" data-gist-show-loading="false"></div>
 
 <strong>Windows</strong>
 
 
-{% highlight sh linenos %}
-# Todo o servidor
-<Directory C:/>
-  Order deny,allow
-  Deny from all
-  AllowOverride None
-  Options None
-</Directory>
-
-# Raíz do servidor (opcional)
-<Directory C:/webroot/>
-  Order allow,deny
-  Allow from all
-</Directory>
-{% endhighlight %}
+<div data-gist-id="c4c26eec40fa04d1fea1" data-gist-show-loading="false"></div>
 
 A segunda parte (raíz do servidor) é opcional... As chances de já existir um bloco desses no arquivo <code>httpd.conf</code> é muito grande. Coloquei-a ali em cima apenas para vocês poderem testar. E não se esqueça de mudar a letra do drive e o caminho da raíz do servidor se necessário.
 

@@ -26,10 +26,7 @@ Edite o arquivo o arquivo <strong>.htaccess</strong> na raíz do seu site ou o a
 Em um desses dois arquivos, coloque a seguinte linha de código:
 
 
-{% highlight sh linenos %}
-# Muda o arquivo de erro 404
-ErrorDocument 404 /erro404.php
-{% endhighlight %}
+<div data-gist-id="b5d0664b55facdb39908" data-gist-show-loading="false"></div>
 
 Isso fará com que o Apache use o arquivo <strong>erro404.php</strong> para lidar com a mensagem de erro. Você pode usar arquivos HTML também, não tem problema.
 

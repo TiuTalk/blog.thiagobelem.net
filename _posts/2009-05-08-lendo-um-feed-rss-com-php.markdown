@@ -17,19 +17,7 @@ Hoje vou mostrar, como é possível ler o conteúdo de um <abbr title="Really Si
 Vamos ao código:
 
 
-{% highlight php linenos %}
-<?php
-$feed = file_get_contents('http://feeds2.feedburner.com/ThiagoBelem/Blog');
-$rss = new SimpleXmlElement($feed);
-
-foreach($rss->channel->item as $entrada) {
-echo '
-[title . '](' . $entrada->link . ')
-
-';
-}
-?>
-{% endhighlight %}
+<div data-gist-id="58ea43e2b168cb05fe57" data-gist-show-loading="false"></div>
 
 Viram só?! Com isso criamos uma lista contendo links para todas as entradas de um Feed RSS. :D
 

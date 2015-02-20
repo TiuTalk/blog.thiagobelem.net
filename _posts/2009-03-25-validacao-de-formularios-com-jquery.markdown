@@ -26,82 +26,22 @@ Faça o download da última versão do <strong>jQuery </strong>no site: <a href=
 Insira-os dentro do <head> do seu site, da seguinte forma:
 
 
-{% highlight html linenos %}
-<script src="jquery.js" type="text/javascript"></script>
- <script src="jquery.validate.js" type="text/javascript"></script>
-{% endhighlight %}
+<div data-gist-id="551e7d13d1cd828d6acf" data-gist-show-loading="false"></div>
 
 Após isso, criamos um pequeno bloco de CSS para estilizar as mensagens de erro:
 
 
-{% highlight css linenos %}
-* { font-family: Verdana; font-size: 96%; }
-label { display: block; margin-top: 10px; }
-label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; font-size: 10px }
-p { clear: both; }
-.submit { margin-top: 1em; }
-em { font-weight: bold; padding-right: 1em; vertical-align: top; }
-{% endhighlight %}
+<div data-gist-id="1d5dd4b54b29e11ee7e5" data-gist-show-loading="false"></div>
 
 Ainda dentro do <em><strong>head</strong></em>, depois de inserir o <strong>jQuery</strong> e o estilo das mensagens de erro, precisaremos adicionar um bloco de JavaScript contendo instruções para a validação:
 
 
-{% highlight javascript linenos %}
-$(document).ready( function() {
-  $("#formularioContato").validate({
-    // Define as regras
-    rules:{
-      campoNome:{
-        // campoNome será obrigatório (required) e terá tamanho mínimo (minLength)
-        required: true, minlength: 2
-      },
-      campoEmail:{
-        // campoEmail será obrigatório (required) e precisará ser um e-mail válido (email)
-        required: true, email: true
-      },
-      campoMensagem:{
-        // campoMensagem será obrigatório (required) e terá tamanho mínimo (minLength)
-        required: true, minlength: 2
-      }
-    },
-    // Define as mensagens de erro para cada regra
-    messages:{
-      campoNome:{
-        required: "Digite o seu nome",
-        minLength: "O seu nome deve conter, no mínimo, 2 caracteres"
-      },
-      campoEmail:{
-        required: "Digite o seu e-mail para contato",
-        email: "Digite um e-mail válido"
-      },
-      campoMensagem:{
-        required: "Digite a sua mensagem",
-        minLength: "A sua mensagem deve conter, no mínimo, 2 caracteres"
-      }
-    }
-  });
-});
-{% endhighlight %}
+<div data-gist-id="f375cb769ac586a82720" data-gist-show-loading="false"></div>
 
 Por fim, inserimos o HTML do formulário na pagina:
 
 
-{% highlight html linenos %}
-<form id="formularioContato" method="post">
-
-  <label for="nome">Nome</label>
-  <input id="nome" name="campoNome" type="text" />
-
-  <label for="email">E-mail</label>
-  <input id="email" name="campoEmail" type="text" />
-
-  <label for="mensagem">Mensagem</label>
-  <textarea id="mensagem" name="campoMensagem"></textarea>
-
-  <input class="submit" type="submit" value="Enviar" />
-
-</form>
-{% endhighlight %}
+<div data-gist-id="8b47a598a9e9efb21c65" data-gist-show-loading="false"></div>
 
 Viram como é fácil? O arquivo final ficou [desta](/exemplo2) forma. Se você preferir pode copiar todo esse código JavaScript para um arquivo .js e incluí-lo no <head> do seu site da mesma forma que fizemos no começo da aula.
 

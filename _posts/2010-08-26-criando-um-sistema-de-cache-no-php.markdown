@@ -26,189 +26,50 @@ Vamos criar aqui uma classe que servirá para armazenar qualquer tipo de texto, 
 Para começar, começamos criando uma classe vazia:
 
 
-{% highlight php linenos %}
-<?php
-
-/**
- * Sistema de cache
- *
- * @author Thiago Belem <contato@thiagobelem.net>
- * @link /
- */
-class Cache {
-
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="62b08ee7b27898feebf2" data-gist-show-loading="false"></div>
 
 Agora vamos adicionar alguns atributos que serão usados pelo sistema de cache:
 
 
-{% highlight php linenos %}
-  /**
-   * Tempo padrão de cache
-   *
-   * @var string
-   */
-  private static $time = '5 minutes';
-
-  /**
-   * Local onde o cache será salvo
-   *
-   * Definido pelo construtor
-   *
-   * @var string
-   */
-  private $folder;
-{% endhighlight %}
+<div data-gist-id="9c19c9c24c4954249997" data-gist-show-loading="false"></div>
 
 O atributo <code>$time</code> define por quanto tempo as informações ficarão salvas no cache, tempo esse que poderá ser mudado para cada valor salvo (veremos mais a diante).
 
 Agora vamos criar um método chamado <code>setFolder()</code> que servirá para definir o local onde os arquivos de cache serão salvos:
 
 
-{% highlight php linenos %}
-  /**
-   * Define onde os arquivos de cache serão salvos
-   *
-   * Irá verificar se a pasta existe e pode ser escrita, caso contrário
-   * uma mensagem de erro será exibida
-   *
-   * @param string $folder Local para salvar os arquivos de cache (opcional)
-   *
-   * @return void
-   */
-  protected function setFolder($folder) {
-    // Se a pasta existir, for uma pasta e puder ser escrita
-    if (file_exists($folder) && is_dir($folder) && is_writable($folder)) {
-      $this->folder = $folder;
-    } else {
-      trigger_error('Não foi possível acessar a pasta de cache', E_USER_ERROR);
-    }
-  }
-{% endhighlight %}
+<div data-gist-id="32353819f34301e332cb" data-gist-show-loading="false"></div>
 
 Esse método recebe o caminho (pasta) onde os arquivos serão criados e, após verificar se o caminho existe, é um diretório e pode ser manipulado, ele define um atributo com o caminho passado. Caso ele não consiga localizar a pasta ou não seja possível escrever nela, um erro será gerado.
 
 Com esse método criado, podemos criar um construtor para essa classe com o seguinte código:
 
 
-{% highlight php linenos %}
-  /**
-   * Construtor
-   *
-   * Inicializa a classe e permite a definição de onde os arquivos
-   * serão salvos. Se o parâmetro $folder for ignorado o local dos
-   * arquivos temporários do sistema operacional será usado
-   *
-   * @uses Cache::setFolder() Para definir o local dos arquivos de cache
-   *
-   * @param string $folder Local para salvar os arquivos de cache (opcional)
-   *
-   * @return void
-   */
-  public function __construct($folder = null) {
-    $this->setFolder(!is_null($folder) ? $folder : sys_get_temp_dir());
-  }
-{% endhighlight %}
+<div data-gist-id="bffe28d021d0d25d7e74" data-gist-show-loading="false"></div>
 
 O construtor será chamado sempre que instanciarmos a classe Cache e, como você pode ver, ele recebe um parâmetro (opcional) onde podemos definir o local onde os arquivos serão criados... Se não passarmos nenhum parâmetro para ele o mesmo irá usar o local de arquivos temporários definido pelo seu sistema operacional.
 
 Agora que já conseguimos definir o local onde os caches serão salvos, vamos criar o método que irá gerar o nome dos arquivos de cache:
 
 
-{% highlight php linenos %}
-  /**
-   * Gera o local do arquivo de cache baseado na chave passada
-   *
-   * @param string $key Uma chave para identificar o arquivo
-   *
-   * @return string Local do arquivo de cache
-   */
-  protected function generateFileLocation($key) {
-    return $this->folder . DIRECTORY_SEPARATOR . sha1($key) . '.tmp';
-  }
-{% endhighlight %}
+<div data-gist-id="47f53b18001c684dc2c8" data-gist-show-loading="false"></div>
 
 E o método que irá criar o arquivo de cache propriamente dito:
 
 
-{% highlight php linenos %}
-  /**
-   * Cria um arquivo de cache
-   *
-   * @uses Cache::generateFileLocation() para gerar o local do arquivo de cache
-   *
-   * @param string $key Uma chave para identificar o arquivo
-   * @param string $content Conteúdo do arquivo de cache
-   *
-   * @return boolean Se o arquivo foi criado
-   */
-  protected function createCacheFile($key, $content) {
-    // Gera o nome do arquivo
-    $filename = $this->generateFileLocation($key);
-
-    // Cria o arquivo com o conteúdo
-    return file_put_contents($filename, $content)
-      OR trigger_error('Não foi possível criar o arquivo de cache', E_USER_ERROR);
-  }
-{% endhighlight %}
+<div data-gist-id="ef123cb5a390305a916a" data-gist-show-loading="false"></div>
 
 O nosso sistema está quase pronto.. Já podemos criar arquivos de cache na pasta de cache, precisamos então criar dois métodos: um para salvar um valor no cache (seja ele uma string, número, resultado SQL e etc.) e outro pra ler esse valor do cache.
 
 Primeiro o método que salva um valor no cache:
 
 
-{% highlight php linenos %}
-  /**
-   * Salva um valor no cache
-   *
-   * @uses Cache::createCacheFile() para criar o arquivo com o cache
-   *
-   * @param string $key Uma chave para identificar o valor cacheado
-   * @param mixed $content Conteúdo/variável a ser salvo(a) no cache
-   * @param string $time Quanto tempo até o cache expirar (opcional)
-   *
-   * @return boolean Se o cache foi salvo
-   */
-  public function save($key, $content, $time = null) {
-    $time = strtotime(!is_null($time) ? $time : self::$time);
-
-    $content = serialize(array(
-      'expires' => $time,
-      'content' => $content));
-
-    return $this->createCacheFile($key, $content);
-  }
-{% endhighlight %}
+<div data-gist-id="00c92988a4e5381ba854" data-gist-show-loading="false"></div>
 
 E agora o método para ler esse valor do cache:
 
 
-{% highlight php linenos %}
-  /**
-   * Salva um valor do cache
-   *
-   * @uses Cache::generateFileLocation() para gerar o local do arquivo de cache
-   *
-   * @param string $key Uma chave para identificar o valor cacheado
-   *
-   * @return mixed Se o cache foi encontrado retorna o seu valor, caso contrário retorna NULL
-   */
-  public function read($key) {
-    $filename = $this->generateFileLocation($key);
-    if (file_exists($filename) && is_readable($filename)) {
-      $cache = unserialize(file_get_contents($filename));
-      if ($cache['expires'] > time()) {
-        return $cache['content'];
-      } else {
-        unlink($filename);
-      }
-    }
-    return null;
-  }
-{% endhighlight %}
+<div data-gist-id="1c479f8c058acb530c1a" data-gist-show-loading="false"></div>
 
 Se você reparar, esse último método irá excluir o arquivo de cache caso ele tenha expirado.
 
@@ -216,19 +77,7 @@ Se você reparar, esse último método irá excluir o arquivo de cache caso ele 
 Veja um exemplo de uso do sistema de cache onde primeiro verificamos se há um valor armazenado no cache e, se não houver, geramos o valor novamente e salvamos ele no cache para futuras verificações:
 
 
-{% highlight php linenos %}
-// Verifica se a frase já está no cache
-$cache = new Cache();
-$frase = $cache->read('frase-dia');
-// Se não houver frase no cache ou já tiver expirado
-if (!$frase) {
-  // Cria uma nova frase e salva-a no cache por 30s
-  $frase = 'CALMA! O sábio jamais se aborrece ('. date('H:i:s') .')';
-  $cache->save('frase-dia', $frase, '30 seconds');
-}
-echo "{$frase}
-";
-{% endhighlight %}
+<div data-gist-id="f3a0e8276068a8954d36" data-gist-show-loading="false"></div>
 
 Veja o código-fonte completo da classe: [http://pastebin.com/p4m0CpwH](http://pastebin.com/p4m0CpwH)
 

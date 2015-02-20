@@ -13,71 +13,12 @@ Eu estava lendo o meu último post que fala [como calcular a diferença (em dias
 Suponhamos que você queira saber com precisão que dia será daqui... 28 dias. Você pode usar a poderosa função srttotime() do PHP e conseguir fazer isso com facilidade, veja:
 
 
-{% highlight php linenos %}
-<?php
-/*
-* Calculando datas no futuro com o PHP
-* /
-*/
-
-// Calcula a data daqui 3 dias
-$timestamp = strtotime("+3 days");
-// Exibe o resultado
-echo date('d/m/Y H:i', $timestamp); // 27/03/2009 05:02
-
-echo "";
-
-// Calcula uma data daqui 8 dias e 1 mês
-$timestamp = strtotime("+1 month 8 days");
-// Exibe o resultado
-echo date('d/m/Y H:i', $timestamp); // 04/05/2009 05:02
-
-echo "";
-
-// Calcula uma data daqui 1 hora
-$timestamp = strtotime("+1 hour");
-// Exibe o resultado
-echo date('d/m/Y H:i', $timestamp); // 24/03/2009 06:02
-
-?>
-{% endhighlight %}
+<div data-gist-id="665356a0b90f76252b31" data-gist-show-loading="false"></div>
 
 Nesse exemplo todas as datas serão calculadas a partir da data atual... Mas e se você quiser fazer esse calculo baseado em uma data do banco de dados (no formato MySQL)? Você pode fazer assim:
 
 
-{% highlight php linenos %}
-<?php
-/*
-* Calculando datas no futuro com o PHP a partir de datas definidas
-* /
-*/
-
-// Pega a data que está salva no banco de dados
-$data = '2009-05-20 06:34:00';
-
-// Calcula a data daqui 3 dias
-$timestamp = strtotime($data . "+3 days");
- // O valor passado para o strtotime() seria: 2009-05-20 06:34:00 +3 days
-
-// Exibe o resultado
-echo date('d/m/Y H:i', $timestamp); // 23/05/2009 06:34
-
-echo "";
-
-// Calcula uma data daqui 2 dias e 2 mêses
-$timestamp = strtotime($data . "+2 months 2 days");
-// Exibe o resultado
-echo date('d/m/Y H:i', $timestamp); // 22/07/2009 06:34
-
-echo "";
-
-// Calcula uma data daqui 1 hora
-$timestamp = strtotime($data . "+1 hour");
-// Exibe o resultado
-echo date('d/m/Y H:i', $timestamp); // 20/05/2009 07:34
-
-?>
-{% endhighlight %}
+<div data-gist-id="a5affc015ed042edad13" data-gist-show-loading="false"></div>
 
 Dessa forma você também pode calcular datas no passado só trocando o sinal de <strong>mais </strong>por <strong>menos</strong>.
 

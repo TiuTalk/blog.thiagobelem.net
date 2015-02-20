@@ -74,13 +74,7 @@ Vamos começar com o exemplo da página de contato que atualmente você acessa p
 Vá até a raiz do seu site e edite (ou crie) um arquivo chamado .htaccess ([leia mais aqui](http://en.wikipedia.org/wiki/Htaccess)), e dentro dele coloque as seguintes linhas que explicarei mais a diante:
 
 
-{% highlight text linenos %}
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-
-  RewriteRule ^contato/?$ /contato.php [NC,L]
-</IfModule>
-{% endhighlight %}
+<div data-gist-id="a56f84c15ad5d3e9328e" data-gist-show-loading="false"></div>
 
 Agora vamos as explicações...
 

@@ -29,6 +29,7 @@ Por enquanto não tenho nenhum layout à seguir, então vou tentar criar o "HTML
 Pra começar, abrimos o <code>index.php</code> que até então está vazio e adicionamos a estrutura básica do HTML5:
 
 <div data-gist-id="1507375" data-gist-show-loading="false"></div>
+
 Como vocês podem ver, não há nada demais aí.. vamos começar a usar algumas funções do WordPress pra facilitar a nossa vida.
 
 <h3>Passo 4 - Funções básicas de tema no WordPress</h3>
@@ -41,6 +42,7 @@ Agora iremos usar as seguintes funções:
 Aplicando essas funções ao nosso <code>index.php</code>, vamos ficar com o seguinte:
 
 <div data-gist-id="1507389" data-gist-show-loading="false"></div>
+
 Aproveitei pra usar a função [bloginfo()](http://codex.wordpress.org/Function_Reference/bloginfo) pra pegar a url completa do tema e inserir o nosso estilo.css (que eu ainda nem criei, mas isso não é um problema)...
 
 Caso você use a [bloginfo()](http://codex.wordpress.org/Function_Reference/bloginfo) sem passar nenhum parâmetro, ela irá retornar o título do blog, que é que fizemos dentro da tag <strong>title</strong>.
@@ -48,10 +50,12 @@ Caso você use a [bloginfo()](http://codex.wordpress.org/Function_Reference/blog
 Como resultado, acessando o blog teremos o seguinte código fonte:
 
 <div data-gist-id="1507401" data-gist-show-loading="false"></div>
+
 <h3>Passo 5 - Feed RSS e Atom</h3>
 Já que estamos criando um tema para blog, nada melhor do que aproveitar que estamos editando o elemento <strong>head</strong> e adicionar os links dos mesmos:
 
 <div data-gist-id="1507445" data-gist-show-loading="false"></div>
+
 <h3>Finalizando</h3>
 Espero que tenham gostado... no [próximo artigo](/criando-um-tema-para-wordpress-parte-3) iremos começar a montar o HTML do topo e do conteúdo da página, onde iremos listar os posts. :)
 

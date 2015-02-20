@@ -38,31 +38,14 @@ Para o PHP o resultado de uma proposição lógica é <em><strong>true </strong>
 Vejamos um exemplo de condição lógica no PHP:
 
 
-{% highlight php linenos %}
-<?php
-if (2 > 3) {
-echo "2 é maior que 3";
-} else {
-echo "2 é menor ou igual a 3";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="bdd85c184f3fd7104ea2" data-gist-show-loading="false"></div>
 
 Ou seja: O primeiro echo só será executado se (<strong><em>if</em></strong>) a afirmação (2 > 3) seja verdadeira. Tudo que está entre as chaves { ... } representa o grupo de ações que serão executados dependendo do resultado da afirmação. O <em><strong>else </strong></em>(que significa "se não") precede o grupo de comandos que serão executados caso a afirmação seja falsa.
 
 Podemos fazer uma condição um pouco mais útil, usando variáveis:
 
 
-{% highlight php linenos %}
-<?php
-$nota = 3;
-if ($nota >= 7) {
-echo "Você foi aprovado!";
-} else {
-echo "Você foi reprovado!";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="457f2def55a7ab629ff2" data-gist-show-loading="false"></div>
 
 Com isso, dependendo do valor da variável <strong>$nota</strong> a afirmação é verdadeira ou não.
 
@@ -73,90 +56,30 @@ Os operadores de comparação que podemos usar nessas afirmações são:
 Vejamos alguns outros exemplos:
 
 
-{% highlight php linenos %}
-<?php
-$nota = 3;
-if ($nota != 10) {
-echo "Você não tirou 10";
-} else {
-echo "Você tirou 10, parabéns!";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="86eae273d5ba8331f461" data-gist-show-loading="false"></div>
 
 
-{% highlight php linenos %}
-<?php
-$nome = 'Thiago';
-if ($nome == 'Thiago') {
-echo "Olá, Thiago";
-} else {
-echo "Olá, Visitante";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="06737f692d662c53e9a1" data-gist-show-loading="false"></div>
 
 
-{% highlight php linenos %}
-<?php
-$nota = 3;
-// Verifica se a afirmação ($nota >= 7) é falsa (false)
-if (($nota >= 7) == false) {
-echo "Você foi reprovado";
-} else {
-echo "Você foi aprovado";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="c6d68f4433f40723bb0a" data-gist-show-loading="false"></div>
 
 Nas condições do PHP também podemos usar os operadores lógicos "e" e "ou" da mesma forma que eles foram explicados anteriormente, só que as palavras mudam para "<span style="color: #ff6600;"><strong>AND</strong></span><span style="color: #ff6600;"><strong></strong></span>" e "<strong><span style="color: #ff6600;">OR</span></strong>" respectivamente, vejamos alguns exemplos:
 
 
-{% highlight php linenos %}
-<?php
-$nota = 3;
-if ( ($nota >= 0) AND ($nota <= 10) ) {
-echo "A sua nota é válida e está entre 0 e 10.";
-} else {
-echo "A sua nota é inválida";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="fdaa3e2aba975be04aec" data-gist-show-loading="false"></div>
 
 Repare que, ao usar o <strong>AND</strong>, cada afirmação ficou <span style="text-decoration: underline;">entre parêntesis</span> e a afirmação completa também está entre parêntesis: <strong><span style="color: #ff0000;">( </span><span style="color: #0000ff;">(...)</span></strong> <span style="color: #ff6600;"><strong>AND </strong></span><strong><span style="color: #0000ff;">(...)</span></strong> <strong><span style="color: #ff0000;">)</span></strong>. O mesmo vale para o <strong>OR</strong>:
 
 
-{% highlight php linenos %}
-<?php
-$nota = 3;
-if ( ($nota < 0) OR ($nota > 10) ) {
-echo "A sua nota é inválida";
-} else {
-echo "A sua nota é válida e está entre 0 e 10.";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="f1c3df59afbf7932b208" data-gist-show-loading="false"></div>
 
 Por causa do <strong>OR</strong> essa condição só será inválida se nenhuma das afirmações dentro do if forem verdadeiras. Se a $nota for <span style="color: #0000ff;">menor que zero</span> <span style="color: #ff6600;"><strong>ou</strong></span> <span style="color: #0000ff;">maior que 10</span> a mensagem de erro será enviada.
 
 Você também pode unir um if { ... } a um else { ... } de outro if { ... } <span style="color: #999999;">(hein?!)</span>, veja o exemplo:
 
 
-{% highlight php linenos %}
-<?php
-$nota = 3;
-if ( ($nota < 0) OR ($nota > 10) ) {
-// (($nota é menor que 0) OU ($nota é maior que 10))
-echo "A sua nota é inválida";
-} else if ($nota >= 7) {
-// (($nota é maior ou igual a 0) OU (menor ou igual a 10)) E ($nota é maior ou igual a 7)
-echo "A sua nota é válida e você foi aprovado.";
-} else {
-// (($nota é maior ou igual a 0) OU (menor ou igual a 10)) E ($nota é menor que 7)
-echo "A sua nota é válida e você foi reprovado.";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="62a0a578eb6895a7f7e0" data-gist-show-loading="false"></div>
 
 Viram como é fácil? Coloquei comentários explicando o valor de <strong>$nota</strong> dentro de cada caso.
 

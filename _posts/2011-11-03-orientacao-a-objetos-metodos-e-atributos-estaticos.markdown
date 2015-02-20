@@ -19,124 +19,41 @@ Hoje na faculdade estava vendo o código de um colega que está aprendendo PHP e
 O código original já estava dentro de uma classe, mas não faria diferença nenhuma se fosse PHP estruturado... não lembro exatamente o nome dos métodos/variáveis, mas o restante está igualzinho:
 
 
-{% highlight php linenos %}
-class cFileType {
-
-  function fImage($type) {
-    switch($type) {
-      case 'jpg':
-      $bool = true;
-      break;
-      case 'png':
-      $bool = true;
-      break;
-      case 'gif':
-      $bool = true;
-      break;
-      default:
-      $bool = false;
-      break;
-    }
-    return $bool;
-  }
-
-}
-{% endhighlight %}
+<div data-gist-id="f752935db16892af3e09" data-gist-show-loading="false"></div>
 
 A primeira mudança foi trocar esse switch, que não está fazendo nada além de definir o valor da variável $bool como true ou false se o $type for um dos valores válidos (jpg, png ou gif)... Nada melhor então do que usar a função [in_array()](http://php.net/manual/en/function.in-array.php):
 
 
-{% highlight php linenos %}
-class cFileType {
-
-  function fImage($type) {
-    return in_array($type, array('jpg', 'png', 'gif'));
-  }
-
-}
-{% endhighlight %}
+<div data-gist-id="f5b718b67b8a9794f986" data-gist-show-loading="false"></div>
 
 WOW! Reduzimos de 21 para 7 linhas... mas ainda assim, se fosse estruturado não teria diferença nenhuma.
 
 Meu amigo me disse que essa classe seria para verificar os tipos de arquivos (extensões), por exemplo "se é uma imagem" ou "se é um doc"... Então criamos outro método para verificar DOCs:
 
 
-{% highlight php linenos %}
-class cFileType {
-
-  function fImage($type) {
-    return in_array($type, array('jpg', 'png', 'gif'));
-  }
-
-  function fDoc($type) {
-    return in_array($type, array('doc', 'docx'));
-  }
-
-}
-{% endhighlight %}
+<div data-gist-id="39e7b3cd6b4b424da7c6" data-gist-show-loading="false"></div>
 
 <h3>Atributos, melhor tê-los</h3>
 O código está melhorando, mas ainda assim tem algo errado... não é responsabilidade dos métodos <code>fImage</code> e <code>fDoc</code> saber a lista de extensões válidas... isso não deveria pertencer à classe como um todo e poder ser reutilizado?
 
 
-{% highlight php linenos %}
-class cFileType {
-
-  public $image = array('jpg', 'png', 'gif');
-
-  public $doc = array('doc', 'docx');
-
-  function fImage($type) {
-    return in_array($type, $this->image);
-  }
-
-  function fDoc($type) {
-    return in_array($type, $this->doc);
-  }
-
-}
-{% endhighlight %}
+<div data-gist-id="001fb58e205e7215fc9e" data-gist-show-loading="false"></div>
 
 <h3>Atributos e métodos estáticos</h3>
 Agora sim está parecendo uma classe normal, com atributos e métodos... Aí percebi que de orientada à OBJETOS essa classe não tem nada! Não estamos trabalhando com objetos.. O uso atual dessa classe seria assim:
 
 
-{% highlight php linenos %}
-$cFileType = new cFileType();
-if ($cFileType->fImage('jpg')) {
-  // É uma imagem válida
-}
-{% endhighlight %}
+<div data-gist-id="591797543bbf3400ca89" data-gist-show-loading="false"></div>
 
 Eu não trabalho o objeto <code>$cFileType</code>, apenas instancio e utilizo um único modo... então vamos economizar um pouco de memória, transformando os métodos em métodos estáticos:
 
 
-{% highlight php linenos %}
-class cFileType {
-
-  public static $image = array('jpg', 'png', 'gif');
-
-  public static $doc = array('doc', 'docx');
-
-  static function fImage($type) {
-    return in_array($type, self::$image);
-  }
-
-  static function fDoc($type) {
-    return in_array($type, self::$doc);
-  }
-
-}
-{% endhighlight %}
+<div data-gist-id="04aae3d006ed6676f61c" data-gist-show-loading="false"></div>
 
 E agora a utilização ficou um pouco mais simples:
 
 
-{% highlight php linenos %}
-if (cFileType::fImage('jpg')) {
-  // É uma imagem válida
-}
-{% endhighlight %}
+<div data-gist-id="42eb7737d77f132fa839" data-gist-show-loading="false"></div>
 
 Sendo que você ainda pode usar o <code>cFileType::image</code> (pra ter uma lista de imagens válidas) em qualquer parte da sua aplicação sem instanciar a classe.
 
@@ -146,27 +63,7 @@ Segundo a abordagem [DRY](http://pt.wikipedia.org/wiki/Don't_repeat_yourself), n
 A responsabilidade de verificar se o valor <code>$type</code> tá dentro de uma "lista" válida não é dos métodos <code>fImage</code> e <code>fDoc</code>.. então vamos delegar:
 
 
-{% highlight php linenos %}
-class cFileType {
-
-  public static $image = array('jpg', 'png', 'gif');
-
-  public static $doc = array('doc', 'docx');
-
-  static function fType($type, $list) {
-    return in_array($type, $list);
-  }
-
-  static function fImage($type) {
-    return self::fType($type, self::$image);
-  }
-
-  static function fDoc($type) {
-    return self::fType($type, self::$doc);
-  }
-
-}
-{% endhighlight %}
+<div data-gist-id="01e12d21eb247084b15f" data-gist-show-loading="false"></div>
 
 Agora se precisarmos mudar essa lógica de verificar se o <code>$type</code> tá dentro de uma "lista" válida, só vamos precisar mudar em um lugar só.
 
@@ -174,36 +71,12 @@ Agora se precisarmos mudar essa lógica de verificar se o <code>$type</code> tá
 Temos que concordar que os nomes de classe e métodos escolhidos pelo meu amigo não são os mais intuitos... Então como uma modificação final, sugiro a seguinte classe devidamente renomeada:
 
 
-{% highlight php linenos %}
-class FileType {
-
-  public static $image = array('jpg', 'png', 'gif');
-
-  public static $doc = array('doc', 'docx');
-
-  public static function isTypeInList($type, $list) {
-    return in_array($type, $list);
-  }
-
-  public static function isImage($type) {
-    return self::isTypeInList($type, self::$image);
-  }
-
-  public static function isDoc($type) {
-    return self::isTypeInList($type, self::$doc);
-  }
-
-}
-{% endhighlight %}
+<div data-gist-id="c87026506c611ece0d3c" data-gist-show-loading="false"></div>
 
 Com uma utilização bem simples e intuitiva:
 
 
-{% highlight php linenos %}
-if (FileType::isImage('jpg')) {
-  // É uma imagem válida
-}
-{% endhighlight %}
+<div data-gist-id="20a0c42b11ff29f1e437" data-gist-show-loading="false"></div>
 
 Espero que tenham gostado! :)
 

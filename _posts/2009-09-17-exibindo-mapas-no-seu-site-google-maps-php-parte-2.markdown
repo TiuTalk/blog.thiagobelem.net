@@ -25,46 +25,21 @@ Se você ainda não tiver uma Google Maps API Key (ou GMAK) acesse esse endereç
 Agora, dentro do <strong><head></strong> do seu site, insira o seguinte código:
 
 
-{% highlight html linenos %}
-<script src="http://maps.google.com/maps?file=api&v=2&key={GMAK}" type="text/javascript"></script>
-{% endhighlight %}
+<div data-gist-id="7d6adb230e2881b75f30" data-gist-show-loading="false"></div>
 
 Não se esqueça de substituir o <strong style="background: gray; color: orange">{GMAK}</strong> pela sua Google Maps API Key.
 
 Agora você precisa criar um elemento HTML onde o mapa irá aparecer, exemplo:
 
 
-{% highlight html linenos %}
-<div id="googleMap"></div>
-{% endhighlight %}
+<div data-gist-id="75e57da5e8059074e26e" data-gist-show-loading="false"></div>
 
 Aí você pode definir a largura e altura dele no CSS do seu site ou até mesmo in-line... Não tem diferença.
 
 Depois é só charmar esse código JavaScript, pode ser no fim da página, antes do body:
 
 
-{% highlight javascript linenos %}
-  if (GBrowserIsCompatible()) {
-    var map = new GMap2(document.getElementById("googleMap"));
-    var lat = {LATITUDE}; // Latitude do marcador
-    var lon = {LONGITUDE}; // Longitude do marcador
-    var zoom = {ZOOM}; // Zoom
-
-    map.addControl(new GMapTypeControl());
-    map.addControl(new GLargeMapControl());
-    map.setCenter(new GLatLng(lat, lon), zoom);
-
-    var marker = new GMarker(new GLatLng(lat,lon));
-
-    GEvent.addListener(marker, "click", function() {
-      marker.openInfoWindowHtml("<h2>Minha marca</h2>Meu texto!
-");
-    });
-
-    map.addOverlay(marker);
-    map.setCenter(point, zoom);
-  }
-{% endhighlight %}
+<div data-gist-id="300d1e50dc48ebe7da1b" data-gist-show-loading="false"></div>
 
 Agora é só substituir o <strong style="background: gray; color: orange">{LATITUDE}</strong>, <strong style="background: gray; color: orange">{LONGITUDE}</strong> e <strong style="background: gray; color: orange">{ZOOM}</strong> (nas linhas 3, 4 e 5) pelas informações que você conseguiu pegar usando o passo-a-passo do [outro artigo](/buscando-a-latitude-e-longitude-de-um-endereco-google-maps-php-parte-1).
 

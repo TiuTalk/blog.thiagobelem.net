@@ -12,30 +12,12 @@ As vezes o que queremos é que o PHP espere algum tempo antes de continuar... Po
 
 Você pode criar essa pausa no script da seguinte forma:
 
-{% highlight php linenos %}
-// Exibe a hora atual
-echo date('H:i:s'); // 16:12:16
-
-// Pausa o script por três segundos:
-sleep(3);
-
-// Exibe a hora atual
-echo date('H:i:s'); // 16:12:19
-{% endhighlight %}
+<div data-gist-id="01ee1dbbe8509564820f" data-gist-show-loading="false"></div>
 
 Com o usleep() você define uma pausa em milhonésimos de segundos (calcule multiplicando o nº de segundos por 1.000.000).
 
 
-{% highlight php linenos %}
-// Exibe a hora atual
-echo date('H:i:s'); // 16:13:16
-
-// Pausa o script por cinco segundos usando o usleep:
-usleep(5000000);
-
-// Exibe a hora atual
-echo date('H:i:s'); // 16:13:21
-{% endhighlight %}
+<div data-gist-id="29267829d1ce85a22dc2" data-gist-show-loading="false"></div>
 
 Este é um recurso pouco conhecido do PHP mas que tem o seu valor.
 

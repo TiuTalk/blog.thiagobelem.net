@@ -15,27 +15,7 @@ Você já deve ter percebido que números reais (frações) usam ponto como sepa
 A função <strong>number_format()</strong> serve exatamente para isso, veja exemplos:
 
 
-{% highlight php linenos %}
-<?php
-
-$numero = 1234.56;
-
-// Formato brasileiro
-echo number_format($numero, 2, ',', '.');
-// 1.234,56
-
-// Formato frances
-echo number_format($numero, 2, ',', ' ');
-// 1 234,56
-
-$number = 1234.5678;
-
-// Formato inglês sem separador de milhar
-echo number_format($numero, 2, '.', '');
-// 1234.57
-
-?>
-{% endhighlight %}
+<div data-gist-id="9bdfd6e2b6aab97fe49b" data-gist-show-loading="false"></div>
 
 Podemos passar os seguintes argumentos pra ela:
 

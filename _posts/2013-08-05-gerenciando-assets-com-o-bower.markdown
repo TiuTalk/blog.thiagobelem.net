@@ -27,10 +27,12 @@ Antes de tudo, você vai precisar do [NPM](http://npmjs.org/) instalados na su
 Agora é só usar o NPM para instalar o Bower globalmente no seu sistema:
 
 <div data-gist-id="6155753" data-gist-show-loading="false"></div>
+
 <h3>Instalando pacotes com o Bower</h3>
 Agora você pode instalar pacotes de três formas diferentes:
 
 <div data-gist-id="6155762" data-gist-show-loading="false"></div>
+
 Onde <code><package></code> pode ser um dos seguintes itens:
 
 <ul>
@@ -46,17 +48,21 @@ Todos os pacotes serão instalados numa pasta <code>bower_components</code> de
 O conteúdo do arquivo do seu bower.json descreve o seu projeto e suas dependências num projeto onde usamos o <strong>jQuery</strong> e o <strong>Angular.js</strong>. Ele seria mais ou menos assim:
 
 <div data-gist-id="6155766" data-gist-show-loading="false"></div>
+
 Após rodar o comando de instalação:
 
 <div data-gist-id="6155768" data-gist-show-loading="false"></div>
+
 Veríamos o seguinte output:
 
 <div data-gist-id="6155770" data-gist-show-loading="false"></div>
+
 E com isso acabamos de instalar o Angular.js (1.0.7) e o jQuery (2.0.2) no nosso projeto!
 
 Se amanhã sair outra versão do jQuery, podemos atualizá-lo com:
 
 <div data-gist-id="6155868" data-gist-show-loading="false"></div>
+
 E o jQuery será atualizado, mas o Angular permancerá na versão 1.0.7, pois foi assim que definimos no nosso <code>bower.json</code>.
 
 <h3>Incluindo assets instalados com o Bower</h3>
@@ -65,6 +71,7 @@ Claro que esse passo é opcional se você estiver incluindo assets de outra form
 Para incluir os arquivos de um projeto, não existe magia negra, é só usar o caminho completo:
 
 <div data-gist-id="6155880" data-gist-show-loading="false"></div>
+
 <h3>Conclusão</h3>
 Acredito que o Bower tenha bastante futuro, pois estamos cada vez mais tirando as dependências de dentro dos nossos projetos e repositórios, deixando apenas o que é realmente único e importante para a aplicação.
 

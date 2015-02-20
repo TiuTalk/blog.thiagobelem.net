@@ -19,9 +19,7 @@ Essa tradução consiste em usar o sistema de localização que já vem no Cake.
 Primeiro de tudo, vá no controller onde você quer a tradução ou direto no AppController e antes da definição da classe, insira essa linha:
 
 
-{% highlight php linenos %}
-App::import('Core', 'l10n');
-{% endhighlight %}
+<div data-gist-id="423a388220ead1f5acf8" data-gist-show-loading="false"></div>
 
 Isso vai fazer o Cake chamar a classe/função l10n, que é o sistema de localização.
 
@@ -32,50 +30,12 @@ Depois, crie a seguinte estrutura de pastas:
 Agora, dentro da pasta LC_MESSAGE criada, crie um arquivo chamado <span style="color: #ff6600;"><strong>default.po</strong></span> com o seguinte conteúdo:
 
 
-{% highlight pot linenos %}
-msgid  "January"
-msgstr "Janeiro"
-
-msgid  "February"
-msgstr "Fevereiro"
-
-msgid  "March"
-msgstr "Março"
-
-msgid  "April"
-msgstr "Abril"
-
-msgid  "May"
-msgstr "Maio"
-
-msgid  "June"
-msgstr "Junho"
-
-msgid  "July"
-msgstr "Julho"
-
-msgid  "August"
-msgstr "Agosto"
-
-msgid  "September"
-msgstr "Setembro"
-
-msgid  "October"
-msgstr "Outubro"
-
-msgid  "November"
-msgstr "Novembro"
-
-msgid  "December"
-msgstr "Dezembro"
-{% endhighlight %}
+<div data-gist-id="282541743617a88388d4" data-gist-show-loading="false"></div>
 
 Agora é só ir no arquivo de configurações (../app/config/core.php) e inserir a seguinte linha:
 
 
-{% highlight php linenos %}
-Configure::write('Config.language', 'br');
-{% endhighlight %}
+<div data-gist-id="bcf67f4e1df2ab8d3d26" data-gist-show-loading="false"></div>
 
 Pronto! Quando você criar um input para a seleção de data usando o HTML Helper, o nome do mês já vai aparecer em português direitinho. ;)
 

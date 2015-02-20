@@ -17,38 +17,8 @@ tags:
 Vamos que vamos! Essa é a segunda parte do nosso tutorial "<strong>Criando um sistema de logins com classe no PHP</strong>", na [Parte 1](/criando-um-sistema-de-logins-com-classe-no-php-parte-1) começamos a criar a classe e definimos um método que validava se o usuário existe, agora vamos continuar a classe e criar um método que deixará o usuário logado no sistema usando sessão e cookies.
 
 Primeiro, vamos adicionar algumas novas propriedades que iremos usar nessa parte do tutorial:
-{% highlight php linenos %}
-  /**
-   * Nomes dos campos que serão pegos da tabela de usuarios e salvos na sessão,
-   * caso o valor seja false nenhum dado será consultado
-   * @var mixed
-   */
-  var $dados = array('id', 'nome');
 
-  /**
-   * Inicia a sessão se necessário?
-   * @var boolean
-   */
-  var $iniciaSessao = true;
-
-  /**
-   * Prefixo das chaves usadas na sessão
-   * @var string
-   */
-  var $prefixoChaves = 'usuario_';
-
-  /**
-   * Usa um cookie para melhorar a segurança?
-   * @var boolean
-   */
-  var $cookie = true;
-
-  /**
-   * Armazena as mensagens de erro
-   * @var string
-   */
-  var $erro = '';
-{% endhighlight %}
+<div data-gist-id="1ab9b09c028db4d306b1" data-gist-show-loading="false"></div>
 
 Todas as propriedades estão comentadas, é bom vocês irem se acostumando com essa necessidade dos comentários organizados e padronizados, isso vai se tornar um "<em>must have</em>" num futuro não muito distante... Mas isso é assunto pra um outro tutorial.
 
@@ -57,76 +27,19 @@ Reparem que criamos uma propriedade $erro, ela será usada para armazenar as men
 Agora vamos começar a criar o novo, gigantesco e magnífico método que irá salvar o usuário no sistema, mantendo-o logado:
 
 
-{% highlight php linenos %}
-  /**
-   * Loga um usuário no sistema salvando seus dados na sessão
-   *
-   * @param string $usuario - O usuário que será logado
-   * @param string $senha - A senha do usuário
-   * @return boolean - Se o usuário foi logado ou não
-   */
-  function logaUsuario($usuario, $senha) {
-
-  }
-{% endhighlight %}
+<div data-gist-id="8b2d1e2e532ee857a024" data-gist-show-loading="false"></div>
 
 Primeiro de tudo, precisamos validar os dados passados por parâmetro:
-{% highlight php linenos %}
-    // Verifica se é um usuário válido
-    if ($this->validaUsuario($usuario, $senha)) {
 
-      // Continuaremos aqui...
-
-    } else {
-      $this->erro = 'Usuário inválido';
-      return false;
-    }
-{% endhighlight %}
+<div data-gist-id="9482f2790914979d145c" data-gist-show-loading="false"></div>
 
 Já sabemos se o usuário foi validado, agora nós vamos verificar se é necessário (e possível) iniciar a sessão:
-{% highlight php linenos %}
-      // Inicia a sessão?
-      if ($this->iniciaSessao AND !isset($_SESSION)) {
-        session_start();
-      }
-{% endhighlight %}
+
+<div data-gist-id="0812cc4d33d732081b97" data-gist-show-loading="false"></div>
 
 O próximo passo é atrazer (ou não) os dados do banco de dados para a sessão:
-{% highlight php linenos %}
-      // Traz dados da tabela?
-      if ($this->dados != false) {
-        // Adiciona o campo do usuário na lista de dados
-        if (!in_array($this->campos['usuario'], $this->dados)) {
-          $this->dados[] = 'usuario';
-        }
 
-        // Monta o formato SQL da lista de campos
-        $dados = '`' . join('`, `', array_unique($this->dados)) . '`';
-
-        // Consulta os dados
-        $sql = "SELECT {$dados}
-            FROM `{$this->bancoDeDados}`.`{$this->tabelaUsuarios}`
-            WHERE `{$this->campos['usuario']}` = '{$usuario}'";
-        $query = mysql_query($sql);
-
-        // Se a consulta falhou
-        if (!$query) {
-          // A consulta foi mal sucedida, retorna false
-          $this->erro = 'A consulta dos dados é inválida';
-          return false;
-        } else {
-          // Traz os dados encontrados para um array
-          $dados = mysql_fetch_assoc($query);
-          // Limpa a consulta da memória
-          mysql_free_result($query);
-
-          // Passa os dados para a sessão
-          foreach ($dados AS $chave=>$valor) {
-            $_SESSION[$this->prefixoChaves . $chave] = $valor;
-          }
-        }
-      }
-{% endhighlight %}
+<div data-gist-id="f7628f338aa561354e22" data-gist-show-loading="false"></div>
 
 Da linha 124 até a linha 135 nó montamos a consulta que será usada para fazer a busca no banco de dados, depois disso nós a executamos e, caso a consulta tenha sido bem sucedida, salvamos os dados na sessão.
 
@@ -137,24 +50,7 @@ Mas calma que ainda não acabou!
 Precisamos ainda definir um valor na sessão e criar (caso seja possível) o cookie que irá ajudar na identificação (e segurança) do usuário:
 
 
-{% highlight php linenos %}
-      // Usuário logado com sucesso
-      $_SESSION[$this->prefixoChaves . 'logado'] = true;
-
-      // Define um cookie para maior segurança?
-      if ($this->cookie) {
-        // Monta uma cookie com informações gerais sobre o usuário: usuario, ip e navegador
-        $valor = join('#', array($usuario, $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT']));
-
-        // Encripta o valor do cookie
-        $valor = sha1($valor);
-
-        setcookie($this->prefixoChaves . 'token', $valor, 0, '/');
-      }
-
-      // Fim da verificação, retorna true
-      return true;
-{% endhighlight %}
+<div data-gist-id="04f30d9c85e2222742de" data-gist-show-loading="false"></div>
 
 A parte do cookie pode parecer complexa mais não é... Criamos um cookie chamado "usuario_token" contendo informações adicionais do usuário: usuário, IP e informações do navegador... Essas informações serão usadas para proteger o login do usuário caso outros usuários tentem roubar o ID de sessão ou forjar IDs falsos.
 

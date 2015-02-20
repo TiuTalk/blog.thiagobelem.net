@@ -39,6 +39,7 @@ A regra é simples: tudo que diz respeito à <strong>escrita</strong>, <strong>v
 Vemos aqui um exemplo de model de produtos (que vai prover o acesso à tabela <strong>products</strong>, no banco de dados) no arquivo <strong>Product.php</strong>:
 
 <div data-gist-id="4610407" data-gist-show-loading="false"></div>
+
 Aqui temos um model bem simples, onde definimos as regras de validação e um método que vai auxiliar a encontrar os produtos mais recentes.
 
 Não vou entrar nos detalhes do CakePHP, além do mais acho que o código é bem auto-explicativo.
@@ -65,6 +66,7 @@ Atente que <strong>não é o controller</strong> que busca os dados (responsabi
 Vamos à um exemplo de controller no arquivo <strong>ProductsController.php</strong>:
 
 <div data-gist-id="4610719" data-gist-show-loading="false"></div>
+
 Aqui temos duas actons:
 
 * Uma action (<strong>index</strong>) vai pedir (para o model) a lista de produtos mais recentes;
@@ -85,6 +87,7 @@ Mas a view não faz nenhum tipo de escrita/persistência no seu sistema... ela n
 Vamos ver então um exemplo de listagem dos produtos, no arquivo <strong>index.ctp</strong>:
 
 <div data-gist-id="4610943" data-gist-show-loading="false"></div>
+
 Aqui temos uma mistura de HTML e PHP, e também fazemos uso do [NumberHelper](http://book.cakephp.org/2.0/en/core-libraries/helpers/number.html), um Helper do CakePHP para ajudar na formatação de números.
 
 Se você quiser saber mais sobre views no CakePHP, consulte a documentação: [http://book.cakephp.org/2.0/en/views.html](http://book.cakephp.org/2.0/en/views.html)

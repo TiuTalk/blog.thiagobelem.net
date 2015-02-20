@@ -31,6 +31,7 @@ Hashes geralmente são mão-única, o que significa que não há uma forma de re
 Estamos acostumados a usar hashes como <strong>MD5</strong> e <strong>SHA1</strong> da seguinte forma:
 
 <div data-gist-id="1447464" data-gist-show-loading="false"></div>
+
 No caso do MD5, resultado final é sempre uma string de 32 caracteres alfa-numéricos (128 bits).
 
 Você pode usar o MD5 e pensar que está seguro, mas existe uma coisa chamada [Rainbow Tables](http://pt.wikipedia.org/wiki/Rainbow_table), onde um atacante gera uma tabela com o resultado da encriptação de todas as palavras de um dicionário, combinando palavras e até adicionando símbolos e dígitos à essas palavras.... Com essa Rainbow Table fica muito fácil (partindo do resultado final da encriptação) descobrir a senha original (olá mundo).
@@ -39,6 +40,7 @@ Você pode usar o MD5 e pensar que está seguro, mas existe uma coisa chamada [R
 A solução mais simples é utilizar um "salt" que é uma string complexa que será concatenada a toda e qualquer senha antes de encriptá-la, por exemplo:
 
 <div data-gist-id="1447656" data-gist-show-loading="false"></div>
+
 Dessa forma, todas as senhas estarão mais protegidas... porém ainda temos um problema:
 
 <h3>O problema: salt fixo</h3>
@@ -54,6 +56,7 @@ Precisamos então - de alguma forma - <strong>proteger o salt</strong>, ou gerar
 Podemos gerar uma string aleatória no PHP de várias formas, mas a idéia principal aqui é: gerar uma string aleatória, utilizá-la como salt na hora de encriptar a senha do usuário e salvar AMBAS no banco de dados (a senha e a string utilizada como salt).
 
 <div data-gist-id="1447693" data-gist-show-loading="false"></div>
+
 Dessa forma, cada senha terá seu próprio salt e o atacante teria que gerar uma rainbow table pra cada salt, o que fica impraticável.
 
 Mas infelizmente ainda temos um problema...
@@ -64,7 +67,9 @@ A maioria dos métodos de encriptação que conhecemos (como MD5 e SHA1) são cr
 Precisamos então trocar de algoritmo ou atrasar o nosso script...
 
 <h3>A solução: atrasando o algoritmo</h3>
+
 <div data-gist-id="1447751" data-gist-show-loading="false"></div>
+
 Agora qualquer ataque de força-bruta irá demorar 1000x mais para conseguir chegar até sua senha original, o que é excelente!
 
 <h3>Finalizando...</h3>

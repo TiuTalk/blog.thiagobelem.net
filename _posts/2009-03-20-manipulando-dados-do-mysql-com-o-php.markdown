@@ -27,52 +27,13 @@ Usaremos a tabela 'noticias' nos exemplo desse tópico, ela é composta por uma 
 O código para a criação dessa tabela é o seguinte:
 
 
-{% highlight sql linenos %}
-CREATE TABLE IF NOT EXISTS `noticias` (
-`id` int(11) NOT NULL AUTO_INCREMENT,
-`titulo` varchar(255) NOT NULL,
-`texto` longtext NOT NULL,
-`cadastro` datetime NOT NULL,
-PRIMARY KEY (`id`),
-KEY `titulo` (`titulo`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-{% endhighlight %}
+<div data-gist-id="da43d9bac9a1afd1d6f8" data-gist-show-loading="false"></div>
 
 <h4>Inserindo dados</h4>
 Para inserir dados no MySQL você precisa montar uma consulta SQL (também chamada de <em>query</em>) usando o comando INSERT do MySQL, vejamos o exemplo de como inserir uma notícia na nossa tabela de notícias:
 
 
-{% highlight php linenos %}
-<?php
-// Inclui o arquivo que faz a conexão ao MySQL
-include("conexao.php");
-
-// Definição das variáveis para montar a query
-$titulo = 'Vandalismo mata 10 mil árvores por ano no Rio';
-$texto = 'Não fosse privilegiada pela natureza, com a vasta extensão da Mata Atlântica, a paisagem do Rio seria desértica.
-';
-$cadastro = date('Y-m-d H:i:s'); // Formato de data padrão do MySQL
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// Manipulamos as variáveis para evitar problemas com aspas e outros caracteres protegidos do MySQL
-$titulo = mysql_escape_string($titulo);
-$texto = mysql_escape_string($texto);
-
-// Montamos a consulta SQL
-$query = "INSERT INTO `noticias` (`titulo`, `texto`, `cadastro`) VALUES ('".$titulo."', '".$texto."', '".$cadastro."')";
-
-// Executa a query
-$inserir = mysql_query($query);
-
-if ($inserir) {
-echo "Notícia inserida com sucesso!";
-} else {
-echo "Não foi possível inserir a notícia, tente novamente.";
-// Exibe dados sobre o erro:
-echo "Dados sobre o erro:" . mysql_error();
-}
-?>
-{% endhighlight %}
+<div data-gist-id="c83b8614e7adaf74ddd8" data-gist-show-loading="false"></div>
 
 A função <strong>mysql_query()</strong> é responsável por executar uma consulta no servidor MySQL e, no caso do comando INSERT, ela retorna true ou false informando se o registro foi ou não inserido.
 
@@ -91,10 +52,7 @@ Você também tem uma segunda opção de sintaxe para o INSERT:
 Se você preferir por esse formato vai precisar definir os valores de TODAS as colunas da tabela, ficando dessa forma:
 
 
-{% highlight php linenos %}
-// Montamos a consulta SQL
-$query = "INSERT INTO `noticias` VALUES (NULL, '".$titulo."', '".$texto."', '".$cadastro."')";
-{% endhighlight %}
+<div data-gist-id="2647a12b1685459823ed" data-gist-show-loading="false"></div>
 
 A desvantagem desse formato (diferente do primeiro) é que você precisa dizer o valor de cada uma das colunas da tabela ordenadamente para o PHP. Mas eu particularmente prefiro esse segundo formato de INSERT, ainda mais quando temos mais de 10 colunas em uma tabela fica muito ruim escrever o nome de todas elas e depois os valores de cada uma.
 
@@ -106,50 +64,12 @@ Mas fica a seu critério qual formato de INSERT usar.
 Se você quiser deletar dados armazenados no MySQL você pode usar o comando DELETE dentro da consulta SQL. A sua sintaxe é bem simples e a deleção se baseia em uma condição, vejamos dois exemplos:
 
 
-{% highlight php linenos %}
-<?php
-// Inclui o arquivo que faz a conexão ao MySQL
-include("conexao.php");
-
-// Montamos a consulta SQL para deletar a(s) notícia(s) com ID maior ou igual a três
-$query = "DELETE FROM `noticias` WHERE (`id` >= 3)";
-
-// Executa a query
-$deletar = mysql_query($query);
-
-if ($deletar) {
-echo "As notícias foram deletadas com sucesso!";
-} else {
-echo "Não foi possível deletar as notícia, tente novamente.";
-// Exibe dados sobre o erro:
-echo "Dados sobre o erro:" . mysql_error();
-}
-?>
-{% endhighlight %}
+<div data-gist-id="e8430aaad142772abf9a" data-gist-show-loading="false"></div>
 
 Nesse exemplo condicionamos a deleção apenas dos registros que tiverem o valor da coluna `id` maior ou igual a três.
 
 
-{% highlight php linenos %}
-<?php
-// Inclui o arquivo que faz a conexão ao MySQL
-include("conexao.php");
-
-// Montamos a consulta SQL para deletar notícias que não sejam desse ano
-$query = "DELETE FROM `noticias` WHERE (`cadastro` < '2009-01-01 00:00:00') OR (`cadastro` > '2009-12-31 23:23:59')";
-
-// Executa a query
-$deletar = mysql_query($query);
-
-if ($deletar) {
-echo "As notícias de outros anos foram deletadas com sucesso!";
-} else {
-echo "Não foi possível deletar as notícia, tente novamente.";
-// Exibe dados sobre o erro:
-echo "Dados sobre o erro:" . mysql_error();
-}
-?>
-{% endhighlight %}
+<div data-gist-id="ffaeb100c71464cab270" data-gist-show-loading="false"></div>
 
 Nesse exemplo usamos duas condições ao mesmo tempo e buscamos registros em função da sua data de cadastro no sistema.
 
@@ -165,36 +85,7 @@ Você já tem a sua tabela cheia de notícias e sabe inserir e deletar as notíc
 Ai você descobre que existe o UPDATE do MySQL, que serve exatamente para isso! Vamos ao exemplo:
 
 
-{% highlight php linenos %}
-<?php
-// Inclui o arquivo que faz a conexão ao MySQL
-include("conexao.php");
-
-// Id da notícia a ser editada
-$id = 3;
-
-// Novo título da notícia
-$titulo = 'Vandalismo mata 10 mil árvores por ano no Rio de Janeiro';
-$cadastro = date('Y-m-d H:i:s'); // Formato de data padrão do MySQL
-
-// Manipulamos as variáveis para evitar problemas com aspas e outros caracteres protegidos do MySQL
-$titulo = mysql_escape_string($titulo);
-
-// Montamos a consulta SQL para deletar a(s) notícia(s) com ID maior ou igual a três
-$query = "UPDATE `noticias` SET `titulo` = '".$titulo."', `cadastro` = '".$cadastro."' WHERE (`id` = ".$id.")";
-
-// Executa a query
-$atualiza = mysql_query($query);
-
-if ($atualiza) {
-echo "A notícia foi atualizada com sucesso!";
-} else {
-echo "Não foi possível atualizar as notícia, tente novamente.";
-// Exibe dados sobre o erro:
-echo "Dados sobre o erro:" . mysql_error();
-}
-?>
-{% endhighlight %}
+<div data-gist-id="eb26d9a1786ffe8e8818" data-gist-show-loading="false"></div>
 
 Repare que no exemplo, além de atualizar o titulo da notícia, atualizamos também a sua "data de cadastro" para ela ser considerada uma notícia que foi alterada recentemente. Você pode usar o UPDATE em quantas colunas do registro você preferir e também pode brincar com a condição depois do WHERE da forma que achar melhor.
 

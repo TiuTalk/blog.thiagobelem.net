@@ -18,22 +18,7 @@ Ele tem, normalmente, 3 argumentos: A string que será cortada (1), o início do
 Veja alguns exemplos de uso:
 
 
-{% highlight php linenos %}
-<?php
-
-$frase = 'O rato roeu a roupa do Rei de Roma';
-
-echo substr($frase, 0, 5); // 5 primeiros caracteres a partir do 0° caractere
-// Retorno: O rato
-
-echo substr($frase, 3, 16); // 16 primeiros caracteres a partir do 3° caractere
-// Retorno: ato roeu a roupa
-
-echo substr($frase, 0, -1); // Todos os caracteres, até o penúltimo, a partir do 0° caractere
-// Retorno: O rato roeu a roupa do Rei de Rom
-
-?>
-{% endhighlight %}
+<div data-gist-id="9417b1cf6744328fe589" data-gist-show-loading="false"></div>
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.substr.php](http://br.php.net/manual/pt_BR/function.substr.php)
@@ -46,21 +31,7 @@ Ele só tem um argumento: A string a ser medida (1).
 Veja alguns exemplos de uso:
 
 
-{% highlight php linenos %}
-<?php
-
-$frase = 'O rato roeu a roupa do Rei de Roma';
-
-echo strlen($frase);
-// Retorno: 34
-
-$frase = 'Thiago Belem';
-
-echo strlen($frase);
-// Retorno: 12
-
-?>
-{% endhighlight %}
+<div data-gist-id="b6e678fb8bbfca103fb2" data-gist-show-loading="false"></div>
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.strlen.php](http://br.php.net/manual/pt_BR/function.strlen.php)
@@ -71,16 +42,7 @@ O <strong>strtolower()</strong> serve para você converter toda a string para ca
 Ele só tem um argumento: A string que será convertida (1).
 
 
-{% highlight php linenos %}
-<?php
-
-$frase = 'O RATo rOeu a rOuPa Do Rei de Roma';
-
-echo strtolower($frase);
-// Retorno: o rato roeu a roupa do rei de roma
-
-?>
-{% endhighlight %}
+<div data-gist-id="3bbd5eb227ae1a29961c" data-gist-show-loading="false"></div>
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.strtolower.php](http://br.php.net/manual/pt_BR/function.strtolower.php)
@@ -91,16 +53,7 @@ O <strong>strtoupper()</strong> serve para você converter toda a string para ca
 Ele só tem um argumento: A string que será convertida (1).
 
 
-{% highlight php linenos %}
-<?php
-
-$frase = 'O RATo rOeu a rOuPa Do Rei de Roma';
-
-echo strtolower($frase);
-// Retorno: O RATO ROEU A ROUPA DO REI DE ROMA
-
-?>
-{% endhighlight %}
+<div data-gist-id="5ef1abb9e2216f867c80" data-gist-show-loading="false"></div>
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.strtoupper.php](http://br.php.net/manual/pt_BR/function.strtoupper.php)
@@ -111,16 +64,7 @@ O <strong>ucwords()</strong> serve para você deixar a primeira letra de cada pa
 Ele só tem um argumento: A string que será convertida (1).
 
 
-{% highlight php linenos %}
-<?php
-
-$frase = 'jOsé da sILva fErReirA';
-
-echo strtolower($frase);
-// Retorno: JOsé Da SILva FErReirA
-
-?>
-{% endhighlight %}
+<div data-gist-id="7b111b88d1f1f273210d" data-gist-show-loading="false"></div>
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.ucwords.php](http://br.php.net/manual/pt_BR/function.ucwords.php)
@@ -131,16 +75,7 @@ O <strong>ucfirst()</strong> serve para você deixar a primeira letra de uma str
 Ele só tem um argumento: A string que será convertida (1).
 
 
-{% highlight php linenos %}
-<?php
-
-$frase = 'jOsé da sILva fErReirA';
-
-echo strtolower($frase);
-// Retorno: JOsé da sILva fErReirA
-
-?>
-{% endhighlight %}
+<div data-gist-id="2654f5a7dbd4d0e6d6f9" data-gist-show-loading="false"></div>
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.ucfirst.php](http://br.php.net/manual/pt_BR/function.ucfirst.php)
@@ -151,39 +86,7 @@ O <strong>explode()</strong> serve para você dividir uma string, usando um sepa
 Geralmente ele tem dois argumentos: O separador (1) e a string que será convertida (2).
 
 
-{% highlight php linenos %}
-<?php
-
-$separador = '@';
-
-$frase = 'contato@thiagobelem.net';
-
-$partes = explode($separador, $frase);
-// $partes será um array com dois elementos:
-// [0] => contato [1] => thiagobelem.net
-
-// -----------------------
-
-$separador = '/';
-
-$frase = '10/04/2009';
-
-$partes = explode($separador, $frase);
-// $partes será um array com três elementos:
-// [0] => 10 [1] => 04 [2] => 2009
-
-// -----------------------
-
-$separador = ' ';
-
-$frase = 'olá mundo';
-
-$partes = explode($separador, $frase);
-// $partes será um array com dois elementos:
-// [0] => olá [1] => mundo
-
-?>
-{% endhighlight %}
+<div data-gist-id="d31fec1ae58ef3be3c65" data-gist-show-loading="false"></div>
 
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.explode.php](http://br.php.net/manual/pt_BR/function.explode.php)
@@ -194,36 +97,7 @@ O <strong>join()</strong> serve para você juntar os elementos de um array usand
 Geralmente ele tem dois argumentos: A string de união (1) e o array que será unido (2).
 
 
-{% highlight php linenos %}
-<?php
-
-$uniao = '@';
-
-$partes = array('contato', 'thiagobelem.net');
-
-echo join($uniao, $partes);
-// Resultado: contato@thiagobelem.net
-
-// -----------------------
-
-$uniao = 'x';
-
-$partes = array('10', '04', '2009');
-
-echo join($uniao, $partes);
-// Resultado: 10x04x2009
-
-// -----------------------
-
-$uniao = ' #@ ';
-
-$partes = array('olá', 'mundo');
-
-echo join($uniao, $partes);
-// Resultado: olá #@ mundo
-
-?>
-{% endhighlight %}
+<div data-gist-id="3e9c590c100a2138e720" data-gist-show-loading="false"></div>
 
 A função <strong>join()</strong> é um atalho da função <strong>implode()</strong>, ambas fazem a mesma coisa.
 

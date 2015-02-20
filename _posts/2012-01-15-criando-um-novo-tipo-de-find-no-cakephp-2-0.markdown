@@ -22,6 +22,7 @@ Foi aqui que tive a idéia de criar o <code>$Model->find('published')</code>, qu
 A [documentação](http://book.cakephp.org/2.0/en/models/retrieving-your-data.html#creating-custom-find-types) é bem simples, e o resultado da minha implementação (que estou usando no meu projeto) é mais ou menos assim:
 
 <div data-gist-id="1630250" data-gist-show-loading="false"></div>
+
 A lógica é bem simples.. precisamos:
 
 <ol>

@@ -34,28 +34,7 @@ Por isso existem os arrays: armazenar valores e/ou variáveis referentes a um me
 Criar arrays no PHP é extremamente simples, veja dois exemplos onde criamos a nossa lista de compras:
 
 
-{% highlight php linenos %}
-<?php
-
-// Definição simples e rápida
-$lista = array('Pão', 'Ovos', 'Carne', 'Macarrão');
-
-// Definição mais longa, porém mais fácil de entender
-$lista = array();
-$lista[0] = 'Pão';
-$lista[1] = 'Ovos';
-$lista[2] = 'Carne';
-$lista[3] = 'Macarrão';
-
-// Outro exemplo
-$lista = array();
-$lista[] = 'Pão';
-$lista[] = 'Ovos';
-$lista[] = 'Carne';
-$lista[] = 'Macarrão';
-
-?>
-{% endhighlight %}
+<div data-gist-id="611c98dd04e2019a0a05" data-gist-show-loading="false"></div>
 
 Em todos os três exemplos o resultado ($lista) será o mesmo... Vamos falar de cada um:
 
@@ -69,45 +48,13 @@ E por fim, no terceiro exemplo, fazemos a mesma coisa que fizemos no segundo, s�
 Você também pode definir índices (também chamados de <em>keys</em> ou chaves)  como <em>strings</em>, veja um bom exemplo de uso:
 
 
-{% highlight php linenos %}
-<?php
-
-// Definição longa
-$carro = array();
-$carro['cor'] = 'Vermelho';
-$carro['modelo'] = 'CrossFox';
-$carro['fabricante'] = 'Volkswagen';
-
-// Definição simples
-$carro = array('cor' => 'Vermelho', 'modelo' => 'CrossFox', 'fabricante' => 'Volkswagen');
-
-?>
-{% endhighlight %}
+<div data-gist-id="fa1a5ab17c3d701b2997" data-gist-show-loading="false"></div>
 
 <h3>Exibindo e localizando elementos dos Arrays</h3>
 Quando você for exibir um elemento, é só seguir a mesma sintaxe da declaração longa:
 
 
-{% highlight php linenos %}
-<?php
-
-// Carro
-$carro = array();
-$carro['cor'] = 'Vermelho';
-$carro['modelo'] = 'CrossFox';
-$carro['fabricante'] = 'Volkswagen';
-
-echo "A cor do carro é: " . $carro['cor'];
-// Resultado: A cor do meu carro é: Vermelho
-
-// Lista
-$lista = array('Pão', 'Ovos', 'Carne', 'Macarrão');
-
-echo "O segundo item da lista é: " . $lista[1];
-// Resultado: O segundo item da lista é: Ovos
-
-?>
-{% endhighlight %}
+<div data-gist-id="c8b041802dd1ae2d20d0" data-gist-show-loading="false"></div>
 
 Vale lembrar, que quando estamos trabalhando com índices numéricos (ordenados), a posição inicial é a zero, então a quarta posição será o índice<span style="color: #000080;"><strong> [<span style="color: #0000ff;">3</span>]</strong></span>.
 
@@ -119,20 +66,7 @@ Veja também:
 Não vou me aprofundar no assunto... mas você pode definir um array onde um ou mais elementos sejam arrays. Nesse caso o array não pode mais ser chamado de <strong>lista</strong>, e deve ser chamado de <strong>vetor</strong> ou <strong>array</strong> mesmo. Veja um exemplo básico de definição e exibição:
 
 
-{% highlight php linenos %}
-<?php
-
-// Carro
-$carro = array();
-$carro['cores'] = array('Vermelho', 'Branco', 'Cinza');
-$carro['modelo'] = 'CrossFox';
-$carro['fabricante'] = 'Volkswagen';
-
-echo "A terceira cor do meu " . $carro['modelo'] . " é: " . $carro['cores'][2];
-// Resultado: A terceira cor do meu CrossFox é: Cinza
-
-?>
-{% endhighlight %}
+<div data-gist-id="de9f572124e591149a8e" data-gist-show-loading="false"></div>
 
 --
 

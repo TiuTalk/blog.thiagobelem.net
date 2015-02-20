@@ -42,6 +42,7 @@ O custo de processamento influencia diretamente nas tentativas de ataque de for�
 Basicamente, pra criptografar a senha "<strong>olá mundo</strong>", com o salt "<strong>Cf1f11ePArKlBJomM0F6aJ</strong>" à um custo de processamento de <strong>8</strong>, você faria algo assim:
 
 <div data-gist-id="3438858" data-gist-show-loading="false"></div>
+
 O que fizemos foi passar dois valores para a função <strong>crypt()</strong>: o valor a ser criptografado (a senha em si), e uma string '<strong>$2a$08$Cf1f11ePArKlBJomM0F6aJ$</strong>', que é composta por três partes (separadas por cifrão):
 
 <ol>
@@ -67,6 +68,7 @@ Já que você está trabalhando com um salt gerado aleatoriamente, é impossíve
 Para comparar uma senha texto-plano com um já hasheado, é só usar esse próprio valor hasheado como hash da senha text-plano, vejam como é simples:
 
 <div data-gist-id="3439074" data-gist-show-loading="false"></div>
+
 É ou não é sensacional? Você pode gerar o mesmo hash, tendo a senha original e o hash resultado, sem precisar do salt original! :) Isso garante que você pode gerar um salt aleatório sempre que for criptografar a senha de alguém.
 
 E é aí que o <strong>custo</strong> entra em jogo... mesmo durante um ataque de força bruta, o atacante pode tentar diferentes combinações de "senha original" mas o custo vai tornar a operação toda tão lenta que não vai valer o esforço.
@@ -77,8 +79,10 @@ Criei uma pequena [classe Bcrypt](https://gist.github.com/3438461) que ajuda a f
 Primeiro, o código completo da classe:
 
 <div data-gist-id="3438461" data-gist-show-loading="false"></div>
+
 Agora como você pode usar os métodos:
 
 <div data-gist-id="3439186" data-gist-show-loading="false"></div>
+
 Espero que tenham gostado! :)
 

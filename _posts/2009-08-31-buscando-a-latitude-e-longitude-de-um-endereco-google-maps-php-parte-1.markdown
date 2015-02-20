@@ -28,74 +28,12 @@ Antes de mais nada você, meu amigo desenvolvedor, precisa de uma <strong>Google
 Tendo sua GMAK em mãos, vamos ver a classe que usaremos para esse e os próximos tutoriais:
 
 
-{% highlight php linenos %}
-/**
- * gMaps Class
- *
- * Pega as informações de latitude, longitude e zoom de um endereço usando a API do Google Maps
- *
- * @author Thiago Belem <contato@thiagobelem.net>
- */
-class gMaps {
-  // Host do GoogleMaps
-  private $mapsHost = 'maps.google.com';
-  // Sua Google Maps API Key
-  public $mapsKey = '';
-
-  function __construct($key = null) {
-    if (!is_null($key)) {
-      $this->mapsKey = $key;
-    }
-  }
-
-  function carregaUrl($url) {
-    if (function_exists('curl_init')) {
-      $cURL = curl_init($url);
-      curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
-      curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, true);
-      $resultado = curl_exec($cURL);
-      curl_close($cURL);
-    } else {
-      $resultado = file_get_contents($url);
-    }
-
-    if (!$resultado) {
-      return false;
-      //trigger_error('Não foi possível carregar o endereço: <strong>' . $url . '</strong>');
-    } else {
-      return $resultado;
-    }
-  }
-
-  function geoLocal($endereco) {
-    $url = 'http://'. $this->mapsHost .'/maps/geo?output=csv&key='. $this->mapsKey .'&q='. urlencode($endereco);
-    $dados = $this->carregaUrl($url);
-    list($status, $zoom, $latitude, $longitude) = explode(',', $dados);
-    if ($status != 200) {
-      return false;
-      //trigger_error('Não foi possível carregar o endereço <strong>"'.$endereco.'"</strong>, código de resposta: ' . $status);
-    }
-    return array('lat' => $latitude, 'lon' => $longitude, 'zoom' => $zoom, 'endereco' => $endereco);
-  }
-}
-{% endhighlight %}
+<div data-gist-id="c9337c488d2e3ca4d5a6" data-gist-show-loading="false"></div>
 
 O uso dela é ridiculamente simples:
 
 
-{% highlight php linenos %}
-<?php
-// Instancia a classe
-$gmaps = new gMaps('SUA GMAK AQUI');
-
-// Pega os dados (latitude, longitude e zoom) do endereço:
-$endereco = 'Av. Brasil, 1453, Rio de Janeiro, RJ';
-$dados = $gmaps->geolocal($endereco);
-
-// Exibe os dados encontrados:
-print_r($dados);
-?>
-{% endhighlight %}
+<div data-gist-id="5056a2be01ff08b26a23" data-gist-show-loading="false"></div>
 
 Com isso já temos todas as informações necessárias para exibir um mapinha do GoogleMaps com o endereço marcado, o que faremos no [próximo tutorial](/exibindo-mapas-no-seu-site-google-maps-php-parte-2). :)
 

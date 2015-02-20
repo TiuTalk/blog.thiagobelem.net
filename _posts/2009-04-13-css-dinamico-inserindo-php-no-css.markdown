@@ -19,73 +19,24 @@ Há duas formas de se alcançar esse objetivo:
 A primeira, um pouco mais complicada, é fazendo o <em>parser</em> (interpretador) do PHP ler os arquivos .css antes de enviá-los para o visitante. Você pode fazê-lo da seguinte forma: crie/edite um arquivo chamado .htaccess dentro do root (raiz) do seu servidor e insira essa linha nele:
 
 
-{% highlight text linenos %}
-AddType application/x-httpd-php.css
-{% endhighlight %}
+<div data-gist-id="80cd114d1a681f59d9e7" data-gist-show-loading="false"></div>
 
 Depois é só editar o seu arquivo .css e inserir códigos PHP da forma que bem entender... Lembrando apenas de que o retorno (via echo) deve ser a mesma formatação de um CSS... Exemplo:
 
 
-{% highlight php linenos %}
-<?php
-$cor_fundo = '#CCCCFF';
-$cor_texto = '#003333';
-$imagem_link = '../img/link.jpg'
-?>
-
-body {
-background: <?php echo $cor_fundo; ?>;
-}
-
-p.texto {
-font-family: Verdana, Arial, serif;
-color: <?php echo $cor_texto; ?>;
-font-size: 12px;
-}
-
-a.especial {
-text-decoration: none;
-background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;
-}
-{% endhighlight %}
+<div data-gist-id="82b0e23a3f1b255ba438" data-gist-show-loading="false"></div>
 
 --
 
 A outra forma eu considero um pouco mais simples: Você renomeará o seu arquivo <strong>.css</strong> trocando a extensão para <strong>.php</strong> e adicionará apenas uma linha logo no começo:
 
 
-{% highlight php linenos %}
-<?php
-// Define que o arquivo terá a codificação de saída no formato CSS
-header("Content-type: text/css");
-
-$cor_fundo = '#CCCCFF';
-$cor_texto = '#003333';
-$imagem_link = '../img/link.jpg'
-?>
-
-body {
-background: <?php echo $cor_fundo; ?>;
-}
-
-p.texto {
-font-family: Verdana, Arial, serif;
-color: <?php echo $cor_texto; ?>;
-font-size: 12px;
-}
-
-a.especial {
-text-decoration: none;
-background: white url('<?php echo $imagem_link; ?>') 0px 0px no-repeat;
-}
-{% endhighlight %}
+<div data-gist-id="493b096f686b3fd4e784" data-gist-show-loading="false"></div>
 
 Não esqueça também de mudar o HTML que inclui a folha de estilos:
 
 
-{% highlight text linenos %}
-<link rel="stylesheet" href="estilo.php" type="text/css" />
-{% endhighlight %}
+<div data-gist-id="bd0d10653ef998326c32" data-gist-show-loading="false"></div>
 
 --
 

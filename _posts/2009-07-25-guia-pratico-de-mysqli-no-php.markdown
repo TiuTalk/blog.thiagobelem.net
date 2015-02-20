@@ -25,62 +25,19 @@ Veja um exemplo de scripts onde faremos todas as operações comuns do MySQL:
 
 <h3>Conectando-se ao MySQL</h3>
 
-{% highlight php linenos %}
-<?php
-
-$servidor = 'localhost';
-$usuario = 'root';
-$senha = '';
-$banco = 'mydb';
-
-// Conecta-se ao banco de dados MySQL
-$mysqli = new mysqli($servidor, $usuario, $senha, $banco);
-
-// Caso algo tenha dado errado, exibe uma mensagem de erro
-if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
-
-?>
-{% endhighlight %}
+<div data-gist-id="40615383d6cee8d31ac2" data-gist-show-loading="false"></div>
 
 
 
 <h3>Executando uma consulta do tipo SELECT</h3>
 
-{% highlight php linenos %}
-<?php
-
-// Aqui você se conecta ao banco
-$mysqli = new mysqli('localhost', 'root', '', 'mydb');
-
-// Executa uma consulta que pega cinco notícias
-$sql = "SELECT `id`, `titulo` FROM `noticias` LIMIT 5";
-$query = $mysqli->query($sql);
-while ($dados = $query->mysqli_fetch_array()) {
-  echo 'ID: ' . $dados['id'] . '';
-  echo 'Título: ' . $dados['titulo'] . '';
-}
-echo 'Registros encontrados: ' . $query->num_rows;
-
-?>
-{% endhighlight %}
+<div data-gist-id="15ea4b3149e040c6af1e" data-gist-show-loading="false"></div>
 
 
 
 <h3>Executando uma consulta simples, do tipo DELETE ou UPDATE</h3>
 
-{% highlight php linenos %}
-<?php
-
-// Aqui você se conecta ao banco
-$mysqli = new mysqli('localhost', 'root', '', 'mydb');
-
-// Executa uma consulta que deleta uma notícia
-$sql = "DELETE FROM FROM `noticias` WHERE `id` = 2";
-$query = $mysqli->query($sql);
-echo 'Registros afetados: ' . $query->affected_rows;
-
-?>
-{% endhighlight %}
+<div data-gist-id="e8d8b6a2ade6b4b9a511" data-gist-show-loading="false"></div>
 
 Como vocês podem ver a sintaxe dos comandos SQL não mudam em nada... O que muda são apenas as funções do PHP mesmo. ;)
 

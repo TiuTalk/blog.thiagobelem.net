@@ -30,20 +30,15 @@ Hoje vou ensiná-los como habilitar isso em seus servidores rodando Apache e PHP
 Vá na raiz do seu site e edite (ou crie se necessário) o seu arquivo .htaccess e adicione as seguintes linhas:
 
 
-{% highlight sh linenos %}
-Action php-source /php-source.php
-AddHandler php-source .phps
-{% endhighlight %}
+<div data-gist-id="42a5c37b4f950fd14793" data-gist-show-loading="false"></div>
+
 Com isso você cria uma nova "ação" no apache e diz que os arquivos .phps serão "lidos" por essa "ação"... Você vai entender melhor no segundo passo:
 
 <h3>Passo 2</h3>
 Ainda na raiz do seu site, crie um arquivo chamado "<strong>php-source.php</strong>" e coloque o seguinte conteúdo nele:
 
 
-{% highlight php linenos %}
-<?php
-highlight_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["PATH_INFO"]);
-?> {% endhighlight %}
+<div data-gist-id="a4d476e53f17a3a743b4" data-gist-show-loading="false"></div>
 
 Isso fará com que esse arquivo criado pegue o caminho do arquvo requisitado (com extensão .phps) e use a função [highlight_file()](http://www.php.net/manual/pt_BR/function.highlight-file.php) do PHP para exibir o seu código-fonte com sintaxe coloria.
 

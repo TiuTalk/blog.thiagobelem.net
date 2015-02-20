@@ -22,9 +22,7 @@ Esse recurso parece inútil quando você cuida de um site simples... Mas quando 
 Para acessar o SSH de um servidor normalmente usamos o seguinte comando:
 
 
-{% highlight sh linenos %}
-$ ssh usuario@dominio
-{% endhighlight %}
+<div data-gist-id="2ec3d1a7bd6f89b391b3" data-gist-show-loading="false"></div>
 
 Após isso, é perguntado a sua senha de acesso do servidor e você está dentro e pode executar comandos do Linux para trabalhar na máquina.
 
@@ -36,53 +34,27 @@ Vamos chamar a sua maquina de <strong>cliente</strong> (a máquina que você est
 No cliente, vá até a linha de comando e digite:
 
 
-{% highlight sh linenos %}
-$ ssh-keygen -t rsa
-{% endhighlight %}
+<div data-gist-id="ec32084f6e273d573f0e" data-gist-show-loading="false"></div>
 
 Você verá a seguinte resposta:
 
 
-{% highlight text linenos %}
-Generating public/private dsa key pair.
-Enter file in which to save the key (/home/usuario/.ssh/id_dsa):
-{% endhighlight %}
+<div data-gist-id="bc6279b9fe210c217535" data-gist-show-loading="false"></div>
 
 Dê ENTER sem digitar nada
 
 
-{% highlight text linenos %}
-Enter passphrase (empty for no passphrase):
-{% endhighlight %}
+<div data-gist-id="5acdda6ddc57653a5014" data-gist-show-loading="false"></div>
 
 Dê ENTER sem digitar nada
 
 
-{% highlight text linenos %}
-Enter same passphrase again:
-{% endhighlight %}
+<div data-gist-id="0fdaff635eb4ca52c113" data-gist-show-loading="false"></div>
 
 Dê ENTER sem digitar nada
 
 
-{% highlight text linenos %}
-Your identification has been saved in /home/usuario/.ssh/id_dsa.
-Your public key has been saved in /home/usuario/.ssh/id_dsa.pub.
-The key fingerprint is:
-01:e0:d4:57:44:a5:5d:7c:f3:ed:bb:0d:fc:cb:2d:eb usuario@cliente
-The key's randomart image is:
-+--[ DSA 1024]----+
-|    oo.  ++....  |
-|   o  ...  o ....|
-|    .  .. . .  .+|
-|         .      o|
-|        S      . |
-|             .  .|
-|              o .|
-|              o+o|
-|             .E**|
-+-----------------+
-{% endhighlight %}
+<div data-gist-id="65cd4b6f1de21b33e260" data-gist-show-loading="false"></div>
 
 Feito isso, você criou uma <strong>chave pública</strong> e esse arquivo <code>~/.ssh/id_dsa.pub</code> pode ser enviado para o servidor ao qual você deseja se conectar que, quando você tentar fazer login, ele irá ler o arquivo e te identificar, permitindo o login automático.
 
@@ -90,9 +62,7 @@ Feito isso, você criou uma <strong>chave pública</strong> e esse arquivo <code
 Você pode usar sFTP (FTP via SSH) ou SCP para enviar a chave pública para o servidor, veja um exemplo utilizando SCP:
 
 
-{% highlight sh linenos %}
-$ scp ~/.ssh/id_dsa.pub USUARIO_REMOTO@SERVIDOR:/home/USUARIO_REMOTO/.ssh/
-{% endhighlight %}
+<div data-gist-id="7436b57541db80887592" data-gist-show-loading="false"></div>
 
 Lembrando que a parta <code>USUARIO_REMOTO@SERVIDOR</code> são os mesmos dados que você utiliza para login.
 
@@ -102,11 +72,7 @@ Feito isso, você precisa habilitar a chave pública.
 Faça login via SSH no seu servidor, e execute os seguintes comandos:
 
 
-{% highlight sh linenos %}
-$ cd ~/.ssh/
-$ cat id_dsa.pub >> authorized_keys
-$ chmod 644 authorized_keys
-{% endhighlight %}
+<div data-gist-id="5511f8778b3e5aaac8ae" data-gist-show-loading="false"></div>
 
 Se o arquivo <code>authorized_keys</code> já existir, você pode criar o <code>authorized_keys2</code> ou <code>authorized_keys3</code>.
 

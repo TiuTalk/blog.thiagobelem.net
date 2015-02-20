@@ -42,16 +42,7 @@ Você precisa entender que essa informação adicional, a princípio, <strong>n�
 O nosso <code>.htaccess</code> para reescrever a URL anterior (da página de contato) e essa nova URL mais complexa, ficará assim:
 
 
-{% highlight sh linenos %}
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-
-  # Página de contato
-  RewriteRule ^contato/?$ /contato.php [NC,L]
-  # Página de exibição de um produto
-  RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]
-</IfModule>
-{% endhighlight %}
+<div data-gist-id="b40f196f1dd6d82a69d3" data-gist-show-loading="false"></div>
 
 Agora vamos separar a regra de reescrita em três partes e explicar uma por uma:
 
@@ -115,15 +106,7 @@ Com isso tudo, ao chamar a URL <code>/produtos/camiseta-azul/2/</code> o Apache 
 Perceba que os valores (<strong>2</strong> e <strong>camiseta-azul</strong>) foram passados para o "antigo" arquivo, cada um em seu devido lugar... Com isso, ao executar o arquivo <code>/produtos.php</code> você terá acesso aos dois valores que foram passados na URL Amigável utilizando a super-global <code>$_GET</code>:
 
 
-{% highlight php linenos %}
-<?php
-
-echo 'ID do produto: ' . $_GET['id']; // 2
-echo '';
-echo 'Nome (slug) do produto: ' . $_GET['nome']; // camiseta-azul
-
-?>
-{% endhighlight %}
+<div data-gist-id="75f0def7cad7050c3b60" data-gist-show-loading="false"></div>
 
 Quer coisa melhor que isso minha gente?!
 
@@ -138,20 +121,7 @@ Só para reforçar para quem ainda não pegou a essência da coisa: Na primeira 
 Vamos ver mais alguns exemplos que podemos colocar no nosso <code>.htaccess</code> e o entendimento de cada uma das regras, fica por sua conta:
 
 
-{% highlight sh linenos %}
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-
-  # Página de contato
-  RewriteRule ^contato/?$ /contato.php [NC,L]
-  # Página de exibição de um produto
-  RewriteRule ^produtos/([a-z0-9-]+)/([0-9]+)/?$ /produtos.php?id=$2&nome=$1 [NC]
-  # Página de exibição de uma categoria de livros
-  RewriteRule ^livro/([a-z0-9-]+)/?$ /livros.php?categoria=$1 [NC,L]
-  # Página de exibição de um artigo com a data na URL
-  RewriteRule ^artigo/([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-z0-9-]+)/([0-9]+)/?$ /artigo.php?id=$5&nome=$4&data=$1-$2-$3 [NC]
-</IfModule>
-{% endhighlight %}
+<div data-gist-id="82c2d747d88841c0578b" data-gist-show-loading="false"></div>
 
 Uma ferramenta que pode ajudá-los a testar expressões regulares é a [RegExr: Online Regular Expression Testing Tool](http://gskinner.com/RegExr/).
 

@@ -25,25 +25,7 @@ Para instalar ele no seu site é bem fácil:
 3 - Insira o seguinte bloco de código no começo do seu site:
 
 
-{% highlight php linenos %}
-// Inclui o arquivo do PHPIDS
-require_once 'IDS/Init.php';
-$request = array(
-'REQUEST' =&amp;gt; $_REQUEST,
-'GET' =&amp;gt; $_GET,
-'POST' =&amp;gt; $_POST,
-'COOKIE' =&amp;gt; $_COOKIE
-);
-// Inicia o PHPIDS
-$init = IDS_Init::init('IDS/Config/Config.ini');
-$ids = new IDS_Monitor($request, $init);
-$result = $ids-&amp;gt;run();
-
-if (!$result-&amp;gt;isEmpty()) {
-// Exibe resultados caso sejam encontrados
-echo $result;
-}
-{% endhighlight %}
+<div data-gist-id="5dc67d864f33f59a7995" data-gist-show-loading="false"></div>
 
 Com isso ele já vai passar a funcionar... Vale lembrar que esse exemplo apenas avisa (mostra) que algo foi encontrado e bloqueia... Você vai  precisar adaptá-lo as suas necessidades.
 

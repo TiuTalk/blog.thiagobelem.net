@@ -44,6 +44,7 @@ Pra começar, criamos uma pasta - dentro de <code>/wp-content/themes/</code> - p
 Agora precisamos abrir o <code>style.css</code> e colocar um bloco de comentário CSS com as informações sobre o tema:
 
 <div data-gist-id="1506849" data-gist-show-loading="false"></div>
+
 Com isso o tema já aparece na nossa lista de temas dentro do Painel de Controle do WordPress:
 
 <img class="size-full wp-image-1896" title="tema-style" src="/assets/uploads/2011/12/tema-style.png" alt="" width="264" height="356" /> Tema disponível

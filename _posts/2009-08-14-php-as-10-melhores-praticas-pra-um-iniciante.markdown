@@ -69,12 +69,7 @@ Essa é simples: organize seu código para ficar mais fácil de encontrar alguma
 Pra quem ainda não sacou, "indentação" é aquele espaço em branco a esquerda das linhas, criados usando a tecla [TAB] ou espaços em branco, por exemplo:
 
 
-{% highlight php linenos %}
-if ($nota == 10) {
-    echo "Parabéns, você passou!";
-    exit;
-}
-{% endhighlight %}
+<div data-gist-id="6461694693eb1fff85cc" data-gist-show-loading="false"></div>
 
 No exemplo acima as linhas 2 e 3 estão indentadas pois pertencem ao bloco condicional.
 

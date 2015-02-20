@@ -22,126 +22,13 @@ Fiz uma classe que vocês vão poder usar para pegar o resultado de busca do Goo
 
 <h3>A Classe - Versão 1.1</h3>
 
-{% highlight php linenos %}
-<?php
-
-/**
- * API de busca do Google
- *
- * @author      Thiago Belem (contato@thiagobelem.net)
- * @link      /
- * @version      1.1
- */
-class googleSearchAPI {
-  protected $url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=large&start=%s&q=%s';
-  var $resultado, $pagina, $keywords;
-
-  function __construct() {
-    if (!function_exists('curl_init')) {
-      trigger_error('A biblioteca cURL não está instalada!');
-      return false;
-    }
-    if (!function_exists('json_decode')) {
-      trigger_error('A biblioteca para manipulação de JSON não está instalada!');
-      return false;
-    }
-  }
-
-  /**
-   * Pega o resultado HTTP de uma URL
-   */
-  protected function httpRequest($url) {
-    $cURL = curl_init($url);
-    curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, true);
-    $resultado = curl_exec($cURL);
-    $resposta = curl_getinfo($cURL, CURLINFO_HTTP_CODE);
-    curl_close($cURL);
-    return $resultado;
-  }
-
-  /**
-   * Executa a busca
-   */
-  function busca($keywords = null, $pagina = 1, $site = null) {
-    $keywords = (is_null($keywords)) ? $this->keywords : $keywords;
-    $start = (is_null($pagina)) ? 0 : (($pagina - 1) * 8);
-
-    $bkeywords = (!is_null($site)) ? ($keywords . ' site:' . $site) : $keywords;
-
-    $url = sprintf($this->url, (int)$start, urlencode($bkeywords));
-    $resultado = $this->httpRequest($url);
-    if (!$resultado) {
-      trigger_error('Não foi possível acessar a URL de busca:' . $url);
-      return false;
-    }
-    $resultado = json_decode($resultado, true);
-
-    $this->resultado = $resultado['responseData'];
-    $this->keywords = $keywords;
-    $this->pagina = $pagina;
-  }
-
-  /**
-   * Pega os resultados encontrados
-   */
-  function resultadoSites() {
-    return $this->resultado['results'];
-  }
-
-  /**
-   * Pega o total de sites encontrados
-   */
-  function resultadoTotal() {
-    return $this->resultado['cursor']['estimatedResultCount'];
-  }
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="120eea1ed5e48a1f4dbd" data-gist-show-loading="false"></div>
 
 
 
 <h3>Exemplo de Uso</h3>
 
-{% highlight php linenos %}
-<?php
-
-$keywords = 'Thiago Belem';
-$pagina = (isset($_GET['p'])) ? (int)$_GET['p'] : 1;
-
-$gs = new googleSearchAPI();
-//$gs->busca($keywords, $pagina); // Busca normal
-$gs->busca($keywords, $pagina, 'thiagobelem.net'); // Busca em um site específico
-
-$total = $gs->resultadoTotal();
-
-echo "Total estimado de resultados: " . $total;
-echo "";
-echo "<h2>Pagina: " . $gs->pagina . "</h2>";
-
-foreach ($gs->resultadoSites() as $item) {
-  echo "<h3>" . $item['title'] . "</h3>";
-  echo "" . $item['content'] . "
-";
-  echo '[' . $item['visibleUrl'] . "](' . $item['unescapedUrl'] . ')";
-}
-
-echo "<hr />";
-
-// Paginadores:
-
-if (($pagina - 5) > 1) echo '...&nbsp;';
-
-for ($n = 1; $n <= ceil($total / 8); $n++) {
-  if (($n < ($pagina - 5)) OR ($n > ($pagina + 5))) continue;
-  echo '['.$n.'](?q='.$keywords.'&p='.$n.')&nbsp;';
-}
-
-if (($pagina + 5) < $total) echo '...';
-
-?>
-{% endhighlight %}
+<div data-gist-id="f6c7d560b7063d86ae2e" data-gist-show-loading="false"></div>
 
 --
 

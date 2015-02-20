@@ -16,21 +16,7 @@ Bom, existem dezenas de formas de fazer isso, mas eu vou tentar fazer da forma m
 Vamos criar um arquivo chamado <span style="color: #ff6600;"><strong>banner_superior.php</strong></span> com o seguinte conteúdo:
 
 
-{% highlight php linenos %}
-<?php
-unset($_ELEMENTOS);
-
-$_ELEMENTOS[] = '[](http://site.com/)';
-$_ELEMENTOS[] = '[](http://orkut.com/)';
-$_ELEMENTOS[] = '[](http://forum.com/)';
-
-$total = count($_ELEMENTOS); // Calcula o total de elementos
-$escolhido = rand(0, $total - 1); // Define um número aleatório
-
-echo $_ELEMENTOS[$escolhido]; // Exibe o elemento
-
-?>
-{% endhighlight %}
+<div data-gist-id="342f4bb9b04f0c19a081" data-gist-show-loading="false"></div>
 
 Depois é só incluir (com <strong>include()</strong>) o arquivo aonde você quer que o banner apareça.
 

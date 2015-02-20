@@ -25,12 +25,16 @@ Outro ponto é que não queria instalar o Apache pois o PHP 5.4 já tem um [serv
 Curiosamente, a solução que encontrei faz uso do repositório [homebrew-php](https://github.com/josegonzalez/homebrew-php), de um dos mantenedores do <strong>CakePHP</strong> :)
 
 <h2>Instalando o PHP 5.4 com Homebrew</h2>
+
 <div data-gist-id="5373512" data-gist-show-loading="false"></div>
+
 E isso é tudo que você precisa.. depois de instalado você pode instalar alguns outros pacotes interessantes:
 
 <div data-gist-id="5373526" data-gist-show-loading="false"></div>
+
 Depois disso já tenho a versão mais recente do PHP funcionando:
 
 <div data-gist-id="5373586" data-gist-show-loading="false"></div>
+
 Espero que tenha ajudado! :)
 

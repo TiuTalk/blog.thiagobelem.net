@@ -42,6 +42,7 @@ Se você ainda não está acompanhando, veja as outras partes dessa sequência 
 Na [Parte 3](/criando-um-tema-para-wordpress-parte-3) criamos o template básico da home (<strong>index.php</strong>) que ficou mais ou menos assim:
 
 <div data-gist-id="2353682" data-gist-show-loading="false"></div>
+
 Agora vamos separar as partes do nosso tema!
 
 <h3>Header e Footer</h3>
@@ -50,12 +51,15 @@ Agora vamos separar as partes do nosso tema!
 Vamos começar separar o <strong>header.php</strong> que contém todo o código desde o <strong>DOCTYPE</strong> até o <strong>fim do topo</strong> do seu site:
 
 <div data-gist-id="2353722" data-gist-show-loading="false"></div>
+
 Depois precisamos separar o <strong>footer.php</strong>, fazendo a mesma coisa: partindo do <strong>fim do conteúdo</strong> (começo do rodapé) até o <strong></body></strong>:
 
 <div data-gist-id="2353728" data-gist-show-loading="false"></div>
+
 Depois de salvar esses dois arquivos, é só fazer o "include" dentro do nosso <strong>index.php</strong>, deixando-o muito mais limpo:
 
 <div data-gist-id="2353735" data-gist-show-loading="false"></div>
+
 Acabamos de usar duas funções novas:
 
 <ul>
@@ -70,9 +74,11 @@ Por enquanto não temos um conteúdo pra lateral, mas o elemento (sidebar) já e
 Primeiro criamos um arquivo sidebar.php com a marcação da lateral:
 
 <div data-gist-id="2353760" data-gist-show-loading="false"></div>
+
 Depois incluímos ele no template usando a função [get_footer()](http://codex.wordpress.org/Function_Reference/get_footer), assim:
 
 <div data-gist-id="2353770" data-gist-show-loading="false"></div>
+
 Com isso nosso template contém só o conteúdo/miolo daquela página e podemos ter páginas com formatos diferentes, que incluam ou não a lateral e que possam usar topos ou rodapés diferentes do padrão (que não vai ser o caso desse blog).
 
 <h3>Finalizando</h3>

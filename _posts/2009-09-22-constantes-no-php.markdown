@@ -23,71 +23,35 @@ Constantes são "variáveis fixas", capazes de armazenar um valor (de quase todo
 </blockquote>
 <h3>Criando constantes</h3>
 Pra criar uma constante é bem simples, você usa a função <strong>define()</strong> que pede dois argumentos: primeiro o nome da constante e depois o seu valor, exemplos:
-{% highlight php linenos %}
-<?php
-define('SITE', 'Thiago Belem / Blog');
-define('site', 2);
-?>
-{% endhighlight %}
+
+<div data-gist-id="bf9e634721eefce585d2" data-gist-show-loading="false"></div>
+
 No código acima definimos DUAS constantes diferentes, com dois valores diferentes. O nome das constantes é "case-sensitive" isso significa que "SITE" é diferente de "site" que são diferente de "sItE" e por aí vai.
 
 <h3>Usando constantes</h3>
 O uso de uma constante é identico ao uso de uma variável, diferença é que você não tem um cifrão ($) na frente do nome da constante, por exemplo:
-{% highlight php linenos %}
-<?php
-define('SITE', 'Thiago Belem / Blog');
-echo "Seja bem vindo ao site " . SITE;
-// Seja bem vindo ao site Thiago Belem / Blog
 
-// Outra forma:
-$mensagem = "Seja bem-vindo ao site";
-echo $mensagem . ' ' . SITE;
-// Seja bem vindo ao site Thiago Belem / Blog
-?>
-{% endhighlight %}
+<div data-gist-id="1d19291ca9d496bd081d" data-gist-show-loading="false"></div>
+
 <strong style="color: red">Atenção:</strong> Se você tentar definir uma mesma constante - mais de uma vez - receberá uma mensagem de erro. Afinal, ela é uma constante e não pode ser definida novamente.
 
 <h3>Recebendo o valor de uma constante</h3>
 Normalmente para receber o valor de uma constante é só usar o seu nome como foi mostrado no exemlpo anterior, mas e se o nome da constante é dinâmico (está dentro de uma variável)?
 
 Vamos a um exemplo básico, suponhamos que você tenha um script que cria uma constante em função do nome do visitante, você poderia fazer assim:
-{% highlight php linenos %}
-<?php
-$cargo = 'dono';
-$nome = 'Thiago Belem';
 
- // Cria uma constante 'dono' com o valor 'Thiago Belem'
-define($cargo, $nome);
+<div data-gist-id="37643fc57c8236303747" data-gist-show-loading="false"></div>
 
-echo "O " . $cargo . " do blog é o " . dono . "!";
-// O dono do blog é o Thiago Belem!
-?>
-{% endhighlight %}
 Agora imagine que o valor dessa variável <strong>$cargo</strong> muda pra cada visitante e você não pode usar "dono" como está ali no echo, você faz assim:
-{% highlight php linenos %}
-<?php
-$cargo = 'dono';
-$nome = 'Thiago Belem';
 
- // Cria uma constante 'dono' com o valor 'Thiago Belem'
-define($cargo, $nome);
+<div data-gist-id="7db128d03bd64d24fcca" data-gist-show-loading="false"></div>
 
-echo "O " . $cargo . " do blog é o " . constant($cargo) . "!";
-// O dono do blog é o Thiago Belem!
-?>
-{% endhighlight %}
 A função <strong>constant()</strong> te retorna o valor da constante cujo o nome você passou por parâmetro! É fantástico, não é?
 
 <h3>Trabalhando com constantes</h3>
 Você pode usar a função <strong>defined()</strong> para saber se uma constante já foi definida, por exemplo:
-{% highlight php linenos %}
-<?php
-// Verifica se a constante SITE não foi definida
-if (defined('SITE') == false) {
-  define('SITE', 'Thiago Belem / Blog');
-}
-?>
-{% endhighlight %}
+
+<div data-gist-id="e9a446503b657ca399c9" data-gist-show-loading="false"></div>
 
 <h3>Documentação</h3>
 » Capítulo [constantes](http://www.php.net/manual/pt_BR/language.constants.php)

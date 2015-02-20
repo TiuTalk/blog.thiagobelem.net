@@ -24,51 +24,17 @@ Hoje vamos fazer uma consulta semelhante, mas iremos fazer o relacionamento entr
 Começaremos o arquivo <code>consulta-avancada.php</code> da mesma forma que iniciamos o anterior, com um bloco de comentários que explica o arquivo e inclui o arquivo que cria a instância do MySQLi que será usada nesse novo arquivo.
 
 
-{% highlight php linenos %}
-<?php
-/**
- * PHP e MySQL para iniciantes
- *
- * Arquivo com um exemplo de consulta avançada ao banco de dados MySQL
- *
- * PHP 5+, MySQL 4.1+
- *
- * @author Thiago Belem <contato@thiagobelem.net>
- * @link /mysql/php-e-mysql-para-iniciantes-consulta-simples/
- */
-
-// Inclui o arquivo que faz a conexão ao banco de dados
-require_once('includes/mysqli.php');
-
-?>
-{% endhighlight %}
+<div data-gist-id="4bd2f6ffbb484387492b" data-gist-show-loading="false"></div>
 
 Agora iremos definir uma variável contendo o nome da categoria que iremos usar para filtrar as notícias... O conteúdo dessa variável está "<em>hard coded</em>" no arquivo, mas poderia ser dinâmico e vir da uma variável <code>$_GET</code>, por exemplo.
 
 
-{% highlight php linenos %}
-// Iremos buscar apenas as notícias da categoria "Esportes"
-$categoria = "Esportes"; // Essa variável poderia ter vindo, por exemplo, do $_GET
-{% endhighlight %}
+<div data-gist-id="e42c430d71b4c895a530" data-gist-show-loading="false"></div>
 
 Feito isso, montaremos a consulta que será executada no banco de dados:
 
 
-{% highlight php linenos %}
-// Monta a consulta SQL para trazer as últimas 10 notícias ativas e que pertençam à categoria específica
-$sql = "SELECT
-      Noticia.id, Noticia.titulo, Noticia.descricao,
-      Categoria.nome AS categoria
-    FROM `noticias` AS Noticia
-      INNER JOIN `categorias` AS Categoria
-        ON Categoria.`id` = Noticia.`categoria_id`
-    WHERE
-      Noticia.`ativa` = 1
-      AND
-      Categoria.`nome` = '{$categoria}'
-    ORDER BY Noticia.`cadastro` DESC
-    LIMIT 10";
-{% endhighlight %}
+<div data-gist-id="974d1538a07b00c61625" data-gist-show-loading="false"></div>
 
 O interessante dessa consulta é que ela busca os registros da tabela <code>noticia</code> que possuam um relacionamento com os registros da tabela <code>categorias</code> e, o registro correspondente na tabela <code>categorias</code> deve possuir o valor da variável <code>$categoria</code> no campo <code>nome</code>.
 
@@ -77,36 +43,12 @@ Para quem não entendeu a explicação acima, vale a pena a leitura do meu artig
 Continuando o script, rodamos a consulta e exibimos o resultado:
 
 
-{% highlight php linenos %}
-// Prepara a consulta OU mostra uma mensagem de erro
-$resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
-
-// Faz um loop, passando por todos os resultados encontrados
-while ($noticia = $resultado->fetch_object()) {
-  // Exibe a notícia dentro de um bloco HTML
-  ?>
-
-  <h2><?php echo $noticia->categoria; ?> - <?php echo $noticia->titulo; ?></h2>
-  <?php echo $noticia->descricao; ?>
-
-  [Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
-
-
-  <?php
-} // while ($noticia = $resultado->fetch_object())
-{% endhighlight %}
+<div data-gist-id="726ba5b02d2df50388b0" data-gist-show-loading="false"></div>
 
 E, para finalizar, exibimos o total de resultados encontrados e limpamos a consulta da memória do PHP:
 
 
-{% highlight php linenos %}
-// Exibe o total de registros encontrados
-echo "Registros encontrados: {$resultado->num_rows}
-";
-
-// Libera o resultado para liberar memória
-$resultado->free();
-{% endhighlight %}
+<div data-gist-id="418683641f90f69d2b65" data-gist-show-loading="false"></div>
 
 E vocês acabaram de ver um exemplo de consulta complexa usando MySQLi! :)
 

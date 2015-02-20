@@ -40,57 +40,28 @@ Estou desde ontem revisando a classe e fazendo algumas pequenas correções... N
 
 <h3>Novas Propriedades</h3>
 Para a nossa nova funcionalidade precisamos criar uma nova propriedade na nossa classe:
-{% highlight php linenos %}
-  /**
-   * Quantidade (em dias) que o sistema lembrará os dados do usuário ("Lembrar minha senha")
-   *
-   * Usado apenas quando o terceiro parâmetro do método Usuario::logaUsuario() for true
-   * Os dados salvos serão encriptados usando base64
-   *
-   * @var integer
-   * @since v1.1
-   */
-  var $lembrarTempo = 7;
-{% endhighlight %}
+
+<div data-gist-id="3e6c2da1c87a0b93359a" data-gist-show-loading="false"></div>
+
 Se vocês lerem o comentário vão perceber que um terceiro parâmetro foi adicionado ao método logaUsuario()... É esse terceiro parâmetro que define se os dados serão lembrados pelo o sistema.
 
 <h3>Novo Método - <span style="color: #B40000">lembrarDados()</span></h3>
 Vamos criar agora o método lembrarDados() que irá salvar os dados do usuário, criptografados, em cookies:
-{% highlight php linenos %}
-  /**
-   * Salva os dados do usuário em cookies ("Lembrar minha senha")
-   *
-   * @access public
-   * @since v1.1
-   *
-   * @param string $usuario O usuário que será lembrado
-   * @param string $senha A senha do usuário
-   * @return void
-   */
-  function lembrarDados($usuario, $senha) {
-    // Continuaremos aqui...
-  }
-{% endhighlight %}
+
+<div data-gist-id="32da0b8315c89e638027" data-gist-show-loading="false"></div>
 
 Primeiro nós vamos calcular o [UNIX Timestamp](http://pt.wikipedia.org/wiki/Era_Unix) que será a data exata de quando os cookies irão expirar:
-{% highlight php linenos %}
-    // Calcula o timestamp final para os cookies expirarem
-    $tempo = strtotime("+{$this->lembrarTempo} day", time());
-{% endhighlight %}
+
+<div data-gist-id="6edb2fcb33fd2df36152" data-gist-show-loading="false"></div>
+
 Agora nós iremos encriptar os dados do usuário usando [base64](http://pt.wikipedia.org/wiki/Base64) e adicionar um caractere no início da string criptografada para impedir que ela seja decriptografada pelo usuário (caso ele encontre o valor do cookie):
-{% highlight php linenos %}
-    // Encripta os dados do usuário usando base64
-    // O rand(1, 9) cria um digito no início da string que impede a descriptografia
-    $usuario = rand(1, 9) . base64_encode($usuario);
-    $senha = rand(1, 9) . base64_encode($senha);
-{% endhighlight %}
+
+<div data-gist-id="3e9d0bd09dac0226b2c7" data-gist-show-loading="false"></div>
+
 Agora é só criar os dois cookies e o método está pronto:
-{% highlight php linenos %}
-    // Cria um cookie com o usuário
-    setcookie($this->prefixoChaves . 'lu', $usuario, $tempo, $this->cookiePath);
-    // Cria um cookie com a senha
-    setcookie($this->prefixoChaves . 'ls', $senha, $tempo, $this->cookiePath);
-{% endhighlight %}
+
+<div data-gist-id="507a733aceef9aab0071" data-gist-show-loading="false"></div>
+
 Nosso método que salva os dados em cookies está pronto... Esse método será usado pelo método logaUsuario() após todos os dados serem salvos na sessão.
 
 Agora nós vamos precisar criar um método que verifica os dados (usuario e senha) salvos nos cookies:
@@ -99,39 +70,17 @@ Agora nós vamos precisar criar um método que verifica os dados (usuario e senh
 Esse método é muito importante pois ele verificará os dados salvos nos cookies <strong>tentando logar o usuário</strong>! Esse método só será chamado quando o usuário tentar acessar uma página protegida e não estiver logado... O proprio método <strong>usuarioLogado()</strong> já fará isso!
 
 Vamos começar:
-{% highlight php linenos %}
-  /**
-   * Verifica os dados do cookie (caso eles existam)
-   *
-   * @access public
-   * @since v1.1
-   * @uses Usuario::logaUsuario()
-   *
-   * @return boolean Os dados são validos?
-   */
-  function verificaDadosLembrados() {
-    // Continuaremos aqui...
-  }
-{% endhighlight %}
+
+<div data-gist-id="34a656d98292dbab5199" data-gist-show-loading="false"></div>
+
 Primeiro nós precisamos verificar se os cookies existem, caso eles não existam os dados não foram encontrados e, obviamente, são "inválidos".
-{% highlight php linenos %}
-    // Os cookies de "Lembrar minha senha" existem?
-    if (isset($_COOKIE[$this->prefixoChaves . 'lu']) AND isset($_COOKIE[$this->prefixoChaves . 'ls'])) {
-      // Continuaremos aqui...
-    }
 
-    // Não há nenhum cookie, dados inválidos
-    return false;
-{% endhighlight %}
+<div data-gist-id="c7e66c80fdbd1c560faa" data-gist-show-loading="false"></div>
+
 O próximo passo é que faz toda a mágica do método: ele remove o caractere adicionado no início da string criptogafada, descriptografa a string e verifica se os dados são válidos tentando logar o usuário:
-{% highlight php linenos %}
-      // Pega os valores salvos nos cookies removendo o digito e desencriptando
-      $usuario = base64_decode(substr($_COOKIE[$this->prefixoChaves . 'lu'], 1));
-      $senha = base64_decode(substr($_COOKIE[$this->prefixoChaves . 'ls'], 1));
 
-      // Tenta logar o usuário com os dados encontrados nos cookies
-      return $this->logaUsuario($usuario, $senha, true);
-{% endhighlight %}
+<div data-gist-id="41b16e0e02d6f9684a84" data-gist-show-loading="false"></div>
+
 Se o usuário for logado com sucesso o método <strong>logaUsuario()</strong> retornará <em>true</em> para o método <strong>verificaDadosLembrados()</strong>, que por sua vez também retornará true para o método <strong>usuarioLogado()</strong> e tudo vai funcionar perfeitamente! :)
 
 Antes que você desista do tutorial agora mesmo por que acha que tá muito complicado, isso é o "normal" da Orientação a Objetos e você vai adorar. :)
@@ -140,28 +89,8 @@ Nossa nova funcionalidade está quase pronta.. Só falta uma coisinha: um métod
 
 <h3>Novo Método - <span style="color: #B40000">limpaDadosLembrados()</span></h3>
 Para deletar um cookie você deve definir o seu valor como nulo ou falso e definir a sua data de expiração no passado... O método fica asssim:
-{% highlight php linenos %}
-  /**
-   * Limpa os dados lembrados dos cookies ("Lembrar minha senha")
-   *
-   * @access public
-   * @since v1.1
-   *
-   * @return void
-   */
-  function limpaDadosLembrados() {
-    // Deleta o cookie com o usuário
-    if (isset($_COOKIE[$this->prefixoChaves . 'lu'])) {
-      setcookie($this->prefixoChaves . 'lu', false, (time() - 3600), $this->cookiePath);
-      unset($_COOKIE[$this->prefixoChaves . 'lu']);
-    }
-    // Deleta o cookie com a senha
-    if (isset($_COOKIE[$this->prefixoChaves . 'ls'])) {
-      setcookie($this->prefixoChaves . 'ls', false, (time() - 3600), $this->cookiePath);
-      unset($_COOKIE[$this->prefixoChaves . 'ls']);
-    }
-  }
-{% endhighlight %}
+
+<div data-gist-id="e0d47db8bca966659497" data-gist-show-loading="false"></div>
 
 Nossa nova funcionalidade está devidamente implementada! :)
 

@@ -33,10 +33,12 @@ O <strong>localStorage</strong> salva dados no computador do visitante, que fica
 Use o método <strong>setItem(nome, valor)</strong> para criar/salvar novos itens e o depois o método<strong> getItem(nome)</strong> para recuperar o valor.
 
 <div data-gist-id="2920989" data-gist-show-loading="false"></div>
+
 <h3>Usando o sessionStorage</h3>
 Já o <strong>sessionStorage</strong> faz exatamente a mesma coisa, só que os dados ficam salvos apenas durante a sessão (e são apagados quando o visitante fecha a aba/navegador):
 
 <div data-gist-id="2921014" data-gist-show-loading="false"></div>
+
 Viram como é simples?
 
 <h3>Quem avisa, amigo é...</h3>

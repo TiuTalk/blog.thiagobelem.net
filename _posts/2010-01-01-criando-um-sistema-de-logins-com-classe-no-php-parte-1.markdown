@@ -26,15 +26,8 @@ Outro detalhe importante sobre o sistema é que ele irá funcionar nas versões 
 Se você já tem uma tabela de usuários pode pular essa parte... Se não, vamos criar a seguinte tabela no banco de dados do seu site:
 <img src="/arquivos/2009/12/tabela_usuarios.jpg" alt="Tabela de Usuários" title="Tabela de Usuários" width="163" height="146" class="size-full wp-image-664" />
 Para criar essa tabela, você poderá usar o seguinte código SQL:
-{% highlight SQL linenos %}
-CREATE TABLE `usuarios` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
-  `nome` VARCHAR(150) NOT NULL ,
-  `usuario` VARCHAR(100) NOT NULL ,
-  `senha` VARCHAR(40) NOT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = MyISAM;
-{% endhighlight %}
+
+<div data-gist-id="3925f793d2e316fc58dc" data-gist-show-loading="false"></div>
 
 
 <h3>A classe Usuario</h3>
@@ -43,98 +36,30 @@ Vamos ao que interessa!
 Antes de tudo, precisamos criar o nosso arquivo, vamos seguir algumas boas páticas de programação e vamos dar o nome de "<strong style="background: gray; color: orange">usuario.class.php</strong>". Criado o arquivo vazio, vamos começar a construir nossa classe:
 
 
-{% highlight php linenos %}
-<?php
-class Usuario {
-
-}
-?>
-{% endhighlight %}
+<div data-gist-id="5d2a26d5c777322b8e4e" data-gist-show-loading="false"></div>
 
 Agora vamos começar a inserir algumas propriedades (variáveis) que serão usadas pela classe ao longo do projeto...
 
 
-{% highlight php linenos %}
-  /**
-   * Nome do banco de dados onde está a tabela de usuários
-   */
-  var $bancoDeDados = 'meu_site';
-
-  /**
-   * Nome da tabela de usuários
-   */
-  var $tabelaUsuarios = 'usuarios';
-
-  /**
-   * Nomes dos campos onde ficam o usuário e a senha de cada usuário
-   * Formato: tipo => nome_do_campo
-   */
-  var $campos = array(
-    'usuario' => 'usuario',
-    'senha' => 'senha'
-  );
-{% endhighlight %}
+<div data-gist-id="01c030b03a200b97bc25" data-gist-show-loading="false"></div>
 
 São com essas propriedades da classe que você vai poder customizar a classe para ela funcionar no seu site.. Cada uma esta devidamente comentada e explicada, é só alterar da forma que você necessitar.
 
 Agora vamos definir o primeiro método da nossa classe:
 
 
-{% highlight php linenos %}
-  /**
-   * Usa algum tipo de encriptação para codificar uma senha
-   *
-   * Método protegido: Só pode ser acessado por dentro da classe
-   *
-   * @param string $senha - A senha que será codificada
-   * @return string - A senha já codificada
-   */
-  function __codificaSenha($senha) {
-    // Altere aqui caso você use, por exemplo, o MD5:
-    // return md5($senha);
-    return $senha;
-  }
-{% endhighlight %}
+<div data-gist-id="48f4bb25b642da4951ba" data-gist-show-loading="false"></div>
 
 Esse método cuidará da encriptação da senha (caso ela exista, claro)... Se o seu sistema não usar nenhum tipo de criptografia, pode deixar esse método do jeito que está, mas caso você use, por exemplo, o SHA1, você precisa mudar ali na linha 34 e colocar, por exemplo:
-{% highlight php linenos %}
-return sha1($senha);
-{% endhighlight %}
+
+<div data-gist-id="e65787f8501fd5e47ba8" data-gist-show-loading="false"></div>
+
 Caso você use outro tipo de encriptação, você vai precisar modificar esse método... O importante é você receber a senha pura/plana como parâmetro ($senha) e retornar a senha encriptada.
 
 Agora vamos criar o segundo método da classe e o último método dessa parte do tutorial:
 
 
-{% highlight php linenos %}
-  /**
-   * Valida se um usuário existe
-   *
-   * @param string $usuario - O usuário que será validado
-   * @param string $senha - A senha que será validada
-   * @return boolean - Se o usuário existe ou não
-   */
-  function validaUsuario($usuario, $senha) {
-    $senha = $this->__codificaSenha($senha);
-
-    // Procura por usuários com o mesmo usuário e senha
-    $sql = "SELECT COUNT(*)
-        FROM `{$this->bancoDeDados}`.`{$this->tabelaUsuarios}`
-        WHERE
-          `{$this->campos['usuario']}` = '{$usuario}'
-          AND
-          `{$this->campos['senha']}` = '{$senha}'";
-    $query = mysql_query($sql);
-    if ($query) {
-      $total = mysql_result($query, 0);
-    } else {
-      // A consulta foi mal sucedida, retorna false
-      return false;
-    }
-
-    // Se houver apenas um usuário, retorna true
-    return ($total == 1) ? true : false;
-  }
-{% endhighlight %}
+<div data-gist-id="516dafcd3877a04eeaa1" data-gist-show-loading="false"></div>
 
 Esse método, como o comentário explica, cuidará de validar se um usuário existe, procurando o par <strong>$usuario</strong> + <strong>$senha</strong> no banco de dados... Ele só retornará verdadeiro (<em>true</em>) quando apenas um registro for encontrado.
 Se você reparar logo ali no começo do método, na linha 45, ele usa o método <strong style="background: gray; color: #FFF">__codificaSenha()</strong> que irá encriptar (ou não) a senha... Simples né? :)

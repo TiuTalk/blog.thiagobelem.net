@@ -34,149 +34,17 @@ Existem vários <strong>CSS Reset</strong> rolando pela Internet... Todos funcio
 Esse aqui é o que eu uso no meu [site pessoal](http://thiagobelem.net/):
 
 
-{% highlight css linenos %}
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-:focus {
-  outline: 0;
-}
-
-ins {
-  text-decoration: none;
-}
-del {
-  text-decoration: line-through;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-{% endhighlight %}
+<div data-gist-id="22fbd29a86b3380189f2" data-gist-show-loading="false"></div>
 
 Se você preferir, existe um CSS da Yahoo mesmo, chamado de YUI CSS Reset:
 [http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css](http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css)
 
 
-{% highlight css linenos %}
-/*
-Copyright (c) 2009, Yahoo! Inc. All rights reserved.
-Code licensed under the BSD License:
-http://developer.yahoo.net/yui/license.txt
-version: 2.7.0
-*/
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea ,p,blockquote,th,td {
-  margin:0;
-  padding:0;
-}
-table {
-  border-collapse:collapse;
-  border-spacing:0;
-}
-fieldset,img {
-  border:0;
-}
-address,caption,cite,code,dfn,em,strong,th,var {
-  font-style:normal;
-  font-weight:normal;
-}
-ol,ul {
-  list-style:none;
-}
-caption,th {
-  text-align:left;
-}
-h1,h2,h3,h4,h5,h6 {
-  font-size:100%;
-  font-weight:normal;
-}
-q:before,q:after {
-  content:'';
-}
-abbr,acronym {
-  border:0;
-}
-{% endhighlight %}
+<div data-gist-id="fcef3c2d1f02dc8b380f" data-gist-show-loading="false"></div>
 
 E existe um <strong>CSS Reset Reloaded</strong> criado por [Eric Meyer](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/):
-{% highlight css linenos %}
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-}
-/* remember to define focus styles! */
-:focus {
-  outline: 0;
-}
-body {
-  line-height: 1;
-  color: black;
-  background: white;
-}
-ol, ul {
-  list-style: none;
-}
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-}
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-}
-blockquote, q {
-  quotes: "" "";
-}
-{% endhighlight %}
+
+<div data-gist-id="2560c87d05fb3c96a538" data-gist-show-loading="false"></div>
 
 Espero que tenham gostado! :)
 

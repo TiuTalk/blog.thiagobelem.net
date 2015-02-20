@@ -24,34 +24,21 @@ Isso faz com que os sites exibam o seu conteúdo mas não percam <strong>bandwid
 Para evitar isso você precisa adicionar algumas regrinhas ao seu <strong>.htaccess</strong> (arquivo de configurações e diretrizes do Apache) que fica, geralmente, na raiz do seu site.
 
 
-{% highlight sh linenos %}
-RewriteEngine On
-RewriteCond %{HTTP_REFERER} !^http://(.+\.)?meusite\.com\.br/ [NC]
-RewriteCond %{HTTP_REFERER} !^$
-RewriteRule .*\.(jpe?g|gif|bmp|png)$ /imagens/proibido.jpg [L]
-{% endhighlight %}
+<div data-gist-id="1c81dbfb088f91dbacc0" data-gist-show-loading="false"></div>
 
 Esse código fará com que, caso um outro site que não esteja dentro do domínio <strong>meusite.com.br</strong> tente chamar uma imagem do seu site, receberá uma outra imagem "<strong>imagens/proibido.jpg</strong>"... Isso fará o outro site passar uma boa vergonha.
 
 Mas suponhamos que você queira ser legal com o resto do mundo e chato apenas com um outro site... o meuinimigo.com.br. Você pode fazer assim:
 
 
-{% highlight sh linenos %}
-RewriteEngine On
-RewriteCond %{HTTP_REFERER} ^http://(.+\.)?meuinimigo\.com\.br/ [NC,OR]
-RewriteCond %{HTTP_REFERER} ^http://(.+\.)?meuinimigo\.net/ [NC,OR]
-RewriteCond %{HTTP_REFERER} ^http://(.+\.)?meuinimigo\.org/ [NC]
-RewriteRule .*\.(jpe?g|gif|bmp|png)$ /imagens/proibido.jpg [L]
-{% endhighlight %}
+<div data-gist-id="f256231eba48014c27b4" data-gist-show-loading="false"></div>
 
 Com isso, qualquer site irá poder usar as suas imagens, menos os domínios <strong>meuinimigo.com.br</strong>, <strong>meuinimigo.net</strong> e <strong>meuinimigo.org</strong>.
 
 Mas e se você não quer colocar outra imagem no lugar e simplesmente exibir uma página "forbidden" (acesso negado)? É só trocar a última linha:
 
 
-{% highlight sh linenos %}
-RewriteRule .*\.(jpe?g|gif|bmp|png)$ - [F]
-{% endhighlight %}
+<div data-gist-id="22fbb91b38a7118bc7a5" data-gist-show-loading="false"></div>
 
 Viram que simples?
 

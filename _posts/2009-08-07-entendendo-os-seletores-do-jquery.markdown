@@ -22,55 +22,30 @@ Os seletores do jQuery são muito parecidos com os seletores do CSS onde você i
 Suponhamos que você tenha três DIVs em seqüência e queira colocar uma borda apenas na div com classe "carros", exemplo:
 
 
-{% highlight html linenos %}
-<div>Olá mundo!</div>
-<div class="carros">Olá mundo!</div>
-<div class="naves">Olá mundo!</div>
-{% endhighlight %}
+<div data-gist-id="c862e0dda978599b6ce2" data-gist-show-loading="false"></div>
 
 Nossa linha do jQuery que coloca uma borda ficaria assim:
-{% highlight javascript linenos %}
-// Assim:
-$("div.carros").css('border', '1px solid red');
 
-// Ou assim:
-$(".carros").css('border', '1px solid red');
-{% endhighlight %}
+<div data-gist-id="a023b424e244f9c6325c" data-gist-show-loading="false"></div>
 
 Percebam que a segunda regra vai afetar TODOS os elementos que tenham a class "carros". :)
 
 Agora vamos mudar a linha de ação um pouco e afetar todas as DIVs exceto a que tenha a classe "naves"... Para isso vamos usar o seletor "div" e excluir o elemento que tenha class "naves", assim:
-{% highlight javascript linenos %}
-$("div[class!='naves']").css('border', '1px solid red');
-{% endhighlight %}
+
+<div data-gist-id="1c90212f2881fd8d0574" data-gist-show-loading="false"></div>
 
 Agora suponhamos que você queira fazer três ações sobre o mesmo elemento, você pode fazer isso de três formas:
-{% highlight javascript linenos %}
-// Assim:
-$("div.carros").css('border', '1px solid red');
-$("div.carros").css('color', 'blue');
 
-// Ou assim:
-$("div.carros").css('border', '1px solid red').css('color', 'blue');
-
-// Ou assim:
-var elemento = $("div.carros");
-elemento.css('border', '1px solid red');
-elemento.css('color', 'blue');
-
-// E até assim:
-var elemento = $("div.carros");
-elemento.css('border', '1px solid red').css('color', 'blue');
-{% endhighlight %}
+<div data-gist-id="7e5bdc796a98eaaf4278" data-gist-show-loading="false"></div>
 
 Existem várias outras formas e atalhos legais para se usar nos seletores... Para selecionar dois (ou mais) elementos você poderia fazer assim:
-{% highlight javascript linenos %}
-$("div.carros, div.naves, div#topo").css('border', '1px solid red');
-{% endhighlight %}
+
+<div data-gist-id="99c4d74658dd0ba41cf8" data-gist-show-loading="false"></div>
+
 Sabe aquele efeito legal de zebra nas tabelas? O famoso "cor sim, cor não, cor sim, cor não"? Você pode ter esse efeito usando apenas uma linha de jQuery sem definir nenhuma classe ou rodar nenhum codigo dentro da criação da sua tabela, assim:
-{% highlight javascript linenos %}
-$("tr:odd td").css('background', '#008800');
-{% endhighlight %}
+
+<div data-gist-id="3e60294f38c75ea381a4" data-gist-show-loading="false"></div>
+
 Isso vai afetar todos os <td> que estão dentro dos <strong><tr> ímpares</strong> (por causa do <strong>odd</strong>), ou seja: 1°, 3°, 5° e por aí vai! Legal não? :)
 
 Percebam que o único exemplo de função/método que eu usei foi o css(), mas existem dezenas e dezenas de outras funções legais no jQuery e a maioria deve estar associada a um seletor.

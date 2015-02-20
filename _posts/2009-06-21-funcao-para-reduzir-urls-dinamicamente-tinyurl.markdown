@@ -24,64 +24,11 @@ A vantagem de usar essa função (e não as que eu achei por aí, buscando no Go
 
 <h3>Código da Função</h3>
 
-{% highlight php linenos %}
-<?php
-
-/**
-* Função para criar versões reduzidas das URLs
-*
-* @author    Thiago Belem <contato@thiagobelem.net>
-*
-* @param string $url O endereço a ser reduzido
-* @return string A nova URL (usando o TinyURL)
-*/
-function tinyURL($url)
-{
-  define('TINYURL_API', 'http://tinyurl.com/api-create.php?url=%s');
-  $requestURL = sprintf(TINYURL_API, $url);
-
-  // Checa a existência da biblioteca cURL
-  $curl = (bool) function_exists('curl_init');
-  // Checa a variável allow_url_fopen no php.ini
-  $allow_url = (bool) ini_get('allow_url_fopen');
-
-  // Verifica se a biblioteca cURL existe e se não é possível usar URLs no fopen
-  if ($curl AND !$allow_url) {
-    // Caso exista, usa o cURL para fazer a requisição
-    $ch = curl_init($requestURL);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    $resultado = curl_exec($ch);
-    curl_close($ch);
-  // Caso não possa usar o cURL ou possa usar URLs no fopen
-  } else if ($allow_url) {
-    // Tenta usar o file_get_contents
-    $resultado = file_get_contents($requestURL);
-    // Se algo der errado, tenta com o fopen
-    if (!$resultado) {
-      $handle = @fopen($requestURL, "r");
-      $resultado = '';
-      if ($handle) while (!feof($handle)) $resultado .= fgets($handle, 4096);
-    }
-  // Caso não possa usar nenhum dos dois
-  } else {
-    // Exibe uma mensagem de erro
-    trigger_error('tinyURL: Não é possível usar o cURL nem URLs com fopen!', E_USER_ERROR);
-  }
-  // Retorna o resultado sem espaços adicionais ou a URL original caso algo tenha dado errado
-  return ((isset($resultado) AND !empty($resultado)) ? trim($resultado) : $url);
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="de5259e13a2e9c42528e" data-gist-show-loading="false"></div>
 
 <h3>Exemplo de uso <span style="color: #c0c0c0;">(se é que precisa..)</span></h3>
 
-{% highlight php linenos %}
-<?php
-  echo tinyURL('/');
-  // http://tinyurl.com/kwzg4w
-?>
-{% endhighlight %}
+<div data-gist-id="3ee6e5a670ac1b3473e8" data-gist-show-loading="false"></div>
 
 Espero que tenham gostado! :)
 

@@ -25,39 +25,12 @@ O que essa função faz é simples, curto e grosso: acaba, some, oculta, exclui,
 Veja um exempo de uso:
 
 
-{% highlight php linenos %}
-<?php
-// Define uma string com código HTML
-$entrada = '
-Ahá... [eu](mailto: fulaninho@uol.com.br) sou <strong>malandrão!</strong>
-
-';
-
-$saida = strip_tags($entrada);
-echo $saida;
-// Saída: Ahá... eu sou malandrão!
-?>
-{% endhighlight %}
+<div data-gist-id="832b156cded3fc8bf7c6" data-gist-show-loading="false"></div>
 
 Você também pode, se quiser, definir TAGs permitidas, que permanecerão na string:
 
 
-{% highlight php linenos %}
-<?php
-// Define uma string com código HTML
-$entrada = '
-Ahá... [eu](mailto: fulaninho@uol.com.br) sou <strong>malandrão!</strong>
-
-';
-
-$saida = strip_tags($entrada, '<strong>
-');
-echo $saida;
-// Saída:
-Ahá... eu sou <strong>malandrão!</strong>
-
-?>
-{% endhighlight %}
+<div data-gist-id="29e62ebb3a5ae2a1e2f8" data-gist-show-loading="false"></div>
 
 » [Documentação da strip_tags()](http://www.php.net/manual/pt_BR/function.strip-tags.php)
 
@@ -67,15 +40,7 @@ A htmlspecialchars não remove as TAGs HTML... Ela escapa o código HTML... Tran
 Exemplo de uso:
 
 
-{% highlight php linenos %}
-<?php
-$entrada = 'Eu sou <i>çagaiz</i>!';
-
-$saida = htmlspecialchars($entrada);
-echo $saida;
-// Saída: Eu sou <i>çagaiz</i>! (Aparecerão todos os caracteres, como se o HTML fosse string)
-?>
-{% endhighlight %}
+<div data-gist-id="0a98e63d60b2cbdb72fa" data-gist-show-loading="false"></div>
 
 Com isso você vai poder saber exatamente o que o espertinho tentou inserir no seu código... :)
 
@@ -87,32 +52,19 @@ No quesito segurança, essa é a função mais legal.. Ela serve pra quando voc�
 Vamos dar um exemplo:
 
 
-{% highlight php linenos %}
-<?php
-$nome = "Fulaninho's";
-
-$nome = mysql_real_escape_string($nome);
-
-$sql = "INSERT INTO `usuarios` VALUES (NULL, '".$nome."')";
-mysql_query($sql);
-?>
-{% endhighlight %}
+<div data-gist-id="5e82c2c61f7bb60f9130" data-gist-show-loading="false"></div>
 
 Sem o uso da função, a consulta passada para o MySQL ficaria assim:
 
 
-{% highlight sql linenos %}
-INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho's')
-{% endhighlight %}
+<div data-gist-id="474eace1cb365c2a8e45" data-gist-show-loading="false"></div>
 
 Repare que a aspas que fecha o valor a ser inserido, é a que vem depois do "o", e não a que veio depois do "s", que seria o correto... O que daria erro no MySQL ou acabaria resultado no cadastro de dados errados e pela metade.
 
 Já usando a função, ficaria assim:
 
 
-{% highlight sql linenos %}
-INSERT INTO `usuarios` VALUES (NULL, 'Fulaninho\'s')
-{% endhighlight %}
+<div data-gist-id="b6f3ba83159f8970f42f" data-gist-show-loading="false"></div>
 
 O que fazer com que o nome seja inserido de forma correta, e quando você fizer um <strong>SELECT</strong> para buscar esse dado, ele virá <strong>Fulaninho's</strong> (sem a barra).
 

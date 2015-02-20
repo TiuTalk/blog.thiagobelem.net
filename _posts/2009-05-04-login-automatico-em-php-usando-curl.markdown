@@ -15,41 +15,7 @@ Essa não é uma tarefa muito comum... Mas as vezes precisamos fazer um login au
 Você pode fazer essa "façanha" usando uma biblioteca do PHP chamada cURL ([veja mais sobre o cURL aqui](http://br2.php.net/manual/pt_BR/book.curl.php)), veja um exemplo devidamente comentado e explicado:
 
 
-{% highlight php linenos %}
-<?php
-
-// Inicia o cURL
-$ch = curl_init();
-
-// Define a URL original (do formulário de login)
-curl_setopt($ch, CURLOPT_URL, 'http://www.site.com/login.php');
-
-// Habilita o protocolo POST
-curl_setopt ($ch, CURLOPT_POST, 1);
-
-// Define os parâmetros que serão enviados (usuário e senha por exemplo)
-curl_setopt ($ch, CURLOPT_POSTFIELDS, 'usuario=fulano&senha=12345');
-
-// Imita o comportamento patrão dos navegadores: manipular cookies
-curl_setopt ($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
-
-// Define o tipo de transferência (Padrão: 1)
-curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-
-// Executa a requisição
-$store = curl_exec ($ch);
-
-// Define uma nova URL para ser chamada (após o login)
-curl_setopt($ch, CURLOPT_URL, 'http://www.site.com/minha_conta.php');
-
-// Executa a segunda requisição
-$content = curl_exec ($ch);
-
-// Encerra o cURL
-curl_close ($ch);
-
-?>
-{% endhighlight %}
+<div data-gist-id="81a32e8600a4eeaaf270" data-gist-show-loading="false"></div>
 
 No fim da execução deste script você terá duas variáveis: a <span style="color: #008080;"><strong>$store</strong></span> contendo o HTML da página resultado (depois do submit do login) e a variável <span style="color: #008080;"><strong>$content</strong></span>, contendo o HTML da página chamada na segunda requisição.
 

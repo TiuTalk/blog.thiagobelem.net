@@ -21,11 +21,8 @@ Segundo a descriçaõ da Wikipédia sobre o WWW:
 Muita gente diz que o no-www é 'modinha' e não tem uma real utilidade. Eu apoio e vou ensinar a vocês como instalá-lo no seu site.. é bem simples:
 
 Primeiro abra o bloco de notas (notepad) do seu computador e escreva o seguinte pedaço de texto:
-{% highlight text linenos %}
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-{% endhighlight %}
+
+<div data-gist-id="2ffd50d0784556d8996c" data-gist-show-loading="false"></div>
 
 Salve este arquivo com o nome de '.htaccess'... Isso mesmo, o arquivo não tem nome, só uma extensão grande de 8 letras.
 

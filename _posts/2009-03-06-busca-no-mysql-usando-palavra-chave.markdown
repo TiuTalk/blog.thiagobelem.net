@@ -14,9 +14,7 @@ Outra coisa muito comum é você precisar fazer uma busca no MySQL usando uma pa
 
 Pra fazer isso é muito simples, é só usar o caractere coringa do MySQL que é o í de porcentagem (%). Só que o comando de comparação também muda:
 
-{% highlight sql linenos %}
-SELECT FROM `noticias` WHERE `texto` LIKE '%Brasil%'
-{% endhighlight %}
+<div data-gist-id="e4d4db8234bcc247ed70" data-gist-show-loading="false"></div>
 
 Com isso você poderá localizar qualquer registro, da tabela de <strong>notícias</strong>, que tenha a palavra <span style="color: #ff6600;"><strong>Brasil</strong></span> no <strong>meio</strong>, <strong>começo </strong>ou <strong>fim </strong>do valor armazenado na coluna texto.
 
@@ -26,9 +24,7 @@ Repare que, ao contrário de uma comparação normal, não usamos o igual (=) e 
 
 Você também pode usar o caractere coringa para encontrar registros que tenham um 'começo' em comum, por exemplo: Você quer encontrar todos os usuários que tenham o nome começando por B, então você faria assim:
 
-{% highlight sql linenos %}
-SELECT FROM `usuarios` WHERE `nome` LIKE 'B%'
-{% endhighlight %}
+<div data-gist-id="3987595e2aa8f898fab5" data-gist-show-loading="false"></div>
 
 Repare que só usamos o coringa (%) a direita do <strong>B</strong>, o que significa que o registro tem que começar com B e o que vier depois pode ser qualquer coisa. Serão encontrados <strong>b</strong>runo, <strong>b</strong>reno, <strong>b</strong>ernard, <strong>b</strong>ianca e etc.
 

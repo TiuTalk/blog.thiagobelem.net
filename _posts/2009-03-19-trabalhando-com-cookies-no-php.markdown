@@ -23,20 +23,7 @@ Como dito na definição wikipediana, cookies podem ser usados para armazenar da
 Felizmente você só precisa aprender uma função para manipular cookies! Essa função é a <strong>setcookie()</strong> do PHP. Vamos a alguns exemplos:
 
 
-{% highlight php linenos %}
-<?php
-
-// Cria um cookie chamado 'usuario' com o valor 'Fulano'
-setcookie('usuario', 'Fulano');
-
-// Cria o mesmo cookie acima só que irá durar três dias
-setcookie('usuario', 'Fulano', (time() + (3 * 24 * 3600)));
-
-// Cria o novo cookie para durar duas horas
-setcookie('nome', 'Ciclano', (time() + (2 * 3600)));
-
-?>
-{% endhighlight %}
+<div data-gist-id="141be7b8c4c700174c9a" data-gist-show-loading="false"></div>
 
 Você pode reparar que, nos exemplos acima, que a função teve até três parâmetros: <strong>nome do cookie</strong> (1), <strong>valor do cookie</strong> (2) e <strong>duração do cookie</strong> (3). Existem ainda mais quatro parâmetros (pouco comuns) que você poderá usar ([veja mais aqui](http://us.php.net/setcookie)).
 
@@ -45,31 +32,14 @@ Se você não definir o tempo de vida (duração) de um cookie, ele irá durar o
 Se você quiser pegar o valor de um cookie depois, em outra página do seu site, é só usar esse exemplo:
 
 
-{% highlight php linenos %}
-<?php
-
-// Pega o valor do Cookie 'usuario' definido anteriormente:
-$valor = $_COOKIE['usuario']; // Fulano
-
-// Pega o valor do Cookie 'nome' definido anteriormente:
-$valor = $_COOKIE['nome']; // Ciclano
-
-?>
-{% endhighlight %}
+<div data-gist-id="fb9f568c2586c3bfd11e" data-gist-show-loading="false"></div>
 
 Vale lembrar que o cookie precisa existir para você pegar o seu valor... Se ele passou da validade (expirou) ele não existe mais, então é sempre bom fazer uma verificação com a função [isset()](http://br2.php.net/manual/pt_BR/function.isset.php) do PHP.
 
 Se por algum motivo você precisar deletar algum cookie é só não definir um valor para ele, fazendo dessa forma:
 
 
-{% highlight php linenos %}
-<?php
-
-// Deleta o cookie definido anteriormente
-setcookie('usuario');
-
-?>
-{% endhighlight %}
+<div data-gist-id="1be3a6e2cdba5e3f969d" data-gist-show-loading="false"></div>
 
 Outra forma de deletar um cookie é colocando o seu tempo de vida no passado.
 
@@ -78,11 +48,7 @@ Outra forma de deletar um cookie é colocando o seu tempo de vida no passado.
 Se você quiser saber todos os cookies que estão setados e acessíveis pelo seu site, é só usar a função<strong> print_r()</strong> dessa forma:
 
 
-{% highlight php linenos %}
-<?php
-print_r($_COOKIE);
-?>
-{% endhighlight %}
+<div data-gist-id="1b9bf5e5b1883b4372f7" data-gist-show-loading="false"></div>
 
 Ela irá mostrar todos os cookies e seus respectivos valores.
 

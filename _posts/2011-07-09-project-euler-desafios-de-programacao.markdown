@@ -61,33 +61,13 @@ Antes de qualquer coisa, eu não sou um bom matemático... Na maior parte do tem
 Primeiro vamos à minha solução em PHP:
 
 
-{% highlight php linenos %}
-function solucao() {
-  $soma = 0;
-
-  for ($i = 1; $i < 1000; $i++) {
-    if (!($i % 3) || !($i % 5))
-      $soma += $i;
-  }
-
-  echo $soma;
-}
-{% endhighlight %}
+<div data-gist-id="77292fd46d540f8373b2" data-gist-show-loading="false"></div>
 
 <h3>Solução em Python</h3>
 E agora, a mesma abordagem em Python:
 
 
-{% highlight python linenos %}
-def solucao():
-  soma = 0;
-
-  for i in range(1, 1000):
-    if not (i % 3) or not (i % 5):
-      soma += i
-
-  print soma
-{% endhighlight %}
+<div data-gist-id="ae48bb45dcc30b8b412c" data-gist-show-loading="false"></div>
 
 <h3>Conclusão</h3>
 Meu intuito aqui não é comparar as duas linguagens! Pra mim, ambas são excelentes.

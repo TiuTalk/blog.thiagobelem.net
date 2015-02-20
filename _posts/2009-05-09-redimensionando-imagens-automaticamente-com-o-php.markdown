@@ -20,61 +20,15 @@ Existe uma classe pronta de PHP que eu gosto muito, chama [WideImage](http://wid
 
 <h3>Redimensionando imagens</h3>
 
-{% highlight php linenos %}
-<?php
-
-// Chama o arquivo com a classe WideImage
-require('/caminho/WideImage.inc.php');
-
-// Carrega a imagem a ser manipulada
-$image = wiImage::load('/caminho/foto.jpg');
-
-// Redimensiona a imagem
-$image = $image->resize(400, 300);
-
-// Salva a imagem em um arquivo (novo ou não)
-$image->saveToFile('/caminho/nova_foto.jpg');
-
-?>
-{% endhighlight %}
+<div data-gist-id="44e2f248db7f908710f8" data-gist-show-loading="false"></div>
 
 <h3>Cortando imagens</h3>
 
-{% highlight php linenos %}
-<?php
-
-// Chama o arquivo com a classe WideImage
-require('/caminho/WideImage.inc.php');
-
-// Carrega a imagem a ser manipulada
-$image = wiImage::load('/caminho/foto.jpg');
-
-// Corta a imagem (Argumentos: X1, Y1, X2, Y2)
-$image = $image->crop(10, 20, 110, 120);
-// Faz um quadrado da posição [X1;Y1] até [X2;Y2]
-
-// Salva a imagem em um arquivo (novo ou não)
-$image->saveToFile('/caminho/nova_foto.jpg');
-
-?>
-{% endhighlight %}
+<div data-gist-id="800f466e2feef483026e" data-gist-show-loading="false"></div>
 
 <h3>Mudando a qualidade de imagens</h3>
 
-{% highlight php linenos %}
-<?php
-
-// Chama o arquivo com a classe WideImage
-require('/caminho/WideImage.inc.php');
-
-// Carrega a imagem a ser manipulada
-$image = wiImage::load('/caminho/foto.jpg');
-
-// Salva a imagem em um arquivo com 80% de qualidade
-$image->saveToFile('/caminho/nova_foto.jpg', null, 80);
-
-?>
-{% endhighlight %}
+<div data-gist-id="8d01f3114a31376fe29f" data-gist-show-loading="false"></div>
 
 Estes foram apenas alguns exemplos... A classe pode fazer muito mais: tons de cinza, marca d'agua, rotacionar, flip, espelho, filtros PNG e muito mais... Acesse o [site da classe](http://wideimage.sourceforge.net/) para ver outros exemplos e a documentação dos métodos dela.
 

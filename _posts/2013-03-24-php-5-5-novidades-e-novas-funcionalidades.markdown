@@ -31,16 +31,19 @@ Com generators você conseguiria fazer exatamente a mesma coisa, mas sem precisa
 Veja um exemplo disso funcionando:
 
 <div data-gist-id="5232890" data-gist-show-loading="false"></div>
+
 Pra cada iteração o número "da vez" será entregue pelo <strong>yeld</strong>... No exemplo acima o "generator" é a função criada com o nome de <strong>xrange</strong>.
 
 <h2>Foreach com suporte ao método list</h2>
 Agora a função [foreach](http://www.php.net/manual/en/control-structures.foreach.php) tem suporte à "desempacotamento" através da função list, veja um exemplo:
 
 <div data-gist-id="5232923" data-gist-show-loading="false"></div>
+
 <h2>Dereferencing de arrays e strings literais</h2>
 Agora é possível indexar arrays e strings literais, por exemplo:
 
 <div data-gist-id="5232943" data-gist-show-loading="false"></div>
+
 <h2>API oficial de senhas</h2>
 E por último mas não menos importante, a nova e inédia [um artigo](/php-5-5-api-de-senhas) só pra ela.
 

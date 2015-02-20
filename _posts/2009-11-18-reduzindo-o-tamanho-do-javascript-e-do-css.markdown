@@ -36,41 +36,12 @@ Com ele você faz o Upload dos seus JS ou CSS e ele junta todos os arquivos em u
 Veja um exemplo da compressão que ele faz em um CSS:
 
 Antes:
-{% highlight css linenos %}
-html {
-  background-color: #f7f6f1;
-}
 
-* html input,
-* html .widget {
-    border-color: #8cbdd5;
-}
-
-textarea,
-input,
-select {
-  border-color: #dfdfdf;
-}
-
-kbd,
-code {
-  background: #eaeaea;
-}
-
-input[readonly] {
-  background-color: #eee;
-}
-
-.find-box-search {
-  border-color: #dfdfdf;
-  background-color: #f1f1f1;
-}
-{% endhighlight %}
+<div data-gist-id="dbdb57fea5e3ba7c4fc4" data-gist-show-loading="false"></div>
 
 Depois:
-{% highlight css linenos %}
-html{background-color:#f7f6f1;}* html input,* html .widget{border-color:#8cbdd5;}textarea,input,select{border-color:#dfdfdf;}kbd,code{background:#eaeaea;}input[readonly]{background-color:#eee;}.find-box-search{border-color:#dfdfdf;background-color:#f1f1f1;}
-{% endhighlight %}
+
+<div data-gist-id="b854993480d609eee140" data-gist-show-loading="false"></div>
 
 Espero que tenham gostado! :)
 

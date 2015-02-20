@@ -14,14 +14,7 @@ Hoje vou falar sobre algumas funções muito utilizadas no PHP: repetições e l
 Com o for você pode, por exemplo, repetir um ou mais comandos durante X vezes.. Por exemplo:
 
 
-{% highlight php linenos %}
-<?php
-$limite = 10;
-for ($n = 1; $n <= $limite; $n++) {
-echo $n . "";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="dc3eec2720068d236fcf" data-gist-show-loading="false"></div>
 
 Com isso eu irei enumerar todos os números de <strong>1</strong> ($n) até <strong>10</strong> ($limite).
 
@@ -39,31 +32,14 @@ Veja mais: [Documentação do for()](http://br2.php.net/manual/pt_BR/control-str
 O <strong>foreach()</strong> é extremamente útil, pois com ele você executa um grupo de comandos para cada elemento de um array:
 
 
-{% highlight php linenos %}
-<?php
-$nomes = array('Thiago', 'João', 'Ricardo', 'Paula');
-foreach ($nomes as $indice => $valor) {
-echo $indice . " - ";
-echo $valor . "";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="4f9b2767e99a6c930d6e" data-gist-show-loading="false"></div>
 
 Uma tradução simples para o foreach() é "<em>para cada elemento do array X execute...</em>".
 
 No começo de cada execução do loop duas variáveis serão definidas: $indice que conterá o índice/chave do elemento (0, 1, 2 e etc.) e $valor que conterá o valor do elemento (Thiago, João, Ricardo e etc.).
 
 
-{% highlight php linenos %}
-<?php
-$nomes = array('Thiago', 'João', 'Ricardo', 'Paula');
-foreach ($nomes as $indice => $valor) {
-if ($valor == 'João') continue;
-echo $indice . " - ";
-echo $valor . "";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="6b7cb1658cf33078f745" data-gist-show-loading="false"></div>
 
 O exemplo acima irá "pular" o elemento que tiver o valor igual a "João", exibindo apenas Thiago, Ricardo e Paula.
 
@@ -73,16 +49,7 @@ Veja mais: [Documentação do foreach()](http://br2.php.net/manual/pt_BR/control
 O while() pode ser usado (ou não) da mesma forma que o for()... A diferença é que nele só é especificado a condição, veja um exemplo:
 
 
-{% highlight php linenos %}
-<?php
-$n = 1;
-$limite = 10;
-while ($n <= $limite) {
-echo $n . "";
-$n++;
-}
-?>
-{% endhighlight %}
+<div data-gist-id="11dfd420600e8ec3a30c" data-gist-show-loading="false"></div>
 
 Esse exemplo de <strong>while()</strong> resulta na mesma exibição do exemplo usado no <strong>for()</strong>.
 
@@ -92,18 +59,7 @@ O comando <em>while </em>pede que o PHP execute os comandos aninhados repetidame
 O while também é amplamente usado quando estamos retornando uma busca (SELECT) no MySQL:
 
 
-{% highlight php linenos %}
-<?php
-// Define a consulta MySQL
-$busca = "SELECT `nome`, `preco` FROM `produtos` LIMIT 10";
-// Executa a consulta (query)
-$query = mysql_query($busca);
-// Inicia um loop para cada resultado encontrado
-while ($dados = mysql_fetch_assoc($query)) {
-echo $dados['nome'].""; // Exibe o valor da coluna `nome`
-}
-?>
-{% endhighlight %}
+<div data-gist-id="8363c713e5b3e9a50bc8" data-gist-show-loading="false"></div>
 
 Veja mais: [Documentação do while()](http://br2.php.net/manual/pt_BR/control-structures.while.php)
 

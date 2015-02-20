@@ -90,6 +90,7 @@ Uma das maiores características do desenvolvimento orientado à testes é que v
 No TDD você SEMPRE começa pelo teste, então vamos começar criando nosso arquivo de testes:
 
 <div data-gist-id="2877310" data-gist-show-loading="false"></div>
+
 Fizemos três coisas no nosso arquivo <strong>fizzbuzz_test.py</strong>:
 
 <ol>
@@ -100,6 +101,7 @@ Fizemos três coisas no nosso arquivo <strong>fizzbuzz_test.py</strong>:
 Quando a gente rodar esse arquivo com o comando <strong>./fizzbuzz_test.py</strong> ou o comando <strong>python fizzbuzz_test.py </strong>vamos ter o seguinte output:
 
 <div data-gist-id="2877331" data-gist-show-loading="false"></div>
+
 Então sabemos que tudo está funcionando... prontos para o primeiro teste?
 
 <ul>
@@ -113,6 +115,7 @@ Então sabemos que tudo está funcionando... prontos para o primeiro teste?
 Nosso primeiro teste, da forma mais simples e reduzida possível, ficaria assim:
 
 <div data-gist-id="2877410" data-gist-show-loading="false"></div>
+
 Criamos uma classe <strong>TestFizzBuzz</strong>, que é um <strong>caso de teste</strong> (contém vários testes) para testar a classe/funcionalidade FizzBuzz.
 
 Definimos nosso primeiro teste (test_FizzBuzz), onde fizemos uma asserção (verificação):
@@ -124,6 +127,7 @@ A asserção de igualdade é justamente o método <strong>assertEqual</strong>.
 Prontos pra rodar o teste? Vamos ver o que acontece...
 
 <div data-gist-id="2877449" data-gist-show-loading="false"></div>
+
 UHU! Nosso primeiro erro! (sim, no TDD os testes não passando significam progresso).. mas não é o erro que eu estava esperando! :(
 
 O problema é que nós ainda não definimos FizzBuzz, por isso o Python xiou dizendo "<strong>global name 'FizzBuzz' is not defined</strong>".
@@ -131,6 +135,7 @@ O problema é que nós ainda não definimos FizzBuzz, por isso o Python xiou diz
 Vamos criar nosso arquivo fizzbuzz.py com o seguinte conteúdo:
 
 <div data-gist-id="2877466" data-gist-show-loading="false"></div>
+
 Criamos a estrutura da nossa função FizzBuzz que ainda não faz nada.
 
 O "pass" no Python é usado quando uma função/método ainda não tem conteúdo.. e como não temos chaves pra dizer onde ela começa e termina, precisamos de uma instrução que faça exatamente nada.
@@ -138,19 +143,23 @@ O "pass" no Python é usado quando uma função/método ainda não tem conteúdo
 Vamos voltar ao nosso teste e importar essa função para que ela possa ser usada nos nossos testes, depois vamos rodar os testes novamente e ver se aquela mensagem de erro mudou.
 
 <div data-gist-id="2877480" data-gist-show-loading="false"></div>
+
 A linha "from<strong> fizzbuzz </strong>import<strong> FizzBuzz</strong>" significa "Importe a classe/função <strong>FizzBuzz</strong> do arquivo ou módulo chamado <strong>fizzbuzz</strong>"... isso mesmo, no Python podemos importar apenas parte de um arquivo! :)
 
 E o resultado da execução dos testes é...
 
 <div data-gist-id="2877492" data-gist-show-loading="false"></div>
+
 E estamos chegando lá... agora o Python reclamou que - segundo sua definição - a função FizzBuzz não recebe parâmetros.. que é justamente o primeiro item da nossa lista, então vamos fazer isso acontecer.
 
 <div data-gist-id="2877509" data-gist-show-loading="false"></div>
+
 Isso.. tudo beeeeem de vagar, lembre-se dos passos de bebê!
 
 Agora rodamos os testes novamente e...
 
 <div data-gist-id="2877511" data-gist-show-loading="false"></div>
+
 Conseguimos! O primeiro item da lista foi resolvido! :D
 
 <ul>
@@ -171,11 +180,13 @@ Sempre que você escrever um teste e ele quebrar, pergunte-se: "<span style="col
 A menor mudança que a gente pode fazer pra esse código funcionar, sem pensar nos outros casos de FizzBuzz(n) que ainda não estão testados é:
 
 <div data-gist-id="2877529" data-gist-show-loading="false"></div>
+
 Você pode querer me matar depois dessa, mas não estou brincando.. isso é sério, é assim que a coisa funciona! :)
 
 E os testes?
 
 <div data-gist-id="2877535" data-gist-show-loading="false"></div>
+
 Satisfação! Finalmente, nosso primeiro teste passou!!!
 
 <ul>
@@ -199,17 +210,21 @@ Quando você estiver decidindo o próximo teste, tente seguir as seguintes dicas
 Então vamos seguir a lista e testar <strong>FizzBuzz(2)</strong> que deveria retornar <strong>2</strong>, e provavelmente não vai passar por causa do nosso roubo (return 1).
 
 <div data-gist-id="2877559" data-gist-show-loading="false"></div>
+
 Eu poderia fazer a nova asserção dentro do mesmo teste, mas preferi trocar o nome dele e criar um segundo teste, assim as coisas ficam mais claras e você pode ver cada teste falhando separadamente.
 
 <div data-gist-id="2877569" data-gist-show-loading="false"></div>
+
 E com esse teste, concluímos que ao roubar (mesmo valendo pra quele momento) acabamos cuspindo pra cima, e agora o cuspe caiu na nossa cabeça... 2 (esperado) é diferente de 1 (resultado).
 
 Mais uma vez, hora de se perguntar: "<strong>Qual o menor passo, a menor mudança no código, que eu posso fazer pra esse teste passar?</strong>".. e se a função retornar o número que recebeu?
 
 <div data-gist-id="2877593" data-gist-show-loading="false"></div>
+
 Feita a mudança, rodamos os testes e...
 
 <div data-gist-id="2877596" data-gist-show-loading="false"></div>
+
 Excelente! Nosso segundo teste está passando e, quase sem perceber, refatoramos o código para algo realmente dentro das regras do problema :)
 
 <ul>
@@ -230,14 +245,17 @@ Como voltamos na especificação do problema, vamos adicionar mais um item à no
 Agora vamos ao teste do <strong>FizzBuzz(3) retorna "fizz"</strong>:
 
 <div data-gist-id="2877656" data-gist-show-loading="false"></div>
+
 E o resultado dos testes, como esperado, falhou:
 
 <div data-gist-id="2877660" data-gist-show-loading="false"></div>
+
 Minha função FizzBuzz ainda não está preparada para retornar fizz, o teste quebrou e nós progredimos em direção a solução de mais um problema... viu como é legal?
 
 Eu sei que você está querendo começar a correr e verificar se <strong>numero</strong> é múltiplo de três, mas não temos testes pra isso ainda.. temos apenas um teste onde FizzBuzz(3) deveria retornar "fizz"... é esse pequeno passo que vamos dar. TDD também tem a ver com <strong>ansiedade</strong>, e você precisa aprender a controlar a sua.
 
 <div data-gist-id="2877675" data-gist-show-loading="false"></div>
+
 E os testes passaram! :D
 
 <ul>
@@ -252,9 +270,11 @@ E os testes passaram! :D
 Eu poderia seguir a lista e partir para o <strong>FizzBuzz(4)</strong> mas ele provavelmente vai passar, mas ao mesmo tempo, entre a dúvida e o teste, fique com o teste:
 
 <div data-gist-id="2877696" data-gist-show-loading="false"></div>
+
 Ok.. os testes continuam passando, então esse teste não colaborou em nada para o problema.. Vamos dar um pulo e testar nosso caso mais recente:
 
 <div data-gist-id="2877701" data-gist-show-loading="false"></div>
+
 <ul>
 <li><del>FizzBuzz recebe um número</del></li>
 <li><del>FizzBuzz(1) retorna 1</del></li>
@@ -269,6 +289,7 @@ Ok.. os testes quebraram.. mas como vamos resolver o problema?
 Sabemos que nosso código ainda tem um "roubo", podemos fazer outro roubo ou partir para uma refatoração que resolva o FizzBuzz(3) e FizzBuzz(9), como o problema é ridiculamente simples e esse artigo está ficando longo demais, vamos pra segunda opção:
 
 <div data-gist-id="2877719" data-gist-show-loading="false"></div>
+
 E os testes passaram! :)
 
 Vejam que foi uma refatoração bem simples, ao invés de verificar se o número é igual a três, eu verifiquei se não sobrou resto da sua divisão por três, ou seja: se ele é múltiplo de três.
@@ -276,6 +297,7 @@ Vejam que foi uma refatoração bem simples, ao invés de verificar se o número
 Uma coisa que está me incomodando um pouco são todos os nomes testes, acho que podemos refatorar o teste a grupar casos semelhantes:
 
 <div data-gist-id="2877751" data-gist-show-loading="false"></div>
+
 Agora sim! Bem melhor, e continuamos testando a mesma coisa... só que com menos testes e mais asserções por teste.
 
 Nossa lista está quase acabando...
@@ -302,19 +324,23 @@ Claro que eu já sei como o problema funciona, mas podemos levantar esses exempl
 Então vamos partir pro primeiro item da lista: FizzBuzz(5) retorna "buzz"
 
 <div data-gist-id="2877779" data-gist-show-loading="false"></div>
+
 Os testes voltam a quebrar, apenas o último teste falhou pois <strong>5 != "buzz"</strong>.
 
 Como ainda não explicitamos a regra do "multiplo de 5" através de testes, o correto aqui é fazer com que apenas essse teste passe (e não testes futuros):
 
 <div data-gist-id="2877802" data-gist-show-loading="false"></div>
+
 E todos os testes passaram! :D
 
 Agora vamos colocar mais um múltiplo de cinco, como por exemplo FizzBuzz(10) e o teste vai quebrar:
 
 <div data-gist-id="2877812" data-gist-show-loading="false"></div>
+
 Vamos então parar de roubar e fazer o que fizemos com com os múltiplos de três:
 
 <div data-gist-id="2877816" data-gist-show-loading="false"></div>
+
 E todos os três testes (com as 7 asserções) passaram novamente.
 
 <ul>
@@ -328,14 +354,17 @@ Agora vamos atacar a última parte do problema, <strong>múltiplos de três e de
 Nada de escrever código, primeiro o teste:
 
 <div data-gist-id="2877837" data-gist-show-loading="false"></div>
+
 (Aproveitei também pra mudar o nome dos testes)
 
 Vejam vocês... o teste falhou.. mas diferente do que vimos até agora, não temos "<strong>15 != fizzbuzz</strong>" mas sim "<strong>fizz != fizzbuzz</strong>" pois <strong>15</strong> é multiplo de <strong>3</strong>, correto?
 
 <div data-gist-id="2877850" data-gist-show-loading="false"></div>
+
 Primeiro roubamos (o que o Kent Beck chama de "implementação óbvia"):
 
 <div data-gist-id="2877862" data-gist-show-loading="false"></div>
+
 E todos os testes voltam a passar... Agora adicionamos mais um teste da nossa lista:
 
 <ul>
@@ -347,9 +376,11 @@ E todos os testes voltam a passar... Agora adicionamos mais um teste da nossa li
 E fazemos uma implementação <strong>simples</strong>, que resolva o problema:
 
 <div data-gist-id="2877873" data-gist-show-loading="false"></div>
+
 Agora, que todos os testes estão passando e o problema está resolvido, podemos refatorar nossa função pra algo mais elegante:
 
 <div data-gist-id="2877917" data-gist-show-loading="false"></div>
+
 Não que essa solução seja a mais elegante e mais eficiente em Python, mas acredito que ela deixe a lógica mais clara.
 
 Enfim... TDD é isso!

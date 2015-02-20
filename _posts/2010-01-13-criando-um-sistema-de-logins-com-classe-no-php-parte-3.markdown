@@ -21,37 +21,12 @@ Já passamos vitoriosos pela [Parte 2](/criando-um-sistema-de-logins-com-classe-
 Vamos começar fazendo uma correção  que o <em>Leo Baiano</em> sugeriu no método <strong>validaUsuario()</strong> criado na <strong>Parte 1</strong>... A mudança vai acontecer entre a linha 87 e a linha 96:
 
 
-{% highlight php linenos %}
-    // Procura por usuários com o mesmo usuário e senha
-    $sql = "SELECT COUNT(*)
-        FROM `{$this->bancoDeDados}`.`{$this->tabelaUsuarios}`
-        WHERE
-          `{$this->campos['usuario']}` = '{$usuario}'
-          AND
-          `{$this->campos['senha']}` = '{$senha}'";
-    $query = mysql_query($sql);
-    if ($query) {
-      $total = mysql_result($query, 0);
-{% endhighlight %}
+<div data-gist-id="d841ebcac8cbc91d8981" data-gist-show-loading="false"></div>
 
 Mudaremos a consulta e outras três linhas depois:
 
 
-{% highlight php linenos %}
-    // Procura por usuários com o mesmo usuário e senha
-    $sql = "SELECT COUNT(*) AS total
-        FROM `{$this->bancoDeDados}`.`{$this->tabelaUsuarios}`
-        WHERE
-          `{$this->campos['usuario']}` = '{$usuario}'
-          AND
-          `{$this->campos['senha']}` = '{$senha}'";
-    $query = mysql_query($sql);
-    if ($query) {
-      $total = mysql_result($query, 0, 'total');
-
-      // Limpa a consulta da memória
-      mysql_free_result($query);
-{% endhighlight %}
+<div data-gist-id="35e7bc32f2d7dda2ccfb" data-gist-show-loading="false"></div>
 
 Essa mudança foi necessária por causa de um probleminha com a função mysql_result() que tem dificuldades de identificar qual resultado nós queremos... Com esse ajuste tudo irá funcionar perfeitamente.
 
@@ -60,107 +35,39 @@ Essa mudança foi necessária por causa de um probleminha com a função mysql_r
 Agora nós iremos começar a criar o método que verifica se há um usuário logado... Ele irá retornar TRUE quando um usuário estiver logado e retornará FALSE em qualquer situação que indique que não há um usuário logado, por isso precisamos verificar todas as possibilidades:
 
 
-{% highlight php linenos %}
-  /**
-   * Verifica se há um usuário logado no sistema
-   *
-   * @return boolean - Se há um usuário logado ou não
-   */
-  function usuarioLogado() {
-    // Continuaremos aqui...
-  }
-{% endhighlight %}
+<div data-gist-id="558ea2ca5713faef9349" data-gist-show-loading="false"></div>
 
 Primeiro nós verificamos a necessidade de iniciar a sessão e lógo após isso iremos verificar se existe o valor "logado" na sessão:
 
 
-{% highlight php linenos %}
-    // Inicia a sessão?
-    if ($this->iniciaSessao AND !isset($_SESSION)) {
-      session_start();
-    }
-
-    // Verifica se não existe o valor na sessão
-    if (!isset($_SESSION[$this->prefixoChaves . 'logado']) OR !$_SESSION[$this->prefixoChaves . 'logado']) {
-      return false;
-    }
-{% endhighlight %}
+<div data-gist-id="27a9f75dbc5f17bc55e4" data-gist-show-loading="false"></div>
 
 Pra quem não lembra, esse valor <strong>$this->prefixoChaves . 'logado'</strong> foi criado pelo método <strong>logaUsuario()</strong>.
 
 Agora nós precisamos verificar (caso seja necessário) o cookie que contém as informações (usuário, IP e navegador) do usuário para ver se elas batem com o que está armazenado no cookie:
 
 
-{% highlight php linenos %}
-    // Faz a verificação do cookie?
-    if ($this->cookie) {
-      // Verifica se o cookie não existe
-      if (!isset($_COOKIE[$this->prefixoChaves . 'token'])) {
-        return false;
-      } else {
-        // Continuaremos aqui...
-      }
-    }
-{% endhighlight %}
+<div data-gist-id="f2b6948b6e066a4591ac" data-gist-show-loading="false"></div>
 
 Caso haja o cookie, precisamos criar novamente uma string encriptada contendo as informações do usuário para checar com o valor salvo no cookie:
 
 
-{% highlight php linenos %}
-        // Monta o valor do cookie
-        $valor = join('#', array($_SESSION[$this->prefixoChaves . 'usuario'], $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT']));
-
-        // Encripta o valor do cookie
-        $valor = sha1($valor);
-
-        // Verifica o valor do cookie
-        if ($_COOKIE[$this->prefixoChaves . 'token'] !== $valor) {
-          return false;
-        }
-{% endhighlight %}
+<div data-gist-id="8b8e9e30fe3a11d03ca5" data-gist-show-loading="false"></div>
 
 Feita a verificação do cookie sabemos que, depois disso tudo, o usuário está logado e podemos retornar true e fechar o método..
 
 
-{% highlight php linenos %}
-    // A sessão e o cookie foram verificados, há um usuário logado
-    return true;
-{% endhighlight %}
+<div data-gist-id="6e1008bcf3189d3ad5c2" data-gist-show-loading="false"></div>
 
 Terminamos o método que informa se há um usuário logado, agora vamos começar o método que fará o logout do usuário:
 
 
-{% highlight php linenos %}
-  /**
-   * Faz logout do usuário logado
-   *
-   * @return boolean
-   */
-  function logout() {
-    // Continuaremos aqui...
-  }
-{% endhighlight %}
+<div data-gist-id="23fca7b9387c1c1c59b6" data-gist-show-loading="false"></div>
 
 O primeiro passo do logout é iniciar a sessão e remover todos os valores da sessão...
 
 
-{% highlight php linenos %}
-    // Inicia a sessão?
-    if ($this->iniciaSessao AND !isset($_SESSION)) {
-      session_start();
-    }
-
-    // Tamanho do prefixo
-    $tamanho = strlen($this->prefixoChaves);
-
-    // Destroi todos os valores da sessão relativos ao sistema de login
-    foreach ($_SESSION AS $chave=>$valor) {
-      // Remove apenas valores cujas chaves comecem com o prefixo correto
-      if (substr($chave, 0, $tamanho) == $this->prefixoChaves) {
-        unset($_SESSION[$chave]);
-      }
-    }
-{% endhighlight %}
+<div data-gist-id="d2cdd45f9f2a29cc9d55" data-gist-show-loading="false"></div>
 
 Repare que entre a linha 236 e 242 fizemos uma coisa interessante: removemos da sessão apenas os valores que pertencerem ao nosso sistema de login... Muita gente usa um simples <strong>session_destroy()</strong> para acabar com a sessão, mas se o seu site salvar valores na sessão não podemos simplesmente apagá-los, concorda? :)
 
@@ -169,37 +76,17 @@ Repare que entre a linha 236 e 242 fizemos uma coisa interessante: removemos da 
 Por isso nós fazemos uma verificação a mais, que checa se ainda existem valores na sessão e [caso não exista nada] usamos o <strong>session_destroy()</strong> e depois removemos o cookie que identifica qual sessão é de qual visitante:
 
 
-{% highlight php linenos %}
-    // Destrói asessão se ela estiver vazia
-    if (count($_SESSION) == 0) {
-      session_destroy();
-
-      // Remove o cookie da sessão se ele existir
-      if (isset($_COOKIE['PHPSESSID'])) {
-        setcookie('PHPSESSID', false, (time() - 3600));
-        unset($_COOKIE['PHPSESSID']);
-      }
-    }
-{% endhighlight %}
+<div data-gist-id="8c1ae9effddbe4cb1214" data-gist-show-loading="false"></div>
 
 Agora o último passo do logout é remover o cookie que armazena as informações do visitante:
 
 
-{% highlight php linenos %}
-    // Remove o cookie com as informações do visitante
-    if ($this->cookie AND isset($_COOKIE[$this->prefixoChaves . 'token'])) {
-      setcookie($this->prefixoChaves . 'token', false, (time() - 3600), '/');
-      unset($_COOKIE[$this->prefixoChaves . 'token']);
-    }
-{% endhighlight %}
+<div data-gist-id="9f153852b0c859de4f49" data-gist-show-loading="false"></div>
 
 Terminando o método poremos retornar o valor booleano (true ou false) que informa se o usuário foi deslogado com sucesso... Existe forma melhor de fazer isso do que verificando se não há um usuário logado?
 
 
-{% highlight php linenos %}
-    // Retorna SE não há um usuário logado
-    return !$this->usuarioLogado();
-{% endhighlight %}
+<div data-gist-id="da085f3e2ee63cdf98f8" data-gist-show-loading="false"></div>
 
 E a nossa classe de controle e gerencia de usuários logados está completa! :D
 

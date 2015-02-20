@@ -27,22 +27,12 @@ Segundo o próprio site:
 </blockquote>
 <h3>Como assim? O que ele faz?</h3>
 Com o Zen-Coding você digita isso no seu editor:
-{% highlight html linenos %}
-div#page>div.logo+ul#navigation>li*5>a
-{% endhighlight %}
+
+<div data-gist-id="ff48f8afb8ddfceaf703" data-gist-show-loading="false"></div>
+
 ... aperta uma combinação de teclas, normalmente CTRL+E, e isso é <strong>automaticamente</strong> transformado em:
-{% highlight html linenos %}
-<div id="page">
-  <div class="logo"></div>
-  <ul id="navigation">
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-  </ul>
-</div>
-{% endhighlight %}
+
+<div data-gist-id="03466b842855240f7539" data-gist-show-loading="false"></div>
 
 <h3>Editores com suporte ao Zen-Coding</h3>
 Você pode baixar o plugin do Zen-Coding no [site oficial](http://code.google.com/p/zen-coding/) para os seguintes editores:
@@ -55,40 +45,16 @@ Nem todos são plugins oficiais, mas a maioria sim. :)
 Vejam um exemplo que criei para vocês...
 
 Você pode expandir a seguinte linha:
-{% highlight html linenos %}
-html>(head>title+meta[name="description" content]+meta[name="keywords" content])+(body>(header+(#body>#content+aside#sidebar))+footer)
-{% endhighlight %}
+
+<div data-gist-id="1e068868ae1132432045" data-gist-show-loading="false"></div>
+
 Em um template de site completo:
-{% highlight html linenos %}
-<html>
-  <head>
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-  </head>
-  <body>
-    <header></header>
-    <div id="body">
-      <div id="content"></div>
-      <aside id="sidebar"></aside>
-    </div>
-    <footer></footer>
-  </body>
-</html>
-{% endhighlight %}
+
+<div data-gist-id="422c1e071443976833c9" data-gist-show-loading="false"></div>
 
 Esse é um bom exemplo do que ele é capaz de fazer... Mas não é um uso comum dele... A idéia é você fazer HTML muito rápido, por exemplo quando você digita <code>#menu>ul>li*5>a</code> e "expande", você ganha tempo por não ter que escrever (e organizar/identar), isso tudo:
-{% highlight html linenos %}
-<div id="menu">
-  <ul>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-  </ul>
-</div>
-{% endhighlight %}
+
+<div data-gist-id="011dc5b5ff7222980970" data-gist-show-loading="false"></div>
 
 <hr />
 Espero que vocês tenham gostado dessa ferramenta! Ela não é novidade, mas sei que nem todo mundo conhece. ;)

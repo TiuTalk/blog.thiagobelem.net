@@ -19,34 +19,12 @@ Classes são como funções, só que com variáveis e funções próprias.. Gera
 Primeiro, definimos a classe com nome <strong>MeuSQL</strong>:
 
 
-{% highlight php linenos %}
-<?php
-
-class MeuSQL {
-
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="a7922443db53f6751259" data-gist-show-loading="false"></div>
 
 Agora vamos definir algumas variáveis com valores padrões:
 
 
-{% highlight php linenos %}
-<?php
-
-class MeuSQL {
-  // Propriedades padrões
-  var $servidor = '127.0.0.1';
-  var $usuario = 'root';
-  var $senha = '';
-  var $banco = 'meusite';
-  var $conexao = null;
-
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="79a8a113edfbaa2c81c9" data-gist-show-loading="false"></div>
 
 Na verdade, devemos chamar estas variáveis como "<strong>propriedades</strong>" (nome que se dá para as variáveis da classe). Toda propriedade de classe, para manter a compatibilidade com o PHP 4, precisa ter a palavra "<strong>var</strong>" antes.
 
@@ -55,29 +33,7 @@ Vale lembrar que, fora da classe, essas propriedades não vão existir.. Nem ap�
 Agora vamos definir o primeiro método. "<strong>Método</strong>" é nome que se dá para uma função dentro de uma classe.
 
 
-{% highlight php linenos %}
-<?php
-
-class MeuSQL {
-  // Propriedades padrões
-  var $servidor = '127.0.0.1'; // Endereço
-  var $usuario = 'root'; // Usuário
-  var $senha = ''; // Senha
-  var $banco = 'meusite'; // Banco de dados
-  // Outras variáveis para uso interno:
-  var $conexao = null;
-  var $query = null;
-
-  function conecta() {
-    $this->conexao = mysql_connect($this->servidor, $this->usuario, $this->senha);
-    $status = mysql_select_db($this->banco, $this->conexao);
-    return $status;
-  }
-
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="5d770bfd33c73089533a" data-gist-show-loading="false"></div>
 
 Criamos um método que fará a conexão com o MySQL... Quem já estudou um pouco sobre MySQL sabe que a função <strong>mysql_connect()</strong> precisa de três parâmetros, nessa ordem: o servidor (endereço), o usuário e a senha... Repare que usamos <strong><span style="color: #3366ff;">$this->servidor</span></strong> e não <span style="color: #3366ff;"><strong>$servidor</strong></span>, vou explicar por que:
 
@@ -88,132 +44,19 @@ Quando queremos pegar o valor de uma propriedade de uma classe, fazemos referên
 Agora vamos definir mais três métodos para as outras funções básicas do MySQL:
 
 
-{% highlight php linenos %}
-<?php
-
-class MeuSQL {
-  // Propriedades padrões
-  var $servidor = '127.0.0.1'; // Endereço
-  var $usuario = 'root'; // Usuário
-  var $senha = ''; // Senha
-  var $banco = 'meusite'; // Banco de dados
-  // Outras variáveis para uso interno:
-  var $conexao = null;
-  var $query = null;
-
-  function conecta() {
-    $this->conexao = mysql_connect($this->servidor, $this->usuario, $this->senha);
-    $status = mysql_select_db($this->banco, $this->conexao);
-    return $status;
-  }
-
-  function consulta($query) {
-    $this->query = mysql_query($query);
-    return $this->query;
-  }
-
-  function resultado() {
-    return mysql_fetch_assoc($this->query);
-  }
-
-  function registros() {
-    return mysql_num_rows($this->query);
-  }
-
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="32b5e6f5e58b8649dd34" data-gist-show-loading="false"></div>
 
 Podemos dizer que a nossa classe está pronta... Salve este arquivo como <span style="color: #ff6600;"><strong>MeuSQL.php</strong></span>. Agora vamos ver um exemplo de uso e depois, comentá-la toda:
 
 
-{% highlight php linenos %}
-<?php
-// Inclui o arquivo com a classe
-include("MeuSQL.php");
-
-// Instancia/chama a classe MeuMySQL
-$sql = new MeuSQL();
-
-// Conecta-se ao banco de dados usando os valores padrões
-$sql->conecta();
-
-// Define e executa uma query SQL
-$busca = "SELECT * FROM `noticias` WHERE `id` > 0 LIMIT 10";
-$sql->consulta($busca);
-
-// Descobe e exibe o total de registros encontrados
-$total = $sql->registros();
-echo "Total de registros: " . $total;
-echo "<hr />";
-
-// Exibe dados de cada registro
-while ($dados = $sql->resultado()) {
-  // Aqui o array $dados terá o valor de cada coluna do registro
-  echo "- Titulo da notícia: " . $dados['titulo'];
-  echo "";
-}
-?>
-{% endhighlight %}
+<div data-gist-id="e42da432ea87ad4fc7af" data-gist-show-loading="false"></div>
 
 Viu como as classes podem simplificar tudo na sua vida?
 
 Agora, por fim, fiz alguns ajustes e comentei cada método da classe para ficar mais fácil de entender:
 
 
-{% highlight php linenos %}
-<?php
-
-/**
-* MeuSQL
-* Classe personalizada de uso do MySQL
-*/
-class MeuSQL {
-  // Propriedades padrões
-  var $servidor = '127.0.0.1'; // Endereço
-  var $usuario = 'root'; // Usuário
-  var $senha = ''; // Senha
-  var $banco = 'meusite'; // Banco de dados
-  // Outras variáveis para uso interno
-  var $conexao = null;
-  var $query = null;
-
-  /**
-  * Função para fazer a conexão com o MySQL
-  */
-  function conecta() {
-    $this->conexao = mysql_connect($this->servidor, $this->usuario, $this->senha);
-    $status = mysql_select_db($this->banco, $this->conexao);
-    return $status;
-  }
-
-  /**
-  * Função para fazer uma consulta no MySQL
-  */
-  function consulta($query) {
-    $this->query = mysql_query($query);
-    return $this->query;
-  }
-
-  /**
-  * Função para retornar cada resultado da consulta
-  */
-  function resultado() {
-    return mysql_fetch_assoc($this->query);
-  }
-
-  /**
-  * Função que retorna o total de resultados encontrados
-  */
-  function registros() {
-    return mysql_num_rows($this->query);
-  }
-
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="ce4a5e6d1ef28b1417d2" data-gist-show-loading="false"></div>
 
 Se quiser, pode fazer o [download](/arquivos/2009/05/classe-meusql.txt) do arquivo com a classe e o exemplo de uso.
 

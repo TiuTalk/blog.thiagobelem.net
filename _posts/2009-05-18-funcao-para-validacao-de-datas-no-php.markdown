@@ -20,57 +20,7 @@ A lógica é bem simples: uma data pode vir em vários formatos: AAAA-MM-DD, DD/
 A função poderia ser assim:
 
 
-{% highlight php linenos %}
-<?php
-/**
-* Validate a date
-*
-* @param    string    $data
-* @param    string    formato
-* @return    bool
-*/
-function validaData($data, $formato = 'DD/MM/AAAA') {
-switch($formato) {
-case 'DD-MM-AAAA':
-case 'DD/MM/AAAA':
-list($d, $m, $a) = preg_split('/[-./ ]/', $data);
-break;
-
-case 'AAAA/MM/DD':
-case 'AAAA-MM-DD':
-list($a, $m, $d) = preg_split('/[-./ ]/', $data);
-break;
-
-case 'AAAA/DD/MM':
-case 'AAAA-DD-MM':
-list($a, $d, $m) = preg_split('/[-./ ]/', $data);
-break;
-
-case 'MM-DD-AAAA':
-case 'MM/DD/AAAA':
-list($m, $d, $a) = preg_split('/[-./ ]/', $data);
-break;
-
-case 'AAAAMMDD':
-$a = substr($data, 0, 4);
-$m = substr($data, 4, 2);
-$d = substr($data, 6, 2);
-break;
-
-case 'AAAADDMM':
-$a = substr($data, 0, 4);
-$d = substr($data, 4, 2);
-$m = substr($data, 6, 2);
-break;
-
-default:
-throw new Exception( "Formato de data inválido");
-break;
-}
-return checkdate($m, $d, $a);
-}
-?>
-{% endhighlight %}
+<div data-gist-id="0effe55821e82eb0f745" data-gist-show-loading="false"></div>
 
 Tá... mas o que essa função realmente faz?
 
@@ -83,34 +33,7 @@ Em cada case nós temos uma forma de "quebrar" a data e pegar cada uma das suas 
 Por fim, a função retorna verdadeiro (true) ou falso (false)... Então podemos usá-la da seguinte maneira:
 
 
-{% highlight php linenos %}
-<?php
-if (validaData('12/04/2009', 'DD/MM/AAAA')) {
-echo "Data valida!";
-} else {
-echo "Data invalida!";
-}
-// Data valida
-
-echo "";
-
-if (validaData('20090412', 'AAAAMMDD')) {
-echo "Data valida!";
-} else {
-echo "Data invalida!";
-}
-// Data valida
-
-echo "";
-
-if (validaData('04/12/2009', 'AAAA-MM-DD')) {
-echo "Data valida!";
-} else {
-echo "Data invalida!";
-}
-// Data invalida
-?>
-{% endhighlight %}
+<div data-gist-id="825881bbfe8482c5f289" data-gist-show-loading="false"></div>
 
 Ahh.. essa função também te ajuda a validar datas vindas do MySQL (no formato AAAA-MM-DD).
 

@@ -26,14 +26,7 @@ Aproveitei o ritmo e resolvi ensinar à vocês como fazer isso... Já falei ante
 Edite (ou crie) o arquivo <strong>.htaccess</strong> na raíz do seu servidor e coloque o seguinte código:
 
 
-{% highlight sh linenos %}
-# Bloqueia uma lista de IPs
-order allow, deny
-deny from 210.140.98.160
-deny from 69.197.132.70
-deny from 74.14.13.236
-allow from all
-{% endhighlight %}
+<div data-gist-id="c7280c96bd6600e8ec12" data-gist-show-loading="false"></div>
 
 Perceba a lista de IPs que temos, para cada novo IP que você deseja bloquear é só colocar mais uma linha com "deny from <strong>{IP}</strong>" e esse IP não conseguirá acessar mais nada no seu site! :D
 

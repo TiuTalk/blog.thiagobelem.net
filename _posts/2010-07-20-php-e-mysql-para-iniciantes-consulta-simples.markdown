@@ -44,73 +44,12 @@ Iremos usar essas tabelas para armazenar notícias que estarão ligadas à categ
 Para criar essas tabelas em seu banco de dados, execute esse código SQL:
 
 
-{% highlight sql linenos %}
--- -----------------------------------------------------
--- Table `categorias`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `categorias` ;
-
-CREATE  TABLE IF NOT EXISTS `categorias` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
-  `nome` VARCHAR(50) NOT NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = MyISAM;
-
--- -----------------------------------------------------
--- Table `noticias`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `noticias` ;
-
-CREATE  TABLE IF NOT EXISTS `noticias` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
-  `categoria_id` INT UNSIGNED NOT NULL ,
-  `titulo` VARCHAR(100) NOT NULL ,
-  `descricao` TEXT NOT NULL ,
-  `texto` LONGTEXT NOT NULL ,
-  `ativa` TINYINT(1)  NOT NULL DEFAULT 1 ,
-  `cadastro` DATETIME NOT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `CATEGORIA` (`categoria_id` ASC) ,
-  CONSTRAINT `FK_CATEGORIA`
-    FOREIGN KEY (`categoria_id` )
-    REFERENCES `categorias` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = MyISAM;
-{% endhighlight %}
+<div data-gist-id="3afa46d58456aff44502" data-gist-show-loading="false"></div>
 
 Vamos iniciar o nosso script criando um pequeno script de conexão ao banco de dados:
 
 
-{% highlight php linenos %}
-<?php
-/**
- * PHP e MySQL para iniciantes
- *
- * Arquivo que faz a conexão com o banco de dados utilizando MySQLi
- *
- * PHP 5+, MySQL 4.1+
- *
- * @author Thiago Belem <contato@thiagobelem.net>
- * @link /mysql/php-e-mysql-para-iniciantes-consulta-simples/
- */
-
-// Dados de acesso ao servidor MySQL
-$MySQL = array(
-  'servidor' => '127.0.0.1',  // Endereço do servidor
-  'usuario' => 'root',    // Usuário
-  'senha' => '',        // Senha
-  'banco' => 'meu_site'    // Nome do banco de dados
-);
-
-$MySQLi = new MySQLi($MySQL['servidor'], $MySQL['usuario'], $MySQL['senha'], $MySQL['banco']);
-
-// Verifica se ocorreu um erro e exibe a mensagem de erro
-if (mysqli_connect_errno())
-    trigger_error(mysqli_connect_error(), E_USER_ERROR);
-
-?>
-{% endhighlight %}
+<div data-gist-id="4f1a66c5f12d6b96ae71" data-gist-show-loading="false"></div>
 
 Na linha 21 nós criamos uma instância do MySQLi passando os dados de conexão com o servidor e, logo depois, verificamos se houve algum erro durante a conexão e exibimos a mensagem de erro.
 
@@ -119,36 +58,12 @@ Salve esse script com o nome de <code>mysqli.php</code> em uma pasta chamada <co
 O próximo passo será criar um script que faz uma consulta SQL, vamos começar o arquivo PHP com os comentários de créditos e o <code>[require](http://php.net/manual/en/function.require-once.php)</code> para chamar o arquivo de conexão ao banco de dados:
 
 
-{% highlight php linenos %}
-<?php
-/**
- * PHP e MySQL para iniciantes
- *
- * Arquivo com um exemplo de consulta ao banco de dados MySQL
- *
- * PHP 5+, MySQL 4.1+
- *
- * @author Thiago Belem <contato@thiagobelem.net>
- * @link /mysql/php-e-mysql-para-iniciantes-consulta-simples/
- */
-
-// Inclui o arquivo que faz a conexão ao banco de dados
-require_once('includes/mysqli.php');
-
-?>
-{% endhighlight %}
+<div data-gist-id="d74ddbb860f20e8231fd" data-gist-show-loading="false"></div>
 
 Agora vamos montar uma consulta SQL simples para buscar as 10 últimas notícias ativas:
 
 
-{% highlight php linenos %}
-// Monta a consulta SQL para trazer as últimas 10 notícias ativas
-$sql = 'SELECT *
-    FROM `noticias` AS Noticia
-    WHERE Noticia.`ativa` = 1
-    ORDER BY Noticia.`cadastro` DESC
-    LIMIT 10';
-{% endhighlight %}
+<div data-gist-id="1e19345c904406aa26c3" data-gist-show-loading="false"></div>
 
 A consulta montada poderia ser traduzida por:
 
@@ -161,110 +76,32 @@ LIMITADO A 10 resultados
 Agora precisamos executar a consulta utilizando o método <code>[query](http://www.php.net/manual/pt_BR/mysqli.query.php)</code> do MySQLi:
 
 
-{% highlight php linenos %}
-// Executa a consulta OU mostra uma mensagem de erro
-$resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
-{% endhighlight %}
+<div data-gist-id="dbdc6f141714783a6136" data-gist-show-loading="false"></div>
 
 E agora só precisamos rodar um loop, e em cada iteração (passada no loop) iremos exibir a notícia encontrada, montando um bloco HTML:
 
 
-{% highlight php linenos %}
-// Faz um loop, passando por todos os resultados encontrados
-while ($noticia = $resultado->fetch_object()) {
-  // Exibe a notícia dentro de um bloco HTML
-  ?>
-
-  <h2><?php echo $noticia->titulo; ?></h2>
-  <?php echo $noticia->descricao; ?>
-
-  [Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
-
-
-  <?php
-} // while ($noticia = $resultado->fetch_object())
-{% endhighlight %}
+<div data-gist-id="c6e881b2381f2766935d" data-gist-show-loading="false"></div>
 
 Fazendo isso, para cada notícia encontrada pela consulta, será criado o seguinte bloco HTML:
 
 
-{% highlight html linenos %}
-<h2>Titulo da notícia</h2>
-Descrição da notícia
-
-[Leia mais &raquo;](noticia.php?id=2)
-
-{% endhighlight %}
+<div data-gist-id="d94ba710b35991558586" data-gist-show-loading="false"></div>
 
 Depois disso, podemos colocar mais um pequeno bloco de código que irá mostrar o total de registros encontrados com a consulta:
 
 
-{% highlight php linenos %}
-// Exibe o total de registros encontrados
-echo "Registros encontrados: {$resultado->num_rows}
-";
-{% endhighlight %}
+<div data-gist-id="0abd0bffa551dc651387" data-gist-show-loading="false"></div>
 
 E no final de tudo precisamos - <strong>SEMPRE</strong> - liberar o resultado da consulta, limpando espaço na memória e deixando tudo mais organizado:
 
 
-{% highlight php linenos %}
-// Libera o resultado para liberar memória
-$resultado->free();
-{% endhighlight %}
+<div data-gist-id="c34308a8054ce74e5ca8" data-gist-show-loading="false"></div>
 
 O arquivo <code>consulta.php</code> ficou assim:
 
 
-{% highlight php linenos %}
-<?php
-/**
- * PHP e MySQL para iniciantes
- *
- * Arquivo com um exemplo de consulta ao banco de dados MySQL
- *
- * PHP 5+, MySQL 4.1+
- *
- * @author Thiago Belem <contato@thiagobelem.net>
- * @link /mysql/php-e-mysql-para-iniciantes-consulta-simples/
- */
-
-// Inclui o arquivo que faz a conexão ao banco de dados
-require_once('includes/mysqli.php');
-
-// Monta a consulta SQL para trazer as últimas 10 notícias ativas
-$sql = 'SELECT *
-    FROM `noticias` AS Noticia
-    WHERE Noticia.`ativa` = 1
-    ORDER BY Noticia.`cadastro` DESC
-    LIMIT 10';
-
-// Executa a consulta OU mostra uma mensagem de erro
-$resultado = $MySQLi->query($sql) OR trigger_error($MySQLi->error, E_USER_ERROR);
-
-// Faz um loop, passando por todos os resultados encontrados
-while ($noticia = $resultado->fetch_object()) {
-  // Exibe a notícia dentro de um bloco HTML
-  ?>
-
-  <h2><?php echo $noticia->titulo; ?></h2>
-  <?php echo $noticia->descricao; ?>
-
-  [Leia mais &raquo;](noticia.php?id=<?php echo $noticia->id; ?>)
-
-
-  <?php
-} // while ($noticia = $resultado->fetch_object())
-
-// Exibe o total de registros encontrados
-echo "Registros encontrados: {$resultado->num_rows}
-";
-
-// Libera o resultado para liberar memória
-$resultado->free();
-
-?>
-{% endhighlight %}
+<div data-gist-id="adfa1533df15ac96ec12" data-gist-show-loading="false"></div>
 
 Por hoje é só! :)
 

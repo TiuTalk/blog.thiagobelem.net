@@ -23,19 +23,7 @@ Com eles você pode ter vários sites, no mesmo servidor, cada um rodando em uma
 É só localizar o arquivo <span style="color: #ff6600;"><strong>httpd.conf </strong></span>que geralmente fica na pasta <span style="color: #3366ff;"><strong>.../apache/conf/</strong></span> e colocar o seguinte bloco de código (no final do arquivo):
 
 
-{% highlight text linenos %}
-<VirtualHost site1.com www.site.com>
-  DocumentRoot C:\htdocs\site1
-  ServerName site1.com
-  ServerAdmin thiagobelem@site1.com
-</VirtualHost>
-
-<VirtualHost site2.com www.site2.com site1.site2.com>
-  DocumentRoot C:\htdocs\site2
-  ServerName site1.com
-  ServerAdmin fulano@site2.com
-</VirtualHost>
-{% endhighlight %}
+<div data-gist-id="c247ccb8215fc5f26485" data-gist-show-loading="false"></div>
 
 Com esse exemplo nós criamos 2 hosts virtuais pra alguns casos especiais:
 

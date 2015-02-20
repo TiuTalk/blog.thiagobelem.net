@@ -22,55 +22,30 @@ Imagine o robots.txt como uma lista de convidados para uma festa... Se não tá 
 Suponhamos que você tenha um arquivo chamado confidencial.html na raiz do seu site e você não quer que os indexadores dos sistemas de buscas e nenhum outro tipo de robô tenha acesso a esse arquivo... É só colocar isso aqui no seu robots.txt:
 
 
-{% highlight html linenos %}
-User-agent: *
-Disallow: /confidencial.html
-{% endhighlight %}
+<div data-gist-id="22ced017091e1e83bc51" data-gist-show-loading="false"></div>
 
 Isso fará com que nenhum robot consiga acessar o arquivo especificado... Mas você também quer bloquear uma pasta do seu site para que nenhum robozinho possa entrar e ver algum arquivo dentro dela, então é só fazer assim:
 
 
-{% highlight html linenos %}
-User-agent: *
-Disallow: /confidencial.html
-Disallow: /minhapasta/
-{% endhighlight %}
+<div data-gist-id="a0d7196e4fa6a71261c9" data-gist-show-loading="false"></div>
 
 <h3>Comentários no robots.txt</h3>
 Se você é uma pessoa <span style="text-decoration: line-through;">metódica</span> organizada e quer colocar comentários no seu robots é só usar o caractere "tralha" (#) para isso, dessa forma:
 
 
-{% highlight html linenos %}
-# A regra servirá para todos os tipos de robôs
-User-agent: *
-# Meu arquivo de senhas ultra-secretas que ninguém pode saber
-Disallow: /confidencial.html
-# Bloqueando a minha pasta cheia de fotos ;X
-Disallow: /minhapasta/
-{% endhighlight %}
+<div data-gist-id="c4613c12a1631fa93b5b" data-gist-show-loading="false"></div>
 
 <h3>Bloqueando um site inteiro</h3>
 Tá com a pá virada e quer bloquear o acesso completo de todos os robôs ao seu site? Não precisa tirar ele do ar, e só fazer isso:
 
 
-{% highlight html linenos %}
-# Adios~
-User-agent: *
-Disallow: /
-{% endhighlight %}
+<div data-gist-id="72ac684edc18a510993e" data-gist-show-loading="false"></div>
 
 <h3>Criando a lista VIP da festa</h3>
 Tem gente que prefere bloquear todo mundo e permitir só alguns, e com o robots.txt não é diferente:
 
 
-{% highlight html linenos %}
-# Permitindo apenas dois arquivos e uma pasta:
-User-agent: *
-Allow: /meu_arquivo.html
-Allow: /pasta/contato.html
-Allow: /imagens/
-Disallow: /
-{% endhighlight %}
+<div data-gist-id="8bf0b5063cf3a041dec4" data-gist-show-loading="false"></div>
 
 Isso fará com que apenas os dois arquivos especificados e a pasta sejam acessíveis, o restante será bloqueado.
 

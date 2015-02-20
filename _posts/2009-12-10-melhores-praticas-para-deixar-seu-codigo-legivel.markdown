@@ -29,42 +29,10 @@ Quando você passa o mouse sobre o nome de uma função ou método o IDE vai at�
 Indentação é, sem dúvida, a parte mais importante desse artigo... Sem uma boa indentação o código perde toda a hierarquia de comandos... Existem várias formas de indentar o seu código, todas elas são válidas, mas algumas são mais recomendadas. Veja dois exemplos dos estilos de indentação mais utilizados:
 
 
-{% highlight php linenos %}
-<?php
+<div data-gist-id="ddb3ff0eefd98bdc012b" data-gist-show-loading="false"></div>
 
-if ($nota >= 7) {
-  echo 'Você foi aprovado!';
-} else {
-  if ($nota > 3) {
-    echo 'Você precisa fazer prova final!';
-  } else {
-    echo 'Você foi reprovado!';
-  }
-}
+<div data-gist-id="bde4c7c1c124b5f46062" data-gist-show-loading="false"></div>
 
-?>
-{% endhighlight %}
-{% highlight php linenos %}
-<?php
-
-if ($nota >= 7)
-{
-  echo 'Você foi aprovado!';
-}
-else
-{
-  if ($nota > 3)
-  {
-    echo 'Você precisa fazer prova final!';
-  }
-  else
-  {
-    echo 'Você foi reprovado!';
-  }
-}
-
-?>
-{% endhighlight %}
 Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é tão dificil assim perceber onde começa e termina cada bloco... Há um [artigo na Wikipédia](http://en.wikipedia.org/wiki/Indent_style) que mostra os vários estilos de indentação.
 
 <br/>
@@ -73,19 +41,7 @@ Eu pessoalmente prefiro o primeiro estilo, pois economizamos linhas e não é t�
 Comentar o seu código é sempre bom... Comentários só pesam no tamanho do arquivo. E não é só por isso que vamos sair comentando todas as nossas linhas... Além de duplicar (ou triplicar) o nosso tempo de desenvolvimento, nosso codigo vai ficar muito poluído e explicitar o óbivio... Vejamos alguns exemplos que não precisam nem ser comentados (literalmente):
 
 
-{% highlight php linenos %}
-<?php
-
-// Se o $nome for igual a Thiago
-if ($nome == 'Thiago')  {
-  // Exibe uma mensagem de boas vindas
-  echo 'Olá Thiago!';
-  // Calcula a idade da pessoa
-  $idade = calculaIdade($nome);
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="ceacb5c83a7a27f97a70" data-gist-show-loading="false"></div>
 
 <br/>
 
@@ -93,25 +49,7 @@ if ($nome == 'Thiago')  {
 Muitas vezes fazemos isso sem perceber... E é uma ótima prática! Agrupe as linhas de código por suas funções/tarefas... Veja um exemplo:
 
 
-{% highlight php linenos %}
-<?php
-
-// Lista os produtos em destaque
-$sql = "SELECT * FROM `produtos` WHERE `destaque` = 1";
-$query = mysql_query($sql);
-while ($produto = mysql_fetch_assoc($query)) {
-  echo $produto['nome'] . '';
-}
-
-// Lista o apelido dos usuários online
-$sql = "SELECT `apelido` FROM `usuarios` WHERE `online` = 1";
-$query = mysql_query($sql);
-while ($usuario = mysql_fetch_assoc($query)) {
-  echo '»' . $usuario['apelido'] . '';
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="4b3e0566c5845d43e623" data-gist-show-loading="false"></div>
 
 <br/>
 
@@ -135,13 +73,13 @@ Se você vai usar uma variável para incremento, contador ou só para armazenar 
 
 <h3>7. Evidencie os termos especiais do SQL</h3>
 Cansei de ver pessoas escrevendo consultas SQL assim:
-{% highlight sql linenos %}
-select nome from produtos where preco > 10 limit 1
-{% endhighlight %}
+
+<div data-gist-id="01ab51777a212062f8e0" data-gist-show-loading="false"></div>
+
 Quando não evidenciamos os termos especiais (protegidos) fica dificil entender com facilidade o que a consulta faz... Seria muito mais produtivo fazer algo assim:
-{% highlight sql linenos %}
-SELECT `nome` FROM `produtos` WHERE `preco` > 10 LIMIT 1
-{% endhighlight %}
+
+<div data-gist-id="36696a18354406ed3b51" data-gist-show-loading="false"></div>
+
 Onde as palavras protegidas do SQL são deixadas em maiúscula e os nomes de colunas e tabelas são colocados entre crases.
 
 <br/>

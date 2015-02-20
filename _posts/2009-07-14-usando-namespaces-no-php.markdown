@@ -24,57 +24,22 @@ Agora, com os namespaces, temos uma terceira (e muito melhor) opção para soluc
 
 <h3>O que faz esse tal de <em>namespace</em>?</h3>
 Imagine que você fez uma função nova para usar no seu site só que ela usa nomes e constantes com nomes genéricos (por exemplo: "user" e "database")... Ela normalmente seria assim:
-{% highlight php linenos %}
-<?php
 
-function connect() {
-  // Faz a sua conexão com o banco de dados
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="028ac666d28320f0753d" data-gist-show-loading="false"></div>
 
 Só que se você usar alguma outra biblioteca/classe/função pronta, pode haver uma colisão de nomes e você vai precisar mudar o nome da sua função pra algo maior... Só que você não quer isso.
 
 Aí, usando a maravilha do namespace, você faz assim:
-{% highlight php linenos %}
-<?php
 
-namespace MeuProjeto;
-
-function connect() {
-  // Faz a sua conexão com o banco de dados
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="590e90cad23ac73ca954" data-gist-show-loading="false"></div>
 
 E quando você precisar chamar a função do MeuProjeto é só fazer assim:
-{% highlight php linenos %}
-<?php
-  // Inclui o arquivo com a função
-  include("conexao-MySQL.php");
 
-  // Chama a função dentro do namespace
-  MeuProjeto/connect();
-?>
-{% endhighlight %}
+<div data-gist-id="be1b263933f7c03d5a21" data-gist-show-loading="false"></div>
 
 <h3>Sintaxe alternativa</h3>
 
-{% highlight php linenos %}
-<?php
-
-namespace MeuProjeto {
-
-  function connect() {
-    // Faz a sua conexão com o banco de dados
-  }
-
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="6c4fcb9384ab0c1a4682" data-gist-show-loading="false"></div>
 
 --
 

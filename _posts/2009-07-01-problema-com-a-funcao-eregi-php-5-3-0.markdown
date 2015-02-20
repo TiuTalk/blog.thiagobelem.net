@@ -25,38 +25,12 @@ Vim falar sobre a função ereg e eregi que são muito usadas (pelo menos por mi
 Antigamente faríamos assim:
 
 
-{% highlight php linenos %}
-<?php
-
-$palavra = '(casa|carro)';
-$frase = 'Eu fui pra casa ontem!';
-
-if (ereg($palavra, $frase)) {
-  echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
-} else {
-  echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="9f9701b4afb4135e4ba1" data-gist-show-loading="false"></div>
 
 Agora, com o PHP 5.3.0 precisamos usar a função <strong>preg_match()</strong>, dessa forma:
 
 
-{% highlight php linenos %}
-<?php
-
-$palavra = '/(casa|carro)/';
-$frase = 'Eu fui pra casa ontem!';
-
-if (preg_match($palavra, $frase)) {
-  echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
-} else {
-  echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="4e6c7ffdb553c418ebf1" data-gist-show-loading="false"></div>
 
 Repare que entrou uma barra (pra direita) antes e depois da expressão regular.
 
@@ -64,20 +38,7 @@ Repare que entrou uma barra (pra direita) antes e depois da expressão regular.
 E pra quem usava o eregi, é só adicionar um "i" no final da expressão regular, dessa forma:
 
 
-{% highlight php linenos %}
-<?php
-
-$palavra = '/(casa|carro)/i';
-$frase = 'Eu fui pra CasA ontem!';
-
-if (preg_match($palavra, $frase)) {
-  echo "A palavra 'casa' ou 'carro' foi encontrada na frase";
-} else {
-  echo "A palavra 'casa' ou 'carro' não foi encontrada na frase";
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="aa6695df88c53771e26e" data-gist-show-loading="false"></div>
 
 --
 

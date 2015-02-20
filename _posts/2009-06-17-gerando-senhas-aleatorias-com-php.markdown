@@ -25,110 +25,26 @@ Vou explicar o passo-a-passo pra criar a função que permitirá uma criação p
 Primeiro, definimos uma função vazia com alguns parâmetros (e seus valores padrões):
 
 
-{% highlight php linenos %}
-<?php
-
-function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
-{
-
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="5691f4c81fd0b794b600" data-gist-show-loading="false"></div>
 
 Como pode ver, por padrão a senha gerada terá 8 caracteres, letras (minúsculas e maiúsculas) e números... Mas repito: todos esses parâmetros poderão ser modificados e manipulados (veremos isso depois).
 
 Agora definimos algumas variáveis que serão usadas pela função:
 
 
-{% highlight php linenos %}
-<?php
-
-function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
-{
-// Caracteres de cada tipo
-$lmin = 'abcdefghijklmnopqrstuvwxyz';
-$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$num = '1234567890';
-$simb = '!@#$%*-';
-
-// Variaveis internas
-$retorno = '';
-$caracteres = '';
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="7f3702200c554be68906" data-gist-show-loading="false"></div>
 
 Agora começa a brincadeira.. Vamos alimentar a variável $caracteres com todos os caracteres que poderão ser usados na senha:
 
 
-{% highlight php linenos %}
-<?php
-
-function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
-{
-// Caracteres de cada tipo
-$lmin = 'abcdefghijklmnopqrstuvwxyz';
-$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$num = '1234567890';
-$simb = '!@#$%*-';
-
-// Variáveis internas
-$retorno = '';
-$caracteres = '';
-
-// Agrupamos todos os caracteres que poderão ser utilizados
-$caracteres .= $lmin;
-if ($maiusculas) $caracteres .= $lmai;
-if ($numeros) $caracteres .= $num;
-if ($simbolos) $caracteres .= $simb;
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="126f1304e9c5019e762f" data-gist-show-loading="false"></div>
 
 Agora, pra finalizar, contamos com quantos caracteres a variável $caracteres ficou e usamos uma estrutura de repetição (<em>loop</em>) que se repetirá pra cada um dos caracteres finais da senha (variável $tamanho).
 
 Depois é só retornar a variável contendo a senha criada:
 
 
-{% highlight php linenos %}
-<?php
-
-function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
-{
-// Caracteres de cada tipo
-$lmin = 'abcdefghijklmnopqrstuvwxyz';
-$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$num = '1234567890';
-$simb = '!@#$%*-';
-
-// Variáveis internas
-$retorno = '';
-$caracteres = '';
-
-// Agrupamos todos os caracteres que poderão ser utilizados
-$caracteres .= $lmin;
-if ($maiusculas) $caracteres .= $lmai;
-if ($numeros) $caracteres .= $num;
-if ($simbolos) $caracteres .= $simb;
-
-// Calculamos o total de caracteres possíveis
-$len = strlen($caracteres);
-
-for ($n = 1; $n <= $tamanho; $n++) {
-// Criamos um número aleatório de 1 até $len para pegar um dos caracteres
-$rand = mt_rand(1, $len);
-// Concatenamos um dos caracteres na variável $retorno
-$retorno .= $caracteres[$rand-1];
-}
-
-return $retorno;
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="5b201aad8cec6b4a4605" data-gist-show-loading="false"></div>
 
 O código acima já é a função completa e pronta pra usar! :D
 
@@ -138,69 +54,13 @@ Veja exemplos de uso no fim do artigo.
 Fiz também uma versão mais compacta, sem comentários e com créditos:
 
 
-{% highlight php linenos %}
-<?php
-
-/**
-* Função para gerar senhas aleatórias
-*
-* @author    Thiago Belem <contato@thiagobelem.net>
-*
-* @param integer $tamanho Tamanho da senha a ser gerada
-* @param boolean $maiusculas Se terá letras maiúsculas
-* @param boolean $numeros Se terá números
-* @param boolean $simbolos Se terá símbolos
-*
-* @return string A senha gerada
-*/
-function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false)
-{
-$lmin = 'abcdefghijklmnopqrstuvwxyz';
-$lmai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$num = '1234567890';
-$simb = '!@#$%*-';
-$retorno = '';
-$caracteres = '';
-
-$caracteres .= $lmin;
-if ($maiusculas) $caracteres .= $lmai;
-if ($numeros) $caracteres .= $num;
-if ($simbolos) $caracteres .= $simb;
-
-$len = strlen($caracteres);
-for ($n = 1; $n <= $tamanho; $n++) {
-$rand = mt_rand(1, $len);
-$retorno .= $caracteres[$rand-1];
-}
-return $retorno;
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="4a44116679ea35ce40c6" data-gist-show-loading="false"></div>
 
 --
 
 <h3>Exemplos de uso</h3>
 
-{% highlight php linenos %}
-<?php
-// Gera uma senha com 10 carecteres: letras (min e mai), números
-$senha = geraSenha(10);
-// gfUgF3e5m7
-
-// Gera uma senha com 9 carecteres: letras (min e mai)
-$senha = geraSenha(9, true, false);
-// BJnCYupsN
-
-// Gera uma senha com 6 carecteres: letras minúsculas e números
-$senha = geraSenha(6, false, true);
-// sowz0g
-
-// Gera uma senha com 15 carecteres de números, letras e símbolos
-$senha = geraSenha(15, true, true, true);
-// fnwX@dGO7P0!iWM
-?>
-{% endhighlight %}
+<div data-gist-id="c071f2fbca10b9ab8297" data-gist-show-loading="false"></div>
 
 --
 

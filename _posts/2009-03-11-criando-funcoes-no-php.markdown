@@ -15,16 +15,7 @@ Vamos usar como exemplo a função <strong>substr()</strong> nativa do PHP, ela 
 Vamos ao exemplo de uma função simples:
 
 
-{% highlight php linenos %}
-function calcula_dobro($numero) {
-    // Faz o calculo do dobro do $numero
-    $resultado = $numero * 2;
-    return $resultado;
-}
-
-echo "O dobro de 3 é: " . calcula_dobro(3);
-// O dobro de 3 é: 6
-{% endhighlight %}
+<div data-gist-id="b2c0f689957d2fd19106" data-gist-show-loading="false"></div>
 
 Essa função recebe número por argumento ($numero) e retorna o dobro desse número, é bem simples.
 
@@ -32,46 +23,19 @@ Você pode criar funções para as mais variadas tarefas, como por exemplo, exib
 , ficaria assim:
 
 
-{% highlight php linenos %}
-function paragrafos($texto) {
-    $resultado = '
-' . $texto . '
-
-';
-    return $resultado;
-}
-
-echo paragrafos('Este texto está entre parágrafos!');
-//
-Este texto está entre parágrafos!
-
-{% endhighlight %}
+<div data-gist-id="62e0eff089a5329a4a01" data-gist-show-loading="false"></div>
 
 Não há limite de argumentos que uma função pode receber, por exemplo, vamos fazer uma função que calcule um número elevado a outro:
 
 
-{% highlight php linenos %}
-function potenciacao($numero, $potencia) {
-    return $numero ^ $potencia;
-}
-
-echo "2 elevado a 5ª potencia é: " . potenciacao(2, 5);
-// 2 elevado a 5ª potencia é: 32
-{% endhighlight %}
+<div data-gist-id="da000f4d3dec828e8012" data-gist-show-loading="false"></div>
 
 Repare que dessa vez usamos dois argumentos. Claro que, se você usar uma string como argumento dessa função você provavelmente vai causar um erro no PHP.
 
 Você também pode definir valores padrões para os argumentos da sua função, vamos usar o exemplo da função anterior só que, se não definirmos o segundo argumento, o número vai ser elevado a terceira potencia:
 
 
-{% highlight php linenos %}
-function potenciacao($numero, $potencia = 3) {
-    return $numero ^ $potencia;
-}
-
-echo "Usando a função ptenciacao() sem segundo argumento: " . potenciacao(2);
-// Usando a função ptenciacao() sem segundo argumento: 8
-{% endhighlight %}
+<div data-gist-id="c909abdd5861b46c70b6" data-gist-show-loading="false"></div>
 
 <blockquote>Um nome de função válido começa com uma letra ou um sublinhado, seguido, seguido por qualquer número de letras, números ou sublinhado. Com uma expressão regular, seria expressado com: <strong>[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*</strong>.
 </blockquote>

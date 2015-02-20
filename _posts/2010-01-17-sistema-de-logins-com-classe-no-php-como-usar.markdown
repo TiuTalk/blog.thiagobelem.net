@@ -43,30 +43,7 @@ Vocês devem incluir o arquivo <strong>usuarios.class.php</strong> (usando [incl
 Depois de inserir a classe em todos os arquivos vamos na página que recebe e valida os dados do login (<strong>valida_login.php</strong>) e, logo após "<em>includar</em>" a classe <strong>no começo do arquivo</strong> colocamos também o seguinte código:
 
 
-{% highlight php linenos %}
-<?php
-// Inclui o arquivo com a classe de login
-require_once("includes/classes/usuarios.class.php");
-// Instancia a classe
-$userClass = new Usuario();
-
-// Pega os dados vindos do formulário
-$usuario = $_POST['usuario'];
-$senha = $_POST['senha'];
-// Se o campo "lembrar" não existir, o script funcionará normalmente
-$lembrar = (isset($_POST['lembrar']) AND !empty($_POST['lembrar']));
-
-// Tenta logar o usuário com os dados
-if ( $userClass->logaUsuario( $usuario, $senha, $lembrar ) ) {
-  // Usuário logado com sucesso, redireciona ele para a página restrita
-  header("Location: pagina_restrita.php");
-  exit;
-} else {
-  // Não foi possível logar o usuário, exibe a mensagem de erro
-  echo "<strong>Erro: </strong>" . $userClass->erro;
-}
-?>
-{% endhighlight %}
+<div data-gist-id="b77d71909c03c26b900d" data-gist-show-loading="false"></div>
 
 Primeiro nós instanciamos a classe e depois, nas <strong>linhas 8 e 9</strong>, nós pegamos os dados vindos do <strong>formulário de login</strong> (<strong>login.php</strong>) via POST... Após pegar os dados nós tentamos logar o usuário com esses dados, a própria classe já se encarrega de validar os dados, criar a sessão, os cookies e tudo mais... A condição da <strong>linha 12</strong> será válida se o sistema conseguir logar o usuário e falsa se algo der errado ou os dados forem incorretos.
 
@@ -76,21 +53,7 @@ Caso o usuário tenha sido logado com sucesso, o próximo passo seria redirecion
 Agora que nosso login já está sendo validado e redirecionado, precisamos proteger a página registra (ou as páginas, isso depende do seu site)... Vamos novamente no começo do arquivo (<strong>pagina_restrita.php</strong>) e vamos inserir o seguinte código:
 
 
-{% highlight php linenos %}
-<?php
-// Inclui o arquivo com a classe de login
-require_once("includes/classes/usuarios.class.php");
-// Instancia a classe
-$userClass = new Usuario();
-
-// Verifica se não há um usuário logado
-if ( $userClass->usuarioLogado() === false ) {
-  // Não há um usuário logado, redireciona pra tela de login
-  header("Location: login.php");
-  exit;
-}
-?>
-{% endhighlight %}
+<div data-gist-id="682b76c1aa4a324bbc3d" data-gist-show-loading="false"></div>
 
 Mas é só isso!? Sim! :)
 
@@ -102,21 +65,7 @@ Vocês já fizeram a validação do login e a proteção da página restrita... 
 Vamos criar um arquivo chamado <strong>logout.php</strong> que será acessado quando o usuário quiser sair do sistema, nele inserimos apenas o seguinte código:
 
 
-{% highlight php linenos %}
-<?php
-// Inclui o arquivo com a classe de login
-require_once("includes/classes/usuarios.class.php");
-// Instancia a classe
-$userClass = new Usuario();
-
-// Usuário fez logout com sucesso?
-if ( $userClass->logout() ) {
-  // Redireciona pra tela de login
-  header("Location: login.php");
-  exit;
-}
-?>
-{% endhighlight %}
+<div data-gist-id="6ea65e1752998ee616a1" data-gist-show-loading="false"></div>
 
 O código fará com que o usuário seja deslogado e redirecionado para a tela de login... Quer mais moleza que isso?
 
@@ -126,9 +75,7 @@ Há! Pensou que tinha acabado?
 Para exibir dados do usuário logado, como o nome ou e-mail, você precisa inserir um simples <strong>echo</strong> puxando os dados da sessão, assim:
 
 
-{% highlight php linenos %}
-Seja bem vindo(a), <?php echo $_SESSION['usuario_nome']; ?>!
-{% endhighlight %}
+<div data-gist-id="7500abbf79b6acec21a2" data-gist-show-loading="false"></div>
 
 A chave "<strong>usuario_nome</strong>" é composto por duas variantes: a parte "<strong>usuario_</strong>" vem da propriedade <strong>$prefixoChaves</strong> (definida na <strong>linha 49</strong> do <strong>usuarios.class.php</strong>) que estará presente em todos os valores criados pela classe e salvos na sessão... Já a parte "nome" da chave é o nome da campo que você buscou na tabela de usuários, definido na propriedade <strong>$dados</strong> (definida na <strong>linha 37</strong> do <strong>usuarios.class.php</strong>).
 

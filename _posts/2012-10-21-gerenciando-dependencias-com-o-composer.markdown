@@ -59,14 +59,17 @@ Você pode instalar o Composer de duas formas: <strong>localmente</strong> (apen
 Para <strong>instalar localmente</strong>, você<strong></strong> executa o seguinte comando:
 
 <div data-gist-id="3927122" data-gist-show-loading="false"></div>
+
 Isso irá fazer o download do arquivo <strong>composer.phar</strong> (que é o executável que traz todas as funcionalidades do nosso amigo):
 
 <div data-gist-id="3927127" data-gist-show-loading="false"></div>
+
 Arquivos <strong>.phar</strong> são aplicações PHP encapsuladas em um único arquivo, mais informações aqui: [php.net/manual/en/intro.phar.php](http://php.net/manual/en/intro.phar.php)
 
 Agora você já pode usar o Composer através do comando <strong>php composer.phar</strong>, mas se você quiser tornar essa instalação global, e fazer tudo através do comando <strong>composer</strong>, mova o executável para o diretório de executáveis do sistema (UNIX):
 
 <div data-gist-id="3927128" data-gist-show-loading="false"></div>
+
 Caso tenha alguma dúvida sobre a instalação, recomendo a leitura da documentação oficial: [getcomposer.org/doc/00-intro.md](http://getcomposer.org/doc/00-intro.md)
 
 <h2><span style="color: #999999;">Passo 2</span> - Declarando dependências</h2>
@@ -77,6 +80,7 @@ O Composer trabalha com um repositório de pacotes, o [Packagist](https://packag
 Como dito anteriormente, nosso projeto irá usa a última versão do <strong>Doctrine</strong> e do <strong>Twig</strong>, e definimos essas dependências no arquivo <strong>composer.json</strong>, na raiz do projeto:
 
 <div data-gist-id="3927227" data-gist-show-loading="false"></div>
+
 Nesse arquivo estamos informando ao Composer que nosso projeto depende de duas bibliotecas:
 
 <ol>
@@ -89,6 +93,7 @@ Com isso você já aprende a sintaxe de versões, que poderia ser "<strong>1.1.2
 Com essas dependências definidas, rodamos "<strong>php composer.phar install</strong>" (se a sua instalação foi local) ou "<strong>composer install</strong>" (se a sua instalação foi global)... e voila!
 
 <div data-gist-id="3927261" data-gist-show-loading="false"></div>
+
 O Composer acabou de baixar todos os pacotes necessários, e suas dependências!
 
 Perceba que o <strong>doctrine/orm</strong> depende de outros dois pacotes: <strong>symfony/console</strong> e <strong>doctrine/dbal</strong>, que por sua vez depende do <strong>doctrine/common</strong>... Mas o Composer cuidou disso pra você! :)
@@ -96,19 +101,24 @@ Perceba que o <strong>doctrine/orm</strong> depende de outros dois pacotes: <str
 Os pacotes instalados foram todos colocados em uma pasta "<strong>vendor</strong>", e dentro dele você pode notar o arquivo <strong>autoload.php</strong> com o seguinte código:
 
 <div data-gist-id="3928198" data-gist-show-loading="false"></div>
+
 É aqui que toda a mágica acontece! Esse é o arquivo que vai garantir que seu projeto tenha acesso às bibliotecas.
 
 <h2><span style="color: #999999;">Passo 4</span> - Usando as bibliotecas</h2>
 Agora é só incluir o <strong>autoload.php</strong> em qualquer lugar do seu projeto e sair usando as bibliotecas:
 
 <h4>Usando o Doctrine</h4>
+
 <div data-gist-id="3928244" data-gist-show-loading="false"></div>
+
 Não vou entrar nos detalhes de utilização do <strong>Doctrine</strong>, apenas percebam que eu só fiz o include/require do <strong>autoload.php</strong> e saí usando as classes.
 
 Para mais informações sobre o <strong>Doctrine</strong>, consulte a documentação oficial: [www.doctrine-project.org/](http://www.doctrine-project.org/)
 
 <h4>Usando o Twig</h4>
+
 <div data-gist-id="3928259" data-gist-show-loading="false"></div>
+
 O resultado vai ser uma mensagem "<strong>Olá, Thiago!</strong>".
 
 Para mais informações sobre o <strong>Twig</strong>, consulte a documentação oficial: [twig.sensiolabs.org/documentation](http://twig.sensiolabs.org/documentation)

@@ -15,26 +15,7 @@ Semana passada algumas pessoas me perguntaram no MSN como poderiam fazer uma men
 Isso é muito simples, veja um exemplo:
 
 
-{% highlight php linenos %}
-<?php
-
-// Formato 24 horas (de 1 a 24)
-$hora = date('G');
-
-if (($hora >= 0) AND ($hora < 6)) {
-$mensagem = "Boa madrugada";
-} else if (($hora >= 6) AND ($hora < 12)) {
-$mensagem = "Bom dia";
-} else if (($hora >= 12) AND ($hora < 18)) {
-$mensagem = "Boa tarde";
-} else {
-$mensagem = "Boa noite";
-}
-
-echo $mensagem;
-
-?>
-{% endhighlight %}
+<div data-gist-id="fad33a3927104fe7aa85" data-gist-show-loading="false"></div>
 
 Viram?
 

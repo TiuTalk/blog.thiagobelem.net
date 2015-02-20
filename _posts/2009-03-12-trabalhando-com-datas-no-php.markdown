@@ -26,52 +26,31 @@ No PHP existem diversas funções para o tratamento de datas. Você pode exibir 
 Mas onde você usa isso? Essas letras são argumentos da função date, veja alguns exemplos:
 
 
-{% highlight php linenos %}
-echo date('d/m/Y'); // Resultado: 12/03/2009
-echo date('H:i:s'); // Resultado: 03:39:57
-echo date('d/m h:i A'); // Resultado: 12/03 03:39 AM
-{% endhighlight %}
+<div data-gist-id="7370198256897779843d" data-gist-show-loading="false"></div>
 
 Viram como é fácil?
 
 No MySQL existem os tipos de coluna DATE e DATETIME que são para armazenar datas e datas com hora respectivamente. O formato de entrada de um campo DATE é <strong>AAAA-MM-DD</strong> e do DATETIME é <strong>AAAA-MM-DD HH:MM:SS</strong>. Pra usar a função <strong>date()</strong> e gerar datas no formato de entrada do MySQL é só fazer assim:
 
 
-{% highlight php linenos %}
-$data = date('Y-m-d'); // Formato DATE: 2009-03-12
-$data = date('Y-m-d H:i:s') // Formato DATETIME: 2009-03-12 03:39:57
-{% endhighlight %}
+<div data-gist-id="179a666ce7cdb0d95c12" data-gist-show-loading="false"></div>
 
 Uma função muito usada é a <strong>time()</strong>: ela retorna um valor chamada <strong>UNIX TIMESTAMP</strong> que é o número de segundos que se passaram desde 1970 até agora. É um número de 11 algarismos (até agora) e também serve como segundo argumento da função <strong>date()</strong> quando queremos formatar uma data antiga ou futura.
 
 
-{% highlight php linenos %}
-echo time(); // Mostra o timestamp atual: 1236844015
-
-$timestamp = time(); // Salva o timestamp atual numa variável
-echo date('d/m/Y H:i:s', $timestamp); // Exibe DD/MM/YYYY HH:MM:SS em função de um timestamp
-{% endhighlight %}
+<div data-gist-id="163714f65688a885afa5" data-gist-show-loading="false"></div>
 
 Quando se precisa trabalhar com datas antigas e/ou futuras, uma função útil para ajudar a encontrar o timestamp é a <strong>mktime()</strong>, podemos usar ela da seguinte forma:
 
 
-{% highlight php linenos %}
-// Ordem dos argumentos do mktime(): hora, minuto, segundo, mes, dia e ano
-
-$timestamp = mktime(20, 03, 58, 02, 09, 1993); // Gera o timestamp da data 09/02/1993 as 20:03:59
-echo date('d/m ~ h:i', $timestamp); // Resultado: 09/02 ~ 20:03
-{% endhighlight %}
+<div data-gist-id="daf60d557b0eba469929" data-gist-show-loading="false"></div>
 
 --
 
 Se você está pegando datas salvas no MySQL pode reparar que ela vem no formato AAAA-MM-DD, pra gerar o timestamp de uma data assim é só usar a função <strong>strtotime()</strong>, dessa maneira:
 
 
-{% highlight php linenos %}
-$data_mysql = '2009-03-12 03:54:21';
-$timestamp = strtotime($data_mysql); // Gera o timestamp de $data_mysql
-echo date('d/m/Y', $timestamp); // Resultado: 12/03/2009
-{% endhighlight %}
+<div data-gist-id="bf81f9f226dc99491905" data-gist-show-loading="false"></div>
 
 Acredito que eu não tenha falado de nem metade de todas as funções para manipulação e controle de datas do PHP, mas essas são, sem dúvida, as mais importantes e mais usadas... Dê uma olhada na documentação (no fim deste post) de cada uma delas que você encontrará outros exemplos e formas de uso.
 

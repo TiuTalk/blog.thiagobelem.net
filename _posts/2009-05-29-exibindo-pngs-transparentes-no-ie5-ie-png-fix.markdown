@@ -19,11 +19,8 @@ Foi por causa disso que inventaram um tal de "PNG Fix", que é um arquivinho que
 2 - Coloque os arquivos <span style="color: #ff6600;"><strong>iepngfix.htc</strong></span> e <strong><span style="color: #ff6600;">blank.gif</span></strong> na pasta do seu site.
 
 3 - Insira o seguinte código HTML dentro do <head> do seu site:
-{% highlight html linenos %}
-<style type="text/css">
-img, div { behavior: url(iepngfix.htc) }
-</style>
-{% endhighlight %}
+
+<div data-gist-id="2354d7f7c708c16b4e5c" data-gist-show-loading="false"></div>
 
 Vale lembrar que se você usar PNGs transparentes como fundo de outros elementos, você também precisa incluí-los na lista<span style="color: #999999;"> (img, div, input e etc.)</span>.
 

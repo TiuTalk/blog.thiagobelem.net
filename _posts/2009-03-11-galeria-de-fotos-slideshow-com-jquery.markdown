@@ -25,38 +25,19 @@ Pra aula de hoje você vai precisar de - <strong>apenas</strong> - duas coisas:
 Depois de ter feito o download dos dois arquivos .js é só incluí-los no seu site assim:
 
 
-{% highlight html linenos %}
-<head>
-<script src="_pasta_/jquery.js" type="text/javascript"></script>
-<script src="_pasta_/jcycle.js" type="text/javascript"></script>
-</head>
-{% endhighlight %}
+<div data-gist-id="22636b891f3e6995edda" data-gist-show-loading="false"></div>
 
 Lembrando que esse código deve ir entre as TAGs <head> e </head> do seu site.
 
 Depois disso, você cria uma div com o id que quiser (vamos usar #slideshow como exemplo) e dentro dela coloca as fotos do seu slideshow, por exemplo:
 
 
-{% highlight html linenos %}
-<div id="slideShow">
-<img src="imagens/foto1.jpg" alt="Primeira Foto" width="300" height="200" />
-<img src="imagens/foto2.jpg" alt="Segunda Foto" width="300" height="200" />
-<img src="imagens/foto3.jpg" alt="Terceira Foto" width="300" height="200" />
-</div>
-{% endhighlight %}
+<div data-gist-id="3b9133643501c8bb8347" data-gist-show-loading="false"></div>
 
 Depois é só voltar lá dentro do <head> do seu site e colocar o seguinte bloco de javascript:
 
 
-{% highlight html linenos %}
-<script type="text/javascript">
-<!--
-$(function() {
-$('#slideShow').cycle({ fx: 'fade' });
-});
-// -->
-</script>
-{% endhighlight %}
+<div data-gist-id="8e97d19e71d4e021e69f" data-gist-show-loading="false"></div>
 
 Com isso você definiu qual a div que contem o slideshow (repare que o ID da div vai ali no começo da terceira linha) e o jQuery inicia o efeito sozinho.
 

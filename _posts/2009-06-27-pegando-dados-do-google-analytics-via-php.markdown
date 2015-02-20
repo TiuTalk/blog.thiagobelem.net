@@ -32,71 +32,24 @@ Para poder usar a classe você só precisa ter o hárduo trabalho de incluir o a
 
 <h3>Exemplo de uso - Autenticação</h3>
 Da mesma forma que você precisa fazer o login com a sua conta Google para ter acesso aos perfis de sites, e posteriormente aos relatórios desses perfis, você também precisa fazer o login autenticando seus dados de acesso... Veja como é dificil fazer isso:
-{% highlight php linenos %}
-<?php
-  require_once("gapi.class.php");
 
-  // Autenticação
-  $ga = new gapi('SEU E-MAIL', 'SUA SENHA');
-?>
-{% endhighlight %}
+<div data-gist-id="c12b2ea621a3d25eb0e2" data-gist-show-loading="false"></div>
 
 --
 
 <h3>Exemplo de uso - Listando os perfis de site</h3>
 Para listar todos os perfis de site que você tem na sua conta você pode fazer assim:
-{% highlight php linenos %}
-<?php
-  require_once("gapi.class.php");
 
-  // Autenticação
-  $ga = new gapi('SEU E-MAIL', 'SUA SENHA');
+<div data-gist-id="ce28ccf429a7726ad06c" data-gist-show-loading="false"></div>
 
-  // Pega os dados da conta e perfis de site
-  $ga->requestAccountData();
-
-  // Pra cada resultado encontrado...
-  foreach ($ga->getResults() as $perfil) {
-    // Exibe os dados de cada um dos perfis de site
-    echo $perfil . ' (' . $perfil->getProfileId() . ')';
-  }
-?>
-{% endhighlight %}
 O código acima irá exibir uma pequena lista dos sites que você tem na sua conta do Analytics... Usarei como exemplo o ID <strong>12345</strong> que é um ID fictício.
 
 <h3>Exemplo de uso - Pegando dados</h3>
 Agora você já fez o login e tem o ID do perfil do site que você quer pegar os resultados... Vamos fazer duas consultas de exemplo e pegar os dados necessários para fazer um relatório completo sobre as visitas e pageviews do mês passado:
 
 
-{% highlight php linenos %}
-<?php
-  require_once("gapi.class.php");
+<div data-gist-id="fe97201f8cde541f9bea" data-gist-show-loading="false"></div>
 
-  // Autenticação
-  $ga = new gapi('SEU EMAIL', 'SUA SENHA');
-
-  // ID do perfil do site
-  $id = '12345';
-
-  // Define o periodo do relatório
-  $inicio = date('Y-m-01', strtotime('-1 month')); // 1° dia do mês passado
-  $fim = date('Y-m-t', strtotime('-1 month')); // Último dia do mês passado
-
-  // Busca os pageviews e visitas (total do mês passado)
-  $ga->requestReportData($id, 'month', array('pageviews', 'visits'), null, null, $inicio, $fim);
-  foreach ($ga->getResults() as $dados) {
-    echo 'Mês ' . $dados . ': ' . $dados->getVisits() . ' Visita(s) e ' . $dados->getPageviews() . ' Pageview(s)';
-  }
-
-  echo '';
-
-  // Busca os pageviews e visitas de cada dia do último mês
-  $ga->requestReportData($id, 'day', array('pageviews', 'visits'), 'day', null, $inicio, $fim, 1, 50);
-  foreach ($ga->getResults() as $dados) {
-    echo 'Dia ' . $dados . ': ' . $dados->getVisits() . ' Visita(s) e ' . $dados->getPageviews() . ' Pageview(s)';
-  }
-?>
-{% endhighlight %}
 É claro que esse codigo parece um pouco complexo pra quem está começando.. Vou tentar explicar os argumentos do método requestReportData:
 
 1 - Primeiro tempos o ID do perfil do site que você já pegou antes usando o requestAccountData()

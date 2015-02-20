@@ -43,6 +43,7 @@ Então, como nós queremos criar uma single para os posts normais, vamos criar o
 Podemos começar o <strong>single.php</strong> copiando todo o <strong>index.php</strong>, que ele já vai funcionar:
 
 <div data-gist-id="3030780" data-gist-show-loading="false"></div>
+
 Porém, se for pra deixar ele exatamente igual ao index.php não precisaríamos criar o single.php, é só deixar que o WordPress use o index.php  (ultima opção na hierarquia de templates).
 
 Então vamos fazer algumas mudanças..
@@ -51,6 +52,7 @@ Então vamos fazer algumas mudanças..
 Vamos criar um rodapé no post, dentro dele vamos mostrar a lista das categorias e tags (separadas por vírgulas):
 
 <div data-gist-id="3030816" data-gist-show-loading="false"></div>
+
 Usamos agora duas novas funções:
 
 <ul>
@@ -63,6 +65,7 @@ Tirando a diferença nos parâmetros, ambas funções funcionam de forma bem p
 Podemos também editar o cabeçalho do post e exibir seu thumbnail com a função [the_post_thumbnail( tamanho, atributos )](http://codex.wordpress.org/Function_Reference/the_post_thumbnail), assim:
 
 <div data-gist-id="3030838" data-gist-show-loading="false"></div>
+
 Percebam que não usei nenhum dos parâmetros da função, pois quero justamente o tamanho padrão (configurado por dentro do painel de controle) e manter os atributos (alt, title) originais.
 
 Mas agora tem uma pegadinha! Você precisa <strong>habilitar os thumbnails</strong> (no seu tema) caso queira que seus posts e páginas possam ter uma <strong>imagem destacada</strong>, no caso o thumbnail que estamos exibindo ali em cima.
@@ -71,6 +74,7 @@ Mas agora tem uma pegadinha! Você precisa <strong>habilitar os thumbnails</stro
 Para habilitar os thumbnails é só criar na raiz do seu tema (ou editar se ele já existir) o arquivo <strong>functions.php</strong>, que é - basicamente - o arquivo central do seu tema, onde você define todo tipo de configuração ligada ao tema:
 
 <div data-gist-id="3030858" data-gist-show-loading="false"></div>
+
 Usamos a função [add_theme_support( feature )](http://codex.wordpress.org/Function_Reference/add_theme_support) que serve pra habilitar uma feature no seu tema, as features que podem ser habilitadas são:
 
 <ul>

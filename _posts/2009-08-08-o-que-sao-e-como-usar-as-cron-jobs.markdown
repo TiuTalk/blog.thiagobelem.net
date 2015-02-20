@@ -35,35 +35,25 @@ Se o seu site roda em algum servidor especializado e você tem um painel de cont
 A definição de uma cron job consiste em uma linha com 6 valores separados por espaço, assim:
 
 
-{% highlight sh linenos %}
-minuto hora dia mes dia-da-semana linha-de-comando
-{% endhighlight %}
+<div data-gist-id="59cfe6d37975c4703d11" data-gist-show-loading="false"></div>
 
 Vamos a alguns exemplos de configuração de tempo antes de criar a cron em si:
 
 <h4>Cron Job que rode todo dia as 06:00am</h4>
 
-{% highlight sh linenos %}
-0 6 * * * linha-de-comando
-{% endhighlight %}
+<div data-gist-id="27c4a207d7970ef6aaaa" data-gist-show-loading="false"></div>
 
 <h4>Cron Job que rode as 12:30am de segunda e sexta</h4>
 
-{% highlight sh linenos %}
-30 12 * * 1,5 linha-de-comando
-{% endhighlight %}
+<div data-gist-id="76120464eff10d972c3f" data-gist-show-loading="false"></div>
 
 <h4>Cron Job que rode a meia-noite de três em três dias</h4>
 
-{% highlight sh linenos %}
-0 0 */3 * * linha-de-comando
-{% endhighlight %}
+<div data-gist-id="8c11fd5d9f5dd6ac428f" data-gist-show-loading="false"></div>
 
 <h4>Cron Job que rode todo dia a cada duas horas</h4>
 
-{% highlight sh linenos %}
-0 */2 * * * linha-de-comando
-{% endhighlight %}
+<div data-gist-id="339633fc7d736a92e4d0" data-gist-show-loading="false"></div>
 
 Se você ficou com dificuldade nessa parte do tempo existem alguns [esse aqui](http://www.generateit.net/cron-job/). :)
 
@@ -74,19 +64,18 @@ Se você ficou com dificuldade nessa parte do tempo existem alguns [esse aqui](h
 
 <h3>Instalando suas Cron Jobs</h3>
 Agora é só salvar o conteúdo das suas crons, uma por linha em um arquivo chamado cron.txt e colocar uma linha assim no começo (primeira linha) do arquivo:
-{% highlight sh linenos %}
-MAILTO=meuemail@meudominio.com
-{% endhighlight %}
+
+<div data-gist-id="13a5224428e372ea2ac6" data-gist-show-loading="false"></div>
+
 Isso fará com que os erros sejam enviados para o e-mail determinado.
 
 Depois é só ir no terminal/shell e chamar o comando:
-{% highlight sh linenos %}
-crontab cron.txt
-{% endhighlight %}
+
+<div data-gist-id="0913b2ae8649a0a1f749" data-gist-show-loading="false"></div>
+
 Se nada der errado a cron foi instalada com sucesso e você pode vê-la na lista de crons que estão rodando:
-{% highlight sh linenos %}
-crontab -l
-{% endhighlight %}
+
+<div data-gist-id="f65441cef4153297ad33" data-gist-show-loading="false"></div>
 
 Ufa! :D
 

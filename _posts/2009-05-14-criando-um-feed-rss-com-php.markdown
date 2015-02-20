@@ -34,112 +34,38 @@ Vamos ao que interessa... A classe [SimpleXMLElement](http://www.php.net/manual/
 Primeiro chamamos a classe:
 
 
-{% highlight php linenos %}
-<?php
-
-// Intanciamos/chamamos a classe
-$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
-
-?>
-{% endhighlight %}
+<div data-gist-id="cd534fda394fa5b979af" data-gist-show-loading="false"></div>
 
 Com isso iremos começar a criar uma estrutura XML com o formato que está sendo passado para a classe.
 
 Agora iremos dizer que será um RSS versão 2.0, e para isso precisamos definir um atributo <strong>version</strong> do item <rss>, dessa forma:
 
 
-{% highlight php linenos %}
-<?php
-
-// Intanciamos/chamamos a classe
-$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
-
-$rss->addAttribute('version', '2.0');
-
-?>
-{% endhighlight %}
+<div data-gist-id="c95883885630fc4fed68" data-gist-show-loading="false"></div>
 
 Até agora o nosso RSS tem um formato parecido com esse:
 
 
-{% highlight xml linenos %}
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-
-</rss>
-{% endhighlight %}
+<div data-gist-id="d8e1028402eba46b884a" data-gist-show-loading="false"></div>
 
 O próximo passo é definir o elemento <strong><channel></strong> (canal) que contem todos os dados do RSS e cada um dos itens/notícias... Dentro dele iremos colocar mais três elementos, que são o <strong><title></strong> (titulo do RSS), o <strong><link></strong> (do site ao qual o RSS pertence) e a <strong><description></strong> (descrição do conteúdo RSS):
 
 
-{% highlight php linenos %}
-<?php
-// Intanciamos/chamamos a classe
-$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
-$rss->addAttribute('version', '2.0');
-
-// Cria o elemento <channel> dentro de <rss>
-$canal = $rss->addChild('channel');
-// Adiciona sub-elementos ao elemento <channel>
-$canal->addChild('title', 'Meu primeiro RSS');
-$canal->addChild('link', 'http://www.meusite.com/');
-$canal->addChild('description', 'Este é o meu primeiro RSS, uha!');
-
-?>
-{% endhighlight %}
+<div data-gist-id="af873c1309d31a638487" data-gist-show-loading="false"></div>
 
 Existem outros sub-elementos de channel, mas são todos opcionais... Veja a lista completa deles [aqui](http://cyber.law.harvard.edu/rss/rss.html#optionalChannelElements).
 
 E com isso, o nosso RSS ficará com um formato assim:
 
 
-{% highlight xml linenos %}
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-<channel>
-<title>Meu primeiro RSS</title>
-<link>http://www.meusite.com/</link>
-<description>Este é o meu primeiro RSS, cheio de coisas legais!</description>
-
-</channel>
-</rss>
-{% endhighlight %}
+<div data-gist-id="63e98c00967a63fc0d25" data-gist-show-loading="false"></div>
 
 Estão percebendo a mágica do SimpleXMLElement? Ele vai criando um formato de XML perfeito pra você usar com quase qualquer coisa! :D
 
 Bom... Já temos o formato básico do RSS.. Agora é só adicionar dois itens de exemplo e o nosso RSS estará quase pronto:
 
 
-{% highlight php linenos %}
-<?php
-// Intanciamos/chamamos a classe
-$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
-$rss->addAttribute('version', '2.0');
-
-// Cria o elemento <channel> dentro de <rss>
-$canal = $rss->addChild('channel');
-// Adiciona sub-elementos ao elemento <channel>
-$canal->addChild('title', 'Meu primeiro RSS');
-$canal->addChild('link', 'http://www.meusite.com/');
-$canal->addChild('description', 'Este é o meu primeiro RSS, uha!');
-
-// Cria um elemento <item> dentro de <channel>
-$item = $canal->addChild('item');
-// Adiciona sub-elementos ao elemento <item>
-$item->addChild('title', 'Meu segundo artigo');
-$item->addChild('link', 'http://www.meusite.com/artigos.php?id=2');
-$item->addChild('description', 'Esse é um resumo do meu segundo artigo.');
-
-// Cria outro elemento <item> dentro de <channel>
-$item = $canal->addChild('item');
-// Adiciona sub-elementos ao elemento <item>
-$item->addChild('title', 'Meu primeiro artigo');
-$item->addChild('link', 'http://www.meusite.com/artigos.php?id=1');
-$item->addChild('description', 'Esse é um resumo do meu primeiro artigo.');
-$item->addChild('pubDate', date('r'));
-
-?>
-{% endhighlight %}
+<div data-gist-id="9a8dee2366897643d477" data-gist-show-loading="false"></div>
 
 Cada <strong><item></strong> representa uma entrada do RSS, seria cada uma das notícias de um site de notícias, ou cada um dos artigos de um blog ou cada um dos apartamentos do site de uma imobiliária. A ordem dos <strong><item>s</strong> deve ser é do mais recente para o mais antigo.
 
@@ -148,42 +74,12 @@ Os três sub-elementos obrigatórios dos <strong><item>s</strong> são: o <stron
 Depois de inserir os dois itens o formato do nosso RSS está concluído, ficando assim:
 
 
-{% highlight xml linenos %}
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-<channel>
-<title>Meu primeiro RSS</title>
-<link>http://www.meusite.com/</link>
-<description>Este é o meu primeiro RSS, cheio de coisas legais!</description>
-
-<item>
-<title>Meu segundo artigo</title>
-<link>http://www.meusite.com/artigos.php?id=2</link>
-<description>Esse é um resumo do meu segundo artigo.</description>
-</item>
-
-<item>
-<title>Meu primeiro artigo</title>
-<link>http://www.meusite.com/artigos.php?id=1</link>
-<description>Esse é um resumo do meu primeiro artigo.</description>
-<pubDate>Thu, 21 Dec 2000 16:01:07 +0200</pubDate>
-</item>
-
-</channel>
-</rss>
-{% endhighlight %}
+<div data-gist-id="65e92735c1d0d11122dc" data-gist-show-loading="false"></div>
 
 Agora, para concluir, precisamos apenas passar todo o conteúdo do RSS para o navegador (depois de definir qual será o tipo de conteúdo que ele irá receber), colocando isso depois de definir o <strong>último <item></strong>:
 
 
-{% highlight php linenos %}
-// Define o tipo de conteúdo e o charset
-header("content-type: application/rss+xml; charset=utf-8");
-
-// Entrega o conteúdo do RSS completo:
-echo $rss->asXML();
-exit;
-{% endhighlight %}
+<div data-gist-id="cc6680a50551c4b08d43" data-gist-show-loading="false"></div>
 
 --
 
@@ -192,43 +88,7 @@ Pode ser que você encontre problemas de <acronym title="Tipo de codificação">
 Se você quiser também pode criar um RSS baseado em uma consulta MySQL, inserindo vários <items> de uma vez... Veja um exemplo:
 
 
-{% highlight php linenos %}
-// Intanciamos/chamamos a classe
-$rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss></rss>');
-$rss->addAttribute('version', '2.0');
-
-// Cria o elemento <channel> dentro de <rss>
-$canal = $rss->addChild('channel');
-// Adiciona sub-elementos ao elemento <channel>
-$canal->addChild('title', 'Meu primeiro RSS');
-$canal->addChild('link', 'http://www.meusite.com/');
-$canal->addChild('description', 'Este é o meu primeiro RSS, uha!');
-
-// Define a consulta MySQL
-$sql = "SELECT * FROM `noticias` WHERE (`ativa` = 1) ORDER BY `cadastro` DESC";
-$query = mysql_query($sql) OR die(mysql_error());
-
-// Inclui um <item> para cada resultado encontrado
-while ($dados = mysql_fetch_assoc($query)) {
-$id = $dados['id'];
-$titulo = $dados['titulo'];
-$texto = $dados['texto'];
-
-// Cria um elemento <item> dentro de <channel>
-$item = $canal->addChild('item');
-// Adiciona sub-elementos ao elemento <item>
-$item->addChild('title', $titulo);
-$item->addChild('link', 'http://www.meusite.com/artigos.php?id='.$id);
-$item->addChild('description', $texto);
-}
-
-// Define o tipo de conteúdo e o charset
-header("content-type: application/rss+xml; charset=utf-8");
-
-// Entrega o conteúdo do RSS completo:
-echo $rss->asXML();
-exit;
-{% endhighlight %}
+<div data-gist-id="18b0fbb05bbdba54dde5" data-gist-show-loading="false"></div>
 
 --
 

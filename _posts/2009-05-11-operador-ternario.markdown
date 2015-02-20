@@ -18,32 +18,12 @@ O seu uso consiste em agrupar, na mesma linha, a condição, os comandos para tr
 Vamos ao velho exemplo de condições (if) que todo mundo já viu:
 
 
-{% highlight php linenos %}
-<?php
-
-$nota = 4;
-
-if ($nota >= 7) {
-echo "Você passou!";
-} else {
-echo "Você não passou!";
-}
-
-?>
-{% endhighlight %}
+<div data-gist-id="9d2f242d0384244d4a8d" data-gist-show-loading="false"></div>
 
 Agora veja a versão ternária desse mesmo código:
 
 
-{% highlight php linenos %}
-<?php
-
-$nota = 4;
-
-echo ($nota >= 7) ? "Você passou!" : "Você não passou!";
-
-?>
-{% endhighlight %}
+<div data-gist-id="6c1dde7e6159548a3822" data-gist-show-loading="false"></div>
 
 A sintaxe do operador ternário é a seguinte:
 
@@ -52,23 +32,7 @@ A sintaxe do operador ternário é a seguinte:
 Veja outro exemplo de uso do operador ternário:
 
 
-{% highlight php linenos %}
-<?php
-
-// Atribuição de um valor padrão a uma variável
-
-// Versão "padrão"
-if (!isset($variavel)) {
-$variavel = 'valor padrão';
-} else {
-$variavel = $variavel;
-}
-
-// Versão usando operador ternário
-$variavel = (!isset($variavel)) ? 'valor padrão' : $variavel;
-
-?>
-{% endhighlight %}
+<div data-gist-id="e831bcea83ac616fa049" data-gist-show-loading="false"></div>
 
 Não se esqueçam de ver a [documentação oficial sobre operadores de comparação](http://br2.php.net/manual/pt_BR/language.operators.comparison.php), dentre os quais está o operador ternário.
 

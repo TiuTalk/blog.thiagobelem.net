@@ -33,16 +33,7 @@ Na minha opinião, o maior problemas de usar o Auth em um sistema/aplicação em
 Se você já tem um model/tabela de usuários pode pular para o próximo passo. Se você ainda não tem, essa é uma estrutura que eu recomendo pra quem usar MySQL:
 
 
-{% highlight sql linenos %}
-CREATE TABLE `clientes` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-  `nome` VARCHAR( 100 ) NOT NULL ,
-  `email` VARCHAR( 150 ) NOT NULL ,
-  `senha` CHAR( 40 ) NOT NULL ,
-  `ativo` BOOLEAN NOT NULL DEFAULT '0',
-  INDEX ( `email` )
-) ;
-{% endhighlight %}
+<div data-gist-id="4d7d6cb0a619ba07dd24" data-gist-show-loading="false"></div>
 
 <h3>Habilitando o AuthComponent</h3>
 Recomendo que você insira o componente no seu <strong>AppController</strong> pois toda a aplicação será controlada/protegida pelo AuthComponent.
@@ -50,14 +41,7 @@ Recomendo que você insira o componente no seu <strong>AppController</strong> po
 Edite (ou crie) o arquivo <strong>/app/app_controller.php</strong> e defina os componentes que você quer usar, no final da lista coloque o Auth:
 
 
-{% highlight php linenos %}
-class AppController extends Controller {
-
-  // Componentes utilizados por toda a aplicação
-  public $components = array('Session', 'Cookie', 'Auth');
-
-}
-{% endhighlight %}
+<div data-gist-id="d33daa9af2582a4a36ef" data-gist-show-loading="false"></div>
 
 Agora começa a parte de configuração e comunicação com o seu model de usuários, administradores ou seja lá qual for o nome.
 
@@ -65,54 +49,7 @@ Agora começa a parte de configuração e comunicação com o seu model de usuá
 Ainda dentro do seu <strong>AppController</strong> você vai configurar o componente dentro de um método (<em>callback</em>) chamado <strong>beforeFilter</strong>, da seguinte maneira:
 
 
-{% highlight php linenos %}
-<?php
-
-class AppController extends Controller {
-
-  public $components = array('Session', 'Cookie', 'Auth');
-
-  public function beforeFilter() {
-
-    // Model de usuários
-    $this->Auth->userModel = 'Cliente';
-
-    // Campos de usuário e senha
-    $this->Auth->fields = array(
-      'username' => 'email',
-      'password' => 'senha'
-    );
-
-    // Condição de usuário ativo/válido (opcional)
-    $this->Auth->userScope = array(
-      'Cliente.ativo' => true
-    );
-
-    // Action da tela de login
-    $this->Auth->loginAction = array(
-      'controller' => 'clientes',
-      'action' => 'login'
-    );
-
-    // Action da tela após o login (com sucesso)
-    $this->Auth->loginRedirect = array(
-      'controller' => 'clientes',
-      'action' => 'home'
-    );
-
-    // Action para redirecionamento após o logout
-    $this->Auth->logoutRedirect = array(
-      'controller' => 'pages',
-      'action' => 'display', 'home'
-    );
-
-    // Mensagens de erro
-    $this->Auth->loginError = __('Usuário e/ou senha incorreto(s)', true);
-    $this->Auth->authError = __('Você precisa fazer login para acessar esta página', true);
-  }
-
-}
-{% endhighlight %}
+<div data-gist-id="f42e0560ea95417193f9" data-gist-show-loading="false"></div>
 
 Com essas configurações definidas o sistema de login está praticamente pronto! :)
 
@@ -122,20 +59,7 @@ Para criar o formulário de login você precisa definir aquela <strong>action</s
 Se o nosso model de usuários se chama <strong>Cliente</strong>, então nossas actions de login e logout estarão no controller de <strong>Clientes</strong>:
 
 
-{% highlight php linenos %}
-<?php
-
-class ClientesController extends AppController {
-
-  public function login() { }
-
-  public function logout() {
-    // Redireciona o usuário para o action do logoutRedirect
-    $this->redirect($this->Auth->logout());
-  }
-
-}
-{% endhighlight %}
+<div data-gist-id="a209f6d5bff0a132262a" data-gist-show-loading="false"></div>
 
 A action de login <strong>fica vazia</strong> mesmo, e a action de logout apenas redireciona o visitante para a action definida lá no <strong>logoutRedirect</strong> (linha 36).
 
@@ -143,15 +67,7 @@ A action de login <strong>fica vazia</strong> mesmo, e a action de logout apenas
 A <strong>view</strong> do formulário de login é extremamente simples e (segundo o nosso exemplo) vai no arquivo <strong>/app/views/clientes/login.ctp</strong>:
 
 
-{% highlight php linenos %}
-<?php echo $this->Session->flash('auth') ?>
-<?php echo $this->Session->flash() ?>
-
-<?php echo $this->Form->create('Cliente', array('action' => 'login')) ?>
-<?php echo $this->Form->input('email') ?>
-<?php echo $this->Form->input('senha', array('type' => 'password')) ?>
-<?php echo $this->Form->end('Entrar') ?>
-{% endhighlight %}
+<div data-gist-id="84303fddd718b2df5c2c" data-gist-show-loading="false"></div>
 
 Primeiro nós temos o <strong>Session->flash()</strong> que irá exibir as mensagens de erro de autenticação (senha inválida, página restrita e etc.)
 
@@ -165,19 +81,7 @@ Quando você instalou o CakePHP ele deve ter pedido para você modificar a confi
 Para criar um usuário é bem simples: é só você fazer isso dentro de alguma action (de algum controller) do CakePHP, utilizando o método save() do seu model de usuários, por exemplo:
 
 
-{% highlight php linenos %}
-    // Carrega o model de clientes
-    $this->loadModel('Cliente');
-
-    // Cria um novo cliente
-    $this->Cliente->create();
-    $this->Cliente->save(array(
-      'nome' => 'Thiago Belem',
-      'email' => 'contato@thiagobelem.net',
-      'senha' => $this->Auth->password('123456'),
-      'ativo' => true
-    ));
-{% endhighlight %}
+<div data-gist-id="d103f48f96b4b7cd1669" data-gist-show-loading="false"></div>
 
 Esse código pode ir dentro do método <strong>beforeFilter</strong> do seu <strong>AppController</strong> (após as instruções de configuração do AuthComponent... Mas <strong>execute esse código apenas uma vez</strong>! Cada vez que esse código for executado o CakePHP irá tentar criar um novo usuário. Execute, verifique no banco de dados se o usuário foi criado e delete o código.
 
@@ -189,38 +93,14 @@ Agora todo o seu sistema estará "bloqueado", e você precisa fazer login para a
 Caso você queira proteger apenas um [prefixo](http://book.cakephp.org/2.0/en/development/routing.html#prefix-routing) (como por exemplo: admin) e não exigir login enquanto o usuário não estiver acessando um action com esse prefixo, coloque o seguinte código após a configuração do AuthComponent:
 
 
-{% highlight php linenos %}
-if (!isset($this->params['admin']) || !$this->params['admin'])
-    $this->Auth->allow('*');
-{% endhighlight %}
+<div data-gist-id="50a3787a72c6c4630736" data-gist-show-loading="false"></div>
 
 Isso fará com que o Auth permita acesso à qualquer action quando você não estiver dentro do um prefixo "admin".
 
 Você também precisará mudar algumas configurações do Auth:
 
 
-{% highlight php linenos %}
-    // Action da tela de login
-    $this->Auth->loginAction = array(
-      'admin' => false,
-      'controller' => 'clientes',
-      'action' => 'login'
-    );
-
-    // Action da tela após o login (com sucesso)
-    $this->Auth->loginRedirect = array(
-      'admin' => true,
-      'controller' => 'clientes',
-      'action' => 'home'
-    );
-
-    // Action para redirecionamento após o logout
-    $this->Auth->logoutRedirect = array(
-      'admin' => false,
-      'controller' => 'pages',
-      'action' => 'display', 'home'
-    );
-{% endhighlight %}
+<div data-gist-id="d901aa5b5f92eb8f23d2" data-gist-show-loading="false"></div>
 
 Essa mudança é necessária pois você precisa sair e entrar do prefixo "admin" antes e depois do login/logout.
 

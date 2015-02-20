@@ -39,83 +39,16 @@ Que em tradução livre seria:
 Acredito que todos vocês já viram uma conexão e consulta MySQL feita da seguinte forma:
 
 
-{% highlight php linenos %}
-<?php
+<div data-gist-id="7356c7150b85316a4098" data-gist-show-loading="false"></div>
 
-// Conecta ao banco de dados
-mysql_connect('127.0.0.1', 'usuario', 'senha');
-mysql_select_db('meusite');
-
-// "Hoje" em formato SQL
-$data = date('Y-m-d');
-
-// Monta e executa uma consulta SQL
-$sql = "SELECT `id`, `titulo`, `link` FROM `noticias` WHERE `ativa` = 1 AND `data` <= '". $data ."'";
-$query = mysql_query($sql);
-
-// Para cada resultado encontrado...
-while ($noticia = mysql_fetch_assoc($query)) {
-  // Exibe um link com a notícia
-  echo '['. $noticia['titulo'] .']('. $noticia['link'] .')';
-  echo '';
-} // fim while
-
-// Total de notícias
-echo 'Total de notícias: ' . mysql_num_rows($query);
-
-?>
-{% endhighlight %}
 Não há nada de especial com esse código... Conectamos ao MySQL e depois procuramos todas as notícias ativas e anteriores ao dia de hoje (inclusive)... O código por si só não é feito nem "mal organizado", mas isso é por que vocês ainda não conhecem o <strong>MySQLi</strong>!
 
 
 <h3>Orientação a Objetos: a beleza programação</h3>
 Agora veja o código que faz a mesma coisa que o anterior, só que em sua versão MySQLi orientada a objetos:
-{% highlight php linenos %}
-<?php
 
-// Conecta ao banco de dados
-$mysqli = new mysqli('127.0.0.1', 'usuario', 'senha', 'meusite');
+<div data-gist-id="2bb987b60fe51af11668" data-gist-show-loading="false"></div>
 
-// Verifica se ocorreu algum erro
-if (mysqli_connect_errno()) {
-    die('Não foi possível conectar-se ao banco de dados: ' . mysqli_connect_error());
-    exit();
-}
-
-// "Hoje" em formato SQL
-$data = date('Y-m-d');
-
-// Prepara uma consulta SQL
-if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE `ativa` = 1 AND `data` <= ?")) {
-
-  // Atribui valores às variáveis da consulta
-  $sql->bind_param('s', $data); // Coloca o valor de $data no lugar da primeira interrogação (?)
-
-  // Executa a consulta
-  $sql->execute();
-
-  // Atribui o resultado encontrado a variáveis
-  $sql->bind_result($id, $titulo, $link);
-
-  // Para cada resultado encontrado...
-  while ($sql->fetch()) {
-    // Exibe um link com a notícia
-    echo '['. $titulo .']('. $link .')';
-    echo '';
-  } // fim while
-
-  // Total de notícias
-  echo 'Total de notícias: ' . $sql->num_rows;
-
-  // Fecha a consulta
-  $sql->close();
-}
-
-// Fecha a conexão com o banco de dados
-$mysqli->close();
-
-?>
-{% endhighlight %}
 De primeiro contato sei que muita gente vai achar que o MySQLi é mais complicado, é só ver o número de linhas: quase o dobro.. Mas o MySQLi tem uma vantagem indescutível em cima do MySQL normal: <strong style="color: #B40000">a segurança</strong>.
 
 Primeiro nós <strong>PREPARAMOS</strong> uma consulta com um local para receber um valor variável... É aquela interrogação.
@@ -127,27 +60,8 @@ Depois é só executar, reservar variáveis para o resultado e usá-las com um <
 Vejam um exemplo de consulta com três parâmetros: duas strings e um inteiro:
 
 
-{% highlight php linenos %}
-<?php
+<div data-gist-id="34d6d4e34402b6fe7924" data-gist-show-loading="false"></div>
 
-// "Hoje" em formato SQL
-$data = date('Y-m-d');
-// Nome do autor
-$autor = 'Thiago Belem';
-
-// Prepara uma consulta SQL
-if ($sql = $mysqli->prepare("SELECT `id`, `titulo`, `link` FROM `noticias` WHERE (`data` <= ?) AND (`ativa` = ?) AND (`autor` = ?)")) {
-
-  // Atribui valores às variáveis da consulta
-  $sql->bind_param('sis', $data, 1, $autor);
-
-  // Executa a consulta
-  $sql->execute();
-
-  // ... Todo o resto é igual
-}
-?>
-{% endhighlight %}
 Nessa consulta nós reservamos espaços para três variáveis... Depois nós passamos os seus tipos e valores usando o método <strong>bind_param()</strong>, o primeiro parâmetro traz os tipos dos valores, no exemplo foi usado "<strong>sis</strong>" que significa: uma <em><strong>s</strong>tring</em>, um <em><strong>i</strong>nteger</em> (inteiro) e uma <em><strong>s</strong>tring</em>... Depois nós passamos os valores normalmente.. :)
 
 Os tipos de valores aceitos pelo MySQLi são:

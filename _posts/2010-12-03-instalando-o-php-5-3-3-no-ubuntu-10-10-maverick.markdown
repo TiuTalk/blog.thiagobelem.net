@@ -19,6 +19,7 @@ tags:
 Atenção... Este artigo é bem antigo, hoje em dia (2012+)<strong> não precisamos mais compilar o PHP</strong>, podemos instalar tudo via pacotes:
 
 <div data-gist-id="3139795" data-gist-show-loading="false"></div>
+
 E pronto! :)
 
 Agora segue o artigo original:

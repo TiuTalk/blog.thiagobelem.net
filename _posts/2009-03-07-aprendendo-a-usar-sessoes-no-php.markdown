@@ -18,39 +18,29 @@ A sessão precisa ser iniciada em cada página que você for usar ou definir um 
 Para abrir a sessão é só usar esse comando no PHP:
 
 
-{% highlight php linenos %}
-session_start(); // Inicia a sessão
-{% endhighlight %}
+<div data-gist-id="ba37897628adf60902c1" data-gist-show-loading="false"></div>
 
 Depois de iniciada a sessão você pode definir valores dentro dela dessa forma:
 
 
-{% highlight php linenos %}
-$_SESSION['usuario'] = 'Thiago';
-{% endhighlight %}
+<div data-gist-id="6a949568fedaf08892b6" data-gist-show-loading="false"></div>
 
 E quando você precisar exibir o valor salvo na sessão (provavelmente em outras páginas), é só fazer assim:
 
 
-{% highlight php linenos %}
-echo $_SESSION['usuario']; // Resultado: Thiago
-{% endhighlight %}
+<div data-gist-id="3d0d09500b1bf8c90d9f" data-gist-show-loading="false"></div>
 
 Você pode salvar quantos valores quiser, pode re-definir os valores e usa-los em echos, argumentos de funções e da forma que preferir.
 
 Para deletar uma variável específica da sessão você usa o <strong>unset()</strong>:
 
 
-{% highlight php linenos %}
-unset($_SESSION['usuario']); // Deleta uma variável da sessão
-{% endhighlight %}
+<div data-gist-id="69c5be725d73783e5fb0" data-gist-show-loading="false"></div>
 
 Você também pode destruir toda a sessão de uma só vez, eliminando todas as variáveis salvas nela:
 
 
-{% highlight php linenos %}
-session_destroy(); // Destrói toda sessão
-{% endhighlight %}
+<div data-gist-id="036be40b4baf6bd5f586" data-gist-show-loading="false"></div>
 
 Com isso você tem total controle das sessões no seu site e pode salvar, por exemplo, o nome de usuário depois que ele fez o login e salvar outra variável informando que o usuário está logado. Esta é uma prática muito comum em sistemas de autenticação de usuário.
 
