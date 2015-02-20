@@ -27,7 +27,7 @@ Irei mostrar pra vocês o passo-a-passo de todo o processo: Desde a criação da
 
 Se tudo der certo, o último post da série vai ao ar junto com o lançamento do novo layout do blog. :)
 
-Quem quiser acompanhar o projeto está no GitHub: [https://github.com/TiuTalk/blog.thiagobelem.net](https://github.com/TiuTalk/blog.thiagobelem.net)
+<!-- Quem quiser acompanhar o projeto está no GitHub: [https://github.com/TiuTalk/blog.thiagobelem.net](https://github.com/TiuTalk/blog.thiagobelem.net) -->
 
 Recomendo à todos uma leitura por alto do artigo [Theme Development](http://codex.wordpress.org/Theme_Development) no Codex... É de lá que eu tiro a maior parte das dúvidas sobre o processo de criação de temas.
 
@@ -36,10 +36,9 @@ Iremos criar um tema totalmente do zero, sem herdar ou usar códigos de outros t
 
 Pra começar, criamos uma pasta - dentro de <code>/wp-content/themes/</code> - para o nosso tema com os seguintes arquivos dentro:
 
-<ul>
-<li><strong>style.css</strong> - Onde definimos o título, autor e outros dados do tema</li>
-<li><strong>index.php</strong> - Onde iremos criar o HTML do tema</li>
-</ul>
+* **style.css** - Onde definimos o título, autor e outros dados do tema
+* **index.php** - Onde iremos criar o HTML do tema
+
 <h3>Passo 2 - Informações sobre o tema (style.css)</h3>
 Agora precisamos abrir o <code>style.css</code> e colocar um bloco de comentário CSS com as informações sobre o tema:
 

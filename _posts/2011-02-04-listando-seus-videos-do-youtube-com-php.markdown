@@ -23,21 +23,19 @@ Hoje trago até vocês um tutorial bem simples: como listar seus últimos vídeo
 <h3>Pré-requisitos</h3>
 Vamos precisar de um servidor com as seguintes extensões habilitadas:
 
-<ul>
-<li>[cURL](http://php.net/manual/book.curl.php)</li>
-<li>[SimpleXML](http://php.net/manual/book.simplexml.php)</li>
-</ul>
+* [cURL](http://php.net/manual/book.curl.php)
+* [SimpleXML](http://php.net/manual/book.simplexml.php)
+
 O <strong>SimpleXML</strong> já vem habilitado no PHP, mas o <strong>cURL</strong> normalmente não.. Se você contratou uma hospedagem compartilhada provavelmente ambos já estão habilitados.
 
 Pra quem não conhece o <strong>cURL</strong> (ou precisa habilitá-lo), recomendo a leitura: [Tutorial básico de cURL – Instalação, configuração e uso](/tutorial-basico-de-curl-instalacao-configuracao-e-uso)
 
 Se você receber a seguinte mensagem de erro, significa que seu cURL não está habilitado:
 
-<blockquote>Fatal error: Call to undefined function curl_init()
-</blockquote>
+> Fatal error: Call to undefined function curl_init()
+
 <h3>O código</h3>
 O código para pegar os vídeos é bem simples, por isso vou colocá-lo inteiro sem explicá-lo passo-a-passo:
-
 
 <div data-gist-id="9afbf4912e2fde79c3cd" data-gist-show-loading="false"></div>
 

@@ -30,11 +30,9 @@ Gostaram? Ele tá todo comentado.. Qualquer dúvida é só comentar! =)
 
 Abraços
 
-<h4>Documentação Oficial:</h4>
-<ul>
-<li><strong>[Arrays](http://www.php.net/manual/pt_BR/function.array.php)</strong> » Cria um array (matriz com vários elementos)</li>
-<li><strong>Função [strpos()](http://us3.php.net/strpos)</strong> » Encontra a primeira ocorrencia de uma string em outra string</li>
-<li><strong>Função [mysql_connect()](http://us3.php.net/mysql_connect)</strong> » Abre uma conexão com o servidor MySQL</li>
-<li><strong>Função [mysql_pconnect()](http://us.php.net/mysql_pconnect)</strong> » Abre uma conexão <strong>persistente</strong> com o servidor MySQL</li>
-<li><strong>Função [mysql_select_db()](http://us.php.net/mysql_select_db)</strong> » Conecta-se a um banco de dados disponível no servidor MySQL</li>
-</ul>
+#### Documentação Oficial
+* [Arrays](http://br.php.net/manual/pt_BR/function.array.php) » Cria um array (matriz com vários elementos)
+* [strpos()](http://br.php.net/strpos) » Encontra a primeira ocorrencia de uma string em outra string
+* [mysql_connect()](http://br.php.net/mysql_connect) » Abre uma conexão com o servidor MySQL
+* [mysql_pconnect()](http://br.php.net/mysql_pconnect) » Abre uma conexão <strong>persistente com o servidor MySQL
+* [mysql_select_db()](http://br.php.net/mysql_select_db) » Conecta-se a um banco de dados disponível no servidor MySQL

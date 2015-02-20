@@ -10,7 +10,7 @@ tags: []
 ---
 Espero que tenham gostado da nova aparência blog... Nesse novo blog eu vou postar alguns scripts prontos de PHP para vocês conhecerem novas formas de resolver os problemas do dia-a-adia.
 
-Hoje, nesse post de abertura vou mostrar pra vocês como fazer um script que limita textos, muito usado quando você precisa exibir até X caracteres de uma frase e colocar um <span style="color: #ff6600;"><strong>...</strong></span> depois.
+Hoje, nesse post de abertura vou mostrar pra vocês como fazer um script que limita textos, muito usado quando você precisa exibir até X caracteres de uma frase e colocar um <span style="color: #ff6600;"><strong>...</span> depois.
 
 Vamos ao script:
 
@@ -24,10 +24,8 @@ Pra usar essa função é bem simples, você só precisa definir dois dos três 
 
 O código está todo comentado, quem tiver alguma dúvida é só comentar e responderei assim que possível.
 
-<h4>Documentação Oficial:</h4>
-<ul>
-<li><strong>Função [strlen()](http://us2.php.net/strlen)</strong> » Mede quantos caracteres tem uma string</li>
-<li><strong>Função [trim()](http://us2.php.net/trim)</strong> » Retira os espaços a esquerda e a direita de uma string</li>
-<li><strong>Função [substr()](http://us.php.net/substr)</strong> » Corta uma string de X caracteres</li>
-<li><strong>Função [strrpos()](http://us.php.net/strrpos)</strong> » Encontra a última posição (a partir do início da string) de um(ns) caractere(s) na string</li>
-</ul>
+#### Documentação Oficial
+* [strlen()](http://br.php.net/strlen) » Mede quantos caracteres tem uma string
+* [trim()](http://br.php.net/trim) » Retira os espaços a esquerda e a direita de uma string
+* [substr()](http://br.php.net/substr) » Corta uma string de X caracteres
+* [strrpos()](http://br.php.net/strrpos) » Encontra a última posição (a partir do início da string) de um(ns) caractere(s) na string

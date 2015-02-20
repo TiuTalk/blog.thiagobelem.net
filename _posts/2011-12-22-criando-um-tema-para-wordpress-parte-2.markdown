@@ -35,10 +35,10 @@ Como vocês podem ver, não há nada demais aí.. vamos começar a usar algumas 
 <h3>Passo 4 - Funções básicas de tema no WordPress</h3>
 Agora iremos usar as seguintes funções:
 
-<ul>
-<li>[language_attributes()](http://codex.wordpress.org/Function_Reference/language_attributes) - Exibe os atributos de idioma para o elemento <strong>html</strong></li>
-<li>[bloginfo()](http://codex.wordpress.org/Function_Reference/bloginfo) - Exibe informações sobre o blog, como título, descrição, url e etc.</li>
-</ul>
+
+* [language_attributes()](http://codex.wordpress.org/Function_Reference/language_attributes) - Exibe os atributos de idioma para o elemento <strong>html</strong>
+* [bloginfo()](http://codex.wordpress.org/Function_Reference/bloginfo) - Exibe informações sobre o blog, como título, descrição, url e etc.
+
 Aplicando essas funções ao nosso <code>index.php</code>, vamos ficar com o seguinte:
 
 <div data-gist-id="1507389" data-gist-show-loading="false"></div>

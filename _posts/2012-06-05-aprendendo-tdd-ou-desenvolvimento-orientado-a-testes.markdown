@@ -16,15 +16,14 @@ Fala pessoal, tudo bom? Quanto tempo!
 
 Recentemente tenho trabalho muito em vários projetos e estou com duas turmas do [Assando Sites](http://assando-sites.com.br/), o que me deixa praticamente sem tempo pro blog ou qualquer outra coisa.
 
-Na última semana, comecei a ler o livro <strong>TDD - Desenvolvimento Guiado por Testes</strong>, escrito por <strong>Kent Beck</strong> e publicado pela <strong>Bookman</strong>.
+Na última semana, comecei a ler o livro **TDD - Desenvolvimento Guiado por Testes**, escrito por **Kent Beck** e publicado pela **Bookman**.
 
-<ul>
-<li>[http://www.amazon.com/Test-Driven-Development-By-Example/dp/0321146530/](http://www.amazon.com/Test-Driven-Development-By-Example/dp/0321146530/)</li>
-<li>[http://duckduckgo.com/?q=9788577807246](http://duckduckgo.com/?q=9788577807246)</li>
-</ul>
+* [http://www.amazon.com/Test-Driven-Development-By-Example/dp/0321146530/](http://www.amazon.com/Test-Driven-Development-By-Example/dp/0321146530/)
+* [http://duckduckgo.com/?q=9788577807246](http://duckduckgo.com/?q=9788577807246)
+
 O livro é sensacional, na primeira parte ele mostra o passo a passo do desenvolvimento (baseado em TDD, claro) de um mecanismo de conversão monetária. Na segunda parte do livro ele me surpreendeu: começa a criar um framework de testes, usando TDD (claro), porém usando o PRÓPRIO framework de testes pra testar a si mesmo.
 
-O autor do livro é considerado um dos criadores do TDD, então o cara <strong>sabe do que tá falando</strong>.
+O autor do livro é considerado um dos criadores do TDD, então o cara **sabe do que tá falando**.
 
 Mesmo recomendando muito o livro, não estou aqui pra falar dele e sim do assunto principal do livro: TDD.
 
@@ -36,12 +35,12 @@ Me surpreende que a maioria dos desenvolvedores e programadores por ai não saib
 
 Segundo a [Wikipédia](https://pt.wikipedia.org/wiki/Test_Driven_Development), TDD é:
 
-<blockquote><strong>Test Driven Development</strong> (TDD) ou em português <strong>Desenvolvimento <del>dirigido</del> guiado por testes</strong> é uma técnica de [desenvolvimento de software](https://pt.wikipedia.org/wiki/Desenvolvimento_de_software) que baseia em um ciclo curto de repetições:
+> **Test Driven Development** (TDD) ou em português **Desenvolvimento <del>dirigido</del> guiado por testes** é uma técnica de [desenvolvimento de software](https://pt.wikipedia.org/wiki/Desenvolvimento_de_software) que baseia em um ciclo curto de repetições:
 
 Primeiramente o desenvolvedor escreve um [refatorado](https://pt.wikipedia.org/wiki/Refatora%C3%A7%C3%A3o) para um código sob padrões aceitáveis.
 
-<strong>Kent Beck</strong>, considerado o criador ou o 'descobridor' da técnica, declarou em 2003 que TDD encoraja designs de código simples e inspira confiança.
-</blockquote>
+**Kent Beck**, considerado o criador ou o 'descobridor' da técnica, declarou em 2003 que TDD encoraja designs de código simples e inspira confiança.
+
 <h3>E qual a vantagem disso?</h3>
 Pra mim, TDD é uma forma de você garantir que, através de pequenos passos, você vai chegar à um "todo-completo", que é uma aplicação que funciona baseado apenas nas especificações que foram definidas, e lá na frente quando você for mudar algo, é só rodar os testes novamente para garantir que tudo continue funcionando.
 
@@ -50,38 +49,37 @@ Mas por via das dúvidas, pesquisem mais sobre o assunto, tem um mundo por trás
 <h2>"Talk is cheap! Shut up and show me the code!"</h2>
 <span style="color: #c0c0c0;">(eu amo essa frase)</span>
 
-Vamos direto ao ponto e vamos ver um pequeno exemplo de como criar uma função baseada em TDD... e vamos começar pelo exemplo mais simples e usado por todos: o famoso <strong>Fizz Buzz</strong>, que segundo a nossa amiga Wikipédia é:
+Vamos direto ao ponto e vamos ver um pequeno exemplo de como criar uma função baseada em TDD... e vamos começar pelo exemplo mais simples e usado por todos: o famoso **Fizz Buzz**, que segundo a nossa amiga Wikipédia é:
 
-<blockquote><strong>Bizz buzz</strong> (also known as <strong>fizz buzz</strong>, or simply <strong>buzz</strong>) is a group word game frequently encountered as a [drinking game](https://en.wikipedia.org/wiki/Drinking_game). Players take turns to count incrementally, replacing any number divisible by three with the word "bizz", and any number divisible by five with the word "buzz".
+> **Bizz buzz** (also known as **fizz buzz**, or simply **buzz**) is a group word game frequently encountered as a [drinking game](https://en.wikipedia.org/wiki/Drinking_game). Players take turns to count incrementally, replacing any number divisible by three with the word "bizz", and any number divisible by five with the word "buzz".
 
 Tradução deste que vos fala:
 
-<strong>Bizz buzz</strong> (também conhecido com <strong>fizz buzz</strong>, ou apenas <strong>buzz</strong>) é uma brincadeira em grupo, comummente jogada como desculpa pra encher a cara. Os jogadores jogam em turnos incrementais, onde cada um fala um número substituindo números divisíveis por três pela palavra "<strong>fizz</strong>", e números divisíveis por cinco pela palavra "<strong>buzz</strong>".
+**Bizz buzz** (também conhecido com **fizz buzz**, ou apenas **buzz**) é uma brincadeira em grupo, comummente jogada como desculpa pra encher a cara. Os jogadores jogam em turnos incrementais, onde cada um fala um número substituindo números divisíveis por três pela palavra "**fizz**", e números divisíveis por cinco pela palavra "**buzz**".
 
-Sendo que você precisa falar "<strong>fizz buzz</strong>" quando o número for múltiplo de três e de cinco.
-</blockquote>
+Sendo que você precisa falar "**fizz buzz**" quando o número for múltiplo de três e de cinco.
+
 Básicamente o resultado final do jogo seria algo assim:
 
-<blockquote>1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
-</blockquote>
-Então vamos criar uma função FizzBuzz que receba um parâmetro N e retorne o número, <strong>fizz</strong>, <strong>buzz</strong> ou <strong>fizz buzz</strong> dependendo do número que ela recebeu. :)
+> 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
+
+Então vamos criar uma função FizzBuzz que receba um parâmetro N e retorne o número, **fizz**, **buzz** ou **fizz buzz** dependendo do número que ela recebeu. :)
 
 Antes de qualquer coisa, vou fazer algo que aprendi com esse livro e recomendo muito: vamos montar uma lista de especificações que precisaremos testar/implementar.
 
-<ul>
-<li>FizzBuzz recebe um número</li>
-<li>FizzBuzz(1) retorna 1</li>
-<li>FizzBuzz(2) retorna 2</li>
-<li>FizzBuzz(3) retorna "fizz"</li>
-<li>FizzBuzz(4) retorna 4</li>
-<li>FizzBuzz(5) retorna "buzz"</li>
-</ul>
+* FizzBuzz recebe um número
+* FizzBuzz(1) retorna 1
+* FizzBuzz(2) retorna 2
+* FizzBuzz(3) retorna "fizz"
+* FizzBuzz(4) retorna 4
+* FizzBuzz(5) retorna "buzz"
+
 Essas não são todas as regras do jogo, mas já é um bom começo... Cada um desses itens vai significar um teste e - possivelmente - uma melhoria no código da função.
 
-Ao longo desse artigo irei copiar essa lista diversas vezes, marcando com <strong>negrito</strong> os itens que iremos atacar, e <del>riscando</del> os itens que forem concluídos.
+Ao longo desse artigo irei copiar essa lista diversas vezes, marcando com **negrito** os itens que iremos atacar, e <del>riscando</del> os itens que forem concluídos.
 
 <h2>Mas peraí... e a linguagem?</h2>
-Verdade... temos que decidir uma linguagem, e como eu falo MUITO de PHP aqui no blog vamos fazer esse FizzBuzz em <strong>Python</strong>, que já vem com um <strong>framework de testes</strong> embutido na linguagem, pra quem quiser brincar de <strong>testes unitários</strong> no PHP recomendo muito o [PHPUnit](https://github.com/sebastianbergmann/phpunit/).
+Verdade... temos que decidir uma linguagem, e como eu falo MUITO de PHP aqui no blog vamos fazer esse FizzBuzz em **Python**, que já vem com um **framework de testes** embutido na linguagem, pra quem quiser brincar de **testes unitários** no PHP recomendo muito o [PHPUnit](https://github.com/sebastianbergmann/phpunit/).
 
 <h3>Baby steps, ou "Passos de bebê"</h3>
 Uma das maiores características do desenvolvimento orientado à testes é que você sempre tente dar passos menores que suas pernas, não significa que você não possa dar uma corrida se o projeto exigir, mas sempre avance com pequenos passos, nada de escrever 100 linhas de código sem testar (com testes)... e eu vou tentar seguir essa metodologia aqui.
@@ -91,38 +89,37 @@ No TDD você SEMPRE começa pelo teste, então vamos começar criando nosso arqu
 
 <div data-gist-id="2877310" data-gist-show-loading="false"></div>
 
-Fizemos três coisas no nosso arquivo <strong>fizzbuzz_test.py</strong>:
+Fizemos três coisas no nosso arquivo **fizzbuzz_test.py**:
 
-<ol>
-<li>Primeiro temos <strong>#!/usr/bin/env pytho</strong>n que permite que executemos o arquivo sem ser através do executável do Python, mas isso é opcional.</li>
-<li>Depois importamos a biblioteca nativa de testes unitários do Python</li>
-<li>E por fim usamos uma condição que - resumidamente - permite que o arquivo seja executado pelo terminal já rodando os testes</li>
-</ol>
-Quando a gente rodar esse arquivo com o comando <strong>./fizzbuzz_test.py</strong> ou o comando <strong>python fizzbuzz_test.py </strong>vamos ter o seguinte output:
+
+* Primeiro temos **#!/usr/bin/env pytho**n que permite que executemos o arquivo sem ser através do executável do Python, mas isso é opcional.
+* Depois importamos a biblioteca nativa de testes unitários do Python
+* E por fim usamos uma condição que - resumidamente - permite que o arquivo seja executado pelo terminal já rodando os testes
+
+Quando a gente rodar esse arquivo com o comando **./fizzbuzz_test.py** ou o comando **python fizzbuzz_test.py **vamos ter o seguinte output:
 
 <div data-gist-id="2877331" data-gist-show-loading="false"></div>
 
 Então sabemos que tudo está funcionando... prontos para o primeiro teste?
 
-<ul>
-<li><strong>FizzBuzz recebe um número</strong></li>
-<li>FizzBuzz(1) retorna 1</li>
-<li>FizzBuzz(2) retorna 2</li>
-<li>FizzBuzz(3) retorna "fizz"</li>
-<li>FizzBuzz(4) retorna 4</li>
-<li>FizzBuzz(5) retorna "buzz"</li>
-</ul>
+* **FizzBuzz recebe um número**
+* FizzBuzz(1) retorna 1
+* FizzBuzz(2) retorna 2
+* FizzBuzz(3) retorna "fizz"
+* FizzBuzz(4) retorna 4
+* FizzBuzz(5) retorna "buzz"
+
 Nosso primeiro teste, da forma mais simples e reduzida possível, ficaria assim:
 
 <div data-gist-id="2877410" data-gist-show-loading="false"></div>
 
-Criamos uma classe <strong>TestFizzBuzz</strong>, que é um <strong>caso de teste</strong> (contém vários testes) para testar a classe/funcionalidade FizzBuzz.
+Criamos uma classe **TestFizzBuzz**, que é um **caso de teste** (contém vários testes) para testar a classe/funcionalidade FizzBuzz.
 
 Definimos nosso primeiro teste (test_FizzBuzz), onde fizemos uma asserção (verificação):
 
-<blockquote>O resultado de <strong>FizzBuzz(1) </strong>é IGUAL a <strong>1</strong>?
-</blockquote>
-A asserção de igualdade é justamente o método <strong>assertEqual</strong>... :)
+> O resultado de **FizzBuzz(1) **é IGUAL a **1**?
+
+A asserção de igualdade é justamente o método **assertEqual**... :)
 
 Prontos pra rodar o teste? Vamos ver o que acontece...
 
@@ -130,7 +127,7 @@ Prontos pra rodar o teste? Vamos ver o que acontece...
 
 UHU! Nosso primeiro erro! (sim, no TDD os testes não passando significam progresso).. mas não é o erro que eu estava esperando! :(
 
-O problema é que nós ainda não definimos FizzBuzz, por isso o Python xiou dizendo "<strong>global name 'FizzBuzz' is not defined</strong>".
+O problema é que nós ainda não definimos FizzBuzz, por isso o Python xiou dizendo "**global name 'FizzBuzz' is not defined**".
 
 Vamos criar nosso arquivo fizzbuzz.py com o seguinte conteúdo:
 
@@ -144,7 +141,7 @@ Vamos voltar ao nosso teste e importar essa função para que ela possa ser usad
 
 <div data-gist-id="2877480" data-gist-show-loading="false"></div>
 
-A linha "from<strong> fizzbuzz </strong>import<strong> FizzBuzz</strong>" significa "Importe a classe/função <strong>FizzBuzz</strong> do arquivo ou módulo chamado <strong>fizzbuzz</strong>"... isso mesmo, no Python podemos importar apenas parte de um arquivo! :)
+A linha "from** fizzbuzz **import** FizzBuzz**" significa "Importe a classe/função **FizzBuzz** do arquivo ou módulo chamado **fizzbuzz**"... isso mesmo, no Python podemos importar apenas parte de um arquivo! :)
 
 E o resultado da execução dos testes é...
 
@@ -162,20 +159,19 @@ Agora rodamos os testes novamente e...
 
 Conseguimos! O primeiro item da lista foi resolvido! :D
 
-<ul>
-<li><del>FizzBuzz recebe um número</del></li>
-<li><strong>FizzBuzz(1) retorna 1</strong></li>
-<li>FizzBuzz(2) retorna 2</li>
-<li>FizzBuzz(3) retorna "fizz"</li>
-<li>FizzBuzz(4) retorna 4</li>
-<li>FizzBuzz(5) retorna "buzz"</li>
-</ul>
+* <del>FizzBuzz recebe um número</del>
+* **FizzBuzz(1) retorna 1**
+* FizzBuzz(2) retorna 2
+* FizzBuzz(3) retorna "fizz"
+* FizzBuzz(4) retorna 4
+* FizzBuzz(5) retorna "buzz"
+
 Mas agora temos outro problema... que é justamente a nossa asserção de "FizzBuzz(1) é 1" falhando.
 
 <h3>Fazendo um teste passar</h3>
 Agora vem a parte (pra mim) mais importante do TDD:
 
-Sempre que você escrever um teste e ele quebrar, pergunte-se: "<span style="color: #333399;"><strong>Qual o menor passo, a menor mudança no código, que eu posso fazer pra esse teste passar?</strong></span>" Não importa se esse passo é elegante, segue padrões de projeto ou está simplesmente enganando o código... A primeira vez que você faz o teste passar tem a ver com velocidade e simplicidade, boas práticas fica pro momento da refatoração, com todos os testes passando.
+Sempre que você escrever um teste e ele quebrar, pergunte-se: "<span style="color: #333399;">**Qual o menor passo, a menor mudança no código, que eu posso fazer pra esse teste passar?**</span>" Não importa se esse passo é elegante, segue padrões de projeto ou está simplesmente enganando o código... A primeira vez que você faz o teste passar tem a ver com velocidade e simplicidade, boas práticas fica pro momento da refatoração, com todos os testes passando.
 
 A menor mudança que a gente pode fazer pra esse código funcionar, sem pensar nos outros casos de FizzBuzz(n) que ainda não estão testados é:
 
@@ -189,25 +185,23 @@ E os testes?
 
 Satisfação! Finalmente, nosso primeiro teste passou!!!
 
-<ul>
-<li><del>FizzBuzz recebe um número</del></li>
-<li><del>FizzBuzz(1) retorna 1</del></li>
-<li>FizzBuzz(2) retorna 2</li>
-<li>FizzBuzz(3) retorna "fizz"</li>
-<li>FizzBuzz(4) retorna 4</li>
-<li>FizzBuzz(5) retorna "buzz"</li>
-</ul>
-<strong>Decidindo o próximo teste</strong>
+* <del>FizzBuzz recebe um número</del>
+* <del>FizzBuzz(1) retorna 1</del>
+* FizzBuzz(2) retorna 2
+* FizzBuzz(3) retorna "fizz"
+* FizzBuzz(4) retorna 4
+* FizzBuzz(5) retorna "buzz"
+
+**Decidindo o próximo teste**
 
 Quando você estiver decidindo o próximo teste, tente seguir as seguintes dicas:
 
-<ul>
-<li>Escreva um teste que você SABE não vai passar.. Não adianta ficar testando coisas que já estão passando, né?</li>
-<li>Mas se você não tem certeza, escreva o teste e veja o que acontece... Testes nunca são demais.</li>
-<li>Escreva um teste que você ACHA que pode ser resolvido de forma simples, nada de testar o programa todo de uma vez.. o ideal é que você tenha apenas um teste quebrando em cada "rodada"</li>
-<li>Teste com valores plausíveis e facilmente compreensíveis... testar soma (1, 2) == 3 é muito melhor do que testar soma (12312512312, 31653341265312) = ????, entendeu onde quero chegar?</li>
-</ul>
-Então vamos seguir a lista e testar <strong>FizzBuzz(2)</strong> que deveria retornar <strong>2</strong>, e provavelmente não vai passar por causa do nosso roubo (return 1).
+* Escreva um teste que você SABE não vai passar.. Não adianta ficar testando coisas que já estão passando, né?
+* Mas se você não tem certeza, escreva o teste e veja o que acontece... Testes nunca são demais.
+* Escreva um teste que você ACHA que pode ser resolvido de forma simples, nada de testar o programa todo de uma vez.. o ideal é que você tenha apenas um teste quebrando em cada "rodada"
+* Teste com valores plausíveis e facilmente compreensíveis... testar soma (1, 2) == 3 é muito melhor do que testar soma (12312512312, 31653341265312) = ????, entendeu onde quero chegar?
+
+Então vamos seguir a lista e testar **FizzBuzz(2)** que deveria retornar **2**, e provavelmente não vai passar por causa do nosso roubo (return 1).
 
 <div data-gist-id="2877559" data-gist-show-loading="false"></div>
 
@@ -217,7 +211,7 @@ Eu poderia fazer a nova asserção dentro do mesmo teste, mas preferi trocar o n
 
 E com esse teste, concluímos que ao roubar (mesmo valendo pra quele momento) acabamos cuspindo pra cima, e agora o cuspe caiu na nossa cabeça... 2 (esperado) é diferente de 1 (resultado).
 
-Mais uma vez, hora de se perguntar: "<strong>Qual o menor passo, a menor mudança no código, que eu posso fazer pra esse teste passar?</strong>".. e se a função retornar o número que recebeu?
+Mais uma vez, hora de se perguntar: "**Qual o menor passo, a menor mudança no código, que eu posso fazer pra esse teste passar?**".. e se a função retornar o número que recebeu?
 
 <div data-gist-id="2877593" data-gist-show-loading="false"></div>
 
@@ -227,22 +221,20 @@ Feita a mudança, rodamos os testes e...
 
 Excelente! Nosso segundo teste está passando e, quase sem perceber, refatoramos o código para algo realmente dentro das regras do problema :)
 
-<ul>
-<li><del>FizzBuzz recebe um número</del></li>
-<li><del>FizzBuzz(1) retorna 1</del></li>
-<li><del>FizzBuzz(2) retorna 2</del></li>
-<li><strong>FizzBuzz(3) retorna "fizz"</strong></li>
-<li>FizzBuzz(4) retorna 4</li>
-<li>FizzBuzz(5) retorna "buzz"</li>
-</ul>
+* <del>FizzBuzz recebe um número</del>
+* <del>FizzBuzz(1) retorna 1</del>
+* <del>FizzBuzz(2) retorna 2</del>
+* **FizzBuzz(3) retorna "fizz"**
+* FizzBuzz(4) retorna 4
+* FizzBuzz(5) retorna "buzz"
+
 Qual o nosso próximo teste? Vamos seguir a lista e ver no que vai dar... Se entendemos bem o que fizemos até agora, FizzBuzz(3) vai retornar 3 e não "fizz" como manda a especificação do problema (múltiplos de três retornam "fizz").
 
 Como voltamos na especificação do problema, vamos adicionar mais um item à nossa lista:
 
-<ul>
-<li>FizzBuzz(9) retorna "fizz"</li>
-</ul>
-Agora vamos ao teste do <strong>FizzBuzz(3) retorna "fizz"</strong>:
+* FizzBuzz(9) retorna "fizz"
+
+Agora vamos ao teste do **FizzBuzz(3) retorna "fizz"**:
 
 <div data-gist-id="2877656" data-gist-show-loading="false"></div>
 
@@ -252,22 +244,21 @@ E o resultado dos testes, como esperado, falhou:
 
 Minha função FizzBuzz ainda não está preparada para retornar fizz, o teste quebrou e nós progredimos em direção a solução de mais um problema... viu como é legal?
 
-Eu sei que você está querendo começar a correr e verificar se <strong>numero</strong> é múltiplo de três, mas não temos testes pra isso ainda.. temos apenas um teste onde FizzBuzz(3) deveria retornar "fizz"... é esse pequeno passo que vamos dar. TDD também tem a ver com <strong>ansiedade</strong>, e você precisa aprender a controlar a sua.
+Eu sei que você está querendo começar a correr e verificar se **numero** é múltiplo de três, mas não temos testes pra isso ainda.. temos apenas um teste onde FizzBuzz(3) deveria retornar "fizz"... é esse pequeno passo que vamos dar. TDD também tem a ver com **ansiedade**, e você precisa aprender a controlar a sua.
 
 <div data-gist-id="2877675" data-gist-show-loading="false"></div>
 
 E os testes passaram! :D
 
-<ul>
-<li><del>FizzBuzz recebe um número</del></li>
-<li><del>FizzBuzz(1) retorna 1</del></li>
-<li><del>FizzBuzz(2) retorna 2</del></li>
-<li><del>FizzBuzz(3) retorna "fizz"</del></li>
-<li>FizzBuzz(4) retorna 4</li>
-<li>FizzBuzz(5) retorna "buzz"</li>
-<li>FizzBuzz(9) retorna "fizz"</li>
-</ul>
-Eu poderia seguir a lista e partir para o <strong>FizzBuzz(4)</strong> mas ele provavelmente vai passar, mas ao mesmo tempo, entre a dúvida e o teste, fique com o teste:
+* <del>FizzBuzz recebe um número</del>
+* <del>FizzBuzz(1) retorna 1</del>
+* <del>FizzBuzz(2) retorna 2</del>
+* <del>FizzBuzz(3) retorna "fizz"</del>
+* FizzBuzz(4) retorna 4
+* FizzBuzz(5) retorna "buzz"
+* FizzBuzz(9) retorna "fizz"
+
+Eu poderia seguir a lista e partir para o **FizzBuzz(4)** mas ele provavelmente vai passar, mas ao mesmo tempo, entre a dúvida e o teste, fique com o teste:
 
 <div data-gist-id="2877696" data-gist-show-loading="false"></div>
 
@@ -275,15 +266,14 @@ Ok.. os testes continuam passando, então esse teste não colaborou em nada para
 
 <div data-gist-id="2877701" data-gist-show-loading="false"></div>
 
-<ul>
-<li><del>FizzBuzz recebe um número</del></li>
-<li><del>FizzBuzz(1) retorna 1</del></li>
-<li><del>FizzBuzz(2) retorna 2</del></li>
-<li><del>FizzBuzz(3) retorna "fizz"</del></li>
-<li><del>FizzBuzz(4) retorna 4</del></li>
-<li>FizzBuzz(5) retorna "buzz"</li>
-<li><strong>FizzBuzz(9) retorna "fizz"</strong></li>
-</ul>
+* <del>FizzBuzz recebe um número</del>
+* <del>FizzBuzz(1) retorna 1</del>
+* <del>FizzBuzz(2) retorna 2</del>
+* <del>FizzBuzz(3) retorna "fizz"</del>
+* <del>FizzBuzz(4) retorna 4</del>
+* FizzBuzz(5) retorna "buzz"
+* **FizzBuzz(9) retorna "fizz"**
+
 Ok.. os testes quebraram.. mas como vamos resolver o problema?
 
 Sabemos que nosso código ainda tem um "roubo", podemos fazer outro roubo ou partir para uma refatoração que resolva o FizzBuzz(3) e FizzBuzz(9), como o problema é ridiculamente simples e esse artigo está ficando longo demais, vamos pra segunda opção:
@@ -302,30 +292,28 @@ Agora sim! Bem melhor, e continuamos testando a mesma coisa... só que com menos
 
 Nossa lista está quase acabando...
 
-<ul>
-<li><del>FizzBuzz recebe um número</del></li>
-<li><del>FizzBuzz(1) retorna 1</del></li>
-<li><del>FizzBuzz(2) retorna 2</del></li>
-<li><del>FizzBuzz(3) retorna "fizz"</del></li>
-<li><del>FizzBuzz(4) retorna 4</del></li>
-<li>FizzBuzz(5) retorna "buzz"</li>
-<li><del>FizzBuzz(9) retorna "fizz"</del></li>
-</ul>
+* <del>FizzBuzz recebe um número</del>
+* <del>FizzBuzz(1) retorna 1</del>
+* <del>FizzBuzz(2) retorna 2</del>
+* <del>FizzBuzz(3) retorna "fizz"</del>
+* <del>FizzBuzz(4) retorna 4</del>
+* FizzBuzz(5) retorna "buzz"
+* <del>FizzBuzz(9) retorna "fizz"</del>
+
 Falta apenas o FizzBuzz(5) mas acho que é hora de revisar o problema e adicionar mais alguns itens à lista:
 
-<ul>
-<li>FizzBuzz(5) retorna "buzz"</li>
-<li>FizzBuzz(10) retorna "buzz"</li>
-<li>FizzBuzz(15) retorna "fizzbuzz"</li>
-<li>FizzBuzz(30) retorna "fizzbuzz"</li>
-</ul>
+* FizzBuzz(5) retorna "buzz"
+* FizzBuzz(10) retorna "buzz"
+* FizzBuzz(15) retorna "fizzbuzz"
+* FizzBuzz(30) retorna "fizzbuzz"
+
 Claro que eu já sei como o problema funciona, mas podemos levantar esses exemplos só de olhar pra descrição do problema lá em cima..
 
 Então vamos partir pro primeiro item da lista: FizzBuzz(5) retorna "buzz"
 
 <div data-gist-id="2877779" data-gist-show-loading="false"></div>
 
-Os testes voltam a quebrar, apenas o último teste falhou pois <strong>5 != "buzz"</strong>.
+Os testes voltam a quebrar, apenas o último teste falhou pois **5 != "buzz"**.
 
 Como ainda não explicitamos a regra do "multiplo de 5" através de testes, o correto aqui é fazer com que apenas essse teste passe (e não testes futuros):
 
@@ -343,13 +331,12 @@ Vamos então parar de roubar e fazer o que fizemos com com os múltiplos de trê
 
 E todos os três testes (com as 7 asserções) passaram novamente.
 
-<ul>
-<li><del>FizzBuzz(5) retorna "buzz"</del></li>
-<li><del>FizzBuzz(10) retorna "buzz"</del></li>
-<li>FizzBuzz(15) retorna "fizzbuzz"</li>
-<li>FizzBuzz(30) retorna "fizzbuzz"</li>
-</ul>
-Agora vamos atacar a última parte do problema, <strong>múltiplos de três e de cinco</strong>.
+* <del>FizzBuzz(5) retorna "buzz"</del>
+* <del>FizzBuzz(10) retorna "buzz"</del>
+* FizzBuzz(15) retorna "fizzbuzz"
+* FizzBuzz(30) retorna "fizzbuzz"
+
+Agora vamos atacar a última parte do problema, **múltiplos de três e de cinco**.
 
 Nada de escrever código, primeiro o teste:
 
@@ -357,7 +344,7 @@ Nada de escrever código, primeiro o teste:
 
 (Aproveitei também pra mudar o nome dos testes)
 
-Vejam vocês... o teste falhou.. mas diferente do que vimos até agora, não temos "<strong>15 != fizzbuzz</strong>" mas sim "<strong>fizz != fizzbuzz</strong>" pois <strong>15</strong> é multiplo de <strong>3</strong>, correto?
+Vejam vocês... o teste falhou.. mas diferente do que vimos até agora, não temos "**15 != fizzbuzz**" mas sim "**fizz != fizzbuzz**" pois **15** é multiplo de **3**, correto?
 
 <div data-gist-id="2877850" data-gist-show-loading="false"></div>
 
@@ -367,13 +354,12 @@ Primeiro roubamos (o que o Kent Beck chama de "implementação óbvia"):
 
 E todos os testes voltam a passar... Agora adicionamos mais um teste da nossa lista:
 
-<ul>
-<li><del>FizzBuzz(5) retorna "buzz"</del></li>
-<li><del>FizzBuzz(10) retorna "buzz"</del></li>
-<li><del>FizzBuzz(15) retorna "fizzbuzz"</del></li>
-<li><strong>FizzBuzz(30) retorna "fizzbuzz"</strong></li>
-</ul>
-E fazemos uma implementação <strong>simples</strong>, que resolva o problema:
+* <del>FizzBuzz(5) retorna "buzz"</del>
+* <del>FizzBuzz(10) retorna "buzz"</del>
+* <del>FizzBuzz(15) retorna "fizzbuzz"</del>
+* **FizzBuzz(30) retorna "fizzbuzz"**
+
+E fazemos uma implementação **simples**, que resolva o problema:
 
 <div data-gist-id="2877873" data-gist-show-loading="false"></div>
 
@@ -387,7 +373,6 @@ Enfim... TDD é isso!
 
 Espero que vocês tenham gostado. :D
 
-<ul>
-<li>Versão final do código: [https://gist.github.com/2877917](https://gist.github.com/2877917)</li>
-<li>Versão final dos testes: [https://gist.github.com/2878018](https://gist.github.com/2878018)</li>
-</ul>
+* Versão final do código: [https://gist.github.com/2877917](https://gist.github.com/2877917)
+* Versão final dos testes: [https://gist.github.com/2878018](https://gist.github.com/2878018)
+

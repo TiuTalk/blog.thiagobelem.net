@@ -33,10 +33,10 @@ Isso fará com que o Apache use o arquivo <strong>erro404.php</strong> para lida
 Uma boa idéia é mandar para a página inicial do seu site. :)
 
 <h3>Saiba mais (documentação)</h3>
-<ul>
-<li>[http://httpd.apache.org/docs/2.2/mod/core.html#errordocument](http://httpd.apache.org/docs/2.2/mod/core.html#errordocument)</li>
-<li>[http://httpd.apache.org/docs/2.2/mod/mod_dir.html](http://httpd.apache.org/docs/2.2/mod/mod_dir.html)</li>
-</ul>
+
+* [core](http://httpd.apache.org/docs/2.2/mod/core.html#errordocument)
+* [mod_dir](http://httpd.apache.org/docs/2.2/mod/mod_dir.html)
+
 Se existir algum assunto relacionado a configuração do Apache que você tem dúvida, deixe seu comentário e tentarei falar sobre nos próximos artigos.
 
 Abraços e até a próxima!

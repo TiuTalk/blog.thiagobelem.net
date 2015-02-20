@@ -41,10 +41,9 @@ Se você estiver acessando a home do blog, a função [body_class()](http://code
 <h3>Listando os posts</h3>
 Para listar os posts usaremos as seguintes funções que são chamadas de "[The Loop](http://codex.wordpress.org/The_Loop)":
 
-<ul>
-<li>[have_posts()](http://codex.wordpress.org/The_Loop) - Determina se existem posts à serem exibidos</li>
-<li>[the_post()](http://codex.wordpress.org/The_Loop) - Carrega um post da lista à ser exibida</li>
-</ul>
+* [have_posts()](http://codex.wordpress.org/The_Loop) - Determina se existem posts à serem exibidos
+* [the_post()](http://codex.wordpress.org/The_Loop) - Carrega um post da lista à ser exibida
+
 A forma mais minimalista do <strong>The Loop</strong> funciona de forma bem simples:
 
 <div data-gist-id="1514368" data-gist-show-loading="false"></div>
@@ -54,14 +53,13 @@ Então.. enquanto (while) existirem posts (have_posts) à serem exibidos, carreg
 <h3>Exibindo dados do post</h3>
 Agora vamos começar a mostrar os dados do post, para isso usaremos as seguintes funções:
 
-<ul>
-<li>[the_ID()](http://codex.wordpress.org/Function_Reference/the_ID) - Imprime o ID do post</li>
-<li>[body_class()](http://codex.wordpress.org/Function_Reference/body_class)</li>
-<li>[the_permalink()](http://codex.wordpress.org/Function_Reference/the_permalink) - Imprime o permalink (url completa) do post</li>
-<li>[the_title()](http://codex.wordpress.org/Function_Reference/the_title) - Imprime o título do post</li>
-<li>[the_time()](http://codex.wordpress.org/Function_Reference/the_time) - Imprime a data/hora do post</li>
-<li>[the_content()](http://codex.wordpress.org/Function_Reference/the_content) - Imprime o conteúdo (texto) do post</li>
-</ul>
+* [the_ID()](http://codex.wordpress.org/Function_Reference/the_ID) - Imprime o ID do post
+* [body_class()](http://codex.wordpress.org/Function_Reference/body_class)
+* [the_permalink()](http://codex.wordpress.org/Function_Reference/the_permalink) - Imprime o permalink (url completa) do post
+* [the_title()](http://codex.wordpress.org/Function_Reference/the_title) - Imprime o título do post
+* [the_time()](http://codex.wordpress.org/Function_Reference/the_time) - Imprime a data/hora do post
+* [the_content()](http://codex.wordpress.org/Function_Reference/the_content) - Imprime o conteúdo (texto) do post
+
 <strong>Atenção:</strong> Essas funções só vão funcionar corretamente se você carregar o post antes, com o [The Loop](http://codex.wordpress.org/The_Loop).
 
 Vamos juntar tudo e exibir todos os dados do post, <em>like a boss</em>:
@@ -75,7 +73,7 @@ O resultado do código acima vai ser mais ou menos esse:
 <h3>Finalizando</h3>
 Nosso blog está tomando forma, na próxima parte iremos começar a falar do <strong>single.php</strong> (o template pra mostrar um post) e - talvez - vamos ver sobre menus dinâmicos.
 
-Acompanhe o template que estou criando pro meu blog, com mais algumas coisinhas (que não coloco aqui), no GitHub: [https://github.com/TiuTalk/blog.thiagobelem.net](https://github.com/TiuTalk/blog.thiagobelem.net)
+<!-- Acompanhe o template que estou criando pro meu blog, com mais algumas coisinhas (que não coloco aqui), no GitHub: [https://github.com/TiuTalk/blog.thiagobelem.net](https://github.com/TiuTalk/blog.thiagobelem.net) -->
 
 Gostou? Então comenta, compartilha e recomenda! :)
 
