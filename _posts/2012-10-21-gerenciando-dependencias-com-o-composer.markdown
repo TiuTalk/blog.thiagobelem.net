@@ -31,8 +31,9 @@ http://www.youtube.com/watch?v=NCqwLxrX_NE/
 Nessa entrevista, um dos assuntos que eu repeti várias vezes, foi sobre a organização de projetos e mencionei o [Composer](http://getcomposer.org/) algumas vezes.
 
 ## Mas afinal, o que é o Composer?
-<blockquote>Composer is a tool for dependency management in PHP. It allows you to declare the dependent libraries your project needs and it will install them in your project for you.
-</blockquote>
+
+> Composer is a tool for dependency management in PHP. It allows you to declare the dependent libraries your project needs and it will install them in your project for you.
+
 O <strong>Composer</strong> nada mais é do que um <strong>gerenciador de dependências</strong>... Com ele você define a lista de <strong>bibliotecas</strong> (e versões) das quais o seu projeto depende, e ele cuida da instalação, organização e "inclusão" das mesmas.
 
 Gerenciadores de pacotes (ou dependências) são muito comuns em outras linguagens, como é o caso do [Composer](http://getcomposer.org/) pra fazer isso no PHP! :)

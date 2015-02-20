@@ -85,8 +85,9 @@ Este evento é quase sempre necessário pois o jQuery trabalha com os elementos 
 
 Criado o nosso evento, podemos começar a desenvolver o nosso efeito de foco na lista de imagens, voltando a nossa lista de passos, começaremos pelo começo:
 
-<blockquote>Ao passar o mouse em cima de uma imagem (evento que irá disparar o efeito)
-</blockquote>
+
+> Ao passar o mouse em cima de uma imagem (evento que irá disparar o efeito)
+
 Precisamos então, criar um um evento de hover nas imagens:
 
 
@@ -104,8 +105,9 @@ Na parte em <span style="background: orange;">laranja</span> temos uma chamada a
 
 E por fim, na parte em <span style="background: lime;">verde</span>, temos o primeiro parâmetro do método <code>hover()</code>... Tudo que estiver dentro dessa parte será executado ao passar o mouse no elemento identificado pelo seletor.
 
-<blockquote>Todas as imagens se apagam...
-</blockquote>
+
+> Todas as imagens se apagam...
+
 Continuando o nosso código, vamos inserir a linha que irá escurecer (apagar / diminuir a opacidade / esmaecer) todas as imagens da lista... Para isso usaremos o método [.fadeTo()](http://api.jquery.com/fadeTo/) do jQuery.
 
 
@@ -115,8 +117,9 @@ O método <code>.fadeTo()</code> possui dois parâmetros obrigatórios: primeiro
 
 Com esse efeito, todas as imagens da lista ficarão com 30% de opacidade (70% transparentes). Perceba que escurecemos também a imagem que estamos com o mouse em cima.
 
-<blockquote>... exceto a imagem que estamos com o mouse em cima
-</blockquote>
+
+> ... exceto a imagem que estamos com o mouse em cima
+
 Agora precisamos "filtrar" esse efeito de escurecer e fazer com que ele afete todas as imagens <strong>exceto a imagem que estamos com o mouse em cima</strong>:
 
 
@@ -126,15 +129,17 @@ Perceba que inserimos o <code>.not(this)</code>, esse método [.not()](http://ap
 
 Se você [testar o script](http://jsbin.com/odaga3/2/) que fizemos até agora, perceberá que as imagens estão apagando corretamente, mas não estão acendendo novamente quando tiramos o mouse de uma das imagens.
 
-<blockquote>Ao tirar o mouse de cima da imagem
-</blockquote>
+
+> Ao tirar o mouse de cima da imagem
+
 Precisamos adicionar o segundo parâmetro do <code>.hover()</code>, este segundo parâmetro é executado quando tiramos o mouse do elemento que ativou o efeito.
 
 
 <div data-gist-id="c7cb0eaf1c5527bf8780" data-gist-show-loading="false"></div>
 
-<blockquote>Todas as imagens se acendem voltando ao estado original
-</blockquote>
+
+> Todas as imagens se acendem voltando ao estado original
+
 Agora só precisamos inserir o mesmo código que usamos para escurecer as imagens, sem precisar filtar o <code>this</code>, e mudando a opacidade para 1:
 
 

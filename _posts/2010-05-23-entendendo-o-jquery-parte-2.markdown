@@ -137,7 +137,8 @@ E o nosso exemplo longo mas prático está pronto. :)
 
 Olha como isso tudo é uma conversa com o código:
 
-<blockquote>Quando o documento carregar crie um evento de clique no a com classe "trocar" (e que estiver dentro de uma div com classe "box") e, quando esse evento for chamado, previna o comportamento padrão do navegador, vá até a lista com classe "conteudo" links que estiver logo após esse link e, se ele não estiver no meio de uma animação, troque o seu estado fechando-a ou abrindo-a
-</blockquote>
+
+> Quando o documento carregar crie um evento de clique no a com classe "trocar" (e que estiver dentro de uma div com classe "box") e, quando esse evento for chamado, previna o comportamento padrão do navegador, vá até a lista com classe "conteudo" links que estiver logo após esse link e, se ele não estiver no meio de uma animação, troque o seu estado fechando-a ou abrindo-a
+
 Espero que vocês tenham gostado! Até a próxima. E não deixem de fazer o seu pedido via comentário ou [Twitter](http://twitter.com/tiutalk), terei prazer em atendê-lo.
 

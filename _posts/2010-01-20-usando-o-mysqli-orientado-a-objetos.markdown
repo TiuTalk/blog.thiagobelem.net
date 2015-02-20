@@ -28,12 +28,14 @@ Antes de mais nada: o MySQLi só está presente na <strong>versão 4.1.3+ do MyS
 
 E vejam que coisa interessante está escrita na [Overview do MySQLi](http://br.php.net/manual/pt_BR/mysqli.overview.php):
 
-<blockquote><strong>Note:</strong> If you are using MySQL versions 4.1.3 or later it is strongly recommended that you use this extension.
-</blockquote>
+
+> <strong>Note:</strong> If you are using MySQL versions 4.1.3 or later it is strongly recommended that you use this extension.
+
 Que em tradução livre seria:
 
-<blockquote><strong>Nota:</strong> Se você está usando a versão 4.1.3 ou superior do MySQL é altamente recomendável que você use essa extensão.
-</blockquote>
+
+> <strong>Nota:</strong> Se você está usando a versão 4.1.3 ou superior do MySQL é altamente recomendável que você use essa extensão.
+
 
 ### Começando do começo: O velho modo
 Acredito que todos vocês já viram uma conexão e consulta MySQL feita da seguinte forma:

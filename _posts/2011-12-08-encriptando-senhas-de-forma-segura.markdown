@@ -23,8 +23,9 @@ Volta e meia gosto de vir aqui falar um pouquinho sobre "Segurança" e uma das c
 Hoje li [um artigo muito bom](http://net.tutsplus.com/tutorials/php/understanding-hash-functions-and-keeping-passwords-safe/) (bem antigo por sinal) no NetTuts+ e achei legal trazer algumas informações pra cá, de forma bem resumida e direta, porém recomendo muito a leitura do artigo original.
 
 ### Hashing
-<blockquote><em>Hashing</em> consiste em proteger dados (strings, números), convertendo-os em um novo dado, geralmente menor e em formato de string ou inteiro.
-</blockquote>
+
+> <em>Hashing</em> consiste em proteger dados (strings, números), convertendo-os em um novo dado, geralmente menor e em formato de string ou inteiro.
+
 Hashes geralmente são mão-única, o que significa que não há uma forma de reverter a encriptação, ou encontrar o dado original baseado no hash (resultado da encriptação).
 
 ### O problema

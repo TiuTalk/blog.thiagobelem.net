@@ -52,8 +52,9 @@ O que fizemos foi passar dois valores para a função <strong>crypt()</strong>: 
 </ol>
 Isso no vai gerar o seguinte hash:
 
-<blockquote>$2a$08$Cf1f11ePArKlBJomM0F6a.EyvTNh6W2huyQi5UZst5qsHVyi3w5x.
-</blockquote>
+
+> $2a$08$Cf1f11ePArKlBJomM0F6a.EyvTNh6W2huyQi5UZst5qsHVyi3w5x.
+
 Que é o valor que você deve salvar no banco de dados.
 
 Caso essa mesma senha seja criptografada com o mesmo salt e o mesmo custo, o resultado será idêntico... caso você mude o salt (que deve ser gerado de forma aleatória) o resultado seria diferente.

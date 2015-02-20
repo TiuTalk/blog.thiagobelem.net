@@ -37,8 +37,9 @@ Você também pode definir valores padrões para os argumentos da sua função, 
 
 <div data-gist-id="c909abdd5861b46c70b6" data-gist-show-loading="false"></div>
 
-<blockquote>Um nome de função válido começa com uma letra ou um sublinhado, seguido, seguido por qualquer número de letras, números ou sublinhado. Com uma expressão regular, seria expressado com: <strong>[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*</strong>.
-</blockquote>
+
+> Um nome de função válido começa com uma letra ou um sublinhado, seguido, seguido por qualquer número de letras, números ou sublinhado. Com uma expressão regular, seria expressado com: <strong>[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*</strong>.
+
 E então? Agora vocês já podem criar as próprias funções e adiantar a sua vida e a de quem for trabalhar com você! Não se esqueça de colocar comentários dentro de fora da função explicando o que elas fazem. Essa é uma parte muito importante: organização.
 
 #### Documentação Oficial:
