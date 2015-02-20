@@ -6,7 +6,7 @@
   var disqus_shortname = 'thiagobelemblog';
   var disqus_identifier = '{{ page.id }}';
   var disqus_title = '{{ page.title }}';
-  var disqus_url = '{{ site.baseurl }}{{ page.url }}';
+  var disqus_url = '{{ page.url | prepend: site.url }}';
 
   (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
