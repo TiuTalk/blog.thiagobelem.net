@@ -10,12 +10,12 @@
         {% if page.image %}
         <div class="article-image">
           <div class="post-image-image" style="background-image: url({% if page.image %}{{ page.image }}{% endif %})">
-            Article Image
+            {{ page.title }}
           </div>
           <div class="post-meta">
             <h1 class="post-title">{{ page.title }}</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
+              <div class="author-image" style="background-image: url({{ site.author_image }})">{{ site.author }}</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
               em
               <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
@@ -31,7 +31,7 @@
           <div class="post-meta">
             <h1 class="post-title">{{ page.title }}</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
+              <div class="author-image" style="background-image: url({{ site.author_image }})">{{ site.author }}</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
               em
               <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
@@ -81,10 +81,10 @@
             <h5 class="index-headline featured"><span>Acompanhe!</span></h5>
 
             <footer class="site-footer">
-              <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Assine o Feed RSS.</span></a>
+              <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Assine o Feed RSS</span></a>
 
               <div class="inner">
-                <section class="copyright"><br />&copy; {{ site.time | date: '%Y' }} Todos os direitos reservados.</section>
+                <section class="copyright"><br />&copy; {{ site.time | date: '%Y' }} Todos os direitos reservados</section>
               </div>
             </footer>
           </div>
