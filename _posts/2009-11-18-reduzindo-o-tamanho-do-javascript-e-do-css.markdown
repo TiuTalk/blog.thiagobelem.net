@@ -29,7 +29,7 @@ Uma vez falei aqui sobre como você poderia otimizar o carregamento do seu site,
 <h3>Yahoo YUI Compressor</h3>
 O [Yahoo YUI Compressor](http://developer.yahoo.com/yui/compressor/) é um compressor/ofuscador de código criado pela Yahoo para reduzir a quantidade de "lixo" (compressor) e embaralhar (ofuscador) um código, deixando ele consideravelmente mais leve e rápido.
 
-Trago pra vocês o link do <strong>Yahoo YUI Online Compressor</strong>: [http://www.refresh-sf.com/yui/](http://www.refresh-sf.com/yui/)
+Trago pra vocês o link do <strong>Yahoo YUI Online Compressor</strong>: [http://refresh-sf.com/](http://refresh-sf.com/)
 
 Com ele você faz o Upload dos seus JS ou CSS e ele junta todos os arquivos em um só, bem mais level e limpo... Aí é só trocar todas as chamadas dos arquivos pela chamada (HTML) ao arquivo que ele criou e pronto! Seu site tá mais leve! :)
 

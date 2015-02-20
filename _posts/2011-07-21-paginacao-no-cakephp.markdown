@@ -30,7 +30,7 @@ tags:
 ---
 Opa opa! Estou de volta :)
 
-Tenho recebido algumas dúvidas sobre como usar/fazer [paginação no CakePHP](http://book.cakephp.org/view/1231/Pagination), e resolvi ensinar pra vocês como eu resolvo esse problema...
+Tenho recebido algumas dúvidas sobre como usar/fazer [paginação no CakePHP](http://book.cakephp.org/2.0/en/core-libraries/components/pagination.html), e resolvi ensinar pra vocês como eu resolvo esse problema...
 
 Você vai que precisamos de exatamente <strong>duas linhas</strong> pra fazer uma consulta paginada no CakePHP, e mais duas linhas pra mostrar os links de "pŕoximo" e "anterior". :)
 
@@ -123,7 +123,7 @@ echo $this->Paginator->next('Mais antigas »', null, null, array('class' => 'des
 
 Na linha 1 e 3 nós mostramos os links para a <strong>próxima página</strong> e para a <strong>página anterior</strong>. Já na linha 2 nós mostramos aquela lista de números das páginas:<strong> 1, 2, 3, 4</strong> cada uma com um link!
 
-O <strong>PaginatorHelper</strong> tem muitas outras opções e customizações, não deixe de consultar a [documentação](http://api.cakephp.org/class/paginator-helper).
+O <strong>PaginatorHelper</strong> tem muitas outras opções e customizações, não deixe de consultar a [documentação](http://book.cakephp.org/2.0/en/core-libraries/helpers/paginator.html).
 
 <h3>Quer saber mais sobre o CakePHP?</h3>
 [](http://assando-sites.com.br/)

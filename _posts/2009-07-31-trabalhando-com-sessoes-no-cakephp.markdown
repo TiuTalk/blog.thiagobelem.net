@@ -20,7 +20,7 @@ Fala pessoal,
 
 Pretendo falar um pouquinho mais sobre o <strong>CakePHP</strong> nós próximos dias... Espero que alguém leia e goste! Não vou começar com tutoriais básicos para iniciar com o Cake mas já vou falando de algumas coisas simples que todo mundo vai ler um dia. :)
 
-Hoje vou mostrar como é uso dos <strong>métodos</strong> do component [Session](http://book.cakephp.org/view/173/Sessions) que te ajuda a manipular os valores salvos na sessão de forma mais segura e orientada à objetos.
+Hoje vou mostrar como é uso dos <strong>métodos</strong> do component [Session](http://book.cakephp.org/2.0/en/core-libraries/components/sessions.html) que te ajuda a manipular os valores salvos na sessão de forma mais segura e orientada à objetos.
 
 <h3>Pegando todos os valores da sessão</h3>
 Normalmente, fora do Cake, você trabalharia com a variável global <strong style="background: gray; color: lime">$_SESSION</strong>... Agora, com o Cake, você nem precisa se lembrar do nome dela... Veja como pegamos todos os valores da sessão de dentro de um <strong>controller</strong>:

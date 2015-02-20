@@ -100,8 +100,8 @@ Agora você já fez o login e tem o ID do perfil do site que você quer pegar os
 É claro que esse codigo parece um pouco complexo pra quem está começando.. Vou tentar explicar os argumentos do método requestReportData:
 
 1 - Primeiro tempos o ID do perfil do site que você já pegou antes usando o requestAccountData()
-2 - Aqui temos a lista de dimensões que estamos buscando. No primeiro exemplo usamos 'month' para pegar o total de cada mês do período especificado, e no segundo usamos 'day' para pegar o total referente a cada dia do período. Veja aqui a [lista completa](http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html) de dimensões que podem ser usadas.
-3 - No terceiro parâmetro temos as métricas, que são os valores que estamos buscando... Nos dois casos usamos 'pageviews' e 'visits'. Veja aqui uma [lista completa](http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html) de métricas que podem ser usadas.
+2 - Aqui temos a lista de dimensões que estamos buscando. No primeiro exemplo usamos 'month' para pegar o total de cada mês do período especificado, e no segundo usamos 'day' para pegar o total referente a cada dia do período. Veja aqui a [lista completa](https://developers.google.com/analytics/devguides/reporting/core/dimsmets) de dimensões que podem ser usadas.
+3 - No terceiro parâmetro temos as métricas, que são os valores que estamos buscando... Nos dois casos usamos 'pageviews' e 'visits'. Veja aqui uma [lista completa](https://developers.google.com/analytics/devguides/reporting/core/dimsmets) de métricas que podem ser usadas.
 4 - O quarto parâmetro é a ordem dos resultados.
 5 - O quinto parâmetro é o filtro. (Raramente usado)
 6 e 7 - São os parâmetros que definem o período dos relatórios no formato AAAA-MM-DD.

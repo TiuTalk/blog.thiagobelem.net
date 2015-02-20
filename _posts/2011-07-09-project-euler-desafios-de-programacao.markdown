@@ -53,7 +53,7 @@ Segue a descrição e a tradução do problema:
 
 Encontre a soma de todos os múltiplos de 3 ou 5 abaixo de 1000.
 </blockquote>
-Este é um problema bem simples, muito parecido com o [O que é Coding Dojo?](http://pet.inf.ufsc.br/dojo/o-que-eh-dojo/)) para iniciantes.
+Este é um problema bem simples, muito parecido com o [O que é Coding Dojo?](http://apoie.org/Dojo.html) para iniciantes.
 
 <h3>Solução em PHP</h3>
 Antes de qualquer coisa, eu não sou um bom matemático... Na maior parte do tempo eu não vejo "coisas" quando olho para um monte de números... Provavelmente existem soluções mais elegantes que essa.

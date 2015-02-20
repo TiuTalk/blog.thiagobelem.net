@@ -23,7 +23,7 @@ tags:
 ---
 Fala pessoal, tudo bom?
 
-Hoje vou tentar explicar pra vocês como configurar o [AuthComponent](http://book.cakephp.org/pt/view/1250/Autentica%C3%A7%C3%A3o) do <strong>CakePHP</strong> pra criar um sistema de login bem simples mas muito eficiente.
+Hoje vou tentar explicar pra vocês como configurar o [AuthComponent](http://book.cakephp.org/2.0/en/core-libraries/components/authentication.html) do <strong>CakePHP</strong> pra criar um sistema de login bem simples mas muito eficiente.
 
 Na minha opinião, o maior problemas de usar o Auth em um sistema/aplicação em português é que seu <strong>Model</strong> de usuários vai se chamar "Usuario", "Cliente" ou "Administrador" <strong style="color: red">*</strong> e não "User", então você precisa mudar algumas configurações pra ele [o Auth] funcione de acordo.
 
@@ -186,7 +186,7 @@ Perceba que utilizamos o método <strong>Auth->password()</strong> que faz exata
 <h3>Protegendo apenas um prefixo <span style="color: gray">(opcional)</span></h3>
 Agora todo o seu sistema estará "bloqueado", e você precisa fazer login para acessar qualquer tela.
 
-Caso você queira proteger apenas um [prefixo](http://book.cakephp.org/pt/view/950/Roteando-prefixos) (como por exemplo: admin) e não exigir login enquanto o usuário não estiver acessando um action com esse prefixo, coloque o seguinte código após a configuração do AuthComponent:
+Caso você queira proteger apenas um [prefixo](http://book.cakephp.org/2.0/en/development/routing.html#prefix-routing) (como por exemplo: admin) e não exigir login enquanto o usuário não estiver acessando um action com esse prefixo, coloque o seguinte código após a configuração do AuthComponent:
 
 
 {% highlight php linenos %}

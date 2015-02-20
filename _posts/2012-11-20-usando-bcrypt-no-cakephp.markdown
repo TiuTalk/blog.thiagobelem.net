@@ -20,7 +20,7 @@ Recentemente escrevi um pequeno artigo falando sobre as [vantagens e utilizaçã
 E agora gostaria de mostrar pra vocês como é fácil hashear senhas usando o <strong>bcrypt</strong> dentro do [CakePHP](/cakephp).
 
 <h2>Versão 2.3+</h2>
-O [versão 2.3 do CakePHP](https://github.com/cakephp/cakephp/tree/2.3), que hoje (20/11) ainda está em desenvolvimento.
+O [versão 2.3 do CakePHP](https://github.com/cakephp/cakephp/tree/2.3.0), que hoje (20/11) ainda está em desenvolvimento.
 
 <h2>Habilitando e configurando o AuthComponent</h2>
 A primeira coisa que você precisa fazer, é configurar o [AuthComponent](http://book.cakephp.org/2.0/en/core-libraries/components/authentication.html) pra usar o seu model de usuários e o <strong>BlowfishAuthenticate</strong> (ao invés do FormAuthenticate):

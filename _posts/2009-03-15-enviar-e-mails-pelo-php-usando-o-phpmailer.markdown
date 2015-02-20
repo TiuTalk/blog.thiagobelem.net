@@ -17,7 +17,7 @@ O PHPMailer é uma classe pronta para envio de e-mails através do PHP via conex
 
 Primeiro você precisa fazer o download da última versão dele, vá [site do script](http://phpmailer.worxware.com/).
 
-> **Nota:** Nesse tutorial usarei a versão 2.3 ([download](http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/Previous%20Versions/PHPMailer%20v2.3%20for%20PHP5_6/phpMailer_v2.3.zip/download)) do **PHPMailer** que é a última versão até agora.
+> **Nota:** Nesse tutorial usarei a versão 2.3 do [PHPMailer](https://github.com/PHPMailer/PHPMailer) que é a última versão até agora.
 
 Faça o download, descompacte o arquivo e coloque os arquivos `class.phpmailer.php` e `class.smtp.php` em uma pasta chamada `phpmailer` dentro do seu site.
 

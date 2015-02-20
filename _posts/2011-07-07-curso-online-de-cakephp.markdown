@@ -33,9 +33,9 @@ tags:
 ---
 Fala minha gente! :)
 
-Essa semana abriram as inscrições para o curso [Assando sites com CakePHP](http://curso-cakephp.com.br/), um curso online que eu criei a alguns meses.
+Essa semana abriram as inscrições para o curso [Assando sites com CakePHP](http://assando-sites.com.br/), um curso online que eu criei a alguns meses.
 
-Inscrições abertas até <strong>31 de julho</strong>: [http://curso-cakephp.com.br/inscreva-se](http://curso-cakephp.com.br/inscreva-se)
+Inscrições abertas até <strong>31 de julho</strong>: [http://assando-sites.com.br/](http://assando-sites.com.br/)
 
 <h3>Para quem é o curso?</h3>
 Se você sabe o básico do PHP e conhece os conceitos de <strong>Orientação à Objetos</strong>, este curso foi feito pra você! :)
@@ -56,7 +56,7 @@ O curso foi montado em uma agenda de <strong>cinco aulas</strong>, de <strong>tr
 
 Após esse período você ainda terá a sua disposição um canal de comunicação direto comigo e com os outros participantes do curso para tirar qualquer dúvida ou compartilhar seu progresso.
 
-As aulas da [próxima turma](http://curso-cakephp.com.br/inscreva-se) serão entre os dias <strong>07 de agosto</strong> e <strong>04 de setembro</strong>.
+As aulas da [próxima turma](http://assando-sites.com.br/) serão entre os dias <strong>07 de agosto</strong> e <strong>04 de setembro</strong>.
 
 <h3>E o que você vai ensinar?</h3>
 O meu objetivo com esse curso é ensinar todo o necessário para você <strong>desenvolver um site utilizando CakePHP</strong> de forma correta e segura, de forma extremamente rápida.
@@ -66,7 +66,7 @@ Passarei por todas as funcionalidades e facilidades que o <strong>CakePHP</stron
 Um dos fatos mais interessantes do curso é que você vai conseguir <strong>publicar o seu primeiro site</strong> logo após a primeira aula, ou seja, em apenas três horas!
 
 <h2>Garanta já sua vaga na próxima turma!</h2>
-As [inscrições estarão abertas](http://curso-cakephp.com.br/) até o <strong>final de julho</strong> ou enquanto durarem as vagas.
+As [inscrições estarão abertas](http://assando-sites.com.br/) até o <strong>final de julho</strong> ou enquanto durarem as vagas.
 
 Aproveite a promoção e ganhe desconto até <strong>13 de julho</strong>.
 
