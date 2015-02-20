@@ -12,7 +12,7 @@ Hoje vou ensinar você, nobre programador, a manipular pastas usando apenas o PH
 
 No PHP já existe uma função para cada tarefa que irei ensinar aqui hoje: <strong>criar</strong>, <strong>deletar</strong>, <strong>mover</strong> e <strong>renomear </strong>pastas.
 
-<h4>Criando pastas</h4>
+#### Criando pastas
 Para criar uma pasta exiset a função <strong>mkdir()</strong> que é bem fácil de usar... O caminho da pasta a ser criada é - normalmente - relativo ao script atual, e durante a criação você pode definir os níveis de permissões da pasta (CHMOD) e se essa criação vai ser <em>recursive</em> (veja mais a diante).
 
 Para criarmos uma pasta no mesmo diretório do script atual, fazemos das seguintes maneiras:
@@ -34,7 +34,7 @@ Agora suponhamos que você precise criar duas pastas, mas que seja uma dentro da
 
 Repare que, na segunda forma de se criar uma pasta, definimos o terceiro parâmetro (criação recursiva) como true, isso faz com que o PHP vá criando as pastas, uma a uma, de forma automática caso elas não existam.
 
-<h4>Deletando pastas</h4>
+#### Deletando pastas
 Se você quiser deletar pastas é só usar função <strong>rmdir()</strong> para isso. Porém você precisa tomar um cuidado antes: a pasta precisa estar vazia (não conter outros arquivos e/ou pastas dentro dela) e você precisa ter a permissão de usuário (CHMOD) necessária para essa operação.
 
 Veja um exemplo de como deletar uma das pastas criadas nos exemplos anteriores:
@@ -44,13 +44,13 @@ Veja um exemplo de como deletar uma das pastas criadas nos exemplos anteriores:
 
 Em um futuro próximo ensinarei a manipular arquivos também e você poderá fazer a sua super-função para deletar a pasta e tudo que estiver dentro. Aguarde.
 
-<h4>Renomeando pastas</h4>
+#### Renomeando pastas
 Pra renomear pastas também não tem mistério, é só usar a função <strong>rename()</strong> que também pode ser usada para renomear arquivos:
 
 
 <div data-gist-id="48977b173b94034bf22c" data-gist-show-loading="false"></div>
 
-<h4>Movendo pastas</h4>
+#### Movendo pastas
 Não.. Não existe função para "mover" uma pasta por que, na verdade, o que você faz é renomeá-la... Vejamos um exemplo:
 
 Temos a pasta site e, dentro dela, temos duas pastas: imagens e blog. Queremos mover a pasta blog para fora da pasta site... O script rodado está fora da pasta site também, é só fazermos assim:
@@ -62,7 +62,7 @@ Temos a pasta site e, dentro dela, temos duas pastas: imagens e blog. Queremos m
 
 E aí.. gostaram? Comentem!
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [mkdir()](http://br.php.net/mkdir)</strong> » Cria uma pasta</li>
 <li><strong>Função [rmdir()](http://br.php.net/rmdir)</strong> » Deleta uma pasta</li>

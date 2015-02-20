@@ -50,7 +50,7 @@ Com isso, você tem o nome do usuário usado, o IP e a data e hora de onde/quand
 
 Até a próxima!
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [date()](http://br2.php.net/manual/en/function.date.php)</strong> » Função para formatar datas</li>
 <li><strong>Função [mysql_escape_string()](http://br.php.net/mysql_escape_string)</strong> » Prepara uma string para o MySQL</li>

@@ -22,7 +22,7 @@ Lista oficial de novidades: [http://www.php.net/manual/en/migration54.new-featu
 ## O que há de novo? Por que eu deveria atualizar?
 Antes de citar qualquer motivo específico, digo o motivo mais óbvio de todos: segurança e performance!
 
-<h4>Segurança e Performance</h4>
+#### Segurança e Performance
 Toda nova versão (seja ela do WordPress, Java ou PHP) traz melhorias significativas à segurança e performance do seu sistema/aplicativo... só isso deveria ser motivo pra você se dar ao trabalho de <strong>manter tudo atualizado na última versão, sempre</strong>. Não atualizar significa assinar o <em>mea culpa</em> caso seu sistema seja invadido.
 
 ## Traits (ou características)

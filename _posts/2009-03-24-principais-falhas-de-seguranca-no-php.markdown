@@ -17,7 +17,7 @@ Não prometo deixar o seu sistema tão protegido quanto o [](/arquivos/2009/03/c
 
 Se você se identificar com algumas dessas medidas não saia correndo e se jogue da ponte... Faça os devidos ajustes e tudo ficará bem.
 
-<h4>Cuidados com a URL - Parte I</h4>
+#### Cuidados com a URL - Parte I
 Uma falha muito comum são aqueles sites que, tentando usar um sistema "legal", acabam abusando da sorte... São sites que incluem o conteúdo <span style="color: #999999;">(via <strong>include()</strong>)</span> baseado em uma variável do método $_GET. Exemplo:
 
 
@@ -38,7 +38,7 @@ Evitar que isso aconteça é extremamente simples: é só criar um <em>array </e
 
 Viu? Adicionamos uma única linha e mais uma condição e está tudo resolvido. Com isso, se o atacante colocar lá o site dele na URL do seu site o PHP vai identificar que a variável <strong>$_GET['pagina']</strong> existe mas não está no <em>array </em><strong>$permitidos</strong>, então ele vai incluir o arquivo <strong>home.php</strong>.
 
-<h4>Cuidados com a URL - Parte II</h4>
+#### Cuidados com a URL - Parte II
 Outro erro comum é quando passamos parâmetros pela URL, por exemplo: o ID de uma categoria ou de um produto que, mais tarde, será buscado direto no banco para recolher algumas informações.
 
 Geralmente o formato é o seguinte:
@@ -85,7 +85,7 @@ Caso você passe parâmetros via URL que são strings e não números inteiros, 
 
 Com isso você evita o uso de aspas e caracteres protegidos do MySQL mantendo a sua <em>query </em>segura. Esse caso também vale para formulários dos quais os dados vão direto para consultas MySQL <span style="color: #999999;">(formulários de login, cadastro e comentários, por exemplo)</span>.
 
-<h4>Sobre Usuários e Senhas</h4>
+#### Sobre Usuários e Senhas
 Outro ponto muito importante é não exibir, em momento algum, o nome de login <span style="color: #999999;">(usuário)</span> de algum usuário cadastrado no sistema. Lembre-se que para um usuário conseguir invadir a conta do outro ele precisa de duas coisas: usuário <span style="color: #999999;">(ou e-mail)</span> e a senha.. Se ele souber o usuário já tem 50% de sucesso.
 
 Vale lembrar também que você <strong>não precisa</strong> deixar a senha do usuário na forma real quando salva-la no banco. É muito mais seguro salvar um <strong>md5() </strong>ou <strong>sha1()</strong> da senha no banco e quando for necessário fazer a validação do usuário você também gera o <strong>md5()</strong> ou <strong>sha1()</strong> da senha que ele digitou e compara com o que há no banco. Assim, se por ventura alguém conseguir invadir e pegar todos os registros do banco de usuários, o máximo que ele irá conseguir são o usuário/e-mail e uma senha criptografada.

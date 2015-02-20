@@ -79,7 +79,7 @@ Agora vamos voltar a nossa URL Amigável:
 
 <code>RewriteRule <span style="background: yellow;">^produtos/([a-z0-9-]+)/([0-9]+)/?$</span> <span style="background: lime;">/produtos.php?id=$2&nome=$1</span> <span style="background: cyan;">[NC]</span></code>
 
-<h4>Primeira parte</h4>
+#### Primeira parte
 Na primeira parte, em amarelo, temos <code style="background: yellow;">^produtos/([a-z0-9-]+)/([0-9]+)/?$</code>, o que isso significa?
 
 Vamos dividir essa parte em pequenos blocos e explicar cada um:
@@ -92,7 +92,7 @@ Vamos dividir essa parte em pequenos blocos e explicar cada um:
 
 Isso tudo significa que, com a primeira parte, validamos strings como <code>/produtos/camiseta-azul/2/</code>, <code>/produtos/bola/89/</code> e <code>/produtos/cachecol-rosa-da-2a-africa-do-sul/666/</code> e invalidamos strings como <code>/produtos/palhaço/a/</code>,  <code>/produtos/camisa/</code> ou <code>/produtos/camiseta legal/187a/</code>.
 
-<h4>Segunda parte</h4>
+#### Segunda parte
 Na segunda parte, em amarelo, temos <code style="background: lime;">/produtos.php?id=$2&nome=$1</code>, o que isso significa?
 
 Significa que iremos passar os valores encontrados na primeira parte para uma nova URL interna, ou seja, chamaremos o arquivo <code style="background: lime;">/produtos.php</code> e passaremos dois parâmetros via <strong>GET</strong> para ele:
@@ -110,7 +110,7 @@ Perceba que os valores (<strong>2</strong> e <strong>camiseta-azul</strong>) for
 
 Quer coisa melhor que isso minha gente?!
 
-<h4>Terceira parte</h4>
+#### Terceira parte
 Na terceira parte, em azul claro, temos <code style="background: cyan;">[NC]</code>, que ja foi explicado antes e significa "<strong>N</strong>o <strong>C</strong>ase" ou "Sem distinção de minúsculas ou maiúsculas". :)
 
 --

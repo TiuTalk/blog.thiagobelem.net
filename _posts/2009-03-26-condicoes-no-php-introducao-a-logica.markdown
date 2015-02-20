@@ -10,14 +10,14 @@ tags: []
 ---
 Nesse post vou falar um pouco sobre proposições lógicas, operadores lógicos e estruturas condicionais... Tudo isso vai ajudar e entender como funcionam as condições do PHP.
 
-<h4>Proposições Lógicas</h4>
+#### Proposições Lógicas
 Uma proposição lógica é uma sentença que tem como resultado apenas dois valores: verdadeiro ou falso. Pra lógica não existem repostas como "mais ou menos", "um pouco", "depende", "quase"... Em outras palavras: É ou não é. Verdadeiro ou falso. 0 ou 1. Sim ou não. Se existirem repostas fora de "verdadeiro" e "falso" não é uma proposição lógica.
 
 Por exemplo a frase "O Sol é quente" só pode ser verdadeira ou falsa. O mesmo ocorre para "Está chovendo". Ambas são proposições lógicas <strong>simples</strong>.
 
 Existem proposições lógicas mais complexas, por exemplo, "O Sol é quente e está chovendo", essa afirmação só vai ser verdadeira se ambos os fatos forem verdadeiros. Ou o exemplo "O Sol é quente ou está chovendo" que só vai ser verdadeira quando - no mínimo - um dos fatos for verdadeiro.
 
-<h4>Operadores Lógicos</h4>
+#### Operadores Lógicos
 Existem palavras "especiais" que servem como um operador lógico e unem mais de uma proposição lógica na mesma afirmação, por exemplo, "O Sol é quente <strong><span style="color: #ff6600;">e</span></strong> a está chovendo", nessa proposição lógica o operador lógico é o "<strong><span style="color: #ff6600;">e</span></strong>" que obriga as duas afirmações serem verdadeiras para a <strong>frase toda</strong> ser considera verdadeira também.
 
 Outro operador lógico importante é o "<strong><span style="color: #ff6600;">ou</span></strong>" que implica na necessidade de apenas um dos fatos serem verdadeiros para toda a afirmação ser validada.
@@ -28,7 +28,7 @@ Existem dois exemplos práticos para um bom entendimento do "<strong><span style
 <li>O pai <strong>rígido </strong>falaria pro filho: "<em>Você só vai jogar futebol se fizer o dever de casa <span style="color: #ff6600;"><strong>e</strong></span> ajudar a sua mãe </em><em><span style="color: #ff6600;"><strong>e</strong></span></em><em> tomar banho</em>"</li>
 <li>O pai <strong>legal </strong>falaria pro filho: "<em>Você só vai jogar futebol se fizer o dever de casa </em><em><span style="color: #ff6600;"><strong>ou</strong></span></em><em> ajudar a sua mãe </em><em><span style="color: #ff6600;"><strong>ou</strong></span></em><em> tomar banho</em>"</li>
 </ul>
-<h4>Condições no PHP</h4>
+#### Condições no PHP
 No PHP existe a possibilidade de você executar um grupo X de comandos baseando-se em uma condição...
 
 Usando um exemplo da vida real, parte do algoritmo da troca de lâmpada: "<em>Se a lâmpada está quente, espere 10 minutos</em>"... A condição é "<strong>lâmpada está quente</strong>" (proposição lógica simples) e implicará (ou não, dependendo do seu resultado) na execução da ação "<strong>espere 10 minutos</strong>".

@@ -41,7 +41,7 @@ Vale lembrar que esse tempo calculado pelo php <strong>não é</strong> o tempo 
 
 8-)
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [microtime()](http://br.php.net/microtime)</strong> » Retorna os microsegundos desde 1970</li>
 <li><strong>Função [explode()](http://us.php.net/explode)</strong> » Quebra uma string usando um(ns) carectere(s) como separador</li>

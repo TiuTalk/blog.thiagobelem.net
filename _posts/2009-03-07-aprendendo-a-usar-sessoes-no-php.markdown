@@ -46,7 +46,7 @@ Com isso você tem total controle das sessões no seu site e pode salvar, por ex
 
 Espero que tenham gostado e adoraria que usassem o que aprenderam aqui.
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [session_start()](http://br.php.net/session_start)</strong> » Inicia a sessão</li>
 <li><strong>Função [unset()](http://us.php.net/unset)</strong> » Deleta uma variável do PHP</li>

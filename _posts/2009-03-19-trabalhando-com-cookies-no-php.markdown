@@ -58,7 +58,7 @@ Amanhã tem mais... muito mais!
 
 Até a próxima ;-)
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [setcookie()](http://br.php.net/setcookie)</strong> » Cria e deleta cookies</li>
 <li><strong>Função [isset()](http://br.php.net/isset)</strong> » Verifica se uma variável existe</li>

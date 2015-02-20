@@ -49,7 +49,7 @@ Quando você for usar a classe para manipular uma imagem você precisa, claro, c
 Feito isso você carregou a imagem para e memória do PHP.
 
 
-<h4>Redimensionando Imagens</h4>
+#### Redimensionando Imagens
 Depois de carregada uma imagem pode ser redimensionada... Existem três tipos de redimensionamento:
 
 <ul>
@@ -76,7 +76,7 @@ Existe ainda um quarto parâmetro que é a "direção" do redimensionamento, os 
 <li><strong style="color: #B40000">up</strong> - A imagem será redimensionada apenas <strong>quando ela for meno</strong> que as dimensões de destino</li>
 </ul>
 
-<h4>Cropando (cortando) Imagens</h4>
+#### Cropando (cortando) Imagens
 Você também pode cortar uma imagem carregada... O <strong>crop()</strong> é um dos métodos mais interessantes da WideImage, e usá-lo em conjunto com o método <strong>resize()</strong> é devastador...
 
 O <strong>crop()</strong> tem quatro parâmetros: <strong>coorenada X</strong> onde o corte irá começar, <strong>coordenada Y</strong> onde o corte irá começar, <strong>largura</strong> do corte e <strong>altura</strong> do corte.
@@ -103,7 +103,7 @@ Se você gostar, também pode fazer tudo de uma vez, o que é bem mais interessa
 <div data-gist-id="95587373cfc090ab34ff" data-gist-show-loading="false"></div>
 
 
-<h4>Salvando Imagens</h4>
+#### Salvando Imagens
 Você já carregou sua imagem, redimensionou e cropou ela.. Agora só falta tirar ela da memória e salvar ela em um arquivo, substituindo (ou não) o anterior... E é assim que você faz isso:
 
 <div data-gist-id="d552a16d05fb35aa6107" data-gist-show-loading="false"></div>
@@ -112,12 +112,12 @@ Quando a imagem for salva em JPG você também pode definir a qualidade da image
 
 <div data-gist-id="609fe7a6aa749c13f280" data-gist-show-loading="false"></div>
 
-<h4>Enviando Imagens para o Navegador</h4>
+#### Enviando Imagens para o Navegador
 Você também pode enviar imagens diretamente para o navegador, isso funciona bem quando você quer manipular uma imagem e exibí-la sem precisar salvá-la em um arquivo novo... É só tirar ela da memória e jogar para o navegador, assim:
 
 <div data-gist-id="ba6e41d34556d59cbf13" data-gist-show-loading="false"></div>
 
-<h4>Outros Exemplos</h4>
+#### Outros Exemplos
 Veja aqui um exemplo onde carregamos uma imagem do HD, redimensionamos, cropamos e salvamos no mesmo local, substituindo a anterior:
 
 <div data-gist-id="837aa01e67465786b299" data-gist-show-loading="false"></div>

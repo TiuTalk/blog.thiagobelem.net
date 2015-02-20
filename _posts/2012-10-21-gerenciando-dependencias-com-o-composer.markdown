@@ -107,7 +107,7 @@ Os pacotes instalados foram todos colocados em uma pasta "<strong>vendor</strong
 ## <span style="color: #999999;">Passo 4</span> - Usando as bibliotecas
 Agora é só incluir o <strong>autoload.php</strong> em qualquer lugar do seu projeto e sair usando as bibliotecas:
 
-<h4>Usando o Doctrine</h4>
+#### Usando o Doctrine
 
 <div data-gist-id="3928244" data-gist-show-loading="false"></div>
 
@@ -115,7 +115,7 @@ Não vou entrar nos detalhes de utilização do <strong>Doctrine</strong>, apena
 
 Para mais informações sobre o <strong>Doctrine</strong>, consulte a documentação oficial: [www.doctrine-project.org/](http://www.doctrine-project.org/)
 
-<h4>Usando o Twig</h4>
+#### Usando o Twig
 
 <div data-gist-id="3928259" data-gist-show-loading="false"></div>
 

@@ -39,19 +39,19 @@ A definição de uma cron job consiste em uma linha com 6 valores separados por 
 
 Vamos a alguns exemplos de configuração de tempo antes de criar a cron em si:
 
-<h4>Cron Job que rode todo dia as 06:00am</h4>
+#### Cron Job que rode todo dia as 06:00am
 
 <div data-gist-id="27c4a207d7970ef6aaaa" data-gist-show-loading="false"></div>
 
-<h4>Cron Job que rode as 12:30am de segunda e sexta</h4>
+#### Cron Job que rode as 12:30am de segunda e sexta
 
 <div data-gist-id="76120464eff10d972c3f" data-gist-show-loading="false"></div>
 
-<h4>Cron Job que rode a meia-noite de três em três dias</h4>
+#### Cron Job que rode a meia-noite de três em três dias
 
 <div data-gist-id="8c11fd5d9f5dd6ac428f" data-gist-show-loading="false"></div>
 
-<h4>Cron Job que rode todo dia a cada duas horas</h4>
+#### Cron Job que rode todo dia a cada duas horas
 
 <div data-gist-id="339633fc7d736a92e4d0" data-gist-show-loading="false"></div>
 

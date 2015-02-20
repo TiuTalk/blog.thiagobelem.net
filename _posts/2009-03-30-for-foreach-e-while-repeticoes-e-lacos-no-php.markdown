@@ -10,7 +10,7 @@ tags: []
 ---
 Hoje vou falar sobre algumas funções muito utilizadas no PHP: repetições e laços (<em>loops</em>). Falarei sobre o <strong>for()</strong>, <strong>foreach()</strong> e <strong>while()</strong>.
 
-<h4>Usando o for()</h4>
+#### Usando o for()
 Com o for você pode, por exemplo, repetir um ou mais comandos durante X vezes.. Por exemplo:
 
 
@@ -28,7 +28,7 @@ O <strong>for()</strong> pode ser usado, por exemplo, para montar a exibição d
 
 Veja mais: [Documentação do for()](http://br2.php.net/manual/pt_BR/control-structures.for.php)
 
-<h4>Usando o foreach()</h4>
+#### Usando o foreach()
 O <strong>foreach()</strong> é extremamente útil, pois com ele você executa um grupo de comandos para cada elemento de um array:
 
 
@@ -45,7 +45,7 @@ O exemplo acima irá "pular" o elemento que tiver o valor igual a "João", exibi
 
 Veja mais: [Documentação do foreach()](http://br2.php.net/manual/pt_BR/control-structures.foreach.php)
 
-<h4>Usando o while()</h4>
+#### Usando o while()
 O while() pode ser usado (ou não) da mesma forma que o for()... A diferença é que nele só é especificado a condição, veja um exemplo:
 
 

@@ -56,7 +56,7 @@ Acredito que eu não tenha falado de nem metade de todas as funções para manip
 
 Abraços e até a próxima!
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [date()](http://br2.php.net/manual/en/function.date.php)</strong> » Função para formatar datas</li>
 <li><strong>Função [time()](http://br.php.net/time)</strong> » Retorna o UNIX TIMESTAMP atual</li>

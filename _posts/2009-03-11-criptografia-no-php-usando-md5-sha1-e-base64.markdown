@@ -50,7 +50,7 @@ Viram como é simples? Com esses recursos é possível deixar a aplicação bem 
 
 No próximo post explicarei como criar as suas próprias funções no PHP. Até lá!
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [md5()](http://br.php.net/md5)</strong> » Hash de mão única</li>
 <li><strong>Função [sha1()](http://br.php.net/sha1)</strong> » Hash de mão única</li>

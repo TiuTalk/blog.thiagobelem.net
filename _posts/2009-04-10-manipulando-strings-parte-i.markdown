@@ -10,7 +10,7 @@ tags: []
 ---
 Eu diria que essa é uma das partes mais legais do PHP: brincar com as strings. São várias funções úteis para várias tarefas e por isso vou dividir a explicação delas em partes pra não ficar um post muito grande. :)
 
-<h4>Função substr()</h4>
+#### Função substr()
 O <strong>substr()</strong> serve para você pegar apenas uma parte/pedaço/fatia da string.
 
 Ele tem, normalmente, 3 argumentos: A string que será cortada (1), o início do corte (2) e o fim do corte (3).
@@ -23,7 +23,7 @@ Veja alguns exemplos de uso:
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.substr.php](http://br.php.net/manual/pt_BR/function.substr.php)
 
-<h4>Função strlen()</h4>
+#### Função strlen()
 O <strong>strlen()</strong> serve para você saber quantos caracteres uma string tem.
 
 Ele só tem um argumento: A string a ser medida (1).
@@ -36,7 +36,7 @@ Veja alguns exemplos de uso:
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.strlen.php](http://br.php.net/manual/pt_BR/function.strlen.php)
 
-<h4>Função strtolower()</h4>
+#### Função strtolower()
 O <strong>strtolower()</strong> serve para você converter toda a string para caixa-baixa (minúsculas).
 
 Ele só tem um argumento: A string que será convertida (1).
@@ -47,7 +47,7 @@ Ele só tem um argumento: A string que será convertida (1).
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.strtolower.php](http://br.php.net/manual/pt_BR/function.strtolower.php)
 
-<h4>Função strtoupper()</h4>
+#### Função strtoupper()
 O <strong>strtoupper()</strong> serve para você converter toda a string para caixa-alta (maiúsculas).
 
 Ele só tem um argumento: A string que será convertida (1).
@@ -58,7 +58,7 @@ Ele só tem um argumento: A string que será convertida (1).
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.strtoupper.php](http://br.php.net/manual/pt_BR/function.strtoupper.php)
 
-<h4>Função ucwords()</h4>
+#### Função ucwords()
 O <strong>ucwords()</strong> serve para você deixar a primeira letra de cada palavra da string em caixa-alta (maiúsculas).
 
 Ele só tem um argumento: A string que será convertida (1).
@@ -69,7 +69,7 @@ Ele só tem um argumento: A string que será convertida (1).
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.ucwords.php](http://br.php.net/manual/pt_BR/function.ucwords.php)
 
-<h4>Função ucfirst()</h4>
+#### Função ucfirst()
 O <strong>ucfirst()</strong> serve para você deixar a primeira letra de uma string em caixa-alta (maiúsculas).
 
 Ele só tem um argumento: A string que será convertida (1).
@@ -80,7 +80,7 @@ Ele só tem um argumento: A string que será convertida (1).
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.ucfirst.php](http://br.php.net/manual/pt_BR/function.ucfirst.php)
 
-<h4>Função explode()</h4>
+#### Função explode()
 O <strong>explode()</strong> serve para você dividir uma string, usando um separador, e criando um array com o resultado.
 
 Geralmente ele tem dois argumentos: O separador (1) e a string que será convertida (2).
@@ -91,7 +91,7 @@ Geralmente ele tem dois argumentos: O separador (1) e a string que será convert
 Veja a documentação oficial:
 [http://br.php.net/manual/pt_BR/function.explode.php](http://br.php.net/manual/pt_BR/function.explode.php)
 
-<h4>Função join()</h4>
+#### Função join()
 O <strong>join()</strong> serve para você juntar os elementos de um array usando uma string como cola/união. Ele faz o trabalho inverso do <strong>explode()</strong>.
 
 Geralmente ele tem dois argumentos: A string de união (1) e o array que será unido (2).

@@ -78,16 +78,16 @@ Vá até a raiz do seu site e edite (ou crie) um arquivo chamado .htaccess ([lei
 
 Agora vamos as explicações...
 
-<h4>O que é um arquivo .htaccess?</h4>
+#### O que é um arquivo .htaccess?
 Os arquivos <code>.htaccess</code> são arquivos de acesso e configuração do Apache, são arquivos lidos pelo Apache toda vez que você tenta acessar um arquivo que esta dentro de uma pasta (ou sub pastas) onde exista um arquivo <code>.htaccess</code>. Nesse arquivo podemos criar regras de bloqueio de acesso, redirecionamentos e reescritas de URL.
 
-<h4>Linhas 1 e 5: IfModule</h4>
+#### Linhas 1 e 5: IfModule
 O <code>IfModule</code> é como um bloco de condição que verifica se um certo módulo existe e está habilitado, nesse caso estamos verificando se o módulo <code>mod_rewrite.c</code> está presente... Se estiver, tudo que estiver dentro desse bloco será lido... Caso contrário tudo continuará como antes e o redirecionamento não irá funcionar.
 
-<h4>Linha 2: RewriteEngine On</h4>
+#### Linha 2: RewriteEngine On
 Esta linha habilita o sistema de reescrita de URL, é com ele que iremos fazer a nossa URL amigável funcionar.
 
-<h4>Linha 4: A URL amigável</h4>
+#### Linha 4: A URL amigável
 É na quarta linha que a mágica acontece... Vamos ver essa linha como se estivesse divida em quatro partes:
 
 <code><span style="background: yellow;">RewriteRule</span> <span style="background: lime;">^contato/?$</span> <span style="background: orange;">/contato.php</span> <span style="background: cyan;">[NC,L]</span></code>

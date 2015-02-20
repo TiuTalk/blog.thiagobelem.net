@@ -26,7 +26,7 @@ Espero que tenham gostado e que usem o que aprenderam aqui.
 
 Até mais ver! :)
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [strtotime()](http://br.php.net/strtotime)</strong> » Calcula um timestamp baseando-se em uma string</li>
 </ul>

@@ -42,7 +42,7 @@ Espero que essa aula tenha sido útil pra vocês... Qualquer dúvida ou sugestã
 
 Até a próxima
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [explode()](http://br.php.net/explode)</strong> » Divide uma string usando um separador</li>
 <li><strong>Função [mktime()](http://br.php.net/mktime)</strong> » Gera um timestamp de uma data especificada</li>

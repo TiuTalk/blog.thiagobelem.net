@@ -15,7 +15,7 @@ Hoje vou ensinar como fazer para usar recursos do servidor e agilizar o reduzir 
 
 Primeiro, o mais simples:
 
-<h4>Codificando sua página (HTML) com GZip</h4>
+#### Codificando sua página (HTML) com GZip
 A codificação com GZip fará o HTML do seu site ser carregado mais rapidamente pelo visitante, é só colocar a seguinte linha no começo do seu PHP, junto do início da sessões, por exemplo:
 
 
@@ -23,7 +23,7 @@ A codificação com GZip fará o HTML do seu site ser carregado mais rapidamente
 
 --
 
-<h4>Definindo expire-headers para imagens, Javascript, CSS e etc</h4>
+#### Definindo expire-headers para imagens, Javascript, CSS e etc
 Todos os elementos de um site podem ser cacheados (salvos no computador do visitante) para economizar tempo de carregamento. E sempre que esses arquivos são salvos é preciso definir um <em>expire-header</em>, ou seja, quanto tempo o arquivo ficará salvo.
 
 Se você já terminou o seu site, ele está no ar, as imagens têm nomes diferentes e você quer economizar <em>bandwidth</em> (tráfego mensal), essa dica é pra você.
@@ -37,7 +37,7 @@ Aí é só editar na primeira linha quais tipos de arquivos serão cacheados e n
 
 --
 
-<h4>Minificando (Reduzindo) arquivos JS e CSS</h4>
+#### Minificando (Reduzindo) arquivos JS e CSS
 Você terminou o seu site cheio de folhas de estilos e arquivos JS com vários scripts de jQuery, Prototype e etc? E tachando que tá tudo muito pesado? Não se desespere! Há uma saída:
 
 Existe um recurso chamado <strong>Minify</strong>: ele compacta arquivos CSS e JS tirando quebras de linhas e espaços para deixar o arquivo muito menor.. E o melhor, além de juntar todos os arquivos em um só, ele faz isso sem alterar o código fonte deles.

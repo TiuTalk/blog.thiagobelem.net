@@ -19,7 +19,7 @@ Pularei a parte que explica como fazer uma conexão ao banco de dados MySQL por 
 
 Usarei como exemplo os dados <span class="removed_link" title="http://jbonline.terra.com.br/pextra/2009/03/16/e160323614.asp">dessa notícia</span>, publicada no site do Jornal do Brasil em 16/03/2009 as 23:26.
 
-<h4>Tabela de exemplo</h4>
+#### Tabela de exemplo
 Usaremos a tabela 'noticias' nos exemplo desse tópico, ela é composta por uma tabela simples de quatro colunas: id, titulo, texto e cadastro. O campo id é numérico (inteiro), do tipo <strong>INT</strong> e possui <em>incremento automático</em>, e contem o índice de cada notícia na tabela, o campo titulo é alfa-numérico, do tipo <strong>VARCHAR</strong>, e pode ter até 255 caracteres, o campo texto, do tipo <strong>LONGTEXT</strong>, aceita qualquer valor existente em um texto e pode ter muitos (eu disse <strong>muitos</strong>) caracteres, o suficiente para algumas longas dezenas de páginas a4 se necessário... e por último, mas não menos importante, temos o campo cadastro que é do tipo <strong>DATETIME </strong>e guarda a data e hora de cadastro da notícia no sistema.
 
 <span style="color: #993300;"><strong>Nota: </strong></span>não use espaços ou acentos nos nomes nas tabelas e bancos MySQL.
@@ -29,7 +29,7 @@ O código para a criação dessa tabela é o seguinte:
 
 <div data-gist-id="da43d9bac9a1afd1d6f8" data-gist-show-loading="false"></div>
 
-<h4>Inserindo dados</h4>
+#### Inserindo dados
 Para inserir dados no MySQL você precisa montar uma consulta SQL (também chamada de <em>query</em>) usando o comando INSERT do MySQL, vejamos o exemplo de como inserir uma notícia na nossa tabela de notícias:
 
 
@@ -60,7 +60,7 @@ Usamos <strong>NULL</strong> (repare a falta de aspas) no valor da coluna ID por
 
 Mas fica a seu critério qual formato de INSERT usar.
 
-<h4>Deletando dados</h4>
+#### Deletando dados
 Se você quiser deletar dados armazenados no MySQL você pode usar o comando DELETE dentro da consulta SQL. A sua sintaxe é bem simples e a deleção se baseia em uma condição, vejamos dois exemplos:
 
 
@@ -79,7 +79,7 @@ Podemos resumir a sintaxe da <em>query </em>de deleção da seguinte forma:
 
 <span style="color: #ff0000;"><strong>Atenção:</strong></span> Suponhamos que você tenha quatro notícias com IDs iguais a 1, 2, 3 e 4 e deleta a notícia que tenha id igual a 4. Quando você adicionar um novo registro a tabela, usando o <strong>incremento automático</strong>, o ID dele vai ser 5 e não 4. Sendo assim os IDs vão ficar da seguinte forma: 1, 2, 3 e 5.
 
-<h4>Atualizando dados em registros</h4>
+#### Atualizando dados em registros
 Você já tem a sua tabela cheia de notícias e sabe inserir e deletar as notícias... Mas você repara que uma delas tem aquele erro boçal de ortografia no titulo da notícia. O que você faz? Você pode dar uma de português e deletar a notícia e cadastrar outra notícia com o formato correto... OU você pode simplesmente editar o titulo da notícia!  :-D
 
 Ai você descobre que existe o UPDATE do MySQL, que serve exatamente para isso! Vamos ao exemplo:

@@ -23,7 +23,7 @@ Este é um recurso pouco conhecido do PHP mas que tem o seu valor.
 
 Até a próxima. ;-)
 
-<h4>Documentação Oficial:</h4>
+#### Documentação Oficial:
 <ul>
 <li><strong>Função [sleep()](http://br.php.net/sleep)</strong> » Pausa o script em segundos</li>
 <li><strong>Função [usleep()](http://br.php.net/usleep)</strong> » Pausa o script em milhonésimos de segundos</li>

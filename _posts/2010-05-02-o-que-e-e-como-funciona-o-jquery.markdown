@@ -34,17 +34,17 @@ Para poder utlizar o jQuery você precisa sempre inserí-lo no seu HTML, você p
 
 Em ambos os casos você precisa inserir o script dentro do <code><head></code> do seu site ou logo antes do <strong></body></strong>, veja a seguir a linha que insere o script pra cada um dos casos:
 
-<h4>Inserindo o jQuery local (salvo no seu site)</h4>
+#### Inserindo o jQuery local (salvo no seu site)
 
 <div data-gist-id="bb02afc0940407950585" data-gist-show-loading="false"></div>
 
-<h4>Inserindo o jQuery hospedado no Google</h4>
+#### Inserindo o jQuery hospedado no Google
 
 <div data-gist-id="26224c2e2d905f2aaa14" data-gist-show-loading="false"></div>
 
 Vamos ver alguns exemplos básicos de como é fácil e simples usar essa ferramenta:
 
-<h4>Efeito de foco em uma lista de imagens</h4>
+#### Efeito de foco em uma lista de imagens
 Suponhamos que você tenha uma lista de imagens com o seguinte HTML:
 
 
