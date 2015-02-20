@@ -41,7 +41,7 @@ Espero que vocês tenham gostado (e façam um bom uso) dessa nova funcionalidade
 
 Não se esqueça de ler a documentação oficial: [http://php.net/manual/features.commandline.webserver.php](http://php.net/manual/features.commandline.webserver.php)
 
-<h2>Não use em produção!</h2>
+## Não use em produção!
 <blockquote>This web server is designed for developmental purposes only, and should not be used in production.
 </blockquote>
 Este servidor foi projeto apenas para desenvolvimento, e não deve ser usado em produção.

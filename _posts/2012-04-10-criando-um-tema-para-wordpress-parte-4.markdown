@@ -30,14 +30,14 @@ Peço desculpas pela demora em continuar com essa sequência de posts: eu estava
 
 Hoje vamos continuar com a Parte 4 do nosso tema! :)
 
-<h2>Criando um tema para WordPress</h2>
+## Criando um tema para WordPress
 Se você ainda não está acompanhando, veja as outras partes dessa sequência de artigos:
 
 * [Parte 1 - Estrutura inicial do tema](/criando-um-tema-para-wordpress)
 * [Parte 2 - HTML5, Funções básicas do WordPress, Feed RSS e Atom](/criando-um-tema-para-wordpress-parte-2)
 * [Parte 3 - Topo e listagem de posts](/criando-um-tema-para-wordpress-parte-3)
 
-<h2>Parte 4 - Separando o tema em blocos reutilizáveis</h2>
+## Parte 4 - Separando o tema em blocos reutilizáveis
 Na [Parte 3](/criando-um-tema-para-wordpress-parte-3) criamos o template básico da home (**index.php**) que ficou mais ou menos assim:
 
 <div data-gist-id="2353682" data-gist-show-loading="false"></div>

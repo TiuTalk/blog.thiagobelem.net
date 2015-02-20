@@ -40,7 +40,7 @@ Recomendo que você leia essa página na documentação oficial:
 
 [http://book.cakephp.org/2.0/en/appendices/new-features-in-cakephp-2-0.html](http://book.cakephp.org/2.0/en/appendices/new-features-in-cakephp-2-0.html)
 
-<h2>Atualizando seu projeto</h2>
+## Atualizando seu projeto
 Na minha opinião, o trabalho de atualizar/migrar o projeto para a nova versão foi bem tranquilo... diria que muito pouca coisa de código mudou (exceto arquivos que já vêm no APP como config, database, index.php e etc.). A maior mudança - na minha opinião - foi a estrutura de pastas e nomenclatura de arquivos.
 
 <h3>Primeiro Passo - Reestruturando as pastas</h3>
@@ -179,7 +179,7 @@ Essas não são TODAS as mudanças que você precisará fazer no seu projeto, ma
 
 Um grande abraço e espero que tenham gostado! :)
 
-<h2>Quer aprender CakePHP, já com todas as vantagens da versão 2.0, sem sair de casa?</h2>
+## Quer aprender CakePHP, já com todas as vantagens da versão 2.0, sem sair de casa?
 
 Inscreva-se no meu <strong>curso online</strong> de CakePHP, o [Assando Sites](http://assando-sites.com.br/)! As próximas turmas já serão feitas utilizando o CakePHP 2.0 como padrão!
 

@@ -30,7 +30,7 @@ Mesmo recomendando muito o livro, não estou aqui pra falar dele e sim do assunt
 <h3>Não sou um adepto fanático do TDD</h3>
 Eu adoraria, mas ainda não consegui aplicar TDD em cada projeto que trabalho. Conheço bem e concordo MUITO com a metologia por trás do TDD, mas ainda consigo usá-lo naturalmente, tenho que me forçar sempre que quero testar algo.
 
-<h2>Mas afinal, que diabos é TDD?</h2>
+## Mas afinal, que diabos é TDD?
 Me surpreende que a maioria dos desenvolvedores e programadores por ai não saibam o que é TDD... eu mesmo não sabia muito TDD uns 2 anos atrás... e já estou no mercado a mais de 10 anos, imagina quem está começando agora.
 
 Segundo a [Wikipédia](https://pt.wikipedia.org/wiki/Test_Driven_Development), TDD é:
@@ -46,7 +46,7 @@ Pra mim, TDD é uma forma de você garantir que, através de pequenos passos, vo
 
 Mas por via das dúvidas, pesquisem mais sobre o assunto, tem um mundo por trás disso tudo.
 
-<h2>"Talk is cheap! Shut up and show me the code!"</h2>
+## "Talk is cheap! Shut up and show me the code!"
 <span style="color: #c0c0c0;">(eu amo essa frase)</span>
 
 Vamos direto ao ponto e vamos ver um pequeno exemplo de como criar uma função baseada em TDD... e vamos começar pelo exemplo mais simples e usado por todos: o famoso **Fizz Buzz**, que segundo a nossa amiga Wikipédia é:
@@ -78,7 +78,7 @@ Essas não são todas as regras do jogo, mas já é um bom começo... Cada um de
 
 Ao longo desse artigo irei copiar essa lista diversas vezes, marcando com **negrito** os itens que iremos atacar, e <del>riscando</del> os itens que forem concluídos.
 
-<h2>Mas peraí... e a linguagem?</h2>
+## Mas peraí... e a linguagem?
 Verdade... temos que decidir uma linguagem, e como eu falo MUITO de PHP aqui no blog vamos fazer esse FizzBuzz em **Python**, que já vem com um **framework de testes** embutido na linguagem, pra quem quiser brincar de **testes unitários** no PHP recomendo muito o [PHPUnit](https://github.com/sebastianbergmann/phpunit/).
 
 <h3>Baby steps, ou "Passos de bebê"</h3>

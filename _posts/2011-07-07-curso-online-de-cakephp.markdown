@@ -65,7 +65,7 @@ Passarei por todas as funcionalidades e facilidades que o <strong>CakePHP</stron
 
 Um dos fatos mais interessantes do curso é que você vai conseguir <strong>publicar o seu primeiro site</strong> logo após a primeira aula, ou seja, em apenas três horas!
 
-<h2>Garanta já sua vaga na próxima turma!</h2>
+## Garanta já sua vaga na próxima turma!
 As [inscrições estarão abertas](http://assando-sites.com.br/) até o <strong>final de julho</strong> ou enquanto durarem as vagas.
 
 Aproveite a promoção e ganhe desconto até <strong>13 de julho</strong>.

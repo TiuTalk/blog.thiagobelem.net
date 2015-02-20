@@ -30,7 +30,7 @@ tags:
 
 Não vou entrar em detalhes profundos sobre a arquitetura de um sistema baseado no MVC nem vou - por enquanto! - mostrar como criar um MVC do zero, mas vou tentar explicar cada uma das três camadas e dar exemplos de código do [framework de PHP](/frameworks-no-php-o-que-quando-porque-e-qual) que - ao meu ver - faz um bom uso do MVC.
 
-<h2>Model <span style="color: #999999;">(ou modelo)</span></h2>
+## Model <span style="color: #999999;">(ou modelo)</span>
 
 O model é a camada que <strong>representa os seus dados</strong>, provendo meios de acesso (leitura e escrita) à esses dados.
 
@@ -54,7 +54,7 @@ Para saber mais sobre models no CakePHP, consulte a documentação: [http://boo
 
 Agora podemos partir para a camada que vai fazer uso desse model, pedindo uma lista de produtos..
 
-<h2>Controller<span style="color: #999999;"> (ou controlador)</span></h2>
+## Controller<span style="color: #999999;"> (ou controlador)</span>
 No <strong>controller</strong> você tem <strong>métodos públicos</strong> que são chamados de <strong>actions</strong>, cada action é responsável por uma "página" do seu site/sistema. É o controller quem decide:
 
 1. Qual model usar;
@@ -76,7 +76,7 @@ Para saber mais sobre controllers no CakePHP, consulte a documentação: [http:
 
 Agora podemos exibir esses dados na camada responsável por isso...
 
-<h2>View<span style="color: #999999;"> (ou visualização)</span></h2>
+## View<span style="color: #999999;"> (ou visualização)</span>
 É na view que o seu sistema interage com o usuário. Tudo que ele ver (HTML / XML / RSS / CSV) deve ser gerado e exibido através dessa camada. A view, por sua vez, tem como responsabilidade:
 
 * Manipular os dados para - e apenas para - exibição;
@@ -92,12 +92,12 @@ Aqui temos uma mistura de HTML e PHP, e também fazemos uso do [NumberHelper](ht
 
 Se você quiser saber mais sobre views no CakePHP, consulte a documentação: [http://book.cakephp.org/2.0/en/views.html](http://book.cakephp.org/2.0/en/views.html)
 
-<h2>Conclusão</h2>
+## Conclusão
 Com o MVC você conseguirá organizar seu projeto de forma que tudo tenha seu lugar, e cada camada com sua responsabilidade, permitindo um trabalho muitos mais "centrado" e modularizado.
 
 Espero que você tenha gostado dessa breve explicação sobre o MVC, e que ela tenha despertado a fagulha de curiosidade/interesse que vai fazer você correr atrás de mais conteúdo sobre o assunto... Te garanto que isso é só a ponta do iceberg.
 
-<h2>Momento jabá!</h2>
+## Momento jabá!
 
 Gostou dos exemplos e quer aprender um pouco mais sobre <strong>CakePHP</strong>? E se eu te disser que tenho um curso que é <strong>online e ao vivo</strong>, e você aprende sem sair de casa?
 

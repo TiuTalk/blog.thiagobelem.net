@@ -30,7 +30,7 @@ http://www.youtube.com/watch?v=NCqwLxrX_NE/
 
 Nessa entrevista, um dos assuntos que eu repeti várias vezes, foi sobre a organização de projetos e mencionei o [Composer](http://getcomposer.org/) algumas vezes.
 
-<h2>Mas afinal, o que é o Composer?</h2>
+## Mas afinal, o que é o Composer?
 <blockquote>Composer is a tool for dependency management in PHP. It allows you to declare the dependent libraries your project needs and it will install them in your project for you.
 </blockquote>
 O <strong>Composer</strong> nada mais é do que um <strong>gerenciador de dependências</strong>... Com ele você define a lista de <strong>bibliotecas</strong> (e versões) das quais o seu projeto depende, e ele cuida da instalação, organização e "inclusão" das mesmas.
@@ -53,7 +53,7 @@ Ele funciona da seguinte forma:
 <li>O Composer encontra quais versões e quais pacotes precisam ser instalados e instala-os pra você (fazendo o download para dentro do seu projeto)</li>
 </ol>
 <div><span style="line-height: 24px;">São ferramentas como o Composer que tornam seu trabalho </span><strong style="line-height: 24px;">profissional</strong><span style="line-height: 24px;"> e <strong>organizado</strong>.</span></div>
-<h2><span style="color: #999999;">Passo 1</span> - Instalando o Composer</h2>
+## <span style="color: #999999;">Passo 1</span> - Instalando o Composer
 Você pode instalar o Composer de duas formas: <strong>localmente</strong> (apenas para um projeto) ou de forma <strong>global</strong> (acessível para todos os projetos).
 
 Para <strong>instalar localmente</strong>, você<strong></strong> executa o seguinte comando:
@@ -72,7 +72,7 @@ Agora você já pode usar o Composer através do comando <strong>php composer.ph
 
 Caso tenha alguma dúvida sobre a instalação, recomendo a leitura da documentação oficial: [getcomposer.org/doc/00-intro.md](http://getcomposer.org/doc/00-intro.md)
 
-<h2><span style="color: #999999;">Passo 2</span> - Declarando dependências</h2>
+## <span style="color: #999999;">Passo 2</span> - Declarando dependências
 Agora que você já tem o <strong>Composer</strong> funcionando (seja via uma instalação local ou global), você precisa definir as dependências do seu projeto.
 
 O Composer trabalha com um repositório de pacotes, o [Packagist](https://packagist.org/)... É lá que você encontra o nome e versão dos pacotes que pode usar no seu projeto.
@@ -89,7 +89,7 @@ Nesse arquivo estamos informando ao Composer que nosso projeto depende de duas b
 </ol>
 Com isso você já aprende a sintaxe de versões, que poderia ser "<strong>1.1.2@dev</strong>", "<strong>2.0@beta</strong>", "<strong>2.x</strong>" ou "<strong>2.x@beta</strong>" ou "<strong>*</strong>" (para a última versão stable lançada) e "<strong>*@beta</strong>" para a última versão beta.
 
-<h2><span style="color: #999999;">Passo 3</span> - Instalando as bibliotecas</h2>
+## <span style="color: #999999;">Passo 3</span> - Instalando as bibliotecas
 Com essas dependências definidas, rodamos "<strong>php composer.phar install</strong>" (se a sua instalação foi local) ou "<strong>composer install</strong>" (se a sua instalação foi global)... e voila!
 
 <div data-gist-id="3927261" data-gist-show-loading="false"></div>
@@ -104,7 +104,7 @@ Os pacotes instalados foram todos colocados em uma pasta "<strong>vendor</strong
 
 É aqui que toda a mágica acontece! Esse é o arquivo que vai garantir que seu projeto tenha acesso às bibliotecas.
 
-<h2><span style="color: #999999;">Passo 4</span> - Usando as bibliotecas</h2>
+## <span style="color: #999999;">Passo 4</span> - Usando as bibliotecas
 Agora é só incluir o <strong>autoload.php</strong> em qualquer lugar do seu projeto e sair usando as bibliotecas:
 
 <h4>Usando o Doctrine</h4>
@@ -125,7 +125,7 @@ Para mais informações sobre o <strong>Twig</strong>, consulte a documentação
 
 Viram como é fácil? :)
 
-<h2>Finalizando</h2>
+## Finalizando
 Espero realmente que vocês tenham entendido o poder que há por trás do <strong>Composer</strong>, e que procurem fazer uso dessas maravilhosas ferramentas open-source que estão à nossa disposição.
 
 Acredito que muitos de vocês (meus amados leitores) ainda estão começando na área, mas é esse tipo de ferramenta que vai te tornar <strong>um profissional cada vez melhor</strong> e atualizado.

@@ -32,7 +32,7 @@ O retorno do método <code>Googl::shorten()</code> vai ser a URL encurtada ou um
 
 Um ponto importante sobre essa classe é a utilização da função [filter_var()](http://www.php.net/manual/en/function.filter-var.php) para verificar se uma URL é válida antes de tentar encurtar ela... Essa é uma função muito útil para verificar o conteúdo de variáveis.
 
-<h2>Como usar essa classe?</h2>
+## Como usar essa classe?
 Veja um exemplo:
 
 

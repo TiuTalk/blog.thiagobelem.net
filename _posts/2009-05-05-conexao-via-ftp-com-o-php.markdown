@@ -17,7 +17,7 @@ Falarei sobre quatro cinco tarefas básicas: abrir a conexão, fazer o login, en
 
 Faremos um arquivo que conterá todas essas tarefas, então vai ficar fácil entender como tudo funciona.
 
-<h2>> Conectando-se ao FTP</h2>
+## > Conectando-se ao FTP
 Para se conectar a um servidor FTP você deve usar a função <strong>ftp_connect()</strong>, que tem três possíveis argumentos:
 
 <ol>
@@ -34,7 +34,7 @@ Até aqui, nada de misterioso... Vamos continuar.
 
 » <strong>Veja também:</strong> [Documentação da função ftp_connect()](http://br2.php.net/manual/pt_BR/function.ftp-connect.php)
 
-<h2>> Fazendo login no FTP</h2>
+## > Fazendo login no FTP
 Para fazer o login você vai usar a função <strong>ftp_login()</strong>, que tem três argumentos obrigatórios:
 
 <ol>
@@ -53,7 +53,7 @@ A partir deste ponto já estamos conectados e logados no servidor FTP e podemos 
 
 » <strong>Veja também:</strong> [Documentação da função ftp_login()](http://br2.php.net/manual/pt_BR/function.ftp-login.php)
 
-<h2>> Enviando arquivos para o FTP (upload)</h2>
+## > Enviando arquivos para o FTP (upload)
 Para fazer upload de arquivos você vai usar a função <strong>ftp_put()</strong>, que tem quatro argumentos obrigatórios:
 
 <ol>
@@ -71,7 +71,7 @@ Com isso você já vai poder conectar-se a um FTP e enviar arquivos dinamicament
 
 » <strong>Veja também:</strong> [Documentação da função ftp_put()](http://br2.php.net/manual/pt_BR/function.ftp-put.php)
 
-<h2>> Recebendo arquivos pelo FTP (download)</h2>
+## > Recebendo arquivos pelo FTP (download)
 Para fazer download de arquivos você vai usar a função <strong>ftp_get()</strong>, que tem quatro argumentos obrigatórios, os mesmos do <strong>ftp_put()</strong>:
 
 <ol>
@@ -87,7 +87,7 @@ Então, fazendo algumas alterações no nosso arquivo:
 
 » <strong>Veja também:</strong> [Documentação da função ftp_get()](http://br2.php.net/manual/pt_BR/function.ftp-get.php)
 
-<h2>> Desconectando-se do FTP</h2>
+## > Desconectando-se do FTP
 Para se desconectar (faça isso, sempre) você vai usar a função <strong>ftp_close()</strong>, que tem apenas um argumento: o identificador da conexão.
 
 Então, finalizando o no nosso arquivo:

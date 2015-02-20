@@ -21,7 +21,7 @@ Vamos à um resumão das mais interessantes [novas funcionalidades](http://www.
 
 Todas essa novidades vão permitir a criação de sistemas e frameworks mais simples e eficientes, pois recursos desse tipo contribuem e muito para um código mais limpo e inteligente! :)
 
-<h2>Generators (ou geradores)</h2>
+## Generators (ou geradores)
 [Generators](http://www.php.net/manual/en/language.generators.overview.php) são bem comuns em outras linguagens (como Python), eles básicamente te permitem iterar em uma lista que não precisa ser alocada previamente.
 
 Por exemplo: você precisa listar todos os números primos de 1 até 1.000.000, uma forma mais simples seria criar uma lista com todos sesses números e depois ir iterando nela, fazendo verificações se esses números são primos e imprimindo-os.. O problema aqui é que você terá uma lista de 1.000.000 de números em memória, o que pode ser custoso pra alguns sistemas.
@@ -34,16 +34,16 @@ Veja um exemplo disso funcionando:
 
 Pra cada iteração o número "da vez" será entregue pelo <strong>yeld</strong>... No exemplo acima o "generator" é a função criada com o nome de <strong>xrange</strong>.
 
-<h2>Foreach com suporte ao método list</h2>
+## Foreach com suporte ao método list
 Agora a função [foreach](http://www.php.net/manual/en/control-structures.foreach.php) tem suporte à "desempacotamento" através da função list, veja um exemplo:
 
 <div data-gist-id="5232923" data-gist-show-loading="false"></div>
 
-<h2>Dereferencing de arrays e strings literais</h2>
+## Dereferencing de arrays e strings literais
 Agora é possível indexar arrays e strings literais, por exemplo:
 
 <div data-gist-id="5232943" data-gist-show-loading="false"></div>
 
-<h2>API oficial de senhas</h2>
+## API oficial de senhas
 E por último mas não menos importante, a nova e inédia [um artigo](/php-5-5-api-de-senhas) só pra ela.
 
