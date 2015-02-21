@@ -15,8 +15,8 @@
           <div class="post-meta">
             <h1 class="post-title">{{ page.title }}</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url({{ site.author_image }})">{{ site.author }}</div>
-              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
+              <div class="author-image" style="background-image: url({{ site.author.image }})">{{ site.author.name }}</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author.name }}</h4>
               em
               <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
               <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
@@ -31,8 +31,8 @@
           <div class="post-meta">
             <h1 class="post-title">{{ page.title }}</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url({{ site.author_image }})">{{ site.author }}</div>
-              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
+              <div class="author-image" style="background-image: url({{ site.author.image }})">{{ site.author.name }}</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author.name }}</h4>
               em
               <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
               <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
@@ -73,8 +73,8 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Escrito por</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url({{site.author_image}})">{{ site.title }}</div>
-              <h4>{{ site.author }}</h4>
+              <div class="author-image" style="background-image: url({{site.author.image}})">{{ site.title }}</div>
+              <h4>{{ site.author.name }}</h4>
               <p class="bio">{{author.bio}}</p>
               <hr>
               <p class="published">Publicado <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
