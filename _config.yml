@@ -9,6 +9,7 @@ paginate_path: "/pagina-:num"
 # Gems
 gems:
   - jekyll-sitemap
+  - jemoji
 
 # Site settings
 title: "Thiago Belem / Blog"
