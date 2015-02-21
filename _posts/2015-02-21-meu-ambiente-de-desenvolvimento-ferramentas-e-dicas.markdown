@@ -109,7 +109,7 @@ Enfim, são muitas ferramentas e tecnologias, e eu tenho certeza que esqueci de 
 Até a próxima! :v:
 
 
-[artigo-ambiente]: /meu-ambiente-de-trabalho
+[artigo-ambiente]: /meu-ambiente-de-desenvolvimento
 [sublime]: http://www.sublimetext.com/
 [vim]: http://www.vim.org/
 [atom]: https://atom.io/
