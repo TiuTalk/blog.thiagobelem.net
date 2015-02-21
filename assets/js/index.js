@@ -10,6 +10,26 @@
       wordCountTarget: '.post-word-count',
     });
 
+    // Creates anchors links on headers
+    $(".post-content :header[id]").each(function() {
+      var target = $(this).attr('id'),
+          content = $(this).html(),
+          $anchor;
+
+      $anchor = $('<a href="#' + target + '" class="header-anchor"><i class="fa fa-link"></i>'+ content +'</a>');
+      $anchor.on('click', function(e) {
+        e.preventDefault();
+
+        $('html,body').animate({ scrollTop: $(this).offset().top }, 500, function() {
+          location.hash = target;
+        });
+
+        return false;
+      });
+
+      $(this).html($anchor);
+    });
+
     // Creates Captions from Alt tags
     $(".post-content img:not(.emoji)").each(function() {
       // Let's put a caption if there is one
