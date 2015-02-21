@@ -1,6 +1,16 @@
 (function ($) {
   "use strict";
 
+  var scrollTo = function(element, duration, callback) {
+    duration = duration || 500;
+    callback = callback || function() { };
+
+    var offset = element.offset().top;
+        offset = (offset > 20) ? (offset - 20) : offset;
+
+    $('html,body').animate({ scrollTop: offset }, duration, callback);
+  };
+
   $(document).ready(function() {
     $(".post-content").fitVids();
 
@@ -20,10 +30,7 @@
       $anchor.on('click', function(e) {
         e.preventDefault();
 
-        $('html,body').animate({ scrollTop: $(this).offset().top }, 500, function() {
-          location.hash = target;
-        });
-
+        scrollTo($(this), null, function() { location.hash = target; });
         return false;
       });
 
@@ -59,7 +66,7 @@
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 
         if (target.length) {
-          $('html,body').animate({ scrollTop: target.offset().top }, 500);
+          scrollTo(target);
           return false;
         }
       }
