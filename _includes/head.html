@@ -23,5 +23,5 @@
   <link href="{{ "/css/main.css"  | prepend: site.baseurl  }}" media="screen" rel="stylesheet" type="text/css" />
   <link href="{{ "/css/print.css"  | prepend: site.baseurl  }}" media="print" rel="stylesheet" type="text/css" />
 
-  {% include analytics.html %}
+  {% if site.github %}{% include analytics.html %}{% endif %}
 </head>
