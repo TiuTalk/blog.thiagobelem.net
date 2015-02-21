@@ -9,6 +9,8 @@ paginate_path: "/pagina-:num"
 # Gems
 gems:
   - jekyll-sitemap
+  - jekyll-mentions
+  - jekyll-redirect-from
   - jemoji
 
 # Site settings
