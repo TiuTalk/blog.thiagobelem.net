@@ -6,6 +6,10 @@ excerpt_separator: ""
 paginate: 10
 paginate_path: "/pagina-:num"
 
+# Gems
+gems:
+  - jekyll-sitemap
+
 # Site settings
 title: "Thiago Belem / Blog"
 description: >
