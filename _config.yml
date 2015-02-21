@@ -25,12 +25,12 @@ title: "Thiago Belem / Blog"
 description: Artigos e tutoriais sobre desenvolvimento WEB
 logo: http://gravatar.com/avatar/67a6eb9b43b617b2051b912b8373a156?s=120
 cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
+url: "http://blog.thiagobelem.net"
 
 # Default author
 author:
   name: Thiago Belem
   image: http://gravatar.com/avatar/67a6eb9b43b617b2051b912b8373a156?s=120
-  url: "http://blog.thiagobelem.net"
 
 # social icons and sharing options
 social:
