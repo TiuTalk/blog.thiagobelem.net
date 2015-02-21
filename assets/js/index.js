@@ -8,7 +8,7 @@
     var offset = element.offset().top;
         offset = (offset > 20) ? (offset - 20) : offset;
 
-    $('html,body').animate({ scrollTop: offset }, duration, callback);
+    $('html,body').stop().animate({ scrollTop: offset }, duration, callback);
   };
 
   $(document).ready(function() {
@@ -23,18 +23,16 @@
     // Creates anchors links on headers
     $(".post-content :header[id]").each(function() {
       var target = $(this).attr('id'),
-          content = $(this).html(),
           $anchor;
 
-      $anchor = $('<a href="#' + target + '" class="header-anchor"><i class="fa fa-link"></i>'+ content +'</a>');
+      $anchor = $('<a href="#' + target + '" class="header-anchor"><i class="fa fa-link"></i></a>');
       $anchor.on('click', function(e) {
-        e.preventDefault();
-
+        e.stopPropagation();
         scrollTo($(this), null, function() { location.hash = target; });
         return false;
       });
 
-      $(this).html($anchor);
+      $(this).prepend($anchor);
     });
 
     // Creates Captions from Alt tags
