@@ -18,15 +18,14 @@ tags:
 - Doctrine
 - Packagist
 ---
-Se você está lendo esse artigo pelo [http://wp.me/pLryp-Gu](http://wp.me/pLryp-Gu) :)
-
 Tudo começou com esse tweet:
 
-https://twitter.com/TiuTalk/status/254967835045031936
+<blockquote class="twitter-tweet" lang="en"><p>Dica pra você, desenvolvedor <a href="https://twitter.com/hashtag/PHP?src=hash">#PHP</a> que está chegando agora: estude sobre <a href="https://twitter.com/hashtag/Composer?src=hash">#Composer</a> e <a href="https://twitter.com/hashtag/Git?src=hash">#Git</a> o quanto antes</p>&mdash; Thiago Belem (@TiuTalk) <a href="https://twitter.com/TiuTalk/status/254967835045031936">October 7, 2012</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 E durante a semana seguinte rolou a entrevista com os palestrantes do [PHP'n Rio 2012](http://phpnrio.com.br/2012/):
 
-http://www.youtube.com/watch?v=NCqwLxrX_NE/
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NCqwLxrX_NE" frameborder="0" allowfullscreen></iframe>
 
 Nessa entrevista, um dos assuntos que eu repeti várias vezes, foi sobre a organização de projetos e mencionei o [Composer](http://getcomposer.org/) algumas vezes.
 
