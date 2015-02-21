@@ -3,6 +3,8 @@ markdown: redcarpet
 highlighter: pygments
 permalink: "/:title"
 excerpt_separator: ""
+paginate: 10
+paginate_path: "/pagina-:num"
 
 # Site settings
 title: "Thiago Belem / Blog"
@@ -16,8 +18,6 @@ cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
 name: Thiago Belem
 author: Thiago Belem
 author_image: http://gravatar.com/avatar/67a6eb9b43b617b2051b912b8373a156?s=120
-
-paginate:	5
 
 url: "http://blog.thiagobelem.net"
 baseurl: ""

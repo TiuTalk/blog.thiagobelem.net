@@ -74,19 +74,31 @@ layout: default
       {% endfor %}
     </div>
 
+    {% if paginator.total_pages > 1 %}
     <nav class="pagination" role="navigation">
-      {% if paginator.next_page %}
-        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Posts antigos</a>
-      {% endif %}
-      <span class="page-number">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
       {% if paginator.previous_page %}
-        {% if paginator.page == 2 %}
-          <a class="older-posts" href="/">Posts recentes &rarr;</a>
+        <a class="newer-posts" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" style="margin-right: 1em">&laquo; Anterior</a>
+      {% else %}
+        <span class="newer-posts" style="margin-right: 1em; opacity: .2">&laquo; Anterior</span>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <em class="page-number">{{ page }}</em>
+        {% elsif page == 1 %}
+          <a class="page-number" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
         {% else %}
-          <a class="older-posts" href="/page{{paginator.previous_page}}">Novos recentes &rarr;</a>
+          <a class="page-number" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
         {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a class="older-posts" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" style="margin-left: 1em">Próxima &raquo;</a>
+      {% else %}
+        <span class="older-posts" style="margin-right: 1em; opacity: .2">Próxima &raquo;</span>
       {% endif %}
     </nav>
+    {% endif %}
 
 
     <!-- {{!! After all the posts, we have the previous/next pagination links }}
