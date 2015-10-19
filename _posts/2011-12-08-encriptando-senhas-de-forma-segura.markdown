@@ -16,6 +16,9 @@ tags:
 - encriptação
 - algoritmo
 ---
+
+**Atenção**: Esse artigo está desatualizado, por favor leia o [meu post mais recente sobre segurança de senhas](/criptografando-senhas-no-php-usando-bcrypt-blowfish/).
+
 Fala pessoal, tudo bom?
 
 Volta e meia gosto de vir aqui falar um pouquinho sobre "Segurança" e uma das coisas que acho mais interessante - nessa área - e a encriptação de senhas.
