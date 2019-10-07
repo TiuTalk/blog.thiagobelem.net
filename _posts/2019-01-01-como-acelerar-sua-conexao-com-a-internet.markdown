@@ -5,6 +5,10 @@ title: Como acelerar sua conexão com a Internet: dicas simples para melhorar a 
 date: '2019-01-01 10:24:04 -0300'
 categories:
 - Tecnologia
+- Internet
+tags:
+- Tecnologia
+- Internet
 ---
 
 ![](https://i.imgur.com/R9STIrn.jpg)
